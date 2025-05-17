@@ -1,4 +1,4 @@
-// components/header/header.tsx
+// components/layout/header.tsx
 "use client"
 
 import * as React from "react"

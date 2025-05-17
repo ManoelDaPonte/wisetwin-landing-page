@@ -33,7 +33,7 @@ export function Footer() {
               <span className="font-semibold text-xl">WiseTwin</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Des formations 3D pour la sécurité et la performance de vos équipes industrielles. Solutions sur mesure pour tous types d'équipements.
+              Des formations 3D pour la sécurité et la performance de vos équipes industrielles. Solutions sur mesure pour tous types d&apos;équipements.
             </p>
           </div>
           
@@ -56,7 +56,7 @@ export function Footer() {
         </div>
         
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} WiseTwin. Sécurité et formation au cœur de l'industrie.</p>
+          <p>© {new Date().getFullYear()} WiseTwin. Sécurité et formation au cœur de l&apos;industrie.</p>
         </div>
       </div>
     </footer>
