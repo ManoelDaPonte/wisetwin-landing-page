@@ -1,41 +1,26 @@
 // components/sections/features-section.tsx
+"use client";
 import { Section, SectionCard } from "@/components/common/section";
 import { Icon } from "@/components/ui/icon";
+import { motion } from "framer-motion";
+import { FileBadge, Cpu, PencilRuler } from "lucide-react";
 
 export function FeaturesSection() {
 	const features = [
 		{
-			icon: (
-				<Icon>
-					<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-					<polyline points="14 2 14 8 20 8" />
-					<path d="M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1" />
-					<path d="M14 12a1 1 0 0 1 1 1v1a1 1 0 0 0 1 1 1 1 0 0 0-1 1v1a1 1 0 0 1-1 1" />
-				</Icon>
-			),
+			icon: <FileBadge className="h-6 w-6 text-wisetwin-blue" />,
 			title: "Formation sécurité",
 			description:
 				"Modules spécialisés sur les protocoles de sécurité et d'intervention sur machines en milieu industriel.",
 		},
 		{
-			icon: (
-				<Icon>
-					<path d="m7 11 2-2-2-2" />
-					<path d="M11 13h4" />
-					<rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-				</Icon>
-			),
+			icon: <Cpu className="h-6 w-6 text-wisetwin-blue" />,
 			title: "Environnement 3D interactif",
 			description:
 				"Simulation de situations réelles permettant d'apprendre les gestes professionnels dans un environnement sécurisé.",
 		},
 		{
-			icon: (
-				<Icon>
-					<path d="M12 20h9" />
-					<path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-				</Icon>
-			),
+			icon: <PencilRuler className="h-6 w-6 text-wisetwin-blue" />,
 			title: "Formations personnalisées",
 			description:
 				"Adaptation des modules à vos équipements spécifiques et à votre environnement de travail réel.",
@@ -49,19 +34,24 @@ export function FeaturesSection() {
 				title: "Formations spécialisées",
 				description:
 					"Des modules de formation 3D sur mesure pour garantir la sécurité de vos équipes lors des interventions sur machines.",
+				centered: true,
 			}}
 			gridCols={3}
 		>
 			{features.map((feature, index) => (
-				<SectionCard
+				<motion.div
 					key={index}
-					icon={feature.icon}
-					title={feature.title}
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ delay: index * 0.1, duration: 0.5 }}
 				>
-					<p className="text-muted-foreground">
-						{feature.description}
-					</p>
-				</SectionCard>
+					<SectionCard icon={feature.icon} title={feature.title}>
+						<p className="text-muted-foreground">
+							{feature.description}
+						</p>
+					</SectionCard>
+				</motion.div>
 			))}
 		</Section>
 	);

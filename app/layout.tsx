@@ -2,34 +2,39 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+	variable: "--font-geist-sans",
+	subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+	variable: "--font-geist-mono",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "WiseTwin - Votre solution innovante",
-  description: "WiseTwin est une application innovante qui simplifie votre quotidien et améliore votre productivité.",
+	title: "WiseTwin - Formation industrielle en réalité 3D",
+	description:
+		"WiseTwin propose des formations 3D interactives pour améliorer la sécurité et les compétences des intervenants sur les machines industrielles.",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="fr" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="fr" className="scroll-smooth">
+			<body
+				className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+			>
+				<Header />
+				<main className="flex-grow">{children}</main>
+				<Footer />
+			</body>
+		</html>
+	);
 }

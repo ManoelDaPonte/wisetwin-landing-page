@@ -11,25 +11,36 @@ import { cn } from "@/lib/utils";
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const [mounted, setMounted] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
 
-	// Après le montage du composant
+	// Gérer le défilement et l'effet de scroll
 	useEffect(() => {
-		setMounted(true);
+		const handleScroll = () => {
+			setScrolled(window.scrollY > 20);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
 	const navItems = [
-		{ name: "Fonctionnalités", href: "#features" },
+		{ name: "Formations", href: "#features" },
 		{ name: "Comment ça marche", href: "#how-it-works" },
+		{ name: "Suivi", href: "#tracking" },
 		{ name: "Tarifs", href: "#pricing" },
 		{ name: "Contact", href: "#contact" },
 	];
 
 	return (
 		<motion.header
-			className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border"
+			className={cn(
+				"sticky top-0 z-50 w-full backdrop-blur-md border-b transition-all duration-300",
+				scrolled
+					? "bg-background/95 shadow-sm"
+					: "bg-background/80 border-transparent"
+			)}
 			initial={{ opacity: 0, y: -20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5, ease: "easeOut" }}
@@ -42,16 +53,20 @@ const Header = () => {
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.2, duration: 0.8 }}
 					>
-						<Link href="/" className="flex items-center space-x-2">
+						<Link href="/" className="flex items-center gap-2">
 							<Image
 								src="/wisetwin-logo.png"
-								alt="WiseTwin Logo"
-								width={32}
-								height={32}
-								className="h-8 w-8"
+								alt="Logo"
+								width={40}
+								height={40}
+								className="h-8 w-8 rounded-full"
 							/>
+
 							<span className="text-foreground font-bold text-xl">
-								WiseTwin
+								<span className="text-wisetwin-darkblue">
+									Wise
+								</span>
+								<span className="text-wisetwin-blue">Twin</span>
 							</span>
 						</Link>
 					</motion.div>
@@ -70,7 +85,12 @@ const Header = () => {
 								>
 									<Link
 										href={item.href}
-										className="text-muted-foreground hover:text-foreground transition-colors"
+										className={cn(
+											"transition-colors text-sm font-medium px-3 py-2 rounded-md hover:bg-accent",
+											item.name === "Contact"
+												? "text-wisetwin-blue hover:text-wisetwin-blue-dark"
+												: "text-muted-foreground hover:text-foreground"
+										)}
 									>
 										{item.name}
 									</Link>
@@ -80,13 +100,23 @@ const Header = () => {
 								initial={{ opacity: 0, y: -10 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{
-									delay: 0.4,
+									delay: 0.5,
 									duration: 0.5,
 								}}
-								className="flex items-center space-x-4 ml-6"
 							>
-								<Button variant="ghost">Se connecter</Button>
-								<Button>Commencer gratuitement</Button>
+								<Button
+									variant="default"
+									className="bg-wisetwin-darkblue hover:bg-wisetwin-darkblue-light"
+									onClick={() => {
+										document
+											.getElementById("contact")
+											?.scrollIntoView({
+												behavior: "smooth",
+											});
+									}}
+								>
+									Demander une démo
+								</Button>
 							</motion.div>
 						</div>
 					</div>
@@ -94,7 +124,7 @@ const Header = () => {
 					<div className="md:hidden">
 						<motion.button
 							onClick={toggleMenu}
-							className="inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+							className="inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
 							whileTap={{ scale: 0.95 }}
 						>
 							<AnimatePresence mode="wait">
@@ -135,7 +165,7 @@ const Header = () => {
 						exit={{ opacity: 0, height: 0 }}
 						transition={{ duration: 0.3, ease: "easeInOut" }}
 					>
-						<div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md">
+						<div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md shadow-lg">
 							{navItems.map((item, index) => (
 								<motion.div
 									key={item.name}
@@ -143,13 +173,18 @@ const Header = () => {
 									animate={{ opacity: 1, x: 0 }}
 									exit={{ opacity: 0, x: -20 }}
 									transition={{
-										delay: 0.1 * index,
+										delay: 0.05 * index,
 										duration: 0.3,
 									}}
 								>
 									<Link
 										href={item.href}
-										className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+										className={cn(
+											"block px-3 py-2 rounded-md text-base font-medium hover:bg-accent transition-colors",
+											item.name === "Contact"
+												? "text-wisetwin-blue"
+												: "text-muted-foreground hover:text-foreground"
+										)}
 										onClick={toggleMenu}
 									>
 										{item.name}
@@ -161,20 +196,23 @@ const Header = () => {
 								animate={{ opacity: 1, x: 0 }}
 								exit={{ opacity: 0, x: -20 }}
 								transition={{
-									delay: 0.4,
+									delay: 0.3,
 									duration: 0.3,
 								}}
-								className="pt-4 space-y-2"
+								className="pt-2"
 							>
 								<Button
-									variant="outline"
-									className="w-full"
-									onClick={toggleMenu}
+									className="w-full bg-wisetwin-darkblue hover:bg-wisetwin-darkblue-light"
+									onClick={() => {
+										document
+											.getElementById("contact")
+											?.scrollIntoView({
+												behavior: "smooth",
+											});
+										toggleMenu();
+									}}
 								>
-									Se connecter
-								</Button>
-								<Button className="w-full" onClick={toggleMenu}>
-									Commencer gratuitement
+									Demander une démo
 								</Button>
 							</motion.div>
 						</div>

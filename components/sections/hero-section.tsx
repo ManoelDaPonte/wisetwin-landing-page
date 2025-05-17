@@ -1,11 +1,26 @@
 // components/sections/hero-section.tsx
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
+import { motion } from "framer-motion";
+import { ArrowRight, Box } from "lucide-react";
 
 export function HeroSection() {
+	const scrollToContact = () => {
+		document
+			.getElementById("contact")
+			?.scrollIntoView({ behavior: "smooth" });
+	};
+
 	return (
 		<Section variant="gradient" gridCols={2}>
-			<div className="flex flex-col gap-6">
+			<motion.div
+				className="flex flex-col gap-6"
+				initial={{ opacity: 0, x: -20 }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ duration: 0.8 }}
+			>
 				<h1 className="text-4xl md:text-5xl font-bold">
 					Formation industrielle en réalité 3D
 				</h1>
@@ -17,48 +32,47 @@ export function HeroSection() {
 				<div className="flex flex-col sm:flex-row gap-3">
 					<Button
 						size="lg"
-						className="bg-[hsl(var(--wisetwin-darkblue))] hover:bg-[hsl(var(--wisetwin-darkblue-light))]"
+						className="bg-wisetwin-darkblue hover:bg-wisetwin-darkblue-light"
+						onClick={scrollToContact}
 					>
 						Demander une démo
 					</Button>
 					<Button
 						variant="outline"
 						size="lg"
-						className="border-[hsl(var(--wisetwin-blue))] text-[hsl(var(--wisetwin-blue))] hover:bg-[hsl(var(--wisetwin-blue)/10%)]"
+						className="border-wisetwin-blue text-wisetwin-blue hover:bg-wisetwin-blue/10 transition-colors"
+						onClick={() =>
+							document
+								.getElementById("features")
+								?.scrollIntoView({ behavior: "smooth" })
+						}
 					>
-						Voir nos formations
+						Découvrir nos formations
+						<ArrowRight className="ml-2 h-4 w-4" />
 					</Button>
 				</div>
-			</div>
-			<div className="relative h-[400px] rounded-lg bg-muted p-2 ring-1 ring-border">
-				<div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
+			</motion.div>
+			<motion.div
+				className="relative h-[400px] rounded-lg overflow-hidden bg-gradient-to-br from-wisetwin-darkblue/90 to-wisetwin-blue/90 p-2 ring-1 ring-border shadow-lg"
+				initial={{ opacity: 0, x: 20 }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ duration: 0.8, delay: 0.2 }}
+			>
+				<div className="absolute inset-0 flex items-center justify-center text-white">
 					<div className="flex flex-col items-center gap-4">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							className="w-16 h-16 text-[hsl(var(--wisetwin-blue))]"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							strokeWidth="2"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-						>
-							<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-							<polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
-							<polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
-							<polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
-							<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-							<line x1="12" y1="22.08" x2="12" y2="12"></line>
-						</svg>
-						<p className="text-center font-medium">
+						<Box className="w-16 h-16" />
+						<p className="text-center font-medium text-xl">
 							Expérience 3D interactive
 						</p>
-						<p className="text-center text-sm">
-							Plateforme de formation sécurité immersive
+						<p className="text-center text-sm text-white/80 max-w-xs">
+							Notre plateforme immersive permet à vos
+							collaborateurs de s'entraîner en toute sécurité sur
+							des représentations fidèles de vos équipements
+							industriels.
 						</p>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</Section>
 	);
 }
