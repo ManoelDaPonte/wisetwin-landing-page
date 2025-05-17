@@ -1,2 +1,181 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Palette Wise Twin */
+    --wisetwin-blue: 190 95% 50%; /* Bleu clair du logo (#00C7FF) */
+    --wisetwin-darkblue: 240 80% 20%; /* Bleu foncé du logo (#0F0B66) */
+    --wisetwin-blue-light: 190 95% 60%; /* Version légèrement plus claire */
+    --wisetwin-darkblue-light: 240 70% 25%; /* Version légèrement plus claire du bleu foncé */
+
+    /* Mise à jour des couleurs primaires pour qu'elles correspondent à la palette de Wise Twin */
+    --primary: var(--wisetwin-darkblue);
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: var(--wisetwin-blue);
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Animations pour les composants */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+/* Classes personnalisées pour les couleurs */
+.text-primary {
+  color: hsl(var(--primary));
+}
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+.text-secondary {
+  color: hsl(var(--secondary));
+}
+.text-secondary-foreground {
+  color: hsl(var(--secondary-foreground));
+}
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+.text-accent-foreground {
+  color: hsl(var(--accent-foreground));
+}
+.text-destructive {
+  color: hsl(var(--destructive));
+}
+.text-destructive-foreground {
+  color: hsl(var(--destructive-foreground));
+}
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+.bg-primary-foreground {
+  background-color: hsl(var(--primary-foreground));
+}
+.bg-secondary {
+  background-color: hsl(var(--secondary));
+}
+.bg-muted {
+  background-color: hsl(var(--muted));
+}
+.bg-accent {
+  background-color: hsl(var(--accent));
+}
+.bg-destructive {
+  background-color: hsl(var(--destructive));
+}
+.bg-background {
+  background-color: hsl(var(--background));
+}
+.bg-card {
+  background-color: hsl(var(--card));
+}
+.bg-popover {
+  background-color: hsl(var(--popover));
+}
+.border-border {
+  border-color: hsl(var(--border));
+}
+.border-input {
+  border-color: hsl(var(--input));
+}
+.ring-ring {
+  --tw-ring-color: hsl(var(--ring));
+}
+
+/* Radius */
+.rounded-sm {
+  border-radius: calc(var(--radius) - 4px);
+}
+.rounded-md {
+  border-radius: calc(var(--radius) - 2px);
+}
+.rounded-lg {
+  border-radius: var(--radius);
+}
+
+/* Classes personnalisées WiseTwin */
+.bg-wisetwin-blue {
+  background-color: hsl(var(--wisetwin-blue));
+}
+.bg-wisetwin-darkblue {
+  background-color: hsl(var(--wisetwin-darkblue));
+}
+.bg-wisetwin-blue-light {
+  background-color: hsl(var(--wisetwin-blue-light));
+}
+.bg-wisetwin-darkblue-light {
+  background-color: hsl(var(--wisetwin-darkblue-light));
+}
+.text-wisetwin-blue {
+  color: hsl(var(--wisetwin-blue));
+}
+.text-wisetwin-darkblue {
+  color: hsl(var(--wisetwin-darkblue));
+}
+.text-wisetwin-blue-light {
+  color: hsl(var(--wisetwin-blue-light));
+}
+.text-wisetwin-darkblue-light {
+  color: hsl(var(--wisetwin-darkblue-light));
+}
+.border-wisetwin-blue {
+  border-color: hsl(var(--wisetwin-blue));
+}
+.border-wisetwin-darkblue {
+  border-color: hsl(var(--wisetwin-darkblue));
+}

@@ -1,129 +1,188 @@
 // components/layout/header.tsx
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import { Menu } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [mounted, setMounted] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+	// Après le montage du composant
+	useEffect(() => {
+		setMounted(true);
+	}, []);
 
-  return (
-    <Card className="relative z-50 w-full border-none bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-md">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-white">WiseTwin</span>
-        </Link>
+	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center space-x-6 md:flex">
-          <Link 
-            href="#features" 
-            className="text-sm font-medium text-white transition-colors hover:text-white/80"
-          >
-            Features
-          </Link>
-          <Link 
-            href="#pricing" 
-            className="text-sm font-medium text-white transition-colors hover:text-white/80"
-          >
-            Pricing
-          </Link>
-          <Link 
-            href="#about" 
-            className="text-sm font-medium text-white transition-colors hover:text-white/80"
-          >
-            About
-          </Link>
-          <Link 
-            href="#contact" 
-            className="text-sm font-medium text-white transition-colors hover:text-white/80"
-          >
-            Contact
-          </Link>
-        </nav>
+	const navItems = [
+		{ name: "Fonctionnalités", href: "#features" },
+		{ name: "Comment ça marche", href: "#how-it-works" },
+		{ name: "Tarifs", href: "#pricing" },
+		{ name: "Contact", href: "#contact" },
+	];
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button 
-            className="bg-white text-indigo-600 hover:bg-white/90 hover:text-indigo-700"
-          >
-            Get Started
-          </Button>
-        </div>
+	return (
+		<motion.header
+			className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border"
+			initial={{ opacity: 0, y: -20 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.5, ease: "easeOut" }}
+		>
+			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex items-center justify-between h-16">
+					<motion.div
+						className="flex-shrink-0"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 0.2, duration: 0.8 }}
+					>
+						<Link href="/" className="flex items-center space-x-2">
+							<Image
+								src="/wisetwin-logo.png"
+								alt="WiseTwin Logo"
+								width={32}
+								height={32}
+								className="h-8 w-8"
+							/>
+							<span className="text-foreground font-bold text-xl">
+								WiseTwin
+							</span>
+						</Link>
+					</motion.div>
 
-        {/* Mobile Menu Button */}
-        <Button 
-          variant="ghost" 
-          size="icon" 
-          className="text-white md:hidden"
-          onClick={toggleMenu}
-        >
-          <Menu className="h-6 w-6" />
-        </Button>
-      </div>
+					<div className="hidden md:block">
+						<div className="ml-10 flex items-center space-x-6">
+							{navItems.map((item, index) => (
+								<motion.div
+									key={item.name}
+									initial={{ opacity: 0, y: -10 }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{
+										delay: 0.1 * index,
+										duration: 0.5,
+									}}
+								>
+									<Link
+										href={item.href}
+										className="text-muted-foreground hover:text-foreground transition-colors"
+									>
+										{item.name}
+									</Link>
+								</motion.div>
+							))}
+							<motion.div
+								initial={{ opacity: 0, y: -10 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{
+									delay: 0.4,
+									duration: 0.5,
+								}}
+								className="flex items-center space-x-4 ml-6"
+							>
+								<Button variant="ghost">Se connecter</Button>
+								<Button>Commencer gratuitement</Button>
+							</motion.div>
+						</div>
+					</div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="absolute inset-x-0 top-16 z-50 bg-white p-4 shadow-lg md:hidden">
-          <Accordion type="single" collapsible>
-            <AccordionItem value="menu">
-              <AccordionTrigger className="py-2 text-indigo-600">Navigation</AccordionTrigger>
-              <AccordionContent>
-                <div className="flex flex-col space-y-3 p-2">
-                  <Link 
-                    href="#features" 
-                    className="text-sm font-medium text-gray-700 hover:text-indigo-600"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Features
-                  </Link>
-                  <Link 
-                    href="#pricing" 
-                    className="text-sm font-medium text-gray-700 hover:text-indigo-600"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Pricing
-                  </Link>
-                  <Link 
-                    href="#about" 
-                    className="text-sm font-medium text-gray-700 hover:text-indigo-600"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    About
-                  </Link>
-                  <Link 
-                    href="#contact" 
-                    className="text-sm font-medium text-gray-700 hover:text-indigo-600"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-          <div className="mt-4">
-            <Button 
-              className="w-full bg-indigo-600 text-white hover:bg-indigo-700"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Get Started
-            </Button>
-          </div>
-        </div>
-      )}
-    </Card>
-  )
-}
+					<div className="md:hidden">
+						<motion.button
+							onClick={toggleMenu}
+							className="inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+							whileTap={{ scale: 0.95 }}
+						>
+							<AnimatePresence mode="wait">
+								{isMenuOpen ? (
+									<motion.div
+										key="close"
+										initial={{ rotate: 180, opacity: 0 }}
+										animate={{ rotate: 0, opacity: 1 }}
+										exit={{ rotate: -180, opacity: 0 }}
+										transition={{ duration: 0.2 }}
+									>
+										<X className="h-6 w-6" />
+									</motion.div>
+								) : (
+									<motion.div
+										key="menu"
+										initial={{ rotate: -180, opacity: 0 }}
+										animate={{ rotate: 0, opacity: 1 }}
+										exit={{ rotate: 180, opacity: 0 }}
+										transition={{ duration: 0.2 }}
+									>
+										<Menu className="h-6 w-6" />
+									</motion.div>
+								)}
+							</AnimatePresence>
+						</motion.button>
+					</div>
+				</div>
+			</div>
 
-export default Header
+			{/* Mobile menu */}
+			<AnimatePresence>
+				{isMenuOpen && (
+					<motion.div
+						className="md:hidden"
+						initial={{ opacity: 0, height: 0 }}
+						animate={{ opacity: 1, height: "auto" }}
+						exit={{ opacity: 0, height: 0 }}
+						transition={{ duration: 0.3, ease: "easeInOut" }}
+					>
+						<div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md">
+							{navItems.map((item, index) => (
+								<motion.div
+									key={item.name}
+									initial={{ opacity: 0, x: -20 }}
+									animate={{ opacity: 1, x: 0 }}
+									exit={{ opacity: 0, x: -20 }}
+									transition={{
+										delay: 0.1 * index,
+										duration: 0.3,
+									}}
+								>
+									<Link
+										href={item.href}
+										className="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+										onClick={toggleMenu}
+									>
+										{item.name}
+									</Link>
+								</motion.div>
+							))}
+							<motion.div
+								initial={{ opacity: 0, x: -20 }}
+								animate={{ opacity: 1, x: 0 }}
+								exit={{ opacity: 0, x: -20 }}
+								transition={{
+									delay: 0.4,
+									duration: 0.3,
+								}}
+								className="pt-4 space-y-2"
+							>
+								<Button
+									variant="outline"
+									className="w-full"
+									onClick={toggleMenu}
+								>
+									Se connecter
+								</Button>
+								<Button className="w-full" onClick={toggleMenu}>
+									Commencer gratuitement
+								</Button>
+							</motion.div>
+						</div>
+					</motion.div>
+				)}
+			</AnimatePresence>
+		</motion.header>
+	);
+};
+
+export default Header;
