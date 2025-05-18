@@ -28,19 +28,19 @@ export function FeaturesSection() {
 	// Feature items data
 	const features = [
 		{
-			icon: <ShieldCheck className="size-6 text-wisetwin-blue" />,
+			icon: <ShieldCheck className="size-6 text-secondary" />,
 			title: "Sécurité renforcée",
 			description:
 				"Formez vos équipes aux procédures de sécurité sans risques réels. Simulez des incidents et pratiquez les interventions d'urgence en toute sécurité.",
 		},
 		{
-			icon: <RotateCw className="size-6 text-wisetwin-blue" />,
+			icon: <RotateCw className="size-6 text-secondary" />,
 			title: "Adaptabilité totale",
 			description:
 				"Nos formations s'adaptent à vos équipements spécifiques. Reproduisez fidèlement vos machines et procédés pour un apprentissage parfaitement contextualisé.",
 		},
 		{
-			icon: <BarChart3 className="size-6 text-wisetwin-blue" />,
+			icon: <BarChart3 className="size-6 text-secondary" />,
 			title: "Suivi analytique",
 			description:
 				"Mesurez la progression et identifiez les points d'amélioration grâce à nos tableaux de bord analytiques détaillés et personnalisables.",
@@ -59,9 +59,7 @@ export function FeaturesSection() {
 				>
 					<h2 className="text-3xl md:text-4xl font-bold mb-4">
 						Une approche{" "}
-						<span className="text-wisetwin-blue">
-							révolutionnaire
-						</span>{" "}
+						<span className="text-secondary">révolutionnaire</span>{" "}
 						de la formation
 					</h2>
 					<p className="text-lg text-muted-foreground">
@@ -82,7 +80,7 @@ export function FeaturesSection() {
 					{features.map((feature, index) => (
 						<motion.div key={index} variants={itemVariants}>
 							<div className="bg-card rounded-xl p-6 h-full border border-border/50 shadow-sm hover:shadow-md transition-shadow">
-								<div className="size-12 bg-wisetwin-blue/10 rounded-lg flex items-center justify-center mb-4">
+								<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
 									{feature.icon}
 								</div>
 								<h3 className="text-xl font-semibold mb-3">

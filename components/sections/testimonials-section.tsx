@@ -13,19 +13,19 @@ export function TestimonialsSection() {
 			quote: "WiseTwin a transformé notre façon de former les techniciens. Les résultats sont impressionnants : temps de formation réduit de 40% et satisfaction à 95%.",
 			author: "Sophie Martin",
 			role: "Responsable Formation, Industrie Automobile",
-			avatar: "/placeholder.png",
+			avatar: "/placeholder.jpg",
 		},
 		{
 			quote: "La qualité des simulations 3D est remarquable. Nos équipes peuvent maintenant s'entraîner sur des scénarios critiques sans aucun risque.",
 			author: "Thomas Dubois",
 			role: "Directeur Sécurité, Production Énergétique",
-			avatar: "/placeholder.png",
+			avatar: "/placeholder.jpg",
 		},
 		{
 			quote: "Le suivi analytique nous permet d'identifier précisément les besoins de nos collaborateurs et d'adapter leur parcours de formation.",
 			author: "Marie Leroy",
 			role: "DRH, Agroalimentaire",
-			avatar: "/placeholder.png",
+			avatar: "/placeholder.jpg",
 		},
 	];
 
@@ -64,9 +64,7 @@ export function TestimonialsSection() {
 				>
 					<h2 className="text-3xl md:text-4xl font-bold mb-4">
 						Ce que nos clients{" "}
-						<span className="text-wisetwin-blue">
-							disent de nous
-						</span>
+						<span className="text-secondary">disent de nous</span>
 					</h2>
 					<p className="text-lg text-muted-foreground">
 						Découvrez comment nos solutions de formation
@@ -86,7 +84,7 @@ export function TestimonialsSection() {
 						<motion.div key={index} variants={itemVariants}>
 							<Card className="h-full">
 								<CardContent className="pt-6">
-									<div className="mb-4 text-wisetwin-blue">
+									<div className="mb-4 text-secondary">
 										<Quote className="size-8" />
 									</div>
 									<p className="mb-6 text-muted-foreground italic">

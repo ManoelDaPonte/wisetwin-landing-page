@@ -3,7 +3,6 @@
 import {
 	HeroSection,
 	FeaturesSection,
-	ProcessSection,
 	TestimonialsSection,
 	CtaSection,
 } from "@/components/sections";
@@ -13,7 +12,6 @@ export default function Home() {
 		<>
 			<HeroSection />
 			<FeaturesSection />
-			<ProcessSection />
 			<TestimonialsSection />
 			<CtaSection />
 		</>

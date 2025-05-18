@@ -27,7 +27,7 @@ export function HeroSection() {
 						transition={{ duration: 0.6 }}
 					>
 						<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-							<span className="text-wisetwin-blue">
+							<span className="text-secondary">
 								Formations immersives
 							</span>{" "}
 							pour l'industrie 4.0

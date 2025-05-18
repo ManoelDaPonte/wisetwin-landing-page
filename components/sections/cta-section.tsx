@@ -10,7 +10,7 @@ export function CtaSection() {
 		<Section id="cta">
 			<div className="container px-4 mx-auto py-16">
 				<motion.div
-					className="bg-gradient-to-r from-wisetwin-darkblue to-wisetwin-blue rounded-xl p-8 md:p-12 overflow-hidden relative"
+					className="bg-gradient-to-r from-primary to-secondary rounded-xl p-8 md:p-12 overflow-hidden relative"
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true, margin: "-100px" }}
