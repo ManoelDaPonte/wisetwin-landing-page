@@ -5,7 +5,17 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Mail, Boxes, FileText, Info, BookOpen } from "lucide-react";
+import {
+	Menu,
+	X,
+	Mail,
+	Boxes,
+	FileText,
+	Info,
+	BookOpen,
+	Video,
+	GraduationCap,
+} from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -27,36 +37,46 @@ import {
 } from "@/components/ui/sheet";
 
 // Menu items configuration
-// Remplacez la configuration menuItems dans components/layout/header.tsx par ceci :
+type MenuChild = {
+	title: string;
+	href: string;
+	description: string;
+	icon: string;
+	iconComponent?: React.ReactNode;
+};
 
-const menuItems = [
+type MenuItem = {
+	title: string;
+	href: string;
+	children?: MenuChild[];
+};
+
+const menuItems: MenuItem[] = [
 	{
 		title: "Solutions",
 		href: "/solutions",
 		children: [
 			{
-				title: "Formations 3D",
-				href: "/#notre-solution",
+				title: "WiseTrainer",
+				href: "/solutions/wisetrainer",
 				description: "Formations immersives en 3D pour vos équipes",
 				icon: "/globe.svg",
+				iconComponent: (
+					<GraduationCap className="size-4 text-secondary" />
+				),
 			},
 			{
-				title: "Notre Technologie",
-				href: "/#notre-technologie",
-				description: "L'IA au service de la pédagogie industrielle",
+				title: "WiseTour",
+				href: "/solutions/wisetour",
+				description: "Visites industrielles virtuelles interactives",
 				icon: "/window.svg",
-			},
-			{
-				title: "Avantages",
-				href: "/#features",
-				description: "Sécurité, adaptabilité et suivi analytique",
-				icon: "/file.svg",
+				iconComponent: <Video className="size-4 text-secondary" />,
 			},
 		],
 	},
 	{
 		title: "Cas d'usage",
-		href: "/#marches-applications",
+		href: "/#cas-usage",
 		children: [
 			{
 				title: "Problèmes résolus",
@@ -188,7 +208,7 @@ export default function Header() {
 							/>
 							<div className="hidden lg:block text-2xl font-bold text-foreground">
 								<span className="text-primary">Wise</span>
-								<span className="text-secondary">Trainer</span>
+								<span className="text-secondary">Twin</span>
 							</div>
 						</motion.div>
 					</Link>
@@ -261,18 +281,20 @@ export default function Header() {
 																					duration: 0.5,
 																				}}
 																			>
-																				<Image
-																					src={
-																						child.icon
-																					}
-																					alt=""
-																					width={
-																						18
-																					}
-																					height={
-																						18
-																					}
-																				/>
+																				{child.iconComponent || (
+																					<Image
+																						src={
+																							child.icon
+																						}
+																						alt=""
+																						width={
+																							18
+																						}
+																						height={
+																							18
+																						}
+																					/>
+																				)}
 																			</motion.div>
 																			<div>
 																				<div className="font-medium">
@@ -468,18 +490,20 @@ export default function Header() {
 																				}
 																				className="flex items-center gap-2.5 py-2 px-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
 																			>
-																				<Image
-																					src={
-																						child.icon
-																					}
-																					alt=""
-																					width={
-																						16
-																					}
-																					height={
-																						16
-																					}
-																				/>
+																				{child.iconComponent || (
+																					<Image
+																						src={
+																							child.icon
+																						}
+																						alt=""
+																						width={
+																							16
+																						}
+																						height={
+																							16
+																						}
+																					/>
+																				)}
 																				<span className="text-sm">
 																					{
 																						child.title

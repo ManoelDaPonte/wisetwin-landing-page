@@ -1,8 +1,8 @@
 export { HeroSection } from "./hero-section";
+export { SolutionsSection } from "./solutions-section";
 export { FeaturesSection } from "./features-section";
 export { TestimonialsSection } from "./testimonials-section";
 export { CtaSection } from "./cta-section";
-export { SolutionSection } from "./solution-section";
 export { ProblemsSection } from "./problems-section";
 export { TechnologySection } from "./technology-section";
 export { MarketsSection } from "./markets-section";

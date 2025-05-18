@@ -2,7 +2,7 @@
 "use client";
 import {
 	HeroSection,
-	SolutionSection,
+	SolutionsSection,
 	FeaturesSection,
 	ProblemsSection,
 	TechnologySection,
@@ -16,7 +16,7 @@ export default function Home() {
 	return (
 		<>
 			<HeroSection />
-			<SolutionSection />
+			<SolutionsSection />
 			<FeaturesSection />
 			<ProblemsSection />
 			<TechnologySection />

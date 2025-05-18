@@ -27,35 +27,34 @@ export function HeroSection() {
 						transition={{ duration: 0.6 }}
 					>
 						<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-							<span className="text-secondary">
-								Formations immersives
-							</span>{" "}
+							Solutions{" "}
+							<span className="text-secondary">immersives</span>{" "}
 							pour l'industrie 4.0
 						</h1>
 						<p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-							WiseTwin transforme la formation industrielle avec
-							des expériences 3D interactives pour améliorer la
-							sécurité et la performance de vos équipes.
+							WiseTwin crée des jumeaux numériques pour former vos
+							équipes et valoriser vos installations industrielles
+							grâce à des expériences 3D interactives.
 						</p>
 
 						<div className="flex flex-wrap justify-center gap-4">
 							<Button size="lg" asChild>
-								<Link href="/contact">
+								<Link href="#nos-solutions">
 									<div className="flex items-center">
-										Demander une démo{" "}
+										Découvrir nos solutions{" "}
 										<ArrowRight className="ml-2 size-4" />
 									</div>
 								</Link>
 							</Button>
 							<Button size="lg" variant="outline" asChild>
-								<Link href="/solutions">
-									<div>Découvrir nos solutions</div>
+								<Link href="/contact">
+									<div>Demander une démo</div>
 								</Link>
 							</Button>
 						</div>
 					</motion.div>
 
-					{/* Visual Placeholder - Replace with actual product visualization */}
+					{/* Visual Placeholder */}
 					<motion.div
 						className="relative w-full max-w-5xl h-[400px] mt-8 rounded-xl overflow-hidden shadow-lg"
 						initial={{ opacity: 0, y: 40 }}
@@ -63,9 +62,29 @@ export function HeroSection() {
 						transition={{ duration: 0.8, delay: 0.2 }}
 					>
 						<div className="absolute inset-0 bg-gradient-to-br from-wisetwin-darkblue to-wisetwin-blue flex items-center justify-center">
-							<p className="text-white text-lg font-medium">
-								Visualisation de formation 3D
-							</p>
+							<div className="flex flex-col items-center gap-6">
+								<div className="flex items-center gap-8">
+									<div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 flex flex-col items-center justify-center">
+										<span className="text-white text-lg font-medium mb-2">
+											WiseTrainer
+										</span>
+										<p className="text-white/70 text-sm text-center">
+											Formation immersive
+										</p>
+									</div>
+									<div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 flex flex-col items-center justify-center">
+										<span className="text-white text-lg font-medium mb-2">
+											WiseTour
+										</span>
+										<p className="text-white/70 text-sm text-center">
+											Visite industrielle
+										</p>
+									</div>
+								</div>
+								<p className="text-white/90 text-sm">
+									Expériences 3D interactives pour l'industrie
+								</p>
+							</div>
 						</div>
 					</motion.div>
 
