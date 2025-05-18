@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, RotateCw, BarChart3 } from "lucide-react";
 
-import { Section, SectionCard } from "@/components/common/section";
+import { Section } from "@/components/common/section";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function FeaturesSection() {
 	// Animation variants for staggered animation
@@ -79,17 +80,19 @@ export function FeaturesSection() {
 				>
 					{features.map((feature, index) => (
 						<motion.div key={index} variants={itemVariants}>
-							<div className="bg-card rounded-xl p-6 h-full border border-border/50 shadow-sm hover:shadow-md transition-shadow">
-								<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-									{feature.icon}
-								</div>
-								<h3 className="text-xl font-semibold mb-3">
-									{feature.title}
-								</h3>
-								<p className="text-muted-foreground">
-									{feature.description}
-								</p>
-							</div>
+							<Card className="h-full hover:shadow-md transition-all duration-200">
+								<CardContent className="pt-6">
+									<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+										{feature.icon}
+									</div>
+									<h3 className="text-xl font-semibold mb-3">
+										{feature.title}
+									</h3>
+									<p className="text-muted-foreground">
+										{feature.description}
+									</p>
+								</CardContent>
+							</Card>
 						</motion.div>
 					))}
 				</motion.div>

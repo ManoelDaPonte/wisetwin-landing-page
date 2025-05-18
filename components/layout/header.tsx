@@ -172,22 +172,20 @@ export default function Header() {
 					{/* Logo */}
 					<Link href="/">
 						<motion.div
-							className="flex items-center gap-2"
+							className="flex items-center gap-2 cursor-pointer"
 							initial="initial"
 							animate="animate"
 							variants={logoVariants}
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.98 }}
 						>
-							<div className="flex items-center gap-2">
-								<Image
-									src="/wisetwin-logo.png"
-									alt="WiseTwin Logo"
-									width={40}
-									height={40}
-									className="dark:invert"
-								/>
-							</div>
+							<Image
+								src="/wisetwin-logo.png"
+								alt="WiseTwin Logo"
+								width={40}
+								height={40}
+								className="dark:invert"
+							/>
 							<div className="hidden lg:block text-2xl font-bold text-foreground">
 								<span className="text-primary">Wise</span>
 								<span className="text-secondary">Twin</span>
@@ -302,8 +300,6 @@ export default function Header() {
 												initial="hidden"
 												animate="visible"
 												variants={navItemVariants}
-												whileHover={{ scale: 1.05 }}
-												whileTap={{ scale: 0.95 }}
 											>
 												<Link
 													href={item.href}

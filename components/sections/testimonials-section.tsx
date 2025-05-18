@@ -5,6 +5,7 @@ import { Quote } from "lucide-react";
 
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export function TestimonialsSection() {
 	// Sample testimonials - replace with real data
@@ -83,7 +84,7 @@ export function TestimonialsSection() {
 				>
 					{testimonials.map((testimonial, index) => (
 						<motion.div key={index} variants={itemVariants}>
-							<Card className="h-full">
+							<Card className="h-full hover:shadow-md transition-all duration-200">
 								<CardContent className="pt-6">
 									<div className="mb-4 text-secondary">
 										<Quote className="size-8" />
@@ -92,20 +93,20 @@ export function TestimonialsSection() {
 										"{testimonial.quote}"
 									</p>
 									<div className="flex items-center gap-3">
-										<div className="size-12 rounded-full overflow-hidden bg-muted flex items-center justify-center">
+										<Avatar className="size-12">
 											{testimonial.avatar ? (
-												<Image
+												<AvatarImage
 													src={testimonial.avatar}
 													alt={testimonial.author}
-													width={48}
-													height={48}
 												/>
-											) : (
-												<span className="text-muted-foreground text-xs">
-													Photo
-												</span>
-											)}
-										</div>
+											) : null}
+											<AvatarFallback className="bg-secondary/20 text-secondary">
+												{testimonial.author
+													.split(" ")
+													.map((name) => name[0])
+													.join("")}
+											</AvatarFallback>
+										</Avatar>
 										<div>
 											<p className="font-medium">
 												{testimonial.author}

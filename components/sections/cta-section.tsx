@@ -51,14 +51,12 @@ export function CtaSection() {
 							programme sur mesure adapté à vos besoins
 							spécifiques.
 						</p>
-						<motion.div
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-						>
+						<motion.div>
 							<Button
+								variant="outline"
 								size="lg"
 								asChild
-								className="bg-white text-wisetwin-darkblue hover:bg-white/90"
+								className=""
 							>
 								<Link href="/contact">
 									<div>Demander une consultation</div>

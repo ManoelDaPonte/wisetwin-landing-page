@@ -1,7 +1,8 @@
 // components/sections/markets-section.tsx
 import { motion } from "framer-motion";
 import { HardHat, Factory, Microscope, GraduationCap } from "lucide-react";
-import { Section, SectionCard } from "@/components/common/section";
+import { Section } from "@/components/common/section";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function MarketsSection() {
 	// Marchés ciblés
@@ -79,18 +80,16 @@ export function MarketsSection() {
 	return (
 		<Section
 			id="marches-applications"
-			variant="muted" // Ajouter "muted"
+			variant="muted"
 			header={{
 				title: "Marchés & Applications",
 				description:
 					"WiseTwin s'adapte à différents segments de clientèle et répond à des besoins spécifiques",
 				centered: true,
 			}}
-			gridCols={2}
-			gridGap="large"
 		>
 			<motion.div
-				className="col-span-2 mb-8 text-center"
+				className="mb-8 text-center"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
@@ -108,35 +107,39 @@ export function MarketsSection() {
 				initial="hidden"
 				whileInView="visible"
 				viewport={{ once: true }}
-				className="col-span-2 grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+				className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
 			>
 				{markets.map((market, index) => (
 					<motion.div key={index} variants={itemVariants}>
-						<SectionCard
-							icon={market.icon}
-							title={market.title}
-							highlight={index === 0}
-						>
-							<p className="text-sm text-muted-foreground mb-4">
-								{market.description}
-							</p>
-							<div className="mt-auto">
-								<h4 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2">
-									Applications
-								</h4>
-								<ul className="text-sm space-y-1">
-									{market.items.map((item, i) => (
-										<li
-											key={i}
-											className="flex items-center"
-										>
-											<span className="size-1.5 bg-secondary rounded-full mr-2"></span>
-											{item}
-										</li>
-									))}
-								</ul>
-							</div>
-						</SectionCard>
+						<Card className="h-full hover:shadow-md transition-all duration-200">
+							<CardContent className="p-6">
+								<div className="size-12 bg-wisetwin-blue/10 rounded-lg flex items-center justify-center mb-4">
+									{market.icon}
+								</div>
+								<h3 className="font-semibold text-xl mb-2">
+									{market.title}
+								</h3>
+								<p className="text-sm text-muted-foreground mb-4">
+									{market.description}
+								</p>
+								<div className="mt-4">
+									<h4 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2">
+										Applications
+									</h4>
+									<ul className="text-sm space-y-1">
+										{market.items.map((item, i) => (
+											<li
+												key={i}
+												className="flex items-center"
+											>
+												<span className="size-1.5 bg-secondary rounded-full mr-2"></span>
+												{item}
+											</li>
+										))}
+									</ul>
+								</div>
+							</CardContent>
+						</Card>
 					</motion.div>
 				))}
 			</motion.div>

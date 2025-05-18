@@ -64,7 +64,6 @@ export function Footer() {
 	// Réseaux sociaux
 	const socialLinks = [
 		{ icon: <Linkedin className="size-5" />, href: "https://linkedin.com" },
-		{ icon: <Twitter className="size-5" />, href: "https://twitter.com" },
 	];
 
 	return (

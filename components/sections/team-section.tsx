@@ -1,11 +1,12 @@
 // components/sections/team-section.tsx
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
 
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 
 export function TeamSection() {
 	// Données de l'équipe
@@ -22,6 +23,7 @@ export function TeamSection() {
 			],
 			image: "/team/placeholder.png",
 			linkedin: "#",
+			initials: "ML",
 		},
 		{
 			name: "Manoel Daponte",
@@ -35,6 +37,7 @@ export function TeamSection() {
 			],
 			image: "/team/placeholder.png",
 			linkedin: "#",
+			initials: "MD",
 		},
 		{
 			name: "Gauthier Delmarre",
@@ -48,6 +51,7 @@ export function TeamSection() {
 			],
 			image: "/team/placeholder.png",
 			linkedin: "#",
+			initials: "GD",
 		},
 	];
 
@@ -90,65 +94,45 @@ export function TeamSection() {
 				className="grid md:grid-cols-3 gap-8"
 			>
 				{teamMembers.map((member, index) => (
-					<motion.div
-						key={member.name}
-						variants={itemVariants}
-						whileHover={{ y: -10 }}
-						transition={{ duration: 0.3 }}
-					>
-						<Card className="h-full overflow-hidden">
+					<motion.div key={member.name} variants={itemVariants}>
+						<Card className="h-full overflow-hidden hover:shadow-md transition-all duration-200">
 							<CardContent className="p-0">
-								<div className="aspect-[4/3] bg-muted relative">
-									{member.image ? (
-										<Image
-											src={member.image}
-											alt={member.name}
-											width={400}
-											height={300}
-											className="object-cover w-full h-full"
-										/>
-									) : (
-										<div className="w-full h-full bg-wisetwin-blue/20 flex items-center justify-center">
-											<span className="text-wisetwin-blue">
-												Photo
-											</span>
-										</div>
-									)}
-									<div className="absolute bottom-4 right-4 flex gap-2">
-										{member.linkedin && (
-											<a
-												href={member.linkedin}
-												target="_blank"
-												rel="noopener noreferrer"
-												className="size-8 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md transition-colors"
-											>
-												<Linkedin className="size-4 text-wisetwin-darkblue" />
-											</a>
-										)}
-									</div>
-								</div>
-								<div className="p-6">
-									<h3 className="text-xl font-bold">
+								<div className="p-6 flex flex-col items-center">
+									{/* Avatar au lieu d'une grande image */}
+									<Avatar className="h-24 w-24 mb-4">
+										{member.image ? (
+											<AvatarImage
+												src={member.image}
+												alt={member.name}
+											/>
+										) : null}
+										<AvatarFallback className="bg-wisetwin-blue/20 text-wisetwin-blue text-xl">
+											{member.initials}
+										</AvatarFallback>
+									</Avatar>
+
+									<h3 className="text-xl font-bold text-center">
 										{member.name}
 									</h3>
-									<p className="text-secondary font-medium mb-3">
+									<p className="text-secondary font-medium mb-2 text-center">
 										{member.role}
 									</p>
-									<p className="text-muted-foreground text-sm mb-4">
+									<p className="text-muted-foreground text-sm mb-4 text-center">
 										{member.bio}
 									</p>
 
-									<h4 className="text-xs uppercase text-muted-foreground font-medium mb-2 mt-4">
+									<h4 className="text-xs uppercase text-muted-foreground font-medium mb-2 mt-2">
 										Compétences clés
 									</h4>
-									<div className="flex flex-wrap gap-2">
+									<div className="flex flex-wrap gap-2 justify-center">
 										{member.skills.map((skill, i) => (
-											<span
+											<Badge
 												key={i}
-												className="inline-block bg-secondary/10 text-secondary px-2 py-1 rounded-md text-xs"
+												variant="secondary"
+												className="font-normal"
 											>
 												{skill}
-											</span>
+											</Badge>
 										))}
 									</div>
 								</div>
