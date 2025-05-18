@@ -188,7 +188,7 @@ export default function Header() {
 							/>
 							<div className="hidden lg:block text-2xl font-bold text-foreground">
 								<span className="text-primary">Wise</span>
-								<span className="text-secondary">Twin</span>
+								<span className="text-secondary">Trainer</span>
 							</div>
 						</motion.div>
 					</Link>
