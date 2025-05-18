@@ -48,7 +48,7 @@ export function FeaturesSection() {
 	];
 
 	return (
-		<Section id="features" variant="muted" className="py-20">
+		<Section id="features" variant="default" className="py-20">
 			<div className="container px-4 mx-auto">
 				{/* Section header */}
 				<motion.div

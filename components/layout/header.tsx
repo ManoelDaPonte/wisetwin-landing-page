@@ -27,6 +27,8 @@ import {
 } from "@/components/ui/sheet";
 
 // Menu items configuration
+// Remplacez la configuration menuItems dans components/layout/header.tsx par ceci :
+
 const menuItems = [
 	{
 		title: "Solutions",
@@ -34,31 +36,51 @@ const menuItems = [
 		children: [
 			{
 				title: "Formations 3D",
-				href: "/solutions/formations-3d",
+				href: "/#notre-solution",
 				description: "Formations immersives en 3D pour vos équipes",
 				icon: "/globe.svg",
 			},
 			{
-				title: "Sécurité industrielle",
-				href: "/solutions/securite",
-				description: "Optimisez la sécurité de vos installations",
+				title: "Notre Technologie",
+				href: "/#notre-technologie",
+				description: "L'IA au service de la pédagogie industrielle",
 				icon: "/window.svg",
 			},
 			{
-				title: "Suivi de progression",
-				href: "/solutions/suivi",
-				description: "Tableaux de bord et analyses de performance",
+				title: "Avantages",
+				href: "/#features",
+				description: "Sécurité, adaptabilité et suivi analytique",
 				icon: "/file.svg",
 			},
 		],
 	},
 	{
 		title: "Cas d'usage",
-		href: "/cas-usage",
+		href: "/#marches-applications",
+		children: [
+			{
+				title: "Problèmes résolus",
+				href: "/#problemes-resolus",
+				description: "Les défis que nous résolvons pour l'industrie",
+				icon: "/globe.svg",
+			},
+			{
+				title: "Marchés ciblés",
+				href: "/#marches-applications",
+				description: "Industries et secteurs où nous intervenons",
+				icon: "/window.svg",
+			},
+			{
+				title: "Témoignages",
+				href: "/#testimonials",
+				description: "Ce que nos clients disent de nos solutions",
+				icon: "/file.svg",
+			},
+		],
 	},
 	{
 		title: "À propos",
-		href: "/a-propos",
+		href: "/#notre-equipe",
 	},
 	{
 		title: "Ressources",

@@ -52,7 +52,8 @@ export function TestimonialsSection() {
 	return (
 		<Section
 			id="testimonials"
-			className="py-20 bg-gradient-to-b from-background to-muted/30"
+			variant="default" // Remplacer le className actuel
+			className="py-20"
 		>
 			<div className="container px-4 mx-auto">
 				{/* Section header */}

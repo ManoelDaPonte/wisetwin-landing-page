@@ -136,11 +136,6 @@ export function Footer() {
 								</li>
 							))}
 						</ul>
-						<Button asChild>
-							<Link href="/contact">
-								<div>Nous contacter</div>
-							</Link>
-						</Button>
 					</div>
 				</div>
 
