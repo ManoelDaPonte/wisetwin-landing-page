@@ -13,19 +13,19 @@ export function TestimonialsSection() {
 			quote: "WiseTwin a transformé notre façon de former les techniciens. Les résultats sont impressionnants : temps de formation réduit de 40% et satisfaction à 95%.",
 			author: "Sophie Martin",
 			role: "Responsable Formation, Industrie Automobile",
-			avatar: "/placeholder.jpg",
+			avatar: "/placeholder.png",
 		},
 		{
 			quote: "La qualité des simulations 3D est remarquable. Nos équipes peuvent maintenant s'entraîner sur des scénarios critiques sans aucun risque.",
 			author: "Thomas Dubois",
 			role: "Directeur Sécurité, Production Énergétique",
-			avatar: "/placeholder.jpg",
+			avatar: "/placeholder.png",
 		},
 		{
 			quote: "Le suivi analytique nous permet d'identifier précisément les besoins de nos collaborateurs et d'adapter leur parcours de formation.",
 			author: "Marie Leroy",
 			role: "DRH, Agroalimentaire",
-			avatar: "/placeholder.jpg",
+			avatar: "/placeholder.png",
 		},
 	];
 
