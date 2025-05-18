@@ -9,6 +9,7 @@ import {
 	MarketsSection,
 	TestimonialsSection,
 	TeamSection,
+	ContactSection,
 	CtaSection,
 } from "@/components/sections";
 
@@ -23,7 +24,8 @@ export default function Home() {
 			<MarketsSection />
 			<TestimonialsSection />
 			<TeamSection />
-			<CtaSection />
+			<ContactSection />
+			{/* <CtaSection /> */}
 		</>
 	);
 }
