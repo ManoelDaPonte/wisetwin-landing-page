@@ -91,7 +91,7 @@ export function Footer() {
 	const socialLinks = [
 		{
 			icon: <Linkedin className="size-5" />,
-			href: "https://www.linkedin.com/company/wisetwin",
+			href: "https://www.linkedin.com/company/wise-twin",
 			label: "LinkedIn",
 		},
 	];
