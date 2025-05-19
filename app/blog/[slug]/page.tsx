@@ -6,10 +6,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CalendarIcon, Clock } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { BlogPost } from "@/types/blog";
+import MDXWrapper from "@/components/mdx-wrapper";
 
 // Type pour un article récupéré
 type PostWithFrontmatter = {
@@ -31,6 +30,12 @@ type PostWithFrontmatter = {
 // Fonction pour obtenir tous les slugs d'articles pour la génération statique
 export async function generateStaticParams() {
 	const blogDir = path.join(process.cwd(), "blog");
+	
+	// Vérifier si le dossier blog existe
+	if (!fs.existsSync(blogDir)) {
+		return [];
+	}
+	
 	const files = fs.readdirSync(blogDir);
 
 	return files
@@ -115,7 +120,14 @@ export default async function BlogPostPage({
 	}
 
 	// Importer dynamiquement le contenu MDX
-	const MDXContent = (await import(`@/blog/${params.slug}.mdx`)).default;
+	let MDXContent;
+	try {
+		const MDXModule = await import(`@/blog/${resolvedSlug.slug}.mdx`);
+		MDXContent = MDXModule.default;
+	} catch (error) {
+		// Si le fichier MDX n'existe pas, afficher 404
+		notFound();
+	}
 
 	return (
 		<div className="pt-24 pb-16">
@@ -186,8 +198,10 @@ export default async function BlogPostPage({
 				</div>
 
 				{/* Contenu de l'article */}
-				<div className="prose prose-lg max-w-none mb-12">
-					<MDXContent />
+				<div className="">
+					<MDXWrapper>
+						<MDXContent />
+					</MDXWrapper>
 				</div>
 
 				{/* Tags */}

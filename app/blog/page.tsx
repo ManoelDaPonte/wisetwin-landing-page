@@ -22,6 +22,12 @@ import { BlogPost } from "@/types/blog";
 async function getAllPosts(): Promise<BlogPost[]> {
 	// Chemin vers le dossier des articles
 	const blogDir = path.join(process.cwd(), "blog");
+	
+	// Vérifier si le dossier existe
+	if (!fs.existsSync(blogDir)) {
+		return [];
+	}
+	
 	const filenames = fs.readdirSync(blogDir);
 
 	// Extraire les métadonnées de chaque article

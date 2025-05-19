@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 };
 
 const withMDX = createMDX({
-  // Options pour les plugins markdown si nécessaire
+  // Configuration MDX standard
 })
 
 export default withMDX(nextConfig)
