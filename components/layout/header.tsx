@@ -128,7 +128,7 @@ const menuItems: MenuItem[] = [
 	},
 ];
 
-export default function Header() {
+export function Header() {
 	const [scrolled, setScrolled] = useState(false);
 
 	useEffect(() => {

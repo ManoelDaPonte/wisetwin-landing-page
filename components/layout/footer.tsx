@@ -20,7 +20,7 @@ export function Footer() {
 			],
 		},
 		{
-			title: "Secteurs",
+			title: "Profils",
 			links: [
 				{ label: "Responsable HSE", href: "/profils/responsable-hse" },
 				{

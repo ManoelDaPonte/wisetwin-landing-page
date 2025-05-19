@@ -1,8 +1,9 @@
 // components/sections/contact-section.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 import {
 	Send,
 	AlertTriangle,
@@ -12,6 +13,7 @@ import {
 	Users,
 	Info,
 	ArrowRight,
+	CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,10 +41,34 @@ export function ContactSection() {
 		subject: "",
 		company: "",
 		message: "",
+		csrfToken: "",
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
 	const [error, setError] = useState("");
+
+	// Obtenir un token CSRF au chargement du composant
+	useEffect(() => {
+		const fetchCsrfToken = async () => {
+			try {
+				const response = await fetch("/api/csrf");
+				const data = await response.json();
+				if (data.csrfToken) {
+					setFormState((prev) => ({
+						...prev,
+						csrfToken: data.csrfToken,
+					}));
+				}
+			} catch (error) {
+				console.error(
+					"Erreur lors de la récupération du token CSRF:",
+					error
+				);
+			}
+		};
+
+		fetchCsrfToken();
+	}, []);
 
 	const handleChange = (e: any) => {
 		const { name, value } = e.target;
@@ -62,8 +88,36 @@ export function ContactSection() {
 		setError(""); // Réinitialiser les erreurs précédentes
 
 		try {
-			// Simulation d'envoi de formulaire (à remplacer par votre API réelle)
-			await new Promise((resolve) => setTimeout(resolve, 1500));
+			// Validation côté client
+			if (!formState.name || !formState.email || !formState.message) {
+				throw new Error(
+					"Veuillez remplir tous les champs obligatoires"
+				);
+			}
+
+			// Email validation
+			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!emailRegex.test(formState.email)) {
+				throw new Error("Veuillez entrer une adresse e-mail valide");
+			}
+
+			// Appel à l'API de contact
+			const response = await fetch("/api/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formState),
+			});
+
+			const data = await response.json();
+
+			if (!response.ok) {
+				throw new Error(
+					data.error ||
+						"Une erreur est survenue lors de l'envoi du message"
+				);
+			}
 
 			// Message envoyé avec succès
 			setIsSubmitting(false);
@@ -74,12 +128,20 @@ export function ContactSection() {
 				subject: "",
 				company: "",
 				message: "",
+				csrfToken: formState.csrfToken, // Conserver le token CSRF
 			});
 
-			// Reset du message de succès après 5 secondes
+			// Afficher un toast de succès avec Sonner
+			toast.success("Message envoyé avec succès !", {
+				description: `Un email de confirmation a été envoyé à ${formState.email}.`,
+				duration: 8000,
+				icon: <CheckCircle className="size-4" />,
+			});
+
+			// Reset du message de succès après 8 secondes
 			setTimeout(() => {
 				setSubmitted(false);
-			}, 5000);
+			}, 8000);
 		} catch (error) {
 			console.error("Erreur lors de l'envoi du message:", error);
 			setIsSubmitting(false);
@@ -87,6 +149,15 @@ export function ContactSection() {
 				(error instanceof Error && error.message) ||
 					"Une erreur est survenue lors de l'envoi du message"
 			);
+
+			// Afficher un toast d'erreur avec Sonner
+			toast.error("Erreur", {
+				description:
+					(error instanceof Error && error.message) ||
+					"Une erreur est survenue lors de l'envoi du message",
+				duration: 5000,
+				icon: <AlertTriangle className="size-4" />,
+			});
 		}
 	};
 
@@ -153,11 +224,14 @@ export function ContactSection() {
 						<CardContent>
 							{submitted ? (
 								<motion.div
-									className="bg-secondary/10 border border-secondary text-secondary p-6 rounded-lg text-center"
+									className="bg-green-50 border border-green-200 text-green-700 p-6 rounded-lg text-center"
 									initial={{ opacity: 0, scale: 0.9 }}
 									animate={{ opacity: 1, scale: 1 }}
 									transition={{ duration: 0.3 }}
 								>
+									<div className="flex justify-center mb-4">
+										<CheckCircle className="size-12 text-green-500" />
+									</div>
 									<h3 className="text-xl font-semibold mb-2">
 										Message envoyé avec succès !
 									</h3>
@@ -165,6 +239,10 @@ export function ContactSection() {
 										Merci pour votre message. Notre équipe
 										vous répondra dans les plus brefs
 										délais.
+									</p>
+									<p className="text-sm mt-4">
+										Un email de confirmation a été envoyé à
+										l'adresse {formState.email}
 									</p>
 								</motion.div>
 							) : (
@@ -194,7 +272,10 @@ export function ContactSection() {
 												htmlFor="name"
 												className="block text-sm font-medium"
 											>
-												Nom complet
+												Nom complet{" "}
+												<span className="text-destructive">
+													*
+												</span>
 											</label>
 											<Input
 												id="name"
@@ -211,7 +292,10 @@ export function ContactSection() {
 												htmlFor="email"
 												className="block text-sm font-medium"
 											>
-												Email professionnel
+												Email professionnel{" "}
+												<span className="text-destructive">
+													*
+												</span>
 											</label>
 											<Input
 												type="email"
@@ -292,7 +376,10 @@ export function ContactSection() {
 											htmlFor="message"
 											className="block text-sm font-medium"
 										>
-											Message
+											Message{" "}
+											<span className="text-destructive">
+												*
+											</span>
 										</label>
 										<Textarea
 											id="message"
