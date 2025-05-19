@@ -71,7 +71,7 @@ export function ProblemsSection() {
 	return (
 		<Section
 			id="problemes-resolus"
-			variant="muted" // Garder "muted"
+			variant="default"
 			header={{
 				title: "Problèmes résolus par notre technologie",
 				description:

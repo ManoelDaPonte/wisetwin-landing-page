@@ -80,7 +80,7 @@ export function MarketsSection() {
 	return (
 		<Section
 			id="marches-applications"
-			variant="muted"
+			variant="default"
 			header={{
 				title: "Marchés & Applications",
 				description:

@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Linkedin, Twitter, Mail, Phone, Map } from "lucide-react";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
@@ -14,31 +15,49 @@ export function Footer() {
 		{
 			title: "Solutions",
 			links: [
-				{ label: "Formations 3D", href: "/solutions/formations-3d" },
-				{ label: "Sécurité industrielle", href: "/solutions/securite" },
-				{ label: "Suivi de progression", href: "/solutions/suivi" },
-				{
-					label: "Maintenance prédictive",
-					href: "/solutions/maintenance",
-				},
+				{ label: "WiseTrainer", href: "/solutions/wisetrainer" },
+				{ label: "WiseTour", href: "/solutions/wisetour" },
 			],
 		},
 		{
-			title: "Entreprise",
+			title: "Secteurs",
 			links: [
-				{ label: "À propos", href: "/a-propos" },
-				{ label: "Équipe", href: "/equipe" },
-				{ label: "Carrières", href: "/carrieres" },
-				{ label: "Blog", href: "/blog" },
+				{ label: "Responsable HSE", href: "/profils/responsable-hse" },
+				{
+					label: "Responsable Formation",
+					href: "/profils/responsable-formation",
+				},
+				{
+					label: "Chef de Production",
+					href: "/profils/chef-production",
+				},
+				{
+					label: "Directeur Industriel",
+					href: "/profils/directeur-industriel",
+				},
 			],
 		},
 		{
 			title: "Ressources",
 			links: [
 				{ label: "Centre de ressources", href: "/ressources" },
-				{ label: "Études de cas", href: "/etudes-de-cas" },
-				{ label: "Webinaires", href: "/webinaires" },
-				{ label: "FAQ", href: "/faq" },
+				{ label: "Blog", href: "/blog" },
+				{
+					label: "Télécharger la brochure",
+					href: "/ressources/wisetwin-brochure.pdf",
+				},
+			],
+		},
+		{
+			title: "Entreprise",
+			links: [
+				{ label: "À propos", href: "/#notre-histoire" },
+				{ label: "Notre équipe", href: "/#notre-equipe" },
+				{ label: "Nous contacter", href: "/#contact" },
+				{
+					label: "Marchés & Applications",
+					href: "/#marches-applications",
+				},
 			],
 		},
 	];
@@ -48,22 +67,33 @@ export function Footer() {
 		{ label: "Mentions légales", href: "/mentions-legales" },
 		{ label: "Politique de confidentialité", href: "/confidentialite" },
 		{ label: "CGU", href: "/cgu" },
-		{ label: "Accessibilité", href: "/accessibilite" },
 	];
 
 	// Informations de contact
 	const contactInfo = [
-		{ icon: <Mail className="size-4" />, text: "contact@wisetwin.fr" },
-		{ icon: <Phone className="size-4" />, text: "+33 (0)1 23 45 67 89" },
+		{
+			icon: <Mail className="size-4" />,
+			text: "lambrecht.mickael@wisetwin.eu",
+			link: "mailto:lambrecht.mickael@wisetwin.eu",
+		},
+		{
+			icon: <Phone className="size-4" />,
+			text: "+34 613 02 27 72",
+			link: "tel:+34613022772",
+		},
 		{
 			icon: <Map className="size-4" />,
-			text: "12 Rue de l'Innovation, 31000 Toulouse",
+			text: "IMT Nord Europe, Centre de recherche, 764 Boulevard Lahure, 59508 Douai",
 		},
 	];
 
 	// Réseaux sociaux
 	const socialLinks = [
-		{ icon: <Linkedin className="size-5" />, href: "https://linkedin.com" },
+		{
+			icon: <Linkedin className="size-5" />,
+			href: "https://www.linkedin.com/company/wisetwin",
+			label: "LinkedIn",
+		},
 	];
 
 	return (
@@ -73,11 +103,22 @@ export function Footer() {
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
 					{/* Logo et description */}
 					<div className="lg:col-span-4">
+						<Link href="/" className="inline-block mb-4">
+							<div className="flex items-center gap-3">
+								<Image
+									src="/wisetwin-logo.png"
+									alt="WiseTwin"
+									width={150}
+									height={40}
+									className="h-10 w-auto"
+								/>
+							</div>
+						</Link>
 						<p className="text-muted-foreground mb-6 max-w-sm">
-							Des formations immersives en 3D pour optimiser la
-							sécurité et la performance de vos équipes
-							industrielles. Solutions sur mesure pour tous types
-							d'équipements.
+							Solutions de jumeaux numériques pour optimiser la
+							formation et la valorisation industrielle.
+							Transformez votre industrie avec des expériences 3D
+							interactives.
 						</p>
 						<div className="flex items-center gap-3">
 							{socialLinks.map((social, idx) => (
@@ -87,6 +128,7 @@ export function Footer() {
 									className="flex items-center justify-center size-9 rounded-full bg-background border hover:bg-accent transition-colors"
 									target="_blank"
 									rel="noopener noreferrer"
+									aria-label={social.label}
 								>
 									{social.icon}
 								</Link>
@@ -95,8 +137,8 @@ export function Footer() {
 					</div>
 
 					{/* Colonnes de navigation */}
-					<div className="lg:col-span-5">
-						<div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+					<div className="lg:col-span-6">
+						<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 							{footerSections.map((section, idx) => (
 								<div key={idx}>
 									<h4 className="font-medium text-sm mb-4">
@@ -120,7 +162,7 @@ export function Footer() {
 					</div>
 
 					{/* Coordonnées et CTA */}
-					<div className="lg:col-span-3">
+					<div className="lg:col-span-2">
 						<h4 className="font-medium text-sm mb-4">Contact</h4>
 						<ul className="space-y-3 mb-6">
 							{contactInfo.map((info, idx) => (
@@ -131,7 +173,18 @@ export function Footer() {
 									<span className="text-muted-foreground mt-0.5">
 										{info.icon}
 									</span>
-									<span className="text-sm">{info.text}</span>
+									{info.link ? (
+										<Link
+											href={info.link}
+											className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+										>
+											{info.text}
+										</Link>
+									) : (
+										<span className="text-sm text-muted-foreground">
+											{info.text}
+										</span>
+									)}
 								</li>
 							))}
 						</ul>

@@ -53,7 +53,7 @@ export function TestimonialsSection() {
 	return (
 		<Section
 			id="testimonials"
-			variant="default" // Remplacer le className actuel
+			variant="muted"
 			className="py-20"
 		>
 			<div className="container px-4 mx-auto">

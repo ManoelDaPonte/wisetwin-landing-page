@@ -78,7 +78,7 @@ export function TeamSection() {
 	return (
 		<Section
 			id="notre-equipe"
-			variant="muted"
+			variant="default"
 			header={{
 				title: "Notre Équipe Fondatrice",
 				description:
