@@ -15,6 +15,11 @@ import {
 	BookOpen,
 	Video,
 	GraduationCap,
+	Shield,
+	HardHat,
+	ChartBar,
+	School,
+	Download,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -75,36 +80,51 @@ const menuItems: MenuItem[] = [
 		],
 	},
 	{
-		title: "Cas d'usage",
-		href: "/#cas-usage",
+		title: "Vous êtes ?",
+		href: "#vous-etes",
 		children: [
 			{
-				title: "Problèmes résolus",
-				href: "/#problemes-resolus",
-				description: "Les défis que nous résolvons pour l'industrie",
-				icon: "/globe.svg",
+				title: "Responsable HSE",
+				href: "/profils/responsable-hse",
+				description: "Diminuez les incidents et améliorez la sécurité",
+				icon: "/shield.svg",
+				iconComponent: <Shield className="size-4 text-secondary" />,
 			},
 			{
-				title: "Marchés ciblés",
-				href: "/#marches-applications",
-				description: "Industries et secteurs où nous intervenons",
-				icon: "/window.svg",
+				title: "Responsable Formation",
+				href: "/profils/responsable-formation",
+				description: "Centralisez et optimisez vos formations",
+				icon: "/school.svg",
+				iconComponent: <School className="size-4 text-secondary" />,
 			},
 			{
-				title: "Témoignages",
-				href: "/#testimonials",
-				description: "Ce que nos clients disent de nos solutions",
-				icon: "/file.svg",
+				title: "Chef de Production",
+				href: "/profils/chef-production",
+				description: "Augmentez la productivité et réduisez les arrêts",
+				icon: "/factory.svg",
+				iconComponent: <HardHat className="size-4 text-secondary" />,
+			},
+			{
+				title: "Directeur Industriel",
+				href: "/profils/directeur-industriel",
+				description:
+					"Modernisez vos processus et valorisez votre savoir-faire",
+				icon: "/chart.svg",
+				iconComponent: <ChartBar className="size-4 text-secondary" />,
 			},
 		],
 	},
 	{
-		title: "À propos",
-		href: "/#notre-equipe",
-	},
-	{
 		title: "Ressources",
 		href: "/ressources",
+	},
+	{
+		title: "Blog",
+		href: "/blog",
+	},
+	{
+		title: "Contact",
+		href: "#contact",
 	},
 ];
 
