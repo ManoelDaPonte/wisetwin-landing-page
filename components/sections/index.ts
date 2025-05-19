@@ -8,3 +8,4 @@ export { MarketsSection } from "./markets-section";
 export { TeamSection } from "./team-section";
 export { ContactSection } from "./contact-section";
 export { CtaSection } from "./cta-section";
+export { ProfilesSection } from "./profiles-section";

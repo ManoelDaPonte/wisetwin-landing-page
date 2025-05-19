@@ -44,16 +44,18 @@ export function HeroWiseTourSection() {
 
 						<div className="flex flex-wrap justify-center gap-4">
 							<Button size="lg" asChild>
-								<Link href="/contact">
+								<Link href="#avantages-wisetour">
 									<div className="flex items-center">
-										Demander une démo{" "}
-										<ArrowRight className="ml-2 size-4" />
+										Découvrir les avantages
 									</div>
+									<ArrowRight className="ml-2 size-4" />
 								</Link>
 							</Button>
 							<Button size="lg" variant="outline" asChild>
-								<Link href="#avantages-wisetour">
-									<div>Découvrir les avantages</div>
+								<Link href="/#contact">
+									<div className="flex items-center">
+										Demander une démo{" "}
+									</div>
 								</Link>
 							</Button>
 						</div>

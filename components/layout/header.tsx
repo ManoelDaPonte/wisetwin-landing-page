@@ -367,7 +367,7 @@ export default function Header() {
 							whileTap={{ scale: 0.95 }}
 						>
 							<Button asChild className="hidden md:flex">
-								<Link href="/contact">
+								<Link href="/#contact">
 									<div>Nous contacter</div>
 								</Link>
 							</Button>
@@ -575,7 +575,7 @@ export default function Header() {
 											}}
 										>
 											<Button asChild className="w-full">
-												<Link href="/contact">
+												<Link href="/#contact">
 													<div className="flex items-center justify-center gap-2">
 														<Mail className="size-4" />
 														Nous contacter

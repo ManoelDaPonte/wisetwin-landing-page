@@ -59,7 +59,7 @@ export function CtaSection() {
 								asChild
 								className=""
 							>
-								<Link href="/contact">
+								<Link href="/#contact">
 									<div>Demander une consultation</div>
 								</Link>
 							</Button>

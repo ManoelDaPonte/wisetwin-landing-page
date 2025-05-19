@@ -1,4 +1,3 @@
-// app/page.tsx
 "use client";
 import {
 	HeroSection,
@@ -11,14 +10,15 @@ import {
 	TeamSection,
 	ContactSection,
 	CtaSection,
+	ProfilesSection,
 } from "@/components/sections";
-
 export default function Home() {
 	return (
 		<>
 			<HeroSection />
 			<SolutionsSection />
 			<FeaturesSection />
+			<ProfilesSection />
 			<ProblemsSection />
 			<TechnologySection />
 			<MarketsSection />
