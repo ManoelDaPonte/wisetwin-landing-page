@@ -124,7 +124,7 @@ const menuItems: MenuItem[] = [
 	},
 	{
 		title: "Contact",
-		href: "#contact",
+		href: "/#contact",
 	},
 ];
 

@@ -187,17 +187,6 @@ export default function ResourcesPage() {
 						</p>
 					</div>
 				)}
-
-				{/* Appel à l'action */}
-				<div className="mt-16 text-center">
-					<p className="text-muted-foreground mb-4">
-						Vous cherchez des informations spécifiques sur nos
-						solutions ?
-					</p>
-					<Button asChild>
-						<a href="/contact">Contactez-nous</a>
-					</Button>
-				</div>
 			</Section>
 		</div>
 	);
