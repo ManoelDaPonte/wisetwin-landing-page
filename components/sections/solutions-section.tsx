@@ -87,7 +87,7 @@ export function SolutionsSection() {
 				>
 					{solutions.map((solution) => (
 						<motion.div key={solution.id} variants={itemVariants}>
-							<Card className="h-full overflow-hidden hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-secondary/20">
+							<Card className="h-full  hover:shadow-lg transition-all duration-300">
 								<CardContent className="p-6">
 									<div
 										className={`size-16 ${solution.color} rounded-lg flex items-center justify-center mb-4`}
