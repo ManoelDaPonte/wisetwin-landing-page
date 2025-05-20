@@ -7,7 +7,6 @@ import {
 	FileText,
 	Clock,
 	BarChart,
-	CheckCircle,
 	Users,
 	Brain,
 } from "lucide-react";
@@ -37,7 +36,7 @@ export default function ResponsableFormationPage() {
 				icon: <Activity className="size-6 text-secondary" />,
 				title: "Faible engagement des apprenants",
 				description:
-					"Les méthodes de formation traditionnelles peinent à maintenir l'attention et l'intérêt des collaborateurs, réduisant l'efficacité de l'apprentissage.",
+					"Les méthodes de formation traditionnelles peinent à maintenir l&apos;attention et l&apos;intérêt des collaborateurs, réduisant l&apos;efficacité de l&apos;apprentissage.",
 			},
 			{
 				icon: <Clock className="size-6 text-secondary" />,
@@ -49,13 +48,13 @@ export default function ResponsableFormationPage() {
 				icon: <FileText className="size-6 text-secondary" />,
 				title: "Difficulté à mesurer les résultats",
 				description:
-					"L'évaluation objective des compétences acquises et du retour sur investissement des formations reste un défi majeur.",
+					"L&apos;évaluation objective des compétences acquises et du retour sur investissement des formations reste un défi majeur.",
 			},
 			{
 				icon: <Users className="size-6 text-secondary" />,
 				title: "Standardisation vs personnalisation",
 				description:
-					"Trouver l'équilibre entre des formations standardisées et des parcours adaptés aux besoins spécifiques de chaque collaborateur.",
+					"Trouver l&apos;équilibre entre des formations standardisées et des parcours adaptés aux besoins spécifiques de chaque collaborateur.",
 			},
 		],
 
@@ -64,20 +63,20 @@ export default function ResponsableFormationPage() {
 				title: "Formations immersives en 3D",
 				description:
 					"Plongez vos collaborateurs dans des environnements de travail virtuels où ils peuvent pratiquer et maîtriser leurs compétences dans des conditions réalistes.",
-				stats: "Augmentation de 93% de l'engagement des apprenants",
+				stats: "Augmentation de 93% de l&apos;engagement des apprenants",
 				icon: <Brain className="size-6 text-secondary" />,
 			},
 			{
-				title: "Parcours d'apprentissage adaptatifs",
+				title: "Parcours d&apos;apprentissage adaptatifs",
 				description:
-					"Notre système IA analyse les performances de chaque apprenant pour adapter automatiquement le contenu et la difficulté, optimisant ainsi le temps d'apprentissage.",
+					"Notre système IA analyse les performances de chaque apprenant pour adapter automatiquement le contenu et la difficulté, optimisant ainsi le temps d&apos;apprentissage.",
 				stats: "Réduction de 40% du temps de formation",
 				icon: <Activity className="size-6 text-secondary" />,
 			},
 			{
 				title: "Analytique de performance avancée",
 				description:
-					"Obtenez des insights détaillés sur les progrès individuels et collectifs, identifiez les lacunes et mesurez précisément l'impact de vos programmes de formation.",
+					"Obtenez des insights détaillés sur les progrès individuels et collectifs, identifiez les lacunes et mesurez précisément l&apos;impact de vos programmes de formation.",
 				stats: "Vue à 360° sur les compétences acquises",
 				icon: <BarChart className="size-6 text-secondary" />,
 			},
@@ -85,10 +84,10 @@ export default function ResponsableFormationPage() {
 
 		caseStudies: [
 			{
-				title: "Accélération de l'onboarding",
+				title: "Accélération de l&apos;onboarding",
 				description:
-					"Un équipementier industriel a réduit de 60% le temps d'intégration de ses nouveaux opérateurs grâce à des formations immersives WiseTrainer adaptées à chaque poste.",
-				highlight: "Temps d'intégration réduit de 60%",
+					"Un équipementier industriel a réduit de 60% le temps d&apos;intégration de ses nouveaux opérateurs grâce à des formations immersives WiseTrainer adaptées à chaque poste.",
+				highlight: "Temps d&apos;intégration réduit de 60%",
 			},
 			{
 				title: "Formation multi-sites harmonisée",
@@ -99,7 +98,7 @@ export default function ResponsableFormationPage() {
 			{
 				title: "Certification accélérée",
 				description:
-					"Une entreprise manufacturière a augmenté de 70% son taux de réussite aux certifications techniques après l'implémentation de simulations pratiques WiseTrainer.",
+					"Une entreprise manufacturière a augmenté de 70% son taux de réussite aux certifications techniques après l&apos;implémentation de simulations pratiques WiseTrainer.",
 				highlight: "Taux de réussite amélioré de 70%",
 			},
 		],
@@ -108,7 +107,7 @@ export default function ResponsableFormationPage() {
 			{
 				title: "Formation optimisée et efficiente",
 				items: [
-					"Réduction significative du temps nécessaire à l'acquisition de compétences",
+					"Réduction significative du temps nécessaire à l&apos;acquisition de compétences",
 					"Formation sans mobilisation des équipements de production",
 					"Possibilité de former plusieurs personnes simultanément",
 					"Répétition illimitée des scénarios sans coût supplémentaire",

@@ -1,6 +1,6 @@
 // components/sections/team-section.tsx
 import { motion } from "framer-motion";
-import { Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";
@@ -93,7 +93,7 @@ export function TeamSection() {
 				viewport={{ once: true }}
 				className="grid md:grid-cols-3 gap-8"
 			>
-				{teamMembers.map((member, index) => (
+				{teamMembers.map((member, _) => (
 					<motion.div key={member.name} variants={itemVariants}>
 						<Card className="h-full overflow-hidden hover:shadow-md transition-all duration-200">
 							<CardContent className="p-0">

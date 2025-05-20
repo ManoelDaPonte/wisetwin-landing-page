@@ -1,10 +1,8 @@
 // components/sections/solution-section.tsx
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Lightbulb, Trophy, Zap } from "lucide-react";
 
 import { Section } from "@/components/common/section";
-import { Card, CardContent } from "@/components/ui/card";
 
 export function SolutionSection() {
 	return (

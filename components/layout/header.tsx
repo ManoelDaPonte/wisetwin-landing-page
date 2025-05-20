@@ -4,10 +4,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
 	Menu,
-	X,
 	Mail,
 	Boxes,
 	FileText,
@@ -19,7 +18,6 @@ import {
 	HardHat,
 	ChartBar,
 	School,
-	Download,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -28,7 +26,6 @@ import {
 	NavigationMenu,
 	NavigationMenuContent,
 	NavigationMenuItem,
-	NavigationMenuLink,
 	NavigationMenuList,
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
@@ -38,7 +35,6 @@ import {
 	SheetContent,
 	SheetTrigger,
 	SheetTitle,
-	SheetClose,
 } from "@/components/ui/sheet";
 
 // Menu items configuration
@@ -171,7 +167,7 @@ export function Header() {
 
 	const navItemVariants = {
 		hidden: { y: -20, opacity: 0 },
-		visible: (i: any) => ({
+		visible: (i: number) => ({
 			y: 0,
 			opacity: 1,
 			transition: {
@@ -184,7 +180,7 @@ export function Header() {
 
 	const menuChildVariants = {
 		hidden: { opacity: 0, y: 10 },
-		visible: (i: any) => ({
+		visible: (i: number) => ({
 			opacity: 1,
 			y: 0,
 			transition: {

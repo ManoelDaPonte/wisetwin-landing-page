@@ -10,7 +10,6 @@ import {
 	Wrench,
 	Gauge,
 	Repeat,
-	LineChart,
 } from "lucide-react";
 import { ProfilePageLayout } from "@/components/profils/profile-page-layout";
 
@@ -18,7 +17,7 @@ export default function ChefProductionPage() {
 	// Configuration des données pour le Chef de Production
 	const profileData = {
 		hero: {
-			title: "Maximisez l'efficacité de vos lignes de production",
+			title: "Maximisez l&apos;efficacité de vos lignes de production",
 			description:
 				"Optimisez la productivité de vos équipements et de vos équipes grâce à des formations immersives et une maîtrise parfaite des procédures opérationnelles.",
 			icon: <HardHat className="size-4 text-secondary" />,
@@ -30,13 +29,13 @@ export default function ChefProductionPage() {
 				},
 				secondary: { text: "Demander une démo", href: "/#contact" },
 			},
-			imageAlt: "Simulation 3D d'une ligne de production industrielle",
+			imageAlt: "Simulation 3D d&apos;une ligne de production industrielle",
 		},
 
 		challenges: [
 			{
 				icon: <Clock className="size-6 text-secondary" />,
-				title: "Temps d'arrêt machine coûteux",
+				title: "Temps d&apos;arrêt machine coûteux",
 				description:
 					"Les arrêts non planifiés et les temps de maintenance prolongés impactent directement la productivité et génèrent des coûts importants.",
 			},
@@ -65,31 +64,31 @@ export default function ChefProductionPage() {
 				title: "Maintenance prédictive virtuelle",
 				description:
 					"Formez vos équipes à identifier les signes précurseurs de panne et à réaliser les interventions préventives grâce à des simulations 3D de vos équipements spécifiques.",
-				stats: "Réduction des arrêts non planifiés jusqu'à 65%",
+				stats: "Réduction des arrêts non planifiés jusqu&apos;à 65%",
 				icon: <Wrench className="size-6 text-secondary" />,
 			},
 			{
 				title: "Optimisation des procédures",
 				description:
-					"Testez et améliorez vos procédures opérationnelles dans un environnement virtuel avant de les déployer. Identifiez les goulots d'étranglement et optimisez les flux de travail.",
-				stats: "Amélioration de la productivité jusqu'à 30%",
+					"Testez et améliorez vos procédures opérationnelles dans un environnement virtuel avant de les déployer. Identifiez les goulots d&apos;étranglement et optimisez les flux de travail.",
+				stats: "Amélioration de la productivité jusqu&apos;à 30%",
 				icon: <Gauge className="size-6 text-secondary" />,
 			},
 			{
 				title: "Formation sans immobilisation",
 				description:
 					"Formez vos opérateurs sur des jumeaux numériques de vos machines, permettant un apprentissage complet sans arrêter la production réelle.",
-				stats: "0% d'arrêt machine pour la formation",
+				stats: "0% d&apos;arrêt machine pour la formation",
 				icon: <Repeat className="size-6 text-secondary" />,
 			},
 		],
 
 		caseStudies: [
 			{
-				title: "Réduction des temps d'arrêt",
+				title: "Réduction des temps d&apos;arrêt",
 				description:
-					"Un fabricant de composants automobiles a réduit ses temps d'arrêt machine de 42% grâce à des formations WiseTrainer sur la maintenance préventive de ses équipements spécifiques.",
-				highlight: "42% de réduction des temps d'arrêt",
+					"Un fabricant de composants automobiles a réduit ses temps d&apos;arrêt machine de 42% grâce à des formations WiseTrainer sur la maintenance préventive de ses équipements spécifiques.",
+				highlight: "42% de réduction des temps d&apos;arrêt",
 			},
 			{
 				title: "Amélioration des changements de série",
@@ -100,7 +99,7 @@ export default function ChefProductionPage() {
 			{
 				title: "Formation multi-compétences",
 				description:
-					"Un site industriel a formé ses opérateurs sur 5 postes différents sans immobiliser d'équipement, augmentant la polyvalence de l'équipe et la flexibilité de production.",
+					"Un site industriel a formé ses opérateurs sur 5 postes différents sans immobiliser d&apos;équipement, augmentant la polyvalence de l&apos;équipe et la flexibilité de production.",
 				highlight: "Polyvalence des équipes multipliée par 3",
 			},
 		],
@@ -110,7 +109,7 @@ export default function ChefProductionPage() {
 				title: "Maximisation du temps productif",
 				items: [
 					"Formation sans arrêt des lignes de production",
-					"Réduction des temps d'intervention en cas d'incident",
+					"Réduction des temps d&apos;intervention en cas d&apos;incident",
 					"Optimisation des procédures de maintenance préventive",
 					"Diminution des erreurs opérateur impactant la production",
 				],

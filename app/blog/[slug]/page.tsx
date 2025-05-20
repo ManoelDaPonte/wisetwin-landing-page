@@ -27,15 +27,15 @@ type PostWithFrontmatter = {
 	};
 };
 
-// Fonction pour obtenir tous les slugs d'articles pour la génération statique
+// Fonction pour obtenir tous les slugs d&apos;articles pour la génération statique
 export async function generateStaticParams() {
 	const blogDir = path.join(process.cwd(), "blog");
-	
+
 	// Vérifier si le dossier blog existe
 	if (!fs.existsSync(blogDir)) {
 		return [];
 	}
-	
+
 	const files = fs.readdirSync(blogDir);
 
 	return files
@@ -45,7 +45,7 @@ export async function generateStaticParams() {
 		}));
 }
 
-// Fonction pour obtenir le contenu d'un article spécifique
+// Fonction pour obtenir le contenu d&apos;un article spécifique
 async function getPostBySlug(
 	slug: string
 ): Promise<PostWithFrontmatter | null> {
@@ -83,10 +83,10 @@ async function getPostBySlug(
 export async function generateMetadata({
 	params,
 }: {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 }) {
-	const resolvedSlug = await params;
-	const post = await getPostBySlug(resolvedSlug.slug);
+	const { slug } = await params;
+	const post = await getPostBySlug(slug);
 
 	if (!post) {
 		return {
@@ -109,12 +109,11 @@ export async function generateMetadata({
 export default async function BlogPostPage({
 	params,
 }: {
-	params: { slug: string };
+	params: Promise<{ slug: string }>;
 }) {
-	const resolvedSlug = await params;
-	const post = await getPostBySlug(resolvedSlug.slug);
+	const { slug } = await params;
+	const post = await getPostBySlug(slug);
 
-	// Si l'article n'existe pas, afficher une page 404
 	if (!post) {
 		notFound();
 	}
@@ -122,17 +121,16 @@ export default async function BlogPostPage({
 	// Importer dynamiquement le contenu MDX
 	let MDXContent;
 	try {
-		const MDXModule = await import(`@/blog/${resolvedSlug.slug}.mdx`);
+		const MDXModule = await import(`@/blog/${slug}.mdx`);
 		MDXContent = MDXModule.default;
-	} catch (error) {
-		// Si le fichier MDX n'existe pas, afficher 404
+	} catch {
 		notFound();
 	}
 
 	return (
 		<div className="pt-24 pb-16">
 			<article className="max-w-4xl mx-auto px-4">
-				{/* Header de l'article */}
+				{/* Header de l&apos;article */}
 				<div className="mb-8">
 					<Link
 						href="/blog"
@@ -193,11 +191,11 @@ export default async function BlogPostPage({
 				{/* Image principale (simulée) */}
 				<div className="aspect-video bg-wisetwin-blue/20 rounded-lg flex items-center justify-center mb-8">
 					<p className="text-wisetwin-blue font-medium">
-						Image principale de l'article
+						Image principale de l&apos;article
 					</p>
 				</div>
 
-				{/* Contenu de l'article */}
+				{/* Contenu de l&apos;article */}
 				<div className="">
 					<MDXWrapper>
 						<MDXContent />

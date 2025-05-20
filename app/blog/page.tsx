@@ -68,11 +68,11 @@ export default async function BlogPage() {
 				header={{
 					title: "Blog WiseTwin",
 					description:
-						"Explorez nos derniers articles, insights et actualités sur l'industrie 4.0 et la formation immersive.",
+						"Explorez nos derniers articles, insights et actualités sur l&apos;industrie 4.0 et la formation immersive.",
 					centered: true,
 				}}
 			>
-				{/* Grille d'articles */}
+				{/* Grille d&apos;articles */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
 					{posts.map((post) => (
 						<div key={post.slug}>
@@ -152,7 +152,7 @@ export default async function BlogPage() {
 									<Button variant="ghost" size="sm" asChild>
 										<Link href={`/blog/${post.slug}`}>
 											<span className="flex items-center gap-1">
-												Lire l'article
+												Lire l&apos;article
 												<ArrowRight className="size-3 ml-1" />
 											</span>
 										</Link>

@@ -9,7 +9,6 @@ import {
 	BarChart3,
 	Globe,
 	Target,
-	PieChart,
 } from "lucide-react";
 import { ProfilePageLayout } from "@/components/profils/profile-page-layout";
 
@@ -30,7 +29,7 @@ export default function DirecteurIndustrielPage() {
 				secondary: { text: "Demander une démo", href: "/#contact" },
 			},
 			imageAlt:
-				"Visualisation 3D d'un site industriel avec tableaux de bord",
+				"Visualisation 3D d&apos;un site industriel avec tableaux de bord",
 		},
 
 		challenges: [
@@ -56,7 +55,7 @@ export default function DirecteurIndustrielPage() {
 				icon: <Globe className="size-6 text-secondary" />,
 				title: "Gestion multi-sites complexe",
 				description:
-					"Garantir l'uniformité des procédures, la qualité et la performance entre différents sites géographiquement dispersés.",
+					"Garantir l&apos;uniformité des procédures, la qualité et la performance entre différents sites géographiquement dispersés.",
 			},
 		],
 
@@ -78,7 +77,7 @@ export default function DirecteurIndustrielPage() {
 			{
 				title: "Valorisation du savoir-faire industriel",
 				description:
-					"Capturez et pérennisez l'expertise de vos collaborateurs expérimentés sous forme de formations immersives, assurant le transfert de compétences critiques.",
+					"Capturez et pérennisez l&apos;expertise de vos collaborateurs expérimentés sous forme de formations immersives, assurant le transfert de compétences critiques.",
 				stats: "Préservation de 95% du savoir-faire critique",
 				icon: <Target className="size-6 text-secondary" />,
 			},
@@ -100,7 +99,7 @@ export default function DirecteurIndustrielPage() {
 			{
 				title: "Transfert de compétences critiques",
 				description:
-					"Un leader de l'industrie chimique a préservé l'expertise de collaborateurs seniors partant à la retraite via des modules WiseTrainer, assurant la continuité opérationnelle.",
+					"Un leader de l&apos;industrie chimique a préservé l&apos;expertise de collaborateurs seniors partant à la retraite via des modules WiseTrainer, assurant la continuité opérationnelle.",
 				highlight: "100% de préservation du savoir-faire",
 			},
 		],
@@ -111,14 +110,14 @@ export default function DirecteurIndustrielPage() {
 				items: [
 					"Réduction des coûts opérationnels et de formation",
 					"Amélioration de la productivité des installations",
-					"Diminution des temps d'arrêt non planifiés",
+					"Diminution des temps d&apos;arrêt non planifiés",
 					"Valorisation des actifs industriels existants",
 				],
 			},
 			{
 				title: "Excellence opérationnelle et industrielle",
 				items: [
-					"Standardisation des meilleures pratiques à l'échelle globale",
+					"Standardisation des meilleures pratiques à l&apos;échelle globale",
 					"Digitalisation des processus industriels clés",
 					"Prise de décision basée sur des données précises",
 					"Adaptation rapide aux évolutions du marché et des réglementations",

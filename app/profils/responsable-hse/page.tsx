@@ -27,13 +27,13 @@ export default function ResponsableHSEPage() {
 				},
 				secondary: { text: "Demander une démo", href: "/#contact" },
 			},
-			imageAlt: "Simulation d'évaluation des risques en 3D",
+			imageAlt: "Simulation d&apos;évaluation des risques en 3D",
 		},
 
 		challenges: [
 			{
 				icon: <AlertTriangle className="size-6 text-secondary" />,
-				title: "Taux d'accidents trop élevés",
+				title: "Taux d&apos;accidents trop élevés",
 				description:
 					"Réduire la fréquence et la gravité des accidents du travail tout en assurant une formation efficace sans exposer les équipes à des risques.",
 			},
@@ -41,13 +41,13 @@ export default function ResponsableHSEPage() {
 				icon: <FileText className="size-6 text-secondary" />,
 				title: "Complexité des normes de sécurité",
 				description:
-					"Garantir la conformité aux réglementations de sécurité changeantes et s'assurer que tous les collaborateurs comprennent et respectent les procédures.",
+					"Garantir la conformité aux réglementations de sécurité changeantes et s&apos;assurer que tous les collaborateurs comprennent et respectent les procédures.",
 			},
 			{
 				icon: <Users className="size-6 text-secondary" />,
 				title: "Engagement limité des collaborateurs",
 				description:
-					"Surmonter le manque d'engagement des équipes dans les formations traditionnelles et théoriques sur la sécurité.",
+					"Surmonter le manque d&apos;engagement des équipes dans les formations traditionnelles et théoriques sur la sécurité.",
 			},
 			{
 				icon: <LineChart className="size-6 text-secondary" />,
@@ -85,7 +85,7 @@ export default function ResponsableHSEPage() {
 			{
 				title: "Prévention des accidents industriels",
 				description:
-					"Un fabricant automobile a réduit de 45% ses accidents de travail en utilisant WiseTrainer pour simuler les zones dangereuses et former aux interventions d'urgence.",
+					"Un fabricant automobile a réduit de 45% ses accidents de travail en utilisant WiseTrainer pour simuler les zones dangereuses et former aux interventions d&apos;urgence.",
 				highlight: "Réduction de 45% des accidents du travail",
 			},
 			{
@@ -95,9 +95,9 @@ export default function ResponsableHSEPage() {
 				highlight: "100% de conformité aux normes SEVESO",
 			},
 			{
-				title: "Gestion des situations d'urgence",
+				title: "Gestion des situations d&apos;urgence",
 				description:
-					"Un site industriel a amélioré son temps de réaction aux urgences de 62% après des simulations répétées d'incidents critiques dans WiseTrainer.",
+					"Un site industriel a amélioré son temps de réaction aux urgences de 62% après des simulations répétées d&apos;incidents critiques dans WiseTrainer.",
 				highlight: "Temps de réaction amélioré de 62%",
 			},
 		],

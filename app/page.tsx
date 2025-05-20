@@ -9,7 +9,6 @@ import {
 	TestimonialsSection,
 	TeamSection,
 	ContactSection,
-	CtaSection,
 	ProfilesSection,
 } from "@/components/sections";
 export default function Home() {

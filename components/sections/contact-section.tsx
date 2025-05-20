@@ -70,19 +70,19 @@ export function ContactSection() {
 		fetchCsrfToken();
 	}, []);
 
-	const handleChange = (e: any) => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target;
 		setFormState((prev) => ({ ...prev, [name]: value }));
 		// Réinitialiser les messages d'erreur lorsque l'utilisateur commence à taper
 		if (error) setError("");
 	};
 
-	const handleSelectChange = (value: any) => {
+	const handleSelectChange = (value: string) => {
 		setFormState((prev) => ({ ...prev, subject: value }));
 		if (error) setError("");
 	};
 
-	const handleSubmit = async (e: any) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setIsSubmitting(true);
 		setError(""); // Réinitialiser les erreurs précédentes

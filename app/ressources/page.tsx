@@ -6,9 +6,6 @@ import { motion } from "framer-motion";
 import {
 	Download,
 	FileText,
-	FileImage,
-	FileArchive,
-	FileSpreadsheet,
 } from "lucide-react";
 
 import { Section } from "@/components/common/section";
@@ -39,7 +36,7 @@ export default function ResourcesPage() {
 			id: "presentation-wisetwin",
 			title: "Présentation de WiseTwin",
 			description:
-				"Découvrez les jumeaux numériques pour la formation et notre approche innovante pour transformer l'industrie.",
+				"Découvrez les jumeaux numériques pour la formation et notre approche innovante pour transformer l&apos;industrie.",
 			category: "presentation",
 			fileUrl: "ressources/wisetwin-brochure.pdf",
 			fileType: "PDF",

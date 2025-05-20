@@ -2,10 +2,8 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Linkedin, Twitter, Mail, Phone, Map } from "lucide-react";
+import { Linkedin, Mail, Phone, Map } from "lucide-react";
 import Image from "next/image";
-
-import { Button } from "@/components/ui/button";
 
 export function Footer() {
 	const currentYear = new Date().getFullYear();
@@ -199,13 +197,15 @@ export function Footer() {
 						</div>
 						<div className="flex flex-wrap justify-center gap-x-6 gap-y-2 order-1 md:order-2">
 							{legalLinks.map((link, idx) => (
-								<Link
+								<a
 									key={idx}
-									href={link.href}
-									className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+									href="#"
+									onClick={(e) => e.preventDefault()}
+									className="text-xs text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+									title="Bientôt disponible"
 								>
 									{link.label}
-								</Link>
+								</a>
 							))}
 						</div>
 					</div>

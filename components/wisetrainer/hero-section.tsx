@@ -1,6 +1,5 @@
 // components/wisetrainer/hero-section.tsx
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, GraduationCap } from "lucide-react";
 

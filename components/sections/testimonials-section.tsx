@@ -1,6 +1,5 @@
 // components/sections/testimonials-section.tsx
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Quote } from "lucide-react";
 
 import { Section } from "@/components/common/section";
@@ -51,11 +50,7 @@ export function TestimonialsSection() {
 	};
 
 	return (
-		<Section
-			id="testimonials"
-			variant="muted"
-			className="py-20"
-		>
+		<Section id="testimonials" variant="muted" className="py-20">
 			<div className="container px-4 mx-auto">
 				{/* Section header */}
 				<motion.div

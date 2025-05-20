@@ -52,7 +52,7 @@ export default function MDXWrapper({
 				return null;
 			}
 
-			return React.cloneElement(node as React.ReactElement<any>, {
+			return React.cloneElement(node as React.ReactElement<React.HTMLAttributes<HTMLElement>>, {
 				...node.props,
 				children: filteredChildren,
 			});

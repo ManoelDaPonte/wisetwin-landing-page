@@ -108,7 +108,7 @@ export function ProfilesSection() {
 				viewport={{ once: true }}
 				className="grid md:grid-cols-2 gap-8"
 			>
-				{profiles.map((profile, index) => (
+				{profiles.map((profile, _) => (
 					<motion.div key={profile.id} variants={itemVariants}>
 						<Card className="h-full hover:shadow-lg transition-all duration-300">
 							<CardContent className="p-6">
