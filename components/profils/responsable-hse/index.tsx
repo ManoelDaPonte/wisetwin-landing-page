@@ -13,6 +13,7 @@ export function ResponsableHSEProfile() {
       primary: { text: "Découvrir nos solutions", href: "#solutions" },
       secondary: { text: "Contactez-nous", href: "#contact" },
     },
+    image: "/storyset/responsable-hse.png",
   };
   const challenges = [
     { icon: <AlertTriangle />, title: "Gestion des incidents", description: "Réactivité et traçabilité lors d'un incident ou accident." },

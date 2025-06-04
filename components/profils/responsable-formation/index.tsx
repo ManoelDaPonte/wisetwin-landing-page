@@ -12,6 +12,7 @@ export function ResponsableFormationProfile() {
       primary: { text: "Découvrir nos solutions", href: "#solutions" },
       secondary: { text: "Contactez-nous", href: "#contact" },
     },
+    image: "/storyset/responsable-formation.png",
   };
   const challenges = [
     { icon: <Users />, title: "Engagement des apprenants", description: "Difficulté à motiver et impliquer les équipes dans la formation." },

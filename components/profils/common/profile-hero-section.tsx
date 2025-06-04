@@ -4,17 +4,21 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Section } from "@/components/common/section";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Image from "next/image";
 
 export type ProfileHeroProps = {
   title: string;
   description: string;
   icon: ReactNode;
   profileTitle: string;
+  image?: string;
+  imageAlt?: string;
   ctaButtons?: {
     primary?: { text: string; href: string };
     secondary?: { text: string; href: string };
   };
-  imageAlt?: string;
 };
 
 export function ProfileHeroSection({
@@ -22,8 +26,9 @@ export function ProfileHeroSection({
   description,
   icon,
   profileTitle,
-  ctaButtons,
+  image,
   imageAlt,
+  ctaButtons,
 }: ProfileHeroProps) {
   return (
     <Section
@@ -80,16 +85,30 @@ export function ProfileHeroSection({
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div className="aspect-video bg-gradient-to-br from-wisetwin-darkblue to-wisetwin-blue rounded-xl overflow-hidden shadow-lg relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-white text-lg font-medium">
-                  {imageAlt || "Simulation en 3D pour votre métier"}
-                </p>
-              </div>
-            </div>
+            <Card className="overflow-hidden">
+              <AspectRatio ratio={16 / 9}>
+                {image ? (
+                  <Image
+                    src={image}
+                    alt={imageAlt || profileTitle}
+                    fill
+                    className="object-cover"
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted flex items-center justify-center">
+                    <p className="text-muted-foreground text-lg font-medium text-center px-4">
+                      {imageAlt || "Simulation en 3D pour votre métier"}
+                    </p>
+                  </div>
+                )}
+              </AspectRatio>
+            </Card>
           </motion.div>
         </div>
       </div>
     </Section>
   );
-} 
+}

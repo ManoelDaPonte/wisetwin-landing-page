@@ -13,6 +13,7 @@ export function DirecteurIndustrielProfile() {
       primary: { text: "Découvrir nos solutions", href: "#solutions" },
       secondary: { text: "Contactez-nous", href: "#contact" },
     },
+    image: "/storyset/directeur-industriel.png",
   };
   const challenges = [
     { icon: <BarChart />, title: "Performance globale", description: "Difficulté à avoir une vision consolidée des indicateurs clés." },

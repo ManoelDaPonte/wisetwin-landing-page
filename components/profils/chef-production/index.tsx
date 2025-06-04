@@ -13,6 +13,7 @@ export function ChefProductionProfile() {
       primary: { text: "Découvrir nos solutions", href: "#solutions" },
       secondary: { text: "Contactez-nous", href: "#contact" },
     },
+    image: "/storyset/chef-production.png",
   };
   const challenges = [
     { icon: <BarChart />, title: "Suivi de la performance", description: "Difficulté à suivre en temps réel la performance des lignes de production." },

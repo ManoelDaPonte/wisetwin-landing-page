@@ -194,10 +194,10 @@ export function Footer() {
 				{/* Barre séparatrice */}
 				<div className="border-t pt-6 mt-6">
 					<div className="flex flex-col md:flex-row justify-between items-center gap-4">
-						<div className="text-sm text-muted-foreground order-2 md:order-1">
+						<div className="text-sm text-muted-foreground order-1 md:order-1">
 							© {currentYear} WiseTwin. Tous droits réservés.
 						</div>
-						<div className="flex flex-wrap justify-center gap-x-6 gap-y-2 order-1 md:order-2">
+						<div className="flex flex-wrap justify-center gap-x-6 gap-y-2 order-3 md:order-3">
 							{legalLinks.map((link, idx) => (
 								<a
 									key={idx}
@@ -209,6 +209,16 @@ export function Footer() {
 									{link.label}
 								</a>
 							))}
+						</div>
+						<div className="text-xs text-muted-foreground order-2 md:order-2">
+							<a 
+								href="https://storyset.com/work" 
+								target="_blank" 
+								rel="noopener noreferrer"
+								className="hover:text-foreground transition-colors"
+							>
+								Illustrations by Storyset
+							</a>
 						</div>
 					</div>
 				</div>
