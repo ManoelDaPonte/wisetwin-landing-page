@@ -71,6 +71,7 @@ export default async function BlogPage() {
 						"Explorez nos derniers articles, insights et actualités sur l&apos;industrie 4.0 et la formation immersive.",
 					centered: true,
 				}}
+				animate={false}
 			>
 				{/* Grille d&apos;articles */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">

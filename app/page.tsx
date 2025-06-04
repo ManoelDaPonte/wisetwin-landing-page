@@ -6,7 +6,7 @@ import {
 	ProblemsSection,
 	TechnologySection,
 	MarketsSection,
-	TestimonialsSection,
+	// TestimonialsSection,
 	TeamSection,
 	ContactSection,
 	ProfilesSection,
@@ -21,7 +21,7 @@ export default function Home() {
 			<ProblemsSection />
 			<TechnologySection />
 			<MarketsSection />
-			<TestimonialsSection />
+			{/* <TestimonialsSection /> */}
 			<TeamSection />
 			<ContactSection />
 			{/* <CtaSection /> */}

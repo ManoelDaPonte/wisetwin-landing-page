@@ -18,6 +18,7 @@ import {
 	HardHat,
 	ChartBar,
 	School,
+	Bot,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -72,6 +73,20 @@ const menuItems: MenuItem[] = [
 				description: "Visites industrielles virtuelles interactives",
 				icon: "/window.svg",
 				iconComponent: <Video className="size-4 text-secondary" />,
+			},
+			{
+				title: "WiseScan",
+				href: "/solutions/wisescan",
+				description: "Analyse intelligente des accidents pour des recommandations sur-mesure",
+				icon: "/chart.svg",
+				iconComponent: <ChartBar className="size-4 text-secondary" />,
+			},
+			{
+				title: "WiseAssist",
+				href: "/solutions/wiseassist",
+				description: "Assistant IA pour guider vos équipes en temps réel",
+				icon: "/bot.svg",
+				iconComponent: <Bot className="size-4 text-secondary" />,
 			},
 		],
 	},
@@ -248,88 +263,203 @@ export function Header() {
 													</NavigationMenuTrigger>
 												</motion.div>
 												<NavigationMenuContent>
-													<div className="grid w-[600px] grid-cols-2 gap-3 p-4">
-														{item.children.map(
-															(
-																child,
-																childIndex
-															) => (
+													{item.title === "Solutions" ? (
+														<div className="w-[600px] grid grid-cols-4 gap-3 p-4">
+															{/* Colonne gauche : WiseTrainer */}
+															<div className="col-span-2 flex flex-col justify-center h-full border-r pr-4" style={{ backgroundColor: "rgba(var(--accent-rgb), 0.2)" }}>
+																{item.children && item.children[0] && (
+																	<motion.div
+																		key={item.children[0].title}
+																		custom={0}
+																		initial="hidden"
+																		animate="visible"
+																		variants={menuChildVariants}
+																		whileHover={{
+																			scale: 1.03,
+																			backgroundColor: "rgba(var(--accent-rgb), 0.2)",
+																			transition: { duration: 0.2 },
+																		}}
+																		className="h-full"
+																	>
+																		<Link href={item.children[0].href} className="block h-full bg-blue-50 hover:bg-accent rounded-md transition-colors">
+																			<div className="flex gap-2 items-start p-3 h-full">
+																				<motion.div
+																					className="flex size-9 shrink-0 items-center justify-center rounded-md border bg-muted/50"
+																					whileHover={{
+																						rotate: [0, -5, 5, -5, 0],
+																					}}
+																					transition={{ duration: 0.5 }}
+																				>
+																					<GraduationCap className="size-5 text-secondary" />
+																				</motion.div>
+																				<div>
+																					<div className="font-medium">{item.children[0].title}</div>
+																					<p className="text-muted-foreground text-sm leading-tight mt-1">
+																						{item.children[0].description}
+																					</p>
+																					<ul className="mt-3 space-y-1">
+																						<li className="flex items-center gap-2 text-xs text-muted-foreground">
+																							<div className="size-1 rounded-full bg-blue-400/60"></div>
+																							Formation immersive sans équipement VR
+																						</li>
+																						<li className="flex items-center gap-2 text-xs text-muted-foreground">
+																							<div className="size-1 rounded-full bg-blue-400/60"></div>
+																							Déploiement rapide et sans installation
+																						</li>
+																						<li className="flex items-center gap-2 text-xs text-muted-foreground">
+																							<div className="size-1 rounded-full bg-blue-400/60"></div>
+																							Suivi détaillé des performances
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																		</Link>
+																	</motion.div>
+																)}
+															</div>
+															{/* Colonne droite : Autres solutions */}
+															<div className="col-span-2 flex flex-col gap-3">
+																{/* WiseTour */}
 																<motion.div
-																	key={
-																		child.title
-																	}
-																	custom={
-																		childIndex
-																	}
+																	key="WiseTour"
+																	custom={1}
 																	initial="hidden"
 																	animate="visible"
-																	variants={
-																		menuChildVariants
-																	}
+																	variants={menuChildVariants}
 																	whileHover={{
 																		scale: 1.03,
-																		backgroundColor:
-																			"rgba(var(--accent-rgb), 0.2)",
-																		transition:
-																			{
-																				duration: 0.2,
-																			},
+																		backgroundColor: "rgba(var(--accent-rgb), 0.2)",
+																		transition: { duration: 0.2 },
 																	}}
 																>
-																	<Link
-																		href={
-																			child.href
-																		}
-																	>
+																	<Link href="/solutions/wisetour">
 																		<div className="flex gap-2 items-start p-3 hover:bg-accent rounded-md transition-colors">
 																			<motion.div
 																				className="flex size-9 shrink-0 items-center justify-center rounded-md border bg-muted/50"
 																				whileHover={{
-																					rotate: [
-																						0,
-																						-5,
-																						5,
-																						-5,
-																						0,
-																					],
+																					rotate: [0, -5, 5, -5, 0],
 																				}}
-																				transition={{
-																					duration: 0.5,
-																				}}
+																				transition={{ duration: 0.5 }}
 																			>
-																				{child.iconComponent || (
-																					<Image
-																						src={
-																							child.icon
-																						}
-																						alt=""
-																						width={
-																							18
-																						}
-																						height={
-																							18
-																						}
-																					/>
-																				)}
+																				<Video className="size-5 text-secondary" />
 																			</motion.div>
 																			<div>
-																				<div className="font-medium">
-																					{
-																						child.title
-																					}
-																				</div>
+																				<div className="font-medium">WiseTour</div>
 																				<p className="text-muted-foreground text-sm leading-tight mt-1">
-																					{
-																						child.description
-																					}
+																					Visites industrielles virtuelles interactives
 																				</p>
 																			</div>
 																		</div>
 																	</Link>
 																</motion.div>
-															)
-														)}
-													</div>
+																{/* WiseScan */}
+																<motion.div
+																	key="WiseScan"
+																	custom={2}
+																	initial="hidden"
+																	animate="visible"
+																	variants={menuChildVariants}
+																	whileHover={{
+																		scale: 1.03,
+																		backgroundColor: "rgba(var(--accent-rgb), 0.2)",
+																		transition: { duration: 0.2 },
+																	}}
+																>
+																	<Link href="/solutions/wisescan">
+																		<div className="flex gap-2 items-start p-3 hover:bg-accent rounded-md transition-colors">
+																			<motion.div
+																				className="flex size-9 shrink-0 items-center justify-center rounded-md border bg-muted/50"
+																				whileHover={{
+																					rotate: [0, -5, 5, -5, 0],
+																				}}
+																				transition={{ duration: 0.5 }}
+																			>
+																				<ChartBar className="size-5 text-secondary" />
+																			</motion.div>
+																			<div>
+																				<div className="font-medium">WiseScan</div>
+																				<p className="text-muted-foreground text-sm leading-tight mt-1">
+																					Analyse intelligente des accidents pour des recommandations sur-mesure
+																				</p>
+																			</div>
+																		</div>
+																	</Link>
+																</motion.div>
+																{/* WiseAssist */}
+																<motion.div
+																	key="WiseAssist"
+																	custom={3}
+																	initial="hidden"
+																	animate="visible"
+																	variants={menuChildVariants}
+																	whileHover={{
+																		scale: 1.03,
+																		backgroundColor: "rgba(var(--accent-rgb), 0.2)",
+																		transition: { duration: 0.2 },
+																	}}
+																>
+																	<Link href="/solutions/wiseassist">
+																		<div className="flex gap-2 items-start p-3 hover:bg-accent rounded-md transition-colors">
+																			<motion.div
+																				className="flex size-9 shrink-0 items-center justify-center rounded-md border bg-muted/50"
+																				whileHover={{
+																					rotate: [0, -5, 5, -5, 0],
+																				}}
+																				transition={{ duration: 0.5 }}
+																			>
+																				<Bot className="size-5 text-secondary" />
+																			</motion.div>
+																			<div>
+																				<div className="font-medium">WiseAssist</div>
+																				<p className="text-muted-foreground text-sm leading-tight mt-1">
+																					Assistant IA pour guider vos équipes et répondre à leurs questions en temps réel
+																				</p>
+																			</div>
+																		</div>
+																	</Link>
+																</motion.div>
+															</div>
+														</div>
+													) : (
+														<div className="grid w-[600px] grid-cols-2 gap-3 p-4">
+															{item.children.map((child, childIndex) => (
+																<motion.div
+																	key={child.title}
+																	custom={childIndex}
+																	initial="hidden"
+																	animate="visible"
+																	variants={menuChildVariants}
+																	whileHover={{
+																		scale: 1.03,
+																		backgroundColor: "rgba(var(--accent-rgb), 0.2)",
+																		transition: { duration: 0.2 },
+																	}}
+																>
+																	<Link href={child.href}>
+																		<div className="flex gap-2 items-start p-3 hover:bg-accent rounded-md transition-colors">
+																			<motion.div
+																				className="flex size-9 shrink-0 items-center justify-center rounded-md border bg-muted/50"
+																				whileHover={{
+																					rotate: [0, -5, 5, -5, 0],
+																				}}
+																				transition={{ duration: 0.5 }}
+																			>
+																				{child.iconComponent || (
+																					<Image src={child.icon} alt="" width={18} height={18} />
+																				)}
+																			</motion.div>
+																			<div>
+																				<div className="font-medium">{child.title}</div>
+																				<p className="text-muted-foreground text-sm leading-tight mt-1">
+																					{child.description}
+																				</p>
+																			</div>
+																		</div>
+																	</Link>
+																</motion.div>
+															))}
+														</div>
+													)}
 												</NavigationMenuContent>
 											</>
 										) : (

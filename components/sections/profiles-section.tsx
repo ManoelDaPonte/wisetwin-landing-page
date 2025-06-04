@@ -149,7 +149,7 @@ export function ProfilesSection() {
 										</p>
 
 										<div className="flex justify-center md:justify-start">
-											<Button asChild variant="secondary">
+											<Button asChild variant="outline">
 												<Link
 													href={`/profils/${profile.id}`}
 												>

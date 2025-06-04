@@ -2,9 +2,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
+import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 export function HeroSection() {
 	return (
@@ -46,7 +48,7 @@ export function HeroSection() {
 								</Link>
 							</Button>
 							<Button size="lg" variant="outline" asChild>
-								<Link href="/contact">
+								<Link href="#contact">
 									<div>Demander une démo</div>
 								</Link>
 							</Button>
@@ -55,40 +57,24 @@ export function HeroSection() {
 
 					{/* Visual Placeholder */}
 					<motion.div
-						className="relative w-full max-w-5xl h-[400px] mt-8 rounded-xl overflow-hidden shadow-lg"
+						className="relative w-full max-w-5xl rounded-xl overflow-hidden shadow-lg"
 						initial={{ opacity: 0, y: 40 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
 					>
-						<div className="absolute inset-0 bg-gradient-to-br from-wisetwin-darkblue to-wisetwin-blue flex items-center justify-center">
-							<div className="flex flex-col items-center gap-6">
-								<div className="flex items-center gap-8">
-									<div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 flex flex-col items-center justify-center">
-										<span className="text-white text-lg font-medium mb-2">
-											WiseTrainer
-										</span>
-										<p className="text-white/70 text-sm text-center">
-											Formation immersive
-										</p>
-									</div>
-									<div className="rounded-lg bg-white/10 backdrop-blur-sm p-6 flex flex-col items-center justify-center">
-										<span className="text-white text-lg font-medium mb-2">
-											WiseTour
-										</span>
-										<p className="text-white/70 text-sm text-center">
-											Visite industrielle
-										</p>
-									</div>
-								</div>
-								<p className="text-white/90 text-sm">
-									Expériences 3D interactives pour l'industrie
-								</p>
-							</div>
-						</div>
+						<AspectRatio ratio={16 / 9}>
+							<Image 
+								src="/image/saas2.png" 
+								alt="WiseTwin Platform Interface"
+								fill
+								className="object-contain"
+								priority
+							/>
+						</AspectRatio>
 					</motion.div>
 
 					{/* Trust Indicators */}
-					<motion.div
+					{/* <motion.div
 						className="mt-8 flex flex-col items-center"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
@@ -98,7 +84,6 @@ export function HeroSection() {
 							Ils nous font confiance
 						</p>
 						<div className="flex flex-wrap justify-center gap-8 opacity-70">
-							{/* Replace with actual client logos */}
 							{[1, 2, 3, 4, 5].map((i) => (
 								<div
 									key={i}
@@ -110,7 +95,7 @@ export function HeroSection() {
 								</div>
 							))}
 						</div>
-					</motion.div>
+					</motion.div> */}
 				</div>
 			</div>
 		</Section>

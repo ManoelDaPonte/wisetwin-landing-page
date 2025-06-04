@@ -15,6 +15,8 @@ export function Footer() {
 			links: [
 				{ label: "WiseTrainer", href: "/solutions/wisetrainer" },
 				{ label: "WiseTour", href: "/solutions/wisetour" },
+				{ label: "WiseScan", href: "/solutions/wisescan" },
+				{ label: "WiseAssist", href: "/solutions/wiseassist" },
 			],
 		},
 		{
@@ -81,7 +83,7 @@ export function Footer() {
 		},
 		{
 			icon: <Map className="size-4" />,
-			text: "IMT Nord Europe, Centre de recherche, 764 Boulevard Lahure, 59508 Douai",
+			text: "Bâtiment ÉcosystèmeD, 60 route du pertuis - Môle 2, Dunkerque - FRANCE",
 		},
 	];
 

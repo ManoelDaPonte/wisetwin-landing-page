@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wisetwin Landing Page
 
-## Getting Started
+Une landing page moderne et interactive construite avec Next.js 15, React 19, et TailwindCSS.
 
-First, run the development server:
+## 🚀 Technologies Utilisées
 
+- **Framework**: Next.js 15.3.2
+- **UI Library**: React 19
+- **Styling**: TailwindCSS 4.1.7
+- **Animations**: Framer Motion
+- **UI Components**: Radix UI
+- **TypeScript**: Pour un typage statique
+- **MDX**: Pour le contenu du blog
+- **Email**: Nodemailer pour les fonctionnalités de contact
+
+## 📦 Installation
+
+1. Clonez le repository :
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [URL_DU_REPO]
+cd wisetwin-landing-page
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Installez les dépendances :
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Lancez le serveur de développement :
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Scripts Disponibles
 
-## Learn More
+- `npm run dev` : Lance le serveur de développement avec Turbopack
+- `npm run build` : Crée une version de production
+- `npm run start` : Démarre le serveur de production
+- `npm run lint` : Vérifie le code avec ESLint
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Structure du Projet
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+├── app/                    # Pages et routes de l'application
+│   ├── api/               # Routes API
+│   ├── blog/              # Pages du blog
+│   ├── solutions/         # Pages des solutions
+│   ├── ressources/        # Pages des ressources
+│   └── profils/          # Pages des profils
+├── components/            # Composants réutilisables
+├── lib/                   # Utilitaires et configurations
+├── public/               # Assets statiques
+├── types/                # Types TypeScript
+└── blog/                 # Contenu MDX du blog
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Fonctionnalités
 
-## Deploy on Vercel
+- Design responsive et moderne
+- Support du mode sombre/clair
+- Blog intégré avec MDX
+- Animations fluides avec Framer Motion
+- Composants UI accessibles avec Radix UI
+- Système de contact par email
+- Optimisé pour les performances
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 Configuration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Le projet utilise plusieurs fichiers de configuration :
+
+- `next.config.ts` : Configuration Next.js
+- `tailwind.config.js` : Configuration TailwindCSS
+- `tsconfig.json` : Configuration TypeScript
+- `eslint.config.mjs` : Configuration ESLint
+
+## 📝 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à :
+
+1. Fork le projet
+2. Créer une branche pour votre fonctionnalité
+3. Commiter vos changements
+4. Pousser vers la branche
+5. Ouvrir une Pull Request
+
+## 📄 Licence
+
+Ce projet est sous licence privée. Tous droits réservés.
+
+## 🤝 Contact
+
+Pour toute question ou suggestion, n'hésitez pas à nous contacter.

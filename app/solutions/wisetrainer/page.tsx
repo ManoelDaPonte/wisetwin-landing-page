@@ -1,15 +1,11 @@
-// app/solutions/wisetrainer/page.tsx
-"use client";
-import {
-	HeroWiseTrainerSection,
-	FeaturesWiseTrainerSection,
-} from "@/components/wisetrainer";
+import { WiseTrainerHeroSection, WiseTrainerFeaturesSection } from "@/components/solutions/wisetrainer";
+
 
 export default function WiseTrainerPage() {
 	return (
-		<>
-			<HeroWiseTrainerSection />
-			<FeaturesWiseTrainerSection />
-		</>
+		<main className="flex-1">
+			<WiseTrainerHeroSection />
+			<WiseTrainerFeaturesSection />
+		</main>
 	);
 }

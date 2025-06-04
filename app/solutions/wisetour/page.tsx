@@ -1,15 +1,14 @@
 // app/solutions/wisetour/page.tsx
-"use client";
 import {
-	HeroWiseTourSection,
-	FeaturesWiseTourSection,
-} from "@/components/wisetour";
+	WiseTourHeroSection,
+	WiseTourFeaturesSection,
+} from "@/components/solutions/wisetour";
 
 export default function WiseTourPage() {
 	return (
-		<>
-			<HeroWiseTourSection />
-			<FeaturesWiseTourSection />
-		</>
+		<main className="flex-1">
+			<WiseTourHeroSection />
+			<WiseTourFeaturesSection />
+		</main>
 	);
 }

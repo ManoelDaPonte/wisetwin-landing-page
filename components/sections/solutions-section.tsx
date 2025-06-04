@@ -1,7 +1,7 @@
 // components/sections/solutions-section.tsx
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, GraduationCap, Video } from "lucide-react";
+import { ArrowRight, GraduationCap, Video, Bot, ChartBar } from "lucide-react";
 
 import { Section } from "@/components/common/section";
 import { Button } from "@/components/ui/button";
@@ -34,102 +34,92 @@ export function SolutionsSection() {
 		},
 	};
 
-	// Solutions
-	const solutions = [
-		{
-			id: "wisetrainer",
-			icon: <GraduationCap className="size-8 text-secondary" />,
-			title: "WiseTrainer",
-			description:
-				"Plateforme de formation industrielle immersive en 3D pour améliorer la sécurité et les compétences des employés.",
-			highlights: [
-				"Reproduisez vos machines et environnements",
-				"Formez sans risque ni immobilisation des équipements",
-				"Suivez la progression des apprenants avec des analyses détaillées",
-			],
-			color: "bg-wisetwin-blue/10",
-			href: "/solutions/wisetrainer",
-		},
-		{
-			id: "wisetour",
-			icon: <Video className="size-8 text-secondary" />,
-			title: "WiseTour",
-			description:
-				"Visites industrielles virtuelles en 3D pour présenter vos installations, former vos clients ou valoriser votre savoir-faire.",
-			highlights: [
-				"Créez des parcours de visite interactifs",
-				"Mettez en valeur vos équipements et processus",
-				"Accédez virtuellement à des zones sensibles ou restreintes",
-			],
-			color: "bg-wisetwin-blue/10",
-			href: "/solutions/wisetour",
-		},
-	];
-
 	return (
 		<Section
 			id="nos-solutions"
 			variant="muted"
 			header={{
-				title: "Nos Solutions Immersives",
+				title: "Nos Solutions",
 				description:
-					"WiseTwin propose deux solutions complémentaires pour répondre aux besoins de formation et de valorisation de votre industrie.",
+					"WiseTwin propose des solutions complémentaires pour répondre aux besoins de formation et de valorisation de votre industrie.",
 				centered: true,
 			}}
 		>
-			<div className="max-w-6xl mx-auto">
-				<motion.div
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true }}
-					className="grid md:grid-cols-2 gap-8"
-				>
-					{solutions.map((solution) => (
-						<motion.div key={solution.id} variants={itemVariants}>
-							<Card className="h-full  hover:shadow-lg transition-all duration-300">
+			<div className="container px-4 mx-auto">
+				<div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+					{/* WiseTrainer Column */}
+					<motion.div
+						className="md:col-span-2"
+						variants={itemVariants}
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ once: true }}
+					>
+						<Card className="h-full hover:shadow-md transition-all duration-200">
+							<CardContent className="p-8">
+								<div className="size-16 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
+									<GraduationCap className="size-8 text-secondary" />
+								</div>
+								<h3 className="text-2xl font-semibold mb-4">
+									WiseTrainer
+								</h3>
+								<p className="text-muted-foreground mb-6">
+									Notre solution phare de formation industrielle en 3D. Créez des expériences d'apprentissage immersives sans équipement VR.
+								</p>
+								<ul className="space-y-3 mb-8">
+									<li className="flex items-center gap-2 text-sm text-muted-foreground">
+										<div className="size-1.5 rounded-full bg-blue-400/60"></div>
+										Reproduisez vos machines et environnements
+									</li>
+									<li className="flex items-center gap-2 text-sm text-muted-foreground">
+										<div className="size-1.5 rounded-full bg-blue-400/60"></div>
+										Formez sans risque ni immobilisation des équipements
+									</li>
+									<li className="flex items-center gap-2 text-sm text-muted-foreground">
+										<div className="size-1.5 rounded-full bg-blue-400/60"></div>
+										Suivez la progression des apprenants avec des analyses détaillées
+									</li>
+								</ul>
+								<Button asChild className="w-full">
+									<Link href="/solutions/wisetrainer">
+										<div className="flex items-center justify-center gap-2">
+											Découvrir WiseTrainer
+											<ArrowRight className="size-4" />
+										</div>
+									</Link>
+								</Button>
+							</CardContent>
+						</Card>
+					</motion.div>
+
+					{/* Other Solutions Column */}
+					<div className="md:col-span-2 space-y-6">
+						{/* WiseTour */}
+						<motion.div
+							variants={itemVariants}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true }}
+						>
+							<Card className="hover:shadow-md transition-all duration-200">
 								<CardContent className="p-6">
-									<div
-										className={`size-16 ${solution.color} rounded-lg flex items-center justify-center mb-4`}
-									>
-										{solution.icon}
-									</div>
-									<CardHeader className="p-0 mb-4">
-										<CardTitle className="text-2xl font-bold">
-											{solution.title}
-										</CardTitle>
-										<CardDescription className="text-base mt-2">
-											{solution.description}
-										</CardDescription>
-									</CardHeader>
-									<div className="space-y-4">
-										<ul className="space-y-2">
-											{solution.highlights.map(
-												(highlight, i) => (
-													<li
-														key={i}
-														className="flex items-start gap-2"
-													>
-														<div className="min-w-[20px] mt-1">
-															<div className="size-5 rounded-full bg-secondary/20 flex items-center justify-center">
-																<div className="size-2 rounded-full bg-secondary" />
-															</div>
-														</div>
-														<p className="text-sm">
-															{highlight}
-														</p>
-													</li>
-												)
-											)}
-										</ul>
-										<div className="pt-4">
-											<Button asChild variant="secondary">
-												<Link href={solution.href}>
-													<span>
-														Découvrir{" "}
-														{solution.title}
-													</span>
-													<ArrowRight className="ml-2 size-4" />
+									<div className="flex gap-4">
+										<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+											<Video className="size-6 text-secondary" />
+										</div>
+										<div>
+											<h3 className="text-xl font-semibold mb-2">
+												WiseTour
+											</h3>
+											<p className="text-muted-foreground mb-4">
+												Visites industrielles virtuelles en 3D pour présenter vos installations et valoriser votre savoir-faire.
+											</p>
+											<Button variant="outline" asChild size="sm">
+												<Link href="/solutions/wisetour">
+													<div className="flex items-center gap-2">
+														En savoir plus
+														<ArrowRight className="size-4" />
+													</div>
 												</Link>
 											</Button>
 										</div>
@@ -137,8 +127,76 @@ export function SolutionsSection() {
 								</CardContent>
 							</Card>
 						</motion.div>
-					))}
-				</motion.div>
+
+						{/* WiseScan */}
+						<motion.div
+							variants={itemVariants}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true }}
+						>
+							<Card className="hover:shadow-md transition-all duration-200">
+								<CardContent className="p-6">
+									<div className="flex gap-4">
+										<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+											<ChartBar className="size-6 text-secondary" />
+										</div>
+										<div>
+											<h3 className="text-xl font-semibold mb-2">
+												WiseScan
+											</h3>
+											<p className="text-muted-foreground">
+												Analyse intelligente des accidents pour des recommandations sur-mesure.
+											</p>
+											<Button variant="outline" asChild size="sm" className="mt-4">
+												<Link href="/solutions/wisescan">
+													<div className="flex items-center gap-2">
+														En savoir plus
+														<ArrowRight className="size-4" />
+													</div>
+												</Link>
+											</Button>
+										</div>
+									</div>
+								</CardContent>
+							</Card>
+						</motion.div>
+
+						{/* WiseAssist */}
+						<motion.div
+							variants={itemVariants}
+							initial="hidden"
+							whileInView="visible"
+							viewport={{ once: true }}
+						>
+							<Card className="hover:shadow-md transition-all duration-200">
+								<CardContent className="p-6">
+									<div className="flex gap-4">
+										<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+											<Bot className="size-6 text-secondary" />
+										</div>
+										<div>
+											<h3 className="text-xl font-semibold mb-2">
+												WiseAssist
+											</h3>
+											<p className="text-muted-foreground">
+												Assistant IA pour guider vos équipes et répondre à leurs questions en temps réel.
+											</p>
+											<Button variant="outline" asChild size="sm" className="mt-4">
+												<Link href="/solutions/wiseassist">
+													<div className="flex items-center gap-2">
+														En savoir plus
+														<ArrowRight className="size-4" />
+													</div>
+												</Link>
+											</Button>
+										</div>
+									</div>
+								</CardContent>
+							</Card>
+						</motion.div>
+					</div>
+				</div>
 			</div>
 		</Section>
 	);

@@ -2,7 +2,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import {
 	Download,
 	FileText,
@@ -36,9 +35,9 @@ export default function ResourcesPage() {
 			id: "presentation-wisetwin",
 			title: "Présentation de WiseTwin",
 			description:
-				"Découvrez les jumeaux numériques pour la formation et notre approche innovante pour transformer l&apos;industrie.",
+				"Découvrez les jumeaux numériques pour la formation et notre approche innovante pour transformer l'industrie.",
 			category: "presentation",
-			fileUrl: "ressources/wisetwin-brochure.pdf",
+			fileUrl: "ressources/WiseTrainer-Plaquette-B.pdf",
 			fileType: "PDF",
 			date: "2024-05-01",
 		},
@@ -64,26 +63,6 @@ export default function ResourcesPage() {
 					(resource) => resource.category === activeCategory
 			  );
 
-	// Transition pour les animations
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.1,
-			},
-		},
-	};
-
-	const itemVariants = {
-		hidden: { opacity: 0, y: 20 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: { duration: 0.5 },
-		},
-	};
-
 	return (
 		<div className="pt-24">
 			<Section
@@ -95,6 +74,7 @@ export default function ResourcesPage() {
 						"Découvrez nos guides pratiques, livres blancs et documentations techniques pour vous aider à optimiser vos formations industrielles.",
 					centered: true,
 				}}
+				animate={false}
 			>
 				{/* Filtres de catégories */}
 				<div className="flex flex-wrap gap-2 justify-center mb-10">
@@ -116,14 +96,11 @@ export default function ResourcesPage() {
 				</div>
 
 				{/* Grille de ressources */}
-				<motion.div
+				<div
 					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
-					variants={containerVariants}
-					initial="hidden"
-					animate="visible"
 				>
 					{filteredResources.map((resource) => (
-						<motion.div key={resource.id} variants={itemVariants}>
+						<div key={resource.id}>
 							<Card className="h-full flex flex-col hover:shadow-md transition-all duration-200">
 								<CardHeader>
 									<div className="flex items-start gap-3">
@@ -169,9 +146,9 @@ export default function ResourcesPage() {
 									</Button>
 								</CardFooter>
 							</Card>
-						</motion.div>
+						</div>
 					))}
-				</motion.div>
+				</div>
 
 				{filteredResources.length === 0 && (
 					<div className="text-center py-10">

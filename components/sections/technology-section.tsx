@@ -1,6 +1,6 @@
 // components/sections/technology-section.tsx
 import { motion } from "framer-motion";
-import { BrainCircuit, Code, Clock, Coins } from "lucide-react";
+import { BrainCircuit, Code, Clock, Coins, Bot, ChartBar } from "lucide-react";
 
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,6 +41,18 @@ export function TechnologySection() {
 				"Notre plateforme analyse les parcours utilisateurs et adapte automatiquement les scénarios pédagogiques.",
 		},
 		{
+			icon: <ChartBar className="size-5 text-white" />,
+			title: "Analyse prédictive",
+			description:
+				"WiseScan analyse vos historiques d'incidents pour créer des formations sur mesure et identifier proactivement les zones à risque dans votre industrie.",
+		},
+		{
+			icon: <Bot className="size-5 text-white" />,
+			title: "Assistant intelligent personnalisé",
+			description:
+				"WiseAssist crée une base de connaissances unique, garantissant des réponses pertinentes basées uniquement sur vos formations et procédures.",
+		},
+		{
 			icon: <Clock className="size-5 text-white" />,
 			title: "Déploiement rapide",
 			description:
@@ -57,9 +69,14 @@ export function TechnologySection() {
 	// Fonctionnalités IA
 	const aiFeatures = [
 		{
-			title: "Création des contenus",
+			title: "Analyse prédictive des risques",
 			description:
-				"Génération automatisée de contenus pédagogiques adaptés à chaque environnement industriel.",
+				"WiseScan étudie les incidents passés pour concevoir des formations ciblées et vous accompagner dans votre démarche de prévention des risques.",
+		},
+		{
+			title: "Support intelligent dédié",
+			description:
+				"WiseAssist exploite exclusivement les données de vos formations et procédures, sans partage entre clients, pour un assistant 100% personnalisé à votre contexte industriel.",
 		},
 		{
 			title: "Suivi des apprenants",
@@ -92,21 +109,6 @@ export function TechnologySection() {
 			}}
 		>
 			<div className="max-w-5xl mx-auto">
-				{/* Présentation de la technologie */}
-				<motion.div
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.8 }}
-					className="text-center mb-12"
-				>
-					<p className="text-white/80 text-lg max-w-3xl mx-auto">
-						Notre innovation concerne l'automatisation du processus
-						de développement, nous permettant d'être les plus
-						rapides du marché et les plus compétitifs
-						économiquement.
-					</p>
-				</motion.div>
 
 				{/* Caractéristiques techniques */}
 				<motion.div
@@ -149,9 +151,9 @@ export function TechnologySection() {
 					<Card className="mt-12 bg-wisetwin-blue/10 border-wisetwin-blue/20">
 						<CardContent className="p-8">
 							<h3 className="text-white text-xl font-semibold mb-6 text-center">
-								L'IA au service de la pédagogie
+								L'IA au service de l'industrie
 							</h3>
-							<div className="grid md:grid-cols-2 gap-6">
+							<div className="grid md:grid-cols-3 gap-6">
 								{aiFeatures.map((feature, index) => (
 									<div key={index} className="space-y-3">
 										<h4 className="text-wisetwin-blue font-medium">

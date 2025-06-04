@@ -12,44 +12,40 @@ export function TeamSection() {
 	// Données de l'équipe
 	const teamMembers = [
 		{
+			name: "Manoel Daponte",
+			role: "CTO",
+			bio: "Ingénieur, développeur de logiciels.",
+			skills: [
+				"Développement logiciel",
+				"Science de la donnée",
+			],
+			image: "/equipe/manoel.jpeg",
+			linkedin: "#",
+			initials: "MD",
+		},
+		{
 			name: "Mickaël Lambrecht",
 			role: "CEO",
 			bio: "Ingénieur-PhD, expert en simulations numériques dans le secteur industriel.",
 			skills: [
 				"Développement 3D",
 				"Formation",
-				"Marketing",
-				"Communication",
 			],
-			image: "/team/placeholder.png",
+			image: "/equipe/mickael.jpeg",
 			linkedin: "#",
 			initials: "ML",
 		},
-		{
-			name: "Manoel Daponte",
-			role: "CTO",
-			bio: "Ingénieur, développeur de logiciels chez Total.",
-			skills: [
-				"Développement logiciel",
-				"Analyse de données",
-				"Machine Learning",
-				"IA",
-			],
-			image: "/team/placeholder.png",
-			linkedin: "#",
-			initials: "MD",
-		},
+
 		{
 			name: "Gauthier Delmarre",
 			role: "CFO",
 			bio: "Directeur industriel dans les secteurs automobile et énergie.",
 			skills: [
-				"Vente",
 				"Relations partenariats",
 				"Communication",
-				"Développement",
+				"Marketing"
 			],
-			image: "/team/placeholder.png",
+			image: "/equipe/gauthier.jpeg",
 			linkedin: "#",
 			initials: "GD",
 		},

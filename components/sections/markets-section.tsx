@@ -80,7 +80,7 @@ export function MarketsSection() {
 	return (
 		<Section
 			id="marches-applications"
-			variant="default"
+			variant="muted"
 			header={{
 				title: "Marchés & Applications",
 				description:
@@ -88,18 +88,6 @@ export function MarketsSection() {
 				centered: true,
 			}}
 		>
-			<motion.div
-				className="mb-8 text-center"
-				initial={{ opacity: 0, y: 20 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true }}
-				transition={{ duration: 0.6 }}
-			>
-				<p className="text-muted-foreground max-w-3xl mx-auto">
-					Notre approche sur-mesure, économique et rapide nous permet
-					d'adresser efficacement plusieurs segments de marché:
-				</p>
-			</motion.div>
 
 			{/* Marchés cards */}
 			<motion.div
