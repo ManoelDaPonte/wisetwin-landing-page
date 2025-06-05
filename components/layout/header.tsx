@@ -308,7 +308,7 @@ export function Header() {
                                         </div>
 
                                         {/* Badge "Solution phare" */}
-                                        <div className="mb-4">
+                                        {/* <div className="mb-4">
                                           <span
                                             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border"
                                             style={{
@@ -327,7 +327,7 @@ export function Header() {
                                             ></div>
                                             Solution phare
                                           </span>
-                                        </div>
+                                        </div> */}
 
                                         {/* Liste des avantages avec un meilleur espacement */}
                                         <div className="space-y-3 mb-4">

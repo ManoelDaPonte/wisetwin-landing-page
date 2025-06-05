@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Section } from "@/components/common/section";
 import { Button } from "@/components/ui/button";
 import { ReactNode } from "react";
+import { Badge } from "@/components/ui/badge";
 
 interface HeroButton {
   label: string;
@@ -20,6 +21,7 @@ interface GenericHeroSectionProps {
   imageAlt: string;
   variant?: "default" | "muted";
   buttons?: HeroButton[];
+  onDev?: boolean; // <-- nouvelle prop
 }
 
 export function GenericHeroSection({
@@ -31,9 +33,14 @@ export function GenericHeroSection({
   imageAlt,
   variant = "default",
   buttons = [],
+  onDev = false,
 }: GenericHeroSectionProps) {
   return (
-    <Section className="pt-24 md:pt-32 overflow-hidden" variant={variant} animate={false}>
+    <Section
+      className="pt-24 md:pt-32 overflow-hidden"
+      variant={variant}
+      animate={false}
+    >
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contenu */}
@@ -43,21 +50,36 @@ export function GenericHeroSection({
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-2 mb-6">
-              <div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center">
+              <div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center relative">
                 {icon}
               </div>
               {subtitle && <h2 className="text-xl font-medium">{subtitle}</h2>}
+              {onDev && (
+                <Badge variant="secondary" className="text-xs animate-pulse">
+                  En développement
+                </Badge>
+              )}
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{title}</h1>
+
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 flex items-center gap-3">
+              {title}
+            </h1>
+
             <p className="text-xl text-muted-foreground mb-8">{description}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               {buttons.map((btn, i) => (
-                <Button key={i} size="lg" asChild variant={btn.variant || (i === 0 ? "default" : "outline") }>
+                <Button
+                  key={i}
+                  size="lg"
+                  asChild
+                  variant={btn.variant || (i === 0 ? "default" : "outline")}
+                >
                   <a href={btn.href}>{btn.label}</a>
                 </Button>
               ))}
             </div>
           </motion.div>
+
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -70,7 +92,7 @@ export function GenericHeroSection({
                 src={image}
                 alt={imageAlt}
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
@@ -79,4 +101,4 @@ export function GenericHeroSection({
       </div>
     </Section>
   );
-} 
+}

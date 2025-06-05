@@ -1,7 +1,6 @@
 import { Bot } from "lucide-react";
 import { GenericHeroSection } from "@/components/solutions/common/generic-hero-section";
 
-
 export function WiseAssistHeroSection() {
   return (
     <GenericHeroSection
@@ -15,6 +14,7 @@ export function WiseAssistHeroSection() {
         { label: "Demander une démo", href: "#contact", variant: "default" },
         { label: "En savoir plus", href: "#features", variant: "outline" },
       ]}
+      onDev={true}
     />
   );
-} 
+}

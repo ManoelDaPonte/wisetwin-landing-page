@@ -15,6 +15,7 @@ export function WiseScanHeroSection() {
         { label: "Demander une démo", href: "#contact", variant: "default" },
         { label: "En savoir plus", href: "#features", variant: "outline" },
       ]}
+      onDev={true}
     />
   );
-} 
+}
