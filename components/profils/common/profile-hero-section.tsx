@@ -52,7 +52,9 @@ export function ProfileHeroSection({
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {title.split(" ").map((word, i, arr) =>
                 i === arr.length - 1 ? (
-                  <span key={i} className="text-secondary">{word} </span>
+                  <span key={i} className="text-secondary">
+                    {word}{" "}
+                  </span>
                 ) : (
                   <span key={i}>{word} </span>
                 )
@@ -80,7 +82,7 @@ export function ProfileHeroSection({
             </div>
           </motion.div>
           <motion.div
-            className="md:w-1/2"
+            className="w-full md:w-1/2"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
