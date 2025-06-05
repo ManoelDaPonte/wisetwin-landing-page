@@ -233,7 +233,6 @@ export function Header() {
                 alt="WiseTwin Logo"
                 width={40}
                 height={40}
-                className="dark:invert"
               />
               <div className="hidden lg:block text-2xl font-bold text-foreground">
                 <span className="text-primary">Wise</span>
@@ -646,7 +645,6 @@ export function Header() {
                             alt="WiseTwin Logo"
                             width={32}
                             height={32}
-                            className="dark:invert"
                           />
                           <span className="font-bold text-lg">
                             <span className="text-primary">Wise</span>
