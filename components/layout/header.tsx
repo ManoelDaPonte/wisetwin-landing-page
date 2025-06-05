@@ -678,18 +678,6 @@ export function Header() {
                           {item.children ? (
                             <div className="mb-2">
                               <div className="flex items-center gap-2 px-4 py-2.5 font-medium">
-                                {item.title === "Solutions" && (
-                                  <Boxes className="size-4 text-primary" />
-                                )}
-                                {item.title === "Cas d'usage" && (
-                                  <FileText className="size-4 text-primary" />
-                                )}
-                                {item.title === "À propos" && (
-                                  <Info className="size-4 text-primary" />
-                                )}
-                                {item.title === "Ressources" && (
-                                  <BookOpen className="size-4 text-primary" />
-                                )}
                                 {item.title}
                               </div>
                               <div className="ml-4 pl-3 border-l border-muted flex flex-col">
@@ -734,45 +722,12 @@ export function Header() {
                               href={item.href}
                               className="flex items-center gap-2 px-4 py-2.5 font-medium hover:bg-muted/50 rounded-md transition-colors"
                             >
-                              {item.title === "Solutions" && (
-                                <Boxes className="size-4 text-primary" />
-                              )}
-                              {item.title === "Cas d'usage" && (
-                                <FileText className="size-4 text-primary" />
-                              )}
-                              {item.title === "À propos" && (
-                                <Info className="size-4 text-primary" />
-                              )}
-                              {item.title === "Ressources" && (
-                                <BookOpen className="size-4 text-primary" />
-                              )}
                               {item.title}
                             </Link>
                           )}
                         </motion.div>
                       ))}
                     </nav>
-                  </div>
-
-                  {/* Pied du menu mobile avec bouton de contact */}
-                  <div className="border-t p-4 mt-auto">
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        delay: 0.5,
-                        duration: 0.4,
-                      }}
-                    >
-                      <Button asChild className="w-full">
-                        <Link href="/#contact">
-                          <div className="flex items-center justify-center gap-2">
-                            <Mail className="size-4" />
-                            Nous contacter
-                          </div>
-                        </Link>
-                      </Button>
-                    </motion.div>
                   </div>
                 </SheetContent>
               </Sheet>
