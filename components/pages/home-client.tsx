@@ -3,11 +3,13 @@
 import {
 	HeroSection,
 	WiseTrainerSection,
-	FeaturesSection,
+	WiseTrainerAdvantagesSection,
+	ProfilesSection,
+	PlatformSection,
 	TechnologySection,
+	FaqSection,
 	BlogSection,
 	ContactSection,
-	ProfilesSection,
 } from "@/components/sections";
 import { BlogPost } from "@/types/blog";
 
@@ -20,9 +22,11 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
 		<>
 			<HeroSection />
 			<WiseTrainerSection />
-			<FeaturesSection />
+			<WiseTrainerAdvantagesSection />
 			<ProfilesSection />
+			<PlatformSection />
 			<TechnologySection />
+			<FaqSection />
 			<BlogSection posts={blogPosts} />
 			<ContactSection />
 		</>

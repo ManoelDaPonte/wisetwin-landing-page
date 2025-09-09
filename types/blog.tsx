@@ -15,4 +15,6 @@ export interface BlogPost {
 	tags: string[];
 	readTime: number;
 	content?: string;
+	coverImage?: string;
+	images?: string[];
 }

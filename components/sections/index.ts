@@ -1,12 +1,9 @@
 export { HeroSection } from "./hero-section";
 export { WiseTrainerSection } from "./wisetrainer-section";
-export { SolutionsSection } from "./solutions-section";
-export { FeaturesSection } from "./features-section";
-export { TestimonialsSection } from "./testimonials-section";
-export { ProblemsSection } from "./problems-section";
+export { WiseTrainerAdvantagesSection } from "./wisetrainer-advantages-section";
 export { TechnologySection } from "./technology-section";
-export { MarketsSection } from "./markets-section";
 export { BlogSection } from "./blog-section";
 export { ContactSection } from "./contact-section";
-export { CtaSection } from "./cta-section";
 export { ProfilesSection } from "./profiles-section";
+export { FaqSection } from "./faq-section";
+export { PlatformSection } from "./platform-section";

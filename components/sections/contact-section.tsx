@@ -164,7 +164,7 @@ export function ContactSection() {
 	const subjectOptions = [
 		{
 			value: "wisetrainer",
-			label: "WiseTrainer",
+			label: "Wise Twin",
 			icon: <GraduationCap className="size-4 text-secondary" />,
 		},
 		{

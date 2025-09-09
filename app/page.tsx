@@ -5,7 +5,7 @@ import { getLatestPosts } from "@/lib/blog";
 export const metadata: Metadata = {
 	title: "WiseTwin - Solutions innovantes pour la sécurité",
 	description:
-		"Transformez votre formation industrielle avec nos solutions VR immersives. WiseTour, WiseTrainer, WiseScan et WiseAssist pour optimiser vos processus et former vos équipes.",
+		"Transformez votre formation industrielle avec nos solutions VR immersives. WiseTour, Wise Twin, WiseScan et WiseAssist pour optimiser vos processus et former vos équipes.",
 	keywords: [
 		"réalité virtuelle",
 		"industrie 4.0",

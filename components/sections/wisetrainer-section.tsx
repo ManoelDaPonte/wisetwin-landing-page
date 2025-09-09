@@ -1,66 +1,120 @@
 import Image from "next/image";
+import { Monitor, Globe, Gamepad2, Shield } from "lucide-react";
 
 import { Section } from "@/components/common/section";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export function WiseTrainerSection() {
+	const keyFeatures = [
+		{
+			icon: <Monitor className="size-5 text-white" />,
+			title: "100% en ligne",
+			description: "Accessible depuis n'importe où, sans installation",
+		},
+		{
+			icon: <Shield className="size-5 text-white" />,
+			title: "Reproduction fidèle",
+			description: "Environnements 3D identiques à vos installations",
+		},
+		{
+			icon: <Gamepad2 className="size-5 text-white" />,
+			title: "Interactivité & Gamification",
+			description: "Quiz, certifications et suivi des scores",
+		},
+		{
+			icon: <Globe className="size-5 text-white" />,
+			title: "Support multilingue",
+			description: "Contenus disponibles en plusieurs langues",
+		},
+	];
+
 	return (
 		<Section
 			id="wisetrainer"
 			variant="default"
 			header={{
-				title: "WiseTrainer",
+				title: "Notre solution",
 				description:
-					"WiseTrainer sécurise vos lancements, fiabilise vos procédures et accélère la montée en compétences, sans immobiliser vos installations.",
+					"Votre formation industrielle sur-mesure. Solution légère, flexible et accessible depuis n'importe où.",
 				centered: true,
 			}}
 		>
-			<div className="grid lg:grid-cols-2 gap-12 items-center">
-				{/* Content Column */}
+			<div className="space-y-16">
+				{/* Hero Section */}
+				<div className="grid lg:grid-cols-2 gap-12 items-center">
+					{/* Content Column */}
+					<div className="space-y-8">
+						<div className="space-y-6">
+							<h3 className="text-2xl font-bold">
+								Transformez vos incidents en opportunités
+								d'apprentissage
+							</h3>
+							<p className="text-muted-foreground text-lg leading-relaxed">
+								Wise Twin offre une{" "}
+								<strong>expérience unique</strong> dans des
+								environnements interactifs et personnalisables,
+								fidèles à votre réalité métier.
+							</p>
+						</div>
 
-				<div className="space-y-6">
-					<div className="flex items-start gap-4">
-						<div className="flex-shrink-0 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm">
-							1
+						{/* Key Benefits */}
+						<div className="space-y-4">
+							{[
+								"Simulations d'accidents et erreurs courantes",
+								"Analyse post-situation et feedback immédiat",
+								"Entraînement à la prise de décision sans risque",
+							].map((benefit, index) => (
+								<div
+									key={index}
+									className="flex items-start gap-3"
+								>
+									<div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0" />
+									<p className="text-foreground font-medium">
+										{benefit}
+									</p>
+								</div>
+							))}
 						</div>
-						<p className="text-foreground font-medium pt-1">
-							Reproduisez fidèlement vos installations.
-						</p>
 					</div>
-					<div className="flex items-start gap-4">
-						<div className="flex-shrink-0 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm">
-							2
+
+					{/* Image Column */}
+					<div className="flex items-center justify-center">
+						<div className="relative w-full max-w-lg">
+							<div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-wisetwin-blue/20 rounded-2xl blur-3xl transform scale-110" />
+							<div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border/50">
+								<Image
+									src="/image/loto.webp"
+									alt="Wise Twin - Formation industrielle 3D"
+									width={600}
+									height={400}
+									className="w-full h-auto object-contain"
+								/>
+							</div>
 						</div>
-						<p className="text-foreground font-medium pt-1">
-							Suivez la progression avec des analyses détaillées
-							et individualisées à chaque apprenant.
-						</p>
-					</div>
-					<div className="flex items-start gap-4">
-						<div className="flex-shrink-0 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm">
-							3
-						</div>
-						<p className="text-foreground font-medium pt-1">
-							Formez à distance ou en présentiel, en groupe, sans
-							immobiliser vos installations ou mobiliser vos
-							ressources.
-						</p>
 					</div>
 				</div>
 
-				{/* Image Column */}
-				<div className="flex items-center justify-center">
-					<div className="relative w-full max-w-lg">
-						<div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-wisetwin-blue/20 rounded-2xl blur-3xl transform scale-110" />
-						<div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border/50">
-							<Image
-								src="/image/loto.webp"
-								alt="WiseTrainer Platform Demo"
-								width={600}
-								height={400}
-								className="w-full h-auto object-contain"
-							/>
-						</div>
-					</div>
+				{/* Key Features Grid */}
+				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+					{keyFeatures.map((feature, index) => (
+						<Card
+							key={index}
+							className="text-center hover:shadow-md transition-all duration-200"
+						>
+							<CardContent className="p-6">
+								<div className="w-12 h-12 bg-wisetwin-blue rounded-full flex items-center justify-center mx-auto mb-4">
+									{feature.icon}
+								</div>
+								<h4 className="font-semibold mb-2">
+									{feature.title}
+								</h4>
+								<p className="text-sm text-muted-foreground">
+									{feature.description}
+								</p>
+							</CardContent>
+						</Card>
+					))}
 				</div>
 			</div>
 		</Section>

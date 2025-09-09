@@ -11,7 +11,6 @@ import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 export function HeroSection() {
 	const gridRef = useRef<HTMLDivElement>(null);
 
-	// MODIFIÉ : Remplacement des mots par les bénéfices clés de la sécurité avec élision correcte
 	const changingTexts = [
 		"de productivité",
 		"de rentabilité",
@@ -96,7 +95,6 @@ export function HeroSection() {
 								</div>
 							</div>
 
-							{/* MODIFIÉ : Paragraphe plus percutant et aligné avec les bénéfices */}
 							<p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl pt-2 lg:pt-4">
 								Réduisez les incidents et ancrez une culture de
 								la sécurité durable. Nos formations immersives,
@@ -139,9 +137,8 @@ export function HeroSection() {
 							{/* Composant vidéo hero */}
 							<HeroVideoDialog
 								animationStyle="from-center"
-								// MODIFIÉ : Pensez à remplacer ce lien par votre vraie vidéo de démo
-								videoSrc="https://www.youtube.com/embed/VOTRE_VIDEO_ID"
-								thumbnailSrc="/image/saas2.png"
+								videoSrc="/video/wisetrainer-presentation.mp4"
+								thumbnailSrc="/image/wisetrainer-presentation.png"
 								thumbnailAlt="WiseTwin Platform Demo"
 							/>
 						</div>

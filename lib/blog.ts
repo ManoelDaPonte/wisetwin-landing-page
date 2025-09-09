@@ -34,6 +34,8 @@ export async function getLatestPosts(): Promise<BlogPost[]> {
 				category: data.category as string,
 				tags: data.tags as string[],
 				readTime: data.readTime as number,
+				coverImage: data.coverImage as string | undefined,
+				images: data.images as string[] | undefined,
 			} as BlogPost;
 		});
 
