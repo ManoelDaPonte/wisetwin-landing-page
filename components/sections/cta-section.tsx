@@ -1,6 +1,5 @@
 // components/sections/cta-section.tsx
 "use client";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -9,13 +8,9 @@ import { Section } from "@/components/common/section";
 export function CtaSection() {
 	return (
 		<Section id="cta">
-			<div className="container px-4 mx-auto py-16">
-				<motion.div
+			<div className="py-16 w-full">
+				<div
 					className="bg-gradient-to-r from-primary to-secondary rounded-xl p-8 md:p-12 overflow-hidden relative"
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true, margin: "-100px" }}
-					transition={{ duration: 0.6 }}
 				>
 					{/* Background pattern */}
 					<div className="absolute top-0 right-0 w-full h-full opacity-10">
@@ -52,7 +47,7 @@ export function CtaSection() {
 							programme sur mesure adapté à vos besoins
 							spécifiques.
 						</p>
-						<motion.div>
+						<div>
 							<Button
 								variant="outline"
 								size="lg"
@@ -63,9 +58,9 @@ export function CtaSection() {
 									<div>Demander une consultation</div>
 								</Link>
 							</Button>
-						</motion.div>
+						</div>
 					</div>
-				</motion.div>
+				</div>
 			</div>
 		</Section>
 	);

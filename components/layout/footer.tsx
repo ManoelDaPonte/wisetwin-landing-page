@@ -13,35 +13,34 @@ export function Footer() {
     {
       title: "Solutions",
       links: [
-        { label: "WiseTrainer", href: "/solutions/wisetrainer" },
-        { label: "WiseTour", href: "/solutions/wisetour" },
-        { label: "WiseScan", href: "/solutions/wisescan" },
-        { label: "WiseAssist", href: "/solutions/wiseassist" },
+        { label: "WiseTrainer", href: "/#nos-solutions" },
+        { label: "WiseTour", href: "/#nos-solutions" },
+        { label: "WiseScan", href: "/#nos-solutions" },
+        { label: "WiseAssist", href: "/#nos-solutions" },
       ],
     },
     {
       title: "Profils",
       links: [
-        { label: "Responsable HSE", href: "/profils/responsable-hse" },
+        { label: "Responsable HSE", href: "/#vous-etes" },
         {
           label: "Responsable Formation",
-          href: "/profils/responsable-formation",
+          href: "/#vous-etes",
         },
         {
           label: "Chef de Production",
-          href: "/profils/chef-production",
+          href: "/#vous-etes",
         },
         {
           label: "Directeur Industriel",
-          href: "/profils/directeur-industriel",
+          href: "/#vous-etes",
         },
       ],
     },
     {
-      title: "Ressources",
+      title: "Blog",
       links: [
-        { label: "Centre de ressources", href: "/ressources" },
-        { label: "Blog", href: "/blog" },
+        { label: "Tous les articles", href: "/blog" },
         {
           label: "Télécharger la brochure",
           href: "/ressources/wisetwin-brochure.pdf",
@@ -51,9 +50,9 @@ export function Footer() {
     {
       title: "Entreprise",
       links: [
-        { label: "À propos", href: "/#notre-histoire" },
-        { label: "Notre équipe", href: "/#notre-equipe" },
-        { label: "Nous contacter", href: "/#contact" },
+        { label: "À propos", href: "/#nos-solutions" },
+        { label: "Blog", href: "/blog" },
+        { label: "Contact", href: "/#contact" },
         {
           label: "Marchés & Applications",
           href: "/#marches-applications",
@@ -106,7 +105,7 @@ export function Footer() {
             <Link href="/" className="inline-block mb-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/wisetwin-logo.png"
+                  src="/logo_wisetwin.svg"
                   alt="WiseTwin"
                   width={150}
                   height={40}

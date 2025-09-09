@@ -1,5 +1,4 @@
 // components/sections/solution-section.tsx
-import { motion } from "framer-motion";
 import { Lightbulb, Trophy, Zap } from "lucide-react";
 
 import { Section } from "@/components/common/section";
@@ -18,12 +17,8 @@ export function SolutionSection() {
 		>
 			<div className="flex flex-col md:flex-row gap-10 items-center">
 				{/* Visualisation du produit */}
-				<motion.div
+				<div
 					className="w-full md:w-1/2"
-					initial={{ opacity: 0, x: -50 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.6 }}
 				>
 					<div className="aspect-video bg-gradient-to-br from-wisetwin-darkblue to-wisetwin-blue rounded-xl overflow-hidden shadow-lg relative">
 						<div className="absolute inset-0 flex items-center justify-center">
@@ -32,15 +27,11 @@ export function SolutionSection() {
 							</p>
 						</div>
 					</div>
-				</motion.div>
+				</div>
 
 				{/* Description */}
-				<motion.div
+				<div
 					className="w-full md:w-1/2"
-					initial={{ opacity: 0, x: 50 }}
-					whileInView={{ opacity: 1, x: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.6, delay: 0.2 }}
 				>
 					<h3 className="text-2xl font-bold mb-4">
 						Les jumeaux numériques au service de la formation
@@ -72,16 +63,9 @@ export function SolutionSection() {
 								desc: "Les formations visuelles et ludiques augmentent l'engagement des apprenants",
 							},
 						].map((item, index) => (
-							<motion.div
+							<div
 								key={index}
 								className="flex gap-3 items-start"
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								transition={{
-									duration: 0.5,
-									delay: 0.3 + index * 0.1,
-								}}
 							>
 								<div className="mt-1 size-8 bg-secondary/10 rounded-lg flex items-center justify-center">
 									{item.icon}
@@ -94,10 +78,10 @@ export function SolutionSection() {
 										{item.desc}
 									</p>
 								</div>
-							</motion.div>
+							</div>
 						))}
 					</div>
-				</motion.div>
+				</div>
 			</div>
 		</Section>
 	);

@@ -1,30 +1,12 @@
 // components/sections/features-section.tsx
-import { motion } from "framer-motion";
 import { ShieldCheck, RotateCw, BarChart3 } from "lucide-react";
+import Image from "next/image";
 
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function FeaturesSection() {
 	// Animation variants for staggered animation
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.2,
-			},
-		},
-	};
-
-	const itemVariants = {
-		hidden: { opacity: 0, y: 20 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: { duration: 0.6 },
-		},
-	};
 
 	// Feature items data
 	const features = [
@@ -49,53 +31,57 @@ export function FeaturesSection() {
 	];
 
 	return (
-		<Section id="features" variant="default" className="py-20">
-			<div className="container px-4 mx-auto">
-				{/* Section header */}
-				<motion.div
-					className="text-center max-w-3xl mx-auto mb-16"
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6 }}
-				>
-					<h2 className="text-3xl md:text-4xl font-bold mb-4">
-						Une approche{" "}
-						<span className="text-secondary">révolutionnaire</span>{" "}
-						de la formation
-					</h2>
-					<p className="text-lg text-muted-foreground">
-						Notre technologie de jumeaux numériques offre une
-						expérience d'apprentissage sans précédent pour les
-						environnements industriels complexes.
-					</p>
-				</motion.div>
+		<Section
+			id="features"
+			variant="default"
+			header={{
+				title: "Une approche révolutionnaire de la formation",
+				description:
+					"Notre technologie de jumeaux numériques offre une expérience d'apprentissage sans précédent pour les environnements industriels complexes.",
+				centered: true,
+				highlight: true,
+			}}
+		>
+			<div className="grid lg:grid-cols-2 gap-16 items-center">
+				{/* Image Column */}
+				<div className="flex justify-center">
+					<div className="relative max-w-lg w-full">
+						<div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-wisetwin-blue/20 rounded-2xl blur-3xl transform scale-110" />
+						<Image
+							src="/placeholder.png"
+							alt="Formation industrielle révolutionnaire"
+							width={500}
+							height={350}
+							className="relative rounded-2xl shadow-2xl border border-border/50"
+						/>
+					</div>
+				</div>
 
-				{/* Features grid */}
-				<motion.div
-					className="grid md:grid-cols-3 gap-8"
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, margin: "-100px" }}
-				>
+				{/* Features Column */}
+				<div className="space-y-8">
 					{features.map((feature, index) => (
-						<motion.div key={index} variants={itemVariants}>
-							<Card className="h-full hover:shadow-md transition-all duration-200">
-								<CardContent className="pt-6">
-									<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+						<Card
+							key={index}
+							className="h-full hover:shadow-md transition-all duration-200"
+						>
+							<CardContent className="p-6">
+								<div className="flex gap-4 items-start">
+									<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
 										{feature.icon}
 									</div>
-									<h3 className="text-xl font-semibold mb-3">
-										{feature.title}
-									</h3>
-									<p className="text-muted-foreground">
-										{feature.description}
-									</p>
-								</CardContent>
-							</Card>
-						</motion.div>
+									<div>
+										<h3 className="text-xl font-semibold mb-3">
+											{feature.title}
+										</h3>
+										<p className="text-muted-foreground">
+											{feature.description}
+										</p>
+									</div>
+								</div>
+							</CardContent>
+						</Card>
 					))}
-				</motion.div>
+				</div>
 			</div>
 		</Section>
 	);

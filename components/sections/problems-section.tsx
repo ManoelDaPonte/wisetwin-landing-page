@@ -1,5 +1,4 @@
 // components/sections/problems-section.tsx
-import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 import { Section } from "@/components/common/section";
@@ -49,24 +48,6 @@ export function ProblemsSection() {
 	];
 
 	// Animation variants
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.2,
-			},
-		},
-	};
-
-	const itemVariants = {
-		hidden: { opacity: 0, y: 20 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: { duration: 0.6 },
-		},
-	};
 
 	return (
 		<Section
@@ -80,19 +61,9 @@ export function ProblemsSection() {
 			}}
 		>
 			<div className="max-w-4xl mx-auto">
-				<motion.div
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true }}
-				>
 					<Accordion type="single" collapsible className="w-full">
-						{problems.map((problem, index) => (
-							<motion.div
-								key={problem.id}
-								variants={itemVariants}
-								custom={index}
-							>
+						{problems.map((problem) => (
+							<div key={problem.id}>
 								<AccordionItem value={problem.id}>
 									<AccordionTrigger className="text-lg font-medium">
 										{problem.title}
@@ -135,10 +106,9 @@ export function ProblemsSection() {
 										</div>
 									</AccordionContent>
 								</AccordionItem>
-							</motion.div>
+							</div>
 						))}
 					</Accordion>
-				</motion.div>
 			</div>
 		</Section>
 	);

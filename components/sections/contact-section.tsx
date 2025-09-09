@@ -2,7 +2,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { toast } from "sonner";
 import {
 	Send,
@@ -206,14 +205,8 @@ export function ContactSection() {
 				centered: true,
 			}}
 		>
-			<div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-				<motion.div
-					initial={{ opacity: 0, y: 30 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.7 }}
-				>
-					<Card className="shadow-sm border">
+			<div className="max-w-3xl mx-auto">
+				<Card className="shadow-sm border">
 						<CardHeader>
 							<CardTitle>Envoyez-nous un message</CardTitle>
 							<CardDescription>
@@ -223,11 +216,8 @@ export function ContactSection() {
 						</CardHeader>
 						<CardContent>
 							{submitted ? (
-								<motion.div
+								<div
 									className="bg-green-50 border border-green-200 text-green-700 p-6 rounded-lg text-center"
-									initial={{ opacity: 0, scale: 0.9 }}
-									animate={{ opacity: 1, scale: 1 }}
-									transition={{ duration: 0.3 }}
 								>
 									<div className="flex justify-center mb-4">
 										<CheckCircle className="size-12 text-green-500" />
@@ -244,14 +234,12 @@ export function ContactSection() {
 										Un email de confirmation a été envoyé à
 										l'adresse {formState.email}
 									</p>
-								</motion.div>
+								</div>
 							) : (
 								<form onSubmit={handleSubmit}>
 									{error && (
-										<motion.div
+										<div
 											className="flex items-start gap-2 mb-6 p-4 bg-destructive/10 border border-destructive text-destructive rounded-md"
-											initial={{ opacity: 0, y: -10 }}
-											animate={{ opacity: 1, y: 0 }}
 										>
 											<AlertTriangle
 												size={20}
@@ -263,7 +251,7 @@ export function ContactSection() {
 												</p>
 												<p>{error}</p>
 											</div>
-										</motion.div>
+										</div>
 									)}
 
 									<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -392,9 +380,7 @@ export function ContactSection() {
 										/>
 									</div>
 
-									<motion.div
-										whileHover={{ scale: 1.01 }}
-										whileTap={{ scale: 0.98 }}
+									<div
 										className="flex justify-end"
 									>
 										<Button
@@ -422,12 +408,11 @@ export function ContactSection() {
 												</>
 											)}
 										</Button>
-									</motion.div>
+									</div>
 								</form>
 							)}
 						</CardContent>
-					</Card>
-				</motion.div>
+				</Card>
 			</div>
 		</Section>
 	);

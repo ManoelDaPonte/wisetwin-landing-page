@@ -1,30 +1,13 @@
 // components/sections/technology-section.tsx
-import { motion } from "framer-motion";
 import { BrainCircuit, Code, Clock, Coins, Bot, ChartBar } from "lucide-react";
+import Image from "next/image";
 
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function TechnologySection() {
 	// Animation variants
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.3,
-			},
-		},
-	};
 
-	const itemVariants = {
-		hidden: { opacity: 0, y: 30 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: { duration: 0.6 },
-		},
-	};
 
 	// Caractéristiques technologiques
 	const techFeatures = [
@@ -108,18 +91,28 @@ export function TechnologySection() {
 				highlight: true,
 			}}
 		>
-			<div className="max-w-5xl mx-auto">
+			<div className="max-w-6xl mx-auto">
+
+				{/* Image d'illustration de la technologie */}
+				<div className="mb-16 flex justify-center">
+					<div className="relative max-w-md">
+						<div className="absolute inset-0 bg-gradient-to-r from-wisetwin-blue/30 to-secondary/30 rounded-2xl blur-2xl transform scale-110" />
+						<Image
+							src="/placeholder.png"
+							alt="Technologie WiseTwin - IA et formations 3D"
+							width={400}
+							height={250}
+							className="relative rounded-2xl shadow-2xl border border-wisetwin-blue/30"
+						/>
+					</div>
+				</div>
 
 				{/* Caractéristiques techniques */}
-				<motion.div
-					variants={containerVariants}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true }}
+				<div
 					className="grid md:grid-cols-2 gap-8"
 				>
 					{techFeatures.map((feature, index) => (
-						<motion.div key={index} variants={itemVariants}>
+						<div key={index}>
 							<Card className="bg-wisetwin-darkblue/80 border-wisetwin-blue/20 backdrop-blur-sm">
 								<CardContent className="p-6">
 									<div className="flex gap-4 items-start">
@@ -137,16 +130,12 @@ export function TechnologySection() {
 									</div>
 								</CardContent>
 							</Card>
-						</motion.div>
+						</div>
 					))}
-				</motion.div>
+				</div>
 
 				{/* Utilisation de l'IA */}
-				<motion.div
-					initial={{ opacity: 0, y: 40 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.8, delay: 0.4 }}
+				<div
 				>
 					<Card className="mt-12 bg-wisetwin-blue/10 border-wisetwin-blue/20">
 						<CardContent className="p-8">
@@ -167,7 +156,7 @@ export function TechnologySection() {
 							</div>
 						</CardContent>
 					</Card>
-				</motion.div>
+				</div>
 			</div>
 		</Section>
 	);

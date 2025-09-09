@@ -213,6 +213,17 @@ export default async function BlogPostPage({
 						))}
 					</div>
 				</div>
+
+				{/* Bouton retour en fin d'article */}
+				<div className="border-t pt-8 text-center">
+					<Link
+						href="/blog"
+						className="inline-flex items-center justify-center px-6 py-3 bg-wisetwin-blue text-white rounded-lg hover:bg-wisetwin-blue/90 transition-colors"
+					>
+						<ArrowLeft className="mr-2 size-4" />
+						Retour aux articles
+					</Link>
+				</div>
 			</article>
 		</div>
 	);

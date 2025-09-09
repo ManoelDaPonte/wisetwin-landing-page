@@ -1,103 +1,160 @@
 // components/sections/hero-section.tsx
+"use client";
+
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 import { Button } from "@/components/ui/button";
-import { Section } from "@/components/common/section";
-import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { WordRotate } from "@/components/magicui/word-rotate";
+import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 
 export function HeroSection() {
+	const gridRef = useRef<HTMLDivElement>(null);
+
+	// MODIFIÉ : Remplacement des mots par les bénéfices clés de la sécurité avec élision correcte
+	const changingTexts = [
+		"de productivité",
+		"de rentabilité",
+		"d'engagement",
+		"de sérénité",
+	];
+
+	// Animation de la grille
+	useEffect(() => {
+		const grid = gridRef.current;
+		if (!grid) return;
+
+		let animationId: number;
+		let position = 0;
+
+		const animate = () => {
+			position -= 0.5; // Vitesse de défilement
+			grid.style.transform = `translateY(${position}px)`;
+
+			// Reset position when scrolled one grid cell
+			if (position <= -40) {
+				position = 0;
+			}
+
+			animationId = requestAnimationFrame(animate);
+		};
+
+		animationId = requestAnimationFrame(animate);
+
+		return () => {
+			cancelAnimationFrame(animationId);
+		};
+	}, []);
+
 	return (
-		<Section
-			id="hero"
-			noPadding
-			className="pt-32 pb-16 md:py-32 relative overflow-hidden"
-		>
-			{/* Gradient background effect */}
-			<div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-wisetwin-blue/10 to-transparent -z-10" />
+		<div className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/30">
+			{/* Grille 3D animée en arrière-plan */}
+			<div className="absolute inset-0 opacity-20 pointer-events-none">
+				<div
+					ref={gridRef}
+					className="absolute inset-0 w-full h-[120%]"
+					style={{
+						backgroundImage: `
+                            linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
+                        `,
+						backgroundSize: "40px 40px",
+						transform: "perspective(100px) rotateX(25deg)",
+						transformOrigin: "center top",
+					}}
+				/>
+				{/* Effet de dégradé pour masquer les bords */}
+				<div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
+				<div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+			</div>
 
-			<div className="container px-4 mx-auto">
-				<div className="flex flex-col items-center gap-8">
-					{/* Hero content */}
-					<motion.div
-						className="text-center max-w-3xl"
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6 }}
-					>
-						<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-							Solutions{" "}
-							<span className="text-secondary">immersives</span>{" "}
-							pour l'industrie 4.0
-						</h1>
-						<p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-							WiseTwin crée des jumeaux numériques pour former vos
-							équipes et valoriser vos installations industrielles
-							grâce à des expériences 3D interactives.
-						</p>
+			{/* Conteneur principal */}
+			<div className="container mx-auto px-6 sm:px-8 md:px-4 max-w-7xl relative z-10">
+				<div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-12 sm:py-16 lg:py-20">
+					{/* Contenu textuel - Colonne gauche */}
+					<div className="flex flex-col justify-center space-y-6 lg:space-y-8">
+						<div className="space-y-6">
+							<div className="space-y-3">
+								{/* Titre fixe */}
+								<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+									Plus de{" "}
+									<span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-wisetwin-blue">
+										sécurité
+									</span>
+								</h1>
 
-						<div className="flex flex-wrap justify-center gap-4">
-							<Button size="lg" asChild>
-								<Link href="#nos-solutions">
+								{/* Texte qui change avec animation */}
+								<div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+									<div className="flex items-center flex-wrap gap-2">
+										<span>Plus</span>
+										<WordRotate
+											words={changingTexts}
+											duration={2500}
+											className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-wisetwin-blue min-w-[140px] sm:min-w-[170px] lg:min-w-[200px] xl:min-w-[240px] text-left"
+										/>
+									</div>
+								</div>
+							</div>
+
+							{/* MODIFIÉ : Paragraphe plus percutant et aligné avec les bénéfices */}
+							<p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl pt-2 lg:pt-4">
+								Réduisez les incidents et ancrez une culture de
+								la sécurité durable. Nos formations immersives,
+								répliques exactes de vos installations,
+								transforment vos procédures en réflexes.
+							</p>
+						</div>
+
+						<div className="flex flex-col sm:flex-row gap-4">
+							<Button
+								size="lg"
+								className="px-8 py-4 text-base font-medium"
+								asChild
+							>
+								<Link href="#contact">
 									<div className="flex items-center">
-										Découvrir nos solutions{" "}
-										<ArrowRight className="ml-2 size-4" />
+										Demander une démo
 									</div>
 								</Link>
 							</Button>
-							<Button size="lg" variant="outline" asChild>
-								<Link href="#contact">
-									<div>Demander une démo</div>
+							<Button
+								size="lg"
+								variant="outline"
+								className="px-8 py-4 text-base font-medium"
+								asChild
+							>
+								<Link href="#nos-solutions">
+									<div>Découvrir nos solutions</div>
 								</Link>
 							</Button>
 						</div>
-					</motion.div>
+					</div>
 
-					{/* Visual Placeholder */}
-					<motion.div
-						className="relative w-full max-w-5xl rounded-xl overflow-hidden shadow-lg"
-						initial={{ opacity: 0, y: 40 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.2 }}
-					>
-						<AspectRatio ratio={16 / 9}>
-							<Image 
-								src="/image/saas2.png" 
-								alt="WiseTwin Platform Interface"
-								fill
-								className="object-contain"
-								priority
+					{/* Vidéo - Colonne droite */}
+					<div className="flex items-center justify-center">
+						<div className="relative w-full max-w-2xl">
+							{/* Effet de halo lumineux */}
+							<div className="absolute inset-0 bg-gradient-to-r from-wisetwin-blue/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110" />
+
+							{/* Composant vidéo hero */}
+							<HeroVideoDialog
+								animationStyle="from-center"
+								// MODIFIÉ : Pensez à remplacer ce lien par votre vraie vidéo de démo
+								videoSrc="https://www.youtube.com/embed/VOTRE_VIDEO_ID"
+								thumbnailSrc="/image/saas2.png"
+								thumbnailAlt="WiseTwin Platform Demo"
 							/>
-						</AspectRatio>
-					</motion.div>
-
-					{/* Trust Indicators */}
-					{/* <motion.div
-						className="mt-8 flex flex-col items-center"
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 0.8, delay: 0.5 }}
-					>
-						<p className="text-sm text-muted-foreground mb-4">
-							Ils nous font confiance
-						</p>
-						<div className="flex flex-wrap justify-center gap-8 opacity-70">
-							{[1, 2, 3, 4, 5].map((i) => (
-								<div
-									key={i}
-									className="size-12 bg-muted rounded-md flex items-center justify-center"
-								>
-									<span className="text-xs text-muted-foreground">
-										Logo {i}
-									</span>
-								</div>
-							))}
 						</div>
-					</motion.div> */}
+					</div>
 				</div>
 			</div>
-		</Section>
+
+			{/* Indicateur de scroll permanent */}
+			<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+				<div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center">
+					<div className="w-1 h-3 bg-muted-foreground rounded-full mt-2 animate-pulse" />
+				</div>
+			</div>
+		</div>
 	);
 }

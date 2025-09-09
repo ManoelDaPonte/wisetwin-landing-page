@@ -76,16 +76,16 @@ export default async function BlogPage() {
 				{/* Grille d&apos;articles */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
 					{posts.map((post) => (
-						<div key={post.slug}>
-							<Card className="h-full flex flex-col hover:shadow-md transition-all duration-200 overflow-hidden">
+						<Link key={post.slug} href={`/blog/${post.slug}`} className="group">
+							<Card className="h-full flex flex-col hover:shadow-lg transition-all duration-200 overflow-hidden cursor-pointer">
 								{/* Image de couverture (simulation) */}
-								<div className="h-48 bg-wisetwin-blue/20 relative flex items-center justify-center">
+								<div className="h-48 bg-wisetwin-blue/20 relative flex items-center justify-center -mx-6 -mt-6 mb-6">
 									<p className="text-wisetwin-blue font-medium">
 										Image de couverture
 									</p>
 								</div>
 
-								<CardHeader>
+								<CardHeader className="pt-0">
 									<div className="flex items-center gap-2 mb-2">
 										<Badge
 											variant="secondary"
@@ -108,10 +108,8 @@ export default async function BlogPage() {
 										</span>
 									</div>
 
-									<CardTitle className="text-xl hover:text-wisetwin-blue transition-colors">
-										<Link href={`/blog/${post.slug}`}>
-											{post.title}
-										</Link>
+									<CardTitle className="text-xl group-hover:text-wisetwin-blue transition-colors">
+										{post.title}
 									</CardTitle>
 								</CardHeader>
 
@@ -150,17 +148,10 @@ export default async function BlogPage() {
 										</div>
 									</div>
 
-									<Button variant="ghost" size="sm" asChild>
-										<Link href={`/blog/${post.slug}`}>
-											<span className="flex items-center gap-1">
-												Lire l&apos;article
-												<ArrowRight className="size-3 ml-1" />
-											</span>
-										</Link>
-									</Button>
+									<ArrowRight className="size-5 text-muted-foreground group-hover:text-wisetwin-blue group-hover:translate-x-1 transition-all duration-200" />
 								</CardFooter>
 							</Card>
-						</div>
+						</Link>
 					))}
 				</div>
 

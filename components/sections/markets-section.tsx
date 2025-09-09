@@ -1,5 +1,4 @@
 // components/sections/markets-section.tsx
-import { motion } from "framer-motion";
 import { HardHat, Factory, Microscope, GraduationCap } from "lucide-react";
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";
@@ -58,24 +57,7 @@ export function MarketsSection() {
 	];
 
 	// Animation variants
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				staggerChildren: 0.2,
-			},
-		},
-	};
 
-	const itemVariants = {
-		hidden: { opacity: 0, y: 20 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: { duration: 0.6 },
-		},
-	};
 
 	return (
 		<Section
@@ -90,15 +72,11 @@ export function MarketsSection() {
 		>
 
 			{/* Marchés cards */}
-			<motion.div
-				variants={containerVariants}
-				initial="hidden"
-				whileInView="visible"
-				viewport={{ once: true }}
+			<div
 				className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
 			>
 				{markets.map((market, index) => (
-					<motion.div key={index} variants={itemVariants}>
+					<div key={index}>
 						<Card className="h-full hover:shadow-md transition-all duration-200">
 							<CardContent className="p-6">
 								<div className="size-12 bg-wisetwin-blue/10 rounded-lg flex items-center justify-center mb-4">
@@ -128,9 +106,9 @@ export function MarketsSection() {
 								</div>
 							</CardContent>
 						</Card>
-					</motion.div>
+					</div>
 				))}
-			</motion.div>
+			</div>
 		</Section>
 	);
 }
