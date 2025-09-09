@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Linkedin, Mail, Phone, Map } from "lucide-react";
-import Image from "next/image";
+import { Logo } from "@/components/ui/logo";
 
 export function Footer() {
 	const currentYear = new Date().getFullYear();
@@ -93,13 +93,7 @@ export function Footer() {
 					<div className="lg:col-span-4">
 						<Link href="/" className="inline-block mb-4">
 							<div className="flex items-center gap-3">
-								<Image
-									src="/logo_wisetwin.svg"
-									alt="WiseTwin"
-									width={150}
-									height={40}
-									className="h-10 w-auto"
-								/>
+								<Logo variant="wisetwin" width={150} height={40} className="h-10 w-auto" />
 							</div>
 						</Link>
 						<p className="text-muted-foreground mb-6 max-w-sm">

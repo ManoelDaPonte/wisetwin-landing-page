@@ -20,9 +20,9 @@ export function SolutionSection() {
 				<div
 					className="w-full md:w-1/2"
 				>
-					<div className="aspect-video bg-gradient-to-br from-wisetwin-darkblue to-wisetwin-blue rounded-xl overflow-hidden shadow-lg relative">
+					<div className="aspect-video bg-gradient-to-br from-primary to-secondary rounded-xl overflow-hidden shadow-lg relative">
 						<div className="absolute inset-0 flex items-center justify-center">
-							<p className="text-white text-lg font-medium">
+							<p className="text-primary-foreground text-lg font-medium">
 								Jumeaux numériques en 3D
 							</p>
 						</div>

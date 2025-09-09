@@ -29,6 +29,7 @@ export function BlogSection({ posts }: BlogSectionProps) {
 	return (
 		<Section
 			id="blog-preview"
+			variant="default"
 			header={{
 				title: "Derniers articles",
 				description:
@@ -48,7 +49,7 @@ export function BlogSection({ posts }: BlogSectionProps) {
 							className="h-full flex flex-col hover:shadow-lg transition-all duration-200 overflow-hidden cursor-pointer "
 						>
 							{/* Image de couverture */}
-							<div className="h-32 bg-wisetwin-blue/20 relative flex items-center justify-center overflow-hidden">
+							<div className="h-32 bg-secondary/20 relative flex items-center justify-center overflow-hidden">
 								{post.coverImage ? (
 									<img
 										src={post.coverImage}
@@ -56,7 +57,7 @@ export function BlogSection({ posts }: BlogSectionProps) {
 										className="w-full h-full object-cover"
 									/>
 								) : (
-									<p className="text-wisetwin-blue font-medium text-sm">
+									<p className="text-secondary font-medium text-sm">
 										Image de couverture
 									</p>
 								)}
@@ -82,7 +83,7 @@ export function BlogSection({ posts }: BlogSectionProps) {
 									</span>
 								</div>
 
-								<CardTitle className="text-lg group-hover:text-wisetwin-blue transition-colors line-clamp-2">
+								<CardTitle className="text-lg group-hover:text-secondary transition-colors line-clamp-2">
 									{post.title}
 								</CardTitle>
 							</CardHeader>
@@ -109,7 +110,7 @@ export function BlogSection({ posts }: BlogSectionProps) {
 
 								<div className="flex items-center gap-1 text-xs text-muted-foreground">
 									{post.readTime} min
-									<ArrowRight className="size-3 group-hover:text-wisetwin-blue group-hover:translate-x-0.5 transition-all duration-200" />
+									<ArrowRight className="size-3 group-hover:text-secondary group-hover:translate-x-0.5 transition-all duration-200" />
 								</div>
 							</CardFooter>
 						</Card>

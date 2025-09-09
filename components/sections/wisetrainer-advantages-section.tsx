@@ -1,4 +1,12 @@
-import { CheckCircle, Clock, Users, Globe, Box, Video, FileText } from "lucide-react";
+import {
+	CheckCircle,
+	Clock,
+	Users,
+	Globe,
+	Box,
+	Video,
+	FileText,
+} from "lucide-react";
 import Image from "next/image";
 
 import { Section } from "@/components/common/section";
@@ -72,6 +80,7 @@ export function WiseTrainerAdvantagesSection() {
 	return (
 		<Section
 			id="wisetrainer-advantages"
+			variant="muted"
 			header={{
 				title: "Pourquoi choisir Wise Twin ?",
 				description:
@@ -88,7 +97,7 @@ export function WiseTrainerAdvantagesSection() {
 							className="text-center hover:shadow-md transition-all duration-200"
 						>
 							<CardContent className="p-6">
-								<div className="text-4xl font-bold mb-2 text-wisetwin-darkblue">
+								<div className="text-4xl font-bold mb-2 text-secondary">
 									{benefit.title}
 								</div>
 								<p className="text-muted-foreground">
@@ -136,7 +145,7 @@ export function WiseTrainerAdvantagesSection() {
 					{/* Dashboard Preview */}
 					<div className="flex items-center justify-center">
 						<div className="relative w-full max-w-md">
-							<div className="absolute inset-0 bg-gradient-to-r from-wisetwin-blue/20 to-secondary/20 rounded-2xl blur-2xl transform scale-110" />
+							<div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-secondary/20 rounded-2xl blur-2xl transform scale-110" />
 							<Image
 								src="/placeholder.png"
 								alt="dashboard"
@@ -148,14 +157,14 @@ export function WiseTrainerAdvantagesSection() {
 				</div>
 
 				{/* Accessibility Section */}
-				<div className="bg-gradient-to-r from-wisetwin-darkblue to-wisetwin-blue rounded-2xl p-8 text-white">
+				<div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-primary-foreground">
 					<div className="max-w-4xl mx-auto">
 						<div className="grid md:grid-cols-2 gap-8 items-center">
 							<div>
 								<h3 className="text-2xl font-bold mb-4">
 									Accessibilité & Support multilingue
 								</h3>
-								<p className="text-white/90 mb-6">
+								<p className="text-primary-foreground/90 mb-6">
 									Une offre multilingue, sans frontière,
 									adaptée aux contextes culturels
 								</p>
@@ -183,26 +192,6 @@ export function WiseTrainerAdvantagesSection() {
 									</div>
 								</div>
 							</div>
-							<div className="flex justify-center">
-								<div className=" rounded-xl p-6 backdrop-blur-sm">
-									<div className="text-center space-y-2">
-										<div className="text-3xl font-bold">
-											2
-										</div>
-										<div className="text-sm text-white/80">
-											Langues supportées
-										</div>
-									</div>
-									<div className="flex flex-wrap gap-2 mt-4 justify-center">
-										<span className="px-3 py-1 bg-white/20 rounded-full text-xs">
-											🇫🇷 Français
-										</span>
-										<span className="px-3 py-1 bg-white/20 rounded-full text-xs">
-											🇬🇧 English
-										</span>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -210,11 +199,12 @@ export function WiseTrainerAdvantagesSection() {
 				{/* Training Formats Section */}
 				<div className="space-y-12">
 					<div className="text-center space-y-4">
-						<h3 className="text-2xl font-bold text-wisetwin-darkblue">
+						<h3 className="text-2xl font-bold text-foreground">
 							Formats de formation variés
 						</h3>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-							Créez des expériences d'apprentissage engageantes avec nos différents formats adaptés à vos besoins
+							Créez des expériences d'apprentissage engageantes
+							avec nos différents formats adaptés à vos besoins
 						</p>
 					</div>
 

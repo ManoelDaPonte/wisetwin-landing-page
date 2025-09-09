@@ -11,37 +11,37 @@ export function TechnologySection() {
 	// Caractéristiques technologiques
 	const techFeatures = [
 		{
-			icon: <Code className="size-5 text-white" />,
+			icon: <Code className="size-5 text-primary-foreground" />,
 			title: "Développement agile",
 			description:
 				"Création de jumeaux numériques en 3D 25x plus rapide et 5x moins chère que les méthodes traditionnelles.",
 		},
 		{
-			icon: <BrainCircuit className="size-5 text-white" />,
+			icon: <BrainCircuit className="size-5 text-primary-foreground" />,
 			title: "IA intégrée",
 			description:
 				"Notre plateforme analyse les parcours utilisateurs et adapte automatiquement les scénarios pédagogiques.",
 		},
 		{
-			icon: <ChartBar className="size-5 text-white" />,
+			icon: <ChartBar className="size-5 text-primary-foreground" />,
 			title: "Analyse prédictive",
 			description:
 				"WiseScan analyse vos historiques d'incidents pour créer des formations sur mesure et identifier proactivement les zones à risque dans votre industrie.",
 		},
 		{
-			icon: <Bot className="size-5 text-white" />,
+			icon: <Bot className="size-5 text-primary-foreground" />,
 			title: "Assistant intelligent personnalisé",
 			description:
 				"WiseAssist crée une base de connaissances unique, garantissant des réponses pertinentes basées uniquement sur vos formations et procédures.",
 		},
 		{
-			icon: <Clock className="size-5 text-white" />,
+			icon: <Clock className="size-5 text-primary-foreground" />,
 			title: "Déploiement rapide",
 			description:
 				"Mise en place en moins d'une semaine, contre plus de 3 mois pour les solutions concurrentes.",
 		},
 		{
-			icon: <Coins className="size-5 text-white" />,
+			icon: <Coins className="size-5 text-primary-foreground" />,
 			title: "ROI exceptionnel",
 			description:
 				"Personnalisation des formations, réduction des coûts et amélioration des performances des apprenants.",
@@ -81,7 +81,7 @@ export function TechnologySection() {
 		<Section
 			id="notre-technologie"
 			variant="dark"
-			className="bg-wisetwin-darkblue py-20"
+			className="py-20"
 			header={{
 				title: "Notre Technologie Innovante",
 				description:
@@ -94,17 +94,17 @@ export function TechnologySection() {
 			<div className="grid md:grid-cols-2 gap-8">
 				{techFeatures.map((feature, index) => (
 					<div key={index}>
-						<Card className="bg-wisetwin-darkblue/80 border-wisetwin-blue/20 backdrop-blur-sm">
+						<Card className="bg-card/80 border-border/20 backdrop-blur-sm">
 							<CardContent className="p-6">
 								<div className="flex gap-4 items-start">
-									<div className="flex-shrink-0 w-10 h-10 bg-wisetwin-blue/30 rounded-full flex items-center justify-center">
+									<div className="flex-shrink-0 w-10 h-10 bg-secondary/30 rounded-full flex items-center justify-center">
 										{feature.icon}
 									</div>
 									<div>
-										<h3 className="text-xl font-semibold text-white mb-2">
+										<h3 className="text-xl font-semibold text-primary-foreground mb-2">
 											{feature.title}
 										</h3>
-										<p className="text-white/70">
+										<p className="text-primary-foreground/70">
 											{feature.description}
 										</p>
 									</div>
@@ -117,18 +117,18 @@ export function TechnologySection() {
 
 			{/* Utilisation de l'IA */}
 			<div>
-				<Card className="mt-12 bg-wisetwin-blue/10 border-wisetwin-blue/20">
+				<Card className="mt-12 bg-secondary/10 border-secondary/20">
 					<CardContent className="p-8">
-						<h3 className="text-white text-xl font-semibold mb-6 text-center">
+						<h3 className="text-primary-foreground text-xl font-semibold mb-6 text-center">
 							L'IA au service de l'industrie
 						</h3>
 						<div className="grid md:grid-cols-3 gap-6">
 							{aiFeatures.map((feature, index) => (
 								<div key={index} className="space-y-3">
-									<h4 className="text-wisetwin-blue font-medium">
+									<h4 className="text-secondary font-medium">
 										{feature.title}
 									</h4>
-									<p className="text-white/70 text-sm">
+									<p className="text-primary-foreground/70 text-sm">
 										{feature.description}
 									</p>
 								</div>

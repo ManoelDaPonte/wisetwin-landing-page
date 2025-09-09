@@ -59,7 +59,7 @@ export function PlatformSection() {
 	return (
 		<Section
 			id="plateforme"
-			variant="default"
+			variant="muted"
 			header={{
 				title: "Une plateforme complète de gestion",
 				description:
@@ -76,7 +76,7 @@ export function PlatformSection() {
 							className="text-center hover:shadow-md transition-all duration-200"
 						>
 							<CardContent className="p-6">
-								<div className="w-12 h-12 bg-wisetwin-blue rounded-full flex items-center justify-center mx-auto mb-4">
+								<div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
 									{feature.icon}
 								</div>
 								<h4 className="font-semibold mb-2">
@@ -91,11 +91,11 @@ export function PlatformSection() {
 				</div>
 
 				{/* Call to Action */}
-				<div className="bg-gradient-to-r from-wisetwin-darkblue to-wisetwin-blue rounded-2xl p-8 text-white text-center">
+				<div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-primary-foreground text-center">
 					<h3 className="text-2xl font-bold mb-4">
 						Prêt à transformer votre approche de la formation ?
 					</h3>
-					<p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
+					<p className="text-primary-foreground/90 text-lg mb-6 max-w-2xl mx-auto">
 						Découvrez comment Wise Twin peut révolutionner la formation dans votre industrie avec une solution complète et sur-mesure.
 					</p>
 				</div>

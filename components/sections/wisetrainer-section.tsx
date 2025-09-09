@@ -8,22 +8,22 @@ import { Badge } from "@/components/ui/badge";
 export function WiseTrainerSection() {
 	const keyFeatures = [
 		{
-			icon: <Monitor className="size-5 text-white" />,
+			icon: <Monitor className="size-5 text-primary-foreground" />,
 			title: "100% en ligne",
 			description: "Accessible depuis n'importe où, sans installation",
 		},
 		{
-			icon: <Shield className="size-5 text-white" />,
+			icon: <Shield className="size-5 text-primary-foreground" />,
 			title: "Reproduction fidèle",
 			description: "Environnements 3D identiques à vos installations",
 		},
 		{
-			icon: <Gamepad2 className="size-5 text-white" />,
+			icon: <Gamepad2 className="size-5 text-primary-foreground" />,
 			title: "Interactivité & Gamification",
 			description: "Quiz, certifications et suivi des scores",
 		},
 		{
-			icon: <Globe className="size-5 text-white" />,
+			icon: <Globe className="size-5 text-primary-foreground" />,
 			title: "Support multilingue",
 			description: "Contenus disponibles en plusieurs langues",
 		},
@@ -81,7 +81,7 @@ export function WiseTrainerSection() {
 					{/* Image Column */}
 					<div className="flex items-center justify-center">
 						<div className="relative w-full max-w-lg">
-							<div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-wisetwin-blue/20 rounded-2xl blur-3xl transform scale-110" />
+							<div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-2xl blur-3xl transform scale-110" />
 							<div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border/50">
 								<Image
 									src="/image/loto.webp"
@@ -103,7 +103,7 @@ export function WiseTrainerSection() {
 							className="text-center hover:shadow-md transition-all duration-200"
 						>
 							<CardContent className="p-6">
-								<div className="w-12 h-12 bg-wisetwin-blue rounded-full flex items-center justify-center mx-auto mb-4">
+								<div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
 									{feature.icon}
 								</div>
 								<h4 className="font-semibold mb-2">

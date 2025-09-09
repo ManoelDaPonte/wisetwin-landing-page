@@ -3,9 +3,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { Logo } from "@/components/ui/logo";
 import {
 	NavigationMenu,
 	NavigationMenuItem,
@@ -72,12 +73,7 @@ export function Header() {
 					{/* Logo */}
 					<Link href="/">
 						<div className="flex items-center gap-2 cursor-pointer">
-							<Image
-								src="/logo_wisetwin.svg"
-								alt="WiseTwin Logo"
-								width={120}
-								height={32}
-							/>
+							<Logo variant="wisetwin" width={120} height={32} />
 						</div>
 					</Link>
 
@@ -101,6 +97,7 @@ export function Header() {
 
 					{/* CTA Button */}
 					<div className="flex items-center gap-2">
+						<ThemeToggle />
 						<Button asChild>
 							<Link href="/#contact">
 								<div>Demander une démo</div>

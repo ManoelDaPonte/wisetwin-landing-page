@@ -74,11 +74,10 @@ export function ProfilesSection() {
 
 	// Animation variants
 
-
 	return (
 		<Section
 			id="vous-etes"
-			variant="muted"
+			variant="default"
 			header={{
 				title: "Vous êtes ?",
 				description:
@@ -95,9 +94,11 @@ export function ProfilesSection() {
 						}`}
 					>
 						{/* Image Column */}
-						<div className={`flex items-center justify-center ${
-							index % 2 === 1 ? "lg:order-2" : "lg:order-1"
-						}`}>
+						<div
+							className={`flex items-center justify-center ${
+								index % 2 === 1 ? "lg:order-2" : "lg:order-1"
+							}`}
+						>
 							<div className="w-full max-w-sm">
 								<Image
 									src={profile.image}
@@ -110,15 +111,17 @@ export function ProfilesSection() {
 						</div>
 
 						{/* Content Column */}
-						<div className={`space-y-6 ${
-							index % 2 === 1 ? "lg:order-1" : "lg:order-2"
-						}`}>
+						<div
+							className={`space-y-6 ${
+								index % 2 === 1 ? "lg:order-1" : "lg:order-2"
+							}`}
+						>
 							{/* Header with icon */}
 							<div className="flex items-center gap-3">
 								<div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
 									{profile.icon}
 								</div>
-								<h3 className="text-2xl font-bold text-wisetwin-darkblue">
+								<h3 className="text-2xl font-bold text-foreground">
 									{profile.title}
 								</h3>
 							</div>
@@ -129,14 +132,14 @@ export function ProfilesSection() {
 
 							{/* Défis principaux */}
 							<div>
-								<h4 className="text-sm font-semibold mb-3 text-wisetwin-darkblue">
+								<h4 className="text-sm font-semibold mb-3 text-foreground">
 									Défis principaux
 								</h4>
 								<div className="flex flex-wrap gap-2">
 									{profile.challenges.map((challenge, i) => (
 										<span
 											key={i}
-											className="text-sm bg-wisetwin-blue/10 text-wisetwin-darkblue px-3 py-1.5 rounded-full"
+											className="text-sm bg-secondary/10 text-foreground px-3 py-1.5 rounded-full"
 										>
 											{challenge}
 										</span>
@@ -145,10 +148,7 @@ export function ProfilesSection() {
 							</div>
 
 							{/* Solution */}
-							<div className="bg-gradient-to-r from-wisetwin-blue/5 to-secondary/5 border-l-4 border-wisetwin-blue p-4 rounded-r-lg">
-								<h4 className="text-sm font-semibold mb-2 text-wisetwin-darkblue">
-									Notre solution
-								</h4>
+							<div className="bg-gradient-to-r from-secondary/5 to-secondary/5 border-l-4 border-secondary p-4 rounded-r-lg">
 								<p className="text-foreground font-medium leading-relaxed">
 									{profile.solution}
 								</p>

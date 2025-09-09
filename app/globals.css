@@ -1,14 +1,12 @@
 /* app/globals.css */
 @import "tailwindcss";
 
-@theme inline {
+@theme {
 	/* Couleurs de WiseTwin */
 	--color-wisetwin-blue: hsl(190 95% 50%); /* Bleu clair du logo (#00C7FF) */
-	--color-wisetwin-darkblue: hsl(
-		240 80% 20%
-	); /* Bleu foncé du logo (#0F0B66) */
+	--color-wisetwin-darkblue: hsl(240 80% 20%); /* Bleu foncé du logo (#0F0B66) */
 
-	/* Autres variables de thème si nécessaire */
+	/* Spacing et radius */
 	--spacing: 0.25rem;
 	--radius: 0.625rem;
 	--radius-sm: calc(var(--radius) - 4px);
@@ -16,7 +14,7 @@
 	--radius-lg: var(--radius);
 	--radius-xl: calc(var(--radius) + 4px);
 
-	/* Variables pour les couleurs de base */
+	/* Couleurs du thème clair */
 	--color-background: oklch(1 0 0);
 	--color-foreground: oklch(0.145 0 0);
 	--color-card: oklch(1 0 0);
@@ -26,7 +24,7 @@
 	--color-primary: var(--color-wisetwin-darkblue);
 	--color-primary-foreground: oklch(0.985 0 0);
 	--color-secondary: var(--color-wisetwin-blue);
-	--color-secondary-foreground: oklch(0.985 0 0);
+	--color-secondary-foreground: oklch(0.145 0 0);
 	--color-muted: oklch(0.97 0 0);
 	--color-muted-foreground: oklch(0.556 0 0);
 	--color-accent: oklch(0.97 0 0);
@@ -45,10 +43,10 @@
 	--color-card-foreground: oklch(0.985 0 0);
 	--color-popover: oklch(0.205 0 0);
 	--color-popover-foreground: oklch(0.985 0 0);
-	--color-primary: var(--color-wisetwin-blue);
-	--color-primary-foreground: oklch(0.205 0 0);
-	--color-secondary: oklch(0.269 0 0);
-	--color-secondary-foreground: oklch(0.985 0 0);
+	--color-primary: oklch(0.269 0 0);
+	--color-primary-foreground: oklch(0.985 0 0);
+	--color-secondary: var(--color-wisetwin-blue);
+	--color-secondary-foreground: oklch(0.145 0 0);
 	--color-muted: oklch(0.269 0 0);
 	--color-muted-foreground: oklch(0.708 0 0);
 	--color-accent: oklch(0.269 0 0);
