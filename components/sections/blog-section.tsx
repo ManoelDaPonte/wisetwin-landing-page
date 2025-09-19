@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CalendarIcon } from "lucide-react";
 
 import { Section } from "@/components/common/section";
@@ -51,9 +52,11 @@ export function BlogSection({ posts }: BlogSectionProps) {
 							{/* Image de couverture */}
 							<div className="h-32 bg-secondary/20 relative flex items-center justify-center overflow-hidden">
 								{post.coverImage ? (
-									<img
+									<Image
 										src={post.coverImage}
 										alt={post.title}
+										width={400}
+										height={128}
 										className="w-full h-full object-cover"
 									/>
 								) : (

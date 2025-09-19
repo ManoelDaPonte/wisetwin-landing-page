@@ -13,7 +13,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { BlogPost } from "@/types/blog";
@@ -71,7 +70,6 @@ export default async function BlogPage() {
 						"Explorez nos derniers articles, insights et actualités sur l&apos;industrie 4.0 et la formation immersive.",
 					centered: true,
 				}}
-				animate={false}
 			>
 				{/* Grille d&apos;articles */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">

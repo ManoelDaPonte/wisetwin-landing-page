@@ -38,7 +38,7 @@ export function Section({
 
 	// Filtrer les props non-HTML
 	const sectionProps = { ...props };
-	// @ts-ignore
+	// @ts-expect-error - animate prop is not a valid HTML attribute
 	delete sectionProps.animate;
 
 	return (

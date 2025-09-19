@@ -1,6 +1,5 @@
 // components/sections/technology-section.tsx
 import { BrainCircuit, Code, Clock, Coins, Bot, ChartBar } from "lucide-react";
-import Image from "next/image";
 
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";

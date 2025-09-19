@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Shield, School, HardHat, ChartBar } from "lucide-react";
 
 import { Section } from "@/components/common/section";
-import { Card, CardContent } from "@/components/ui/card";
 
 export function ProfilesSection() {
 	// Données des différents profils

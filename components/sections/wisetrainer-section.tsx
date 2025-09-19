@@ -3,7 +3,6 @@ import { Monitor, Globe, Gamepad2, Shield } from "lucide-react";
 
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 export function WiseTrainerSection() {
 	const keyFeatures = [
