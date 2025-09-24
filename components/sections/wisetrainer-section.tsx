@@ -33,9 +33,9 @@ export function WiseTrainerSection() {
 			id="wisetrainer"
 			variant="default"
 			header={{
-				title: "Notre solution",
+				title: "Un transfert de connaissances visuel",
 				description:
-					"Votre formation industrielle sur-mesure. Solution légère, flexible et accessible depuis n'importe où.",
+					"Une solution légère, flexible et accessible depuis n'importe où.",
 				centered: true,
 			}}
 		>
@@ -46,12 +46,11 @@ export function WiseTrainerSection() {
 					<div className="space-y-8">
 						<div className="space-y-6">
 							<h3 className="text-2xl font-bold">
-								Transformez vos incidents en opportunités
-								d'apprentissage
+								Donnez du sens à vos formation en reproduisant vos environnements de travail réels
 							</h3>
 							<p className="text-muted-foreground text-lg leading-relaxed">
-								Wise Twin offre une{" "}
-								<strong>expérience unique</strong> dans des
+								Une{" "}
+								<strong>mise en situation terrain</strong> réaliste dans des
 								environnements interactifs et personnalisables,
 								fidèles à votre réalité métier.
 							</p>
@@ -81,9 +80,9 @@ export function WiseTrainerSection() {
 					<div className="flex items-center justify-center">
 						<div className="relative w-full max-w-lg">
 							<div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-2xl blur-3xl transform scale-110" />
-							<div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border/50">
+							<div className="relative w-full overflow-hidden ">
 								<Image
-									src="/image/loto.webp"
+									src="/image/exploded_view.png"
 									alt="Wise Twin - Formation industrielle 3D"
 									width={600}
 									height={400}
