@@ -1,5 +1,5 @@
 // components/sections/technology-section.tsx
-import { BrainCircuit, Code, Clock, Coins, Bot, ChartBar } from "lucide-react";
+import { BrainCircuit, Code } from "lucide-react";
 
 import { Section } from "@/components/common/section";
 import { Card, CardContent } from "@/components/ui/card";
@@ -13,38 +13,38 @@ export function TechnologySection() {
 			icon: <Code className="size-5 text-primary-foreground" />,
 			title: "Développement agile",
 			description:
-				"Création de jumeaux numériques en 3D 25x plus rapide et 5x moins chère que les méthodes traditionnelles.",
+				"Création de simulateurs et jumeaux numérique à partir de n'importe quelle source (photos, vidéos, plans, BIM, etc...) 25x plus rapide que les méthodes traditionnelles",
 		},
 		{
 			icon: <BrainCircuit className="size-5 text-primary-foreground" />,
-			title: "IA intégrée",
+			title: "Parcours pédagogiques intelligents",
 			description:
-				"Notre plateforme analyse les parcours utilisateurs et adapte automatiquement les scénarios pédagogiques.",
+				"Notre moteur d'analyse de données en temps réel rétro-alimente et adapte automatiquement les scénarios pédagogiques au niveau de l'apprenant",
 		},
-		{
-			icon: <ChartBar className="size-5 text-primary-foreground" />,
-			title: "Analyse prédictive",
-			description:
-				"WiseScan analyse vos historiques d'incidents pour créer des formations sur mesure et identifier proactivement les zones à risque dans votre industrie.",
-		},
-		{
-			icon: <Bot className="size-5 text-primary-foreground" />,
-			title: "Assistant intelligent personnalisé",
-			description:
-				"WiseAssist crée une base de connaissances unique, garantissant des réponses pertinentes basées uniquement sur vos formations et procédures.",
-		},
-		{
-			icon: <Clock className="size-5 text-primary-foreground" />,
-			title: "Déploiement rapide",
-			description:
-				"Mise en place en moins d'une semaine, contre plus de 3 mois pour les solutions concurrentes.",
-		},
-		{
-			icon: <Coins className="size-5 text-primary-foreground" />,
-			title: "ROI exceptionnel",
-			description:
-				"Personnalisation des formations, réduction des coûts et amélioration des performances des apprenants.",
-		},
+		// {
+		// 	icon: <ChartBar className="size-5 text-primary-foreground" />,
+		// 	title: "Analyse prédictive",
+		// 	description:
+		// 		"Notre moteur de recherche analyse vos historiques d'incidents pour créer des formations sur mesure et identifier proactivement les zones à risque dans votre industrie.",
+		// },
+		// {
+		// 	icon: <Bot className="size-5 text-primary-foreground" />,
+		// 	title: "Assistant intelligent personnalisé",
+		// 	description:
+		// 		"WiseAssist crée une base de connaissances unique, garantissant des réponses pertinentes basées uniquement sur vos formations et procédures.",
+		// },
+		// {
+		// 	icon: <Clock className="size-5 text-primary-foreground" />,
+		// 	title: "Déploiement agile",
+		// 	description:
+		// 		"Mise en place d'un démonstrateur sur-mesure en moins d'une semaine, grâce à un déploiement en ligne accessible depuis n'importe où",
+		// },
+		// {
+		// 	icon: <Coins className="size-5 text-primary-foreground" />,
+		// 	title: "Retour sur investissement ",
+		// 	description:
+		// 		"Personnalisation des formations, réduction des coûts et amélioration des performances des apprenants",
+		// },
 	];
 
 	// Fonctionnalités IA
@@ -52,27 +52,27 @@ export function TechnologySection() {
 		{
 			title: "Analyse prédictive des risques",
 			description:
-				"WiseScan étudie les incidents passés pour concevoir des formations ciblées et vous accompagner dans votre démarche de prévention des risques.",
+				"Nous travaillons sur un module intelligent qui étudie les incidents passés pour concevoir des formations ciblées et vous accompagner dans votre démarche de prévention des risques.",
 		},
 		{
 			title: "Support intelligent dédié",
 			description:
-				"WiseAssist exploite exclusivement les données de vos formations et procédures, sans partage entre clients, pour un assistant 100% personnalisé à votre contexte industriel.",
+				"Ce projet permet l'exploitation exclusive des données de formations et procédures, pour un assistant 100% personnalisé à votre contexte industriel.",
 		},
-		{
-			title: "Suivi des apprenants",
-			description:
-				"Analyse en temps réel des comportements et remédiation automatique des difficultés.",
-		},
-		{
-			title: "Analyse des performances",
-			description:
-				"Tableaux de bord analytiques et identification des points d'amélioration.",
-		},
+		// {
+		// 	title: "Suivi des apprenants",
+		// 	description:
+		// 		"Analyse en temps réel des comportements et remédiation automatique des difficultés.",
+		// },
+		// {
+		// 	title: "Analyse des performances",
+		// 	description:
+		// 		"Tableaux de bord analytiques et identification des points d'amélioration.",
+		// },
 		{
 			title: "Individualisation des parcours",
 			description:
-				"Adaptation automatique des scénarios pédagogiques aux besoins spécifiques.",
+				"Adaptation automatique des scénarios pédagogiques aux besoins spécifiques des apprenants, avec rétro-alimentation des simulateurs Wise Trainer.",
 		},
 	];
 
@@ -82,9 +82,9 @@ export function TechnologySection() {
 			variant="dark"
 			className="py-20"
 			header={{
-				title: "Notre Technologie Innovante",
+				title: "Une technologie de pointe",
 				description:
-					"WiseTwin intègre l'intelligence artificielle dans toutes les étapes de création de valeur",
+					"Wise Twin intègre de multiples briques d'automatisation dans toutes les étapes de création de valeur",
 				centered: true,
 				highlight: true,
 			}}
@@ -119,7 +119,7 @@ export function TechnologySection() {
 				<Card className="mt-12 bg-secondary/10 border-secondary/20">
 					<CardContent className="p-8">
 						<h3 className="text-primary-foreground text-xl font-semibold mb-6 text-center">
-							L'IA au service de l'industrie
+							Nos projets de R&D 
 						</h3>
 						<div className="grid md:grid-cols-3 gap-6">
 							{aiFeatures.map((feature, index) => (

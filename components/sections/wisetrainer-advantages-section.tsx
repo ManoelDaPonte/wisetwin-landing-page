@@ -42,17 +42,17 @@ export function WiseTrainerAdvantagesSection() {
 
 	const benefits = [
 		{
-			title: "25x plus rapide",
+			title: "7 jours",
 			subtitle:
-				"Développement de jumeaux numériques vs méthodes traditionnelles",
+				"Développement d'un simulateur personnalisé en une semaine",
 		},
 		{
-			title: "5x moins cher",
-			subtitle: "Coût de création comparé aux solutions concurrentes",
+			title: "ROI First",
+			subtitle: "Nous travaillons ensemble pour ajuster notre solution à vos besoins réels",
 		},
 		{
-			title: "< 1 semaine",
-			subtitle: "Déploiement rapide vs 3+ mois pour la concurrence",
+			title: "Sur-mesure",
+			subtitle: "Un on-boarding souple, rencontres sur site, et une gestion de projet agile seront de mise",
 		},
 	];
 
@@ -82,9 +82,9 @@ export function WiseTrainerAdvantagesSection() {
 			id="wisetrainer-advantages"
 			variant="muted"
 			header={{
-				title: "Pourquoi choisir Wise Twin ?",
+				title: "Un accompagnement clair et maîtrisé",
 				description:
-					"Une solution légère, flexible et accessible qui révolutionne la formation industrielle",
+					"Une solution légère, flexible et accessible",
 				centered: true,
 			}}
 		>
@@ -97,7 +97,7 @@ export function WiseTrainerAdvantagesSection() {
 							className="text-center hover:shadow-md transition-all duration-200"
 						>
 							<CardContent className="p-6">
-								<div className="text-4xl font-bold mb-2 text-secondary">
+								<div className="text-4xl font-bold mb-2 text-primary">
 									{benefit.title}
 								</div>
 								<p className="text-muted-foreground">
@@ -145,9 +145,9 @@ export function WiseTrainerAdvantagesSection() {
 					{/* Dashboard Preview */}
 					<div className="flex items-center justify-center">
 						<div className="relative w-full max-w-md">
-							<div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-secondary/20 rounded-2xl blur-2xl transform scale-110" />
+							<div className="absolute inset-0 rounded-2xl blur-2xl transform scale-110" />
 							<Image
-								src="/placeholder.png"
+								src="/image/stats.png"
 								alt="dashboard"
 								width={600}
 								height={300}
@@ -158,42 +158,49 @@ export function WiseTrainerAdvantagesSection() {
 
 				{/* Accessibility Section */}
 				<div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-primary-foreground">
-					<div className="max-w-4xl mx-auto">
-						<div className="grid md:grid-cols-2 gap-8 items-center">
-							<div>
-								<h3 className="text-2xl font-bold mb-4">
-									Accessibilité & Support multilingue
-								</h3>
-								<p className="text-primary-foreground/90 mb-6">
-									Une offre multilingue, sans frontière,
-									adaptée aux contextes culturels
-								</p>
-								<div className="space-y-3">
-									<div className="flex items-center gap-3">
-										<CheckCircle className="size-5 " />
-										<span>
-											Tous les contenus disponibles en
-											plusieurs langues
-										</span>
-									</div>
-									<div className="flex items-center gap-3">
-										<CheckCircle className="size-5" />
-										<span>
-											Voix off, sous-titrage, et textes
-											localisés
-										</span>
-									</div>
-									<div className="flex items-center gap-3">
-										<CheckCircle className="size-5" />
-										<span>
-											Branding, scénarios et formats
-											personnalisés
-										</span>
-									</div>
-								</div>
-							</div>
+				<div className="max-w-4xl mx-auto">
+					<div className="grid md:grid-cols-2 gap-8 items-center">
+					{/* Texte à gauche */}
+					<div>
+						<h3 className="text-2xl font-bold mb-4">
+						Accessibilité & Support multilingue
+						</h3>
+						<p className="text-primary-foreground/90 mb-6">
+						Une offre multilingue, pour toutes vos équipes,
+						adaptée aux contextes culturels
+						</p>
+						<div className="space-y-3">
+						<div className="flex items-center gap-3">
+							<CheckCircle className="size-5 " />
+							<span>
+							Tous les contenus disponibles en plusieurs langues
+							</span>
+						</div>
+						<div className="flex items-center gap-3">
+							<CheckCircle className="size-5" />
+							<span>
+							Voix off, sous-titrage, et textes traduis
+							</span>
+						</div>
+						<div className="flex items-center gap-3">
+							<CheckCircle className="size-5" />
+							<span>
+							Branding, scénarios et formats personnalisés
+							</span>
+						</div>
 						</div>
 					</div>
+
+					{/* Image à droite */}
+					<div className="flex justify-center">
+						<Image
+						src="/image/multilingues.png"
+						alt="Accessibilité illustration"
+						className="max-h-80 object-contain"
+						/>
+					</div>
+					</div>
+				</div>
 				</div>
 
 				{/* Training Formats Section */}

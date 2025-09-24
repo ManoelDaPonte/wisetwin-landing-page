@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WiseTwin - Formation industrielle en réalité 3D",
+  title: "WiseTwin - Votre formation industrielle immersive",
   description:
-    "WiseTwin propose des formations 3D interactives pour améliorer la sécurité et les compétences des intervenants sur les machines industrielles.",
+    "Nous développons des formations immersives sur-mesure visant à améliorer la sécurité et les compétences de vos équipes sur les machines industrielles.",
 };
 
 export default function RootLayout({

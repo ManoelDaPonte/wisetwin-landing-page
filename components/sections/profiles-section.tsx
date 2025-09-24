@@ -13,7 +13,7 @@ export function ProfilesSection() {
 			id: "responsable-hse",
 			title: "Responsable HSE",
 			description:
-				"Réduisez les incidents et améliorez la culture sécurité dans votre entreprise",
+				"Transformez vos formations en expériences et vos procédures en réflexes.",
 			icon: <Shield className="size-6 text-secondary" />,
 			image: "/storyset/responsable-hse.png",
 			challenges: [

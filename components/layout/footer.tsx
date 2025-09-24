@@ -97,10 +97,11 @@ export function Footer() {
 							</div>
 						</Link>
 						<p className="text-muted-foreground mb-6 max-w-sm">
-							Réduisez les incidents et ancrez une culture de la
-							sécurité durable. Nos formations immersives,
-							répliques exactes de vos installations, transforment
-							vos procédures en réflexes.
+							Vous voulez ancrer une culture sécurité durable au sein de vos équipes? 
+							Nous développons des simulateurs immersifs,
+							répliques exactes de vos installations, 
+							qui transforment vos formations en expériences  
+							et vos procédures en réflexes.
 						</p>
 						<div className="flex items-center gap-3">
 							{socialLinks.map((social, idx) => (
