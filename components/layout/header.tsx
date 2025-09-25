@@ -22,17 +22,17 @@ type MenuItem = {
 
 const menuItems: MenuItem[] = [
 	{
-		title: "Notre solution",
+		title: "Wise Trainer",
 		href: "/#wisetrainer",
 	},
 	{
 		title: "Vous êtes ?",
 		href: "/#vous-etes",
 	},
-	{
-		title: "Notre technologie",
-		href: "/#notre-technologie",
-	},
+	// {
+	// 	title: "Notre technologie",
+	// 	href: "/#notre-technologie",
+	// },
 	{
 		title: "FAQ",
 		href: "/#faq",

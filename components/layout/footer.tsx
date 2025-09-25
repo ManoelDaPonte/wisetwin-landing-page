@@ -13,9 +13,9 @@ export function Footer() {
 		{
 			title: "Navigation",
 			links: [
-				{ label: "Notre solution", href: "/#wisetrainer" },
+				{ label: "Wise Trainer", href: "/#wisetrainer" },
 				{ label: "Vous êtes ?", href: "/#vous-etes" },
-				{ label: "Notre technologie", href: "/#notre-technologie" },
+				// { label: "Notre technologie", href: "/#notre-technologie" },
 				{ label: "Blog", href: "/blog" },
 				{ label: "Contact", href: "/#contact" },
 			],

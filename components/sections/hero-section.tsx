@@ -10,7 +10,7 @@ import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 export function HeroSection() {
 	const changingTexts = [
 		"de productivité",
-		"de rentabilité",
+		"de rétention",
 		"d'engagement",
 		"de sérénité",
 	];

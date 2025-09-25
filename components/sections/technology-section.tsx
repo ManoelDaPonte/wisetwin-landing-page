@@ -19,7 +19,7 @@ export function TechnologySection() {
 			icon: <BrainCircuit className="size-5 text-primary-foreground" />,
 			title: "Parcours pédagogiques intelligents",
 			description:
-				"Notre moteur d'analyse de données en temps réel rétro-alimente et adapte automatiquement les scénarios pédagogiques au niveau de l'apprenant",
+				"Notre moteur d'analyse de données en temps réel rétro-alimente et adapte automatiquement les scénarios pédagogiques de l'apprenant",
 		},
 		// {
 		// 	icon: <ChartBar className="size-5 text-primary-foreground" />,
@@ -79,12 +79,12 @@ export function TechnologySection() {
 	return (
 		<Section
 			id="notre-technologie"
-			variant="dark"
+			// variant="dark"
 			className="py-20"
 			header={{
 				title: "Une technologie de pointe",
 				description:
-					"Wise Twin intègre de multiples briques d'automatisation dans toutes les étapes de création de valeur",
+					"Nous intégrons de multiples briques d'automatisation dans toutes les étapes de création de valeur",
 				centered: true,
 				highlight: true,
 			}}
@@ -93,17 +93,17 @@ export function TechnologySection() {
 			<div className="grid md:grid-cols-2 gap-8">
 				{techFeatures.map((feature, index) => (
 					<div key={index}>
-						<Card className="bg-card/80 border-border/20 backdrop-blur-sm">
+						<Card className="bg-card border-border/10 backdrop-blur-sm">
 							<CardContent className="p-6">
 								<div className="flex gap-4 items-start">
-									<div className="flex-shrink-0 w-10 h-10 bg-secondary/30 rounded-full flex items-center justify-center">
+									<div className="flex-shrink-0 w-10 h-10 bg-secondary/80 rounded-full flex items-center justify-center">
 										{feature.icon}
 									</div>
 									<div>
 										<h3 className="text-xl font-semibold text-primary-foreground mb-2">
 											{feature.title}
 										</h3>
-										<p className="text-primary-foreground/70">
+										<p className="text-primary-foreground/80">
 											{feature.description}
 										</p>
 									</div>
@@ -115,8 +115,8 @@ export function TechnologySection() {
 			</div>
 
 			{/* Utilisation de l'IA */}
-			<div>
-				<Card className="mt-12 bg-secondary/10 border-secondary/20">
+			{/* <div>
+				<Card className="mt-12 bg-secondary/80 border-secondary/10">
 					<CardContent className="p-8">
 						<h3 className="text-primary-foreground text-xl font-semibold mb-6 text-center">
 							Nos projets de R&D 
@@ -124,7 +124,7 @@ export function TechnologySection() {
 						<div className="grid md:grid-cols-3 gap-6">
 							{aiFeatures.map((feature, index) => (
 								<div key={index} className="space-y-3">
-									<h4 className="text-secondary font-medium">
+									<h4 className="text-primary-foreground font-medium">
 										{feature.title}
 									</h4>
 									<p className="text-primary-foreground/70 text-sm">
@@ -135,7 +135,7 @@ export function TechnologySection() {
 						</div>
 					</CardContent>
 				</Card>
-			</div>
+			</div> */}
 		</Section>
 	);
 }
