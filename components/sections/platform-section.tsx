@@ -15,42 +15,42 @@ import { Card, CardContent } from "@/components/ui/card";
 export function PlatformSection() {
 	const platformFeatures = [
 		{
-			icon: <Users className="size-6 text-secondary" />,
+			icon: <Users className="size-6 text-primary-foreground" />,
 			title: "Plans de formation personnalisés",
 			description: "Créez et gérez des parcours de formation adaptés à chaque métier, avec suivi en temps réel des progressions individuelles."
 		},
 		{
-			icon: <Building2 className="size-6 text-secondary" />,
+			icon: <Building2 className="size-6 text-primary-foreground" />,
 			title: "Intégration RH automatique",
 			description: "Connectez-vous directement à vos systèmes RH et paie pour importer automatiquement vos employés et leurs informations."
 		},
 		{
-			icon: <Mail className="size-6 text-secondary" />,
+			icon: <Mail className="size-6 text-primary-foreground" />,
 			title: "Certifications automatisées",
 			description: "Délivrance automatique de certificats personnalisés par email dès la validation des formations."
 		},
 		{
-			icon: <Bell className="size-6 text-secondary" />,
+			icon: <Bell className="size-6 text-primary-foreground" />,
 			title: "Rappels intelligents",
 			description: "Système de notifications automatiques et manuelles pour maintenir l'engagement et respecter les échéances."
 		},
 		{
-			icon: <User className="size-6 text-secondary" />,
+			icon: <User className="size-6 text-primary-foreground" />,
 			title: "Espace personnel",
 			description: "Chaque apprenant dispose de son tableau de bord personnel avec statistiques détaillées et historique de formation."
 		},
 		{
-			icon: <Wrench className="size-6 text-secondary" />,
+			icon: <Wrench className="size-6 text-primary-foreground" />,
 			title: "Contenu évolutif",
 			description: "Modifiez et actualisez vos formations 3D et textuelles à tout moment sans interruption de service."
 		},
 		{
-			icon: <MapPin className="size-6 text-secondary" />,
+			icon: <MapPin className="size-6 text-primary-foreground" />,
 			title: "Multi-organisation",
 			description: "Gérez plusieurs sites industriels depuis une plateforme unique avec des permissions granulaires par site."
 		},
 		{
-			icon: <CreditCard className="size-6 text-secondary" />,
+			icon: <CreditCard className="size-6 text-primary-foreground" />,
 			title: "Tarification à l'usage",
 			description: "Payez uniquement pour les formations réellement suivies. Pas d'utilisation, pas de coût supplémentaire."
 		}
@@ -96,7 +96,7 @@ export function PlatformSection() {
 						Prêt à transformer votre approche de la formation ?
 					</h3>
 					<p className="text-primary-foreground/90 text-lg mb-6 max-w-2xl mx-auto">
-						Découvrez comment Wise Twin peut révolutionner la formation dans votre industrie avec une solution complète et sur-mesure.
+						Contactez-nous dès aujourd'hui pour découvrir comment les modules Wise Trainer peuvent transformer vos méthodes de formation dans votre usine avec une solution complète et sur-mesure.
 					</p>
 				</div>
 			</div>

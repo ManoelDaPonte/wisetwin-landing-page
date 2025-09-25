@@ -59,15 +59,15 @@ export function WiseTrainerAdvantagesSection() {
 	const trainingFormats = [
 		{
 			icon: <Box className="size-6 text-secondary" />,
-			title: "Environnement 3D immersif",
+			title: "Environnements immersifs",
 			description:
-				"Naviguez librement dans des environnements 3D fidèles à vos installations industrielles",
+				"Naviguez librement dans des environnements virtuels fidèles à vos installations industrielles",
 		},
 		{
 			icon: <Video className="size-6 text-secondary" />,
-			title: "Vidéos intégrées 3D",
+			title: "Vidéos d'animation",
 			description:
-				"Intégrez des vidéos contextuelles directement dans l'environnement 3D pour des explications visuelles",
+				"Intégrez des vidéos contextuelles directement dans l'environnement virtuel pour des explications completes",
 		},
 		{
 			icon: <FileText className="size-6 text-secondary" />,
@@ -83,8 +83,8 @@ export function WiseTrainerAdvantagesSection() {
 			variant="muted"
 			header={{
 				title: "Un accompagnement clair et maîtrisé",
-				description:
-					"Une solution légère, flexible et accessible",
+				// description:
+				// 	"Une solution légère, flexible et accessible",
 				centered: true,
 			}}
 		>
@@ -196,6 +196,8 @@ export function WiseTrainerAdvantagesSection() {
 						<Image
 						src="/image/multilingues.png"
 						alt="Accessibilité illustration"
+						width={600}
+						height={300}
 						className="max-h-80 object-contain"
 						/>
 					</div>
@@ -207,7 +209,7 @@ export function WiseTrainerAdvantagesSection() {
 				<div className="space-y-12">
 					<div className="text-center space-y-4">
 						<h3 className="text-2xl font-bold text-foreground">
-							Formats de formation variés
+							Une plateforme multi-formats
 						</h3>
 						<p className="text-muted-foreground text-lg max-w-3xl mx-auto">
 							Créez des expériences d'apprentissage engageantes

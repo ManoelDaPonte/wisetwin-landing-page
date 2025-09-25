@@ -25,9 +25,9 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
 			<WiseTrainerAdvantagesSection />
 			<ProfilesSection />
 			<PlatformSection />
-			<TechnologySection />
-			<FaqSection />
+			{/* <TechnologySection /> */}
 			<BlogSection posts={blogPosts} />
+			<FaqSection />
 			<ContactSection />
 		</>
 	);

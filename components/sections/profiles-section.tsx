@@ -22,13 +22,13 @@ export function ProfilesSection() {
 				"Engagement des équipes",
 			],
 			solution:
-				"Wise Twin permet de former sans risque à la sécurité et d'analyser précisément les comportements.",
+				"Nous vous permettons de former sans risque à la sécurité et d'analyser précisément les comportements de vos ressources humaines.",
 		},
 		{
 			id: "responsable-formation",
 			title: "Responsable Formation",
 			description:
-				"Optimisez l'efficacité de vos programmes de formation et mesurez les résultats",
+				"Optimisez l'efficacité de vos plans de formation et mesurez les résultats",
 			icon: <School className="size-6 text-secondary" />,
 			image: "/storyset/responsable-formation.png",
 			challenges: [
@@ -37,7 +37,7 @@ export function ProfilesSection() {
 				"Évaluation complexe",
 			],
 			solution:
-				"Wise Twin offre des formations immersives et des analyses détaillées des compétences acquises.",
+				"Notre outil de gestion vous permet d'établir, superviser, et archiver vos plans de formation et d'en analyser les moindres détails.",
 		},
 		{
 			id: "chef-production",
@@ -52,7 +52,7 @@ export function ProfilesSection() {
 				"Optimisation des procédures",
 			],
 			solution:
-				"Wise Twin permet de former sur des jumeaux numériques sans arrêter la production.",
+				"Formez, Supervisez, et Validez la bonne compréhension des acquis et bonnes pratiques de vos ateliers sans mobiliser vos équipements.",
 		},
 		{
 			id: "directeur-industriel",
@@ -67,7 +67,7 @@ export function ProfilesSection() {
 				"Gestion multi-sites",
 			],
 			solution:
-				"Wise Twin crée des jumeaux numériques de vos installations pour optimiser la performance globale.",
+				"Intégrez un outil d'excellence alliant jumeaux numériques et simulateurs industriels pour optimiser la performance globale de vos ressources.",
 		},
 	];
 

@@ -33,8 +33,8 @@ export function BlogSection({ posts }: BlogSectionProps) {
 			variant="default"
 			header={{
 				title: "Derniers articles",
-				description:
-					"Découvrez nos insights sur l'industrie 4.0 et la formation immersive",
+				// description:
+				// 	"Suivez nos articles sur l'industrie 4.0 et la formation immersive",
 				centered: true,
 			}}
 		>

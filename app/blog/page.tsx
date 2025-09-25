@@ -65,9 +65,9 @@ export default async function BlogPage() {
 				id="blog"
 				variant="default"
 				header={{
-					title: "Blog WiseTwin",
+					title: "Actualités",
 					description:
-						"Explorez nos derniers articles, insights et actualités sur l&apos;industrie 4.0 et la formation immersive.",
+						"Explorez nos derniers articles, insights et actualités sur la formation immersive",
 					centered: true,
 				}}
 			>

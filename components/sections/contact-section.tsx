@@ -7,9 +7,7 @@ import {
 	Send,
 	AlertTriangle,
 	GraduationCap,
-	Video,
 	PenLine,
-	Users,
 	Info,
 	ArrowRight,
 	CheckCircle,
@@ -164,24 +162,24 @@ export function ContactSection() {
 	const subjectOptions = [
 		{
 			value: "wisetrainer",
-			label: "Wise Twin",
+			label: "Wise Trainer",
 			icon: <GraduationCap className="size-4 text-secondary" />,
 		},
-		{
-			value: "wisetour",
-			label: "WiseTour",
-			icon: <Video className="size-4 text-secondary" />,
-		},
+		// {
+		// 	value: "wisetour",
+		// 	label: "WiseTour",
+		// 	icon: <Video className="size-4 text-secondary" />,
+		// },
 		{
 			value: "demo",
 			label: "Demande de démonstration",
 			icon: <PenLine className="size-4 text-secondary" />,
 		},
-		{
-			value: "join",
-			label: "Nous rejoindre",
-			icon: <Users className="size-4 text-secondary" />,
-		},
+		// {
+		// 	value: "join",
+		// 	label: "Nous rejoindre",
+		// 	icon: <Users className="size-4 text-secondary" />,
+		// },
 		{
 			value: "info",
 			label: "Informations générales",

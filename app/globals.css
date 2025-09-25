@@ -3,7 +3,7 @@
 
 @theme {
 	/* Couleurs de WiseTwin */
-	--color-wisetwin-blue: hsl(190 95% 50%); /* Bleu clair du logo (#00C7FF) */
+	--color-wisetwin-blue: hsl(199 100% 50%); /* Bleu clair du logo (#00C7FF) */
 	--color-wisetwin-darkblue: hsl(240 80% 20%); /* Bleu foncé du logo (#0F0B66) */
 
 	/* Spacing et radius */
@@ -37,7 +37,7 @@
 
 /* Thème sombre */
 .dark {
-	--color-background: oklch(19.567% 0.12321 264.222);
+	--color-background: oklch(15.084% 0.09185 264.174);
 	--color-foreground: oklch(0.985 0 0);
 	--color-card: oklch(25.419% 0.0988 279.928);
 	--color-card-foreground: oklch(0.985 0 0);

@@ -33,9 +33,9 @@ export function WiseTrainerSection() {
 			id="wisetrainer"
 			variant="default"
 			header={{
-				title: "Un transfert de connaissances visuel",
-				description:
-					"Une solution légère, flexible et accessible depuis n'importe où.",
+				title: "Votre plateforme Wise Trainer",
+				// description:
+				// 	"Gérez votre catalogue de simulateurs d'entraînement et formation sur une seule plateforme",
 				centered: true,
 			}}
 		>
@@ -45,10 +45,9 @@ export function WiseTrainerSection() {
 					{/* Content Column */}
 					<div className="space-y-8">
 						<div className="space-y-6">
-							<h3 className="text-2xl font-bold">
-								Donnez du sens à vos formation en reproduisant vos environnements de travail réels
-							</h3>
 							<p className="text-muted-foreground text-lg leading-relaxed">
+								Gérez votre catalogue de simulateurs d'entraînement et formation sur une seule plateforme,
+								et donnez du sens à vos formations en reproduisant vos environnements de travail réels.
 								Une{" "}
 								<strong>mise en situation terrain</strong> réaliste dans des
 								environnements interactifs et personnalisables,
@@ -79,7 +78,7 @@ export function WiseTrainerSection() {
 					{/* Image Column */}
 					<div className="flex items-center justify-center">
 						<div className="relative w-full max-w-lg">
-							<div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-2xl blur-3xl transform scale-110" />
+							<div className="absolute inset-0 rounded-2xl transform scale-110" />
 							<div className="relative w-full overflow-hidden ">
 								<Image
 									src="/image/exploded_view.png"
