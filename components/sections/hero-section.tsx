@@ -83,7 +83,7 @@ export function HeroSection() {
 								className="px-8 py-4 text-base font-medium"
 								asChild
 							>
-								<Link href="#nos-solutions">
+								<Link href="#wisetrainer">
 									<div>Découvrir nos solutions</div>
 								</Link>
 							</Button>
