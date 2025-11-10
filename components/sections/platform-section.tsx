@@ -91,11 +91,11 @@ export function PlatformSection() {
 				</div>
 
 				{/* Call to Action */}
-				<div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-primary-foreground text-center">
+				<div className="bg-secondary rounded-2xl p-8 text-secondary-foreground text-center">
 					<h3 className="text-2xl font-bold mb-4">
 						Prêt à transformer votre approche de la formation ?
 					</h3>
-					<p className="text-primary-foreground/90 text-lg mb-6 max-w-2xl mx-auto">
+					<p className="text-secondary-foreground/90 text-lg mb-6 max-w-2xl mx-auto">
 						Contactez-nous dès aujourd'hui pour découvrir comment les modules Wise Trainer peuvent transformer vos méthodes de formation dans votre usine avec une solution complète et sur-mesure.
 					</p>
 				</div>

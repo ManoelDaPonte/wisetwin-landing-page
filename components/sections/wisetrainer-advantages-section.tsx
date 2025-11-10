@@ -97,7 +97,7 @@ export function WiseTrainerAdvantagesSection() {
 							className="text-center hover:shadow-md transition-all duration-200"
 						>
 							<CardContent className="p-6">
-								<div className="text-4xl font-bold mb-2 text-primary">
+								<div className="text-4xl font-bold mb-2 text-card-emphasis">
 									{benefit.title}
 								</div>
 								<p className="text-muted-foreground">
@@ -157,7 +157,7 @@ export function WiseTrainerAdvantagesSection() {
 				</div>
 
 				{/* Accessibility Section */}
-				<div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-primary-foreground">
+				<div className="bg-secondary rounded-2xl p-8 text-secondary-foreground">
 				<div className="max-w-4xl mx-auto">
 					<div className="grid md:grid-cols-2 gap-8 items-center">
 					{/* Texte à gauche */}
@@ -165,7 +165,7 @@ export function WiseTrainerAdvantagesSection() {
 						<h3 className="text-2xl font-bold mb-4">
 						Accessibilité & Support multilingue
 						</h3>
-						<p className="text-primary-foreground/90 mb-6">
+						<p className="text-secondary-foreground/90 mb-6">
 						Une offre multilingue, pour toutes vos équipes,
 						adaptée aux contextes culturels
 						</p>

@@ -38,7 +38,7 @@ export function HeroSection() {
 								{/* Titre fixe */}
 								<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
 									Plus de{" "}
-									<span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">
+									<span className="text-secondary">
 										sécurité
 									</span>
 								</h1>
@@ -50,7 +50,7 @@ export function HeroSection() {
 										<WordRotate
 											words={changingTexts}
 											duration={2500}
-											className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary min-w-[140px] sm:min-w-[170px] lg:min-w-[200px] xl:min-w-[240px] text-left"
+											className="text-secondary min-w-[140px] sm:min-w-[170px] lg:min-w-[200px] xl:min-w-[240px] text-left"
 										/>
 									</div>
 								</div>
