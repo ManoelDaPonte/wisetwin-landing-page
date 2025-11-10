@@ -42,6 +42,10 @@ const menuItems: MenuItem[] = [
 		href: "/blog",
 	},
 	{
+		title: "Roadmap",
+		href: "/roadmap",
+	},
+	{
 		title: "Contact",
 		href: "/#contact",
 	},
