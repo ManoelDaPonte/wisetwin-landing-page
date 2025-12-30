@@ -3,7 +3,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-type SectionVariant = "default" | "muted" | "gradient" | "dark";
+type SectionVariant = "default" | "muted" | "gradient" | "dark" | "accent";
 type SectionHeader = {
 	title: string;
 	description?: string;
@@ -33,7 +33,8 @@ export function Section({
 		default: "bg-background text-foreground",
 		muted: "bg-muted text-foreground",
 		gradient: "bg-gradient-to-b from-background to-muted text-foreground",
-		dark: "bg-gradient-to-br from-primary via-primary to-secondary/20 text-primary-foreground relative overflow-hidden",
+		dark: "bg-gradient-to-br from-[#0a0a1a] via-[#0f0b40] to-[#0a1a2a] text-white relative overflow-hidden",
+		accent: "bg-secondary/5 dark:bg-secondary/10 text-foreground relative overflow-hidden",
 	};
 
 	// Filtrer les props non-HTML
@@ -106,7 +107,7 @@ export function Section({
 								header.highlight
 									? "text-secondary"
 									: "",
-								variant === "dark" ? "text-primary-foreground" : "text-foreground"
+								variant === "dark" ? "text-white" : "text-foreground"
 							)}
 						>
 							{header.title}
@@ -119,7 +120,7 @@ export function Section({
 										? "max-w-2xl mx-auto"
 										: "",
 									variant === "dark"
-										? "text-primary-foreground/80"
+										? "text-white/80"
 										: "text-muted-foreground"
 								)}
 							>

@@ -1,0 +1,695 @@
+{
+	"trustedBy": {
+		"title": "Trusted by industry leaders"
+	},
+	"common": {
+		"demo": "Request a demo",
+		"tryFree": "Try for free",
+		"learnMore": "Learn more",
+		"contact": "Contact",
+		"pricing": "Pricing",
+		"back": "Back"
+	},
+	"nav": {
+		"solutions": "Solutions",
+		"wisetrainer": "WiseTrainer",
+		"pricing": "Pricing",
+		"faq": "FAQ",
+		"roadmap": "Roadmap",
+		"contact": "Contact"
+	},
+	"hero": {
+		"titlePrefix": "More",
+		"titleHighlight": "safety",
+		"rotatingPrefix": "More",
+		"rotatingWords": ["productivity", "retention", "engagement", "peace of mind"],
+		"subtitle": "Digitize your training and immerse your employees in custom immersive environments, exact replicas of your facilities.",
+		"cta": "Free trial",
+		"ctaSecondary": "Request a quote",
+		"highlights": {
+			"replica": "Exact replica of your facilities",
+			"team": "Co-built with your teams",
+			"speed": "Delivered in 1 month"
+		}
+	},
+	"vision": {
+		"title": "Why choose us?",
+		"subtitle": "A unique approach combining speed, expertise and precision for custom simulators.",
+		"highlights": {
+			"speed": {
+				"title": "1 month delivery",
+				"description": "From receiving your photos to delivering your operational simulator."
+			},
+			"collaboration": {
+				"title": "Co-creation",
+				"description": "Our teams work hand in hand with your business experts for tailored scenarios."
+			},
+			"precision": {
+				"title": "Exact replica",
+				"description": "Advanced imaging technologies and dedicated 3D engineers to faithfully recreate your facilities."
+			}
+		}
+	},
+	"solutions": {
+		"title": "Our solutions",
+		"subtitle": "Tools adapted to each training need",
+		"cta": "Learn more",
+		"platform": {
+			"title": "Management platform",
+			"description": "Planning, reporting, training plans and centralized learner tracking."
+		}
+	},
+	"platform": {
+		"title": "Management Platform",
+		"subtitle": "Centralize your training management",
+		"description": "A complete platform to manage your training plans, track progress and certify your learners.",
+		"hero": {
+			"title": "Your training hub",
+			"subtitle": "Centralize WiseTrainer and WisePaper. Manage your teams, track results and certify your learners.",
+			"cta": "Try for free",
+			"badge": "Included in your subscription"
+		},
+		"hub": {
+			"title": "Everything in one place",
+			"subtitle": "A single entry point for all your training",
+			"items": {
+				"wisetrainer": {
+					"title": "WiseTrainer",
+					"description": "Your 3D simulators"
+				},
+				"wisepaper": {
+					"title": "WisePaper",
+					"description": "Your text-based training"
+				},
+				"users": {
+					"title": "Users",
+					"description": "Team management"
+				},
+				"results": {
+					"title": "Results",
+					"description": "Tracking and analytics"
+				}
+			}
+		},
+		"included": {
+			"title": "Included at no extra cost",
+			"description": "The management platform is integrated into your WiseTwin subscription. No additional fees, no surprises."
+		},
+		"features": {
+			"title": "Features",
+			"trainingPlans": {
+				"title": "Training Plans",
+				"description": "Create personalized training plans, associate modules and learners, and track progress in real time."
+			},
+			"tracking": {
+				"title": "Results Tracking",
+				"description": "Analyze performance by user or by training with detailed dashboards and exportable statistics."
+			},
+			"certifications": {
+				"title": "QR Code Certifications",
+				"description": "Automatically generate personalized certificates with QR codes to verify the authenticity of each attestation."
+			},
+			"reminders": {
+				"title": "Automatic Reminders",
+				"description": "Send email reminders to all learners who are behind or individually target those who haven't finished."
+			},
+			"guests": {
+				"title": "Guest Management",
+				"description": "Add external learners (temporary workers, subcontractors) without professional email through guest mode."
+			}
+		},
+		"security": {
+			"title": "Enterprise security",
+			"subtitle": "All features to protect your data",
+			"items": ["SSO (SAML/OAuth)", "MFA (Multi-factor authentication)", "Audit logs", "Data isolation"]
+		},
+		"cta": {
+			"title": "Ready to simplify your training management?",
+			"description": "Discover how our platform can centralize and optimize your learner tracking.",
+			"button": "Try for free"
+		}
+	},
+	"wisetrainer": {
+		"title": "WiseTrainer",
+		"subtitle": "Immersive 3D training",
+		"description": "Recreate your workstations in 3D and train your teams in a safe and realistic virtual environment.",
+		"hero": {
+			"title": "Immersive 3D simulators",
+			"subtitle": "Train your teams on exact replicas of your facilities. Simulate dangerous situations safely.",
+			"cta": "Request a demo",
+			"badge": "Delivery in 1 month"
+		},
+		"scenarios": {
+			"title": "Scenario examples",
+			"subtitle": "Real situations recreated virtually for risk-free training",
+			"items": {
+				"fire": {
+					"title": "Fire outbreak",
+					"description": "Train your teams on evacuation procedures and fire extinguisher use in your actual environment."
+				},
+				"chemical": {
+					"title": "Chemical leak",
+					"description": "Simulate hazardous product leaks and train the right reflexes without exposing anyone to danger."
+				},
+				"lockout": {
+					"title": "Lockout/Tagout",
+					"description": "Validate lockout/tagout procedures on your exact equipment before field intervention."
+				},
+				"maintenance": {
+					"title": "Preventive maintenance",
+					"description": "Guide your technicians through maintenance steps on your modeled equipment."
+				}
+			}
+		},
+		"captation": {
+			"title": "2 ways to create your simulator",
+			"subtitle": "Choose the method adapted to your context",
+			"photos": {
+				"title": "Photo submission",
+				"description": "You send us photos of your facilities and we recreate them in 3D.",
+				"features": ["Simple and fast", "No travel required", "Ideal for accessible sites"]
+			},
+			"scan": {
+				"title": "On-site scanning",
+				"description": "Our team travels with their equipment to scan your facilities with precision.",
+				"features": ["Maximum precision", "Ideal for complex environments", "Complete handling"]
+			}
+		},
+		"features": {
+			"title": "Features",
+			"immersive": {
+				"title": "Immersive 3D environments",
+				"description": "Faithfully recreate your industrial facilities in 3D for realistic training."
+			},
+			"scenarios": {
+				"title": "Custom scenarios",
+				"description": "Create training paths adapted to your specific procedures and situations."
+			},
+			"tracking": {
+				"title": "Performance tracking",
+				"description": "Analyze results and progress of each learner in real time."
+			},
+			"safe": {
+				"title": "Risk-free training",
+				"description": "Simulate dangerous situations safely to better prepare your teams."
+			},
+			"scorm": {
+				"title": "SCORM compatible",
+				"description": "Export your simulators in SCORM format to integrate into your existing LMS."
+			}
+		},
+		"process": {
+			"title": "How does it work?",
+			"subtitle": "A simple and fast process to create your custom simulator",
+			"timeline": "Delivery in 1 month after receiving photos",
+			"collaboration": "We work hand in hand with your teams for a result perfectly adapted to your field reality.",
+			"steps": {
+				"quote": {
+					"title": "Request a quote",
+					"description": "Contact us to define your needs and receive a tailored proposal."
+				},
+				"photos": {
+					"title": "Send photos",
+					"description": "Send us your photos or we come to scan your facilities with our equipment."
+				},
+				"creation": {
+					"title": "Environment creation",
+					"description": "Our team models your installation in 3D in collaboration with your business experts."
+				},
+				"scenarios": {
+					"title": "Pedagogical scenarios",
+					"description": "We co-build training scenarios with your teams to match your procedures."
+				},
+				"delivery": {
+					"title": "Delivery",
+					"description": "Your simulator is ready to use, accessible from the platform."
+				}
+			}
+		},
+		"gammes": {
+			"title": "Our WiseTrainer ranges",
+			"subtitle": "Choose the solution adapted to your training needs",
+			"includedScenarios": "3 scenarios included",
+			"safe": {
+				"title": "Safe Range",
+				"subtitle": "Safety simulator",
+				"description": "Training on safety procedures, emergency gestures, PPE use and risk prevention.",
+				"price": "4,500",
+				"unit": "per Environment created",
+				"features": ["Safety procedures", "Emergency gestures", "PPE use", "Risk prevention"]
+			},
+			"tech": {
+				"title": "Tech Range",
+				"subtitle": "Maintenance simulator",
+				"description": "Training on maintenance operations, fault diagnosis and technical procedures.",
+				"price": "9,500",
+				"unit": "per equipment",
+				"features": ["Maintenance operations", "Fault diagnosis", "Technical procedures", "Lockout/Tagout"]
+			},
+			"scenario": {
+				"title": "Additional scenarios",
+				"price": "500",
+				"unit": "per scenario"
+			},
+			"scenarioNote": "What is a scenario?"
+		},
+		"cta": {
+			"title": "Ready to transform your training?",
+			"description": "Contact us to discover how WiseTrainer can improve your team's training.",
+			"button": "Request a quote"
+		}
+	},
+	"wisepaper": {
+		"title": "WisePaper",
+		"subtitle": "Create and digitize your training",
+		"description": "Create courses or digitize your existing documents, and track your learners' results.",
+		"hero": {
+			"title": "Digitize your training",
+			"subtitle": "Transform your existing documents into interactive training with result tracking. Like Notion, but designed for training.",
+			"cta": "Get started",
+			"badge": "Included in your subscription"
+		},
+		"flow": {
+			"title": "How does it work?",
+			"subtitle": "In 3 steps, transform your documents into tracked training",
+			"steps": {
+				"import": {
+					"title": "Import",
+					"description": "Upload your existing PDF, Word or PowerPoint files"
+				},
+				"process": {
+					"title": "AI",
+					"description": "Our AI analyzes the content and generates quizzes"
+				},
+				"track": {
+					"title": "Track",
+					"description": "See who has read and understood your training"
+				}
+			}
+		},
+		"formats": {
+			"title": "Supported formats",
+			"subtitle": "Import your existing documents directly",
+			"items": ["PDF", "Word (.docx)", "PowerPoint (.pptx)", "Google Docs"]
+		},
+		"features": {
+			"title": "Features",
+			"create": {
+				"title": "Course creation",
+				"description": "Create your training directly in the editor, just like Notion. Simple, intuitive and collaborative."
+			},
+			"import": {
+				"title": "Digitize your documents",
+				"description": "Import your existing PDFs, Word docs, PowerPoints. Our AI transforms them into interactive training modules."
+			},
+			"ai": {
+				"title": "Integrated AI",
+				"description": "Our AI analyzes your content and automatically generates MCQs, quizzes and exercises to validate learning."
+			},
+			"tracking": {
+				"title": "Results tracking",
+				"description": "No more paper training without feedback. Track who did what, scores, and progress in real time."
+			},
+			"scorm": {
+				"title": "SCORM compatible",
+				"description": "Export your trainings in SCORM format to integrate into your existing LMS or share data easily."
+			}
+		},
+		"benefits": {
+			"title": "Why WisePaper?",
+			"paper": {
+				"title": "Your paper training revealed",
+				"description": "Do you have procedures, manuals, training materials in paper format? Digitize them and finally get data on who has read and understood them."
+			},
+			"free": {
+				"title": "100% free",
+				"description": "WisePaper is included for free in your WiseTwin account. Create as many trainings as you want."
+			}
+		},
+		"cta": {
+			"title": "Ready to digitize your training?",
+			"description": "Start for free right now. No credit card required.",
+			"button": "Start for free"
+		}
+	},
+	"advantages": {
+		"title": "Why WiseTwin?",
+		"subtitle": "Concrete benefits for your business",
+		"items": {
+			"noDowntime": {
+				"label": "0 downtime",
+				"shortDesc": "Production unaffected",
+				"title": "Train without stopping your facilities",
+				"description": "Your production lines keep running while your teams train on the digital twin. No need to mobilize your real installations.",
+				"stats": {
+					"value1": "0",
+					"label1": "production downtime",
+					"value2": "100%",
+					"label2": "availability"
+				}
+			},
+			"fastDelivery": {
+				"label": "1 month",
+				"shortDesc": "Fast delivery",
+				"title": "Your simulator in 1 month",
+				"description": "From receiving your photos to delivering your operational 3D environment. Our team works hand in hand with your business experts.",
+				"stats": {
+					"value1": "1",
+					"label1": "month to deliver",
+					"value2": "3",
+					"label2": "scenarios included"
+				}
+			},
+			"noVR": {
+				"label": "100% web",
+				"shortDesc": "No VR headset",
+				"title": "Browser accessible",
+				"description": "No need to invest in expensive equipment. Your training is accessible from any browser, on PC, tablet or mobile.",
+				"stats": {
+					"value1": "0€",
+					"label1": "equipment cost",
+					"value2": "100%",
+					"label2": "browser-based"
+				}
+			},
+			"unlimited": {
+				"label": "Unlimited",
+				"shortDesc": "Infinite sessions",
+				"title": "Train as much as needed",
+				"description": "Once your simulator is created, train 10 or 10,000 people at no additional cost. Each learner can repeat as many times as needed.",
+				"stats": {
+					"value1": "∞",
+					"label1": "sessions",
+					"value2": "0€",
+					"label2": "per session"
+				}
+			},
+			"safe": {
+				"label": "0 risk",
+				"shortDesc": "Safe training",
+				"title": "Simulate without danger",
+				"description": "Train your teams on dangerous situations (fire, chemical leak, lockout) in complete safety. They learn the right reflexes without any risk.",
+				"stats": {
+					"value1": "0",
+					"label1": "real risk",
+					"value2": "100%",
+					"label2": "of scenarios"
+				}
+			}
+		}
+	},
+	"security": {
+		"title": "Enterprise security",
+		"subtitle": "Your data is our priority",
+		"sso": {
+			"title": "Single Sign-On (SSO)",
+			"description": "Secure login via your identity provider (SAML, OAuth)"
+		},
+		"mfa": {
+			"title": "Multi-factor authentication",
+			"description": "Enhanced protection with backup codes and authenticator app"
+		},
+		"audit": {
+			"title": "Audit logs",
+			"description": "Complete traceability of all user actions"
+		},
+		"isolation": {
+			"title": "Data isolation",
+			"description": "Multi-tenant architecture with strict data separation"
+		}
+	},
+	"pricing": {
+		"title": "Simple and transparent pricing",
+		"subtitle": "Choose the plan that fits your organization",
+		"billing": {
+			"monthly": "Monthly",
+			"yearly": "Yearly",
+			"savePercent": "-20%"
+		},
+		"discountBanner": {
+			"pro": "-30% on your 1st WiseTrainer",
+			"business": "-50% on your 1st WiseTrainer"
+		},
+		"free": {
+			"title": "Free",
+			"priceMonthly": "0",
+			"priceYearly": "0",
+			"period": "/month",
+			"description": "Perfect for discovering the platform",
+			"includes": "",
+			"features": [
+				"Up to 3 users",
+				"Unlimited WisePaper",
+				"Management platform",
+				"Email support"
+			],
+			"cta": "Get started"
+		},
+		"pro": {
+			"title": "Pro",
+			"priceMonthly": "189",
+			"priceYearly": "151",
+			"period": "/month per admin¹",
+			"description": "For growing teams",
+			"includes": "Everything in Free, plus:",
+			"features": [
+				"Up to 100 users",
+				"SSO & MFA",
+				"Priority support"
+			],
+			"cta": "Contact us"
+		},
+		"business": {
+			"title": "Business",
+			"priceMonthly": "249",
+			"priceYearly": "199",
+			"period": "/month per admin¹",
+			"description": "For large organizations",
+			"includes": "Everything in Pro, plus:",
+			"features": [
+				"Unlimited users",
+				"Cross-company training sharing²",
+				"API access & dedicated support"
+			],
+			"cta": "Contact us"
+		},
+		"notes": {
+			"admin": "¹ Price per administrator. Add as many WiseTrainers as you need.",
+			"crossCompany": "² Cross-company sharing allows you to share developed trainings with partner organizations."
+		},
+		"wisetrainerLink": "See WiseTrainer development pricing"
+	},
+	"wisetrainerPricing": {
+		"title": "WiseTrainer Pricing",
+		"subtitle": "Create your custom 3D environment",
+		"description": "Developing your 3D asset is an initial investment. Then, each scenario costs 500 euros.",
+		"gammes": {
+			"safe": {
+				"title": "Safe Range",
+				"description": "Safety simulator",
+				"price": "6,000",
+				"unit": "starting from"
+			},
+			"tech": {
+				"title": "Tech Range",
+				"description": "Maintenance simulator",
+				"price": "9,600",
+				"unit": "starting from"
+			},
+			"lean": {
+				"title": "Lean Range",
+				"description": "Process simulator",
+				"price": "9,800",
+				"unit": "starting from"
+			}
+		},
+		"scenario": {
+			"title": "Additional scenarios",
+			"price": "500",
+			"unit": "per scenario"
+		}
+	},
+	"profiles": {
+		"title": "Who are you?",
+		"subtitle": "Discover how WiseTwin meets your specific needs"
+	},
+	"faq": {
+		"title": "Frequently asked questions",
+		"subtitle": "Answers to your questions",
+		"seeAll": "See all questions",
+		"searchPlaceholder": "Search for a question...",
+		"noResults": "No questions match your search",
+		"categories": {
+			"all": "All",
+			"general": "General",
+			"features": "Features",
+			"pricing": "Pricing",
+			"technical": "Technical"
+		},
+		"items": {
+			"whatIsWisetwin": {
+				"question": "What is WiseTwin?",
+				"answer": "WiseTwin is a 100% online industrial training solution using immersive 3D environments. It transforms your traditional training into interactive and engaging experiences, faithful to your business reality."
+			},
+			"howHelps": {
+				"question": "How can WiseTwin help my company?",
+				"answer": "WiseTwin helps reduce risks, improve employee engagement, and optimize training costs. You can simulate dangerous situations safely, train your teams on your actual 3D installations, and track each learner's progress."
+			},
+			"deploymentTime": {
+				"question": "How long does it take to deploy WiseTwin?",
+				"answer": "Access to the WiseTwin platform is immediate. With WisePaper, you can create and digitize your training instantly. For WiseTrainer (3D simulators), expect about 1 month after receiving your photos to deliver your custom environment."
+			},
+			"pricingModel": {
+				"question": "How does pricing work?",
+				"answer": "WiseTwin offers 3 plans: Free (up to 3 users, unlimited WisePaper), Pro at 189€/month per admin (up to 100 users, SSO & MFA, -30% on WiseTrainer), and Business at 249€/month per admin (unlimited users, cross-company sharing, -50% on WiseTrainer). WiseTrainer simulators are billed separately based on the chosen range."
+			},
+			"security": {
+				"question": "How do you handle data security?",
+				"answer": "We offer enterprise SSO (SAML/OAuth), multi-factor authentication (MFA), complete audit logs, and strict data isolation per organization. These features are available from the Pro plan."
+			},
+			"whatIsWiseTrainer": {
+				"question": "What is WiseTrainer?",
+				"answer": "WiseTrainer is our immersive 3D simulator solution. We recreate your industrial facilities in 3D from photos or on-site scans. Your teams can train on exact replicas of their work environment, simulating dangerous situations safely."
+			},
+			"whatIsWisePaper": {
+				"question": "What is WisePaper?",
+				"answer": "WisePaper is our text-based training digitization tool, included free in all plans. You can create courses like on Notion, or import your existing documents (PDF, Word, PowerPoint). Our AI automatically generates quizzes to validate learning."
+			},
+			"wisetrainerPricing": {
+				"question": "How much does a WiseTrainer simulator cost?",
+				"answer": "WiseTrainer environment development starts at 6,000€ for the Safe Range (safety) and 9,600€ for the Tech Range (maintenance). Each additional scenario costs 500€. Pro subscribers get -30% on their first WiseTrainer, and Business subscribers get -50%."
+			},
+			"noVrHeadset": {
+				"question": "Do I need a VR headset to use WiseTwin?",
+				"answer": "No! WiseTwin is 100% accessible from a standard web browser. Your training works on PC, tablet, or mobile, with no special equipment needed. This is one of our main advantages: 0€ equipment investment."
+			},
+			"trainingTypes": {
+				"question": "What types of training can I create?",
+				"answer": "You can create immersive 3D environment training with WiseTrainer (safety, maintenance, lockout...), digitize your existing documents with WisePaper (procedures, manuals...), and create complete training paths with learner tracking."
+			},
+			"existingContent": {
+				"question": "Does WiseTwin work with our existing content?",
+				"answer": "Absolutely! With WisePaper, import your PDFs, PowerPoints, Word docs, or Google Docs. Our AI transforms them into interactive training modules with automatic quiz generation. You keep your existing content while adding learner tracking."
+			},
+			"languages": {
+				"question": "What languages is WiseTwin available in?",
+				"answer": "The WiseTwin platform is available in French and English. WiseTrainer simulators can be configured in the language of your choice according to your needs."
+			},
+			"economicBenefits": {
+				"question": "What are the economic benefits?",
+				"answer": "WiseTwin helps reduce training costs (less travel, infinitely repeatable training at no extra cost), improve knowledge retention through immersion, and decrease accidents through better preparation. The management platform is included at no extra cost in your subscription."
+			},
+			"progressTracking": {
+				"question": "How does progress tracking work?",
+				"answer": "WiseTwin includes a complete management platform with detailed dashboards, per-learner progress tracking, performance scores, QR code certifications, and exportable statistics. You can also create personalized training plans."
+			},
+			"installation": {
+				"question": "Does WiseTwin require installation?",
+				"answer": "No! WiseTwin is 100% online and accessible from any modern web browser, with no installation required. Your learners can train from anywhere."
+			},
+			"trainingPlans": {
+				"question": "How do you manage training plans?",
+				"answer": "You can create personalized training plans, associate WiseTrainer and WisePaper modules, assign learners, and track progress in real-time. Automatic reminders can be sent to learners who are behind."
+			},
+			"hrIntegration": {
+				"question": "Can WiseTwin integrate with our existing systems?",
+				"answer": "Yes! WiseTwin supports SSO (SAML/OAuth) for unified login with your enterprise systems. Our training is also SCORM compatible for integration into your existing LMS."
+			},
+			"certifications": {
+				"question": "How do certifications work?",
+				"answer": "Certifications are automatically generated with a unique QR code to verify their authenticity. They are sent by email as soon as a learner validates a training and can be downloaded from their personal space."
+			},
+			"reminders": {
+				"question": "Can I send reminders to learners?",
+				"answer": "Yes! The platform has an automatic email reminder system. You can target all learners who are behind on a training plan or send individual reminders."
+			},
+			"guestMode": {
+				"question": "How do I manage external learners (temps, subcontractors)?",
+				"answer": "WiseTwin offers a guest mode that allows you to add external learners without a professional email address. Ideal for quickly training temporary workers or subcontractors on your safety procedures."
+			},
+			"multiSite": {
+				"question": "Does WiseTwin handle multi-site industries?",
+				"answer": "Perfectly! WiseTwin supports multi-organization management with granular permissions per site. The Business plan also allows cross-company sharing to share training with your partners."
+			},
+			"support": {
+				"question": "What support is available?",
+				"answer": "The Free plan includes email support. The Pro plan offers priority support. The Business plan includes dedicated support with personalized guidance for deploying and using WiseTwin."
+			},
+			"createSimulator": {
+				"question": "How does WiseTrainer simulator creation work?",
+				"answer": "The process is simple: 1) Request a quote to define your needs, 2) Send photos of your facilities (or on-site scan by our team), 3) 3D modeling in collaboration with your business experts, 4) Co-creation of pedagogical scenarios, 5) Delivery in about 1 month."
+			},
+			"scenarioTypes": {
+				"question": "What types of scenarios can be created?",
+				"answer": "We offer two ranges: Safe (safety) for safety procedures, emergency gestures, PPE use, fire evacuation, chemical leaks; and Tech (maintenance) for maintenance operations, fault diagnosis, lockout/tagout. Each environment includes 3 base scenarios."
+			},
+			"hybridTraining": {
+				"question": "Is WiseTwin compatible with in-person training?",
+				"answer": "Yes! Even though there's no native \"group\" feature yet, you can run in-person sessions with WiseTwin. Equip your learners with tablets and lead a WisePaper course with a facilitator who expands on the content in real-time while each participant answers quizzes on their device."
+			},
+			"technicalRequirements": {
+				"question": "What are the technical requirements to use WiseTwin?",
+				"answer": "WiseTwin is compatible with all modern browsers (Chrome, Firefox, Safari, Edge). The only technical requirement is WebGL support to display 3D environments. A good internet connection is recommended for quickly loading WiseTrainer simulators."
+			},
+			"gdprCompliance": {
+				"question": "How is my learners' data protected?",
+				"answer": "WiseTwin is 100% GDPR compliant. All your data is hosted on European servers: we use Neon for databases and Azure for Unity builds of 3D simulators. Your data never leaves Europe."
+			},
+			"freeTrial": {
+				"question": "Is there a free trial period?",
+				"answer": "The platform is completely free during your training development phase. You only move to a paid plan when your learners actually start training. This allows you to take the time to create your content with no commitment."
+			}
+		}
+	},
+	"contact": {
+		"title": "Contact us",
+		"subtitle": "Our team of experts is at your disposal to answer all your questions.",
+		"cardTitle": "Send us a message",
+		"cardDescription": "Fill out the form below and we will get back to you as soon as possible.",
+		"form": {
+			"firstName": "First name",
+			"firstNamePlaceholder": "Your first name",
+			"lastName": "Last name",
+			"lastNamePlaceholder": "Your last name",
+			"email": "Professional email",
+			"emailPlaceholder": "Your email",
+			"company": "Company",
+			"companyPlaceholder": "Your company name",
+			"subject": "Subject",
+			"subjectPlaceholder": "Subject of your request",
+			"message": "Message",
+			"messagePlaceholder": "Describe your project or request...",
+			"send": "Send message",
+			"sending": "Sending...",
+			"required": "*"
+		},
+		"subjects": {
+			"wisetrainer": "WiseTrainer",
+			"demo": "Demo request",
+			"info": "General information",
+			"other": "Other"
+		},
+		"success": {
+			"title": "Message sent successfully!",
+			"description": "Thank you for your message. Our team will get back to you shortly.",
+			"emailSent": "A confirmation email has been sent to"
+		},
+		"errors": {
+			"title": "Error",
+			"required": "Please fill in all required fields",
+			"invalidEmail": "Please enter a valid email address",
+			"generic": "An error occurred while sending the message"
+		}
+	},
+	"footer": {
+		"description": "We develop immersive simulators that transform your training into experiences and your procedures into reflexes.",
+		"navigation": "Navigation",
+		"solutions": "Solutions",
+		"contact": "Contact",
+		"legal": "Legal notice",
+		"privacy": "Privacy policy",
+		"terms": "Terms of use",
+		"rights": "All rights reserved",
+		"illustrations": "Illustrations by Storyset"
+	}
+}

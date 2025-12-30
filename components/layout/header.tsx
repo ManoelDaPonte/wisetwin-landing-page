@@ -1,58 +1,72 @@
-// components/layout/header.tsx
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { Logo } from "@/components/ui/logo";
+import { Cuboid, FileText, LayoutDashboard, Menu, ChevronDown } from "lucide-react";
 import {
 	NavigationMenu,
+	NavigationMenuContent,
 	NavigationMenuItem,
 	NavigationMenuList,
+	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-
-// Menu items configuration
-type MenuItem = {
-	title: string;
-	href: string;
-};
-
-const menuItems: MenuItem[] = [
-	{
-		title: "Wise Trainer",
-		href: "/#wisetrainer",
-	},
-	{
-		title: "Vous êtes ?",
-		href: "/#vous-etes",
-	},
-	// {
-	// 	title: "Notre technologie",
-	// 	href: "/#notre-technologie",
-	// },
-	{
-		title: "FAQ",
-		href: "/#faq",
-	},
-	{
-		title: "Blog",
-		href: "/blog",
-	},
-	{
-		title: "Roadmap",
-		href: "/roadmap",
-	},
-	{
-		title: "Contact",
-		href: "/#contact",
-	},
-];
+import {
+	Sheet,
+	SheetContent,
+	SheetTrigger,
+	SheetClose,
+} from "@/components/ui/sheet";
+import {
+	Collapsible,
+	CollapsibleContent,
+	CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 export function Header() {
+	const t = useTranslations("nav");
+	const tSolutions = useTranslations();
+	const tCommon = useTranslations("common");
 	const [scrolled, setScrolled] = useState(false);
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const [solutionsOpen, setSolutionsOpen] = useState(false);
+
+	const menuItems = [
+		{ title: t("pricing"), href: "/#pricing" },
+		{ title: t("faq"), href: "/faq" },
+		{ title: t("roadmap"), href: "/roadmap" },
+		{ title: t("contact"), href: "/#contact" },
+	];
+
+	const solutionItems = [
+		{
+			title: tSolutions("wisetrainer.title"),
+			description: tSolutions("wisetrainer.subtitle"),
+			href: "/solutions/wisetrainer",
+			icon: Cuboid,
+			featured: true,
+		},
+		{
+			title: tSolutions("wisepaper.title"),
+			description: tSolutions("wisepaper.subtitle"),
+			href: "/solutions/wisepaper",
+			icon: FileText,
+			featured: false,
+		},
+		{
+			title: tSolutions("platform.title"),
+			description: tSolutions("platform.subtitle"),
+			href: "/solutions/platform",
+			icon: LayoutDashboard,
+			featured: false,
+		},
+	];
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -85,11 +99,75 @@ export function Header() {
 					<div className="hidden lg:block">
 						<NavigationMenu>
 							<NavigationMenuList>
+								{/* Solutions Dropdown */}
+								<NavigationMenuItem>
+									<NavigationMenuTrigger className="bg-transparent hover:bg-accent/50">
+										{t("solutions")}
+									</NavigationMenuTrigger>
+									<NavigationMenuContent>
+										<div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+											{/* WiseTrainer - Featured */}
+											<Link
+												href="/solutions/wisetrainer"
+												className="row-span-2 flex flex-col justify-end rounded-lg bg-gradient-to-b from-secondary/20 to-secondary/5 p-6 hover:from-secondary/30 hover:to-secondary/10 transition-colors"
+											>
+												<Cuboid className="size-8 text-secondary mb-3" />
+												<div className="text-lg font-semibold mb-1">
+													{tSolutions("wisetrainer.title")}
+												</div>
+												<p className="text-sm text-muted-foreground leading-snug">
+													{tSolutions("wisetrainer.subtitle")}
+												</p>
+											</Link>
+
+											{/* WisePaper */}
+											<Link
+												href="/solutions/wisepaper"
+												className="flex items-start gap-3 rounded-lg p-3 hover:bg-accent transition-colors"
+											>
+												<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+													<FileText className="size-5 text-secondary" />
+												</div>
+												<div>
+													<div className="font-medium mb-1">
+														{tSolutions("wisepaper.title")}
+													</div>
+													<p className="text-sm text-muted-foreground leading-snug">
+														{tSolutions("wisepaper.subtitle")}
+													</p>
+												</div>
+											</Link>
+
+											{/* Platform */}
+											<Link
+												href="/solutions/platform"
+												className="flex items-start gap-3 rounded-lg p-3 hover:bg-accent transition-colors"
+											>
+												<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+													<LayoutDashboard className="size-5 text-secondary" />
+												</div>
+												<div>
+													<div className="font-medium mb-1">
+														{tSolutions("platform.title")}
+													</div>
+													<p className="text-sm text-muted-foreground leading-snug">
+														{tSolutions("platform.subtitle")}
+													</p>
+												</div>
+											</Link>
+										</div>
+									</NavigationMenuContent>
+								</NavigationMenuItem>
+
+								{/* Other menu items */}
 								{menuItems.map((item) => (
 									<NavigationMenuItem key={item.title}>
 										<Link
 											href={item.href}
-											className={navigationMenuTriggerStyle()}
+											className={cn(
+												navigationMenuTriggerStyle(),
+												"bg-transparent hover:bg-accent/50"
+											)}
 										>
 											{item.title}
 										</Link>
@@ -99,14 +177,117 @@ export function Header() {
 						</NavigationMenu>
 					</div>
 
-					{/* CTA Button */}
+					{/* CTA Buttons */}
 					<div className="flex items-center gap-2">
+						<LanguageSwitcher />
 						<ThemeToggle />
-						<Button asChild>
-							<Link href="/#contact">
-								<div>Demander une démo</div>
-							</Link>
+						<Button asChild className="hidden sm:inline-flex">
+							<a
+								href="https://app.wisetwin.eu"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{tCommon("tryFree")}
+							</a>
 						</Button>
+
+						{/* Mobile Menu */}
+						<Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+							<SheetTrigger asChild>
+								<Button
+									variant="ghost"
+									size="icon"
+									className="lg:hidden"
+									aria-label="Menu"
+								>
+									<Menu className="size-5" />
+								</Button>
+							</SheetTrigger>
+							<SheetContent side="right" className="w-80 p-0">
+								<div className="flex flex-col h-full">
+									{/* Mobile Header */}
+									<div className="p-6 border-b border-border">
+										<Logo variant="wisetwin" width={120} height={32} />
+									</div>
+
+									{/* Mobile Navigation */}
+									<nav className="flex-1 overflow-y-auto p-4">
+										{/* Solutions Collapsible */}
+										<Collapsible
+											open={solutionsOpen}
+											onOpenChange={setSolutionsOpen}
+											className="mb-2"
+										>
+											<CollapsibleTrigger className="flex items-center justify-between w-full p-3 rounded-lg hover:bg-accent transition-colors">
+												<span className="font-medium">{t("solutions")}</span>
+												<ChevronDown
+													className={cn(
+														"size-4 transition-transform",
+														solutionsOpen && "rotate-180"
+													)}
+												/>
+											</CollapsibleTrigger>
+											<CollapsibleContent className="pl-4 mt-1 space-y-1">
+												{solutionItems.map((item) => {
+													const Icon = item.icon;
+													return (
+														<SheetClose asChild key={item.title}>
+															<Link
+																href={item.href}
+																className={cn(
+																	"flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors",
+																	item.featured &&
+																		"bg-secondary/5 hover:bg-secondary/10"
+																)}
+																onClick={() => setMobileMenuOpen(false)}
+															>
+																<div className="size-8 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+																	<Icon className="size-4 text-secondary" />
+																</div>
+																<div>
+																	<div className="font-medium text-sm">
+																		{item.title}
+																	</div>
+																	<p className="text-xs text-muted-foreground">
+																		{item.description}
+																	</p>
+																</div>
+															</Link>
+														</SheetClose>
+													);
+												})}
+											</CollapsibleContent>
+										</Collapsible>
+
+										{/* Other Menu Items */}
+										{menuItems.map((item) => (
+											<SheetClose asChild key={item.title}>
+												<Link
+													href={item.href}
+													className="flex items-center p-3 rounded-lg hover:bg-accent transition-colors font-medium"
+													onClick={() => setMobileMenuOpen(false)}
+												>
+													{item.title}
+												</Link>
+											</SheetClose>
+										))}
+									</nav>
+
+									{/* Mobile Footer */}
+									<div className="p-4 border-t border-border">
+										<Button asChild className="w-full">
+											<a
+												href="https://app.wisetwin.eu"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												{tCommon("tryFree")}
+											</a>
+										</Button>
+									</div>
+								</div>
+							</SheetContent>
+						</Sheet>
 					</div>
 				</div>
 			</div>

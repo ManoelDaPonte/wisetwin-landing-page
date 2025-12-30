@@ -2,31 +2,24 @@
 
 import {
 	HeroSection,
-	WiseTrainerSection,
-	WiseTrainerAdvantagesSection,
-	ProfilesSection,
-	PlatformSection,
-	TechnologySection,
+	TrustedBySection,
+	AdvantagesSection,
+	SolutionsSection,
+	PricingSection,
+	SecuritySection,
 	FaqSection,
-	BlogSection,
 	ContactSection,
 } from "@/components/sections";
-import { BlogPost } from "@/types/blog";
 
-interface HomeClientProps {
-	blogPosts: BlogPost[];
-}
-
-export default function HomeClient({ blogPosts }: HomeClientProps) {
+export default function HomeClient() {
 	return (
 		<>
 			<HeroSection />
-			<WiseTrainerSection />
-			<WiseTrainerAdvantagesSection />
-			<ProfilesSection />
-			<PlatformSection />
-			{/* <TechnologySection /> */}
-			<BlogSection posts={blogPosts} />
+			<TrustedBySection />
+			<AdvantagesSection />
+			<SolutionsSection />
+			<PricingSection />
+			<SecuritySection />
 			<FaqSection />
 			<ContactSection />
 		</>

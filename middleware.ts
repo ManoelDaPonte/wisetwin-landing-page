@@ -1,13 +1,15 @@
-// middleware.ts
+import createMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { routing } from "./i18n/routing";
+
+const intlMiddleware = createMiddleware(routing);
 
 export function middleware(request: NextRequest) {
-	// Ajouter des en-têtes CORS pour les routes API
+	// Handle CORS for API routes
 	if (request.nextUrl.pathname.startsWith("/api/")) {
 		const response = NextResponse.next();
 
-		// Définir les en-têtes CORS
 		response.headers.set(
 			"Access-Control-Allow-Origin",
 			process.env.NODE_ENV === "production"
@@ -23,10 +25,18 @@ export function middleware(request: NextRequest) {
 		return response;
 	}
 
-	return NextResponse.next();
+	// Handle internationalization for all other routes
+	return intlMiddleware(request);
 }
 
-// Configuration du middleware pour ne s'appliquer qu'aux routes API
 export const config = {
-	matcher: ["/api/:path*"],
+	matcher: [
+		// Match all pathnames except for
+		// - API routes
+		// - Static files (/_next, /image, /video, etc.)
+		// - Favicon, robots, sitemap
+		"/((?!api|_next|image|video|storyset|ressources|.*\\..*|icon\\.ico).*)",
+		"/",
+		"/(fr|en)/:path*",
+	],
 };

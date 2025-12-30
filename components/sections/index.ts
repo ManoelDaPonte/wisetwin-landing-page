@@ -1,8 +1,14 @@
 export { HeroSection } from "./hero-section";
+export { TrustedBySection } from "./trusted-by-section";
+export { VisionSection } from "./vision-section";
+export { AdvantagesSection } from "./advantages-section";
+export { SolutionsSection } from "./solutions-section";
 export { WiseTrainerSection } from "./wisetrainer-section";
 export { WiseTrainerAdvantagesSection } from "./wisetrainer-advantages-section";
 export { TechnologySection } from "./technology-section";
-export { BlogSection } from "./blog-section";
+export { SecuritySection } from "./security-section";
+export { PricingSection } from "./pricing-section";
+export { WiseTrainerPricingSection } from "./wisetrainer-pricing-section";
 export { ContactSection } from "./contact-section";
 export { ProfilesSection } from "./profiles-section";
 export { FaqSection } from "./faq-section";

@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
   try {
     // Récupérer les données du formulaire
     const formData = await req.json();
-    const { name, email, subject, company, message, csrfToken } = formData;
+    const { firstName, lastName, email, subject, company, message, csrfToken } = formData;
     
     // Vérifier le token CSRF
     const cookieStore = await cookies();
@@ -25,12 +25,14 @@ export async function POST(req: NextRequest) {
     cookieStore.delete("csrf_token");
 
     // Validation basique
-    if (!name || !email || !message) {
+    if (!firstName || !lastName || !email || !message) {
       return NextResponse.json(
         { error: "Merci de remplir tous les champs obligatoires" },
         { status: 400 }
       );
     }
+
+    const fullName = `${firstName} ${lastName}`;
 
     // Configuration du transporteur SMTP
     const transporter = nodemailer.createTransport({
@@ -50,7 +52,8 @@ export async function POST(req: NextRequest) {
       subject: `Nouveau message: ${subject || "Formulaire de contact WiseTwin"}`,
       html: `
         <h2>Nouveau message du site WiseTwin</h2>
-        <p><strong>Nom:</strong> ${name}</p>
+        <p><strong>Prénom:</strong> ${firstName}</p>
+        <p><strong>Nom:</strong> ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
         ${company ? `<p><strong>Entreprise:</strong> ${company}</p>` : ""}
         ${subject ? `<p><strong>Sujet:</strong> ${subject}</p>` : ""}
@@ -67,7 +70,7 @@ export async function POST(req: NextRequest) {
       to: email,
       subject: "Confirmation de votre message à WiseTwin",
       html: `
-        <h2>Bonjour ${name},</h2>
+        <h2>Bonjour ${firstName},</h2>
         <p>Nous avons bien reçu votre message et vous remercions de nous avoir contactés.</p>
         <p>Notre équipe vous répondra dans les meilleurs délais.</p>
         <p>Pour rappel, voici votre message :</p>

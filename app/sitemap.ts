@@ -1,50 +1,21 @@
-import { MetadataRoute } from 'next'
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://wisetwin.fr' // Remplacez par votre domaine réel
+	const baseUrl = "https://wisetwin.fr";
+	const locales = ["fr", "en"];
 
-  // Pages statiques
-  const staticPages = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-  ]
+	const routes = [
+		{ path: "", priority: 1 },
+		{ path: "/roadmap", priority: 0.8 },
+		{ path: "/faq", priority: 0.8 },
+	];
 
-  // Pages de blog dynamiques
-  const blogDir = path.join(process.cwd(), 'blog')
-  let blogPages: MetadataRoute.Sitemap = []
-
-  if (fs.existsSync(blogDir)) {
-    const filenames = fs.readdirSync(blogDir)
-    
-    blogPages = filenames
-      .filter(filename => filename.endsWith('.mdx'))
-      .map(filename => {
-        const filePath = path.join(blogDir, filename)
-        const fileContent = fs.readFileSync(filePath, 'utf8')
-        const { data } = matter(fileContent)
-        const slug = filename.replace(/\.mdx$/, '')
-
-        return {
-          url: `${baseUrl}/blog/${slug}`,
-          lastModified: data.date ? new Date(data.date) : new Date(),
-          changeFrequency: 'monthly' as const,
-          priority: 0.7,
-        }
-      })
-  }
-
-  return [...staticPages, ...blogPages]
+	return locales.flatMap((locale) =>
+		routes.map((route) => ({
+			url: `${baseUrl}/${locale}${route.path}`,
+			lastModified: new Date(),
+			changeFrequency: "monthly" as const,
+			priority: route.priority,
+		}))
+	);
 }

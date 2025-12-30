@@ -47,8 +47,8 @@ export function TechnologySection() {
 		// },
 	];
 
-	// Fonctionnalités IA
-	const aiFeatures = [
+	// Fonctionnalités IA (pour utilisation future)
+	const _aiFeatures = [
 		{
 			title: "Analyse prédictive des risques",
 			description:

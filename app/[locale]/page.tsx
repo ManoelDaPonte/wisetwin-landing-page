@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import HomeClient from "@/components/pages/home-client";
-import { getLatestPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
 	title: "WiseTwin - Solutions innovantes pour la sécurité",
@@ -34,8 +33,6 @@ export const metadata: Metadata = {
 	},
 };
 
-export default async function Home() {
-	const blogPosts = await getLatestPosts();
-
-	return <HomeClient blogPosts={blogPosts} />;
+export default function Home() {
+	return <HomeClient />;
 }
