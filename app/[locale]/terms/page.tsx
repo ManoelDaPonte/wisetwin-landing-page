@@ -31,7 +31,7 @@ export default function TermsPage() {
 
 				<h1 className="text-4xl font-bold mb-8">{t("footer.terms")}</h1>
 
-				<div className="prose prose-neutral dark:prose-invert max-w-none">
+				<div className="prose prose-neutral dark:prose-invert max-w-none prose-li:my-2">
 					<h2>1. Objet et champ d&apos;application</h2>
 					<p>
 						Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre <strong>Wise Software Solution SAS</strong>, exploitant la marque commerciale WiseTwin, et tout client professionnel souhaitant souscrire aux services proposés.

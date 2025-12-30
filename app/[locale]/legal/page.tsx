@@ -31,7 +31,7 @@ export default function LegalPage() {
 
 				<h1 className="text-4xl font-bold mb-8">{t("footer.legal")}</h1>
 
-				<div className="prose prose-neutral dark:prose-invert max-w-none">
+				<div className="prose prose-neutral dark:prose-invert max-w-none prose-li:my-2">
 					<h2>Wise Software Solution SAS</h2>
 					<p>Exploitant la marque commerciale <strong>WiseTwin</strong></p>
 
@@ -95,11 +95,6 @@ export default function LegalPage() {
 						Toute reproduction, représentation, modification, publication, adaptation de tout ou partie
 						des éléments du site est interdite sans autorisation écrite préalable, conformément aux
 						dispositions du Code de la propriété intellectuelle.
-					</p>
-
-					<h2>Crédits</h2>
-					<p>
-						Illustrations : <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Storyset</a>
 					</p>
 
 					<hr />

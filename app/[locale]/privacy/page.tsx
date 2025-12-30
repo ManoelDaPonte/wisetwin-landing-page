@@ -31,7 +31,7 @@ export default function PrivacyPage() {
 
 				<h1 className="text-4xl font-bold mb-8">{t("footer.privacy")}</h1>
 
-				<div className="prose prose-neutral dark:prose-invert max-w-none">
+				<div className="prose prose-neutral dark:prose-invert max-w-none prose-li:my-2">
 					<h2>1. Introduction</h2>
 					<p>
 						La société <strong>Wise Software Solution SAS</strong>, dont le siège social est situé Bâtiment EcosystèmeD, 60 route du Pertuis du Môle 2, 59140 Dunkerque, France, immatriculée sous le numéro SIRET 987 906 765 00019, (ci-après &quot;WiseTwin&quot;, &quot;nous&quot;, &quot;notre&quot;) s&apos;engage à protéger la vie privée des utilisateurs de sa plateforme.
