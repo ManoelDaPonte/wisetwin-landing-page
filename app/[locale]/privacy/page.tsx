@@ -31,13 +31,13 @@ export default function PrivacyPage() {
 
 				<h1 className="text-4xl font-bold mb-8">{t("footer.privacy")}</h1>
 
-				<div className="prose prose-neutral dark:prose-invert max-w-none prose-li:my-2">
+				<div className="prose prose-neutral dark:prose-invert max-w-none">
 					<h2>1. Introduction</h2>
 					<p>
 						La société <strong>Wise Software Solution SAS</strong>, dont le siège social est situé Bâtiment EcosystèmeD, 60 route du Pertuis du Môle 2, 59140 Dunkerque, France, immatriculée sous le numéro SIRET 987 906 765 00019, (ci-après &quot;WiseTwin&quot;, &quot;nous&quot;, &quot;notre&quot;) s&apos;engage à protéger la vie privée des utilisateurs de sa plateforme.
 					</p>
 					<p>
-						Cette politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons vos données personnelles conformément au <strong>Règlement Général sur la Protection des Données (RGPD)</strong> et à la loi Informatique et Libertés.
+						Cette politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.
 					</p>
 
 					<h2>2. Responsable du traitement</h2>
@@ -154,8 +154,8 @@ export default function PrivacyPage() {
 					<h3>5.1 Accès interne</h3>
 					<p>Vos données sont accessibles uniquement aux personnes habilitées :</p>
 					<ul>
-						<li><strong>Équipe technique WiseTwin</strong> : maintenance et support</li>
-						<li><strong>Administrateurs de votre organisation</strong> : données de leur organisation uniquement</li>
+						<li>Équipe technique WiseTwin (maintenance et support)</li>
+						<li>Administrateurs de votre organisation (données de leur organisation uniquement)</li>
 					</ul>
 
 					<h3>5.2 Sous-traitants</h3>
@@ -262,18 +262,18 @@ export default function PrivacyPage() {
 					<p>Nous mettons en oeuvre des mesures techniques et organisationnelles appropriées pour protéger vos données :</p>
 					<p><strong>Mesures techniques :</strong></p>
 					<ul>
-						<li><strong>Chiffrement en transit</strong> : HTTPS/TLS 1.2+</li>
-						<li><strong>Chiffrement au repos</strong> : AES-256</li>
-						<li><strong>Mots de passe</strong> : hashés avec bcrypt</li>
-						<li><strong>Authentification</strong> : multi-facteurs (MFA) disponible</li>
-						<li><strong>Isolation</strong> : données séparées par organisation</li>
+						<li>Chiffrement des données en transit (HTTPS/TLS 1.2+)</li>
+						<li>Chiffrement des données au repos (AES-256)</li>
+						<li>Mots de passe hashés avec bcrypt</li>
+						<li>Authentification multi-facteurs (MFA) disponible</li>
+						<li>Isolation des données par organisation</li>
 					</ul>
 					<p><strong>Mesures organisationnelles :</strong></p>
 					<ul>
-						<li><strong>Accès restreint</strong> : principe du &quot;besoin d&apos;en connaître&quot;</li>
-						<li><strong>Journalisation</strong> : traçabilité des accès</li>
-						<li><strong>Incidents</strong> : procédures de gestion dédiées</li>
-						<li><strong>Tests</strong> : audits de sécurité réguliers</li>
+						<li>Accès restreint sur le principe du &quot;besoin d&apos;en connaître&quot;</li>
+						<li>Journalisation des accès</li>
+						<li>Procédures de gestion des incidents</li>
+						<li>Tests de sécurité réguliers</li>
 					</ul>
 
 					<h2>9. Cookies</h2>

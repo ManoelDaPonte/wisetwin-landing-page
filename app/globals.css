@@ -66,6 +66,24 @@
 	}
 }
 
+/* Styles pour les pages légales (prose) */
+.prose h2 {
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+.prose h3 {
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
+	font-weight: 600;
+}
+
+.prose li {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
 /* Gradients personnalisés pour WiseTwin */
 @layer utilities {
 	/* Couleur de texte adaptative pour les cards - utilise les couleurs de base shadcn */

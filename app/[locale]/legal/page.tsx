@@ -31,7 +31,7 @@ export default function LegalPage() {
 
 				<h1 className="text-4xl font-bold mb-8">{t("footer.legal")}</h1>
 
-				<div className="prose prose-neutral dark:prose-invert max-w-none prose-li:my-2">
+				<div className="prose prose-neutral dark:prose-invert max-w-none">
 					<h2>Wise Software Solution SAS</h2>
 					<p>Exploitant la marque commerciale <strong>WiseTwin</strong></p>
 
@@ -80,42 +80,26 @@ export default function LegalPage() {
 
 					<h2>Hébergement</h2>
 					<p>Ce site est hébergé par :</p>
-					<table className="not-prose w-full border-collapse my-6">
-						<thead>
-							<tr className="border-b border-border">
-								<th className="py-2 text-left font-medium">Service</th>
-								<th className="py-2 text-left font-medium">Hébergeur</th>
-								<th className="py-2 text-left font-medium">Localisation</th>
-							</tr>
-						</thead>
-						<tbody className="divide-y divide-border">
-							<tr>
-								<td className="py-2"><strong>Application</strong></td>
-								<td className="py-2">Vercel Inc.</td>
-								<td className="py-2">Edge locations UE</td>
-							</tr>
-							<tr>
-								<td className="py-2"><strong>Base de données</strong></td>
-								<td className="py-2">Neon</td>
-								<td className="py-2">Union Européenne (Allemagne)</td>
-							</tr>
-							<tr>
-								<td className="py-2"><strong>Fichiers de formation</strong></td>
-								<td className="py-2">Microsoft Azure</td>
-								<td className="py-2">Union Européenne (Pays-Bas, Irlande)</td>
-							</tr>
-						</tbody>
-					</table>
+					<ul>
+						<li><strong>Application</strong> : Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA (Edge locations UE)</li>
+						<li><strong>Base de données</strong> : Neon (serveurs Union Européenne - Allemagne)</li>
+						<li><strong>Fichiers de formation</strong> : Microsoft Azure (Union Européenne - Pays-Bas, Irlande)</li>
+					</ul>
 
 					<h2>Propriété intellectuelle</h2>
 					<p>
-						L&apos;ensemble du contenu de ce site (<strong>textes, images, vidéos, logos, marques, logiciels,
-						simulateurs 3D</strong>) est la propriété exclusive de <strong>Wise Software Solution SAS</strong> ou de ses partenaires.
+						L&apos;ensemble du contenu de ce site (textes, images, vidéos, logos, marques, logiciels,
+						simulateurs 3D) est la propriété exclusive de Wise Software Solution SAS ou de ses partenaires.
 					</p>
 					<p>
 						Toute reproduction, représentation, modification, publication, adaptation de tout ou partie
-						des éléments du site est <strong>interdite sans autorisation écrite préalable</strong>, conformément aux
+						des éléments du site est interdite sans autorisation écrite préalable, conformément aux
 						dispositions du Code de la propriété intellectuelle.
+					</p>
+
+					<h2>Crédits</h2>
+					<p>
+						Illustrations : <a href="https://storyset.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">Storyset</a>
 					</p>
 
 					<hr />
