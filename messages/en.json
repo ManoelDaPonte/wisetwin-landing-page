@@ -161,18 +161,26 @@
 				}
 			}
 		},
-		"captation": {
-			"title": "2 ways to create your simulator",
-			"subtitle": "Choose the method adapted to your context",
-			"photos": {
-				"title": "Photo submission",
-				"description": "You send us photos of your facilities and we recreate them in 3D.",
-				"features": ["Simple and fast", "No travel required", "Ideal for accessible sites"]
-			},
-			"scan": {
-				"title": "On-site scanning",
-				"description": "Our team travels with their equipment to scan your facilities with precision.",
-				"features": ["Maximum precision", "Ideal for complex environments", "Complete handling"]
+		"sources": {
+			"title": "Multiple ways to create your environment",
+			"subtitle": "We adapt to your available resources",
+			"items": {
+				"photos": {
+					"title": "Photos",
+					"description": "Send us photos of your facilities and we recreate them in 3D."
+				},
+				"videos": {
+					"title": "Videos",
+					"description": "Share videos of your equipment for even more precise modeling."
+				},
+				"existing3d": {
+					"title": "Existing 3D models",
+					"description": "Already have CAD or 3D models? We integrate them directly."
+				},
+				"scan": {
+					"title": "On-site scanning",
+					"description": "Our team travels to scan your facilities with precision."
+				}
 			}
 		},
 		"features": {
@@ -192,10 +200,6 @@
 			"safe": {
 				"title": "Risk-free training",
 				"description": "Simulate dangerous situations safely to better prepare your teams."
-			},
-			"scorm": {
-				"title": "SCORM compatible",
-				"description": "Export your simulators in SCORM format to integrate into your existing LMS."
 			}
 		},
 		"process": {
@@ -309,10 +313,6 @@
 			"tracking": {
 				"title": "Results tracking",
 				"description": "No more paper training without feedback. Track who did what, scores, and progress in real time."
-			},
-			"scorm": {
-				"title": "SCORM compatible",
-				"description": "Export your trainings in SCORM format to integrate into your existing LMS or share data easily."
 			}
 		},
 		"benefits": {
@@ -394,6 +394,18 @@
 					"label1": "real risk",
 					"value2": "100%",
 					"label2": "of scenarios"
+				}
+			},
+			"interop": {
+				"label": "SCORM",
+				"shortDesc": "LMS Export",
+				"title": "Integration with your LMS",
+				"description": "All our trainings (WiseTrainer and WisePaper) are exportable in SCORM format. Integrate them directly into your existing LMS (Moodle, 360Learning, Talentsoft, etc.) and centralize tracking of all your trainings.",
+				"stats": {
+					"value1": "100%",
+					"label1": "SCORM compatible",
+					"value2": "∞",
+					"label2": "LMS supported"
 				}
 			}
 		}

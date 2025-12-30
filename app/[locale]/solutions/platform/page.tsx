@@ -15,7 +15,6 @@ import {
 	FileText,
 	Users,
 	TrendingUp,
-	Shield,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -55,7 +54,7 @@ export default function PlatformPage() {
 		<main>
 			{/* Hero */}
 			<section className="relative py-20 lg:py-32 bg-gradient-to-br from-background via-background to-muted/30">
-				<div className="container mx-auto px-4">
+				<div className="container mx-auto max-w-7xl px-4">
 					<Link
 						href="/"
 						className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors"
@@ -168,31 +167,8 @@ export default function PlatformPage() {
 				</div>
 			</Section>
 
-			{/* Security Section */}
-			<Section
-				id="security"
-				variant="default"
-				header={{
-					title: t("security.title"),
-					description: t("security.subtitle"),
-					centered: true,
-				}}
-			>
-				<div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-					{(t.raw("security.items") as string[]).map((item, index) => (
-						<div
-							key={index}
-							className="flex items-center gap-3 bg-card border border-border rounded-xl px-6 py-4"
-						>
-							<Shield className="size-5 text-secondary" />
-							<span className="font-medium">{item}</span>
-						</div>
-					))}
-				</div>
-			</Section>
-
 			{/* CTA */}
-			<Section id="cta" variant="muted">
+			<Section id="cta" variant="default">
 				<div className="text-center max-w-2xl mx-auto">
 					<h2 className="text-3xl font-bold mb-4">{t("cta.title")}</h2>
 					<p className="text-muted-foreground mb-8">{t("cta.description")}</p>

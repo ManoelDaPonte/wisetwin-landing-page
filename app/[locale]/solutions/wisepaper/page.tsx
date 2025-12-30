@@ -12,7 +12,6 @@ import {
 	FileText,
 	CheckCircle,
 	ArrowRight,
-	Share2,
 	Gift,
 } from "lucide-react";
 import Image from "next/image";
@@ -45,7 +44,6 @@ export default function WisePaperPage() {
 		{ key: "import", icon: FileUp },
 		{ key: "ai", icon: Brain },
 		{ key: "tracking", icon: BarChart3 },
-		{ key: "scorm", icon: Share2 },
 	];
 
 	const benefits = [
@@ -57,7 +55,7 @@ export default function WisePaperPage() {
 		<main>
 			{/* Hero */}
 			<section className="relative py-20 lg:py-32 bg-gradient-to-br from-background via-background to-muted/30">
-				<div className="container mx-auto px-4">
+				<div className="container mx-auto max-w-7xl px-4">
 					<Link
 						href="/"
 						className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors"

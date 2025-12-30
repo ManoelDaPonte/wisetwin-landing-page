@@ -11,9 +11,10 @@ import {
 	Globe,
 	Repeat,
 	ShieldCheck,
+	Share2,
 } from "lucide-react";
 
-const items = ["noDowntime", "fastDelivery", "noVR", "unlimited", "safe"] as const;
+const items = ["noDowntime", "fastDelivery", "noVR", "unlimited", "safe", "interop"] as const;
 
 const icons = {
 	noDowntime: Factory,
@@ -21,6 +22,7 @@ const icons = {
 	noVR: Globe,
 	unlimited: Repeat,
 	safe: ShieldCheck,
+	interop: Share2,
 };
 
 export function AdvantagesSection() {

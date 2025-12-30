@@ -19,6 +19,8 @@ import {
 	Settings,
 	ImageIcon,
 	ScanLine,
+	Video,
+	Boxes,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -59,11 +61,18 @@ export default function WiseTrainerPage() {
 		{ key: "tech", icon: Wrench },
 	];
 
+	const sourceItems = [
+		{ key: "photos", icon: ImageIcon },
+		{ key: "videos", icon: Video },
+		{ key: "existing3d", icon: Boxes },
+		{ key: "scan", icon: ScanLine },
+	];
+
 	return (
 		<main>
 			{/* Hero */}
 			<section className="relative py-20 lg:py-32 bg-gradient-to-br from-background via-background to-muted/30">
-				<div className="container mx-auto px-4">
+				<div className="container mx-auto max-w-7xl px-4">
 					<Link
 						href="/"
 						className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors"
@@ -102,98 +111,10 @@ export default function WiseTrainerPage() {
 				</div>
 			</section>
 
-			{/* Scenarios Section */}
-			<Section
-				id="scenarios"
-				variant="dark"
-				header={{
-					title: t("scenarios.title"),
-					description: t("scenarios.subtitle"),
-					centered: true,
-				}}
-			>
-				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-					{scenarioItems.map((scenario) => {
-						const Icon = scenario.icon;
-						return (
-							<div
-								key={scenario.key}
-								className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-secondary/50 transition-all group"
-							>
-								<div className="size-14 bg-white/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
-									<Icon className={`size-7 ${scenario.color}`} />
-								</div>
-								<h3 className="text-lg font-bold text-white mb-2">
-									{t(`scenarios.items.${scenario.key}.title`)}
-								</h3>
-								<p className="text-white/70 text-sm leading-relaxed">
-									{t(`scenarios.items.${scenario.key}.description`)}
-								</p>
-							</div>
-						);
-					})}
-				</div>
-			</Section>
-
-			{/* Captation Methods Section */}
-			<Section
-				id="captation"
-				variant="muted"
-				header={{
-					title: t("captation.title"),
-					description: t("captation.subtitle"),
-					centered: true,
-				}}
-			>
-				<div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-					{/* Photos Option */}
-					<div className="bg-card border border-border rounded-2xl p-8 hover:border-secondary/50 transition-colors">
-						<div className="size-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
-							<ImageIcon className="size-8 text-secondary" />
-						</div>
-						<h3 className="text-xl font-bold mb-3">
-							{t("captation.photos.title")}
-						</h3>
-						<p className="text-muted-foreground mb-6">
-							{t("captation.photos.description")}
-						</p>
-						<ul className="space-y-3">
-							{(t.raw("captation.photos.features") as string[]).map((feature, index) => (
-								<li key={index} className="flex items-center gap-3 text-sm">
-									<CheckCircle className="size-4 text-secondary shrink-0" />
-									<span>{feature}</span>
-								</li>
-							))}
-						</ul>
-					</div>
-
-					{/* Scan Option */}
-					<div className="bg-card border border-border rounded-2xl p-8 hover:border-secondary/50 transition-colors">
-						<div className="size-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
-							<ScanLine className="size-8 text-secondary" />
-						</div>
-						<h3 className="text-xl font-bold mb-3">
-							{t("captation.scan.title")}
-						</h3>
-						<p className="text-muted-foreground mb-6">
-							{t("captation.scan.description")}
-						</p>
-						<ul className="space-y-3">
-							{(t.raw("captation.scan.features") as string[]).map((feature, index) => (
-								<li key={index} className="flex items-center gap-3 text-sm">
-									<CheckCircle className="size-4 text-secondary shrink-0" />
-									<span>{feature}</span>
-								</li>
-							))}
-						</ul>
-					</div>
-				</div>
-			</Section>
-
 			{/* Process - How it works */}
 			<Section
 				id="process"
-				variant="default"
+				variant="dark"
 				header={{
 					title: t("process.title"),
 					description: t("process.subtitle"),
@@ -207,7 +128,7 @@ export default function WiseTrainerPage() {
 							<Clock className="size-4" />
 							<span className="font-medium">{t("process.timeline")}</span>
 						</div>
-						<p className="text-center text-muted-foreground max-w-2xl">
+						<p className="text-center text-white/70 max-w-2xl">
 							{t("process.collaboration")}
 						</p>
 					</div>
@@ -215,7 +136,7 @@ export default function WiseTrainerPage() {
 					{/* Steps */}
 					<div className="relative">
 						{/* Connection line */}
-						<div className="hidden lg:block absolute top-6 left-0 right-0 h-0.5 bg-border" />
+						<div className="hidden lg:block absolute top-6 left-0 right-0 h-0.5 bg-white/20" />
 
 						<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
 							{processSteps.map((step, index) => {
@@ -228,21 +149,21 @@ export default function WiseTrainerPage() {
 										</div>
 
 										{/* Icon */}
-										<div className="size-14 bg-card border border-border rounded-xl flex items-center justify-center mb-4">
+										<div className="size-14 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center mb-4">
 											<Icon className="size-7 text-secondary" />
 										</div>
 
 										{/* Content */}
-										<h3 className="font-semibold mb-2">
+										<h3 className="font-semibold mb-2 text-white">
 											{t(`process.steps.${step.key}.title`)}
 										</h3>
-										<p className="text-sm text-muted-foreground">
+										<p className="text-sm text-white/70">
 											{t(`process.steps.${step.key}.description`)}
 										</p>
 
 										{/* Arrow for mobile */}
 										{index < processSteps.length - 1 && (
-											<div className="lg:hidden mt-4 text-muted-foreground">
+											<div className="lg:hidden mt-4 text-white/50">
 												↓
 											</div>
 										)}
@@ -254,10 +175,43 @@ export default function WiseTrainerPage() {
 				</div>
 			</Section>
 
+			{/* Sources - Multiple ways to create */}
+			<Section
+				id="sources"
+				variant="muted"
+				header={{
+					title: t("sources.title"),
+					description: t("sources.subtitle"),
+					centered: true,
+				}}
+			>
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+					{sourceItems.map((source) => {
+						const Icon = source.icon;
+						return (
+							<div
+								key={source.key}
+								className="bg-card border border-border rounded-2xl p-6 text-center hover:border-secondary/50 transition-colors"
+							>
+								<div className="size-14 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+									<Icon className="size-7 text-secondary" />
+								</div>
+								<h3 className="font-semibold mb-2">
+									{t(`sources.items.${source.key}.title`)}
+								</h3>
+								<p className="text-sm text-muted-foreground">
+									{t(`sources.items.${source.key}.description`)}
+								</p>
+							</div>
+						);
+					})}
+				</div>
+			</Section>
+
 			{/* Gammes - Types of WiseTrainer */}
 			<Section
 				id="gammes"
-				variant="muted"
+				variant="default"
 				header={{
 					title: t("gammes.title"),
 					description: t("gammes.subtitle"),
@@ -330,6 +284,39 @@ export default function WiseTrainerPage() {
 							{t("gammes.scenarioNote")}
 						</a>
 					</p>
+				</div>
+			</Section>
+
+			{/* Scenarios Section */}
+			<Section
+				id="scenarios"
+				variant="muted"
+				header={{
+					title: t("scenarios.title"),
+					description: t("scenarios.subtitle"),
+					centered: true,
+				}}
+			>
+				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+					{scenarioItems.map((scenario) => {
+						const Icon = scenario.icon;
+						return (
+							<div
+								key={scenario.key}
+								className="bg-card border border-border rounded-2xl p-6 hover:border-secondary/50 transition-all group"
+							>
+								<div className="size-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
+									<Icon className={`size-7 ${scenario.color}`} />
+								</div>
+								<h3 className="text-lg font-bold mb-2">
+									{t(`scenarios.items.${scenario.key}.title`)}
+								</h3>
+								<p className="text-muted-foreground text-sm leading-relaxed">
+									{t(`scenarios.items.${scenario.key}.description`)}
+								</p>
+							</div>
+						);
+					})}
 				</div>
 			</Section>
 
