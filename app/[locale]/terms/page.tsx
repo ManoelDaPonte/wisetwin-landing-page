@@ -89,11 +89,11 @@ export default function TermsPage() {
 						Accessible à l&apos;adresse <strong>app.wisetwin.eu</strong>, comprenant :
 					</p>
 					<ul>
-						<li>Gestion des utilisateurs et des organisations</li>
-						<li>Suivi de la progression des apprenants</li>
-						<li>Tableaux de bord et rapports statistiques</li>
-						<li>Plans de formation personnalisés</li>
-						<li>Génération de certificats de formation</li>
+						<li><strong>Gestion</strong> : utilisateurs et organisations</li>
+						<li><strong>Suivi</strong> : progression des apprenants</li>
+						<li><strong>Tableaux de bord</strong> : rapports statistiques</li>
+						<li><strong>Plans de formation</strong> : parcours personnalisés</li>
+						<li><strong>Certifications</strong> : génération automatique</li>
 					</ul>
 
 					<h2>4. Tarification et paiement</h2>
@@ -107,9 +107,9 @@ export default function TermsPage() {
 					</p>
 					<h3>4.3 Modalités de paiement</h3>
 					<ul>
-						<li>Abonnements : facturation mensuelle ou annuelle, payable par prélèvement automatique ou virement bancaire</li>
-						<li>Développement sur mesure : acompte de 30% à la commande, solde à la livraison</li>
-						<li>Délai de paiement : 30 jours à compter de la date de facturation</li>
+						<li><strong>Abonnements</strong> : facturation mensuelle ou annuelle, payable par prélèvement automatique ou virement bancaire</li>
+						<li><strong>Développement sur mesure</strong> : acompte de 30% à la commande, solde à la livraison</li>
+						<li><strong>Délai de paiement</strong> : 30 jours à compter de la date de facturation</li>
 					</ul>
 					<h3>4.4 Retard de paiement</h3>
 					<p>
@@ -144,18 +144,18 @@ export default function TermsPage() {
 					<h2>7. Obligations des parties</h2>
 					<h3>7.1 Obligations de WiseTwin</h3>
 					<ul>
-						<li>Fournir un accès continu à la plateforme (objectif de disponibilité de 99,5%)</li>
-						<li>Assurer la sécurité et la confidentialité des données</li>
-						<li>Fournir un support technique dans les délais raisonnables</li>
-						<li>Effectuer les mises à jour nécessaires au bon fonctionnement du service</li>
+						<li><strong>Disponibilité</strong> : accès continu à la plateforme (objectif 99,5%)</li>
+						<li><strong>Sécurité</strong> : protection et confidentialité des données</li>
+						<li><strong>Support</strong> : assistance technique dans les délais raisonnables</li>
+						<li><strong>Maintenance</strong> : mises à jour régulières du service</li>
 					</ul>
 					<h3>7.2 Obligations du client</h3>
 					<ul>
-						<li>Fournir des informations exactes lors de l&apos;inscription</li>
-						<li>Maintenir la confidentialité de ses identifiants de connexion</li>
-						<li>Ne pas tenter de contourner les mesures de sécurité</li>
-						<li>Respecter les conditions d&apos;utilisation et la législation en vigueur</li>
-						<li>S&apos;acquitter des paiements dans les délais convenus</li>
+						<li><strong>Informations</strong> : fournir des données exactes lors de l&apos;inscription</li>
+						<li><strong>Confidentialité</strong> : protéger ses identifiants de connexion</li>
+						<li><strong>Sécurité</strong> : ne pas contourner les mesures de protection</li>
+						<li><strong>Conformité</strong> : respecter les CGV et la législation en vigueur</li>
+						<li><strong>Paiement</strong> : s&apos;acquitter des factures dans les délais</li>
 					</ul>
 
 					<h2>8. Responsabilités et garanties</h2>
