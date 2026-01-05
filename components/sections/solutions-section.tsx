@@ -14,6 +14,7 @@ const solutions = [
 		icon: Cuboid,
 		href: "/solutions/wisetrainer",
 		flagship: true,
+		image: "/image/loto.webp",
 	},
 	{
 		key: "wisepaper",
@@ -21,6 +22,7 @@ const solutions = [
 		icon: FileText,
 		href: "/solutions/wisepaper",
 		flagship: false,
+		image: "/image/wisepaper.png",
 	},
 	{
 		key: "platform",
@@ -28,6 +30,7 @@ const solutions = [
 		icon: LayoutDashboard,
 		href: "/solutions/platform",
 		flagship: false,
+		image: "/image/dashboard.webp",
 	},
 ] as const;
 
@@ -74,7 +77,7 @@ export function SolutionsSection() {
 								{/* Image */}
 								<div className="aspect-[16/10] relative bg-muted overflow-hidden">
 									<Image
-										src="/placeholder.svg"
+										src={solution.image}
 										alt={t(`${solution.translationKey}.title`)}
 										fill
 										className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -28,6 +28,7 @@ import {
 	CollapsibleContent,
 	CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { DevBanner } from "@/components/layout/dev-banner";
 
 export function Header() {
 	const t = useTranslations("nav");
@@ -78,14 +79,16 @@ export function Header() {
 	}, []);
 
 	return (
-		<header
-			className={cn(
-				"fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 border-b border-border/20 py-4",
-				scrolled
-					? "bg-background/90 backdrop-blur-md shadow-sm border-border/50"
-					: "bg-transparent border-border/20"
-			)}
-		>
+		<div className="fixed top-0 left-0 right-0 w-full z-50">
+			<DevBanner />
+			<header
+				className={cn(
+					"w-full transition-all duration-300 border-b border-border/20 py-4",
+					scrolled
+						? "bg-background/90 backdrop-blur-md shadow-sm border-border/50"
+						: "bg-transparent border-border/20"
+				)}
+			>
 			<div className="container mx-auto max-w-7xl px-6 sm:px-8 md:px-4">
 				<div className="flex items-center justify-between">
 					{/* Logo */}
@@ -292,5 +295,6 @@ export function Header() {
 				</div>
 			</div>
 		</header>
+		</div>
 	);
 }

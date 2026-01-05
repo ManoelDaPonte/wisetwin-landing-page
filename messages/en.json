@@ -1,4 +1,8 @@
 {
+	"devBanner": {
+		"message": "This site is under development. Prices and features are subject to change.",
+		"dismiss": "Close"
+	},
 	"trustedBy": {
 		"title": "Trusted by industry leaders"
 	},

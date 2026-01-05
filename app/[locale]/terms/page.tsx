@@ -174,7 +174,7 @@ export default function TermsPage() {
 
 					<h2>9. Protection des données personnelles</h2>
 					<p>
-						WiseTwin traite les données personnelles conformément au RGPD et à la loi Informatique et Libertés. Pour plus de détails, consultez notre <a href="/privacy" className="text-secondary hover:underline">Politique de Confidentialité</a>.
+						WiseTwin traite les données personnelles conformément au RGPD et à la loi Informatique et Libertés. Pour plus de détails, consultez notre <Link href="/privacy" className="text-secondary hover:underline">Politique de Confidentialité</Link>.
 					</p>
 
 					<h2>10. Modification des conditions</h2>

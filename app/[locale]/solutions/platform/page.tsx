@@ -87,13 +87,16 @@ export default function PlatformPage() {
 								</a>
 							</Button>
 						</div>
-						<div className="relative aspect-video rounded-2xl overflow-hidden bg-muted">
-							<Image
-								src="/placeholder.svg"
-								alt="WiseTwin Platform"
-								fill
-								className="object-cover"
-							/>
+						<div className="relative w-full">
+							<div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110" />
+							<div className="relative aspect-video rounded-2xl overflow-hidden bg-muted shadow-2xl">
+								<Image
+									src="/image/dashboard.webp"
+									alt="WiseTwin Platform"
+									fill
+									className="object-cover"
+								/>
+							</div>
 						</div>
 					</div>
 				</div>

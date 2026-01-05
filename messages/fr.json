@@ -1,4 +1,8 @@
 {
+	"devBanner": {
+		"message": "Ce site est en cours de développement. Les prix et fonctionnalités sont susceptibles de changer.",
+		"dismiss": "Fermer"
+	},
 	"trustedBy": {
 		"title": "Ils nous font confiance"
 	},

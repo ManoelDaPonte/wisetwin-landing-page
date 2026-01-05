@@ -22,7 +22,7 @@ import {
 	Video,
 	Boxes,
 } from "lucide-react";
-import Image from "next/image";
+import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 
 export async function generateMetadata({
 	params,
@@ -99,12 +99,13 @@ export default function WiseTrainerPage() {
 								<Link href="/#contact">{t("hero.cta")}</Link>
 							</Button>
 						</div>
-						<div className="relative aspect-video rounded-2xl overflow-hidden bg-muted">
-							<Image
-								src="/placeholder.svg"
-								alt="WiseTrainer"
-								fill
-								className="object-cover"
+						<div className="relative w-full">
+							<div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110" />
+							<HeroVideoDialog
+								animationStyle="from-center"
+								videoSrc="/video/wisetrainer-presentation.mp4"
+								thumbnailSrc="/image/loto.webp"
+								thumbnailAlt="WiseTrainer Demo"
 							/>
 						</div>
 					</div>

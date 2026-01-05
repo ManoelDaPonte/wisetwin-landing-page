@@ -19,7 +19,7 @@ type AnimationStyle =
 
 interface HeroVideoProps {
   animationStyle?: AnimationStyle;
-  videoSrc: string;
+  videoSrc?: string;
   thumbnailSrc: string;
   thumbnailAlt?: string;
   className?: string;
