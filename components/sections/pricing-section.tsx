@@ -155,6 +155,7 @@ export function PricingSection() {
 			<div className="mt-8 max-w-3xl mx-auto text-center space-y-2">
 				<p className="text-xs text-muted-foreground">{t("notes.admin")}</p>
 				<p className="text-xs text-muted-foreground">{t("notes.crossCompany")}</p>
+				<p className="text-xs text-muted-foreground">{t("notes.wisetrainer")}</p>
 			</div>
 
 			{/* Lien vers pricing WiseTrainer */}

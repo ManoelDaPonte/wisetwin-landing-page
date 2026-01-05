@@ -54,6 +54,7 @@
 		"title": "Nos solutions",
 		"subtitle": "Des outils adaptés à chaque besoin de formation",
 		"cta": "En savoir plus",
+		"flagship": "Produit phare",
 		"platform": {
 			"title": "Plateforme de gestion",
 			"description": "Planification, reporting, plans de formation et suivi des apprenants centralisés."
@@ -283,7 +284,7 @@
 				},
 				"process": {
 					"title": "IA",
-					"description": "Notre IA analyse le contenu et génère des quiz"
+					"description": "Notre IA analyse, restructure le contenu et génère des quiz"
 				},
 				"track": {
 					"title": "Suivez",
@@ -439,8 +440,8 @@
 			"savePercent": "-20%"
 		},
 		"discountBanner": {
-			"pro": "-30% sur votre 1er WiseTrainer",
-			"business": "-50% sur votre 1er WiseTrainer"
+			"pro": "-30% sur votre 1er WiseTrainer³",
+			"business": "-50% sur votre 1er WiseTrainer³"
 		},
 		"free": {
 			"title": "Gratuit",
@@ -465,7 +466,8 @@
 			"description": "Pour les équipes en croissance",
 			"includes": "Tout le plan Gratuit, plus :",
 			"features": [
-				"Jusqu'à 100 utilisateurs",
+				"Jusqu'à 500 utilisateurs",
+				"Jusqu'à 50 WisePaper",
 				"SSO & MFA",
 				"Support prioritaire"
 			],
@@ -480,6 +482,7 @@
 			"includes": "Tout le plan Pro, plus :",
 			"features": [
 				"Utilisateurs illimités",
+				"WisePaper illimité",
 				"Mutualisation inter-entreprises²",
 				"API access & support dédié"
 			],
@@ -487,7 +490,8 @@
 		},
 		"notes": {
 			"admin": "¹ Tarif par administrateur. Ajoutez autant de WiseTrainer que vous le souhaitez.",
-			"crossCompany": "² La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires."
+			"crossCompany": "² La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",
+			"wisetrainer": "³ WiseTrainer : simulateur 3D immersif sur mesure, réplique de vos installations."
 		},
 		"wisetrainerLink": "Voir les tarifs de développement WiseTrainer"
 	},

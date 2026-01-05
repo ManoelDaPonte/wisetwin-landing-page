@@ -15,35 +15,45 @@ const logos = [
 	{ name: "AD", src: "/logos/logo-ad.png" },
 ];
 
+function LogoItem({ logo }: { logo: { name: string; src: string } }) {
+	return (
+		<div
+			className={cn(
+				"flex-shrink-0 mx-8 md:mx-12",
+				"flex items-center justify-center",
+				"h-12 w-32 md:w-40"
+			)}
+		>
+			<Image
+				src={logo.src}
+				alt={logo.name}
+				width={160}
+				height={48}
+				className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+			/>
+		</div>
+	);
+}
+
 export function TrustedBySection() {
 	return (
 		<section className="py-8 md:py-12 border-t border-border/50 bg-muted/30">
 			<div className="container mx-auto px-4">
 				{/* Marquee container */}
-				<div className="relative overflow-hidden">
+				<div className="relative overflow-hidden group">
 					{/* Gradient masks */}
-					<div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-muted/30 to-transparent z-10 pointer-events-none" />
-					<div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-muted/30 to-transparent z-10 pointer-events-none" />
+					<div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[hsl(var(--muted)/0.3)] to-transparent z-10 pointer-events-none" />
+					<div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[hsl(var(--muted)/0.3)] to-transparent z-10 pointer-events-none" />
 
-					{/* Scrolling logos */}
-					<div className="flex animate-marquee">
-						{[...logos, ...logos].map((logo, index) => (
-							<div
-								key={index}
-								className={cn(
-									"flex-shrink-0 mx-8 md:mx-12",
-									"flex items-center justify-center",
-									"h-12 w-32 md:w-40"
-								)}
-							>
-								<Image
-									src={logo.src}
-									alt={logo.name}
-									width={160}
-									height={48}
-									className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
-								/>
-							</div>
+					{/* Scrolling logos - using two identical sets for seamless loop */}
+					<div className="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
+						{/* First set */}
+						{logos.map((logo, index) => (
+							<LogoItem key={`first-${index}`} logo={logo} />
+						))}
+						{/* Second set (duplicate for seamless loop) */}
+						{logos.map((logo, index) => (
+							<LogoItem key={`second-${index}`} logo={logo} />
 						))}
 					</div>
 				</div>

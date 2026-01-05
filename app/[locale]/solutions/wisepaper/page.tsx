@@ -9,10 +9,8 @@ import {
 	BarChart3,
 	ArrowLeft,
 	PenLine,
-	FileText,
 	CheckCircle,
 	ArrowRight,
-	Gift,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -44,11 +42,6 @@ export default function WisePaperPage() {
 		{ key: "import", icon: FileUp },
 		{ key: "ai", icon: Brain },
 		{ key: "tracking", icon: BarChart3 },
-	];
-
-	const benefits = [
-		{ key: "paper", icon: FileText },
-		{ key: "free", icon: Gift },
 	];
 
 	return (
@@ -177,40 +170,8 @@ export default function WisePaperPage() {
 				</div>
 			</Section>
 
-			{/* Benefits / Why WisePaper */}
-			<Section
-				id="benefits"
-				variant="default"
-				header={{
-					title: t("benefits.title"),
-					centered: true,
-				}}
-			>
-				<div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-					{benefits.map((benefit) => {
-						const Icon = benefit.icon;
-						return (
-							<div
-								key={benefit.key}
-								className="bg-card border border-border rounded-xl p-8 text-center"
-							>
-								<div className="size-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
-									<Icon className="size-8 text-secondary" />
-								</div>
-								<h3 className="text-xl font-semibold mb-3">
-									{t(`benefits.${benefit.key}.title`)}
-								</h3>
-								<p className="text-muted-foreground">
-									{t(`benefits.${benefit.key}.description`)}
-								</p>
-							</div>
-						);
-					})}
-				</div>
-			</Section>
-
-			{/* CTA */}
-			<Section id="cta" variant="muted">
+				{/* CTA */}
+			<Section id="cta" variant="default">
 				<div className="text-center max-w-2xl mx-auto">
 					<h2 className="text-3xl font-bold mb-4">{t("cta.title")}</h2>
 					<p className="text-muted-foreground mb-8">{t("cta.description")}</p>

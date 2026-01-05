@@ -54,6 +54,7 @@
 		"title": "Our solutions",
 		"subtitle": "Tools adapted to each training need",
 		"cta": "Learn more",
+		"flagship": "Flagship",
 		"platform": {
 			"title": "Management platform",
 			"description": "Planning, reporting, training plans and centralized learner tracking."
@@ -283,7 +284,7 @@
 				},
 				"process": {
 					"title": "AI",
-					"description": "Our AI analyzes the content and generates quizzes"
+					"description": "Our AI analyzes, restructures and generates quizzes"
 				},
 				"track": {
 					"title": "Track",
@@ -439,8 +440,8 @@
 			"savePercent": "-20%"
 		},
 		"discountBanner": {
-			"pro": "-30% on your 1st WiseTrainer",
-			"business": "-50% on your 1st WiseTrainer"
+			"pro": "-30% on your 1st WiseTrainer³",
+			"business": "-50% on your 1st WiseTrainer³"
 		},
 		"free": {
 			"title": "Free",
@@ -465,7 +466,8 @@
 			"description": "For growing teams",
 			"includes": "Everything in Free, plus:",
 			"features": [
-				"Up to 100 users",
+				"Up to 500 users",
+				"Up to 50 WisePaper",
 				"SSO & MFA",
 				"Priority support"
 			],
@@ -480,6 +482,7 @@
 			"includes": "Everything in Pro, plus:",
 			"features": [
 				"Unlimited users",
+				"Unlimited WisePaper",
 				"Cross-company training sharing²",
 				"API access & dedicated support"
 			],
@@ -487,7 +490,8 @@
 		},
 		"notes": {
 			"admin": "¹ Price per administrator. Add as many WiseTrainers as you need.",
-			"crossCompany": "² Cross-company sharing allows you to share developed trainings with partner organizations."
+			"crossCompany": "² Cross-company sharing allows you to share developed trainings with partner organizations.",
+			"wisetrainer": "³ WiseTrainer: custom-built immersive 3D simulator, replica of your facilities."
 		},
 		"wisetrainerLink": "See WiseTrainer development pricing"
 	},
