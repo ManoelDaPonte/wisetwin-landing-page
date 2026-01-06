@@ -96,6 +96,28 @@
 				}
 			}
 		},
+		"wisepaper": {
+			"title": "WisePaper - Créez vos formations texte",
+			"subtitle": "Digitalisez vos documents et créez des formations interactives avec suivi des résultats",
+			"features": {
+				"create": {
+					"title": "Création de cours",
+					"description": "Créez vos formations directement dans l'éditeur, comme sur Notion. Simple, intuitif et collaboratif."
+				},
+				"import": {
+					"title": "Import de documents",
+					"description": "Importez vos PDF, Word, PowerPoint existants. Notre IA les transforme en modules interactifs."
+				},
+				"ai": {
+					"title": "IA intégrée",
+					"description": "Notre IA génère automatiquement des QCM et quiz pour valider les acquis."
+				},
+				"tracking": {
+					"title": "Suivi des résultats",
+					"description": "Suivez qui a fait quoi, les scores et les progressions en temps réel."
+				}
+			}
+		},
 		"included": {
 			"title": "Inclus sans surcoût",
 			"description": "La plateforme de gestion est intégrée à votre abonnement WiseTwin. Pas de frais supplémentaires, pas de surprises."
@@ -207,6 +229,11 @@
 				"description": "Simulez des situations dangereuses en toute sécurité pour mieux préparer vos équipes."
 			}
 		},
+		"ownership": {
+			"title": "Votre asset, votre propriété",
+			"description": "L'environnement 3D créé pour votre entreprise vous appartient. Vous êtes propriétaire de l'asset numérique développé sur mesure à partir de vos installations.",
+			"badge": "100% propriétaire"
+		},
 		"process": {
 			"title": "Comment ça marche ?",
 			"subtitle": "Un processus simple et rapide pour créer votre simulateur sur mesure",
@@ -244,7 +271,7 @@
 				"subtitle": "Simulateur sécurité",
 				"description": "Formation aux procédures de sécurité, gestes d'urgence, port des EPI et prévention des risques.",
 				"price": "4 500",
-				"unit": "par Environnement créé",
+				"unit": "par environnement créé",
 				"features": ["Procédures de sécurité", "Gestes d'urgence", "Port des EPI", "Prévention des risques"]
 			},
 			"tech": {
@@ -444,8 +471,7 @@
 			"savePercent": "-20%"
 		},
 		"discountBanner": {
-			"pro": "-30% sur votre 1er WiseTrainer³",
-			"business": "-50% sur votre 1er WiseTrainer³"
+			"firstOrder": "-20% sur la 1ère commande"
 		},
 		"free": {
 			"title": "Gratuit",
@@ -456,7 +482,7 @@
 			"includes": "",
 			"features": [
 				"Jusqu'à 3 utilisateurs",
-				"WisePaper illimité",
+				"1 WiseTrainer¹ inclus (procédure LOTO)",
 				"Plateforme de gestion",
 				"Support par email"
 			],
@@ -466,13 +492,14 @@
 			"title": "Pro",
 			"priceMonthly": "189",
 			"priceYearly": "151",
-			"period": "/mois par admin¹",
+			"period": "/mois par admin²",
 			"description": "Pour les équipes en croissance",
 			"includes": "Tout le plan Gratuit, plus :",
 			"features": [
-				"Jusqu'à 500 utilisateurs",
-				"Jusqu'à 50 WisePaper",
+				"Jusqu'à 100 utilisateurs",
+				"WiseTrainer illimités",
 				"SSO & MFA",
+				"Journaux d'audit",
 				"Support prioritaire"
 			],
 			"cta": "Nous contacter"
@@ -481,21 +508,24 @@
 			"title": "Business",
 			"priceMonthly": "249",
 			"priceYearly": "199",
-			"period": "/mois par admin¹",
+			"period": "/mois par admin²",
 			"description": "Pour les grandes organisations",
 			"includes": "Tout le plan Pro, plus :",
 			"features": [
 				"Utilisateurs illimités",
-				"WisePaper illimité",
-				"Mutualisation inter-entreprises²",
-				"API access & support dédié"
+				"WiseTrainer illimités",
+				"Mutualisation inter-entreprises³",
+				"API access",
+				"Support dédié"
 			],
 			"cta": "Nous contacter"
 		},
 		"notes": {
-			"admin": "¹ Tarif par administrateur. Ajoutez autant de WiseTrainer que vous le souhaitez.",
-			"crossCompany": "² La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",
-			"wisetrainer": "³ WiseTrainer : simulateur 3D immersif sur mesure, réplique de vos installations."
+			"wisetrainer": "¹ WiseTrainer : simulateur 3D immersif sur mesure, réplique exacte de vos installations industrielles.",
+			"wisetrainerLink": "En savoir plus sur WiseTrainer",
+			"admin": "² Tarif par administrateur. Ajoutez autant de WiseTrainer que vous le souhaitez.",
+			"crossCompany": "³ La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",
+			"scenario": "Un scénario est un parcours de formation interactif avec objectifs pédagogiques, actions à réaliser et validation des acquis. Chaque WiseTrainer inclut 3 scénarios de base."
 		},
 		"wisetrainerLink": "Voir les tarifs de développement WiseTrainer"
 	},
@@ -561,7 +591,7 @@
 			},
 			"pricingModel": {
 				"question": "Comment fonctionne la tarification ?",
-				"answer": "WiseTwin propose 3 plans : Gratuit (jusqu'à 3 utilisateurs, WisePaper illimité), Pro à 189€/mois par admin (jusqu'à 100 utilisateurs, SSO & MFA, -30% sur WiseTrainer), et Business à 249€/mois par admin (utilisateurs illimités, mutualisation inter-entreprises, -50% sur WiseTrainer). Les simulateurs WiseTrainer sont facturés séparément selon la gamme choisie."
+				"answer": "WiseTwin propose 3 plans : Gratuit (jusqu'à 3 utilisateurs, 1 WiseTrainer LOTO inclus), Pro à 189€/mois par admin (jusqu'à 100 utilisateurs, SSO & MFA), et Business à 249€/mois par admin (utilisateurs illimités, mutualisation inter-entreprises). Les simulateurs WiseTrainer sont facturés séparément selon la gamme choisie, avec -20% sur la première commande."
 			},
 			"security": {
 				"question": "Comment gérez-vous la sécurité des données ?",
@@ -638,6 +668,10 @@
 			"createSimulator": {
 				"question": "Comment se passe la création d'un simulateur WiseTrainer ?",
 				"answer": "Le processus est simple : 1) Demande de devis pour définir vos besoins, 2) Envoi de photos de vos installations (ou scan sur site par notre équipe), 3) Modélisation 3D en collaboration avec vos experts métier, 4) Co-construction des scénarios pédagogiques, 5) Livraison en environ 1 mois."
+			},
+			"assetOwnership": {
+				"question": "À qui appartient l'asset 3D créé pour mon entreprise ?",
+				"answer": "L'environnement 3D développé sur mesure pour votre entreprise vous appartient à 100%. Vous êtes propriétaire de l'asset numérique créé à partir de vos installations. C'est votre investissement, votre propriété intellectuelle."
 			},
 			"scenarioTypes": {
 				"question": "Quels types de scénarios peut-on créer ?",

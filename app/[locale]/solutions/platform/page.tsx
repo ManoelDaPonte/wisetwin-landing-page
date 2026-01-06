@@ -15,6 +15,10 @@ import {
 	FileText,
 	Users,
 	TrendingUp,
+	PenLine,
+	Upload,
+	Sparkles,
+	LineChart,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -48,6 +52,13 @@ export default function PlatformPage() {
 		{ key: "certifications", icon: BadgeCheck },
 		{ key: "reminders", icon: Bell },
 		{ key: "guests", icon: UserPlus },
+	];
+
+	const wisePaperFeatures = [
+		{ key: "create", icon: PenLine },
+		{ key: "import", icon: Upload },
+		{ key: "ai", icon: Sparkles },
+		{ key: "tracking", icon: LineChart },
 	];
 
 	return (
@@ -135,10 +146,43 @@ export default function PlatformPage() {
 				</div>
 			</Section>
 
-				{/* Features */}
+			{/* WisePaper Section */}
+			<Section
+				id="wisepaper"
+				variant="muted"
+				header={{
+					title: t("wisepaper.title"),
+					description: t("wisepaper.subtitle"),
+					centered: true,
+				}}
+			>
+				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+					{wisePaperFeatures.map((feature) => {
+						const Icon = feature.icon;
+						return (
+							<div
+								key={feature.key}
+								className="bg-card border border-border rounded-xl p-6"
+							>
+								<div className="size-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+									<Icon className="size-6 text-purple-500" />
+								</div>
+								<h3 className="text-lg font-semibold mb-2">
+									{t(`wisepaper.features.${feature.key}.title`)}
+								</h3>
+								<p className="text-muted-foreground text-sm">
+									{t(`wisepaper.features.${feature.key}.description`)}
+								</p>
+							</div>
+						);
+					})}
+				</div>
+			</Section>
+
+			{/* Features */}
 			<Section
 				id="features"
-				variant="muted"
+				variant="default"
 				header={{
 					title: t("features.title"),
 					centered: true,
@@ -171,7 +215,7 @@ export default function PlatformPage() {
 			</Section>
 
 			{/* CTA */}
-			<Section id="cta" variant="default">
+			<Section id="cta" variant="muted">
 				<div className="text-center max-w-2xl mx-auto">
 					<h2 className="text-3xl font-bold mb-4">{t("cta.title")}</h2>
 					<p className="text-muted-foreground mb-8">{t("cta.description")}</p>

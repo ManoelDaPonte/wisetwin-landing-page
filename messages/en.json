@@ -96,6 +96,28 @@
 				}
 			}
 		},
+		"wisepaper": {
+			"title": "WisePaper - Create your text-based training",
+			"subtitle": "Digitize your documents and create interactive training with result tracking",
+			"features": {
+				"create": {
+					"title": "Course creation",
+					"description": "Create your training directly in the editor, just like Notion. Simple, intuitive and collaborative."
+				},
+				"import": {
+					"title": "Document import",
+					"description": "Import your existing PDFs, Word docs, PowerPoints. Our AI transforms them into interactive modules."
+				},
+				"ai": {
+					"title": "Integrated AI",
+					"description": "Our AI automatically generates MCQs and quizzes to validate learning."
+				},
+				"tracking": {
+					"title": "Results tracking",
+					"description": "Track who did what, scores, and progress in real time."
+				}
+			}
+		},
 		"included": {
 			"title": "Included at no extra cost",
 			"description": "The management platform is integrated into your WiseTwin subscription. No additional fees, no surprises."
@@ -207,6 +229,11 @@
 				"description": "Simulate dangerous situations safely to better prepare your teams."
 			}
 		},
+		"ownership": {
+			"title": "Your asset, your property",
+			"description": "The 3D environment created for your company belongs to you. You own the custom digital asset developed from your facilities.",
+			"badge": "100% ownership"
+		},
 		"process": {
 			"title": "How does it work?",
 			"subtitle": "A simple and fast process to create your custom simulator",
@@ -244,7 +271,7 @@
 				"subtitle": "Safety simulator",
 				"description": "Training on safety procedures, emergency gestures, PPE use and risk prevention.",
 				"price": "4,500",
-				"unit": "per Environment created",
+				"unit": "per environment created",
 				"features": ["Safety procedures", "Emergency gestures", "PPE use", "Risk prevention"]
 			},
 			"tech": {
@@ -444,8 +471,7 @@
 			"savePercent": "-20%"
 		},
 		"discountBanner": {
-			"pro": "-30% on your 1st WiseTrainer³",
-			"business": "-50% on your 1st WiseTrainer³"
+			"firstOrder": "-20% on 1st order"
 		},
 		"free": {
 			"title": "Free",
@@ -456,7 +482,7 @@
 			"includes": "",
 			"features": [
 				"Up to 3 users",
-				"Unlimited WisePaper",
+				"1 WiseTrainer¹ included (LOTO procedure)",
 				"Management platform",
 				"Email support"
 			],
@@ -466,13 +492,14 @@
 			"title": "Pro",
 			"priceMonthly": "189",
 			"priceYearly": "151",
-			"period": "/month per admin¹",
+			"period": "/month per admin²",
 			"description": "For growing teams",
 			"includes": "Everything in Free, plus:",
 			"features": [
-				"Up to 500 users",
-				"Up to 50 WisePaper",
+				"Up to 100 users",
+				"Unlimited WiseTrainer",
 				"SSO & MFA",
+				"Audit logs",
 				"Priority support"
 			],
 			"cta": "Contact us"
@@ -481,21 +508,24 @@
 			"title": "Business",
 			"priceMonthly": "249",
 			"priceYearly": "199",
-			"period": "/month per admin¹",
+			"period": "/month per admin²",
 			"description": "For large organizations",
 			"includes": "Everything in Pro, plus:",
 			"features": [
 				"Unlimited users",
-				"Unlimited WisePaper",
-				"Cross-company training sharing²",
-				"API access & dedicated support"
+				"Unlimited WiseTrainer",
+				"Cross-company training sharing³",
+				"API access",
+				"Dedicated support"
 			],
 			"cta": "Contact us"
 		},
 		"notes": {
-			"admin": "¹ Price per administrator. Add as many WiseTrainers as you need.",
-			"crossCompany": "² Cross-company sharing allows you to share developed trainings with partner organizations.",
-			"wisetrainer": "³ WiseTrainer: custom-built immersive 3D simulator, replica of your facilities."
+			"wisetrainer": "¹ WiseTrainer: custom-built immersive 3D simulator, exact replica of your industrial facilities.",
+			"wisetrainerLink": "Learn more about WiseTrainer",
+			"admin": "² Price per administrator. Add as many WiseTrainers as you need.",
+			"crossCompany": "³ Cross-company sharing allows you to share developed trainings with partner organizations.",
+			"scenario": "A scenario is an interactive training path with learning objectives, actions to perform and skills validation. Each WiseTrainer includes 3 base scenarios."
 		},
 		"wisetrainerLink": "See WiseTrainer development pricing"
 	},
@@ -561,7 +591,7 @@
 			},
 			"pricingModel": {
 				"question": "How does pricing work?",
-				"answer": "WiseTwin offers 3 plans: Free (up to 3 users, unlimited WisePaper), Pro at 189€/month per admin (up to 100 users, SSO & MFA, -30% on WiseTrainer), and Business at 249€/month per admin (unlimited users, cross-company sharing, -50% on WiseTrainer). WiseTrainer simulators are billed separately based on the chosen range."
+				"answer": "WiseTwin offers 3 plans: Free (up to 3 users, 1 LOTO WiseTrainer included), Pro at 189€/month per admin (up to 100 users, SSO & MFA), and Business at 249€/month per admin (unlimited users, cross-company sharing). WiseTrainer simulators are billed separately based on the chosen range, with -20% on your first order."
 			},
 			"security": {
 				"question": "How do you handle data security?",
@@ -638,6 +668,10 @@
 			"createSimulator": {
 				"question": "How does WiseTrainer simulator creation work?",
 				"answer": "The process is simple: 1) Request a quote to define your needs, 2) Send photos of your facilities (or on-site scan by our team), 3) 3D modeling in collaboration with your business experts, 4) Co-creation of pedagogical scenarios, 5) Delivery in about 1 month."
+			},
+			"assetOwnership": {
+				"question": "Who owns the 3D asset created for my company?",
+				"answer": "The 3D environment custom-built for your company belongs to you 100%. You own the digital asset created from your facilities. It's your investment, your intellectual property."
 			},
 			"scenarioTypes": {
 				"question": "What types of scenarios can be created?",

@@ -128,6 +128,12 @@ export const allFaqs: FaqItem[] = [
 		category: "features",
 	},
 	{
+		id: "asset-ownership",
+		questionKey: "assetOwnership.question",
+		answerKey: "assetOwnership.answer",
+		category: "features",
+	},
+	{
 		id: "scenario-types",
 		questionKey: "scenarioTypes.question",
 		answerKey: "scenarioTypes.answer",

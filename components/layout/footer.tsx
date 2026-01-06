@@ -19,7 +19,6 @@ export function Footer() {
 
 	const solutionLinks = [
 		{ label: t("wisetrainer.title"), href: "/solutions/wisetrainer" },
-		{ label: t("wisepaper.title"), href: "/solutions/wisepaper" },
 		{ label: t("platform.title"), href: "/solutions/platform" },
 	];
 

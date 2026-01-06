@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { Logo } from "@/components/ui/logo";
-import { Cuboid, FileText, LayoutDashboard, Menu, ChevronDown } from "lucide-react";
+import { Cuboid, LayoutDashboard, Menu, ChevronDown } from "lucide-react";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -52,13 +52,6 @@ export function Header() {
 			href: "/solutions/wisetrainer",
 			icon: Cuboid,
 			featured: true,
-		},
-		{
-			title: tSolutions("wisepaper.title"),
-			description: tSolutions("wisepaper.subtitle"),
-			href: "/solutions/wisepaper",
-			icon: FileText,
-			featured: false,
 		},
 		{
 			title: tSolutions("platform.title"),
@@ -108,55 +101,37 @@ export function Header() {
 										{t("solutions")}
 									</NavigationMenuTrigger>
 									<NavigationMenuContent>
-										<div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-											{/* WiseTrainer - Featured */}
+										<div className="grid grid-cols-2 gap-3 p-4 w-[420px]">
+											{/* WiseTrainer - Flagship */}
 											<Link
 												href="/solutions/wisetrainer"
-												className="row-span-2 flex flex-col justify-end rounded-lg bg-gradient-to-b from-secondary/20 to-secondary/5 p-6 hover:from-secondary/30 hover:to-secondary/10 transition-colors"
+												className="flex flex-col items-center text-center rounded-xl p-4 bg-secondary/5 border border-secondary/20 hover:border-secondary/40 hover:bg-secondary/10 transition-all"
 											>
-												<Cuboid className="size-8 text-secondary mb-3" />
-												<div className="text-lg font-semibold mb-1">
+												<div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-3">
+													<Cuboid className="size-6 text-secondary" />
+												</div>
+												<div className="font-semibold mb-1">
 													{tSolutions("wisetrainer.title")}
 												</div>
-												<p className="text-sm text-muted-foreground leading-snug">
+												<p className="text-xs text-muted-foreground leading-snug">
 													{tSolutions("wisetrainer.subtitle")}
 												</p>
-											</Link>
-
-											{/* WisePaper */}
-											<Link
-												href="/solutions/wisepaper"
-												className="flex items-start gap-3 rounded-lg p-3 hover:bg-accent transition-colors"
-											>
-												<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-													<FileText className="size-5 text-secondary" />
-												</div>
-												<div>
-													<div className="font-medium mb-1">
-														{tSolutions("wisepaper.title")}
-													</div>
-													<p className="text-sm text-muted-foreground leading-snug">
-														{tSolutions("wisepaper.subtitle")}
-													</p>
-												</div>
 											</Link>
 
 											{/* Platform */}
 											<Link
 												href="/solutions/platform"
-												className="flex items-start gap-3 rounded-lg p-3 hover:bg-accent transition-colors"
+												className="flex flex-col items-center text-center rounded-xl p-4 border border-transparent hover:border-secondary/30 hover:bg-secondary/5 transition-all"
 											>
-												<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-													<LayoutDashboard className="size-5 text-secondary" />
+												<div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-3">
+													<LayoutDashboard className="size-6 text-secondary" />
 												</div>
-												<div>
-													<div className="font-medium mb-1">
-														{tSolutions("platform.title")}
-													</div>
-													<p className="text-sm text-muted-foreground leading-snug">
-														{tSolutions("platform.subtitle")}
-													</p>
+												<div className="font-semibold mb-1">
+													{tSolutions("platform.title")}
 												</div>
+												<p className="text-xs text-muted-foreground leading-snug">
+													{tSolutions("platform.subtitle")}
+												</p>
 											</Link>
 										</div>
 									</NavigationMenuContent>

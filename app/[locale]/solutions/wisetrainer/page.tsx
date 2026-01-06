@@ -21,6 +21,7 @@ import {
 	ScanLine,
 	Video,
 	Boxes,
+	Award,
 } from "lucide-react";
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 
@@ -111,6 +112,22 @@ export default function WiseTrainerPage() {
 					</div>
 				</div>
 			</section>
+
+			{/* Ownership Section */}
+			<Section id="ownership" variant="muted">
+				<div className="max-w-4xl mx-auto text-center">
+					<div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 dark:text-green-400 px-4 py-2 rounded-full mb-6">
+						<Award className="size-5" />
+						<span className="font-semibold">{t("ownership.badge")}</span>
+					</div>
+					<h2 className="text-3xl lg:text-4xl font-bold mb-4">
+						{t("ownership.title")}
+					</h2>
+					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+						{t("ownership.description")}
+					</p>
+				</div>
+			</Section>
 
 			{/* Process - How it works */}
 			<Section

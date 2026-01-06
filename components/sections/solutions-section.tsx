@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/common/section";
-import { Cuboid, FileText, LayoutDashboard, ArrowRight, Star } from "lucide-react";
+import { Cuboid, LayoutDashboard, ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -15,14 +15,6 @@ const solutions = [
 		href: "/solutions/wisetrainer",
 		flagship: true,
 		image: "/image/loto.webp",
-	},
-	{
-		key: "wisepaper",
-		translationKey: "wisepaper",
-		icon: FileText,
-		href: "/solutions/wisepaper",
-		flagship: false,
-		image: "/image/wisepaper.png",
 	},
 	{
 		key: "platform",
@@ -47,7 +39,7 @@ export function SolutionsSection() {
 				centered: true,
 			}}
 		>
-			<div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+			<div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 				{solutions.map((solution) => {
 					const Icon = solution.icon;
 					const isHighlighted = solution.flagship;
