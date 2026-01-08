@@ -22,7 +22,7 @@ const solutions = [
 		icon: LayoutDashboard,
 		href: "/solutions/platform",
 		flagship: false,
-		image: "/image/dashboard.webp",
+		image: "/image/platform-dark.png",
 	},
 ] as const;
 
@@ -70,7 +70,9 @@ export function SolutionsSection() {
 								<div className="aspect-[16/10] relative bg-muted overflow-hidden">
 									<Image
 										src={solution.image}
-										alt={t(`${solution.translationKey}.title`)}
+										alt={t(
+											`${solution.translationKey}.title`
+										)}
 										fill
 										className="object-cover group-hover:scale-105 transition-transform duration-500"
 									/>
@@ -91,18 +93,24 @@ export function SolutionsSection() {
 											<Icon
 												className={cn(
 													"size-5",
-													isHighlighted ? "text-secondary-foreground" : "text-secondary"
+													isHighlighted
+														? "text-secondary-foreground"
+														: "text-secondary"
 												)}
 											/>
 										</div>
 										<h3 className="text-xl font-bold">
-											{t(`${solution.translationKey}.title`)}
+											{t(
+												`${solution.translationKey}.title`
+											)}
 										</h3>
 									</div>
 
 									{/* Description */}
 									<p className="text-muted-foreground leading-relaxed flex-grow">
-										{t(`${solution.translationKey}.description`)}
+										{t(
+											`${solution.translationKey}.description`
+										)}
 									</p>
 
 									{/* Link - always at bottom */}
