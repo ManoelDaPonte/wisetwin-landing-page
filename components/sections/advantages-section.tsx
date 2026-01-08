@@ -13,6 +13,7 @@ import {
 	ShieldCheck,
 	Share2,
 } from "lucide-react";
+import Image from "next/image";
 
 const items = ["noDowntime", "fastDelivery", "noVR", "unlimited", "safe", "interop"] as const;
 
@@ -90,32 +91,43 @@ export function AdvantagesSection() {
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: -20 }}
 							transition={{ duration: 0.3 }}
-							className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 h-full flex flex-col justify-between"
+							className="relative rounded-2xl p-8 h-full flex flex-col justify-between overflow-hidden"
 						>
-							<div>
+							{/* Background image */}
+							<Image
+								src="/image/formation-bras-robotise.png"
+								alt=""
+								fill
+								className="object-cover"
+							/>
+							{/* Overlay */}
+							<div className="absolute inset-0 bg-black/60" />
+
+							{/* Content */}
+							<div className="relative z-10">
 								<h3 className="text-2xl font-bold text-white mb-4">
 									{t(`items.${selected}.title`)}
 								</h3>
-								<p className="text-white/70 text-lg leading-relaxed">
+								<p className="text-white/80 text-lg leading-relaxed">
 									{t(`items.${selected}.description`)}
 								</p>
 							</div>
 
 							{/* Stats */}
-							<div className="grid grid-cols-2 gap-6 mt-8">
-								<div className="bg-white/5 rounded-xl p-6 text-center">
+							<div className="relative z-10 grid grid-cols-2 gap-6 mt-8">
+								<div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 text-center">
 									<div className="text-4xl font-bold text-secondary mb-1">
 										{t(`items.${selected}.stats.value1`)}
 									</div>
-									<div className="text-sm text-white/60">
+									<div className="text-sm text-white/70">
 										{t(`items.${selected}.stats.label1`)}
 									</div>
 								</div>
-								<div className="bg-white/5 rounded-xl p-6 text-center">
+								<div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 text-center">
 									<div className="text-4xl font-bold text-secondary mb-1">
 										{t(`items.${selected}.stats.value2`)}
 									</div>
-									<div className="text-sm text-white/60">
+									<div className="text-sm text-white/70">
 										{t(`items.${selected}.stats.label2`)}
 									</div>
 								</div>
