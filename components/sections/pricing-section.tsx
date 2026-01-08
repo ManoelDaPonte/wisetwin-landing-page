@@ -18,6 +18,7 @@ const gammes = [
 export function PricingSection() {
 	const t = useTranslations("pricing");
 	const tWt = useTranslations("wisetrainer");
+	const tWtPricing = useTranslations("wisetrainerPricing");
 	const [isYearly, setIsYearly] = useState(false);
 
 	return (
@@ -214,7 +215,10 @@ export function PricingSection() {
 										{tWt(`gammes.${gamme.key}.unit`)}
 									</p>
 									<div className="text-3xl font-bold text-secondary">
-										{tWt(`gammes.${gamme.key}.price`)}
+										<span className="text-lg text-muted-foreground line-through mr-2">
+											{tWtPricing(`gammes.${gamme.key}.oldPrice`)} €
+										</span>
+										{tWtPricing(`gammes.${gamme.key}.price`)}
 										<span className="text-lg font-normal text-muted-foreground"> €</span>
 									</div>
 									<p className="text-xs text-muted-foreground mt-1">

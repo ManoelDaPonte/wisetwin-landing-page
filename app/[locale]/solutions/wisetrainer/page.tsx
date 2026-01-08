@@ -11,19 +11,17 @@ import {
 	Clapperboard,
 	CheckCircle,
 	Clock,
-	Shield,
-	Wrench,
-	Flame,
-	Biohazard,
-	Lock,
-	Settings,
 	ImageIcon,
 	ScanLine,
 	Video,
 	Boxes,
 	Award,
+	Flame,
+	Biohazard,
+	Lock,
+	Settings,
 } from "lucide-react";
-import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
+import Image from "next/image";
 
 export async function generateMetadata({
 	params,
@@ -42,13 +40,6 @@ export default function WiseTrainerPage() {
 	const t = useTranslations("wisetrainer");
 	const tCommon = useTranslations("common");
 
-	const scenarioItems = [
-		{ key: "fire", icon: Flame, color: "text-orange-500" },
-		{ key: "chemical", icon: Biohazard, color: "text-yellow-500" },
-		{ key: "lockout", icon: Lock, color: "text-blue-500" },
-		{ key: "maintenance", icon: Settings, color: "text-green-500" },
-	];
-
 	const processSteps = [
 		{ key: "quote", icon: FileText, number: 1 },
 		{ key: "photos", icon: Camera, number: 2 },
@@ -57,9 +48,11 @@ export default function WiseTrainerPage() {
 		{ key: "delivery", icon: CheckCircle, number: 5 },
 	];
 
-	const gammes = [
-		{ key: "safe", icon: Shield },
-		{ key: "tech", icon: Wrench },
+	const scenarioItems = [
+		{ key: "fire", icon: Flame, color: "text-orange-500" },
+		{ key: "chemical", icon: Biohazard, color: "text-yellow-500" },
+		{ key: "lockout", icon: Lock, color: "text-blue-500" },
+		{ key: "maintenance", icon: Settings, color: "text-green-500" },
 	];
 
 	const sourceItems = [
@@ -72,7 +65,7 @@ export default function WiseTrainerPage() {
 	return (
 		<main>
 			{/* Hero */}
-			<section className="relative py-20 lg:py-32 bg-gradient-to-br from-background via-background to-muted/30">
+			<section className="relative py-20 lg:py-28 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
 				<div className="container mx-auto max-w-7xl px-4">
 					<Link
 						href="/"
@@ -82,32 +75,54 @@ export default function WiseTrainerPage() {
 						<span>{tCommon("back")}</span>
 					</Link>
 
-					<div className="grid lg:grid-cols-2 gap-12 items-center">
-						<div>
-							{/* Badge */}
-							<div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full mb-6">
-								<Clock className="size-4" />
-								<span className="font-medium text-sm">{t("hero.badge")}</span>
+					{/* Text content centered */}
+					<div className="text-center max-w-3xl mx-auto mb-12">
+						<div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full mb-6">
+							<Clock className="size-4" />
+							<span className="font-medium text-sm">{t("hero.badge")}</span>
+						</div>
+
+						<h1 className="text-4xl lg:text-5xl font-bold mb-6">
+							{t("hero.title")}
+						</h1>
+						<p className="text-xl text-muted-foreground mb-8">
+							{t("hero.subtitle")}
+						</p>
+						<Button size="lg" asChild>
+							<Link href="/#contact">{t("hero.cta")}</Link>
+						</Button>
+					</div>
+
+					{/* Screenshot in app window frame */}
+					<div className="relative max-w-5xl mx-auto">
+						{/* Glow effect */}
+						<div className="absolute -inset-4 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/20 rounded-2xl blur-2xl opacity-50" />
+
+						{/* Window frame */}
+						<div className="relative bg-card border border-border rounded-xl overflow-hidden shadow-2xl">
+							{/* Window header bar */}
+							<div className="flex items-center gap-2 px-4 py-3 bg-muted/50 border-b border-border">
+								<div className="flex gap-1.5">
+									<div className="size-3 rounded-full bg-red-500" />
+									<div className="size-3 rounded-full bg-yellow-500" />
+									<div className="size-3 rounded-full bg-green-500" />
+								</div>
+								<div className="flex-1 text-center">
+									<span className="text-xs text-muted-foreground">WiseTrainer - Simulateur 3D</span>
+								</div>
 							</div>
 
-							<h1 className="text-4xl lg:text-5xl font-bold mb-6">
-								{t("hero.title")}
-							</h1>
-							<p className="text-xl text-muted-foreground mb-8">
-								{t("hero.subtitle")}
-							</p>
-							<Button size="lg" asChild>
-								<Link href="/#contact">{t("hero.cta")}</Link>
-							</Button>
-						</div>
-						<div className="relative w-full">
-							<div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110" />
-							<HeroVideoDialog
-								animationStyle="from-center"
-								videoSrc="/video/wisetrainer-presentation.mp4"
-								thumbnailSrc="/image/loto.webp"
-								thumbnailAlt="WiseTrainer Demo"
-							/>
+							{/* Screenshot */}
+							<div className="relative">
+								<Image
+									src="/image/loto.webp"
+									alt="WiseTrainer - Simulateur de formation 3D"
+									width={1200}
+									height={750}
+									className="w-full h-auto"
+									priority
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -116,7 +131,7 @@ export default function WiseTrainerPage() {
 			{/* Ownership Section */}
 			<Section id="ownership" variant="muted">
 				<div className="max-w-4xl mx-auto text-center">
-					<div className="inline-flex items-center gap-2 bg-green-500/10 text-green-600 dark:text-green-400 px-4 py-2 rounded-full mb-6">
+					<div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full mb-6">
 						<Award className="size-5" />
 						<span className="font-semibold">{t("ownership.badge")}</span>
 					</div>
@@ -226,89 +241,10 @@ export default function WiseTrainerPage() {
 				</div>
 			</Section>
 
-			{/* Gammes - Types of WiseTrainer */}
-			<Section
-				id="gammes"
-				variant="default"
-				header={{
-					title: t("gammes.title"),
-					description: t("gammes.subtitle"),
-					centered: true,
-				}}
-			>
-				<div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-					{gammes.map((gamme) => {
-						const Icon = gamme.icon;
-						const features = t.raw(`gammes.${gamme.key}.features`) as string[];
-						return (
-							<div
-								key={gamme.key}
-								className="bg-card border border-border rounded-2xl p-6 hover:border-secondary/50 transition-colors"
-							>
-								{/* Header */}
-								<div className="size-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-4">
-									<Icon className="size-7 text-secondary" />
-								</div>
-
-								<h3 className="text-xl font-bold mb-1">
-									{t(`gammes.${gamme.key}.title`)}
-								</h3>
-								<p className="text-sm text-secondary font-medium mb-3">
-									{t(`gammes.${gamme.key}.subtitle`)}
-								</p>
-
-								<p className="text-muted-foreground text-sm mb-4">
-									{t(`gammes.${gamme.key}.description`)}
-								</p>
-
-								{/* Features list */}
-								<ul className="space-y-2 mb-6">
-									{features.map((feature, index) => (
-										<li key={index} className="flex items-center gap-2 text-sm">
-											<CheckCircle className="size-4 text-secondary" />
-											<span>{feature}</span>
-										</li>
-									))}
-								</ul>
-
-								{/* Price */}
-								<div className="pt-4 border-t border-border">
-									<p className="text-xs text-muted-foreground mb-1">
-										{t(`gammes.${gamme.key}.unit`)}
-									</p>
-									<p className="text-2xl font-bold">
-										{t(`gammes.${gamme.key}.price`)}
-										<span className="text-base font-normal text-muted-foreground"> €</span>
-									</p>
-									<p className="text-xs text-muted-foreground mt-1">
-										{t("gammes.includedScenarios")}*
-									</p>
-								</div>
-							</div>
-						);
-					})}
-				</div>
-
-				{/* Additional scenario pricing */}
-				<div className="mt-8 text-center space-y-2">
-					<p className="text-muted-foreground">
-						{t("gammes.scenario.title")}:{" "}
-						<span className="font-semibold text-foreground">
-							{t("gammes.scenario.price")} € {t("gammes.scenario.unit")}
-						</span>
-					</p>
-					<p className="text-xs text-muted-foreground">
-						*<a href="#scenarios" className="text-secondary hover:underline ml-1">
-							{t("gammes.scenarioNote")}
-						</a>
-					</p>
-				</div>
-			</Section>
-
 			{/* Scenarios Section */}
 			<Section
 				id="scenarios"
-				variant="muted"
+				variant="default"
 				header={{
 					title: t("scenarios.title"),
 					description: t("scenarios.subtitle"),
@@ -339,7 +275,7 @@ export default function WiseTrainerPage() {
 			</Section>
 
 			{/* CTA */}
-			<Section id="cta" variant="default">
+			<Section id="cta" variant="muted">
 				<div className="text-center max-w-2xl mx-auto">
 					<h2 className="text-3xl font-bold mb-4">{t("cta.title")}</h2>
 					<p className="text-muted-foreground mb-8">{t("cta.description")}</p>

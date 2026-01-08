@@ -8,7 +8,6 @@ export { WiseTrainerAdvantagesSection } from "./wisetrainer-advantages-section";
 export { TechnologySection } from "./technology-section";
 export { SecuritySection } from "./security-section";
 export { PricingSection } from "./pricing-section";
-export { WiseTrainerPricingSection } from "./wisetrainer-pricing-section";
 export { ContactSection } from "./contact-section";
 export { ProfilesSection } from "./profiles-section";
 export { FaqSection } from "./faq-section";

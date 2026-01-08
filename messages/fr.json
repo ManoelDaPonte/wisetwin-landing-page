@@ -270,7 +270,7 @@
 				"title": "Gamme Safe",
 				"subtitle": "Simulateur sécurité",
 				"description": "Formation aux procédures de sécurité, gestes d'urgence, port des EPI et prévention des risques.",
-				"price": "4 500",
+				"price": "5 625",
 				"unit": "par environnement créé",
 				"features": ["Procédures de sécurité", "Gestes d'urgence", "Port des EPI", "Prévention des risques"]
 			},
@@ -278,7 +278,7 @@
 				"title": "Gamme Tech",
 				"subtitle": "Simulateur maintenance",
 				"description": "Formation aux opérations de maintenance, diagnostics de pannes et procédures techniques.",
-				"price": "9 500",
+				"price": "11 875",
 				"unit": "par équipement",
 				"features": ["Opérations de maintenance", "Diagnostic de pannes", "Procédures techniques", "Consignation"]
 			},
@@ -537,19 +537,15 @@
 			"safe": {
 				"title": "Gamme Safe",
 				"description": "Simulateur sécurité",
-				"price": "6 000",
+				"price": "4 500",
+				"oldPrice": "5 625",
 				"unit": "à partir de"
 			},
 			"tech": {
 				"title": "Gamme Tech",
 				"description": "Simulateur maintenance",
-				"price": "9 600",
-				"unit": "à partir de"
-			},
-			"lean": {
-				"title": "Gamme Lean",
-				"description": "Simulateur process",
-				"price": "9 800",
+				"price": "9 000",
+				"oldPrice": "11 875",
 				"unit": "à partir de"
 			}
 		},

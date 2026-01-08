@@ -20,7 +20,7 @@ import {
 	Sparkles,
 	LineChart,
 } from "lucide-react";
-import Image from "next/image";
+import { ThemeImage } from "@/components/ui/theme-image";
 
 export async function generateMetadata({
 	params,
@@ -40,10 +40,10 @@ export default function PlatformPage() {
 	const tCommon = useTranslations("common");
 
 	const hubItems = [
-		{ key: "wisetrainer", icon: Cuboid, color: "bg-blue-500" },
-		{ key: "wisepaper", icon: FileText, color: "bg-purple-500" },
-		{ key: "users", icon: Users, color: "bg-green-500" },
-		{ key: "results", icon: TrendingUp, color: "bg-orange-500" },
+		{ key: "wisetrainer", icon: Cuboid, color: "bg-secondary" },
+		{ key: "wisepaper", icon: FileText, color: "bg-secondary" },
+		{ key: "users", icon: Users, color: "bg-secondary" },
+		{ key: "results", icon: TrendingUp, color: "bg-secondary" },
 	];
 
 	const features = [
@@ -64,7 +64,7 @@ export default function PlatformPage() {
 	return (
 		<main>
 			{/* Hero */}
-			<section className="relative py-20 lg:py-32 bg-gradient-to-br from-background via-background to-muted/30">
+			<section className="relative py-20 lg:py-28 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
 				<div className="container mx-auto max-w-7xl px-4">
 					<Link
 						href="/"
@@ -74,38 +74,59 @@ export default function PlatformPage() {
 						<span>{tCommon("back")}</span>
 					</Link>
 
-					<div className="grid lg:grid-cols-2 gap-12 items-center">
-						<div>
-							{/* Badge Inclus */}
-							<div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium mb-4">
-								<CheckCircle className="size-4" />
-								{t("hero.badge")}
+					{/* Text content centered */}
+					<div className="text-center max-w-3xl mx-auto mb-12">
+						<div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium mb-4">
+							<CheckCircle className="size-4" />
+							{t("hero.badge")}
+						</div>
+
+						<h1 className="text-4xl lg:text-5xl font-bold mb-6">
+							{t("hero.title")}
+						</h1>
+						<p className="text-xl text-muted-foreground mb-8">
+							{t("hero.subtitle")}
+						</p>
+						<Button size="lg" asChild>
+							<a
+								href="https://app.wisetwin.eu"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{t("hero.cta")}
+							</a>
+						</Button>
+					</div>
+
+					{/* Screenshot in app window frame */}
+					<div className="relative max-w-5xl mx-auto">
+						{/* Glow effect */}
+						<div className="absolute -inset-4 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/20 rounded-2xl blur-2xl opacity-50" />
+
+						{/* Window frame */}
+						<div className="relative bg-card border border-border rounded-xl overflow-hidden shadow-2xl">
+							{/* Window header bar */}
+							<div className="flex items-center gap-2 px-4 py-3 bg-muted/50 border-b border-border">
+								<div className="flex gap-1.5">
+									<div className="size-3 rounded-full bg-red-500" />
+									<div className="size-3 rounded-full bg-yellow-500" />
+									<div className="size-3 rounded-full bg-green-500" />
+								</div>
+								<div className="flex-1 text-center">
+									<span className="text-xs text-muted-foreground">app.wisetwin.eu</span>
+								</div>
 							</div>
 
-							<h1 className="text-4xl lg:text-5xl font-bold mb-6">
-								{t("hero.title")}
-							</h1>
-							<p className="text-xl text-muted-foreground mb-8">
-								{t("hero.subtitle")}
-							</p>
-							<Button size="lg" asChild>
-								<a
-									href="https://app.wisetwin.eu"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{t("hero.cta")}
-								</a>
-							</Button>
-						</div>
-						<div className="relative w-full">
-							<div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110" />
-							<div className="relative aspect-video rounded-2xl overflow-hidden bg-muted shadow-2xl">
-								<Image
-									src="/image/dashboard.webp"
-									alt="WiseTwin Platform"
-									fill
-									className="object-cover"
+							{/* Screenshot */}
+							<div className="relative">
+								<ThemeImage
+									lightSrc="/image/platform-dark.png"
+									darkSrc="/image/platform-light.png"
+									alt="WiseTwin Platform Dashboard"
+									width={1200}
+									height={750}
+									className="w-full h-auto"
+									priority
 								/>
 							</div>
 						</div>
@@ -164,8 +185,8 @@ export default function PlatformPage() {
 								key={feature.key}
 								className="bg-card border border-border rounded-xl p-6"
 							>
-								<div className="size-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
-									<Icon className="size-6 text-purple-500" />
+								<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+									<Icon className="size-6 text-secondary" />
 								</div>
 								<h3 className="text-lg font-semibold mb-2">
 									{t(`wisepaper.features.${feature.key}.title`)}

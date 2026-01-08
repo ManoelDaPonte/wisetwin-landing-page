@@ -270,7 +270,7 @@
 				"title": "Safe Range",
 				"subtitle": "Safety simulator",
 				"description": "Training on safety procedures, emergency gestures, PPE use and risk prevention.",
-				"price": "4,500",
+				"price": "5,625",
 				"unit": "per environment created",
 				"features": ["Safety procedures", "Emergency gestures", "PPE use", "Risk prevention"]
 			},
@@ -278,7 +278,7 @@
 				"title": "Tech Range",
 				"subtitle": "Maintenance simulator",
 				"description": "Training on maintenance operations, fault diagnosis and technical procedures.",
-				"price": "9,500",
+				"price": "11,875",
 				"unit": "per equipment",
 				"features": ["Maintenance operations", "Fault diagnosis", "Technical procedures", "Lockout/Tagout"]
 			},
@@ -537,19 +537,15 @@
 			"safe": {
 				"title": "Safe Range",
 				"description": "Safety simulator",
-				"price": "6,000",
+				"price": "4,500",
+				"oldPrice": "5,625",
 				"unit": "starting from"
 			},
 			"tech": {
 				"title": "Tech Range",
 				"description": "Maintenance simulator",
-				"price": "9,600",
-				"unit": "starting from"
-			},
-			"lean": {
-				"title": "Lean Range",
-				"description": "Process simulator",
-				"price": "9,800",
+				"price": "9,000",
+				"oldPrice": "11,875",
 				"unit": "starting from"
 			}
 		},

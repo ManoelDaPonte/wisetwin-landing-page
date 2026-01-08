@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { WordRotate } from "@/components/magicui/word-rotate";
-import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import { Clock, Users, Factory } from "lucide-react";
 
 export function HeroSection() {
@@ -30,14 +29,14 @@ export function HeroSection() {
 					<div className="flex flex-col justify-center space-y-6 lg:space-y-8">
 						<div className="space-y-6">
 							<div className="space-y-3">
-								<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+								<h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
 									{t("titlePrefix")}{" "}
 									<span className="text-secondary">
 										{t("titleHighlight")}
 									</span>
 								</h1>
 
-								<div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+								<div className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
 									<div className="flex items-center flex-wrap gap-2">
 										<span>{t("rotatingPrefix")}</span>
 										<WordRotate
@@ -81,15 +80,18 @@ export function HeroSection() {
 						</div>
 					</div>
 
-					<div className="flex items-center justify-center pointer-events-none">
-						<div className="relative w-full max-w-2xl pointer-events-auto">
+					<div className="flex items-center justify-center">
+						<div className="relative w-full max-w-2xl">
 							<div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110" />
-							<HeroVideoDialog
-								animationStyle="from-center"
-								videoSrc="/video/wisetrainer-presentation.mp4"
-								thumbnailSrc="/image/wisetrainer-presentation.png"
-								thumbnailAlt="WiseTwin Platform Demo"
-							/>
+							<video
+								autoPlay
+								loop
+								muted
+								playsInline
+								className="relative rounded-2xl shadow-2xl w-full"
+							>
+								<source src="/video/WiseTrainer-SimulateursDeFormation.mp4" type="video/mp4" />
+							</video>
 						</div>
 					</div>
 				</div>
