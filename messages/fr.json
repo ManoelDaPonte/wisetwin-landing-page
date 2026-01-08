@@ -27,11 +27,11 @@
 		"titleHighlight": "sécurité",
 		"rotatingPrefix": "Plus",
 		"rotatingWords": ["de productivité", "de rétention", "d'engagement", "de sérénité"],
-		"subtitle": "Digitalisez vos formations et plongez vos collaborateurs dans des environnements immersifs sur mesure, répliques exactes de vos installations.",
+		"subtitle": "Digitalisez vos formations et plongez vos collaborateurs dans des situations immersives sur mesure, répliques exactes de vos installations.",
 		"cta": "Essai gratuit",
 		"ctaSecondary": "Demander un devis",
 		"highlights": {
-			"replica": "Réplique exacte de vos installations",
+			"replica": "Réplique virtuelle de vos installations",
 			"team": "Co-construit avec vos équipes",
 			"speed": "Livraison en 1 mois"
 		}
@@ -50,7 +50,7 @@
 			},
 			"precision": {
 				"title": "Réplique exacte",
-				"description": "Technologies d'imagerie avancées et ingénieurs 3D dédiés pour recréer fidèlement vos installations."
+				"description": "Technologies d'imagerie avancées et ingénieurs en modélisation 3D dédiés pour recréer fidèlement vos installations."
 			}
 		}
 	},
@@ -371,7 +371,7 @@
 			"noDowntime": {
 				"label": "0 arrêt",
 				"shortDesc": "Production non impactée",
-				"title": "Formez sans bloquer vos installations",
+				"title": "Formez sans mobiliser vos installations",
 				"description": "Vos lignes de production continuent de tourner pendant que vos équipes se forment sur le jumeau numérique. Plus besoin de mobiliser vos installations réelles.",
 				"stats": {
 					"value1": "0",
@@ -396,7 +396,7 @@
 				"label": "100% web",
 				"shortDesc": "Sans casque VR",
 				"title": "Accessible sur navigateur",
-				"description": "Pas besoin d'investir dans du matériel coûteux. Vos formations sont accessibles depuis n'importe quel navigateur, sur PC, tablette ou mobile.",
+				"description": "Pas besoin d'investir dans du matériel coûteux. Vos formations sont accessibles depuis n'importe quel navigateur, sur PC, tablette ou mobile, en toute sécurité.",
 				"stats": {
 					"value1": "0€",
 					"label1": "d'équipement",
@@ -521,7 +521,7 @@
 			"cta": "Nous contacter"
 		},
 		"notes": {
-			"wisetrainer": "¹ WiseTrainer : simulateur 3D immersif sur mesure, réplique exacte de vos installations industrielles.",
+			"wisetrainer": "¹ WiseTrainer : simulateur 3D immersif sur mesure, réplique virtuelle de vos installations industrielles.",
 			"wisetrainerLink": "En savoir plus sur WiseTrainer",
 			"admin": "² Tarif par administrateur. Ajoutez autant de WiseTrainer que vous le souhaitez.",
 			"crossCompany": "³ La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",

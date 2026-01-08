@@ -27,11 +27,11 @@
 		"titleHighlight": "safety",
 		"rotatingPrefix": "More",
 		"rotatingWords": ["productivity", "retention", "engagement", "peace of mind"],
-		"subtitle": "Digitize your training and immerse your employees in custom immersive environments, exact replicas of your facilities.",
+		"subtitle": "Digitize your training and immerse your employees in custom immersive situations, exact replicas of your facilities.",
 		"cta": "Free trial",
 		"ctaSecondary": "Request a quote",
 		"highlights": {
-			"replica": "Exact replica of your facilities",
+			"replica": "Virtual replica of your facilities",
 			"team": "Co-built with your teams",
 			"speed": "Delivered in 1 month"
 		}
@@ -50,7 +50,7 @@
 			},
 			"precision": {
 				"title": "Exact replica",
-				"description": "Advanced imaging technologies and dedicated 3D engineers to faithfully recreate your facilities."
+				"description": "Advanced imaging technologies and dedicated 3D modelling engineers to faithfully recreate your facilities."
 			}
 		}
 	},
@@ -396,7 +396,7 @@
 				"label": "100% web",
 				"shortDesc": "No VR headset",
 				"title": "Browser accessible",
-				"description": "No need to invest in expensive equipment. Your training is accessible from any browser, on PC, tablet or mobile.",
+				"description": "No need to invest in expensive equipment. Your training is accessible from any browser, on PC, tablet or mobile, securely.",
 				"stats": {
 					"value1": "0€",
 					"label1": "equipment cost",
@@ -521,7 +521,7 @@
 			"cta": "Contact us"
 		},
 		"notes": {
-			"wisetrainer": "¹ WiseTrainer: custom-built immersive 3D simulator, exact replica of your industrial facilities.",
+			"wisetrainer": "¹ WiseTrainer: custom-built immersive 3D simulator, virtual replica of your industrial facilities.",
 			"wisetrainerLink": "Learn more about WiseTrainer",
 			"admin": "² Price per administrator. Add as many WiseTrainers as you need.",
 			"crossCompany": "³ Cross-company sharing allows you to share developed trainings with partner organizations.",
