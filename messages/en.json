@@ -466,8 +466,8 @@
 		"title": "Subscription Licenses",
 		"subtitle": "Choose the plan that fits your organization",
 		"billing": {
-			"yearly": "Yearly",
-			"threeYears": "Triannual",
+			"yearly": "1 Year",
+			"threeYears": "3 Years",
 			"savePercent": "-20%"
 		},
 		"discountBanner": {
@@ -536,8 +536,8 @@
 			"proDesc": "Up to 100 users",
 			"businessDesc": "Unlimited users + API",
 			"billingPeriod": "Commitment period",
-			"yearly": "Yearly",
-			"threeYears": "Triannual",
+			"yearly": "1 Year",
+			"threeYears": "3 Years",
 			"admins": "Number of administrators",
 			"adminsHint": "1 to 2 administrators are enough in most cases. Start small and add more if needed.",
 			"wisetrainers": "Number of WiseTrainer to develop",

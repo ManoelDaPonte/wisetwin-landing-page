@@ -466,8 +466,8 @@
 		"title": "Licences par souscription",
 		"subtitle": "Choisissez la formule adaptée à votre organisation",
 		"billing": {
-			"yearly": "Annuel",
-			"threeYears": "Triannuel",
+			"yearly": "1 an",
+			"threeYears": "3 ans",
 			"savePercent": "-20%"
 		},
 		"discountBanner": {
@@ -536,8 +536,8 @@
 			"proDesc": "Jusqu'à 100 utilisateurs",
 			"businessDesc": "Utilisateurs illimités + API",
 			"billingPeriod": "Durée d'engagement",
-			"yearly": "Annuel",
-			"threeYears": "Triannuel",
+			"yearly": "1 an",
+			"threeYears": "3 ans",
 			"admins": "Nombre d'administrateurs",
 			"adminsHint": "1 à 2 administrateurs suffisent dans la plupart des cas. Commencez petit et ajoutez-en si nécessaire.",
 			"wisetrainers": "Nombre de WiseTrainer à développer",
