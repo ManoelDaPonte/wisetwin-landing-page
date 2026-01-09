@@ -72,7 +72,7 @@
 			"title": "Le hub de vos formations",
 			"subtitle": "Centralisez WiseTrainer et WisePaper. Gérez vos équipes, suivez les résultats et certifiez vos apprenants.",
 			"cta": "Essayer gratuitement",
-			"badge": "Inclus dans votre abonnement"
+			"badge": "Inclus dans votre licence"
 		},
 		"hub": {
 			"title": "Tout au même endroit",
@@ -120,7 +120,7 @@
 		},
 		"included": {
 			"title": "Inclus sans surcoût",
-			"description": "La plateforme de gestion est intégrée à votre abonnement WiseTwin. Pas de frais supplémentaires, pas de surprises."
+			"description": "La plateforme de gestion est intégrée à votre licence WiseTwin. Pas de frais supplémentaires, pas de surprises."
 		},
 		"features": {
 			"title": "Fonctionnalités",
@@ -303,7 +303,7 @@
 			"title": "Digitalisez vos formations",
 			"subtitle": "Transformez vos documents existants en formations interactives avec suivi des résultats. Comme Notion, mais conçu pour la formation.",
 			"cta": "Commencer",
-			"badge": "Inclus dans votre abonnement"
+			"badge": "Inclus dans votre licence"
 		},
 		"flow": {
 			"title": "Comment ça marche ?",
@@ -463,21 +463,21 @@
 		}
 	},
 	"pricing": {
-		"title": "Tarifs simples et transparents",
-		"subtitle": "Choisissez le plan adapté à votre organisation",
+		"title": "Licences par souscription",
+		"subtitle": "Choisissez la formule adaptée à votre organisation",
 		"billing": {
-			"monthly": "Mensuel",
 			"yearly": "Annuel",
+			"threeYears": "Triannuel",
 			"savePercent": "-20%"
 		},
 		"discountBanner": {
 			"firstOrder": "-20% sur la 1ère commande"
 		},
 		"free": {
-			"title": "Gratuit",
-			"priceMonthly": "0",
+			"title": "Découverte",
 			"priceYearly": "0",
-			"period": "/mois",
+			"priceThreeYears": "0",
+			"period": "/an",
 			"description": "Parfait pour découvrir la plateforme",
 			"includes": "",
 			"features": [
@@ -490,11 +490,11 @@
 		},
 		"pro": {
 			"title": "Pro",
-			"priceMonthly": "189",
-			"priceYearly": "151",
-			"period": "/mois par admin²",
+			"priceYearly": "1 812",
+			"priceThreeYears": "1 450",
+			"period": "/an par admin²",
 			"description": "Pour les équipes en croissance",
-			"includes": "Tout le plan Gratuit, plus :",
+			"includes": "Tout le plan Découverte, plus :",
 			"features": [
 				"Jusqu'à 100 utilisateurs",
 				"WiseTrainer illimités",
@@ -506,9 +506,9 @@
 		},
 		"business": {
 			"title": "Business",
-			"priceMonthly": "249",
-			"priceYearly": "199",
-			"period": "/mois par admin²",
+			"priceYearly": "2 388",
+			"priceThreeYears": "1 910",
+			"period": "/an par admin²",
 			"description": "Pour les grandes organisations",
 			"includes": "Tout le plan Pro, plus :",
 			"features": [
@@ -527,7 +527,44 @@
 			"crossCompany": "³ La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",
 			"scenario": "Un scénario est un parcours de formation interactif avec objectifs pédagogiques, actions à réaliser et validation des acquis. Chaque WiseTrainer inclut 3 scénarios de base."
 		},
-		"wisetrainerLink": "Voir les tarifs de développement WiseTrainer"
+		"wisetrainerLink": "Voir les tarifs de développement WiseTrainer",
+		"calculator": {
+			"title": "Estimez votre investissement",
+			"subtitle": "Configurez votre projet et obtenez une estimation personnalisée",
+			"platformFree": "La plateforme WiseTwin est gratuite jusqu'à la livraison de votre premier WiseTrainer. Vous ne payez votre licence qu'à partir du moment où vous commencez réellement à former.",
+			"licenseTier": "Formule de licence",
+			"proDesc": "Jusqu'à 100 utilisateurs",
+			"businessDesc": "Utilisateurs illimités + API",
+			"billingPeriod": "Durée d'engagement",
+			"yearly": "Annuel",
+			"threeYears": "Triannuel",
+			"admins": "Nombre d'administrateurs",
+			"adminsHint": "1 à 2 administrateurs suffisent dans la plupart des cas. Commencez petit et ajoutez-en si nécessaire.",
+			"wisetrainers": "Nombre de WiseTrainer à développer",
+			"wisetrainerType": "Type de WiseTrainer",
+			"safe": "Safe",
+			"tech": "Tech",
+			"mixed": "Mix",
+			"mixedExplanation": "Le mix calcule la moyenne des prix Safe et Tech, idéal si vous prévoyez de commander les deux gammes.",
+			"volumeDiscounts": "Remises volume sur les WiseTrainer suivants :",
+			"result": {
+				"title": "Votre estimation",
+				"license": "Licence",
+				"firstWt": "1er WiseTrainer",
+				"firstDiscount": "-20% 1ère commande",
+				"nextWt": "WiseTrainer suivants",
+				"volumeDiscount": "Remise volume",
+				"total": "Total",
+				"firstYear": "1ère année",
+				"savings": "Vous économisez",
+				"cta": "Demander un devis détaillé"
+			},
+			"discountTiers": {
+				"tier1": "À partir de 3 WiseTrainer : -10%",
+				"tier2": "À partir de 5 WiseTrainer : -15%",
+				"tier3": "À partir de 10 WiseTrainer : -25%"
+			}
+		}
 	},
 	"wisetrainerPricing": {
 		"title": "Tarifs WiseTrainer",
@@ -623,7 +660,7 @@
 			},
 			"economicBenefits": {
 				"question": "Quels sont les avantages économiques ?",
-				"answer": "WiseTwin permet de réduire les coûts de formation (moins de déplacements, formations répétables à l'infini sans coût supplémentaire), d'améliorer la rétention des connaissances grâce à l'immersion, et de diminuer les accidents grâce à une meilleure préparation. La plateforme de gestion est incluse sans surcoût dans votre abonnement."
+				"answer": "WiseTwin permet de réduire les coûts de formation (moins de déplacements, formations répétables à l'infini sans coût supplémentaire), d'améliorer la rétention des connaissances grâce à l'immersion, et de diminuer les accidents grâce à une meilleure préparation. La plateforme de gestion est incluse sans surcoût dans votre licence."
 			},
 			"progressTracking": {
 				"question": "Comment fonctionne le suivi des progressions ?",

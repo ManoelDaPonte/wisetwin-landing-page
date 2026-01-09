@@ -72,7 +72,7 @@
 			"title": "Your training hub",
 			"subtitle": "Centralize WiseTrainer and WisePaper. Manage your teams, track results and certify your learners.",
 			"cta": "Try for free",
-			"badge": "Included in your subscription"
+			"badge": "Included in your license"
 		},
 		"hub": {
 			"title": "Everything in one place",
@@ -120,7 +120,7 @@
 		},
 		"included": {
 			"title": "Included at no extra cost",
-			"description": "The management platform is integrated into your WiseTwin subscription. No additional fees, no surprises."
+			"description": "The management platform is integrated into your WiseTwin license. No additional fees, no surprises."
 		},
 		"features": {
 			"title": "Features",
@@ -303,7 +303,7 @@
 			"title": "Digitize your training",
 			"subtitle": "Transform your existing documents into interactive training with result tracking. Like Notion, but designed for training.",
 			"cta": "Get started",
-			"badge": "Included in your subscription"
+			"badge": "Included in your license"
 		},
 		"flow": {
 			"title": "How does it work?",
@@ -463,21 +463,21 @@
 		}
 	},
 	"pricing": {
-		"title": "Simple and transparent pricing",
+		"title": "Subscription Licenses",
 		"subtitle": "Choose the plan that fits your organization",
 		"billing": {
-			"monthly": "Monthly",
 			"yearly": "Yearly",
+			"threeYears": "Triannual",
 			"savePercent": "-20%"
 		},
 		"discountBanner": {
 			"firstOrder": "-20% on 1st order"
 		},
 		"free": {
-			"title": "Free",
-			"priceMonthly": "0",
+			"title": "Discovery",
 			"priceYearly": "0",
-			"period": "/month",
+			"priceThreeYears": "0",
+			"period": "/year",
 			"description": "Perfect for discovering the platform",
 			"includes": "",
 			"features": [
@@ -490,11 +490,11 @@
 		},
 		"pro": {
 			"title": "Pro",
-			"priceMonthly": "189",
-			"priceYearly": "151",
-			"period": "/month per admin²",
+			"priceYearly": "1,812",
+			"priceThreeYears": "1,450",
+			"period": "/year per admin²",
 			"description": "For growing teams",
-			"includes": "Everything in Free, plus:",
+			"includes": "Everything in Discovery, plus:",
 			"features": [
 				"Up to 100 users",
 				"Unlimited WiseTrainer",
@@ -506,9 +506,9 @@
 		},
 		"business": {
 			"title": "Business",
-			"priceMonthly": "249",
-			"priceYearly": "199",
-			"period": "/month per admin²",
+			"priceYearly": "2,388",
+			"priceThreeYears": "1,910",
+			"period": "/year per admin²",
 			"description": "For large organizations",
 			"includes": "Everything in Pro, plus:",
 			"features": [
@@ -527,7 +527,44 @@
 			"crossCompany": "³ Cross-company sharing allows you to share developed trainings with partner organizations.",
 			"scenario": "A scenario is an interactive training path with learning objectives, actions to perform and skills validation. Each WiseTrainer includes 3 base scenarios."
 		},
-		"wisetrainerLink": "See WiseTrainer development pricing"
+		"wisetrainerLink": "See WiseTrainer development pricing",
+		"calculator": {
+			"title": "Estimate your investment",
+			"subtitle": "Configure your project and get a personalized estimate",
+			"platformFree": "The WiseTwin platform is free until your first WiseTrainer is delivered. You only pay your license when you actually start training.",
+			"licenseTier": "License tier",
+			"proDesc": "Up to 100 users",
+			"businessDesc": "Unlimited users + API",
+			"billingPeriod": "Commitment period",
+			"yearly": "Yearly",
+			"threeYears": "Triannual",
+			"admins": "Number of administrators",
+			"adminsHint": "1 to 2 administrators are enough in most cases. Start small and add more if needed.",
+			"wisetrainers": "Number of WiseTrainer to develop",
+			"wisetrainerType": "WiseTrainer type",
+			"safe": "Safe",
+			"tech": "Tech",
+			"mixed": "Mix",
+			"mixedExplanation": "Mix calculates the average of Safe and Tech prices, ideal if you plan to order both ranges.",
+			"volumeDiscounts": "Volume discounts on subsequent WiseTrainer:",
+			"result": {
+				"title": "Your estimate",
+				"license": "License",
+				"firstWt": "1st WiseTrainer",
+				"firstDiscount": "-20% first order",
+				"nextWt": "Next WiseTrainer",
+				"volumeDiscount": "Volume discount",
+				"total": "Total",
+				"firstYear": "1st year",
+				"savings": "You save",
+				"cta": "Request a detailed quote"
+			},
+			"discountTiers": {
+				"tier1": "From 3 WiseTrainer: -10%",
+				"tier2": "From 5 WiseTrainer: -15%",
+				"tier3": "From 10 WiseTrainer: -25%"
+			}
+		}
 	},
 	"wisetrainerPricing": {
 		"title": "WiseTrainer Pricing",
@@ -623,7 +660,7 @@
 			},
 			"economicBenefits": {
 				"question": "What are the economic benefits?",
-				"answer": "WiseTwin helps reduce training costs (less travel, infinitely repeatable training at no extra cost), improve knowledge retention through immersion, and decrease accidents through better preparation. The management platform is included at no extra cost in your subscription."
+				"answer": "WiseTwin helps reduce training costs (less travel, infinitely repeatable training at no extra cost), improve knowledge retention through immersion, and decrease accidents through better preparation. The management platform is included at no extra cost in your license."
 			},
 			"progressTracking": {
 				"question": "How does progress tracking work?",

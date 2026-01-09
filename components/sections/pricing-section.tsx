@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/common/section";
 import { Button } from "@/components/ui/button";
-import { Check, Shield, Wrench, Plus, ArrowRight } from "lucide-react";
+import { Check, Shield, Wrench, Plus, ArrowRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const plans = ["free", "pro", "business"] as const;
@@ -19,7 +19,7 @@ export function PricingSection() {
 	const t = useTranslations("pricing");
 	const tWt = useTranslations("wisetrainer");
 	const tWtPricing = useTranslations("wisetrainerPricing");
-	const [isYearly, setIsYearly] = useState(false);
+	const [isThreeYears, setIsThreeYears] = useState(false);
 
 	return (
 		<Section
@@ -31,39 +31,39 @@ export function PricingSection() {
 				centered: true,
 			}}
 		>
-			{/* Toggle Mensuel / Annuel */}
+			{/* Toggle Annuel / 3 Années */}
 			<div className="flex items-center justify-center gap-3 mb-8">
 				<span
 					className={cn(
 						"text-sm font-medium transition-colors",
-						!isYearly ? "text-foreground" : "text-muted-foreground"
+						!isThreeYears ? "text-foreground" : "text-muted-foreground"
 					)}
 				>
-					{t("billing.monthly")}
+					{t("billing.yearly")}
 				</span>
 				<button
-					onClick={() => setIsYearly(!isYearly)}
+					onClick={() => setIsThreeYears(!isThreeYears)}
 					className={cn(
 						"relative w-14 h-7 rounded-full transition-colors",
-						isYearly ? "bg-secondary" : "bg-muted"
+						isThreeYears ? "bg-secondary" : "bg-muted"
 					)}
 				>
 					<span
 						className={cn(
 							"absolute top-1 left-1 w-5 h-5 rounded-full bg-white transition-transform",
-							isYearly && "translate-x-7"
+							isThreeYears && "translate-x-7"
 						)}
 					/>
 				</button>
 				<span
 					className={cn(
 						"text-sm font-medium transition-colors",
-						isYearly ? "text-foreground" : "text-muted-foreground"
+						isThreeYears ? "text-foreground" : "text-muted-foreground"
 					)}
 				>
-					{t("billing.yearly")}
+					{t("billing.threeYears")}
 				</span>
-				{isYearly && (
+				{isThreeYears && (
 					<span className="text-xs font-semibold text-secondary bg-secondary/10 px-2 py-1 rounded-full">
 						{t("billing.savePercent")}
 					</span>
@@ -76,9 +76,9 @@ export function PricingSection() {
 					const isFree = plan === "free";
 					const features = t.raw(`${plan}.features`) as string[];
 					const includes = t(`${plan}.includes`);
-					const price = isYearly
-						? t(`${plan}.priceYearly`)
-						: t(`${plan}.priceMonthly`);
+					const price = isThreeYears
+						? t(`${plan}.priceThreeYears`)
+						: t(`${plan}.priceYearly`);
 
 					return (
 						<div
@@ -90,10 +90,10 @@ export function PricingSection() {
 									: "border-border bg-card"
 							)}
 						>
-							{/* Badge Populaire */}
+							{/* Badge étoile */}
 							{isPopular && (
-								<div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground text-xs font-semibold px-3 py-1 rounded-full">
-									Populaire
+								<div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground p-2 rounded-full">
+									<Star className="size-4 fill-current" />
 								</div>
 							)}
 
@@ -105,6 +105,7 @@ export function PricingSection() {
 								<div className="flex items-baseline justify-center gap-1">
 									<span className="text-4xl font-bold">{price}</span>
 									<span className="text-lg text-muted-foreground">€</span>
+									<span className="text-sm text-muted-foreground">HT</span>
 									<span className="text-muted-foreground">
 										{t(`${plan}.period`)}
 									</span>
@@ -219,7 +220,7 @@ export function PricingSection() {
 											{tWtPricing(`gammes.${gamme.key}.oldPrice`)} €
 										</span>
 										{tWtPricing(`gammes.${gamme.key}.price`)}
-										<span className="text-lg font-normal text-muted-foreground"> €</span>
+										<span className="text-lg font-normal text-muted-foreground"> € HT</span>
 									</div>
 									<p className="text-xs text-muted-foreground mt-1">
 										{tWt("gammes.includedScenarios")}
@@ -244,7 +245,7 @@ export function PricingSection() {
 						</div>
 					</div>
 					<div className="text-2xl font-bold">
-						{tWt("gammes.scenario.price")}€
+						{tWt("gammes.scenario.price")}€ <span className="text-base font-normal text-muted-foreground">HT</span>
 					</div>
 				</div>
 

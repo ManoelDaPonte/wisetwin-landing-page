@@ -6,6 +6,7 @@ import {
 	AdvantagesSection,
 	SolutionsSection,
 	PricingSection,
+	PricingCalculatorSection,
 	SecuritySection,
 	FaqSection,
 	ContactSection,
@@ -19,6 +20,7 @@ export default function HomeClient() {
 			<AdvantagesSection />
 			<SolutionsSection />
 			<PricingSection />
+			<PricingCalculatorSection />
 			<SecuritySection />
 			<FaqSection />
 			<ContactSection />
