@@ -468,7 +468,8 @@
 		"billing": {
 			"yearly": "1 Year",
 			"threeYears": "3 Years",
-			"savePercent": "-20%"
+			"savePercent": "-20%",
+			"perMonth": "i.e. {price}€/month"
 		},
 		"discountBanner": {
 			"firstOrder": "-20% on 1st order"
@@ -490,9 +491,11 @@
 		},
 		"pro": {
 			"title": "Pro",
-			"priceYearly": "179",
-			"priceThreeYears": "149",
-			"period": "/month per admin²",
+			"priceYearly": "2,150",
+			"priceThreeYears": "1,790",
+			"priceMonthlyYearly": "179",
+			"priceMonthlyThreeYears": "149",
+			"period": "/year/admin²",
 			"description": "For growing teams",
 			"includes": "Everything in Discovery, plus:",
 			"features": [
@@ -506,9 +509,11 @@
 		},
 		"business": {
 			"title": "Business",
-			"priceYearly": "299",
-			"priceThreeYears": "249",
-			"period": "/month per admin²",
+			"priceYearly": "3,590",
+			"priceThreeYears": "2,990",
+			"priceMonthlyYearly": "299",
+			"priceMonthlyThreeYears": "249",
+			"period": "/year/admin²",
 			"description": "For large organizations",
 			"includes": "Everything in Pro, plus:",
 			"features": [
@@ -524,7 +529,7 @@
 		"notes": {
 			"wisetrainer": "¹ WiseTrainer: custom-built immersive 3D simulator, virtual replica of your industrial facilities.",
 			"wisetrainerLink": "Learn more about WiseTrainer",
-			"admin": "² Price per administrator. Add as many WiseTrainers as you need.",
+			"admin": "² Price per administrator. All prices exclude VAT.",
 			"crossCompany": "³ Cross-company sharing allows you to share developed trainings with partner organizations.",
 			"scenario": "A scenario is an interactive training path with learning objectives, actions to perform and skills validation. Each WiseTrainer includes 3 base scenarios."
 		},

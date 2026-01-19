@@ -63,11 +63,14 @@ export function PricingSection() {
 				>
 					{t("billing.threeYears")}
 				</span>
-				{isThreeYears && (
-					<span className="text-xs font-semibold text-secondary bg-secondary/10 px-2 py-1 rounded-full">
-						{t("billing.savePercent")}
-					</span>
-				)}
+				<span className={cn(
+					"text-xs font-semibold px-2 py-1 rounded-full transition-colors",
+					isThreeYears
+						? "text-secondary bg-secondary/10"
+						: "text-muted-foreground bg-muted"
+				)}>
+					{t("billing.savePercent")}
+				</span>
 			</div>
 
 			<div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -79,6 +82,11 @@ export function PricingSection() {
 					const price = isThreeYears
 						? t(`${plan}.priceThreeYears`)
 						: t(`${plan}.priceYearly`);
+					const priceMonthly = !isFree
+						? isThreeYears
+							? t(`${plan}.priceMonthlyThreeYears`)
+							: t(`${plan}.priceMonthlyYearly`)
+						: null;
 
 					return (
 						<div
@@ -105,11 +113,15 @@ export function PricingSection() {
 								<div className="flex items-baseline justify-center gap-1">
 									<span className="text-4xl font-bold">{price}</span>
 									<span className="text-lg text-muted-foreground">€</span>
-									<span className="text-sm text-muted-foreground">HT</span>
 									<span className="text-muted-foreground">
 										{t(`${plan}.period`)}
 									</span>
 								</div>
+								{priceMonthly && (
+									<p className="text-sm text-secondary font-medium mt-1">
+										{t("billing.perMonth", { price: priceMonthly })}
+									</p>
+								)}
 							</div>
 
 							{includes && (

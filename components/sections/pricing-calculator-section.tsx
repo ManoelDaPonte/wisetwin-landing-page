@@ -11,12 +11,12 @@ import { Calculator, Shield, Wrench, Sparkles, Users, Info, Gift, Clock } from "
 const PRICES = {
 	license: {
 		pro: {
-			yearly: 2148, // 179€/mois × 12
-			threeYears: 1788, // 149€/mois × 12
+			yearly: 2150, // ~179€/mois
+			threeYears: 1790, // ~149€/mois
 		},
 		business: {
-			yearly: 3588, // 299€/mois × 12
-			threeYears: 2988, // 249€/mois × 12
+			yearly: 3590, // ~299€/mois
+			threeYears: 2990, // ~249€/mois
 		},
 	},
 	wisetrainer: {

@@ -468,7 +468,8 @@
 		"billing": {
 			"yearly": "1 an",
 			"threeYears": "3 ans",
-			"savePercent": "-20%"
+			"savePercent": "-20%",
+			"perMonth": "soit {price}€/mois"
 		},
 		"discountBanner": {
 			"firstOrder": "-20% sur la 1ère commande"
@@ -490,9 +491,11 @@
 		},
 		"pro": {
 			"title": "Pro",
-			"priceYearly": "179",
-			"priceThreeYears": "149",
-			"period": "/mois par admin²",
+			"priceYearly": "2 150",
+			"priceThreeYears": "1 790",
+			"priceMonthlyYearly": "179",
+			"priceMonthlyThreeYears": "149",
+			"period": "/an/admin²",
 			"description": "Pour les équipes en croissance",
 			"includes": "Tout le plan Découverte, plus :",
 			"features": [
@@ -506,9 +509,11 @@
 		},
 		"business": {
 			"title": "Business",
-			"priceYearly": "299",
-			"priceThreeYears": "249",
-			"period": "/mois par admin²",
+			"priceYearly": "3 590",
+			"priceThreeYears": "2 990",
+			"priceMonthlyYearly": "299",
+			"priceMonthlyThreeYears": "249",
+			"period": "/an/admin²",
 			"description": "Pour les grandes organisations",
 			"includes": "Tout le plan Pro, plus :",
 			"features": [
@@ -524,7 +529,7 @@
 		"notes": {
 			"wisetrainer": "¹ WiseTrainer : simulateur 3D immersif sur mesure, réplique virtuelle de vos installations industrielles.",
 			"wisetrainerLink": "En savoir plus sur WiseTrainer",
-			"admin": "² Tarif par administrateur. Ajoutez autant de WiseTrainer que vous le souhaitez.",
+			"admin": "² Tarif par administrateur. Tous les prix sont HT.",
 			"crossCompany": "³ La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",
 			"scenario": "Un scénario est un parcours de formation interactif avec objectifs pédagogiques, actions à réaliser et validation des acquis. Chaque WiseTrainer inclut 3 scénarios de base."
 		},
