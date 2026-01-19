@@ -490,15 +490,15 @@
 		},
 		"pro": {
 			"title": "Pro",
-			"priceYearly": "1 812",
-			"priceThreeYears": "1 450",
-			"period": "/an par admin²",
+			"priceYearly": "179",
+			"priceThreeYears": "149",
+			"period": "/mois par admin²",
 			"description": "Pour les équipes en croissance",
 			"includes": "Tout le plan Découverte, plus :",
 			"features": [
 				"Jusqu'à 100 utilisateurs",
 				"WiseTrainer illimités",
-				"SSO & MFA",
+				"MFA (Authentification multi-facteurs)",
 				"Journaux d'audit",
 				"Support prioritaire"
 			],
@@ -506,14 +506,15 @@
 		},
 		"business": {
 			"title": "Business",
-			"priceYearly": "2 388",
-			"priceThreeYears": "1 910",
-			"period": "/an par admin²",
+			"priceYearly": "299",
+			"priceThreeYears": "249",
+			"period": "/mois par admin²",
 			"description": "Pour les grandes organisations",
 			"includes": "Tout le plan Pro, plus :",
 			"features": [
 				"Utilisateurs illimités",
 				"WiseTrainer illimités",
+				"SSO (Single Sign-On)",
 				"Mutualisation inter-entreprises³",
 				"API access",
 				"Support dédié"
@@ -624,11 +625,11 @@
 			},
 			"pricingModel": {
 				"question": "Comment fonctionne la tarification ?",
-				"answer": "WiseTwin propose 3 plans : Gratuit (jusqu'à 3 utilisateurs, 1 WiseTrainer LOTO inclus), Pro à 189€/mois par admin (jusqu'à 100 utilisateurs, SSO & MFA), et Business à 249€/mois par admin (utilisateurs illimités, mutualisation inter-entreprises). Les simulateurs WiseTrainer sont facturés séparément selon la gamme choisie, avec -20% sur la première commande."
+				"answer": "WiseTwin propose 3 plans : Gratuit (jusqu'à 3 utilisateurs, 1 WiseTrainer LOTO inclus), Pro à 89€/mois par admin (jusqu'à 100 utilisateurs, MFA inclus), et Business à 299€/mois par admin (utilisateurs illimités, SSO, mutualisation inter-entreprises). Les simulateurs WiseTrainer sont facturés séparément selon la gamme choisie, avec -20% sur la première commande."
 			},
 			"security": {
 				"question": "Comment gérez-vous la sécurité des données ?",
-				"answer": "Nous offrons un SSO entreprise (SAML/OAuth), une authentification multi-facteurs (MFA), des journaux d'audit complets, et une isolation stricte des données par organisation. Ces fonctionnalités sont disponibles dès le plan Pro."
+				"answer": "Nous offrons une authentification multi-facteurs (MFA), des journaux d'audit complets, et une isolation stricte des données par organisation dès le plan Pro. Le SSO entreprise (SAML/OAuth) est disponible dans le plan Business."
 			},
 			"whatIsWiseTrainer": {
 				"question": "Qu'est-ce que WiseTrainer ?",

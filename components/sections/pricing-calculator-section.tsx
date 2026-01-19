@@ -11,12 +11,12 @@ import { Calculator, Shield, Wrench, Sparkles, Users, Info, Gift, Clock } from "
 const PRICES = {
 	license: {
 		pro: {
-			yearly: 1812,
-			threeYears: 1450,
+			yearly: 2148, // 179€/mois × 12
+			threeYears: 1788, // 149€/mois × 12
 		},
 		business: {
-			yearly: 2388,
-			threeYears: 1910,
+			yearly: 3588, // 299€/mois × 12
+			threeYears: 2988, // 249€/mois × 12
 		},
 	},
 	wisetrainer: {
@@ -31,18 +31,6 @@ const PRICES = {
 	},
 };
 
-const VOLUME_DISCOUNTS = [
-	{ min: 10, discount: 0.25 },
-	{ min: 5, discount: 0.15 },
-	{ min: 3, discount: 0.1 },
-];
-
-function getVolumeDiscount(count: number): number {
-	for (const tier of VOLUME_DISCOUNTS) {
-		if (count >= tier.min) return tier.discount;
-	}
-	return 0;
-}
 
 function formatPrice(price: number): string {
 	return Math.round(price).toLocaleString("fr-FR");
@@ -65,6 +53,10 @@ export function PricingCalculatorSection() {
 		// License calculation
 		const licensePerAdmin = PRICES.license[licenseTier][billingPeriod];
 		const licenseTotal = licensePerAdmin * admins;
+		// Prix sans réduction (1 an) pour afficher le prix barré sur 3 ans
+		const licenseYearlyPerAdmin = PRICES.license[licenseTier].yearly;
+		const licenseYearlyTotal = licenseYearlyPerAdmin * admins;
+		const hasLicenseDiscount = billingPeriod === "threeYears";
 
 		// WiseTrainer calculation
 		let firstWtPrice: number; // Prix promo du 1er
@@ -97,13 +89,8 @@ export function PricingCalculatorSection() {
 		const nextWtCount = Math.max(0, wisetrainers - 1);
 		const nextWtSubtotal = nextWtPrice * nextWtCount;
 
-		// Remise volume sur les WT suivants uniquement
-		const volumeDiscount = getVolumeDiscount(wisetrainers);
-		const volumeDiscountAmount = nextWtSubtotal * volumeDiscount;
-		const nextWtTotal = nextWtSubtotal - volumeDiscountAmount;
-
 		// Total WiseTrainer
-		const wtTotal = firstWtPrice + nextWtTotal;
+		const wtTotal = firstWtPrice + nextWtSubtotal;
 
 		// Total général
 		const total = licenseTotal + wtTotal;
@@ -111,15 +98,14 @@ export function PricingCalculatorSection() {
 		return {
 			licensePerAdmin,
 			licenseTotal,
+			licenseYearlyTotal,
+			hasLicenseDiscount,
 			firstWtPrice,
 			firstWtNormalPrice,
 			firstOrderSavings,
 			nextWtPrice,
 			nextWtCount,
 			nextWtSubtotal,
-			volumeDiscount,
-			volumeDiscountAmount,
-			nextWtTotal,
 			wtTotal,
 			total,
 		};
@@ -166,9 +152,6 @@ export function PricingCalculatorSection() {
 										>
 											<Users className={cn("size-6", isActive && "text-secondary")} />
 											<span className="font-semibold">{tier === "pro" ? "Pro" : "Business"}</span>
-											<span className="text-xs text-muted-foreground">
-												{tier === "pro" ? t("proDesc") : t("businessDesc")}
-											</span>
 										</button>
 									);
 								})}
@@ -293,13 +276,6 @@ export function PricingCalculatorSection() {
 							)}
 						</div>
 
-						{/* Discount tiers info */}
-						<div className="text-xs text-muted-foreground space-y-1 px-2">
-							<p className="font-medium mb-2">{t("volumeDiscounts")}</p>
-							<p>{t("discountTiers.tier1")}</p>
-							<p>{t("discountTiers.tier2")}</p>
-							<p>{t("discountTiers.tier3")}</p>
-						</div>
 					</div>
 
 					{/* Result panel */}
@@ -321,11 +297,23 @@ export function PricingCalculatorSection() {
 											<p className="text-xs text-muted-foreground">
 												{licenseTier === "pro" ? "Pro" : "Business"} × {admins} admin{admins > 1 ? "s" : ""}
 											</p>
-											<p className="text-xs text-secondary font-medium">
-												{billingPeriod === "yearly" ? t("yearly") : t("threeYears")}
+											{calculation.hasLicenseDiscount && (
+												<p className="text-xs text-green-600 flex items-center gap-1">
+													<Gift className="size-3" />
+													-20% {t("threeYears")}
+												</p>
+											)}
+										</div>
+										<div className="text-right">
+											{calculation.hasLicenseDiscount && (
+												<p className="text-xs text-muted-foreground line-through">
+													{formatPrice(calculation.licenseYearlyTotal)} €
+												</p>
+											)}
+											<p className={cn("font-semibold", calculation.hasLicenseDiscount && "text-green-600")}>
+												{formatPrice(calculation.licenseTotal)} € <span className="text-xs font-normal text-muted-foreground">HT/an</span>
 											</p>
 										</div>
-										<p className="font-semibold">{formatPrice(calculation.licenseTotal)} € <span className="text-xs font-normal text-muted-foreground">HT/an</span></p>
 									</div>
 								</div>
 
@@ -365,19 +353,6 @@ export function PricingCalculatorSection() {
 									</div>
 								)}
 
-								{/* Volume discount */}
-								{calculation.volumeDiscount > 0 && (
-									<div className="py-3 border-b border-border text-green-600">
-										<div className="flex justify-between items-center">
-											<div>
-												<p className="font-medium">{t("result.volumeDiscount")}</p>
-												<p className="text-xs">-{Math.round(calculation.volumeDiscount * 100)}%</p>
-											</div>
-											<p className="font-semibold">-{formatPrice(calculation.volumeDiscountAmount)} €</p>
-										</div>
-									</div>
-								)}
-
 								{/* Total */}
 								<div className="pt-4">
 									<div className="flex justify-between items-center">
@@ -391,11 +366,6 @@ export function PricingCalculatorSection() {
 											</p>
 										</div>
 									</div>
-									{(calculation.firstOrderSavings > 0 || calculation.volumeDiscountAmount > 0) && (
-										<p className="text-sm text-green-600 text-right mt-2">
-											{t("result.savings")} {formatPrice(calculation.firstOrderSavings + calculation.volumeDiscountAmount)} €
-										</p>
-									)}
 								</div>
 							</div>
 
