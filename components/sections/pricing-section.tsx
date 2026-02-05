@@ -257,7 +257,7 @@ export function PricingSection() {
 						</div>
 					</div>
 					<div className="text-2xl font-bold">
-						{tWt("gammes.scenario.price")}€ <span className="text-base font-normal text-muted-foreground">HT</span>
+						{tWt("gammes.scenario.price")}€ <span className="text-base font-normal text-muted-foreground">{tWtPricing("exclVat")}</span>
 					</div>
 				</div>
 

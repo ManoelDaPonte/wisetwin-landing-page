@@ -562,6 +562,8 @@
 				"volumeDiscount": "Volume discount",
 				"total": "Total",
 				"firstYear": "1st year",
+				"perYear": "excl. VAT/year",
+				"exclVat": "excl. VAT",
 				"savings": "You save",
 				"cta": "Request a detailed quote"
 			},
@@ -576,6 +578,7 @@
 		"title": "WiseTrainer Pricing",
 		"subtitle": "Create your custom 3D environment",
 		"description": "Developing your 3D asset is an initial investment. Then, each scenario costs 500 euros.",
+		"exclVat": "excl. VAT",
 		"gammes": {
 			"safe": {
 				"title": "Safe Range",

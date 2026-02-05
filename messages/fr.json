@@ -562,6 +562,8 @@
 				"volumeDiscount": "Remise volume",
 				"total": "Total",
 				"firstYear": "1ère année",
+				"perYear": "HT/an",
+				"exclVat": "HT",
 				"savings": "Vous économisez",
 				"cta": "Demander un devis détaillé"
 			},
@@ -576,6 +578,7 @@
 		"title": "Tarifs WiseTrainer",
 		"subtitle": "Créez votre environnement 3D sur mesure",
 		"description": "Le développement de votre asset 3D est un investissement initial. Ensuite, chaque scénario coûte 500 euros.",
+		"exclVat": "HT",
 		"gammes": {
 			"safe": {
 				"title": "Gamme Safe",

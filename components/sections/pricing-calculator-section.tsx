@@ -6,7 +6,7 @@ import { Section } from "@/components/common/section";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { cn } from "@/lib/utils";
-import { Calculator, Shield, Wrench, Sparkles, Users, Info, Gift, Clock } from "lucide-react";
+import { Calculator, Shield, Wrench, Sparkles, Users, Info, Gift } from "lucide-react";
 
 const PRICES = {
 	license: {
@@ -58,39 +58,30 @@ export function PricingCalculatorSection() {
 		const licenseYearlyTotal = licenseYearlyPerAdmin * admins;
 		const hasLicenseDiscount = billingPeriod === "threeYears";
 
-		// WiseTrainer calculation
-		let firstWtPrice: number; // Prix promo du 1er
-		let firstWtNormalPrice: number; // Prix normal (pour afficher l'économie)
-		let nextWtPrice: number;
+		// WiseTrainer calculation - réduction 20% sur toute la première commande
+		let discountedPrice: number; // Prix avec réduction 20%
+		let normalPrice: number; // Prix normal (pour afficher l'économie)
 
 		switch (wtType) {
 			case "safe":
-				firstWtPrice = PRICES.wisetrainer.safe.first;
-				firstWtNormalPrice = PRICES.wisetrainer.safe.next; // Le prix normal c'est le prix des suivants
-				nextWtPrice = PRICES.wisetrainer.safe.next;
+				discountedPrice = PRICES.wisetrainer.safe.first;
+				normalPrice = PRICES.wisetrainer.safe.next;
 				break;
 			case "tech":
-				firstWtPrice = PRICES.wisetrainer.tech.first;
-				firstWtNormalPrice = PRICES.wisetrainer.tech.next;
-				nextWtPrice = PRICES.wisetrainer.tech.next;
+				discountedPrice = PRICES.wisetrainer.tech.first;
+				normalPrice = PRICES.wisetrainer.tech.next;
 				break;
 			case "mixed":
 				// Moyenne des prix Safe et Tech
-				firstWtPrice = (PRICES.wisetrainer.safe.first + PRICES.wisetrainer.tech.first) / 2;
-				firstWtNormalPrice = (PRICES.wisetrainer.safe.next + PRICES.wisetrainer.tech.next) / 2;
-				nextWtPrice = (PRICES.wisetrainer.safe.next + PRICES.wisetrainer.tech.next) / 2;
+				discountedPrice = (PRICES.wisetrainer.safe.first + PRICES.wisetrainer.tech.first) / 2;
+				normalPrice = (PRICES.wisetrainer.safe.next + PRICES.wisetrainer.tech.next) / 2;
 				break;
 		}
 
-		// Économie sur le 1er WiseTrainer
-		const firstOrderSavings = firstWtNormalPrice - firstWtPrice;
-
-		// Prix des WT suivants
-		const nextWtCount = Math.max(0, wisetrainers - 1);
-		const nextWtSubtotal = nextWtPrice * nextWtCount;
-
-		// Total WiseTrainer
-		const wtTotal = firstWtPrice + nextWtSubtotal;
+		// Tous les WiseTrainers bénéficient de la réduction première commande
+		const wtTotal = discountedPrice * wisetrainers;
+		const wtNormalTotal = normalPrice * wisetrainers;
+		const firstOrderSavings = wtNormalTotal - wtTotal;
 
 		// Total général
 		const total = licenseTotal + wtTotal;
@@ -100,13 +91,11 @@ export function PricingCalculatorSection() {
 			licenseTotal,
 			licenseYearlyTotal,
 			hasLicenseDiscount,
-			firstWtPrice,
-			firstWtNormalPrice,
-			firstOrderSavings,
-			nextWtPrice,
-			nextWtCount,
-			nextWtSubtotal,
+			discountedPrice,
+			normalPrice,
 			wtTotal,
+			wtNormalTotal,
+			firstOrderSavings,
 			total,
 		};
 	}, [licenseTier, billingPeriod, admins, wisetrainers, wtType]);
@@ -234,13 +223,13 @@ export function PricingCalculatorSection() {
 								value={[wisetrainers]}
 								onValueChange={(value) => setWisetrainers(value[0])}
 								min={1}
-								max={20}
+								max={50}
 								step={1}
 								className="w-full"
 							/>
 							<div className="flex justify-between text-xs text-muted-foreground mt-2">
 								<span>1</span>
-								<span>20</span>
+								<span>50</span>
 							</div>
 						</div>
 
@@ -311,17 +300,20 @@ export function PricingCalculatorSection() {
 												</p>
 											)}
 											<p className={cn("font-semibold", calculation.hasLicenseDiscount && "text-green-600")}>
-												{formatPrice(calculation.licenseTotal)} € <span className="text-xs font-normal text-muted-foreground">HT/an</span>
+												{formatPrice(calculation.licenseTotal)} € <span className="text-xs font-normal text-muted-foreground">{t("result.perYear")}</span>
 											</p>
 										</div>
 									</div>
 								</div>
 
-								{/* First WiseTrainer with discount */}
+								{/* WiseTrainers avec réduction première commande */}
 								<div className="py-3 border-b border-border">
 									<div className="flex justify-between items-start">
 										<div>
-											<p className="font-medium">{t("result.firstWt")}</p>
+											<p className="font-medium">WiseTrainer</p>
+											<p className="text-xs text-muted-foreground">
+												{wisetrainers} × {formatPrice(calculation.discountedPrice)} € {t("result.exclVat")}
+											</p>
 											<p className="text-xs text-green-600 flex items-center gap-1">
 												<Gift className="size-3" />
 												{t("result.firstDiscount")}
@@ -329,29 +321,14 @@ export function PricingCalculatorSection() {
 										</div>
 										<div className="text-right">
 											<p className="text-xs text-muted-foreground line-through">
-												{formatPrice(calculation.firstWtNormalPrice)} €
+												{formatPrice(calculation.wtNormalTotal)} €
 											</p>
 											<p className="font-semibold text-green-600">
-												{formatPrice(calculation.firstWtPrice)} € <span className="text-xs font-normal">HT</span>
+												{formatPrice(calculation.wtTotal)} € <span className="text-xs font-normal">{t("result.exclVat")}</span>
 											</p>
 										</div>
 									</div>
 								</div>
-
-								{/* Next WiseTrainers */}
-								{calculation.nextWtCount > 0 && (
-									<div className="py-3 border-b border-border">
-										<div className="flex justify-between items-start">
-											<div>
-												<p className="font-medium">{t("result.nextWt")}</p>
-												<p className="text-xs text-muted-foreground">
-													{calculation.nextWtCount} × {formatPrice(calculation.nextWtPrice)} € HT
-												</p>
-											</div>
-											<p className="font-semibold">{formatPrice(calculation.nextWtSubtotal)} € <span className="text-xs font-normal text-muted-foreground">HT</span></p>
-										</div>
-									</div>
-								)}
 
 								{/* Total */}
 								<div className="pt-4">
@@ -359,7 +336,7 @@ export function PricingCalculatorSection() {
 										<p className="text-lg font-bold">{t("result.total")}</p>
 										<div className="text-right">
 											<p className="text-2xl font-bold text-secondary">
-												{formatPrice(calculation.total)} € <span className="text-sm font-normal text-muted-foreground">HT</span>
+												{formatPrice(calculation.total)} € <span className="text-sm font-normal text-muted-foreground">{t("result.exclVat")}</span>
 											</p>
 											<p className="text-xs text-muted-foreground">
 												{t("result.firstYear")}
