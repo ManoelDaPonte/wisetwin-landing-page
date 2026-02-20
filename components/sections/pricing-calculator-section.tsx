@@ -25,7 +25,7 @@ const PRICES = {
 			next: 5625,
 		},
 		tech: {
-			first: 9000, // Prix promo 1ère commande (prix normal: 11875)
+			first: 11875, // Pas de réduction sur Simulateur Maintenance
 			next: 11875,
 		},
 	},
@@ -78,10 +78,10 @@ export function PricingCalculatorSection() {
 				break;
 		}
 
-		// Tous les WiseTrainers bénéficient de la réduction première commande
 		const wtTotal = discountedPrice * wisetrainers;
 		const wtNormalTotal = normalPrice * wisetrainers;
 		const firstOrderSavings = wtNormalTotal - wtTotal;
+		const hasWtDiscount = firstOrderSavings > 0;
 
 		// Total général
 		const total = licenseTotal + wtTotal;
@@ -96,6 +96,7 @@ export function PricingCalculatorSection() {
 			wtTotal,
 			wtNormalTotal,
 			firstOrderSavings,
+			hasWtDiscount,
 			total,
 		};
 	}, [licenseTier, billingPeriod, admins, wisetrainers, wtType]);
@@ -306,7 +307,7 @@ export function PricingCalculatorSection() {
 									</div>
 								</div>
 
-								{/* WiseTrainers avec réduction première commande */}
+								{/* WiseTrainers */}
 								<div className="py-3 border-b border-border">
 									<div className="flex justify-between items-start">
 										<div>
@@ -314,17 +315,21 @@ export function PricingCalculatorSection() {
 											<p className="text-xs text-muted-foreground">
 												{wisetrainers} × {formatPrice(calculation.discountedPrice)} € {t("result.exclVat")}
 											</p>
-											<p className="text-xs text-green-600 flex items-center gap-1">
-												<Gift className="size-3" />
-												{t("result.firstDiscount")}
-											</p>
+											{calculation.hasWtDiscount && (
+												<p className="text-xs text-green-600 flex items-center gap-1">
+													<Gift className="size-3" />
+													{t("result.firstDiscount")}
+												</p>
+											)}
 										</div>
 										<div className="text-right">
-											<p className="text-xs text-muted-foreground line-through">
-												{formatPrice(calculation.wtNormalTotal)} €
-											</p>
-											<p className="font-semibold text-green-600">
-												{formatPrice(calculation.wtTotal)} € <span className="text-xs font-normal">{t("result.exclVat")}</span>
+											{calculation.hasWtDiscount && (
+												<p className="text-xs text-muted-foreground line-through">
+													{formatPrice(calculation.wtNormalTotal)} €
+												</p>
+											)}
+											<p className={cn("font-semibold", calculation.hasWtDiscount && "text-green-600")}>
+												{formatPrice(calculation.wtTotal)} € <span className="text-xs font-normal text-muted-foreground">{t("result.exclVat")}</span>
 											</p>
 										</div>
 									</div>

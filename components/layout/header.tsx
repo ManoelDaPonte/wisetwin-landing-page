@@ -41,7 +41,6 @@ export function Header() {
 	const menuItems = [
 		{ title: t("pricing"), href: "/#pricing" },
 		{ title: t("faq"), href: "/faq" },
-		{ title: t("roadmap"), href: "/roadmap" },
 		{ title: t("contact"), href: "/#contact" },
 	];
 

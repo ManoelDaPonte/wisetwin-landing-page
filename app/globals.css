@@ -21,8 +21,8 @@
 	--color-card-foreground: oklch(0.145 0 0);
 	--color-popover: oklch(1 0 0);
 	--color-popover-foreground: oklch(0.145 0 0);
-	--color-primary: var(--color-wisetwin-darkblue);
-	--color-primary-foreground: oklch(0.985 0 0);
+	--color-primary: var(--color-wisetwin-blue);
+	--color-primary-foreground: oklch(0.145 0 0);
 	--color-secondary: var(--color-wisetwin-blue);
 	--color-secondary-foreground: oklch(0.145 0 0);
 	--color-muted: oklch(0.97 0 0);

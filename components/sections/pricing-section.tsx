@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/common/section";
 import { Button } from "@/components/ui/button";
-import { Check, Shield, Wrench, Plus, ArrowRight, Star } from "lucide-react";
+import { Check, Shield, Wrench, Plus, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const plans = ["free", "pro", "business"] as const;
+const plans = ["pro", "business"] as const;
 
 const gammes = [
 	{ key: "safe", icon: Shield },
@@ -26,12 +25,107 @@ export function PricingSection() {
 			id="pricing"
 			variant="default"
 			header={{
-				title: t("title"),
-				description: t("subtitle"),
+				title: tWt("gammes.title"),
+				description: tWt("gammes.subtitle"),
 				centered: true,
 			}}
 		>
-			{/* Toggle Annuel / 3 Années */}
+			{/* Section WiseTrainer Pricing - FIRST (product) */}
+			<div>
+				{/* Gammes WiseTrainer */}
+				<div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
+					{gammes.map((gamme) => {
+						const Icon = gamme.icon;
+						const isSafe = gamme.key === "safe";
+						const hasDiscount = isSafe;
+						return (
+							<div
+								key={gamme.key}
+								className="relative bg-card border border-border rounded-xl p-6 text-center hover:shadow-md transition-shadow overflow-visible flex flex-col h-full"
+							>
+								{/* Badge reduction - only for safe */}
+								{hasDiscount && (
+									<div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+										<span className="bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
+											{t("discountBanner.firstOrder")}
+										</span>
+									</div>
+								)}
+
+								<div className="size-14 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 mt-2">
+									<Icon className="size-7 text-secondary" />
+								</div>
+								<h4 className="text-lg font-bold mb-1">
+									{tWt(`gammes.${gamme.key}.title`)}
+								</h4>
+								<p className="text-sm text-secondary font-medium mb-2">
+									{tWt(`gammes.${gamme.key}.subtitle`)}
+								</p>
+								<p className="text-sm text-muted-foreground flex-grow">
+									{tWt(`gammes.${gamme.key}.description`)}
+								</p>
+								<div className="pt-4 mt-4 border-t border-border">
+									<p className="text-sm text-muted-foreground mb-1">
+										{tWt(`gammes.${gamme.key}.unit`)}
+									</p>
+									<div className="text-3xl font-bold text-secondary">
+										{hasDiscount && (
+											<span className="text-lg text-muted-foreground line-through mr-2">
+												{tWtPricing(`gammes.${gamme.key}.oldPrice`)} €
+											</span>
+										)}
+										{tWtPricing(`gammes.${gamme.key}.price`)}
+										<span className="text-lg font-normal text-muted-foreground"> € HT</span>
+									</div>
+									<p className="text-xs text-muted-foreground mt-1">
+										{tWt("gammes.includedScenarios")}
+									</p>
+								</div>
+							</div>
+						);
+					})}
+				</div>
+
+				{/* Scenario addon */}
+				<div className="bg-card border border-border rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 max-w-3xl mx-auto">
+					<div className="flex items-center gap-4">
+						<div className="size-12 bg-secondary/10 rounded-full flex items-center justify-center">
+							<Plus className="size-6 text-secondary" />
+						</div>
+						<div>
+							<h4 className="font-semibold">{tWt("gammes.scenario.title")}</h4>
+							<p className="text-sm text-muted-foreground">
+								{tWt("gammes.scenario.unit")}
+							</p>
+						</div>
+					</div>
+					<div className="text-2xl font-bold">
+						{tWt("gammes.scenario.price")}€ <span className="text-base font-normal text-muted-foreground">{tWtPricing("exclVat")}</span>
+					</div>
+				</div>
+
+				{/* Note Scenario */}
+				<p className="text-xs text-muted-foreground text-center mt-6 max-w-2xl mx-auto">
+					{t("notes.scenario")}
+				</p>
+			</div>
+
+			{/* Separator with + */}
+			<div className="flex items-center justify-center my-12">
+				<div className="flex-1 h-px bg-border" />
+				<div className="mx-6 size-12 bg-secondary/10 rounded-full flex items-center justify-center">
+					<Plus className="size-6 text-secondary" />
+				</div>
+				<div className="flex-1 h-px bg-border" />
+			</div>
+
+			{/* Subscription Licenses - SECOND (support) */}
+			<div className="text-center mb-8">
+				<h3 className="text-2xl font-bold mb-2">{t("title")}</h3>
+				<p className="text-muted-foreground">{t("subtitle")}</p>
+			</div>
+
+			{/* Toggle Annuel / 3 Annees */}
 			<div className="flex items-center justify-center gap-3 mb-8">
 				<span
 					className={cn(
@@ -73,20 +167,17 @@ export function PricingSection() {
 				</span>
 			</div>
 
-			<div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+			<div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
 				{plans.map((plan) => {
 					const isPopular = plan === "pro";
-					const isFree = plan === "free";
 					const features = t.raw(`${plan}.features`) as string[];
 					const includes = t(`${plan}.includes`);
 					const price = isThreeYears
 						? t(`${plan}.priceThreeYears`)
 						: t(`${plan}.priceYearly`);
-					const priceMonthly = !isFree
-						? isThreeYears
-							? t(`${plan}.priceMonthlyThreeYears`)
-							: t(`${plan}.priceMonthlyYearly`)
-						: null;
+					const priceMonthly = isThreeYears
+						? t(`${plan}.priceMonthlyThreeYears`)
+						: t(`${plan}.priceMonthlyYearly`);
 
 					return (
 						<div
@@ -98,7 +189,7 @@ export function PricingSection() {
 									: "border-border bg-card"
 							)}
 						>
-							{/* Badge étoile */}
+							{/* Badge star */}
 							{isPopular && (
 								<div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground p-2 rounded-full">
 									<Star className="size-4 fill-current" />
@@ -139,132 +230,23 @@ export function PricingSection() {
 								))}
 							</ul>
 
-							{isFree ? (
-								<Button className="w-full mt-6" variant="outline" asChild>
-									<a
-										href="https://app.wisetwin.eu"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										{t(`${plan}.cta`)}
-									</a>
-								</Button>
-							) : (
-								<Button
-									className="w-full mt-6"
-									variant={isPopular ? "default" : "outline"}
-									asChild
-								>
-									<a href="#contact">{t(`${plan}.cta`)}</a>
-								</Button>
-							)}
+							<Button
+								className="w-full mt-6"
+								variant={isPopular ? "default" : "outline"}
+								asChild
+							>
+								<a href="#contact">{t(`${plan}.cta`)}</a>
+							</Button>
 						</div>
 					);
 				})}
 			</div>
 
-			{/* Notes explicatives */}
+			{/* Explanatory notes */}
 			<div className="mt-8 max-w-3xl mx-auto text-center space-y-2">
-				<p className="text-xs text-muted-foreground">
-					{t("notes.wisetrainer")}{" "}
-					<Link
-						href="/solutions/wisetrainer"
-						className="text-secondary hover:underline inline-flex items-center gap-1"
-					>
-						{t("notes.wisetrainerLink")}
-						<ArrowRight className="size-3" />
-					</Link>
-				</p>
 				<p className="text-xs text-muted-foreground">{t("notes.admin")}</p>
 				<p className="text-xs text-muted-foreground">{t("notes.crossCompany")}</p>
-			</div>
-
-			{/* Séparateur avec + */}
-			<div className="flex items-center justify-center my-12">
-				<div className="flex-1 h-px bg-border" />
-				<div className="mx-6 size-12 bg-secondary/10 rounded-full flex items-center justify-center">
-					<Plus className="size-6 text-secondary" />
-				</div>
-				<div className="flex-1 h-px bg-border" />
-			</div>
-
-			{/* Section WiseTrainer Pricing */}
-			<div>
-				<div className="text-center mb-8">
-					<h3 className="text-2xl font-bold mb-2">{tWt("gammes.title")}</h3>
-					<p className="text-muted-foreground">{tWt("gammes.subtitle")}</p>
-				</div>
-
-				{/* Gammes WiseTrainer */}
-				<div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
-					{gammes.map((gamme) => {
-						const Icon = gamme.icon;
-						return (
-							<div
-								key={gamme.key}
-								className="relative bg-card border border-border rounded-xl p-6 text-center hover:shadow-md transition-shadow overflow-visible flex flex-col h-full"
-							>
-								{/* Badge réduction */}
-								<div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-									<span className="bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
-										{t("discountBanner.firstOrder")}
-									</span>
-								</div>
-
-								<div className="size-14 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 mt-2">
-									<Icon className="size-7 text-secondary" />
-								</div>
-								<h4 className="text-lg font-bold mb-1">
-									{tWt(`gammes.${gamme.key}.title`)}
-								</h4>
-								<p className="text-sm text-secondary font-medium mb-2">
-									{tWt(`gammes.${gamme.key}.subtitle`)}
-								</p>
-								<p className="text-sm text-muted-foreground flex-grow">
-									{tWt(`gammes.${gamme.key}.description`)}
-								</p>
-								<div className="pt-4 mt-4 border-t border-border">
-									<p className="text-sm text-muted-foreground mb-1">
-										{tWt(`gammes.${gamme.key}.unit`)}
-									</p>
-									<div className="text-3xl font-bold text-secondary">
-										<span className="text-lg text-muted-foreground line-through mr-2">
-											{tWtPricing(`gammes.${gamme.key}.oldPrice`)} €
-										</span>
-										{tWtPricing(`gammes.${gamme.key}.price`)}
-										<span className="text-lg font-normal text-muted-foreground"> € HT</span>
-									</div>
-									<p className="text-xs text-muted-foreground mt-1">
-										{tWt("gammes.includedScenarios")}
-									</p>
-								</div>
-							</div>
-						);
-					})}
-				</div>
-
-				{/* Scenario addon */}
-				<div className="bg-card border border-border rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 max-w-3xl mx-auto">
-					<div className="flex items-center gap-4">
-						<div className="size-12 bg-secondary/10 rounded-full flex items-center justify-center">
-							<Plus className="size-6 text-secondary" />
-						</div>
-						<div>
-							<h4 className="font-semibold">{tWt("gammes.scenario.title")}</h4>
-							<p className="text-sm text-muted-foreground">
-								{tWt("gammes.scenario.unit")}
-							</p>
-						</div>
-					</div>
-					<div className="text-2xl font-bold">
-						{tWt("gammes.scenario.price")}€ <span className="text-base font-normal text-muted-foreground">{tWtPricing("exclVat")}</span>
-					</div>
-				</div>
-
-				{/* Note Scénario */}
-				<p className="text-xs text-muted-foreground text-center mt-6 max-w-2xl mx-auto">
-					{t("notes.scenario")}
-				</p>
+				<p className="text-xs text-muted-foreground">{t("notes.unlimitedTraining")}</p>
 			</div>
 		</Section>
 	);

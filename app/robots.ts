@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/.next/'],
     },
-    sitemap: 'https://wisetwin.fr/sitemap.xml', // Remplacez par votre domaine réel
+    sitemap: 'https://wisetwin.eu/sitemap.xml',
   }
 }

@@ -19,7 +19,6 @@
 		"wisetrainer": "WiseTrainer",
 		"pricing": "Pricing",
 		"faq": "FAQ",
-		"roadmap": "Roadmap",
 		"contact": "Contact"
 	},
 	"hero": {
@@ -263,23 +262,23 @@
 			}
 		},
 		"gammes": {
-			"title": "Our WiseTrainer ranges",
+			"title": "Our WiseTrainer",
 			"subtitle": "Choose the solution adapted to your training needs",
 			"includedScenarios": "3 scenarios included",
 			"safe": {
-				"title": "Safe Range",
-				"subtitle": "Safety simulator",
+				"title": "Safety Simulator",
+				"subtitle": "Safe Range",
 				"description": "Training on safety procedures, emergency gestures, PPE use and risk prevention.",
 				"price": "5,625",
-				"unit": "per environment created",
+				"unit": "starting from",
 				"features": ["Safety procedures", "Emergency gestures", "PPE use", "Risk prevention"]
 			},
 			"tech": {
-				"title": "Tech Range",
-				"subtitle": "Maintenance simulator",
+				"title": "Maintenance Simulator",
+				"subtitle": "Tech Range",
 				"description": "Training on maintenance operations, fault diagnosis and technical procedures.",
 				"price": "11,875",
-				"unit": "per equipment",
+				"unit": "starting from",
 				"features": ["Maintenance operations", "Fault diagnosis", "Technical procedures", "Lockout/Tagout"]
 			},
 			"scenario": {
@@ -495,12 +494,12 @@
 			"priceThreeYears": "1,790",
 			"priceMonthlyYearly": "179",
 			"priceMonthlyThreeYears": "149",
-			"period": "/year/admin²",
+			"period": "/year/admin¹",
 			"description": "For growing teams",
-			"includes": "Everything in Discovery, plus:",
+			"includes": "Included:",
 			"features": [
 				"Up to 100 users",
-				"Unlimited WiseTrainer",
+				"Unlimited training³",
 				"MFA (Multi-factor authentication)",
 				"Audit logs",
 				"Priority support"
@@ -513,24 +512,23 @@
 			"priceThreeYears": "2,990",
 			"priceMonthlyYearly": "299",
 			"priceMonthlyThreeYears": "249",
-			"period": "/year/admin²",
+			"period": "/year/admin¹",
 			"description": "For large organizations",
 			"includes": "Everything in Pro, plus:",
 			"features": [
 				"Unlimited users",
-				"Unlimited WiseTrainer",
+				"Unlimited training³",
 				"SSO (Single Sign-On)",
-				"Cross-company training sharing³",
+				"Cross-company training sharing²",
 				"API access",
 				"Dedicated support"
 			],
 			"cta": "Contact us"
 		},
 		"notes": {
-			"wisetrainer": "¹ WiseTrainer: custom-built immersive 3D simulator, virtual replica of your industrial facilities.",
-			"wisetrainerLink": "Learn more about WiseTrainer",
-			"admin": "² Price per administrator. All prices exclude VAT.",
-			"crossCompany": "³ Cross-company sharing allows you to share developed trainings with partner organizations.",
+			"admin": "¹ Price per administrator. All prices exclude VAT.",
+			"crossCompany": "² Cross-company sharing allows you to share developed trainings with partner organizations.",
+			"unlimitedTraining": "³ Each learner has unlimited access to training. They can practice, retry, and progress at their own pace, whether they succeed or not.",
 			"scenario": "A scenario is an interactive training path with learning objectives, actions to perform and skills validation. Each WiseTrainer includes 3 base scenarios."
 		},
 		"wisetrainerLink": "See WiseTrainer development pricing",
@@ -581,17 +579,16 @@
 		"exclVat": "excl. VAT",
 		"gammes": {
 			"safe": {
-				"title": "Safe Range",
+				"title": "Safety Simulator",
 				"description": "Safety simulator",
 				"price": "4,500",
 				"oldPrice": "5,625",
 				"unit": "starting from"
 			},
 			"tech": {
-				"title": "Tech Range",
+				"title": "Maintenance Simulator",
 				"description": "Maintenance simulator",
-				"price": "9,000",
-				"oldPrice": "11,875",
+				"price": "11,875",
 				"unit": "starting from"
 			}
 		},

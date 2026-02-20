@@ -21,6 +21,7 @@ export const metadata: Metadata = {
 			"Transformez votre formation industrielle avec nos solutions VR immersives",
 		type: "website",
 		locale: "fr_FR",
+		url: "https://wisetwin.eu",
 	},
 	twitter: {
 		card: "summary_large_image",
@@ -29,7 +30,11 @@ export const metadata: Metadata = {
 			"Transformez votre formation industrielle avec nos solutions VR immersives",
 	},
 	alternates: {
-		canonical: "https://wisetwin.fr",
+		canonical: "https://wisetwin.eu",
+		languages: {
+			fr: "https://wisetwin.eu/fr",
+			en: "https://wisetwin.eu/en",
+		},
 	},
 };
 

@@ -11,11 +11,11 @@ const logos = [
 		name: "Institut Mines-Télécom",
 		src: "/logos/Logo_Institut_Mines-Télécom.svg",
 	},
-	{ name: "Ecosystème D", src: "/logos/Logo-Ecosysteme-D_CMJN.png" },
-	{ name: "AD", src: "/logos/logo-ad.png" },
+	{ name: "Ecosystème D", src: "/logos/Logo-Ecosysteme-D_CMJN.png", className: "!h-18 md:!h-22" },
+	{ name: "AD", src: "/logos/logo-ad.png", className: "!h-8 md:!h-10" },
 ];
 
-function LogoItem({ logo }: { logo: { name: string; src: string } }) {
+function LogoItem({ logo }: { logo: { name: string; src: string; className?: string } }) {
 	return (
 		<div
 			className={cn(
@@ -29,7 +29,10 @@ function LogoItem({ logo }: { logo: { name: string; src: string } }) {
 				alt={logo.name}
 				width={160}
 				height={48}
-				className="h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+				className={cn(
+					"h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300",
+					logo.className
+				)}
 			/>
 		</div>
 	);

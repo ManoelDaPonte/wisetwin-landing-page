@@ -19,7 +19,6 @@
 		"wisetrainer": "WiseTrainer",
 		"pricing": "Tarifs",
 		"faq": "FAQ",
-		"roadmap": "Roadmap",
 		"contact": "Contact"
 	},
 	"hero": {
@@ -263,23 +262,23 @@
 			}
 		},
 		"gammes": {
-			"title": "Nos gammes WiseTrainer",
+			"title": "Nos WiseTrainer",
 			"subtitle": "Choisissez la solution adaptée à vos besoins de formation",
 			"includedScenarios": "3 scénarios inclus",
 			"safe": {
-				"title": "Gamme Safe",
-				"subtitle": "Simulateur sécurité",
+				"title": "Simulateur Sécurité",
+				"subtitle": "Gamme Safe",
 				"description": "Formation aux procédures de sécurité, gestes d'urgence, port des EPI et prévention des risques.",
 				"price": "5 625",
-				"unit": "par environnement créé",
+				"unit": "à partir de",
 				"features": ["Procédures de sécurité", "Gestes d'urgence", "Port des EPI", "Prévention des risques"]
 			},
 			"tech": {
-				"title": "Gamme Tech",
-				"subtitle": "Simulateur maintenance",
+				"title": "Simulateur Maintenance",
+				"subtitle": "Gamme Tech",
 				"description": "Formation aux opérations de maintenance, diagnostics de pannes et procédures techniques.",
 				"price": "11 875",
-				"unit": "par équipement",
+				"unit": "à partir de",
 				"features": ["Opérations de maintenance", "Diagnostic de pannes", "Procédures techniques", "Consignation"]
 			},
 			"scenario": {
@@ -495,12 +494,12 @@
 			"priceThreeYears": "1 790",
 			"priceMonthlyYearly": "179",
 			"priceMonthlyThreeYears": "149",
-			"period": "/an/admin²",
+			"period": "/an/admin¹",
 			"description": "Pour les équipes en croissance",
-			"includes": "Tout le plan Découverte, plus :",
+			"includes": "Inclus :",
 			"features": [
 				"Jusqu'à 100 utilisateurs",
-				"WiseTrainer illimités",
+				"Formations illimitées³",
 				"MFA (Authentification multi-facteurs)",
 				"Journaux d'audit",
 				"Support prioritaire"
@@ -513,24 +512,23 @@
 			"priceThreeYears": "2 990",
 			"priceMonthlyYearly": "299",
 			"priceMonthlyThreeYears": "249",
-			"period": "/an/admin²",
+			"period": "/an/admin¹",
 			"description": "Pour les grandes organisations",
 			"includes": "Tout le plan Pro, plus :",
 			"features": [
 				"Utilisateurs illimités",
-				"WiseTrainer illimités",
+				"Formations illimitées³",
 				"SSO (Single Sign-On)",
-				"Mutualisation inter-entreprises³",
+				"Mutualisation inter-entreprises²",
 				"API access",
 				"Support dédié"
 			],
 			"cta": "Nous contacter"
 		},
 		"notes": {
-			"wisetrainer": "¹ WiseTrainer : simulateur 3D immersif sur mesure, réplique virtuelle de vos installations industrielles.",
-			"wisetrainerLink": "En savoir plus sur WiseTrainer",
-			"admin": "² Tarif par administrateur. Tous les prix sont HT.",
-			"crossCompany": "³ La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",
+			"admin": "¹ Tarif par administrateur. Tous les prix sont HT.",
+			"crossCompany": "² La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",
+			"unlimitedTraining": "³ Chaque apprenant dispose d'un accès illimité aux formations. Ils peuvent s'entraîner, recommencer et progresser à leur rythme, qu'ils réussissent ou non.",
 			"scenario": "Un scénario est un parcours de formation interactif avec objectifs pédagogiques, actions à réaliser et validation des acquis. Chaque WiseTrainer inclut 3 scénarios de base."
 		},
 		"wisetrainerLink": "Voir les tarifs de développement WiseTrainer",
@@ -581,17 +579,16 @@
 		"exclVat": "HT",
 		"gammes": {
 			"safe": {
-				"title": "Gamme Safe",
+				"title": "Simulateur Sécurité",
 				"description": "Simulateur sécurité",
 				"price": "4 500",
 				"oldPrice": "5 625",
 				"unit": "à partir de"
 			},
 			"tech": {
-				"title": "Gamme Tech",
+				"title": "Simulateur Maintenance",
 				"description": "Simulateur maintenance",
-				"price": "9 000",
-				"oldPrice": "11 875",
+				"price": "11 875",
 				"unit": "à partir de"
 			}
 		},

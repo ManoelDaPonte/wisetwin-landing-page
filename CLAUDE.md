@@ -51,15 +51,14 @@ Pages are composed via client orchestrators in `components/pages/`:
 
 Homepage sections in order:
 1. HeroSection - Main hero with CTA
-2. WiseTrainerSection - Flagship product
-3. WiseTrainerAdvantagesSection - Benefits
-4. ProfilesSection - Target personas
-5. PlatformSection - Platform overview
-6. SecuritySection - SSO, MFA, Audit features
-7. PricingSection - 3 tiers (Free, Pro 89€, Business 299€)
-8. WiseTrainerPricingSection - 3D development pricing
-9. FaqSection - 5 featured questions + link to /faq
-10. ContactSection - Contact form
+2. TrustedBySection - Logo carousel of trusted clients
+3. AdvantagesSection - "Pourquoi WiseTwin?" benefits
+4. SolutionsSection - WiseTrainer + Platform overview
+5. PricingSection - WiseTrainers pricing + Subscription licenses (Pro, Business)
+6. PricingCalculatorSection - Interactive cost estimator
+7. SecuritySection - SSO, MFA, Audit features
+8. FaqSection - 5 featured questions + link to /faq
+9. ContactSection - Contact form
 
 ### Section Component
 
@@ -81,7 +80,7 @@ Theme colors defined in `app/globals.css` using TailwindCSS v4 `@theme` directiv
 - Brand colors: `--color-wisetwin-blue` (#00C7FF), `--color-wisetwin-darkblue` (#0F0B66)
 - Dark mode via `.dark` class (managed by `next-themes` with `defaultTheme="dark"`)
 - Primary maps to brand dark blue (light) / white (dark)
-- Secondary is always brand blue (#00C7FF)
+- Secondary maps to brand dark blue (light) / brand blue cyan (dark)
 
 ### API Routes
 
@@ -96,7 +95,6 @@ Contact form in `contact-section.tsx` fetches CSRF token before POST.
 app/[locale]/          # Localized routes (fr, en)
 ├── page.tsx           # Homepage
 ├── faq/page.tsx       # Full FAQ with search
-├── roadmap/page.tsx   # Product roadmap
 messages/              # Translation files
 ├── fr.json
 └── en.json
