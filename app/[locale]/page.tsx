@@ -4,7 +4,7 @@ import HomeClient from "@/components/pages/home-client";
 export const metadata: Metadata = {
 	title: "WiseTwin - Solutions innovantes pour la sécurité",
 	description:
-		"Transformez votre formation industrielle avec nos solutions VR immersives. WiseTour, Wise Twin, WiseScan et WiseAssist pour optimiser vos processus et former vos équipes.",
+		"Transformez votre formation industrielle avec nos solutions immersives. Tout un écosystème pour optimiser vos processus et former vos équipes.",
 	keywords: [
 		"réalité virtuelle",
 		"industrie 4.0",
