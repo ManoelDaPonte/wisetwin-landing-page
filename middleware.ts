@@ -35,8 +35,7 @@ export const config = {
 		// - API routes
 		// - Static files (/_next, /image, /video, etc.)
 		// - Favicon, robots, sitemap
-		"/((?!api|_next|image|video|storyset|ressources|.*\\..*|icon\\.ico).*)",
-		"/",
+		"/((?!api|_next|image|video|storyset|ressources|sitemap\\.xml|robots\\.txt|.*\\..*|icon\\.ico).*)",
 		"/(fr|en)/:path*",
 	],
 };

@@ -10,7 +10,7 @@ export function Footer() {
 	const currentYear = new Date().getFullYear();
 
 	const navLinks = [
-		{ label: t("nav.solutions"), href: "/#solutions" },
+		{ label: t("nav.solutions"), href: "/#pricing" },
 		{ label: t("nav.pricing"), href: "/#pricing" },
 		{ label: t("nav.faq"), href: "/faq" },
 		{ label: t("nav.contact"), href: "/#contact" },
@@ -18,7 +18,9 @@ export function Footer() {
 
 	const solutionLinks = [
 		{ label: t("wisetrainer.title"), href: "/solutions/wisetrainer" },
-		{ label: t("platform.title"), href: "/solutions/platform" },
+		{ label: t("wisepaper.title"), href: "/solutions/wisepaper" },
+		{ label: t("wisetour.title"), href: "/solutions/wisetour" },
+		{ label: t("wiseatlas.title"), href: "/solutions/wiseatlas" },
 	];
 
 	const legalLinks = [

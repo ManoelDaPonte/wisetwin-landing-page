@@ -4,9 +4,8 @@ import {
 	HeroSection,
 	TrustedBySection,
 	AdvantagesSection,
-	SolutionsSection,
 	PricingSection,
-	PricingCalculatorSection,
+	// PricingCalculatorSection,
 	SecuritySection,
 	FaqSection,
 	ContactSection,
@@ -18,9 +17,8 @@ export default function HomeClient() {
 			<HeroSection />
 			<TrustedBySection />
 			<AdvantagesSection />
-			<SolutionsSection />
 			<PricingSection />
-			<PricingCalculatorSection />
+			{/* <PricingCalculatorSection /> */}
 			<SecuritySection />
 			<FaqSection />
 			<ContactSection />

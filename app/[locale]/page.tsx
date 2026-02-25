@@ -1,42 +1,50 @@
 import { Metadata } from "next";
 import HomeClient from "@/components/pages/home-client";
 
-export const metadata: Metadata = {
-	title: "WiseTwin - Solutions innovantes pour la sécurité",
-	description:
-		"Transformez votre formation industrielle avec nos solutions immersives. Tout un écosystème pour optimiser vos processus et former vos équipes.",
-	keywords: [
-		"réalité virtuelle",
-		"industrie 4.0",
-		"formation industrielle",
-		"VR",
-		"simulation",
-		"maintenance prédictive",
-		"formation sécurité",
-		"jumeau numérique",
-	],
-	openGraph: {
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+	const { locale } = await params;
+
+	return {
 		title: "WiseTwin - Solutions innovantes pour la sécurité",
 		description:
-			"Transformez votre formation industrielle avec nos solutions VR immersives",
-		type: "website",
-		locale: "fr_FR",
-		url: "https://wisetwin.eu",
-	},
-	twitter: {
-		card: "summary_large_image",
-		title: "WiseTwin - Solutions innovantes pour la sécurité",
-		description:
-			"Transformez votre formation industrielle avec nos solutions VR immersives",
-	},
-	alternates: {
-		canonical: "https://wisetwin.eu",
-		languages: {
-			fr: "https://wisetwin.eu/fr",
-			en: "https://wisetwin.eu/en",
+			"Transformez votre formation industrielle avec nos solutions immersives. Tout un écosystème pour optimiser vos processus et former vos équipes.",
+		keywords: [
+			"réalité virtuelle",
+			"industrie 4.0",
+			"formation industrielle",
+			"VR",
+			"simulation",
+			"maintenance prédictive",
+			"formation sécurité",
+			"jumeau numérique",
+		],
+		openGraph: {
+			title: "WiseTwin - Solutions innovantes pour la sécurité",
+			description:
+				"Transformez votre formation industrielle avec nos solutions VR immersives",
+			type: "website",
+			locale: locale === "fr" ? "fr_FR" : "en_US",
+			url: `https://wisetwin.eu/${locale}`,
 		},
-	},
-};
+		twitter: {
+			card: "summary_large_image",
+			title: "WiseTwin - Solutions innovantes pour la sécurité",
+			description:
+				"Transformez votre formation industrielle avec nos solutions VR immersives",
+		},
+		alternates: {
+			canonical: `https://wisetwin.eu/${locale}`,
+			languages: {
+				fr: "https://wisetwin.eu/fr",
+				en: "https://wisetwin.eu/en",
+			},
+		},
+	};
+}
 
 export default function Home() {
 	return <HomeClient />;

@@ -17,6 +17,9 @@
 	"nav": {
 		"solutions": "Solutions",
 		"wisetrainer": "WiseTrainer",
+		"wisepaper": "WisePaper",
+		"wisetour": "WiseTour",
+		"wiseatlas": "WiseAtlas",
 		"pricing": "Pricing",
 		"faq": "FAQ",
 		"contact": "Contact"
@@ -25,7 +28,12 @@
 		"titlePrefix": "More",
 		"titleHighlight": "safety",
 		"rotatingPrefix": "More",
-		"rotatingWords": ["productivity", "retention", "engagement", "peace of mind"],
+		"rotatingWords": [
+			"productivity",
+			"retention",
+			"engagement",
+			"peace of mind"
+		],
 		"subtitle": "Digitize your training and immerse your employees in custom immersive situations, exact replicas of your facilities.",
 		"cta": "Free trial",
 		"ctaSecondary": "Request a quote",
@@ -35,32 +43,96 @@
 			"speed": "Delivered in 1 month"
 		}
 	},
-	"vision": {
-		"title": "Why choose us?",
-		"subtitle": "A unique approach combining speed, expertise and precision for custom simulators.",
-		"highlights": {
-			"speed": {
-				"title": "1 month delivery",
-				"description": "From receiving your photos to delivering your operational simulator."
-			},
-			"collaboration": {
-				"title": "Co-creation",
-				"description": "Our teams work hand in hand with your business experts for tailored scenarios."
-			},
-			"precision": {
-				"title": "Exact replica",
-				"description": "Advanced imaging technologies and dedicated 3D modelling engineers to faithfully recreate your facilities."
-			}
-		}
-	},
 	"solutions": {
 		"title": "Our solutions",
-		"subtitle": "Tools adapted to each training need",
+		"subtitle": "Find the solution that best fits your needs",
 		"cta": "Learn more",
 		"flagship": "Flagship",
+		"selfService": "Self-service",
+		"standalone": "Standalone",
+		"wisetrainer": {
+			"title": "WiseTrainer",
+			"description": "Recreate your workstations in 3D and train your teams in a safe and realistic virtual environment."
+		},
 		"platform": {
 			"title": "Management platform",
 			"description": "Planning, reporting, training plans and centralized learner tracking."
+		},
+		"wisepaper": {
+			"title": "WisePaper",
+			"description": "Digitize your paper training (PDF, Word, PowerPoint) and add interactive quizzes."
+		},
+		"wisetour": {
+			"title": "WiseTour",
+			"description": "Visit photo-realistic 3D environments with quizzes for immersive training."
+		},
+		"wiseatlas": {
+			"title": "WiseAtlas",
+			"description": "Google Maps-style interactive map for communication and territorial planning."
+		},
+		"comparison": {
+			"labels": {
+				"devTime": "Development time",
+				"activityInterruption": "Activity interruption",
+				"serviceType": "Self-service or managed",
+				"userTracking": "User tracking",
+				"realism": "Realism",
+				"interactivity": "Interactivity",
+				"networkDemand": "Network demand",
+				"equipment": "Required equipment",
+				"web": "Web accessible",
+				"interactionTracking": "Interaction tracking"
+			},
+			"values": {
+				"wisetrainer": {
+					"devTime": "~1 month",
+					"activityInterruption": "None",
+					"serviceType": "Managed",
+					"userTracking": true,
+					"realism": "3D modeled",
+					"interactivity": "High",
+					"networkDemand": "High",
+					"equipment": "PC",
+					"web": true,
+					"interactionTracking": true
+				},
+				"wisepaper": {
+					"devTime": "Instant",
+					"activityInterruption": "None",
+					"serviceType": "Self-service",
+					"userTracking": true,
+					"realism": "Documents",
+					"interactivity": "Medium",
+					"networkDemand": "Low",
+					"equipment": "PC / Tablet / Mobile",
+					"web": true,
+					"interactionTracking": true
+				},
+				"wisetour": {
+					"devTime": "Instant to 1 week",
+					"activityInterruption": "0 to 1 site visit",
+					"serviceType": "Self-service / Managed",
+					"userTracking": true,
+					"realism": "Photorealistic",
+					"interactivity": "Medium",
+					"networkDemand": "Medium",
+					"equipment": "PC",
+					"web": true,
+					"interactionTracking": true
+				},
+				"wiseatlas": {
+					"devTime": "On quote",
+					"activityInterruption": "None",
+					"serviceType": "Managed",
+					"userTracking": false,
+					"realism": "2D Map",
+					"interactivity": "Medium",
+					"networkDemand": "Low",
+					"equipment": "PC / Tablet / Mobile",
+					"web": true,
+					"interactionTracking": true
+				}
+			}
 		}
 	},
 	"platform": {
@@ -147,7 +219,12 @@
 		"security": {
 			"title": "Enterprise security",
 			"subtitle": "All features to protect your data",
-			"items": ["SSO (SAML/OAuth)", "MFA (Multi-factor authentication)", "Audit logs", "Data isolation"]
+			"items": [
+				"SSO (SAML/OAuth)",
+				"MFA (Multi-factor authentication)",
+				"Audit logs",
+				"Data isolation"
+			]
 		},
 		"cta": {
 			"title": "Ready to simplify your training management?",
@@ -209,25 +286,6 @@
 				}
 			}
 		},
-		"features": {
-			"title": "Features",
-			"immersive": {
-				"title": "Immersive 3D environments",
-				"description": "Faithfully recreate your industrial facilities in 3D for realistic training."
-			},
-			"scenarios": {
-				"title": "Custom scenarios",
-				"description": "Create training paths adapted to your specific procedures and situations."
-			},
-			"tracking": {
-				"title": "Performance tracking",
-				"description": "Analyze results and progress of each learner in real time."
-			},
-			"safe": {
-				"title": "Risk-free training",
-				"description": "Simulate dangerous situations safely to better prepare your teams."
-			}
-		},
 		"ownership": {
 			"title": "Your asset, your property",
 			"description": "The 3D environment created for your company belongs to you. You own the custom digital asset developed from your facilities.",
@@ -241,23 +299,28 @@
 			"steps": {
 				"quote": {
 					"title": "Request a quote",
-					"description": "Contact us to define your needs and receive a tailored proposal."
+					"description": "Contact us to define your needs and receive a tailored proposal.",
+					"duration": "D+0"
 				},
 				"photos": {
 					"title": "Send photos",
-					"description": "Send us your photos or we come to scan your facilities with our equipment."
+					"description": "Send us your photos or we come to scan your facilities with our equipment.",
+					"duration": "~1 day"
 				},
 				"creation": {
 					"title": "Environment creation",
-					"description": "Our team models your installation in 3D in collaboration with your business experts."
+					"description": "Our team models your installation in 3D in collaboration with your business experts.",
+					"duration": "~2-3 weeks"
 				},
 				"scenarios": {
 					"title": "Pedagogical scenarios",
-					"description": "We co-build training scenarios with your teams to match your procedures."
+					"description": "We co-build training scenarios with your teams to match your procedures.",
+					"duration": "~1 week"
 				},
 				"delivery": {
 					"title": "Delivery",
-					"description": "Your simulator is ready to use, accessible from the platform."
+					"description": "Your simulator is ready to use, accessible from the platform.",
+					"duration": "~1 month"
 				}
 			}
 		},
@@ -271,7 +334,12 @@
 				"description": "Training on safety procedures, emergency gestures, PPE use and risk prevention.",
 				"price": "5,625",
 				"unit": "starting from",
-				"features": ["Safety procedures", "Emergency gestures", "PPE use", "Risk prevention"]
+				"features": [
+					"Safety procedures",
+					"Emergency gestures",
+					"PPE use",
+					"Risk prevention"
+				]
 			},
 			"tech": {
 				"title": "Maintenance Simulator",
@@ -279,7 +347,12 @@
 				"description": "Training on maintenance operations, fault diagnosis and technical procedures.",
 				"price": "11,875",
 				"unit": "starting from",
-				"features": ["Maintenance operations", "Fault diagnosis", "Technical procedures", "Lockout/Tagout"]
+				"features": [
+					"Maintenance operations",
+					"Fault diagnosis",
+					"Technical procedures",
+					"Lockout/Tagout"
+				]
 			},
 			"scenario": {
 				"title": "Additional scenarios",
@@ -310,51 +383,34 @@
 			"steps": {
 				"import": {
 					"title": "Import",
-					"description": "Upload your existing PDF, Word or PowerPoint files"
+					"description": "Upload your existing PDF, Word or PowerPoint files",
+					"duration": "Instant"
 				},
 				"process": {
 					"title": "AI",
-					"description": "Our AI analyzes, restructures and generates quizzes"
+					"description": "Our AI analyzes, restructures and generates quizzes",
+					"duration": "< 1 min"
 				},
 				"track": {
 					"title": "Track",
-					"description": "See who has read and understood your training"
+					"description": "See who has read and understood your training",
+					"duration": "Immediate"
 				}
 			}
 		},
-		"formats": {
-			"title": "Supported formats",
-			"subtitle": "Import your existing documents directly",
-			"items": ["PDF", "Word (.docx)", "PowerPoint (.pptx)", "Google Docs"]
-		},
-		"features": {
-			"title": "Features",
-			"create": {
-				"title": "Course creation",
-				"description": "Create your training directly in the editor, just like Notion. Simple, intuitive and collaborative."
+		"useCases": {
+			"title": "Use cases",
+			"compliance": {
+				"title": "Regulatory compliance",
+				"description": "Ensure all employees have read and understood mandatory procedures, with proof of completion."
 			},
-			"import": {
-				"title": "Digitize your documents",
-				"description": "Import your existing PDFs, Word docs, PowerPoints. Our AI transforms them into interactive training modules."
+			"onboarding": {
+				"title": "Onboarding",
+				"description": "Create onboarding paths for new hires with progress tracking."
 			},
-			"ai": {
-				"title": "Integrated AI",
-				"description": "Our AI analyzes your content and automatically generates MCQs, quizzes and exercises to validate learning."
-			},
-			"tracking": {
-				"title": "Results tracking",
-				"description": "No more paper training without feedback. Track who did what, scores, and progress in real time."
-			}
-		},
-		"benefits": {
-			"title": "Why WisePaper?",
-			"paper": {
-				"title": "Your paper training revealed",
-				"description": "Do you have procedures, manuals, training materials in paper format? Digitize them and finally get data on who has read and understood them."
-			},
-			"free": {
-				"title": "100% free",
-				"description": "WisePaper is included for free in your WiseTwin account. Create as many trainings as you want."
+			"procedures": {
+				"title": "Procedures & SOPs",
+				"description": "Transform your internal documents into interactive training with validation quizzes."
 			}
 		},
 		"cta": {
@@ -363,80 +419,186 @@
 			"button": "Start for free"
 		}
 	},
-	"advantages": {
-		"title": "Why WiseTwin?",
-		"subtitle": "Concrete benefits for your business",
-		"items": {
-			"noDowntime": {
-				"label": "0 downtime",
-				"shortDesc": "Production unaffected",
-				"title": "Train without stopping your facilities",
-				"description": "Your production lines keep running while your teams train on the digital twin. No need to mobilize your real installations.",
-				"stats": {
-					"value1": "0",
-					"label1": "production downtime",
-					"value2": "100%",
-					"label2": "availability"
+	"wisetour": {
+		"title": "WiseTour",
+		"subtitle": "Photo-realistic immersive training",
+		"description": "Immerse your learners in ultra-realistic 3D environments captured by photogrammetry, accompanied by quizzes to validate knowledge.",
+		"hero": {
+			"title": "Photo-realistic 3D training",
+			"subtitle": "Move through ultra-realistic 3D environments captured directly from your facilities. Accompany the tour with quizzes to validate knowledge.",
+			"cta": "Request a quote",
+			"badge": "Self-service"
+		},
+		"howItWorks": {
+			"title": "How does it work?",
+			"subtitle": "From capture to training in a few steps",
+			"steps": {
+				"capture": {
+					"title": "On-site capture",
+					"description": "We travel to your site or you use your own equipment to capture your facilities in photo/video.",
+					"duration": "~1 day"
+				},
+				"processing": {
+					"title": "3D processing",
+					"description": "Our algorithms transform captures into navigable photo-realistic 3D environments.",
+					"duration": "2-3 days"
+				},
+				"editor": {
+					"title": "Course editor",
+					"description": "Use our self-service editor to add points of interest, quizzes and training paths.",
+					"duration": "Self-service"
+				},
+				"training": {
+					"title": "Training",
+					"description": "Your learners move freely in the environment and answer integrated quizzes.",
+					"duration": "Immediate"
 				}
+			}
+		},
+		"useCases": {
+			"title": "Use cases",
+			"safety": {
+				"title": "Safety tour",
+				"description": "Introduce safety instructions for a site before the first field visit."
 			},
-			"fastDelivery": {
-				"label": "1 month",
-				"shortDesc": "Fast delivery",
-				"title": "Your simulator in 1 month",
-				"description": "From receiving your photos to delivering your operational 3D environment. Our team works hand in hand with your business experts.",
+			"onboarding": {
+				"title": "Onboarding",
+				"description": "Welcome new employees with a virtual tour of their future premises."
+			},
+			"maintenance": {
+				"title": "Maintenance scouting",
+				"description": "Allow technicians to familiarize themselves with a site before intervention."
+			}
+		},
+		"cta": {
+			"title": "Ready to capture your environments?",
+			"description": "Contact us to schedule a capture or discover how to use your own equipment.",
+			"button": "Request a quote"
+		}
+	},
+	"wiseatlas": {
+		"title": "WiseAtlas",
+		"subtitle": "Interactive communication map",
+		"description": "A Google Maps-style interactive map to communicate about your territorial development projects and share geolocated information.",
+		"hero": {
+			"title": "Communicate on an interactive map",
+			"subtitle": "Develop a custom Google Maps-style interactive map for your territorial communication and redevelopment projects. Standalone solution, independent from the training platform.",
+			"cta": "Request a quote",
+			"badge": "Standalone solution"
+		},
+		"howItWorks": {
+			"title": "How does it work?",
+			"subtitle": "From your project to an interactive map in a few steps",
+			"steps": {
+				"define": {
+					"title": "Project definition",
+					"description": "Share your objectives and the geographic scope of your project.",
+					"duration": "1 meeting"
+				},
+				"data": {
+					"title": "Data integration",
+					"description": "We integrate your geographic data, project areas and points of interest.",
+					"duration": "1-2 weeks"
+				},
+				"design": {
+					"title": "Customization",
+					"description": "Design and branding adapted to your communication charter.",
+					"duration": "~1 week"
+				},
+				"publish": {
+					"title": "Publication",
+					"description": "Your interactive map is online, shareable by link.",
+					"duration": "Immediate"
+				}
+			}
+		},
+		"useCases": {
+			"title": "Use cases",
+			"territory": {
+				"title": "Territorial redevelopment",
+				"description": "Communicate about your urban planning and redevelopment projects with an interactive map."
+			},
+			"stakeholders": {
+				"title": "Stakeholder communication",
+				"description": "Keep your partners and the public informed about your project progress."
+			},
+			"infrastructure": {
+				"title": "Infrastructure projects",
+				"description": "Visualize and communicate about large-scale infrastructure projects."
+			}
+		},
+		"standalone": {
+			"title": "Standalone solution",
+			"description": "WiseAtlas is a separate solution, independent from the WiseTwin training platform. It's an application made available to your clients for communication purposes."
+		},
+		"cta": {
+			"title": "Have a territorial communication project?",
+			"description": "Contact us to discuss your project and get a customized quote.",
+			"button": "Request a quote"
+		}
+	},
+	"advantages": {
+		"title": "Why choose us?",
+		"subtitle": "What makes WiseTwin different",
+		"items": {
+			"reactivity": {
+				"label": "Reactive",
+				"shortDesc": "Fast deployment after incidents",
+				"title": "Reactive at every moment",
+				"description": "Our solutions can be deployed instantly for the simplest, up to 1 month for the most complex. React quickly after an incident, train your teams without delay.",
 				"stats": {
 					"value1": "1",
 					"label1": "month to deliver",
-					"value2": "3",
-					"label2": "scenarios included"
-				}
-			},
-			"noVR": {
-				"label": "100% web",
-				"shortDesc": "No VR headset",
-				"title": "Browser accessible",
-				"description": "No need to invest in expensive equipment. Your training is accessible from any browser, on PC, tablet or mobile, securely.",
-				"stats": {
-					"value1": "0€",
-					"label1": "equipment cost",
 					"value2": "100%",
-					"label2": "browser-based"
+					"label2": "reactive"
 				}
 			},
-			"unlimited": {
-				"label": "Unlimited",
-				"shortDesc": "Infinite sessions",
-				"title": "Train as much as needed",
-				"description": "Once your simulator is created, train 10 or 10,000 people at no additional cost. Each learner can repeat as many times as needed.",
+			"tracking": {
+				"label": "Traceability",
+				"shortDesc": "Response tracking for decisions",
+				"title": "Every response is tracked",
+				"description": "Every learner action is recorded and analyzable. Identify gaps, measure progress and make informed decisions about your training plans.",
 				"stats": {
-					"value1": "∞",
-					"label1": "sessions",
-					"value2": "0€",
-					"label2": "per session"
+					"value1": "100%",
+					"label1": "actions tracked",
+					"value2": "∞",
+					"label2": "exportable data"
 				}
 			},
-			"safe": {
-				"label": "0 risk",
-				"shortDesc": "Safe training",
-				"title": "Simulate without danger",
-				"description": "Train your teams on dangerous situations (fire, chemical leak, lockout) in complete safety. They learn the right reflexes without any risk.",
+			"costEffective": {
+				"label": "Cost-effective",
+				"shortDesc": "80% effectiveness, 20% of the price",
+				"title": "80% of the effectiveness for 20% of the price",
+				"description": "Our simulators offer immersion comparable to high-end VR solutions, at a fraction of the cost. We focus on what matters to train your teams effectively without the unnecessary.",
 				"stats": {
-					"value1": "0",
-					"label1": "real risk",
-					"value2": "100%",
-					"label2": "of scenarios"
+					"value1": "80%",
+					"label1": "effectiveness",
+					"value2": "÷5",
+					"label2": "the cost"
 				}
 			},
-			"interop": {
-				"label": "SCORM",
-				"shortDesc": "LMS Export",
-				"title": "Integration with your LMS",
-				"description": "All our trainings (WiseTrainer and WisePaper) are exportable in SCORM format. Integrate them directly into your existing LMS (Moodle, 360Learning, Talentsoft, etc.) and centralize tracking of all your trainings.",
+			"easyIntegration": {
+				"label": "Integrable",
+				"shortDesc": "SCORM, LMS export",
+				"title": "Integrates with your existing tools",
+				"description": "Export your training in SCORM format and integrate them directly into your LMS (Moodle, 360Learning, Talentsoft). No disruption to your training ecosystem.",
 				"stats": {
 					"value1": "100%",
 					"label1": "SCORM compatible",
 					"value2": "∞",
 					"label2": "LMS supported"
+				}
+			},
+			"noEquipment": {
+				"label": "Lightweight",
+				"shortDesc": "Zero heavy equipment",
+				"title": "Zero equipment, zero constraints",
+				"description": "No need for an Oculus headset, HTC Vive or any expensive VR equipment. A PC and an internet connection are all you need. Your learners train directly from their web browser.",
+				"stats": {
+					"value1": "0€",
+					"label1": "equipment cost",
+					"value2": "100%",
+					"label2": "web browser"
 				}
 			}
 		}
@@ -465,41 +627,101 @@
 		"title": "Subscription Licenses",
 		"subtitle": "Choose the plan that fits your organization",
 		"billing": {
-			"yearly": "1 Year",
-			"threeYears": "3 Years",
+			"monthly": "1 Year",
+			"yearly": "3 Years",
 			"savePercent": "-20%",
-			"perMonth": "i.e. {price}€/month"
+			"perYear": "i.e. {price}€/year",
+			"perMonth": "/mo/admin"
+		},
+		"adminCounter": {
+			"title": "Number of administrators",
+			"admin": "admin",
+			"admins": "admins"
 		},
 		"discountBanner": {
 			"firstOrder": "-20% on 1st order"
 		},
-		"free": {
-			"title": "Discovery",
-			"priceYearly": "0",
-			"priceThreeYears": "0",
-			"period": "/year",
-			"description": "Perfect for discovering the platform",
-			"includes": "",
+		"products": {
+			"title": "Our solutions",
+			"subtitle": "Find the solution that best fits your needs",
+			"specsTitle": "Specifications",
+			"wisetrainer": {
+				"title": "WiseTrainer",
+				"price": "Starting from €4,500",
+				"description": "Immerse your teams in hand-crafted 3D simulators, built from photos of your actual facilities. Ideal for HSE training, LOTO lockout/tagout, technical procedures, and safety protocols.",
+				"specs": [
+					"0 production downtime",
+					"Delivered in 1 month",
+					"100% web, no VR headset",
+					"No equipment required",
+					"Unlimited sessions"
+				]
+			},
+			"wisepaper": {
+				"title": "WisePaper",
+				"price": "Free",
+				"description": "Transform your existing training documents (PDF, PowerPoint, Word) into interactive digital courses with validation quizzes. AI analyzes your content and automatically generates relevant questions.",
+				"specs": [
+					"0 production downtime",
+					"Instant self-service creation",
+					"100% web",
+					"No equipment required",
+					"Unlimited sessions"
+				]
+			},
+			"wisetour": {
+				"title": "WiseTour",
+				"price": "Starting from €0",
+				"description": "Create photo-realistic virtual tours of your sites from 360° captures. Integrate interactive hotspots and quizzes to train your teams remotely on their actual work environment.",
+				"specs": [
+					"1 on-site visit required",
+					"We come or you scan yourself",
+					"Self-service editor included",
+					"Result 100% web",
+					"Unlimited sessions"
+				]
+			},
+			"wiseatlas": {
+				"title": "WiseAtlas",
+				"price": "On quote",
+				"description": "A Google Maps-style interactive map dedicated to territorial communication and redevelopment projects. Present your projects, gather citizen feedback, and facilitate public consultation.",
+				"specs": [
+					"Shareable by link",
+					"Interaction tracking",
+					"100% web",
+					"No equipment required",
+					"Unlimited access"
+				],
+				"standalone": "Sold separately from the training platform"
+			}
+		},
+		"essential": {
+			"title": "Essential",
+			"priceMonthly": "79",
+			"priceYearly": "790",
+			"period": "/mo/admin",
+			"description": "To start digitizing your training",
+			"includes": "Included:",
 			"features": [
-				"Up to 3 users",
-				"1 WiseTrainer¹ included (LOTO procedure)",
+				"WisePaper included",
+				"WiseTour included",
+				"Up to 25 users",
 				"Management platform",
 				"Email support"
 			],
-			"cta": "Get started"
+			"cta": "Contact us"
 		},
 		"pro": {
 			"title": "Pro",
+			"priceMonthly": "179",
 			"priceYearly": "2,150",
-			"priceThreeYears": "1,790",
-			"priceMonthlyYearly": "179",
-			"priceMonthlyThreeYears": "149",
-			"period": "/year/admin¹",
+			"period": "/mo/admin",
 			"description": "For growing teams",
-			"includes": "Included:",
+			"includes": "Everything in Essential, plus:",
 			"features": [
+				"WiseTrainer included",
 				"Up to 100 users",
-				"Unlimited training³",
+				"Unlimited training",
 				"MFA (Multi-factor authentication)",
 				"Audit logs",
 				"Priority support"
@@ -508,27 +730,86 @@
 		},
 		"business": {
 			"title": "Business",
+			"priceMonthly": "299",
 			"priceYearly": "3,590",
-			"priceThreeYears": "2,990",
-			"priceMonthlyYearly": "299",
-			"priceMonthlyThreeYears": "249",
-			"period": "/year/admin¹",
+			"period": "/mo/admin",
 			"description": "For large organizations",
 			"includes": "Everything in Pro, plus:",
 			"features": [
 				"Unlimited users",
-				"Unlimited training³",
 				"SSO (Single Sign-On)",
-				"Cross-company training sharing²",
+				"Cross-company training sharing",
 				"API access",
 				"Dedicated support"
 			],
 			"cta": "Contact us"
 		},
+		"comparison": {
+			"title": "Plan comparison",
+			"features": "Features",
+			"items": {
+				"wisepaper": "WisePaper",
+				"wisetour": "WiseTour",
+				"wisetrainer": "WiseTrainer",
+				"users": "Max users",
+				"unlimitedTraining": "Unlimited training",
+				"platform": "Management platform",
+				"mfa": "MFA",
+				"audit": "Audit logs",
+				"sso": "SSO (Single Sign-On)",
+				"api": "API access",
+				"crossCompany": "Cross-company sharing",
+				"support": "Support"
+			},
+			"values": {
+				"essential": {
+					"wisepaper": true,
+					"wisetour": true,
+					"wisetrainer": false,
+					"users": "25",
+					"unlimitedTraining": true,
+					"platform": true,
+					"mfa": false,
+					"audit": false,
+					"sso": false,
+					"api": false,
+					"crossCompany": false,
+					"support": "Email"
+				},
+				"pro": {
+					"wisepaper": true,
+					"wisetour": true,
+					"wisetrainer": true,
+					"users": "100",
+					"unlimitedTraining": true,
+					"platform": true,
+					"mfa": true,
+					"audit": true,
+					"sso": false,
+					"api": false,
+					"crossCompany": false,
+					"support": "Priority"
+				},
+				"business": {
+					"wisepaper": true,
+					"wisetour": true,
+					"wisetrainer": true,
+					"users": "Unlimited",
+					"unlimitedTraining": true,
+					"platform": true,
+					"mfa": true,
+					"audit": true,
+					"sso": true,
+					"api": true,
+					"crossCompany": true,
+					"support": "Dedicated"
+				}
+			}
+		},
 		"notes": {
-			"admin": "¹ Price per administrator. All prices exclude VAT.",
-			"crossCompany": "² Cross-company sharing allows you to share developed trainings with partner organizations.",
-			"unlimitedTraining": "³ Each learner has unlimited access to training. They can practice, retry, and progress at their own pace, whether they succeed or not.",
+			"admin": "Price per administrator. All prices exclude VAT.",
+			"crossCompany": "Cross-company sharing allows you to share developed trainings with partner organizations.",
+			"unlimitedTraining": "Each learner has unlimited access to training. They can practice, retry, and progress at their own pace.",
 			"scenario": "A scenario is an interactive training path with learning objectives, actions to perform and skills validation. Each WiseTrainer includes 3 base scenarios."
 		},
 		"wisetrainerLink": "See WiseTrainer development pricing",
@@ -597,10 +878,6 @@
 			"price": "500",
 			"unit": "per scenario"
 		}
-	},
-	"profiles": {
-		"title": "Who are you?",
-		"subtitle": "Discover how WiseTwin meets your specific needs"
 	},
 	"faq": {
 		"title": "Frequently asked questions",
@@ -773,6 +1050,17 @@
 			"invalidEmail": "Please enter a valid email address",
 			"generic": "An error occurred while sending the message"
 		}
+	},
+	"tryFree": {
+		"title": "Access the platform",
+		"description": "Enter your professional email and receive your access link instantly.",
+		"emailPlaceholder": "Your professional email",
+		"submit": "Send the link",
+		"submitting": "Sending...",
+		"success": "Link sent!",
+		"successDescription": "Check your inbox. If you don't receive anything, check your spam folder.",
+		"error": "An error occurred. Please try again.",
+		"invalidEmail": "Please enter a valid email"
 	},
 	"footer": {
 		"description": "We develop immersive simulators that transform your training into experiences and your procedures into reflexes.",

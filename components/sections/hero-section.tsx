@@ -5,6 +5,7 @@ import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pa
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
+import { TryFreeButton } from "@/components/ui/try-free-button";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { Clock, Users, Factory } from "lucide-react";
 
@@ -54,19 +55,12 @@ export function HeroSection() {
 						</div>
 
 						<div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
-							<Button
+							<TryFreeButton
 								size="lg"
 								className="px-8 py-4 text-base font-medium"
-								asChild
 							>
-								<a
-									href="https://app.wisetwin.eu"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{t("cta")}
-								</a>
-							</Button>
+								{t("cta")}
+							</TryFreeButton>
 							<Button
 								size="lg"
 								variant="outline"

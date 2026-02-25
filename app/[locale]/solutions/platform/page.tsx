@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
+import { TryFreeButton } from "@/components/ui/try-free-button";
 import { Section } from "@/components/common/section";
 import {
 	ClipboardList,
@@ -87,15 +88,9 @@ export default function PlatformPage() {
 						<p className="text-xl text-muted-foreground mb-8">
 							{t("hero.subtitle")}
 						</p>
-						<Button size="lg" asChild>
-							<a
-								href="https://app.wisetwin.eu"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								{t("hero.cta")}
-							</a>
-						</Button>
+						<TryFreeButton size="lg">
+							{t("hero.cta")}
+						</TryFreeButton>
 					</div>
 
 					{/* Screenshot in app window frame */}
@@ -240,15 +235,9 @@ export default function PlatformPage() {
 				<div className="text-center max-w-2xl mx-auto">
 					<h2 className="text-3xl font-bold mb-4">{t("cta.title")}</h2>
 					<p className="text-muted-foreground mb-8">{t("cta.description")}</p>
-					<Button size="lg" asChild>
-						<a
-							href="https://app.wisetwin.eu"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							{t("cta.button")}
-						</a>
-					</Button>
+					<TryFreeButton size="lg">
+						{t("cta.button")}
+					</TryFreeButton>
 				</div>
 			</Section>
 		</main>

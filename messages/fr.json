@@ -17,6 +17,9 @@
 	"nav": {
 		"solutions": "Solutions",
 		"wisetrainer": "WiseTrainer",
+		"wisepaper": "WisePaper",
+		"wisetour": "WiseTour",
+		"wiseatlas": "WiseAtlas",
 		"pricing": "Tarifs",
 		"faq": "FAQ",
 		"contact": "Contact"
@@ -25,7 +28,12 @@
 		"titlePrefix": "Plus de",
 		"titleHighlight": "sécurité",
 		"rotatingPrefix": "Plus",
-		"rotatingWords": ["de productivité", "de rétention", "d'engagement", "de sérénité"],
+		"rotatingWords": [
+			"de productivité",
+			"de rétention",
+			"d'engagement",
+			"de sérénité"
+		],
 		"subtitle": "Digitalisez vos formations et plongez vos collaborateurs dans des situations immersives sur mesure, répliques exactes de vos installations.",
 		"cta": "Essai gratuit",
 		"ctaSecondary": "Demander un devis",
@@ -35,32 +43,96 @@
 			"speed": "Livraison en 1 mois"
 		}
 	},
-	"vision": {
-		"title": "Pourquoi nous choisir ?",
-		"subtitle": "Une approche unique qui combine rapidité, expertise et précision pour des simulateurs sur mesure.",
-		"highlights": {
-			"speed": {
-				"title": "1 mois de réalisation",
-				"description": "De la réception de vos photos à la livraison de votre simulateur opérationnel."
-			},
-			"collaboration": {
-				"title": "Co-construction",
-				"description": "Nos équipes travaillent main dans la main avec vos experts métier pour des scénarios adaptés."
-			},
-			"precision": {
-				"title": "Réplique exacte",
-				"description": "Technologies d'imagerie avancées et ingénieurs en modélisation 3D dédiés pour recréer fidèlement vos installations."
-			}
-		}
-	},
 	"solutions": {
 		"title": "Nos solutions",
-		"subtitle": "Des outils adaptés à chaque besoin de formation",
+		"subtitle": "Trouvez la solution correspondant le plus à vos besoins",
 		"cta": "En savoir plus",
 		"flagship": "Produit phare",
+		"selfService": "Self-service",
+		"standalone": "Hors plateforme",
+		"wisetrainer": {
+			"title": "WiseTrainer",
+			"description": "Recréez vos postes de travail en 3D et formez vos équipes dans un environnement virtuel sécurisé et réaliste."
+		},
 		"platform": {
 			"title": "Plateforme de gestion",
 			"description": "Planification, reporting, plans de formation et suivi des apprenants centralisés."
+		},
+		"wisepaper": {
+			"title": "WisePaper",
+			"description": "Digitalisez vos formations papier (PDF, Word, PowerPoint) et ajoutez des QCM interactifs."
+		},
+		"wisetour": {
+			"title": "WiseTour",
+			"description": "Visitez des environnements 3D photo-réalistes accompagnés de QCM pour une formation immersive."
+		},
+		"wiseatlas": {
+			"title": "WiseAtlas",
+			"description": "Carte interactive style Google Maps pour la communication et le réaménagement territorial."
+		},
+		"comparison": {
+			"labels": {
+				"devTime": "Temps de développement",
+				"activityInterruption": "Interruption de l'activité",
+				"serviceType": "Self-service ou prestation",
+				"userTracking": "Tracking utilisateurs",
+				"realism": "Réalisme",
+				"interactivity": "Interactivité",
+				"networkDemand": "Demande en réseau",
+				"equipment": "Équipement nécessaire",
+				"web": "Accessible web",
+				"interactionTracking": "Suivi des interactions"
+			},
+			"values": {
+				"wisetrainer": {
+					"devTime": "~1 mois",
+					"activityInterruption": "Aucune",
+					"serviceType": "Prestation",
+					"userTracking": true,
+					"realism": "3D modélisée",
+					"interactivity": "Élevée",
+					"networkDemand": "Forte",
+					"equipment": "PC",
+					"web": true,
+					"interactionTracking": true
+				},
+				"wisepaper": {
+					"devTime": "Instantané",
+					"activityInterruption": "Aucune",
+					"serviceType": "Self-service",
+					"userTracking": true,
+					"realism": "Documents",
+					"interactivity": "Moyenne",
+					"networkDemand": "Faible",
+					"equipment": "PC / Tablette / Mobile",
+					"web": true,
+					"interactionTracking": true
+				},
+				"wisetour": {
+					"devTime": "Instant à 1 semaine",
+					"activityInterruption": "0 à 1 visite sur site",
+					"serviceType": "Self-service / Prestation",
+					"userTracking": true,
+					"realism": "Photo-réaliste",
+					"interactivity": "Moyenne",
+					"networkDemand": "Moyenne",
+					"equipment": "PC",
+					"web": true,
+					"interactionTracking": true
+				},
+				"wiseatlas": {
+					"devTime": "Sur devis",
+					"activityInterruption": "Aucune",
+					"serviceType": "Prestation",
+					"userTracking": false,
+					"realism": "Carte 2D",
+					"interactivity": "Moyenne",
+					"networkDemand": "Faible",
+					"equipment": "PC / Tablette / Mobile",
+					"web": true,
+					"interactionTracking": true
+				}
+			}
 		}
 	},
 	"platform": {
@@ -147,7 +219,12 @@
 		"security": {
 			"title": "Sécurité entreprise",
 			"subtitle": "Toutes les fonctionnalités pour protéger vos données",
-			"items": ["SSO (SAML/OAuth)", "MFA (Authentification multi-facteurs)", "Journaux d'audit", "Isolation des données"]
+			"items": [
+				"SSO (SAML/OAuth)",
+				"MFA (Authentification multi-facteurs)",
+				"Journaux d'audit",
+				"Isolation des données"
+			]
 		},
 		"cta": {
 			"title": "Prêt à simplifier la gestion de vos formations ?",
@@ -209,25 +286,6 @@
 				}
 			}
 		},
-		"features": {
-			"title": "Fonctionnalités",
-			"immersive": {
-				"title": "Environnements 3D immersifs",
-				"description": "Recréez fidèlement vos installations industrielles en 3D pour une formation réaliste."
-			},
-			"scenarios": {
-				"title": "Scénarios personnalisés",
-				"description": "Créez des parcours de formation adaptés à vos procédures et situations spécifiques."
-			},
-			"tracking": {
-				"title": "Suivi des performances",
-				"description": "Analysez les résultats et progressions de chaque apprenant en temps réel."
-			},
-			"safe": {
-				"title": "Formation sans risque",
-				"description": "Simulez des situations dangereuses en toute sécurité pour mieux préparer vos équipes."
-			}
-		},
 		"ownership": {
 			"title": "Votre asset, votre propriété",
 			"description": "L'environnement 3D créé pour votre entreprise vous appartient. Vous êtes propriétaire de l'asset numérique développé sur mesure à partir de vos installations.",
@@ -241,23 +299,28 @@
 			"steps": {
 				"quote": {
 					"title": "Demande de devis",
-					"description": "Contactez-nous pour définir vos besoins et recevoir une proposition adaptée."
+					"description": "Contactez-nous pour définir vos besoins et recevoir une proposition adaptée.",
+					"duration": "J+0"
 				},
 				"photos": {
 					"title": "Envoi des photos",
-					"description": "Envoyez-nous vos photos ou nous venons scanner vos installations avec notre équipement."
+					"description": "Envoyez-nous vos photos ou nous venons scanner vos installations avec notre équipement.",
+					"duration": "~1 jour"
 				},
 				"creation": {
 					"title": "Création de l'environnement",
-					"description": "Notre équipe modélise votre installation en 3D en collaboration avec vos experts métier."
+					"description": "Notre équipe modélise votre installation en 3D en collaboration avec vos experts métier.",
+					"duration": "~2-3 semaines"
 				},
 				"scenarios": {
 					"title": "Scénarios pédagogiques",
-					"description": "Nous co-construisons les scénarios de formation avec vos équipes pour coller à vos procédures."
+					"description": "Nous co-construisons les scénarios de formation avec vos équipes pour coller à vos procédures.",
+					"duration": "~1 semaine"
 				},
 				"delivery": {
 					"title": "Livraison",
-					"description": "Votre simulateur est prêt à l'emploi, accessible depuis la plateforme."
+					"description": "Votre simulateur est prêt à l'emploi, accessible depuis la plateforme.",
+					"duration": "~1 mois"
 				}
 			}
 		},
@@ -271,7 +334,12 @@
 				"description": "Formation aux procédures de sécurité, gestes d'urgence, port des EPI et prévention des risques.",
 				"price": "5 625",
 				"unit": "à partir de",
-				"features": ["Procédures de sécurité", "Gestes d'urgence", "Port des EPI", "Prévention des risques"]
+				"features": [
+					"Procédures de sécurité",
+					"Gestes d'urgence",
+					"Port des EPI",
+					"Prévention des risques"
+				]
 			},
 			"tech": {
 				"title": "Simulateur Maintenance",
@@ -279,7 +347,12 @@
 				"description": "Formation aux opérations de maintenance, diagnostics de pannes et procédures techniques.",
 				"price": "11 875",
 				"unit": "à partir de",
-				"features": ["Opérations de maintenance", "Diagnostic de pannes", "Procédures techniques", "Consignation"]
+				"features": [
+					"Opérations de maintenance",
+					"Diagnostic de pannes",
+					"Procédures techniques",
+					"Consignation"
+				]
 			},
 			"scenario": {
 				"title": "Scénarios additionnels",
@@ -310,51 +383,34 @@
 			"steps": {
 				"import": {
 					"title": "Importez",
-					"description": "Uploadez vos PDF, Word ou PowerPoint existants"
+					"description": "Uploadez vos PDF, Word ou PowerPoint existants",
+					"duration": "Instantané"
 				},
 				"process": {
 					"title": "IA",
-					"description": "Notre IA analyse, restructure le contenu et génère des quiz"
+					"description": "Notre IA analyse, restructure le contenu et génère des quiz",
+					"duration": "< 1 min"
 				},
 				"track": {
 					"title": "Suivez",
-					"description": "Voyez qui a lu et compris vos formations"
+					"description": "Voyez qui a lu et compris vos formations",
+					"duration": "Immédiat"
 				}
 			}
 		},
-		"formats": {
-			"title": "Formats supportés",
-			"subtitle": "Importez directement vos documents existants",
-			"items": ["PDF", "Word (.docx)", "PowerPoint (.pptx)", "Google Docs"]
-		},
-		"features": {
-			"title": "Fonctionnalités",
-			"create": {
-				"title": "Création de cours",
-				"description": "Créez vos formations directement dans l'éditeur, comme sur Notion. Simple, intuitif et collaboratif."
+		"useCases": {
+			"title": "Cas d'usage",
+			"compliance": {
+				"title": "Conformité réglementaire",
+				"description": "Assurez-vous que tous vos collaborateurs ont lu et compris les procédures obligatoires, avec preuve de complétion."
 			},
-			"import": {
-				"title": "Digitalisation de vos documents",
-				"description": "Importez vos PDF, Word, PowerPoint existants. Notre IA les transforme en modules de formation interactifs."
+			"onboarding": {
+				"title": "Onboarding",
+				"description": "Créez des parcours d'intégration pour les nouveaux arrivants avec suivi de leur progression."
 			},
-			"ai": {
-				"title": "IA intégrée",
-				"description": "Notre IA analyse vos contenus et génère automatiquement des QCM, quiz et exercices pour valider les acquis."
-			},
-			"tracking": {
-				"title": "Suivi des résultats",
-				"description": "Fini les formations papier sans retour. Suivez qui a fait quoi, les scores, et les progressions en temps réel."
-			}
-		},
-		"benefits": {
-			"title": "Pourquoi WisePaper ?",
-			"paper": {
-				"title": "Vos formations papier n'ont plus de secrets",
-				"description": "Vous avez des procédures, des manuels, des supports de formation au format papier ? Digitalisez-les et obtenez enfin des données sur qui les a lus et compris."
-			},
-			"free": {
-				"title": "100% gratuit",
-				"description": "WisePaper est inclus gratuitement dans votre compte WiseTwin. Créez autant de formations que vous voulez."
+			"procedures": {
+				"title": "Procédures & modes opératoires",
+				"description": "Transformez vos documents internes en formations interactives avec QCM de validation."
 			}
 		},
 		"cta": {
@@ -363,80 +419,186 @@
 			"button": "Commencer gratuitement"
 		}
 	},
-	"advantages": {
-		"title": "Pourquoi WiseTwin ?",
-		"subtitle": "Des avantages concrets pour votre entreprise",
-		"items": {
-			"noDowntime": {
-				"label": "0 arrêt",
-				"shortDesc": "Production non impactée",
-				"title": "Formez sans mobiliser vos installations",
-				"description": "Vos lignes de production continuent de tourner pendant que vos équipes se forment sur le jumeau numérique. Plus besoin de mobiliser vos installations réelles.",
-				"stats": {
-					"value1": "0",
-					"label1": "arrêt de production",
-					"value2": "100%",
-					"label2": "disponibilité"
+	"wisetour": {
+		"title": "WiseTour",
+		"subtitle": "Formation immersive photo-réaliste",
+		"description": "Plongez vos apprenants dans des environnements 3D ultra-réalistes capturés par photogrammétrie, accompagnés de QCM pour valider les acquis.",
+		"hero": {
+			"title": "Formations photo-réalistes en 3D",
+			"subtitle": "Déplacez-vous dans des environnements 3D ultra-réalistes capturés directement depuis vos installations. Accompagnez la visite de QCM pour valider les connaissances.",
+			"cta": "Demander un devis",
+			"badge": "Self-service"
+		},
+		"howItWorks": {
+			"title": "Comment ça marche ?",
+			"subtitle": "De la capture à la formation en quelques étapes",
+			"steps": {
+				"capture": {
+					"title": "Capture sur site",
+					"description": "Nous nous déplaçons sur site ou vous utilisez votre propre équipement pour capturer vos installations en photo/vidéo.",
+					"duration": "~1 jour"
+				},
+				"processing": {
+					"title": "Traitement 3D",
+					"description": "Nos algorithmes transforment les captures en environnements 3D photo-réalistes navigables.",
+					"duration": "2-3 jours"
+				},
+				"editor": {
+					"title": "Éditeur de parcours",
+					"description": "Utilisez notre éditeur self-service pour ajouter des points d'intérêt, QCM et parcours de formation.",
+					"duration": "Self-service"
+				},
+				"training": {
+					"title": "Formation",
+					"description": "Vos apprenants se déplacent librement dans l'environnement et répondent aux QCM intégrés.",
+					"duration": "Immédiat"
 				}
+			}
+		},
+		"useCases": {
+			"title": "Cas d'usage",
+			"safety": {
+				"title": "Visite sécurité",
+				"description": "Faites découvrir les consignes de sécurité d'un site avant la première visite terrain."
 			},
-			"fastDelivery": {
-				"label": "1 mois",
-				"shortDesc": "Livraison rapide",
-				"title": "Votre simulateur en 1 mois",
-				"description": "De la réception de vos photos à la livraison de votre environnement 3D opérationnel. Notre équipe travaille main dans la main avec vos experts métier.",
+			"onboarding": {
+				"title": "Onboarding",
+				"description": "Accueillez vos nouveaux collaborateurs avec une visite virtuelle de leurs futurs locaux."
+			},
+			"maintenance": {
+				"title": "Repérage maintenance",
+				"description": "Permettez aux techniciens de se familiariser avec un site avant intervention."
+			}
+		},
+		"cta": {
+			"title": "Prêt à capturer vos environnements ?",
+			"description": "Contactez-nous pour planifier une capture ou découvrir comment utiliser votre propre équipement.",
+			"button": "Demander un devis"
+		}
+	},
+	"wiseatlas": {
+		"title": "WiseAtlas",
+		"subtitle": "Carte interactive de communication",
+		"description": "Une carte interactive style Google Maps pour communiquer sur vos projets de réaménagement territorial et partager des informations géolocalisées.",
+		"hero": {
+			"title": "Communiquez sur une carte interactive",
+			"subtitle": "Développez une carte interactive personnalisée style Google Maps pour vos projets de communication territoriale et de réaménagement. Solution indépendante de la plateforme de formation.",
+			"cta": "Demander un devis",
+			"badge": "Solution indépendante"
+		},
+		"howItWorks": {
+			"title": "Comment ça marche ?",
+			"subtitle": "De votre projet à une carte interactive en quelques étapes",
+			"steps": {
+				"define": {
+					"title": "Définition du projet",
+					"description": "Partagez vos objectifs et le périmètre géographique de votre projet.",
+					"duration": "1 réunion"
+				},
+				"data": {
+					"title": "Intégration des données",
+					"description": "Nous intégrons vos données géographiques, zones de projet et points d'intérêt.",
+					"duration": "1-2 semaines"
+				},
+				"design": {
+					"title": "Personnalisation",
+					"description": "Design et branding adaptés à votre charte de communication.",
+					"duration": "~1 semaine"
+				},
+				"publish": {
+					"title": "Publication",
+					"description": "Votre carte interactive est en ligne, partageable par lien.",
+					"duration": "Immédiat"
+				}
+			}
+		},
+		"useCases": {
+			"title": "Cas d'usage",
+			"territory": {
+				"title": "Réaménagement territorial",
+				"description": "Communiquez sur vos projets d'urbanisme et de réaménagement avec une carte interactive."
+			},
+			"stakeholders": {
+				"title": "Communication parties prenantes",
+				"description": "Tenez informés vos partenaires et le public de l'avancement de vos projets."
+			},
+			"infrastructure": {
+				"title": "Projets d'infrastructure",
+				"description": "Visualisez et communiquez sur des projets d'infrastructure à grande échelle."
+			}
+		},
+		"standalone": {
+			"title": "Solution indépendante",
+			"description": "WiseAtlas est une solution à part, décorrélée de la plateforme de formation WiseTwin. C'est une application mise à disposition de vos clients pour de la communication."
+		},
+		"cta": {
+			"title": "Un projet de communication territoriale ?",
+			"description": "Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé.",
+			"button": "Demander un devis"
+		}
+	},
+	"advantages": {
+		"title": "Pourquoi nous choisir ?",
+		"subtitle": "Ce qui fait la différence WiseTwin",
+		"items": {
+			"reactivity": {
+				"label": "Réactif",
+				"shortDesc": "Déploiement rapide après incident",
+				"title": "Réactivité à chaque instant",
+				"description": "Nos solutions peuvent être déployées instantanément pour les plus simples, jusqu'à 1 mois pour les plus complexes. Réagissez vite après un incident, formez vos équipes sans attendre.",
 				"stats": {
 					"value1": "1",
 					"label1": "mois de réalisation",
-					"value2": "3",
-					"label2": "scénarios inclus"
-				}
-			},
-			"noVR": {
-				"label": "100% web",
-				"shortDesc": "Sans casque VR",
-				"title": "Accessible sur navigateur",
-				"description": "Pas besoin d'investir dans du matériel coûteux. Vos formations sont accessibles depuis n'importe quel navigateur, sur PC, tablette ou mobile, en toute sécurité.",
-				"stats": {
-					"value1": "0€",
-					"label1": "d'équipement",
 					"value2": "100%",
-					"label2": "navigateur"
+					"label2": "réactif"
 				}
 			},
-			"unlimited": {
-				"label": "Illimité",
-				"shortDesc": "Sessions infinies",
-				"title": "Formez autant que nécessaire",
-				"description": "Une fois votre simulateur créé, formez 10 ou 10 000 personnes sans coût supplémentaire. Chaque apprenant peut recommencer autant de fois que nécessaire.",
+			"tracking": {
+				"label": "Traçabilité",
+				"shortDesc": "Suivi des réponses pour décisions",
+				"title": "Chaque réponse est tracée",
+				"description": "Chaque action de vos apprenants est enregistrée et analysable. Identifiez les lacunes, mesurez les progrès et prenez des décisions éclairées sur vos plans de formation.",
 				"stats": {
-					"value1": "∞",
-					"label1": "sessions",
-					"value2": "0€",
-					"label2": "par session"
+					"value1": "100%",
+					"label1": "des actions tracées",
+					"value2": "∞",
+					"label2": "données exportables"
 				}
 			},
-			"safe": {
-				"label": "0 risque",
-				"shortDesc": "Formation sécurisée",
-				"title": "Simulez sans danger",
-				"description": "Formez vos équipes aux situations dangereuses (incendie, fuite chimique, consignation) en toute sécurité. Ils apprennent les bons réflexes sans aucun risque.",
+			"costEffective": {
+				"label": "Compétitif",
+				"shortDesc": "80% d'efficacité, 20% du prix",
+				"title": "80% de l'efficacité pour 20% du prix",
+				"description": "Nos simulateurs offrent une immersion comparable aux solutions VR haut de gamme, à une fraction du coût. Nous nous concentrons sur l'essentiel pour former efficacement vos équipes sans superflu.",
 				"stats": {
-					"value1": "0",
-					"label1": "risque réel",
-					"value2": "100%",
-					"label2": "des scénarios"
+					"value1": "80%",
+					"label1": "d'efficacité",
+					"value2": "÷5",
+					"label2": "le coût"
 				}
 			},
-			"interop": {
-				"label": "SCORM",
-				"shortDesc": "Export LMS",
-				"title": "Intégration à votre LMS",
-				"description": "Toutes nos formations (WiseTrainer et WisePaper) sont exportables au format SCORM. Intégrez-les directement dans votre LMS existant (Moodle, 360Learning, Talentsoft, etc.) et centralisez le suivi de toutes vos formations.",
+			"easyIntegration": {
+				"label": "Intégrable",
+				"shortDesc": "SCORM, export LMS",
+				"title": "S'intègre à vos outils existants",
+				"description": "Exportez vos formations au format SCORM et intégrez-les directement dans votre LMS (Moodle, 360Learning, Talentsoft). Pas de rupture dans votre écosystème de formation.",
 				"stats": {
 					"value1": "100%",
 					"label1": "compatible SCORM",
 					"value2": "∞",
 					"label2": "LMS supportés"
+				}
+			},
+			"noEquipment": {
+				"label": "Léger",
+				"shortDesc": "0 équipement lourd",
+				"title": "Zéro équipement, zéro contrainte",
+				"description": "Pas besoin de casque Oculus, HTC Vive ou autre équipement VR coûteux. Un PC et une connexion internet suffisent. Vos apprenants se forment directement depuis leur navigateur web.",
+				"stats": {
+					"value1": "0€",
+					"label1": "d'équipement",
+					"value2": "100%",
+					"label2": "navigateur web"
 				}
 			}
 		}
@@ -465,41 +627,101 @@
 		"title": "Licences par souscription",
 		"subtitle": "Choisissez la formule adaptée à votre organisation",
 		"billing": {
-			"yearly": "1 an",
-			"threeYears": "3 ans",
+			"monthly": "1 an",
+			"yearly": "3 ans",
 			"savePercent": "-20%",
-			"perMonth": "soit {price}€/mois"
+			"perYear": "soit {price}€/an",
+			"perMonth": "/mois/admin"
+		},
+		"adminCounter": {
+			"title": "Nombre d'administrateurs",
+			"admin": "admin",
+			"admins": "admins"
 		},
 		"discountBanner": {
 			"firstOrder": "-20% sur la 1ère commande"
 		},
-		"free": {
-			"title": "Découverte",
-			"priceYearly": "0",
-			"priceThreeYears": "0",
-			"period": "/an",
-			"description": "Parfait pour découvrir la plateforme",
-			"includes": "",
+		"products": {
+			"title": "Nos solutions",
+			"subtitle": "Trouvez la solution correspondant le plus à vos besoins",
+			"specsTitle": "Caractéristiques",
+			"wisetrainer": {
+				"title": "WiseTrainer",
+				"price": "À partir de 4 500 €",
+				"description": "Plongez vos collaborateurs dans des simulateurs 3D immersifs, reconstruits à la main à partir de photos de vos installations. Idéal pour les formations HSE, consignation LOTO, gestes techniques ou procédures de sécurité.",
+				"specs": [
+					"0 arrêt de production",
+					"Livraison en 1 mois",
+					"100% web, sans casque VR",
+					"Aucun équipement requis",
+					"Sessions illimitées"
+				]
+			},
+			"wisepaper": {
+				"title": "WisePaper",
+				"price": "Gratuit",
+				"description": "Transformez vos documents de formation existants (PDF, PowerPoint, Word) en parcours digitaux interactifs avec QCM de validation. L'IA analyse vos contenus et génère automatiquement des questions pertinentes.",
+				"specs": [
+					"0 arrêt de production",
+					"Création instantanée en self-service",
+					"100% web",
+					"Aucun équipement requis",
+					"Sessions illimitées"
+				]
+			},
+			"wisetour": {
+				"title": "WiseTour",
+				"price": "À partir de 0 €",
+				"description": "Créez des visites virtuelles photo-réalistes de vos sites à partir de captures 360°. Intégrez des points d'intérêt interactifs et des QCM pour former vos équipes à distance sur l'environnement réel de travail.",
+				"specs": [
+					"1 visite sur site nécessaire",
+					"Nous venons ou vous scannez vous-même",
+					"Éditeur self-service inclus",
+					"Résultat 100% web",
+					"Sessions illimitées"
+				]
+			},
+			"wiseatlas": {
+				"title": "WiseAtlas",
+				"price": "Sur devis",
+				"description": "Une carte interactive de type Google Maps dédiée à la communication territoriale et aux projets de réaménagement. Présentez vos projets, recueillez les retours citoyens et facilitez la concertation publique.",
+				"specs": [
+					"Carte distribuable par lien",
+					"Suivi des interactions",
+					"100% web",
+					"Aucun équipement requis",
+					"Accès illimité"
+				],
+				"standalone": "Vendu séparément de la plateforme de formation"
+			}
+		},
+		"essential": {
+			"title": "Essentiel",
+			"priceMonthly": "79",
+			"priceYearly": "790",
+			"period": "/mois/admin",
+			"description": "Pour démarrer la digitalisation de vos formations",
+			"includes": "Inclus :",
 			"features": [
-				"Jusqu'à 3 utilisateurs",
-				"1 WiseTrainer¹ inclus (procédure LOTO)",
+				"WisePaper inclus",
+				"WiseTour inclus",
+				"Jusqu'à 25 utilisateurs",
 				"Plateforme de gestion",
 				"Support par email"
 			],
-			"cta": "Commencer"
+			"cta": "Nous contacter"
 		},
 		"pro": {
 			"title": "Pro",
+			"priceMonthly": "179",
 			"priceYearly": "2 150",
-			"priceThreeYears": "1 790",
-			"priceMonthlyYearly": "179",
-			"priceMonthlyThreeYears": "149",
-			"period": "/an/admin¹",
+			"period": "/mois/admin",
 			"description": "Pour les équipes en croissance",
-			"includes": "Inclus :",
+			"includes": "Tout le plan Essentiel, plus :",
 			"features": [
+				"WiseTrainer inclus",
 				"Jusqu'à 100 utilisateurs",
-				"Formations illimitées³",
+				"Formations illimitées",
 				"MFA (Authentification multi-facteurs)",
 				"Journaux d'audit",
 				"Support prioritaire"
@@ -508,27 +730,86 @@
 		},
 		"business": {
 			"title": "Business",
+			"priceMonthly": "299",
 			"priceYearly": "3 590",
-			"priceThreeYears": "2 990",
-			"priceMonthlyYearly": "299",
-			"priceMonthlyThreeYears": "249",
-			"period": "/an/admin¹",
+			"period": "/mois/admin",
 			"description": "Pour les grandes organisations",
 			"includes": "Tout le plan Pro, plus :",
 			"features": [
 				"Utilisateurs illimités",
-				"Formations illimitées³",
 				"SSO (Single Sign-On)",
-				"Mutualisation inter-entreprises²",
+				"Mutualisation inter-entreprises",
 				"API access",
 				"Support dédié"
 			],
 			"cta": "Nous contacter"
 		},
+		"comparison": {
+			"title": "Comparatif des offres",
+			"features": "Fonctionnalités",
+			"items": {
+				"wisepaper": "WisePaper",
+				"wisetour": "WiseTour",
+				"wisetrainer": "WiseTrainer",
+				"users": "Utilisateurs max",
+				"unlimitedTraining": "Formations illimitées",
+				"platform": "Plateforme de gestion",
+				"mfa": "MFA",
+				"audit": "Journaux d'audit",
+				"sso": "SSO (Single Sign-On)",
+				"api": "API access",
+				"crossCompany": "Mutualisation inter-entreprises",
+				"support": "Support"
+			},
+			"values": {
+				"essential": {
+					"wisepaper": true,
+					"wisetour": true,
+					"wisetrainer": false,
+					"users": "25",
+					"unlimitedTraining": true,
+					"platform": true,
+					"mfa": false,
+					"audit": false,
+					"sso": false,
+					"api": false,
+					"crossCompany": false,
+					"support": "Email"
+				},
+				"pro": {
+					"wisepaper": true,
+					"wisetour": true,
+					"wisetrainer": true,
+					"users": "100",
+					"unlimitedTraining": true,
+					"platform": true,
+					"mfa": true,
+					"audit": true,
+					"sso": false,
+					"api": false,
+					"crossCompany": false,
+					"support": "Prioritaire"
+				},
+				"business": {
+					"wisepaper": true,
+					"wisetour": true,
+					"wisetrainer": true,
+					"users": "Illimité",
+					"unlimitedTraining": true,
+					"platform": true,
+					"mfa": true,
+					"audit": true,
+					"sso": true,
+					"api": true,
+					"crossCompany": true,
+					"support": "Dédié"
+				}
+			}
+		},
 		"notes": {
-			"admin": "¹ Tarif par administrateur. Tous les prix sont HT.",
-			"crossCompany": "² La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",
-			"unlimitedTraining": "³ Chaque apprenant dispose d'un accès illimité aux formations. Ils peuvent s'entraîner, recommencer et progresser à leur rythme, qu'ils réussissent ou non.",
+			"admin": "Tarif par administrateur. Tous les prix sont HT.",
+			"crossCompany": "La mutualisation inter-entreprises vous permet de partager les formations développées avec d'autres organisations partenaires.",
+			"unlimitedTraining": "Chaque apprenant dispose d'un accès illimité aux formations. Ils peuvent s'entraîner, recommencer et progresser à leur rythme.",
 			"scenario": "Un scénario est un parcours de formation interactif avec objectifs pédagogiques, actions à réaliser et validation des acquis. Chaque WiseTrainer inclut 3 scénarios de base."
 		},
 		"wisetrainerLink": "Voir les tarifs de développement WiseTrainer",
@@ -597,10 +878,6 @@
 			"price": "500",
 			"unit": "par scénario"
 		}
-	},
-	"profiles": {
-		"title": "Vous êtes ?",
-		"subtitle": "Découvrez comment WiseTwin répond à vos besoins spécifiques"
 	},
 	"faq": {
 		"title": "Questions fréquentes",
@@ -773,6 +1050,17 @@
 			"invalidEmail": "Veuillez entrer une adresse e-mail valide",
 			"generic": "Une erreur est survenue lors de l'envoi du message"
 		}
+	},
+	"tryFree": {
+		"title": "Accédez à la plateforme",
+		"description": "Entrez votre adresse email professionnelle et recevez immédiatement votre lien d'accès.",
+		"emailPlaceholder": "Votre email professionnel",
+		"submit": "Recevoir le lien",
+		"submitting": "Envoi en cours...",
+		"success": "Lien envoyé !",
+		"successDescription": "Vérifiez votre boîte de réception. Si vous ne recevez rien, vérifiez vos spams.",
+		"error": "Une erreur est survenue. Veuillez réessayer.",
+		"invalidEmail": "Veuillez entrer un email valide"
 	},
 	"footer": {
 		"description": "Nous développons des simulateurs immersifs qui transforment vos formations en expériences et vos procédures en réflexes.",

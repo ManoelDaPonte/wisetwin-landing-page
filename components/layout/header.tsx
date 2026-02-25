@@ -8,7 +8,8 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { Logo } from "@/components/ui/logo";
-import { Cuboid, LayoutDashboard, Menu, ChevronDown } from "lucide-react";
+import { TryFreeButton } from "@/components/ui/try-free-button";
+import { Cuboid, FileText, Camera, Map, Menu, ChevronDown } from "lucide-react";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -53,10 +54,24 @@ export function Header() {
 			featured: true,
 		},
 		{
-			title: tSolutions("platform.title"),
-			description: tSolutions("platform.subtitle"),
-			href: "/solutions/platform",
-			icon: LayoutDashboard,
+			title: tSolutions("wisepaper.title"),
+			description: tSolutions("wisepaper.subtitle"),
+			href: "/solutions/wisepaper",
+			icon: FileText,
+			featured: false,
+		},
+		{
+			title: tSolutions("wisetour.title"),
+			description: tSolutions("wisetour.subtitle"),
+			href: "/solutions/wisetour",
+			icon: Camera,
+			featured: false,
+		},
+		{
+			title: tSolutions("wiseatlas.title"),
+			description: tSolutions("wiseatlas.subtitle"),
+			href: "/solutions/wiseatlas",
+			icon: Map,
 			featured: false,
 		},
 	];
@@ -100,38 +115,32 @@ export function Header() {
 										{t("solutions")}
 									</NavigationMenuTrigger>
 									<NavigationMenuContent>
-										<div className="grid grid-cols-2 gap-3 p-4 w-[420px]">
-											{/* WiseTrainer - Flagship */}
-											<Link
-												href="/solutions/wisetrainer"
-												className="flex flex-col items-center text-center rounded-xl p-4 bg-secondary/5 border border-secondary/20 hover:border-secondary/40 hover:bg-secondary/10 transition-all"
-											>
-												<div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-3">
-													<Cuboid className="size-6 text-secondary" />
-												</div>
-												<div className="font-semibold mb-1">
-													{tSolutions("wisetrainer.title")}
-												</div>
-												<p className="text-xs text-muted-foreground leading-snug">
-													{tSolutions("wisetrainer.subtitle")}
-												</p>
-											</Link>
-
-											{/* Platform */}
-											<Link
-												href="/solutions/platform"
-												className="flex flex-col items-center text-center rounded-xl p-4 border border-transparent hover:border-secondary/30 hover:bg-secondary/5 transition-all"
-											>
-												<div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-3">
-													<LayoutDashboard className="size-6 text-secondary" />
-												</div>
-												<div className="font-semibold mb-1">
-													{tSolutions("platform.title")}
-												</div>
-												<p className="text-xs text-muted-foreground leading-snug">
-													{tSolutions("platform.subtitle")}
-												</p>
-											</Link>
+										<div className="grid grid-cols-2 gap-3 p-4 w-[460px]">
+											{solutionItems.map((item) => {
+												const Icon = item.icon;
+												return (
+													<Link
+														key={item.href}
+														href={item.href}
+														className={cn(
+															"flex flex-col items-center text-center rounded-xl p-4 transition-all",
+															item.featured
+																? "bg-secondary/5 border border-secondary/20 hover:border-secondary/40 hover:bg-secondary/10"
+																: "border border-transparent hover:border-secondary/30 hover:bg-secondary/5"
+														)}
+													>
+														<div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-3">
+															<Icon className="size-6 text-secondary" />
+														</div>
+														<div className="font-semibold mb-1">
+															{item.title}
+														</div>
+														<p className="text-xs text-muted-foreground leading-snug">
+															{item.description}
+														</p>
+													</Link>
+												);
+											})}
 										</div>
 									</NavigationMenuContent>
 								</NavigationMenuItem>
@@ -158,15 +167,9 @@ export function Header() {
 					<div className="flex items-center gap-2">
 						<LanguageSwitcher />
 						<ThemeToggle />
-						<Button asChild className="hidden sm:inline-flex">
-							<a
-								href="https://app.wisetwin.eu"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								{tCommon("tryFree")}
-							</a>
-						</Button>
+						<TryFreeButton className="hidden sm:inline-flex">
+							{tCommon("tryFree")}
+						</TryFreeButton>
 
 						{/* Mobile Menu */}
 						<Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -252,15 +255,9 @@ export function Header() {
 
 									{/* Mobile Footer */}
 									<div className="p-4 border-t border-border">
-										<Button asChild className="w-full">
-											<a
-												href="https://app.wisetwin.eu"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												{tCommon("tryFree")}
-											</a>
-										</Button>
+										<TryFreeButton className="w-full">
+											{tCommon("tryFree")}
+										</TryFreeButton>
 									</div>
 								</div>
 							</SheetContent>
