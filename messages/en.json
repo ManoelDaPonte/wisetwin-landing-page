@@ -631,7 +631,7 @@
 			"yearly": "3 Years",
 			"savePercent": "-20%",
 			"perYear": "i.e. {price}€/year",
-			"perMonth": "/mo/admin"
+			"perMonth": "/yr/admin"
 		},
 		"adminCounter": {
 			"title": "Number of administrators",
@@ -697,41 +697,35 @@
 		},
 		"essential": {
 			"title": "Essential",
-			"priceMonthly": "79",
-			"priceYearly": "790",
+			"priceMonthly": "590",
 			"period": "/mo/admin",
 			"description": "To start digitizing your training",
 			"includes": "Included:",
 			"features": [
-				"WisePaper included",
-				"WiseTour included",
 				"Up to 25 users",
 				"Management platform",
+				"Unlimited training",
 				"Email support"
 			],
 			"cta": "Contact us"
 		},
 		"pro": {
 			"title": "Pro",
-			"priceMonthly": "179",
-			"priceYearly": "2,150",
+			"priceMonthly": "990",
 			"period": "/mo/admin",
 			"description": "For growing teams",
 			"includes": "Everything in Essential, plus:",
 			"features": [
-				"WiseTrainer included",
 				"Up to 100 users",
-				"Unlimited training",
 				"MFA (Multi-factor authentication)",
 				"Audit logs",
 				"Priority support"
 			],
 			"cta": "Contact us"
 		},
-		"business": {
-			"title": "Business",
-			"priceMonthly": "299",
-			"priceYearly": "3,590",
+		"enterprise": {
+			"title": "Enterprise",
+			"customPricing": "Custom quote",
 			"period": "/mo/admin",
 			"description": "For large organizations",
 			"includes": "Everything in Pro, plus:",
@@ -744,13 +738,30 @@
 			],
 			"cta": "Contact us"
 		},
+		"addons": {
+			"title": "Tools",
+			"subtitle": "Add the tools you need",
+			"included": "Included",
+			"wisepaper": {
+				"title": "WisePaper",
+				"description": "Digitize your paper training",
+				"price": "210"
+			},
+			"wisetour": {
+				"title": "WiseTour",
+				"description": "Photo-realistic virtual tours",
+				"price": "410"
+			},
+			"wisetrainer": {
+				"title": "WiseTrainer",
+				"description": "Immersive 3D simulators",
+				"price": "1390"
+			}
+		},
 		"comparison": {
 			"title": "Plan comparison",
 			"features": "Features",
 			"items": {
-				"wisepaper": "WisePaper",
-				"wisetour": "WiseTour",
-				"wisetrainer": "WiseTrainer",
 				"users": "Max users",
 				"unlimitedTraining": "Unlimited training",
 				"platform": "Management platform",
@@ -763,9 +774,6 @@
 			},
 			"values": {
 				"essential": {
-					"wisepaper": true,
-					"wisetour": true,
-					"wisetrainer": false,
 					"users": "25",
 					"unlimitedTraining": true,
 					"platform": true,
@@ -777,9 +785,6 @@
 					"support": "Email"
 				},
 				"pro": {
-					"wisepaper": true,
-					"wisetour": true,
-					"wisetrainer": true,
 					"users": "100",
 					"unlimitedTraining": true,
 					"platform": true,
@@ -790,10 +795,7 @@
 					"crossCompany": false,
 					"support": "Priority"
 				},
-				"business": {
-					"wisepaper": true,
-					"wisetour": true,
-					"wisetrainer": true,
+				"enterprise": {
 					"users": "Unlimited",
 					"unlimitedTraining": true,
 					"platform": true,
@@ -1053,8 +1055,18 @@
 	},
 	"tryFree": {
 		"title": "Access the platform",
-		"description": "Enter your professional email and receive your access link instantly.",
+		"description": "Fill out the form below and receive your access link instantly.",
+		"firstName": "First name",
+		"firstNamePlaceholder": "Your first name",
+		"lastName": "Last name",
+		"lastNamePlaceholder": "Your last name",
+		"phone": "Phone",
+		"phonePlaceholder": "Your phone number",
+		"company": "Company",
+		"companyPlaceholder": "Your company name",
+		"email": "Professional email",
 		"emailPlaceholder": "Your professional email",
+		"required": "*",
 		"submit": "Send the link",
 		"submitting": "Sending...",
 		"success": "Link sent!",

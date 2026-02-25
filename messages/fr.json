@@ -631,7 +631,7 @@
 			"yearly": "3 ans",
 			"savePercent": "-20%",
 			"perYear": "soit {price}€/an",
-			"perMonth": "/mois/admin"
+			"perMonth": "/an/admin"
 		},
 		"adminCounter": {
 			"title": "Nombre d'administrateurs",
@@ -697,41 +697,35 @@
 		},
 		"essential": {
 			"title": "Essentiel",
-			"priceMonthly": "79",
-			"priceYearly": "790",
+			"priceMonthly": "590",
 			"period": "/mois/admin",
 			"description": "Pour démarrer la digitalisation de vos formations",
 			"includes": "Inclus :",
 			"features": [
-				"WisePaper inclus",
-				"WiseTour inclus",
 				"Jusqu'à 25 utilisateurs",
 				"Plateforme de gestion",
+				"Formations illimitées",
 				"Support par email"
 			],
 			"cta": "Nous contacter"
 		},
 		"pro": {
 			"title": "Pro",
-			"priceMonthly": "179",
-			"priceYearly": "2 150",
+			"priceMonthly": "990",
 			"period": "/mois/admin",
 			"description": "Pour les équipes en croissance",
 			"includes": "Tout le plan Essentiel, plus :",
 			"features": [
-				"WiseTrainer inclus",
 				"Jusqu'à 100 utilisateurs",
-				"Formations illimitées",
 				"MFA (Authentification multi-facteurs)",
 				"Journaux d'audit",
 				"Support prioritaire"
 			],
 			"cta": "Nous contacter"
 		},
-		"business": {
-			"title": "Business",
-			"priceMonthly": "299",
-			"priceYearly": "3 590",
+		"enterprise": {
+			"title": "Enterprise",
+			"customPricing": "Sur devis",
 			"period": "/mois/admin",
 			"description": "Pour les grandes organisations",
 			"includes": "Tout le plan Pro, plus :",
@@ -744,13 +738,30 @@
 			],
 			"cta": "Nous contacter"
 		},
+		"addons": {
+			"title": "Outils",
+			"subtitle": "Ajoutez les outils dont vous avez besoin",
+			"included": "Inclus",
+			"wisepaper": {
+				"title": "WisePaper",
+				"description": "Digitalisez vos formations papier",
+				"price": "210"
+			},
+			"wisetour": {
+				"title": "WiseTour",
+				"description": "Visites virtuelles photo-réalistes",
+				"price": "410"
+			},
+			"wisetrainer": {
+				"title": "WiseTrainer",
+				"description": "Simulateurs 3D immersifs",
+				"price": "1390"
+			}
+		},
 		"comparison": {
 			"title": "Comparatif des offres",
 			"features": "Fonctionnalités",
 			"items": {
-				"wisepaper": "WisePaper",
-				"wisetour": "WiseTour",
-				"wisetrainer": "WiseTrainer",
 				"users": "Utilisateurs max",
 				"unlimitedTraining": "Formations illimitées",
 				"platform": "Plateforme de gestion",
@@ -763,9 +774,6 @@
 			},
 			"values": {
 				"essential": {
-					"wisepaper": true,
-					"wisetour": true,
-					"wisetrainer": false,
 					"users": "25",
 					"unlimitedTraining": true,
 					"platform": true,
@@ -777,9 +785,6 @@
 					"support": "Email"
 				},
 				"pro": {
-					"wisepaper": true,
-					"wisetour": true,
-					"wisetrainer": true,
 					"users": "100",
 					"unlimitedTraining": true,
 					"platform": true,
@@ -790,10 +795,7 @@
 					"crossCompany": false,
 					"support": "Prioritaire"
 				},
-				"business": {
-					"wisepaper": true,
-					"wisetour": true,
-					"wisetrainer": true,
+				"enterprise": {
 					"users": "Illimité",
 					"unlimitedTraining": true,
 					"platform": true,
@@ -1053,8 +1055,18 @@
 	},
 	"tryFree": {
 		"title": "Accédez à la plateforme",
-		"description": "Entrez votre adresse email professionnelle et recevez immédiatement votre lien d'accès.",
+		"description": "Remplissez le formulaire ci-dessous et recevez immédiatement votre lien d'accès.",
+		"firstName": "Prénom",
+		"firstNamePlaceholder": "Votre prénom",
+		"lastName": "Nom",
+		"lastNamePlaceholder": "Votre nom",
+		"phone": "Téléphone",
+		"phonePlaceholder": "Votre numéro de téléphone",
+		"company": "Entreprise",
+		"companyPlaceholder": "Nom de votre entreprise",
+		"email": "Email professionnel",
 		"emailPlaceholder": "Votre email professionnel",
+		"required": "*",
 		"submit": "Recevoir le lien",
 		"submitting": "Envoi en cours...",
 		"success": "Lien envoyé !",

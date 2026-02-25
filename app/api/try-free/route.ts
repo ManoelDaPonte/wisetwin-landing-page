@@ -3,9 +3,16 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
 	try {
-		const { email } = await req.json();
+		const { firstName, lastName, phone, company, email } = await req.json();
 
-		if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+		if (!firstName || !lastName || !company || !email) {
+			return NextResponse.json(
+				{ error: "Champs obligatoires manquants" },
+				{ status: 400 }
+			);
+		}
+
+		if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
 			return NextResponse.json(
 				{ error: "Email invalide" },
 				{ status: 400 }
@@ -28,8 +35,8 @@ export async function POST(req: NextRequest) {
 			to: email,
 			subject: "Votre accès à la plateforme WiseTwin",
 			html: `
-				<h2>Bienvenue sur WiseTwin !</h2>
-				<p>Voici votre lien d'accès à la plateforme :</p>
+				<h2>Bonjour ${firstName},</h2>
+				<p>Merci pour votre intérêt pour WiseTwin ! Voici votre lien d'accès à la plateforme :</p>
 				<p style="margin: 20px 0;">
 					<a href="https://app.wisetwin.eu" style="display: inline-block; background-color: #0F0B66; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold;">
 						Accéder à la plateforme
@@ -46,10 +53,14 @@ export async function POST(req: NextRequest) {
 		await transporter.sendMail({
 			from: `"WiseTwin Platform" <${process.env.EMAIL_USER}>`,
 			to: process.env.EMAIL_RECEIVER,
-			subject: `Nouveau lead - Essai gratuit: ${email}`,
+			subject: `Nouveau lead - Essai gratuit: ${firstName} ${lastName} (${company})`,
 			html: `
 				<h2>Nouveau lead - Essai gratuit</h2>
+				<p><strong>Prénom:</strong> ${firstName}</p>
+				<p><strong>Nom:</strong> ${lastName}</p>
+				<p><strong>Entreprise:</strong> ${company}</p>
 				<p><strong>Email:</strong> ${email}</p>
+				<p><strong>Téléphone:</strong> ${phone || "Non renseigné"}</p>
 				<p><strong>Date:</strong> ${new Date().toLocaleString("fr-FR")}</p>
 				<p><small>Cette personne a demandé un accès à la plateforme depuis le site.</small></p>
 			`,

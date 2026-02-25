@@ -30,7 +30,13 @@ export function TryFreeButton({
 }: TryFreeButtonProps) {
 	const t = useTranslations("tryFree");
 	const [open, setOpen] = useState(false);
-	const [email, setEmail] = useState("");
+	const [formData, setFormData] = useState({
+		firstName: "",
+		lastName: "",
+		phone: "",
+		company: "",
+		email: "",
+	});
 	const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 	const [errorMsg, setErrorMsg] = useState("");
 
@@ -38,7 +44,12 @@ export function TryFreeButton({
 		e.preventDefault();
 		setErrorMsg("");
 
-		if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+		if (!formData.firstName || !formData.lastName || !formData.company || !formData.email) {
+			setErrorMsg(t("required"));
+			return;
+		}
+
+		if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
 			setErrorMsg(t("invalidEmail"));
 			return;
 		}
@@ -49,7 +60,7 @@ export function TryFreeButton({
 			const res = await fetch("/api/try-free", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ email }),
+				body: JSON.stringify(formData),
 			});
 
 			if (!res.ok) throw new Error();
@@ -63,13 +74,16 @@ export function TryFreeButton({
 	const handleOpenChange = (newOpen: boolean) => {
 		setOpen(newOpen);
 		if (!newOpen) {
-			// Reset state when closing
 			setTimeout(() => {
-				setEmail("");
+				setFormData({ firstName: "", lastName: "", phone: "", company: "", email: "" });
 				setStatus("idle");
 				setErrorMsg("");
 			}, 200);
 		}
+	};
+
+	const updateField = (field: keyof typeof formData) => (e: React.ChangeEvent<HTMLInputElement>) => {
+		setFormData((prev) => ({ ...prev, [field]: e.target.value }));
 	};
 
 	return (
@@ -79,7 +93,7 @@ export function TryFreeButton({
 					{children}
 				</Button>
 			</DialogTrigger>
-			<DialogContent className="sm:max-w-md">
+			<DialogContent className="sm:max-w-lg">
 				<DialogHeader>
 					<DialogTitle>{t("title")}</DialogTitle>
 					<DialogDescription>{t("description")}</DialogDescription>
@@ -97,15 +111,66 @@ export function TryFreeButton({
 					</div>
 				) : (
 					<form onSubmit={handleSubmit} className="flex flex-col gap-4">
+						<div className="grid grid-cols-2 gap-4">
+							<div>
+								<label className="text-sm font-medium mb-1.5 block">
+									{t("firstName")} <span className="text-red-500">{t("required")}</span>
+								</label>
+								<Input
+									placeholder={t("firstNamePlaceholder")}
+									value={formData.firstName}
+									onChange={updateField("firstName")}
+									disabled={status === "loading"}
+								/>
+							</div>
+							<div>
+								<label className="text-sm font-medium mb-1.5 block">
+									{t("lastName")} <span className="text-red-500">{t("required")}</span>
+								</label>
+								<Input
+									placeholder={t("lastNamePlaceholder")}
+									value={formData.lastName}
+									onChange={updateField("lastName")}
+									disabled={status === "loading"}
+								/>
+							</div>
+						</div>
+						<div className="grid grid-cols-2 gap-4">
+							<div>
+								<label className="text-sm font-medium mb-1.5 block">
+									{t("phone")}
+								</label>
+								<Input
+									type="tel"
+									placeholder={t("phonePlaceholder")}
+									value={formData.phone}
+									onChange={updateField("phone")}
+									disabled={status === "loading"}
+								/>
+							</div>
+							<div>
+								<label className="text-sm font-medium mb-1.5 block">
+									{t("company")} <span className="text-red-500">{t("required")}</span>
+								</label>
+								<Input
+									placeholder={t("companyPlaceholder")}
+									value={formData.company}
+									onChange={updateField("company")}
+									disabled={status === "loading"}
+								/>
+							</div>
+						</div>
 						<div>
+							<label className="text-sm font-medium mb-1.5 block">
+								{t("email")} <span className="text-red-500">{t("required")}</span>
+							</label>
 							<Input
 								type="email"
 								placeholder={t("emailPlaceholder")}
-								value={email}
-								onChange={(e) => setEmail(e.target.value)}
+								value={formData.email}
+								onChange={updateField("email")}
 								disabled={status === "loading"}
 								className={cn(errorMsg && "border-red-500")}
-								autoFocus
 							/>
 							{errorMsg && (
 								<p className="text-sm text-red-500 mt-1">{errorMsg}</p>
