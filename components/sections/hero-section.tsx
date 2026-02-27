@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { TryFreeButton } from "@/components/ui/try-free-button";
 import { WordRotate } from "@/components/magicui/word-rotate";
-import { Clock, Users, Factory } from "lucide-react";
+import { ShieldCheck, GraduationCap, Megaphone, Sparkles, ArrowRight } from "lucide-react";
 
 export function HeroSection() {
 	const t = useTranslations("hero");
@@ -74,7 +74,15 @@ export function HeroSection() {
 						</div>
 					</div>
 
-					<div className="flex items-center justify-center">
+					<div className="flex flex-col items-center justify-center gap-4">
+						<Link
+							href="/solutions/wisetrainer"
+							className="pointer-events-auto inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-sm font-medium text-secondary hover:bg-secondary/20 transition-colors"
+						>
+							<Sparkles className="size-4" />
+							{t("badge")}
+							<ArrowRight className="size-3.5" />
+						</Link>
 						<div className="relative w-full max-w-2xl">
 							<div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110" />
 							<video
@@ -95,28 +103,28 @@ export function HeroSection() {
 					<div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16">
 						<div className="flex items-center gap-3 text-center md:text-left">
 							<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-								<Factory className="size-5 text-secondary" />
+								<ShieldCheck className="size-5 text-secondary" />
 							</div>
 							<span className="text-sm md:text-base text-muted-foreground">
-								{t("highlights.replica")}
+								{t("highlights.safety")}
 							</span>
 						</div>
 						<div className="hidden md:block w-px h-8 bg-border" />
 						<div className="flex items-center gap-3 text-center md:text-left">
 							<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-								<Users className="size-5 text-secondary" />
+								<GraduationCap className="size-5 text-secondary" />
 							</div>
 							<span className="text-sm md:text-base text-muted-foreground">
-								{t("highlights.team")}
+								{t("highlights.training")}
 							</span>
 						</div>
 						<div className="hidden md:block w-px h-8 bg-border" />
 						<div className="flex items-center gap-3 text-center md:text-left">
 							<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-								<Clock className="size-5 text-secondary" />
+								<Megaphone className="size-5 text-secondary" />
 							</div>
 							<span className="text-sm md:text-base text-muted-foreground">
-								{t("highlights.speed")}
+								{t("highlights.communication")}
 							</span>
 						</div>
 					</div>

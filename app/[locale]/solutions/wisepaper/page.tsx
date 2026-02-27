@@ -119,7 +119,7 @@ export default function WisePaperPage() {
 							</div>
 							<div className="relative">
 								<Image
-									src="/placeholder.png"
+									src="/test.svg"
 									alt="WisePaper - Formation digitale"
 									width={1200}
 									height={750}

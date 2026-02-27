@@ -40,6 +40,7 @@ export function Header() {
 	const [solutionsOpen, setSolutionsOpen] = useState(false);
 
 	const menuItems = [
+		{ title: t("platform"), href: "/solutions/platform" },
 		{ title: t("pricing"), href: "/#pricing" },
 		{ title: t("faq"), href: "/faq" },
 		{ title: t("contact"), href: "/#contact" },

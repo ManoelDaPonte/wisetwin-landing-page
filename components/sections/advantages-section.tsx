@@ -23,16 +23,26 @@ const icons = {
 	noEquipment: Monitor,
 };
 
+const float = (duration: number, delay: number, distance = 12) => ({
+	y: [-distance, distance, -distance],
+	transition: { duration, delay, repeat: Infinity, ease: "easeInOut" as const },
+});
+
+const floatX = (duration: number, delay: number, distance = 8) => ({
+	x: [-distance, distance, -distance],
+	transition: { duration, delay, repeat: Infinity, ease: "easeInOut" as const },
+});
+
 function GeometricBackground({ item }: { item: (typeof items)[number] }) {
 	switch (item) {
 		case "reactivity":
 			return (
 				<>
-					<div className="absolute top-8 right-12 w-0 h-0 border-l-[30px] border-l-transparent border-b-[50px] border-b-secondary/15 border-r-[30px] border-r-transparent" />
-					<div className="absolute bottom-12 left-16 w-0 h-0 border-l-[20px] border-l-transparent border-b-[35px] border-b-secondary/10 border-r-[20px] border-r-transparent" />
-					<div className="absolute top-1/3 left-1/4 w-48 h-px bg-secondary/15 rotate-45 origin-left" />
-					<div className="absolute top-1/2 left-1/3 w-32 h-px bg-secondary/10 rotate-45 origin-left" />
-					<div className="absolute bottom-1/4 right-1/4 w-0 h-0 border-l-[15px] border-l-transparent border-b-[25px] border-b-secondary/10 border-r-[15px] border-r-transparent rotate-12" />
+					<motion.div animate={float(5, 0)} className="absolute top-8 right-12 w-0 h-0 border-l-[30px] border-l-transparent border-b-[50px] border-b-secondary/15 border-r-[30px] border-r-transparent" />
+					<motion.div animate={float(6, 1.5, 10)} className="absolute bottom-12 left-16 w-0 h-0 border-l-[20px] border-l-transparent border-b-[35px] border-b-secondary/10 border-r-[20px] border-r-transparent" />
+					<motion.div animate={floatX(7, 0.5)} className="absolute top-1/3 left-1/4 w-48 h-px bg-secondary/15 rotate-45 origin-left" />
+					<motion.div animate={floatX(8, 2)} className="absolute top-1/2 left-1/3 w-32 h-px bg-secondary/10 rotate-45 origin-left" />
+					<motion.div animate={float(5.5, 0.8, 8)} className="absolute bottom-1/4 right-1/4 w-0 h-0 border-l-[15px] border-l-transparent border-b-[25px] border-b-secondary/10 border-r-[15px] border-r-transparent rotate-12" />
 				</>
 			);
 		case "tracking":
@@ -40,8 +50,9 @@ function GeometricBackground({ item }: { item: (typeof items)[number] }) {
 				<>
 					{[0, 1, 2, 3, 4].map((row) =>
 						[0, 1, 2, 3, 4].map((col) => (
-							<div
+							<motion.div
 								key={`${row}-${col}`}
+								animate={float(4 + ((row + col) % 3), (row * 0.3 + col * 0.2), 6)}
 								className="absolute size-2 rounded-full bg-secondary/15"
 								style={{
 									top: `${20 + row * 15}%`,
@@ -50,44 +61,44 @@ function GeometricBackground({ item }: { item: (typeof items)[number] }) {
 							/>
 						)),
 					)}
-					<div className="absolute top-[27%] left-[23%] w-[18%] h-px bg-secondary/10 rotate-[30deg]" />
-					<div className="absolute top-[42%] left-[32%] w-[18%] h-px bg-secondary/10 -rotate-[15deg]" />
-					<div className="absolute top-[50%] left-[50%] w-[18%] h-px bg-secondary/10 rotate-[45deg]" />
-					<div className="absolute top-[35%] left-[55%] w-[18%] h-px bg-secondary/10 -rotate-[30deg]" />
+					<motion.div animate={floatX(7, 0)} className="absolute top-[27%] left-[23%] w-[18%] h-px bg-secondary/10 rotate-[30deg]" />
+					<motion.div animate={floatX(8, 1)} className="absolute top-[42%] left-[32%] w-[18%] h-px bg-secondary/10 -rotate-[15deg]" />
+					<motion.div animate={floatX(6, 2)} className="absolute top-[50%] left-[50%] w-[18%] h-px bg-secondary/10 rotate-[45deg]" />
+					<motion.div animate={floatX(7.5, 0.5)} className="absolute top-[35%] left-[55%] w-[18%] h-px bg-secondary/10 -rotate-[30deg]" />
 				</>
 			);
 		case "costEffective":
 			return (
 				<>
-					<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-48 rounded-full border-2 border-secondary/20" />
-					<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-32 rounded-full border-2 border-secondary/15" />
-					<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-16 rounded-full bg-secondary/10" />
-					<div className="absolute top-1/4 left-8 right-8 h-px bg-secondary/10" />
-					<div className="absolute top-1/2 left-8 right-8 h-px bg-secondary/10" />
-					<div className="absolute top-3/4 left-8 right-8 h-px bg-secondary/10" />
+					<motion.div animate={{ scale: [1, 1.06, 1], transition: { duration: 6, repeat: Infinity, ease: "easeInOut" } }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-48 rounded-full border-2 border-secondary/20" />
+					<motion.div animate={{ scale: [1, 1.08, 1], transition: { duration: 5, delay: 0.5, repeat: Infinity, ease: "easeInOut" } }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-32 rounded-full border-2 border-secondary/15" />
+					<motion.div animate={{ scale: [1, 1.15, 1], transition: { duration: 4, delay: 1, repeat: Infinity, ease: "easeInOut" } }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-16 rounded-full bg-secondary/10" />
+					<motion.div animate={float(7, 0, 4)} className="absolute top-1/4 left-8 right-8 h-px bg-secondary/10" />
+					<motion.div animate={float(6, 1, 4)} className="absolute top-1/2 left-8 right-8 h-px bg-secondary/10" />
+					<motion.div animate={float(8, 0.5, 4)} className="absolute top-3/4 left-8 right-8 h-px bg-secondary/10" />
 				</>
 			);
 		case "easyIntegration":
 			return (
 				<>
-					<div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 size-32 rounded-full border-2 border-secondary/15" />
-					<div className="absolute top-1/2 left-2/3 -translate-x-1/2 -translate-y-1/2 size-32 rounded-full border-2 border-secondary/15" />
-					<div className="absolute top-1/4 left-1/2 -translate-x-1/2 size-20 rounded-full border-2 border-secondary/10" />
-					<div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 size-20 rounded-full border-2 border-secondary/10" />
+					<motion.div animate={float(6, 0, 10)} className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 size-32 rounded-full border-2 border-secondary/15" />
+					<motion.div animate={float(6, 1.5, 10)} className="absolute top-1/2 left-2/3 -translate-x-1/2 -translate-y-1/2 size-32 rounded-full border-2 border-secondary/15" />
+					<motion.div animate={float(5, 0.8, 8)} className="absolute top-1/4 left-1/2 -translate-x-1/2 size-20 rounded-full border-2 border-secondary/10" />
+					<motion.div animate={float(5, 2, 8)} className="absolute bottom-1/4 left-1/2 -translate-x-1/2 size-20 rounded-full border-2 border-secondary/10" />
 				</>
 			);
 		case "noEquipment":
 			return (
 				<>
-					<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-40 rounded-full border-2 border-secondary/15" />
-					<div className="absolute top-6 left-1/2 -translate-x-1/2 size-3 rounded-full bg-secondary/20" />
-					<div className="absolute bottom-6 left-1/2 -translate-x-1/2 size-3 rounded-full bg-secondary/20" />
-					<div className="absolute top-1/2 -translate-y-1/2 left-6 size-3 rounded-full bg-secondary/20" />
-					<div className="absolute top-1/2 -translate-y-1/2 right-6 size-3 rounded-full bg-secondary/20" />
-					<div className="absolute top-10 left-10 size-2 rounded-full bg-secondary/15" />
-					<div className="absolute top-10 right-10 size-2 rounded-full bg-secondary/15" />
-					<div className="absolute bottom-10 left-10 size-2 rounded-full bg-secondary/15" />
-					<div className="absolute bottom-10 right-10 size-2 rounded-full bg-secondary/15" />
+					<motion.div animate={{ scale: [1, 1.05, 1], transition: { duration: 7, repeat: Infinity, ease: "easeInOut" } }} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-40 rounded-full border-2 border-secondary/15" />
+					<motion.div animate={float(4, 0, 6)} className="absolute top-6 left-1/2 -translate-x-1/2 size-3 rounded-full bg-secondary/20" />
+					<motion.div animate={float(4, 1, 6)} className="absolute bottom-6 left-1/2 -translate-x-1/2 size-3 rounded-full bg-secondary/20" />
+					<motion.div animate={floatX(4, 0.5, 6)} className="absolute top-1/2 -translate-y-1/2 left-6 size-3 rounded-full bg-secondary/20" />
+					<motion.div animate={floatX(4, 1.5, 6)} className="absolute top-1/2 -translate-y-1/2 right-6 size-3 rounded-full bg-secondary/20" />
+					<motion.div animate={float(5, 0.3, 5)} className="absolute top-10 left-10 size-2 rounded-full bg-secondary/15" />
+					<motion.div animate={float(5, 1.2, 5)} className="absolute top-10 right-10 size-2 rounded-full bg-secondary/15" />
+					<motion.div animate={float(5, 0.8, 5)} className="absolute bottom-10 left-10 size-2 rounded-full bg-secondary/15" />
+					<motion.div animate={float(5, 2, 5)} className="absolute bottom-10 right-10 size-2 rounded-full bg-secondary/15" />
 				</>
 			);
 	}

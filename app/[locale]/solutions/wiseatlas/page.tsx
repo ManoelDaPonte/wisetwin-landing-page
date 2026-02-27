@@ -122,7 +122,7 @@ export default function WiseAtlasPage() {
 							</div>
 							<div className="relative">
 								<Image
-									src="/placeholder.png"
+									src="/image/WiseAtlas.png"
 									alt="WiseAtlas - Carte interactive"
 									width={1200}
 									height={750}

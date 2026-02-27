@@ -135,7 +135,7 @@ export default function WiseTrainerPage() {
 							</div>
 							<div className="relative">
 								<Image
-									src="/image/loto.webp"
+									src="/image/WiseTrainer.webp"
 									alt="WiseTrainer - Simulateur de formation 3D"
 									width={1200}
 									height={750}

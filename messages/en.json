@@ -8,7 +8,7 @@
 	},
 	"common": {
 		"demo": "Request a demo",
-		"tryFree": "Try for free",
+		"tryFree": "Free trial",
 		"learnMore": "Learn more",
 		"contact": "Contact",
 		"pricing": "Pricing",
@@ -16,6 +16,7 @@
 	},
 	"nav": {
 		"solutions": "Solutions",
+		"platform": "The Platform",
 		"wisetrainer": "WiseTrainer",
 		"wisepaper": "WisePaper",
 		"wisetour": "WiseTour",
@@ -37,22 +38,25 @@
 		"subtitle": "Digitize your training and immerse your employees in custom immersive situations, exact replicas of your facilities.",
 		"cta": "Free trial",
 		"ctaSecondary": "Request a quote",
+		"badge": "New: WiseTrainer — Learn more",
 		"highlights": {
-			"replica": "Virtual replica of your facilities",
-			"team": "Co-built with your teams",
-			"speed": "Delivered in 1 month"
+			"safety": "Safety onboarding",
+			"training": "Safety training",
+			"communication": "Communicate on your incidents"
 		}
 	},
 	"solutions": {
 		"title": "Our solutions",
-		"subtitle": "Find the solution that best fits your needs",
+		"subtitle": "Realism? Interactivity? Speed? A solution for each of your needs.",
 		"cta": "Learn more",
 		"flagship": "Flagship",
 		"selfService": "Self-service",
 		"standalone": "Standalone",
 		"wisetrainer": {
 			"title": "WiseTrainer",
-			"description": "Recreate your workstations in 3D and train your teams in a safe and realistic virtual environment."
+			"tag": "Immersive simulation",
+			"description": "Simulate critical interventions in real-time 3D. Lockout/tagout, evacuation, complex maintenance — no risk, no production downtime.",
+			"price": "Custom quote"
 		},
 		"platform": {
 			"title": "Management platform",
@@ -60,15 +64,21 @@
 		},
 		"wisepaper": {
 			"title": "WisePaper",
-			"description": "Digitize your paper training (PDF, Word, PowerPoint) and add interactive quizzes."
+			"tag": "AI-powered documentation",
+			"description": "Automate the creation of your training materials, quizzes and courses from your documentation. Instructional design at the speed of AI.",
+			"price": "Included"
 		},
 		"wisetour": {
 			"title": "WiseTour",
-			"description": "Visit photo-realistic 3D environments with quizzes for immersive training."
+			"tag": "Photo-realistic tours",
+			"description": "Photo-realistic virtual tours of your sites from 360° captures. Train your teams remotely on their actual work environment.",
+			"price": "Custom quote"
 		},
 		"wiseatlas": {
 			"title": "WiseAtlas",
-			"description": "Google Maps-style interactive map for communication and territorial planning."
+			"tag": "Strategic vision",
+			"description": "Google Maps-style interactive map for communication and territorial planning.",
+			"price": "Custom quote"
 		},
 		"comparison": {
 			"labels": {
@@ -141,95 +151,77 @@
 		"description": "A complete platform to manage your training plans, track progress and certify your learners.",
 		"hero": {
 			"title": "Your training hub",
-			"subtitle": "Centralize WiseTrainer and WisePaper. Manage your teams, track results and certify your learners.",
-			"cta": "Try for free",
+			"subtitle": "Centralize WiseTrainer, WisePaper and WiseTour. Manage your teams, track results and certify your learners — all from a single interface.",
+			"cta": "Free trial",
 			"badge": "Included in your license"
 		},
-		"hub": {
-			"title": "Everything in one place",
-			"subtitle": "A single entry point for all your training",
-			"items": {
-				"wisetrainer": {
-					"title": "WiseTrainer",
-					"description": "Your 3D simulators"
-				},
-				"wisepaper": {
-					"title": "WisePaper",
-					"description": "Your text-based training"
-				},
-				"users": {
-					"title": "Users",
-					"description": "Team management"
-				},
-				"results": {
-					"title": "Results",
-					"description": "Tracking and analytics"
-				}
-			}
-		},
-		"wisepaper": {
-			"title": "WisePaper - Create your text-based training",
-			"subtitle": "Digitize your documents and create interactive training with result tracking",
-			"features": {
-				"create": {
-					"title": "Course creation",
-					"description": "Create your training directly in the editor, just like Notion. Simple, intuitive and collaborative."
-				},
-				"import": {
-					"title": "Document import",
-					"description": "Import your existing PDFs, Word docs, PowerPoints. Our AI transforms them into interactive modules."
-				},
-				"ai": {
-					"title": "Integrated AI",
-					"description": "Our AI automatically generates MCQs and quizzes to validate learning."
-				},
-				"tracking": {
-					"title": "Results tracking",
-					"description": "Track who did what, scores, and progress in real time."
-				}
-			}
-		},
-		"included": {
-			"title": "Included at no extra cost",
-			"description": "The management platform is integrated into your WiseTwin license. No additional fees, no surprises."
-		},
 		"features": {
-			"title": "Features",
-			"trainingPlans": {
-				"title": "Training Plans",
-				"description": "Create personalized training plans, associate modules and learners, and track progress in real time."
+			"title": "Everything you need",
+			"subtitle": "A complete platform that centralizes the creation, tracking and administration of all your training.",
+			"contentManagement": {
+				"title": "Content Management",
+				"description": "Edit your training content directly from the platform, no technical intervention needed.",
+				"items": [
+					"Edit MCQs and quizzes",
+					"Update procedures",
+					"Replace images and resources",
+					"Edit training paths in real time"
+				]
 			},
 			"tracking": {
-				"title": "Results Tracking",
-				"description": "Analyze performance by user or by training with detailed dashboards and exportable statistics."
+				"title": "Tracking & Analytics",
+				"description": "Track every learner interaction and make informed decisions.",
+				"items": [
+					"Detailed tracking per user",
+					"Aggregates by training and by group",
+					"Complete response history",
+					"Real-time dashboards"
+				]
 			},
-			"certifications": {
-				"title": "QR Code Certifications",
-				"description": "Automatically generate personalized certificates with QR codes to verify the authenticity of each attestation."
+			"planning": {
+				"title": "Paths & Planning",
+				"description": "Organize complete training paths across all WiseTwin products.",
+				"items": [
+					"Multi-product paths (WiseTrainer, WisePaper, WiseTour)",
+					"Training session scheduling",
+					"Automatic email reminders",
+					"Path progress tracking"
+				]
 			},
-			"reminders": {
-				"title": "Automatic Reminders",
-				"description": "Send email reminders to all learners who are behind or individually target those who haven't finished."
+			"security": {
+				"title": "Security & Compliance",
+				"description": "Protect your data and maintain control over access and actions.",
+				"items": [
+					"Multi-factor authentication (MFA)",
+					"Single Sign-On (SSO)",
+					"Detailed audit logs",
+					"Full traceability: who did what, when"
+				]
 			},
-			"guests": {
-				"title": "Guest Management",
-				"description": "Add external learners (temporary workers, subcontractors) without professional email through guest mode."
+			"collaboration": {
+				"title": "Collaboration",
+				"description": "Invite your teams and partners to train on the platform.",
+				"items": [
+					"Invite team members",
+					"Guest mode for externals (temps, subcontractors)",
+					"Role and permission management"
+				]
+			},
+			"exports": {
+				"title": "Export & Integration",
+				"description": "Connect WiseTwin to your existing training ecosystem.",
+				"items": [
+					"Data integration with your LMS",
+					"Exportable PDF certifications with QR code",
+					"Complete catalogue of your training",
+					"SCORM compatible"
+				]
 			}
-		},
-		"security": {
-			"title": "Enterprise security",
-			"subtitle": "All features to protect your data",
-			"items": [
-				"SSO (SAML/OAuth)",
-				"MFA (Multi-factor authentication)",
-				"Audit logs",
-				"Data isolation"
-			]
 		},
 		"cta": {
 			"title": "Ready to simplify your training management?",
 			"description": "Discover how our platform can centralize and optimize your learner tracking.",
-			"button": "Try for free"
+			"button": "Free trial"
 		}
 	},
 	"wisetrainer": {
@@ -373,7 +365,7 @@
 		"description": "Create courses or digitize your existing documents, and track your learners' results.",
 		"hero": {
 			"title": "Digitize your training",
-			"subtitle": "Transform your existing documents into interactive training with result tracking. Like Notion, but designed for training.",
+			"subtitle": "Our AI transforms your documents into interactive training in two clicks. Import, and you're good to go.",
 			"cta": "Get started",
 			"badge": "Included in your license"
 		},
@@ -416,7 +408,7 @@
 		"cta": {
 			"title": "Ready to digitize your training?",
 			"description": "Start for free right now. No credit card required.",
-			"button": "Start for free"
+			"button": "Free trial"
 		}
 	},
 	"wisetour": {
@@ -659,7 +651,7 @@
 			},
 			"wisepaper": {
 				"title": "WisePaper",
-				"price": "Free",
+				"price": "Included",
 				"description": "Transform your existing training documents (PDF, PowerPoint, Word) into interactive digital courses with validation quizzes. AI analyzes your content and automatically generates relevant questions.",
 				"specs": [
 					"0 production downtime",
@@ -672,7 +664,7 @@
 			"wisetour": {
 				"title": "WiseTour",
 				"price": "Starting from €0",
-				"description": "Create photo-realistic virtual tours of your sites from 360° captures. Integrate interactive hotspots and quizzes to train your teams remotely on their actual work environment.",
+				"description": "Photo-realistic virtual tours of your sites from 360° captures. Integrate interactive hotspots and quizzes to train your teams remotely on their actual work environment.",
 				"specs": [
 					"1 on-site visit required",
 					"We come or you scan yourself",
@@ -697,13 +689,12 @@
 		},
 		"essential": {
 			"title": "Essential",
-			"priceMonthly": "590",
+			"priceMonthly": "600",
 			"period": "/mo/admin",
 			"description": "To start digitizing your training",
 			"includes": "Included:",
 			"features": [
 				"Up to 25 users",
-				"Management platform",
 				"Unlimited training",
 				"Email support"
 			],
@@ -711,12 +702,13 @@
 		},
 		"pro": {
 			"title": "Pro",
-			"priceMonthly": "990",
+			"priceMonthly": "2400",
 			"period": "/mo/admin",
 			"description": "For growing teams",
 			"includes": "Everything in Essential, plus:",
 			"features": [
 				"Up to 100 users",
+				"Edit training after creation",
 				"MFA (Multi-factor authentication)",
 				"Audit logs",
 				"Priority support"
@@ -724,8 +716,8 @@
 			"cta": "Contact us"
 		},
 		"enterprise": {
-			"title": "Enterprise",
-			"customPricing": "Custom quote",
+			"title": "Business",
+			"priceMonthly": "3600",
 			"period": "/mo/admin",
 			"description": "For large organizations",
 			"includes": "Everything in Pro, plus:",
@@ -764,7 +756,7 @@
 			"items": {
 				"users": "Max users",
 				"unlimitedTraining": "Unlimited training",
-				"platform": "Management platform",
+				"editTraining": "Edit training content",
 				"mfa": "MFA",
 				"audit": "Audit logs",
 				"sso": "SSO (Single Sign-On)",
@@ -776,7 +768,7 @@
 				"essential": {
 					"users": "25",
 					"unlimitedTraining": true,
-					"platform": true,
+					"editTraining": false,
 					"mfa": false,
 					"audit": false,
 					"sso": false,
@@ -787,7 +779,7 @@
 				"pro": {
 					"users": "100",
 					"unlimitedTraining": true,
-					"platform": true,
+					"editTraining": true,
 					"mfa": true,
 					"audit": true,
 					"sso": false,
@@ -798,7 +790,7 @@
 				"enterprise": {
 					"users": "Unlimited",
 					"unlimitedTraining": true,
-					"platform": true,
+					"editTraining": true,
 					"mfa": true,
 					"audit": true,
 					"sso": true,
@@ -814,6 +806,14 @@
 			"unlimitedTraining": "Each learner has unlimited access to training. They can practice, retry, and progress at their own pace.",
 			"scenario": "A scenario is an interactive training path with learning objectives, actions to perform and skills validation. Each WiseTrainer includes 3 base scenarios."
 		},
+		"ctaSection": {
+			"title": "Still have questions?",
+			"subtitle": "Our team is here to help you find the right plan.",
+			"contact": "Contact us",
+			"faq": "Read the FAQ",
+			"tryFree": "Try for free"
+		},
+		"platformLink": "Discover all platform features",
 		"wisetrainerLink": "See WiseTrainer development pricing",
 		"calculator": {
 			"title": "Estimate your investment",

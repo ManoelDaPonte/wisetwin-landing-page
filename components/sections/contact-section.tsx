@@ -181,7 +181,7 @@ export function ContactSection() {
 									<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
 										<div className="space-y-2">
 											<label htmlFor="firstName" className="block text-sm font-medium">
-												{t("form.firstName")} <span className="text-destructive">{t("form.required")}</span>
+												{t("form.firstName")} <span className="text-secondary">{t("form.required")}</span>
 											</label>
 											<Input
 												id="firstName"
@@ -195,7 +195,7 @@ export function ContactSection() {
 
 										<div className="space-y-2">
 											<label htmlFor="lastName" className="block text-sm font-medium">
-												{t("form.lastName")} <span className="text-destructive">{t("form.required")}</span>
+												{t("form.lastName")} <span className="text-secondary">{t("form.required")}</span>
 											</label>
 											<Input
 												id="lastName"
@@ -211,7 +211,7 @@ export function ContactSection() {
 									<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
 										<div className="space-y-2">
 											<label htmlFor="email" className="block text-sm font-medium">
-												{t("form.email")} <span className="text-destructive">{t("form.required")}</span>
+												{t("form.email")} <span className="text-secondary">{t("form.required")}</span>
 											</label>
 											<Input
 												type="email"
@@ -253,7 +253,7 @@ export function ContactSection() {
 
 									<div className="mb-6 space-y-2">
 										<label htmlFor="message" className="block text-sm font-medium">
-											{t("form.message")} <span className="text-destructive">{t("form.required")}</span>
+											{t("form.message")} <span className="text-secondary">{t("form.required")}</span>
 										</label>
 										<Textarea
 											id="message"

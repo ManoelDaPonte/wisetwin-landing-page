@@ -120,7 +120,7 @@ export default function WiseTourPage() {
 							</div>
 							<div className="relative">
 								<Image
-									src="/placeholder.png"
+									src="/image/WiseTour.png"
 									alt="WiseTour - Visite virtuelle 360"
 									width={1200}
 									height={750}

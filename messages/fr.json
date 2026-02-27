@@ -16,6 +16,7 @@
 	},
 	"nav": {
 		"solutions": "Solutions",
+		"platform": "La Plateforme",
 		"wisetrainer": "WiseTrainer",
 		"wisepaper": "WisePaper",
 		"wisetour": "WiseTour",
@@ -37,22 +38,25 @@
 		"subtitle": "Digitalisez vos formations et plongez vos collaborateurs dans des situations immersives sur mesure, répliques exactes de vos installations.",
 		"cta": "Essai gratuit",
 		"ctaSecondary": "Demander un devis",
+		"badge": "Nouveauté WiseTrainer — En savoir plus",
 		"highlights": {
-			"replica": "Réplique virtuelle de vos installations",
-			"team": "Co-construit avec vos équipes",
-			"speed": "Livraison en 1 mois"
+			"safety": "Accueil sécurité",
+			"training": "Formations sécurité",
+			"communication": "Communiquez sur vos incidents"
 		}
 	},
 	"solutions": {
 		"title": "Nos solutions",
-		"subtitle": "Trouvez la solution correspondant le plus à vos besoins",
+		"subtitle": "Du réalisme ? De l'interactivité ? De la rapidité ? Une solution pour chacun de vos besoins.",
 		"cta": "En savoir plus",
 		"flagship": "Produit phare",
 		"selfService": "Self-service",
 		"standalone": "Hors plateforme",
 		"wisetrainer": {
 			"title": "WiseTrainer",
-			"description": "Recréez vos postes de travail en 3D et formez vos équipes dans un environnement virtuel sécurisé et réaliste."
+			"tag": "Simulation immersive",
+			"description": "Simulez des interventions critiques en 3D temps réel. Consignation, évacuation, maintenance complexe — sans risque, sans arrêt de production.",
+			"price": "Sur devis"
 		},
 		"platform": {
 			"title": "Plateforme de gestion",
@@ -60,15 +64,21 @@
 		},
 		"wisepaper": {
 			"title": "WisePaper",
-			"description": "Digitalisez vos formations papier (PDF, Word, PowerPoint) et ajoutez des QCM interactifs."
+			"tag": "IA documentaire",
+			"description": "Automatisez la création de vos supports pédagogiques, QCM et cours à partir de votre documentation. L'ingénierie pédagogique à la vitesse de l'IA.",
+			"price": "Inclus"
 		},
 		"wisetour": {
 			"title": "WiseTour",
-			"description": "Visitez des environnements 3D photo-réalistes accompagnés de QCM pour une formation immersive."
+			"tag": "Visite photo-réaliste",
+			"description": "Des visites virtuelles photo-réalistes de vos sites à partir de captures 360°. Formez vos équipes à distance sur l'environnement réel de travail.",
+			"price": "Sur devis"
 		},
 		"wiseatlas": {
 			"title": "WiseAtlas",
-			"description": "Carte interactive style Google Maps pour la communication et le réaménagement territorial."
+			"tag": "Vision stratégique",
+			"description": "Carte interactive style Google Maps pour la communication et le réaménagement territorial.",
+			"price": "Sur devis"
 		},
 		"comparison": {
 			"labels": {
@@ -141,95 +151,77 @@
 		"description": "Une plateforme complète pour gérer vos plans de formation, suivre les progressions et certifier vos apprenants.",
 		"hero": {
 			"title": "Le hub de vos formations",
-			"subtitle": "Centralisez WiseTrainer et WisePaper. Gérez vos équipes, suivez les résultats et certifiez vos apprenants.",
-			"cta": "Essayer gratuitement",
+			"subtitle": "Centralisez WiseTrainer, WisePaper et WiseTour. Gérez vos équipes, suivez les résultats et certifiez vos apprenants — le tout depuis une seule interface.",
+			"cta": "Essai gratuit",
 			"badge": "Inclus dans votre licence"
 		},
-		"hub": {
-			"title": "Tout au même endroit",
-			"subtitle": "Un point d'entrée unique pour toutes vos formations",
-			"items": {
-				"wisetrainer": {
-					"title": "WiseTrainer",
-					"description": "Vos simulateurs 3D"
-				},
-				"wisepaper": {
-					"title": "WisePaper",
-					"description": "Vos formations texte"
-				},
-				"users": {
-					"title": "Utilisateurs",
-					"description": "Gestion des équipes"
-				},
-				"results": {
-					"title": "Résultats",
-					"description": "Suivi et analytics"
-				}
-			}
-		},
-		"wisepaper": {
-			"title": "WisePaper - Créez vos formations texte",
-			"subtitle": "Digitalisez vos documents et créez des formations interactives avec suivi des résultats",
-			"features": {
-				"create": {
-					"title": "Création de cours",
-					"description": "Créez vos formations directement dans l'éditeur, comme sur Notion. Simple, intuitif et collaboratif."
-				},
-				"import": {
-					"title": "Import de documents",
-					"description": "Importez vos PDF, Word, PowerPoint existants. Notre IA les transforme en modules interactifs."
-				},
-				"ai": {
-					"title": "IA intégrée",
-					"description": "Notre IA génère automatiquement des QCM et quiz pour valider les acquis."
-				},
-				"tracking": {
-					"title": "Suivi des résultats",
-					"description": "Suivez qui a fait quoi, les scores et les progressions en temps réel."
-				}
-			}
-		},
-		"included": {
-			"title": "Inclus sans surcoût",
-			"description": "La plateforme de gestion est intégrée à votre licence WiseTwin. Pas de frais supplémentaires, pas de surprises."
-		},
 		"features": {
-			"title": "Fonctionnalités",
-			"trainingPlans": {
-				"title": "Plans de formation",
-				"description": "Créez des plans de formation personnalisés, associez-y des modules et des apprenants, et suivez l'avancement en temps réel."
+			"title": "Tout ce dont vous avez besoin",
+			"subtitle": "Une plateforme complète qui centralise la création, le suivi et l'administration de toutes vos formations.",
+			"contentManagement": {
+				"title": "Gestion du contenu",
+				"description": "Modifiez le contenu de vos formations directement depuis la plateforme, sans intervention technique.",
+				"items": [
+					"Modifier les QCM et quiz",
+					"Mettre à jour les procédures",
+					"Remplacer images et ressources",
+					"Éditer les parcours en temps réel"
+				]
 			},
 			"tracking": {
-				"title": "Suivi des résultats",
-				"description": "Analysez les performances par utilisateur ou par formation avec des tableaux de bord détaillés et des statistiques exportables."
+				"title": "Suivi & Analytics",
+				"description": "Suivez chaque interaction de vos apprenants et prenez des décisions éclairées.",
+				"items": [
+					"Suivi détaillé par utilisateur",
+					"Agrégats par formation et par groupe",
+					"Historique complet des réponses",
+					"Tableaux de bord en temps réel"
+				]
 			},
-			"certifications": {
-				"title": "Certifications avec QR Code",
-				"description": "Générez automatiquement des certificats personnalisés avec QR code pour vérifier l'authenticité de chaque attestation."
+			"planning": {
+				"title": "Parcours & Planification",
+				"description": "Organisez des parcours de formation complets à travers tous les produits WiseTwin.",
+				"items": [
+					"Parcours multi-produits (WiseTrainer, WisePaper, WiseTour)",
+					"Planification des sessions de formation",
+					"Rappels automatiques par email",
+					"Suivi d'avancement des parcours"
+				]
 			},
-			"reminders": {
-				"title": "Rappels automatiques",
-				"description": "Envoyez des rappels par email à tous les apprenants en retard ou ciblez individuellement ceux qui n'ont pas terminé."
+			"security": {
+				"title": "Sécurité & Conformité",
+				"description": "Protégez vos données et gardez le contrôle sur les accès et les actions.",
+				"items": [
+					"Authentification multi-facteurs (MFA)",
+					"Single Sign-On (SSO)",
+					"Journaux d'audit détaillés",
+					"Traçabilité complète : qui a fait quoi, quand"
+				]
 			},
-			"guests": {
-				"title": "Gestion des invités",
-				"description": "Ajoutez des apprenants externes (intérimaires, sous-traitants) sans adresse email professionnelle grâce au mode invité."
+			"collaboration": {
+				"title": "Collaboration",
+				"description": "Invitez vos équipes et partenaires à se former sur la plateforme.",
+				"items": [
+					"Inviter des collaborateurs",
+					"Mode invité pour externes (intérimaires, sous-traitants)",
+					"Gestion des rôles et permissions"
+				]
+			},
+			"exports": {
+				"title": "Export & Intégration",
+				"description": "Connectez WiseTwin à votre écosystème de formation existant.",
+				"items": [
+					"Intégration des données dans votre LMS",
+					"Certifications PDF avec QR code",
+					"Catalogue complet de vos formations",
+					"Compatible SCORM"
+				]
 			}
-		},
-		"security": {
-			"title": "Sécurité entreprise",
-			"subtitle": "Toutes les fonctionnalités pour protéger vos données",
-			"items": [
-				"SSO (SAML/OAuth)",
-				"MFA (Authentification multi-facteurs)",
-				"Journaux d'audit",
-				"Isolation des données"
-			]
 		},
 		"cta": {
 			"title": "Prêt à simplifier la gestion de vos formations ?",
 			"description": "Découvrez comment notre plateforme peut centraliser et optimiser le suivi de vos apprenants.",
-			"button": "Essayer gratuitement"
+			"button": "Essai gratuit"
 		}
 	},
 	"wisetrainer": {
@@ -373,8 +365,8 @@
 		"description": "Créez des cours ou digitalisez vos documents existants, et suivez les résultats de vos apprenants.",
 		"hero": {
 			"title": "Digitalisez vos formations",
-			"subtitle": "Transformez vos documents existants en formations interactives avec suivi des résultats. Comme Notion, mais conçu pour la formation.",
-			"cta": "Commencer",
+			"subtitle": "Notre IA transforme vos documents en formations interactives en deux clics. Importez, et c'est prêt.",
+			"cta": "Essai gratuit",
 			"badge": "Inclus dans votre licence"
 		},
 		"flow": {
@@ -416,7 +408,7 @@
 		"cta": {
 			"title": "Prêt à digitaliser vos formations ?",
 			"description": "Commencez gratuitement dès maintenant. Aucune carte bancaire requise.",
-			"button": "Commencer gratuitement"
+			"button": "Essai gratuit"
 		}
 	},
 	"wisetour": {
@@ -659,7 +651,7 @@
 			},
 			"wisepaper": {
 				"title": "WisePaper",
-				"price": "Gratuit",
+				"price": "Inclus",
 				"description": "Transformez vos documents de formation existants (PDF, PowerPoint, Word) en parcours digitaux interactifs avec QCM de validation. L'IA analyse vos contenus et génère automatiquement des questions pertinentes.",
 				"specs": [
 					"0 arrêt de production",
@@ -672,7 +664,7 @@
 			"wisetour": {
 				"title": "WiseTour",
 				"price": "À partir de 0 €",
-				"description": "Créez des visites virtuelles photo-réalistes de vos sites à partir de captures 360°. Intégrez des points d'intérêt interactifs et des QCM pour former vos équipes à distance sur l'environnement réel de travail.",
+				"description": "Des visites virtuelles photo-réalistes de vos sites à partir de captures 360°. Intégrez des points d'intérêt interactifs et des QCM pour former vos équipes à distance sur l'environnement réel de travail.",
 				"specs": [
 					"1 visite sur site nécessaire",
 					"Nous venons ou vous scannez vous-même",
@@ -697,13 +689,12 @@
 		},
 		"essential": {
 			"title": "Essentiel",
-			"priceMonthly": "590",
+			"priceMonthly": "600",
 			"period": "/mois/admin",
 			"description": "Pour démarrer la digitalisation de vos formations",
 			"includes": "Inclus :",
 			"features": [
 				"Jusqu'à 25 utilisateurs",
-				"Plateforme de gestion",
 				"Formations illimitées",
 				"Support par email"
 			],
@@ -711,12 +702,13 @@
 		},
 		"pro": {
 			"title": "Pro",
-			"priceMonthly": "990",
+			"priceMonthly": "2400",
 			"period": "/mois/admin",
 			"description": "Pour les équipes en croissance",
 			"includes": "Tout le plan Essentiel, plus :",
 			"features": [
 				"Jusqu'à 100 utilisateurs",
+				"Modification des formations après création",
 				"MFA (Authentification multi-facteurs)",
 				"Journaux d'audit",
 				"Support prioritaire"
@@ -724,8 +716,8 @@
 			"cta": "Nous contacter"
 		},
 		"enterprise": {
-			"title": "Enterprise",
-			"customPricing": "Sur devis",
+			"title": "Business",
+			"priceMonthly": "3600",
 			"period": "/mois/admin",
 			"description": "Pour les grandes organisations",
 			"includes": "Tout le plan Pro, plus :",
@@ -764,7 +756,7 @@
 			"items": {
 				"users": "Utilisateurs max",
 				"unlimitedTraining": "Formations illimitées",
-				"platform": "Plateforme de gestion",
+				"editTraining": "Modification des formations",
 				"mfa": "MFA",
 				"audit": "Journaux d'audit",
 				"sso": "SSO (Single Sign-On)",
@@ -776,7 +768,7 @@
 				"essential": {
 					"users": "25",
 					"unlimitedTraining": true,
-					"platform": true,
+					"editTraining": false,
 					"mfa": false,
 					"audit": false,
 					"sso": false,
@@ -787,7 +779,7 @@
 				"pro": {
 					"users": "100",
 					"unlimitedTraining": true,
-					"platform": true,
+					"editTraining": true,
 					"mfa": true,
 					"audit": true,
 					"sso": false,
@@ -798,7 +790,7 @@
 				"enterprise": {
 					"users": "Illimité",
 					"unlimitedTraining": true,
-					"platform": true,
+					"editTraining": true,
 					"mfa": true,
 					"audit": true,
 					"sso": true,
@@ -814,6 +806,14 @@
 			"unlimitedTraining": "Chaque apprenant dispose d'un accès illimité aux formations. Ils peuvent s'entraîner, recommencer et progresser à leur rythme.",
 			"scenario": "Un scénario est un parcours de formation interactif avec objectifs pédagogiques, actions à réaliser et validation des acquis. Chaque WiseTrainer inclut 3 scénarios de base."
 		},
+		"ctaSection": {
+			"title": "Encore des questions ?",
+			"subtitle": "Notre équipe est là pour vous accompagner dans votre choix.",
+			"contact": "Nous contacter",
+			"faq": "Consulter la FAQ",
+			"tryFree": "Tester gratuitement"
+		},
+		"platformLink": "Découvrir toutes les fonctionnalités de la plateforme",
 		"wisetrainerLink": "Voir les tarifs de développement WiseTrainer",
 		"calculator": {
 			"title": "Estimez votre investissement",

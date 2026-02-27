@@ -114,7 +114,7 @@ export function TryFreeButton({
 						<div className="grid grid-cols-2 gap-4">
 							<div>
 								<label className="text-sm font-medium mb-1.5 block">
-									{t("firstName")} <span className="text-red-500">{t("required")}</span>
+									{t("firstName")} <span className="text-secondary">{t("required")}</span>
 								</label>
 								<Input
 									placeholder={t("firstNamePlaceholder")}
@@ -125,7 +125,7 @@ export function TryFreeButton({
 							</div>
 							<div>
 								<label className="text-sm font-medium mb-1.5 block">
-									{t("lastName")} <span className="text-red-500">{t("required")}</span>
+									{t("lastName")} <span className="text-secondary">{t("required")}</span>
 								</label>
 								<Input
 									placeholder={t("lastNamePlaceholder")}
@@ -150,7 +150,7 @@ export function TryFreeButton({
 							</div>
 							<div>
 								<label className="text-sm font-medium mb-1.5 block">
-									{t("company")} <span className="text-red-500">{t("required")}</span>
+									{t("company")} <span className="text-secondary">{t("required")}</span>
 								</label>
 								<Input
 									placeholder={t("companyPlaceholder")}
@@ -162,7 +162,7 @@ export function TryFreeButton({
 						</div>
 						<div>
 							<label className="text-sm font-medium mb-1.5 block">
-								{t("email")} <span className="text-red-500">{t("required")}</span>
+								{t("email")} <span className="text-secondary">{t("required")}</span>
 							</label>
 							<Input
 								type="email"
