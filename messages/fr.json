@@ -42,7 +42,7 @@
 		"highlights": {
 			"safety": "Accueil sécurité",
 			"training": "Formations sécurité",
-			"communication": "Communiquez sur vos incidents"
+			"communication": "Vision stratégique"
 		}
 	},
 	"solutions": {
@@ -77,7 +77,7 @@
 		"wiseatlas": {
 			"title": "WiseAtlas",
 			"tag": "Vision stratégique",
-			"description": "Carte interactive style Google Maps pour la communication et le réaménagement territorial.",
+			"description": "Pilotez l’attractivité de votre territoire et accélérez la décarbonation grâce à une vision systémique 4D",
 			"price": "Sur devis"
 		},
 		"comparison": {
@@ -470,42 +470,42 @@
 	},
 	"wiseatlas": {
 		"title": "WiseAtlas",
-		"subtitle": "Carte interactive de communication",
-		"description": "Une carte interactive style Google Maps pour communiquer sur vos projets de réaménagement territorial et partager des informations géolocalisées.",
+		"subtitle": "Le Jumeau Numérique au service de la Planification Industrielle Durable",
+		"description": "Pilotez l’attractivité de votre territoire et accélérez la décarbonation grâce à une vision systémique 4D. Aménager une zone industrielle ne se fait plus en silos. Pour réussir la transition, vous devez concilier développement économique, réseaux énergétiques et acceptabilité sociale. Comment projeter l'impact d'une nouvelle usine sur vos réseaux de chaleur ou sur l'emploi local à l'horizon 2030 ?",
 		"hero": {
-			"title": "Communiquez sur une carte interactive",
-			"subtitle": "Développez une carte interactive personnalisée style Google Maps pour vos projets de communication territoriale et de réaménagement. Solution indépendante de la plateforme de formation.",
+			"title": "Le Jumeau Numérique au service de la Planification Industrielle Durable",
+			"subtitle": "Pilotez l’attractivité de votre territoire et accélérez la décarbonation grâce à une vision systémique 4D",
 			"cta": "Demander un devis",
 			"badge": "Solution indépendante"
 		},
 		"howItWorks": {
-			"title": "Comment ça marche ?",
-			"subtitle": "De votre projet à une carte interactive en quelques étapes",
+			"title": "Une plateforme unique pour une vision à 360°",
+			"subtitle": "Notre carte interactive n'est pas une simple représentation géographique, c'est un outil d'aide à la décision qui agrège vos données critiques",
 			"steps": {
 				"define": {
-					"title": "Définition du projet",
-					"description": "Partagez vos objectifs et le périmètre géographique de votre projet.",
+					"title": "Interdépendance des flux",
+					"description": "Visualisez les synergies entre usines (chaleur fatale, réseaux d'eau, électricité) pour créer de véritables écosystèmes d'écologie industrielle.",
 					"duration": "1 réunion"
 				},
 				"data": {
-					"title": "Intégration des données",
-					"description": "Nous intégrons vos données géographiques, zones de projet et points d'intérêt.",
+					"title": "Empreinte Dynamique & BIM",
+					"description": "Intégrez les maquettes numériques de vos futurs projets pour simuler l'occupation foncière et l'insertion paysagère.",
 					"duration": "1-2 semaines"
 				},
 				"design": {
-					"title": "Personnalisation",
-					"description": "Design et branding adaptés à votre charte de communication.",
+					"title": "Frise Chronologique (4D)",
+					"description": "Anticipez l'évolution du territoire. Projetez-vous dans le futur pour voir l'évolution des émissions de CO2 et la courbe de création d'emplois.",
 					"duration": "~1 semaine"
 				},
 				"publish": {
-					"title": "Publication",
-					"description": "Votre carte interactive est en ligne, partageable par lien.",
+					"title": "Tableau de Bord ESG :",
+					"description": "Communiquez des chiffres clairs et transparents sur l'impact environnemental et social de votre zone.",
 					"duration": "Immédiat"
 				}
 			}
 		},
 		"useCases": {
-			"title": "Cas d'usage",
+			"title": "Le défi des ADE et Territoires ZIBAC",
 			"territory": {
 				"title": "Réaménagement territorial",
 				"description": "Communiquez sur vos projets d'urbanisme et de réaménagement avec une carte interactive."
@@ -530,8 +530,8 @@
 		}
 	},
 	"advantages": {
-		"title": "Pourquoi nous choisir ?",
-		"subtitle": "Ce qui fait la différence WiseTwin",
+		"title": "Construisons ensemble votre actif numérique",
+		"subtitle": "Ce qui fait la différence Wise Twin",
 		"items": {
 			"reactivity": {
 				"label": "Réactif",

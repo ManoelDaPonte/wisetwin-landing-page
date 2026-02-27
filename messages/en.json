@@ -77,7 +77,7 @@
 		"wiseatlas": {
 			"title": "WiseAtlas",
 			"tag": "Strategic vision",
-			"description": "Google Maps-style interactive map for communication and territorial planning.",
+			"description": "Enhance your region’s attractiveness and accelerate decarbonization with a systemic 4D vision.",
 			"price": "Custom quote"
 		},
 		"comparison": {
@@ -470,62 +470,62 @@
 	},
 	"wiseatlas": {
 		"title": "WiseAtlas",
-		"subtitle": "Interactive communication map",
-		"description": "A Google Maps-style interactive map to communicate about your territorial development projects and share geolocated information.",
+		"subtitle": "The Digital Twin for Sustainable Industrial Planning",
+		"description": "Enhance your region’s attractiveness and accelerate decarbonization with a systemic 4D vision. Developing an industrial zone can no longer be done in silos. To successfully manage the transition, you must balance economic development, energy networks, and social acceptance. How can you project the impact of a new factory on your district heating networks or on local employment by 2030?",
 		"hero": {
-			"title": "Communicate on an interactive map",
-			"subtitle": "Develop a custom Google Maps-style interactive map for your territorial communication and redevelopment projects. Standalone solution, independent from the training platform.",
+			"title": "The Digital Twin for Sustainable Industrial Planning",
+			"subtitle": "Enhance your region’s attractiveness and accelerate decarbonization with a systemic 4D vision",
 			"cta": "Request a quote",
-			"badge": "Standalone solution"
+			"badge": "Independent solution"
 		},
 		"howItWorks": {
-			"title": "How does it work?",
-			"subtitle": "From your project to an interactive map in a few steps",
+			"title": "A unique platform for a 360° vision",
+			"subtitle": "Our interactive map is not just a geographic representation — it is a decision-support tool that aggregates your critical data",
 			"steps": {
-				"define": {
-					"title": "Project definition",
-					"description": "Share your objectives and the geographic scope of your project.",
-					"duration": "1 meeting"
-				},
-				"data": {
-					"title": "Data integration",
-					"description": "We integrate your geographic data, project areas and points of interest.",
-					"duration": "1-2 weeks"
-				},
-				"design": {
-					"title": "Customization",
-					"description": "Design and branding adapted to your communication charter.",
-					"duration": "~1 week"
-				},
-				"publish": {
-					"title": "Publication",
-					"description": "Your interactive map is online, shareable by link.",
-					"duration": "Immediate"
-				}
+			"define": {
+				"title": "Interdependency of Flows",
+				"description": "Visualize synergies between industrial sites (waste heat, water networks, electricity) to create true industrial ecology ecosystems.",
+				"duration": "1 meeting"
+			},
+			"data": {
+				"title": "Dynamic Footprint & BIM",
+				"description": "Integrate digital models of your future projects to simulate land use and landscape integration.",
+				"duration": "1–2 weeks"
+			},
+			"design": {
+				"title": "Timeline (4D)",
+				"description": "Anticipate how the territory will evolve. Project yourself into the future to see the evolution of CO2 emissions and the job creation curve.",
+				"duration": "~1 week"
+			},
+			"publish": {
+				"title": "ESG Dashboard:",
+				"description": "Communicate clear and transparent figures on the environmental and social impact of your zone.",
+				"duration": "Immediate"
+			}
 			}
 		},
 		"useCases": {
-			"title": "Use cases",
+			"title": "The challenge for ADE and ZIBAC Territories",
 			"territory": {
-				"title": "Territorial redevelopment",
-				"description": "Communicate about your urban planning and redevelopment projects with an interactive map."
+			"title": "Territorial redevelopment",
+			"description": "Communicate your urban planning and redevelopment projects with an interactive map."
 			},
 			"stakeholders": {
-				"title": "Stakeholder communication",
-				"description": "Keep your partners and the public informed about your project progress."
+			"title": "Stakeholder communication",
+			"description": "Keep your partners and the public informed about the progress of your projects."
 			},
 			"infrastructure": {
-				"title": "Infrastructure projects",
-				"description": "Visualize and communicate about large-scale infrastructure projects."
+			"title": "Infrastructure projects",
+			"description": "Visualize and communicate large-scale infrastructure projects."
 			}
 		},
 		"standalone": {
-			"title": "Standalone solution",
-			"description": "WiseAtlas is a separate solution, independent from the WiseTwin training platform. It's an application made available to your clients for communication purposes."
+			"title": "Independent solution",
+			"description": "WiseAtlas is a standalone solution, separate from the WiseTwin training platform. It is an application made available to your clients for communication purposes."
 		},
 		"cta": {
-			"title": "Have a territorial communication project?",
-			"description": "Contact us to discuss your project and get a customized quote.",
+			"title": "A territorial communication project?",
+			"description": "Contact us to discuss your project and receive a personalized quote.",
 			"button": "Request a quote"
 		}
 	},
