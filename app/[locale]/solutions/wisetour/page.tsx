@@ -17,7 +17,6 @@ import {
 	X,
 	Cuboid,
 	FileText,
-	Map,
 	ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
@@ -40,7 +39,6 @@ const productSolutions = [
 	{ key: "wisetrainer", icon: Cuboid, href: "/solutions/wisetrainer" },
 	{ key: "wisepaper", icon: FileText, href: "/solutions/wisepaper" },
 	{ key: "wisetour", icon: Camera, href: "/solutions/wisetour" },
-	{ key: "wiseatlas", icon: Map, href: "/solutions/wiseatlas" },
 ] as const;
 
 const comparisonKeys = [

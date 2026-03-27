@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { Logo } from "@/components/ui/logo";
-import { TryFreeButton } from "@/components/ui/try-free-button";
-import { Cuboid, FileText, Camera, Map, Menu, ChevronDown } from "lucide-react";
+import { Cuboid, Map, Menu, ChevronDown, ExternalLink, LogIn } from "lucide-react";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -34,46 +33,46 @@ import { DevBanner } from "@/components/layout/dev-banner";
 export function Header() {
 	const t = useTranslations("nav");
 	const tSolutions = useTranslations();
-	const tCommon = useTranslations("common");
 	const [scrolled, setScrolled] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [solutionsOpen, setSolutionsOpen] = useState(false);
 
 	const menuItems = [
-		{ title: t("platform"), href: "/solutions/platform" },
-		{ title: t("pricing"), href: "/#pricing" },
+		{ title: t("security"), href: "/#security" },
 		{ title: t("faq"), href: "/faq" },
 		{ title: t("contact"), href: "/#contact" },
+	];
+
+	const platformItems = [
+		{
+			title: "WiseTrainer",
+			description: t("platformWisetrainer"),
+			href: "https://app.wisetwin.eu",
+			icon: Cuboid,
+		},
+		{
+			title: "WiseAtlas",
+			description: t("platformWiseatlas"),
+			href: "#",
+			icon: Map,
+			disabled: true,
+		},
 	];
 
 	const solutionItems = [
 		{
 			title: tSolutions("wisetrainer.title"),
-			description: tSolutions("wisetrainer.subtitle"),
+			description: tSolutions("solutions.formation.description"),
 			href: "/solutions/wisetrainer",
 			icon: Cuboid,
-			featured: true,
-		},
-		{
-			title: tSolutions("wisepaper.title"),
-			description: tSolutions("wisepaper.subtitle"),
-			href: "/solutions/wisepaper",
-			icon: FileText,
-			featured: false,
-		},
-		{
-			title: tSolutions("wisetour.title"),
-			description: tSolutions("wisetour.subtitle"),
-			href: "/solutions/wisetour",
-			icon: Camera,
-			featured: false,
+			tag: t("training"),
 		},
 		{
 			title: tSolutions("wiseatlas.title"),
 			description: tSolutions("wiseatlas.subtitle"),
 			href: "/solutions/wiseatlas",
 			icon: Map,
-			featured: false,
+			tag: t("communication"),
 		},
 	];
 
@@ -116,29 +115,25 @@ export function Header() {
 										{t("solutions")}
 									</NavigationMenuTrigger>
 									<NavigationMenuContent>
-										<div className="grid grid-cols-2 gap-3 p-4 w-[460px]">
+										<div className="p-4 w-[460px] space-y-2">
 											{solutionItems.map((item) => {
 												const Icon = item.icon;
 												return (
 													<Link
 														key={item.href}
 														href={item.href}
-														className={cn(
-															"flex flex-col items-center text-center rounded-xl p-4 transition-all",
-															item.featured
-																? "bg-secondary/5 border border-secondary/20 hover:border-secondary/40 hover:bg-secondary/10"
-																: "border border-transparent hover:border-secondary/30 hover:bg-secondary/5"
-														)}
+														className="flex items-center gap-4 rounded-xl p-4 transition-all border border-transparent hover:border-secondary/30 hover:bg-secondary/5"
 													>
-														<div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-3">
+														<div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0">
 															<Icon className="size-6 text-secondary" />
 														</div>
-														<div className="font-semibold mb-1">
-															{item.title}
+														<div className="flex-1">
+															<div className="flex items-center gap-2 mb-0.5">
+																<span className="font-semibold">{item.title}</span>
+																<span className="text-xs font-medium text-secondary bg-secondary/10 px-2 py-0.5 rounded-full">{item.tag}</span>
+															</div>
+															<p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
 														</div>
-														<p className="text-xs text-muted-foreground leading-snug">
-															{item.description}
-														</p>
 													</Link>
 												);
 											})}
@@ -164,13 +159,57 @@ export function Header() {
 						</NavigationMenu>
 					</div>
 
-					{/* CTA Buttons */}
+					{/* Right side */}
 					<div className="flex items-center gap-2">
 						<LanguageSwitcher />
 						<ThemeToggle />
-						<TryFreeButton className="hidden sm:inline-flex">
-							{tCommon("tryFree")}
-						</TryFreeButton>
+
+						{/* Login dropdown — desktop */}
+						<div className="hidden sm:block">
+							<NavigationMenu>
+								<NavigationMenuList>
+									<NavigationMenuItem>
+										<NavigationMenuTrigger className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-lg px-4">
+											<LogIn className="size-4 mr-2" />
+											{t("login")}
+										</NavigationMenuTrigger>
+										<NavigationMenuContent>
+											<div className="p-3 w-[280px] space-y-1">
+												{platformItems.map((item) => {
+													const PIcon = item.icon;
+													return (
+														<a
+															key={item.title}
+															href={item.disabled ? undefined : item.href}
+															target={item.disabled ? undefined : "_blank"}
+															rel="noopener noreferrer"
+															className={cn(
+																"flex items-center gap-3 rounded-lg p-3 transition-all",
+																item.disabled
+																	? "opacity-50 cursor-not-allowed"
+																	: "hover:bg-secondary/5",
+															)}
+														>
+															<div className="size-9 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+																<PIcon className="size-4 text-secondary" />
+															</div>
+															<div className="flex-1">
+																<div className="flex items-center gap-2">
+																	<span className="font-semibold text-sm">{item.title}</span>
+																	{!item.disabled && <ExternalLink className="size-3 text-muted-foreground" />}
+																	{item.disabled && <span className="text-xs text-muted-foreground italic">{t("comingSoon")}</span>}
+																</div>
+																<p className="text-xs text-muted-foreground">{item.description}</p>
+															</div>
+														</a>
+													);
+												})}
+											</div>
+										</NavigationMenuContent>
+									</NavigationMenuItem>
+								</NavigationMenuList>
+							</NavigationMenu>
+						</div>
 
 						{/* Mobile Menu */}
 						<Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -215,11 +254,7 @@ export function Header() {
 														<SheetClose asChild key={item.title}>
 															<Link
 																href={item.href}
-																className={cn(
-																	"flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors",
-																	item.featured &&
-																		"bg-secondary/5 hover:bg-secondary/10"
-																)}
+																className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors"
 																onClick={() => setMobileMenuOpen(false)}
 															>
 																<div className="size-8 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
@@ -254,11 +289,35 @@ export function Header() {
 										))}
 									</nav>
 
-									{/* Mobile Footer */}
-									<div className="p-4 border-t border-border">
-										<TryFreeButton className="w-full">
-											{tCommon("tryFree")}
-										</TryFreeButton>
+									{/* Mobile Footer — Login */}
+									<div className="p-4 border-t border-border space-y-2">
+										<p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider px-1 mb-2">{t("login")}</p>
+										{platformItems.map((item) => {
+											const PIcon = item.icon;
+											return (
+												<a
+													key={item.title}
+													href={item.disabled ? undefined : item.href}
+													target={item.disabled ? undefined : "_blank"}
+													rel="noopener noreferrer"
+													className={cn(
+														"flex items-center gap-3 p-3 rounded-lg",
+														item.disabled
+															? "opacity-50 cursor-not-allowed"
+															: "hover:bg-accent transition-colors",
+													)}
+												>
+													<div className="size-8 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+														<PIcon className="size-4 text-secondary" />
+													</div>
+													<div className="flex items-center gap-2">
+														<span className="font-medium text-sm">{item.title}</span>
+														{!item.disabled && <ExternalLink className="size-3 text-muted-foreground" />}
+														{item.disabled && <span className="text-xs text-muted-foreground italic">{t("comingSoon")}</span>}
+													</div>
+												</a>
+											);
+										})}
 									</div>
 								</div>
 							</SheetContent>

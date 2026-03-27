@@ -12,17 +12,14 @@ import {
 	Plus,
 	MessageCircle,
 	HelpCircle,
-	Rocket,
-	ArrowRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
-import { TryFreeButton } from "@/components/ui/try-free-button";
 
 const tiers = ["essential", "pro", "enterprise"] as const;
 
 const basePrices: Record<string, number> = {
-	essential: 600,
+	essential: 0,
 	pro: 2400,
 	enterprise: 3600,
 };
@@ -41,7 +38,6 @@ const comparisonFeatures = [
 
 export function PricingSection() {
 	const t = useTranslations("pricing");
-	const [isYearly, setIsYearly] = useState(false);
 	const [adminCount, setAdminCount] = useState(1);
 	const decrementAdmin = () => setAdminCount((prev) => Math.max(1, prev - 1));
 	const incrementAdmin = () => setAdminCount((prev) => Math.min(50, prev + 1));
@@ -56,51 +52,6 @@ export function PricingSection() {
 				centered: true,
 			}}
 		>
-			{/* Toggle 1 year / 3 years */}
-			<div className="flex items-center justify-center mb-6">
-				<span className="w-12 ml-3 invisible" aria-hidden="true" />
-				<div className="flex items-center gap-3">
-					<span
-						className={cn(
-							"text-sm font-medium transition-colors",
-							!isYearly ? "text-foreground" : "text-muted-foreground",
-						)}
-					>
-						{t("billing.monthly")}
-					</span>
-					<button
-						onClick={() => setIsYearly(!isYearly)}
-						className={cn(
-							"relative w-14 h-7 rounded-full transition-colors shrink-0",
-							isYearly ? "bg-secondary" : "bg-muted",
-						)}
-					>
-						<span
-							className={cn(
-								"absolute top-1 left-1 w-5 h-5 rounded-full bg-white transition-transform",
-								isYearly && "translate-x-7",
-							)}
-						/>
-					</button>
-					<span
-						className={cn(
-							"text-sm font-medium transition-colors",
-							isYearly ? "text-foreground" : "text-muted-foreground",
-						)}
-					>
-						{t("billing.yearly")}
-					</span>
-				</div>
-				<span
-					className={cn(
-						"text-xs font-semibold px-2 py-1 rounded-full text-secondary bg-secondary/10 transition-all ml-3 w-12 text-center",
-						isYearly ? "opacity-100 visible" : "opacity-0 invisible",
-					)}
-				>
-					{t("billing.savePercent")}
-				</span>
-			</div>
-
 			{/* Admin Counter */}
 			<div className="flex items-center justify-center gap-4 mb-6">
 				<span className="text-sm font-medium text-muted-foreground">
@@ -132,20 +83,18 @@ export function PricingSection() {
 				</span>
 			</div>
 
-			{/* Tier Cards — aligned rows via grid subgrid */}
+			{/* Tier Cards */}
 			<div className="grid md:grid-cols-3 md:grid-rows-[auto_auto_auto_auto_1fr] gap-6 max-w-5xl mx-auto">
 				{tiers.map((tier) => {
 					const isPopular = tier === "pro";
+					const isFree = tier === "essential";
 					const features = t.raw(`${tier}.features`) as string[];
 					const includes = t(`${tier}.includes`);
 
 					const basePrice = basePrices[tier];
-					const perAdminRate = isYearly
-						? Math.round(basePrice * 0.8)
-						: basePrice;
-					const annualTotal = perAdminRate + (adminCount - 1) * Math.round(perAdminRate / 2);
-					const monthlyTotal = Math.round(annualTotal / 12);
-					const monthlyTotalFormatted = monthlyTotal.toLocaleString("fr-FR");
+					const annualTotal = isFree
+						? 0
+						: basePrice + (adminCount - 1) * Math.round(basePrice / 2);
 					const annualTotalFormatted = annualTotal.toLocaleString("fr-FR");
 
 					return (
@@ -176,21 +125,26 @@ export function PricingSection() {
 
 							{/* Row 2: Price */}
 							<div className="text-center py-4">
-								<div className="flex items-baseline justify-center gap-1">
-									<span className="text-4xl font-bold tabular-nums">
-										{monthlyTotalFormatted}
-									</span>
-									<span className="text-lg text-muted-foreground">€</span>
-									<span className="text-muted-foreground">/mois</span>
-								</div>
-								{adminCount > 1 && (
-									<p className="text-xs text-muted-foreground mt-1">
-										{adminCount} {t("adminCounter.admins")} · {Math.round(perAdminRate / 12).toLocaleString("fr-FR")}€ + {adminCount - 1} × {Math.round(perAdminRate / 2 / 12).toLocaleString("fr-FR")}€
-									</p>
+								{isFree ? (
+									<div className="flex items-baseline justify-center gap-1">
+										<span className="text-4xl font-bold">{t("free")}</span>
+									</div>
+								) : (
+									<>
+										<div className="flex items-baseline justify-center gap-1">
+											<span className="text-4xl font-bold tabular-nums">
+												{annualTotalFormatted}
+											</span>
+											<span className="text-lg text-muted-foreground">€</span>
+											<span className="text-muted-foreground">/an</span>
+										</div>
+										{adminCount > 1 && (
+											<p className="text-xs text-muted-foreground mt-1">
+												{adminCount} {t("adminCounter.admins")} · {basePrice.toLocaleString("fr-FR")}€ + {adminCount - 1} × {Math.round(basePrice / 2).toLocaleString("fr-FR")}€
+											</p>
+										)}
+									</>
 								)}
-								<p className="text-sm text-secondary font-medium mt-2">
-									{annualTotalFormatted}€/an
-								</p>
 							</div>
 
 							{/* Row 3: Includes label */}
@@ -281,17 +235,6 @@ export function PricingSection() {
 				</div>
 			</div>
 
-			{/* Platform link */}
-			<div className="mt-8 text-center">
-				<Link
-					href="/solutions/platform"
-					className="inline-flex items-center gap-2 text-sm font-medium text-secondary hover:underline underline-offset-4 transition-colors"
-				>
-					{t("platformLink")}
-					<ArrowRight className="size-4" />
-				</Link>
-			</div>
-
 			{/* CTA after comparison table */}
 			<div className="mt-16 text-center">
 				<h3 className="text-2xl font-bold mb-2">
@@ -313,10 +256,6 @@ export function PricingSection() {
 							{t("ctaSection.contact")}
 						</a>
 					</Button>
-					<TryFreeButton variant="outline" size="lg">
-						<Rocket className="size-4 mr-2" />
-						{t("ctaSection.tryFree")}
-					</TryFreeButton>
 				</div>
 			</div>
 		</Section>

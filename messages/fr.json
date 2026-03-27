@@ -21,33 +21,53 @@
 		"wisepaper": "WisePaper",
 		"wisetour": "WiseTour",
 		"wiseatlas": "WiseAtlas",
+		"training": "Formation",
+		"communication": "Communication",
+		"security": "Sécurité",
+		"viewAllTraining": "Voir toute l'offre Formation",
+		"platformLabel": "Plateforme",
+		"platformWisetrainer": "Accéder à la plateforme de formation",
+		"platformWiseatlas": "Accéder à la carte interactive",
+		"comingSoon": "Bientôt",
+		"login": "Se connecter",
 		"pricing": "Tarifs",
 		"faq": "FAQ",
 		"contact": "Contact"
 	},
 	"hero": {
-		"titlePrefix": "Plus de",
-		"titleHighlight": "sécurité",
-		"rotatingPrefix": "Plus",
+		"titlePrefix": "L'immersion au service de",
+		"titleHighlight": "la formation",
+		"rotatingPrefix": "",
 		"rotatingWords": [
-			"de productivité",
-			"de rétention",
-			"d'engagement",
-			"de sérénité"
+			"votre territoire",
+			"la performance",
+			"vos équipes"
 		],
-		"subtitle": "Digitalisez vos formations et plongez vos collaborateurs dans des situations immersives sur mesure, répliques exactes de vos installations.",
-		"cta": "Essai gratuit",
-		"ctaSecondary": "Demander un devis",
+		"subtitle": "Des solutions immersives sur mesure pour digitaliser vos formations, valoriser votre territoire et monter en compétences.",
+		"cta": "Explorer nos solutions",
+		"ctaSecondary": "",
 		"badge": "Nouveauté WiseTrainer — En savoir plus",
 		"highlights": {
-			"safety": "Accueil sécurité",
-			"training": "Formations sécurité",
-			"communication": "Vision stratégique"
+			"safety": "Formation immersive",
+			"training": "Communication territoriale",
+			"communication": "100% sur mesure"
 		}
 	},
 	"solutions": {
 		"title": "Nos solutions",
-		"subtitle": "Du réalisme ? De l'interactivité ? De la rapidité ? Une solution pour chacun de vos besoins.",
+		"subtitle": "Deux univers complémentaires pour digitaliser vos métiers.",
+		"formation": {
+			"title": "WiseTrainer",
+			"tag": "Plateforme de formation",
+			"description": "Un écosystème complet pour la formation : simulations 3D, création de contenus par IA et visites virtuelles photo-réalistes.",
+			"price": "À partir de 50€/mois"
+		},
+		"communication": {
+			"title": "Communication territoriale",
+			"tag": "Solution indépendante",
+			"description": "Une carte interactive sur mesure pour valoriser votre territoire et communiquer sur vos projets.",
+			"price": "3 000€/an"
+		},
 		"cta": "En savoir plus",
 		"flagship": "Produit phare",
 		"selfService": "Self-service",
@@ -78,7 +98,7 @@
 			"title": "WiseAtlas",
 			"tag": "Vision stratégique",
 			"description": "Pilotez l’attractivité de votre territoire et accélérez la décarbonation grâce à une vision systémique 4D",
-			"price": "Sur devis"
+			"price": "3 000€/an"
 		},
 		"comparison": {
 			"labels": {
@@ -149,11 +169,16 @@
 		"title": "Plateforme de gestion",
 		"subtitle": "Centralisez le suivi de vos formations",
 		"description": "Une plateforme complète pour gérer vos plans de formation, suivre les progressions et certifier vos apprenants.",
+		"products": {
+			"title": "Trois solutions, une plateforme",
+			"subtitle": "Choisissez le format adapté à votre besoin de formation",
+			"from": "À partir de"
+		},
 		"hero": {
-			"title": "Le hub de vos formations",
-			"subtitle": "Centralisez WiseTrainer, WisePaper et WiseTour. Gérez vos équipes, suivez les résultats et certifiez vos apprenants — le tout depuis une seule interface.",
-			"cta": "Essai gratuit",
-			"badge": "Inclus dans votre licence"
+			"title": "La formation immersive, de A à Z",
+			"subtitle": "Simulez en 3D, créez vos contenus par IA, formez à distance en photo-réaliste — et pilotez tout depuis une seule plateforme.",
+			"cta": "Se connecter",
+			"badge": "Plateforme de formation"
 		},
 		"features": {
 			"title": "Tout ce dont vous avez besoin",
@@ -221,7 +246,7 @@
 		"cta": {
 			"title": "Prêt à simplifier la gestion de vos formations ?",
 			"description": "Découvrez comment notre plateforme peut centraliser et optimiser le suivi de vos apprenants.",
-			"button": "Essai gratuit"
+			"button": "Se connecter"
 		}
 	},
 	"wisetrainer": {
@@ -232,7 +257,13 @@
 			"title": "Simulateurs 3D immersifs",
 			"subtitle": "Formez vos équipes sur des répliques exactes de vos installations. Simulez des situations dangereuses en toute sécurité.",
 			"cta": "Demander une démo",
-			"badge": "Livraison en 1 mois"
+			"badge": "Livraison en 1 mois",
+			"highlights": [
+				"Simulation 3D temps réel de vos installations",
+				"Scénarios sur mesure : consignation, évacuation, maintenance",
+				"Zéro risque, zéro arrêt de production",
+				"Accessible 100% web, aucun équipement spécial"
+			]
 		},
 		"scenarios": {
 			"title": "Exemples de scénarios",
@@ -367,7 +398,13 @@
 			"title": "Digitalisez vos formations",
 			"subtitle": "Notre IA transforme vos documents en formations interactives en deux clics. Importez, et c'est prêt.",
 			"cta": "Essai gratuit",
-			"badge": "Inclus dans votre licence"
+			"badge": "Inclus dans votre licence",
+			"highlights": [
+				"Importez vos PDF, Word ou PowerPoint",
+				"L'IA génère cours et QCM automatiquement",
+				"Suivi de complétion et de compréhension",
+				"Prêt en moins d'une minute"
+			]
 		},
 		"flow": {
 			"title": "Comment ça marche ?",
@@ -419,7 +456,13 @@
 			"title": "Formations photo-réalistes en 3D",
 			"subtitle": "Déplacez-vous dans des environnements 3D ultra-réalistes capturés directement depuis vos installations. Accompagnez la visite de QCM pour valider les connaissances.",
 			"cta": "Demander un devis",
-			"badge": "Self-service"
+			"badge": "Self-service",
+			"highlights": [
+				"Environnements photo-réalistes capturés sur site",
+				"Éditeur self-service pour ajouter QCM et parcours",
+				"Navigation libre dans vos installations",
+				"Aucun équipement spécial requis"
+			]
 		},
 		"howItWorks": {
 			"title": "Comment ça marche ?",
@@ -470,63 +513,125 @@
 	},
 	"wiseatlas": {
 		"title": "WiseAtlas",
-		"subtitle": "Le Jumeau Numérique au service de la Planification Industrielle Durable",
-		"description": "Pilotez l’attractivité de votre territoire et accélérez la décarbonation grâce à une vision systémique 4D. Aménager une zone industrielle ne se fait plus en silos. Pour réussir la transition, vous devez concilier développement économique, réseaux énergétiques et acceptabilité sociale. Comment projeter l'impact d'une nouvelle usine sur vos réseaux de chaleur ou sur l'emploi local à l'horizon 2030 ?",
+		"subtitle": "Valorisez votre territoire avec une carte interactive sur mesure",
+		"description": "Une carte interactive personnalisable pour mettre en valeur votre territoire sous tous ses angles : économique, environnemental, touristique, culturel ou urbanistique. Vous choisissez les axes à valoriser.",
 		"hero": {
-			"title": "Le Jumeau Numérique au service de la Planification Industrielle Durable",
-			"subtitle": "Pilotez l’attractivité de votre territoire et accélérez la décarbonation grâce à une vision systémique 4D",
+			"title": "Valorisez votre territoire avec une carte interactive sur mesure",
+			"subtitle": "Une plateforme cartographique pour communiquer, fédérer et valoriser votre territoire sous les axes que vous choisissez",
 			"cta": "Demander un devis",
+			"ctaPlatform": "Accéder à la plateforme",
 			"badge": "Solution indépendante"
 		},
 		"howItWorks": {
-			"title": "Une plateforme unique pour une vision à 360°",
-			"subtitle": "Notre carte interactive n'est pas une simple représentation géographique, c'est un outil d'aide à la décision qui agrège vos données critiques",
+			"title": "Comment ça marche",
+			"subtitle": "De la définition de vos axes de valorisation à la publication de votre carte interactive",
 			"steps": {
 				"define": {
-					"title": "Interdépendance des flux",
-					"description": "Visualisez les synergies entre usines (chaleur fatale, réseaux d'eau, électricité) pour créer de véritables écosystèmes d'écologie industrielle.",
+					"title": "Définissez vos axes",
+					"description": "Choisissez les thématiques à mettre en avant : attractivité économique, patrimoine, tourisme, environnement, infrastructures…",
 					"duration": "1 réunion"
 				},
 				"data": {
-					"title": "Empreinte Dynamique & BIM",
-					"description": "Intégrez les maquettes numériques de vos futurs projets pour simuler l'occupation foncière et l'insertion paysagère.",
+					"title": "Intégrez vos données",
+					"description": "Importez vos données, documents, maquettes 3D et médias pour enrichir votre carte de contenus concrets.",
 					"duration": "1-2 semaines"
 				},
 				"design": {
-					"title": "Frise Chronologique (4D)",
-					"description": "Anticipez l'évolution du territoire. Projetez-vous dans le futur pour voir l'évolution des émissions de CO2 et la courbe de création d'emplois.",
+					"title": "Personnalisez l’expérience",
+					"description": "Configurez le rendu visuel, les filtres, les couches d’information et les parcours de navigation pour vos publics cibles.",
 					"duration": "~1 semaine"
 				},
 				"publish": {
-					"title": "Tableau de Bord ESG :",
-					"description": "Communiquez des chiffres clairs et transparents sur l'impact environnemental et social de votre zone.",
+					"title": "Publiez et partagez",
+					"description": "Mettez en ligne votre carte et diffusez-la par lien. Suivez les interactions et l’engagement de vos visiteurs.",
 					"duration": "Immédiat"
 				}
 			}
 		},
 		"useCases": {
-			"title": "Le défi des ADE et Territoires ZIBAC",
+			"title": "Cas d’usage",
 			"territory": {
-				"title": "Réaménagement territorial",
-				"description": "Communiquez sur vos projets d'urbanisme et de réaménagement avec une carte interactive."
+				"title": "Attractivité territoriale",
+				"description": "Valorisez votre territoire auprès d’investisseurs, d’entreprises ou de nouveaux habitants avec une vitrine interactive."
 			},
 			"stakeholders": {
-				"title": "Communication parties prenantes",
-				"description": "Tenez informés vos partenaires et le public de l'avancement de vos projets."
+				"title": "Concertation publique",
+				"description": "Présentez vos projets d’aménagement aux citoyens et recueillez leurs retours directement sur la carte."
 			},
 			"infrastructure": {
-				"title": "Projets d'infrastructure",
-				"description": "Visualisez et communiquez sur des projets d'infrastructure à grande échelle."
+				"title": "Suivi de projets",
+				"description": "Communiquez l’avancement de vos projets d’infrastructure, de rénovation ou de développement en temps réel."
 			}
 		},
 		"standalone": {
 			"title": "Solution indépendante",
 			"description": "WiseAtlas est une solution à part, décorrélée de la plateforme de formation WiseTwin. C'est une application mise à disposition de vos clients pour de la communication."
 		},
+		"pricing": {
+			"title": "Nos offres",
+			"subtitle": "Choisissez la formule adaptée à votre projet de communication territoriale",
+			"tiers": {
+				"static": {
+					"title": "Carte statique",
+					"description": "Une carte livrée clé en main, vous en faites ce que vous voulez",
+					"price": "Sur devis",
+					"features": [
+						"Carte interactive livrée en one-shot",
+						"Vous êtes propriétaire du livrable",
+						"Intégrable sur votre site web",
+						"Aucun abonnement"
+					]
+				},
+				"managed": {
+					"title": "Carte gérée",
+					"description": "Nous gérons la carte, vous mettez à jour le contenu via un fichier Excel",
+					"price": "Sur devis",
+					"features": [
+						"Hébergement et maintenance inclus",
+						"Mise à jour via fichier Excel partagé",
+						"Modifications par notre équipe",
+						"Support dédié"
+					]
+				},
+				"platform": {
+					"title": "Plateforme",
+					"description": "Créez et gérez vos cartes en toute autonomie",
+					"price": "3 000€/an",
+					"features": [
+						"Création illimitée de cartes",
+						"Éditeur self-service complet",
+						"Partage illimité par lien",
+						"Suivi des interactions",
+						"Hébergement et mises à jour inclus"
+					]
+				}
+			},
+			"ctaSection": {
+				"title": "Encore des questions ?",
+				"subtitle": "Consultez notre FAQ ou contactez-nous directement.",
+				"faq": "Consulter la FAQ",
+				"contact": "Nous contacter"
+			},
+			"comparison": {
+				"title": "Comparatif des offres",
+				"features": "Fonctionnalités",
+				"items": [
+					{ "label": "Carte interactive", "static": true, "managed": true, "platform": true },
+					{ "label": "Hébergement inclus", "static": false, "managed": true, "platform": true },
+					{ "label": "Mise à jour du contenu", "static": false, "managed": "Via Excel", "platform": "Self-service" },
+					{ "label": "Création de nouvelles cartes", "static": false, "managed": false, "platform": true },
+					{ "label": "Suivi des interactions", "static": false, "managed": true, "platform": true },
+					{ "label": "Partage par lien", "static": false, "managed": true, "platform": true },
+					{ "label": "Support dédié", "static": false, "managed": true, "platform": true },
+					{ "label": "Propriété du livrable", "static": true, "managed": false, "platform": false }
+				]
+			}
+		},
 		"cta": {
 			"title": "Un projet de communication territoriale ?",
 			"description": "Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé.",
-			"button": "Demander un devis"
+			"button": "Demander un devis",
+			"platform": "Accéder à la plateforme"
 		}
 	},
 	"advantages": {
@@ -675,7 +780,7 @@
 			},
 			"wiseatlas": {
 				"title": "WiseAtlas",
-				"price": "Sur devis",
+				"price": "3 000€/an",
 				"description": "Une carte interactive de type Google Maps dédiée à la communication territoriale et aux projets de réaménagement. Présentez vos projets, recueillez les retours citoyens et facilitez la concertation publique.",
 				"specs": [
 					"Carte distribuable par lien",
@@ -687,27 +792,28 @@
 				"standalone": "Vendu séparément de la plateforme de formation"
 			}
 		},
+		"free": "Gratuit",
 		"essential": {
-			"title": "Essentiel",
-			"priceMonthly": "600",
-			"period": "/mois/admin",
-			"description": "Pour démarrer la digitalisation de vos formations",
+			"title": "Essai",
+			"priceMonthly": "0",
+			"period": "",
+			"description": "Configurez et testez avant de vous engager",
 			"includes": "Inclus :",
 			"features": [
-				"Jusqu'à 25 utilisateurs",
-				"Formations illimitées",
-				"Support par email"
+				"Jusqu'à 3 utilisateurs",
+				"Accès à toutes les solutions",
+				"Idéal pour préparer votre déploiement"
 			],
-			"cta": "Nous contacter"
+			"cta": "Commencer"
 		},
 		"pro": {
 			"title": "Pro",
 			"priceMonthly": "2400",
-			"period": "/mois/admin",
+			"period": "/an/admin",
 			"description": "Pour les équipes en croissance",
-			"includes": "Tout le plan Essentiel, plus :",
+			"includes": "Tout le plan Essai, plus :",
 			"features": [
-				"Jusqu'à 100 utilisateurs",
+				"Utilisateurs illimités",
 				"Modification des formations après création",
 				"MFA (Authentification multi-facteurs)",
 				"Journaux d'audit",
@@ -722,7 +828,6 @@
 			"description": "Pour les grandes organisations",
 			"includes": "Tout le plan Pro, plus :",
 			"features": [
-				"Utilisateurs illimités",
 				"SSO (Single Sign-On)",
 				"Mutualisation inter-entreprises",
 				"API access",
@@ -766,7 +871,7 @@
 			},
 			"values": {
 				"essential": {
-					"users": "25",
+					"users": "3",
 					"unlimitedTraining": true,
 					"editTraining": false,
 					"mfa": false,
@@ -777,7 +882,7 @@
 					"support": "Email"
 				},
 				"pro": {
-					"users": "100",
+					"users": "Illimité",
 					"unlimitedTraining": true,
 					"editTraining": true,
 					"mfa": true,

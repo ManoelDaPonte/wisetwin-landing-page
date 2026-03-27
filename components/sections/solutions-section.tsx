@@ -3,29 +3,20 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/common/section";
-import { ArrowRight, Cuboid, FileText, Camera, Map } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowRight, GraduationCap, Map } from "lucide-react";
 
-const products = [
+const hubs = [
 	{
-		key: "wisetrainer",
+		key: "formation",
 		href: "/solutions/wisetrainer",
-		icon: Cuboid,
+		icon: GraduationCap,
+		products: ["WiseTrainer", "WisePaper", "WiseTour"],
 	},
 	{
-		key: "wisepaper",
-		href: "/solutions/wisepaper",
-		icon: FileText,
-	},
-	{
-		key: "wisetour",
-		href: "/solutions/wisetour",
-		icon: Camera,
-	},
-	{
-		key: "wiseatlas",
+		key: "communication",
 		href: "/solutions/wiseatlas",
 		icon: Map,
+		products: ["WiseAtlas"],
 	},
 ] as const;
 
@@ -42,38 +33,52 @@ export function SolutionsSection() {
 				centered: true,
 			}}
 		>
-			<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px max-w-5xl mx-auto bg-border border border-border rounded-xl overflow-hidden">
-				{products.map((product) => {
-					const Icon = product.icon;
+			<div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+				{hubs.map((hub) => {
+					const Icon = hub.icon;
 					return (
 						<Link
-							key={product.key}
-							href={product.href}
-							className={cn(
-								"group relative bg-card p-6 transition-colors hover:bg-muted/50 flex flex-col",
-							)}
+							key={hub.key}
+							href={hub.href}
+							className="group relative bg-card border border-border rounded-2xl p-8 transition-all hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/5 flex flex-col"
 						>
-							<div className="absolute inset-x-0 top-0 h-0.5 bg-secondary scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
-							<div className="flex items-start justify-between mb-4">
-								<div className="size-10 rounded-lg bg-secondary/10 border border-secondary/20 flex items-center justify-center">
-									<Icon className="size-5 text-secondary" />
+							<div className="absolute inset-x-0 top-0 h-1 bg-secondary scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 rounded-t-2xl" />
+
+							<div className="flex items-start justify-between mb-5">
+								<div className="size-14 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center">
+									<Icon className="size-7 text-secondary" />
 								</div>
-								<span className="text-xs font-semibold text-foreground">
-									{t(`${product.key}.price`)}
+								<span className="text-sm font-bold text-secondary">
+									{t(`${hub.key}.price`)}
 								</span>
 							</div>
+
 							<p className="text-xs font-mono uppercase tracking-wider text-secondary mb-2">
-								{t(`${product.key}.tag`)}
+								{t(`${hub.key}.tag`)}
 							</p>
-							<h3 className="font-bold text-lg mb-2">
-								{t(`${product.key}.title`)}
+							<h3 className="font-bold text-2xl mb-3">
+								{t(`${hub.key}.title`)}
 							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
-								{t(`${product.key}.description`)}
+							<p className="text-muted-foreground leading-relaxed mb-6 flex-1">
+								{t(`${hub.key}.description`)}
 							</p>
-							<span className="inline-flex items-center gap-1 text-sm font-semibold text-secondary group-hover:underline underline-offset-4 mt-auto">
+
+							{hub.products.length > 1 && (
+								<div className="flex flex-wrap gap-2 mb-6">
+									{hub.products.map((product) => (
+										<span
+											key={product}
+											className="text-xs font-medium bg-muted px-3 py-1 rounded-full"
+										>
+											{product}
+										</span>
+									))}
+								</div>
+							)}
+
+							<span className="inline-flex items-center gap-2 text-sm font-semibold text-secondary group-hover:underline underline-offset-4 mt-auto">
 								{t("cta")}
-								<ArrowRight className="size-3.5 group-hover:translate-x-1 transition-transform" />
+								<ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
 							</span>
 						</Link>
 					);

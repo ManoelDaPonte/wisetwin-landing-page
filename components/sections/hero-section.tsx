@@ -5,9 +5,8 @@ import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pa
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { TryFreeButton } from "@/components/ui/try-free-button";
 import { WordRotate } from "@/components/magicui/word-rotate";
-import { ShieldCheck, GraduationCap, Megaphone, Sparkles, ArrowRight } from "lucide-react";
+import { GraduationCap, Map, Settings, Sparkles, ArrowRight } from "lucide-react";
 
 export function HeroSection() {
 	const t = useTranslations("hero");
@@ -32,21 +31,12 @@ export function HeroSection() {
 							<div className="space-y-3">
 								<h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
 									{t("titlePrefix")}{" "}
-									<span className="text-secondary">
-										{t("titleHighlight")}
-									</span>
+									<WordRotate
+										words={[t("titleHighlight"), ...rotatingWords]}
+										duration={2500}
+										className="text-secondary inline"
+									/>
 								</h1>
-
-								<div className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-									<div className="flex items-center flex-wrap gap-2">
-										<span>{t("rotatingPrefix")}</span>
-										<WordRotate
-											words={rotatingWords}
-											duration={2500}
-											className="text-secondary min-w-[140px] sm:min-w-[170px] lg:min-w-[200px] xl:min-w-[240px] text-left"
-										/>
-									</div>
-								</div>
 							</div>
 
 							<p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl pt-2 lg:pt-4">
@@ -55,21 +45,14 @@ export function HeroSection() {
 						</div>
 
 						<div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
-							<TryFreeButton
-								size="lg"
-								className="px-8 py-4 text-base font-medium"
-							>
-								{t("cta")}
-							</TryFreeButton>
 							<Button
 								size="lg"
-								variant="outline"
 								className="px-8 py-4 text-base font-medium"
 								asChild
 							>
-								<Link href="/#contact">
-									{t("ctaSecondary")}
-								</Link>
+								<a href="#solutions">
+									{t("cta")}
+								</a>
 							</Button>
 						</div>
 					</div>
@@ -103,7 +86,7 @@ export function HeroSection() {
 					<div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16">
 						<div className="flex items-center gap-3 text-center md:text-left">
 							<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-								<ShieldCheck className="size-5 text-secondary" />
+								<GraduationCap className="size-5 text-secondary" />
 							</div>
 							<span className="text-sm md:text-base text-muted-foreground">
 								{t("highlights.safety")}
@@ -112,7 +95,7 @@ export function HeroSection() {
 						<div className="hidden md:block w-px h-8 bg-border" />
 						<div className="flex items-center gap-3 text-center md:text-left">
 							<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-								<GraduationCap className="size-5 text-secondary" />
+								<Map className="size-5 text-secondary" />
 							</div>
 							<span className="text-sm md:text-base text-muted-foreground">
 								{t("highlights.training")}
@@ -121,7 +104,7 @@ export function HeroSection() {
 						<div className="hidden md:block w-px h-8 bg-border" />
 						<div className="flex items-center gap-3 text-center md:text-left">
 							<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-								<Megaphone className="size-5 text-secondary" />
+								<Settings className="size-5 text-secondary" />
 							</div>
 							<span className="text-sm md:text-base text-muted-foreground">
 								{t("highlights.communication")}

@@ -5,10 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
 import {
 	ArrowLeft,
-	Map,
-	MessageCircle,
-	Palette,
-	Share2,
 	Building2,
 	Users,
 	Construction,
@@ -18,9 +14,8 @@ import {
 	Globe,
 	Check,
 	X,
-	Cuboid,
-	Camera,
-	ArrowRight,
+	MessageCircle,
+	LogIn,
 } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -38,30 +33,9 @@ export async function generateMetadata({
 	};
 }
 
-const productSolutions = [
-	{ key: "wisetrainer", icon: Cuboid, href: "/solutions/wisetrainer" },
-	{ key: "wisepaper", icon: FileText, href: "/solutions/wisepaper" },
-	{ key: "wisetour", icon: Camera, href: "/solutions/wisetour" },
-	{ key: "wiseatlas", icon: Map, href: "/solutions/wiseatlas" },
-] as const;
-
-const comparisonKeys = [
-	"devTime",
-	"activityInterruption",
-	"serviceType",
-	"userTracking",
-	"realism",
-	"interactivity",
-	"networkDemand",
-	"equipment",
-	"web",
-	"interactionTracking",
-] as const;
-
 export default function WiseAtlasPage() {
 	const t = useTranslations("wiseatlas");
 	const tCommon = useTranslations("common");
-	const tSolutions = useTranslations();
 
 	const steps = [
 		{ key: "define", icon: FileText, number: 1 },
@@ -90,20 +64,26 @@ export default function WiseAtlasPage() {
 					</Link>
 
 					<div className="text-center max-w-3xl mx-auto mb-12">
-						<div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full mb-6">
-							<Map className="size-4" />
-							<span className="font-medium text-sm">{t("hero.badge")}</span>
-						</div>
-
 						<h1 className="text-4xl lg:text-5xl font-bold mb-6">
 							{t("hero.title")}
 						</h1>
 						<p className="text-xl text-muted-foreground mb-8">
 							{t("hero.subtitle")}
 						</p>
-						<Button size="lg" asChild>
-							<Link href="/#contact">{t("hero.cta")}</Link>
-						</Button>
+						<div className="flex flex-col sm:flex-row gap-4 justify-center">
+							<Button size="lg" asChild>
+								<Link href="/#contact">
+									<MessageCircle className="size-4 mr-2" />
+									{t("hero.cta")}
+								</Link>
+							</Button>
+							<Button size="lg" variant="outline" asChild>
+								<a href="#" target="_blank" rel="noopener noreferrer">
+									<LogIn className="size-4 mr-2" />
+									{t("hero.ctaPlatform")}
+								</a>
+							</Button>
+						</div>
 					</div>
 
 					{/* Screenshot */}
@@ -222,101 +202,105 @@ export default function WiseAtlasPage() {
 				</div>
 			</Section>
 
-			{/* Comparison table */}
+			{/* Pricing */}
+			<Section
+				id="pricing"
+				variant="default"
+				header={{
+					title: t("pricing.title"),
+					description: t("pricing.subtitle"),
+					centered: true,
+				}}
+			>
+				<div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+					{(["static", "managed", "platform"] as const).map((tier) => {
+						const isPopular = tier === "platform";
+						const features = t.raw(`pricing.tiers.${tier}.features`) as string[];
+						return (
+							<div
+								key={tier}
+								className={cn(
+									"relative rounded-2xl p-6 border flex flex-col",
+									isPopular
+										? "border-secondary bg-secondary/5 shadow-lg shadow-secondary/10"
+										: "border-border bg-card",
+								)}
+							>
+								<div className="text-center mb-4">
+									<h3 className="text-xl font-bold mb-2">
+										{t(`pricing.tiers.${tier}.title`)}
+									</h3>
+									<p className="text-sm text-muted-foreground">
+										{t(`pricing.tiers.${tier}.description`)}
+									</p>
+								</div>
+
+								<div className="text-center py-4">
+									<span className="text-3xl font-bold">
+										{t(`pricing.tiers.${tier}.price`)}
+									</span>
+								</div>
+
+								<ul className="space-y-3 flex-1">
+									{features.map((feature, i) => (
+										<li key={i} className="flex items-start gap-2">
+											<Check className="size-5 text-secondary shrink-0 mt-0.5" />
+											<span className="text-sm">{feature}</span>
+										</li>
+									))}
+								</ul>
+							</div>
+						);
+					})}
+				</div>
+			</Section>
+
+			{/* Comparison Table */}
 			<Section
 				id="comparison"
 				variant="default"
 				header={{
-					title: tSolutions("solutions.title"),
-					description: tSolutions("solutions.subtitle"),
+					title: t("pricing.comparison.title"),
 					centered: true,
 				}}
 			>
-				<div className="max-w-6xl mx-auto overflow-x-auto">
-					<table className="w-full border-collapse min-w-[700px]">
+				<div className="max-w-5xl mx-auto overflow-x-auto">
+					<table className="w-full border-collapse">
 						<thead>
-							<tr className="border-b-2 border-border">
-								<th className="text-left py-4 px-4 text-sm font-medium text-muted-foreground w-[200px]" />
-								{productSolutions.map((solution) => {
-									const SolIcon = solution.icon;
-									const isCurrent = solution.key === "wiseatlas";
-									return (
-										<th
-											key={solution.key}
-											className={cn(
-												"py-4 px-3 text-center",
-												isCurrent && "bg-secondary/5",
-											)}
-										>
-											<Link href={solution.href} className="flex flex-col items-center gap-2 group">
-												<div
-													className={cn(
-														"size-10 rounded-xl flex items-center justify-center",
-														isCurrent
-															? "bg-secondary text-secondary-foreground"
-															: "bg-secondary/10",
-													)}
-												>
-													<SolIcon
-														className={cn(
-															"size-5",
-															isCurrent
-																? "text-secondary-foreground"
-																: "text-secondary",
-														)}
-													/>
-												</div>
-												<span className={cn(
-													"text-base font-bold group-hover:text-secondary transition-colors",
-													isCurrent && "text-secondary",
-												)}>
-													{tSolutions(`solutions.${solution.key}.title`)}
-												</span>
-												<span className={cn(
-													"text-sm font-semibold",
-													isCurrent ? "text-secondary" : "text-foreground",
-												)}>
-													{tSolutions(`pricing.products.${solution.key}.price`)}
-												</span>
-											</Link>
-										</th>
-									);
-								})}
+							<tr className="border-b border-border">
+								<th className="text-left py-4 px-4 text-sm font-medium text-muted-foreground">
+									{t("pricing.comparison.features")}
+								</th>
+								{(["static", "managed", "platform"] as const).map((tier) => (
+									<th
+										key={tier}
+										className={cn(
+											"py-4 px-4 text-center text-sm font-bold",
+											tier === "platform" && "text-secondary",
+										)}
+									>
+										{t(`pricing.tiers.${tier}.title`)}
+									</th>
+								))}
 							</tr>
 						</thead>
 						<tbody>
-							{comparisonKeys.map((key, i) => (
+							{(t.raw("pricing.comparison.items") as Array<{ label: string; static: boolean | string; managed: boolean | string; platform: boolean | string }>).map((item, i) => (
 								<tr
-									key={key}
-									className={cn(
-										"border-b border-border/50",
-										i % 2 === 0 && "bg-muted/30",
-									)}
+									key={i}
+									className="border-b border-border/50"
 								>
-									<td className="py-3 px-4 text-sm font-medium">
-										{tSolutions(`solutions.comparison.labels.${key}`)}
-									</td>
-									{productSolutions.map((solution) => {
-										const value = tSolutions.raw(
-											`solutions.comparison.values.${solution.key}.${key}`,
-										);
-										const isCurrent = solution.key === "wiseatlas";
+									<td className="py-3 px-4 text-sm">{item.label}</td>
+									{(["static", "managed", "platform"] as const).map((tier) => {
+										const value = item[tier];
 										return (
-											<td
-												key={solution.key}
-												className={cn(
-													"py-3 px-3 text-center",
-													isCurrent && "bg-secondary/5",
-												)}
-											>
+											<td key={tier} className="py-3 px-4 text-center">
 												{value === true ? (
-													<Check className="size-5 text-emerald-500 mx-auto" />
+													<Check className="size-5 text-secondary mx-auto" />
 												) : value === false ? (
 													<X className="size-5 text-muted-foreground/40 mx-auto" />
 												) : (
-													<span className="text-sm">
-														{String(value)}
-													</span>
+													<span className="text-sm font-medium">{String(value)}</span>
 												)}
 											</td>
 										);
@@ -324,32 +308,6 @@ export default function WiseAtlasPage() {
 								</tr>
 							))}
 						</tbody>
-						<tfoot>
-							<tr>
-								<td />
-								{productSolutions.map((solution) => {
-									const isCurrent = solution.key === "wiseatlas";
-									return (
-										<td
-											key={solution.key}
-											className={cn(
-												"py-4 px-3 text-center",
-												isCurrent && "bg-secondary/5",
-											)}
-										>
-											{!isCurrent && (
-												<Button variant="outline" size="sm" asChild>
-													<Link href={solution.href} className="inline-flex items-center gap-1">
-														{tCommon("learnMore")}
-														<ArrowRight className="size-3" />
-													</Link>
-												</Button>
-											)}
-										</td>
-									);
-								})}
-							</tr>
-						</tfoot>
 					</table>
 				</div>
 			</Section>
@@ -388,9 +346,20 @@ export default function WiseAtlasPage() {
 				<div className="text-center max-w-2xl mx-auto">
 					<h2 className="text-3xl font-bold mb-4">{t("cta.title")}</h2>
 					<p className="text-muted-foreground mb-8">{t("cta.description")}</p>
-					<Button size="lg" asChild>
-						<Link href="/#contact">{t("cta.button")}</Link>
-					</Button>
+					<div className="flex flex-col sm:flex-row gap-4 justify-center">
+						<Button size="lg" asChild>
+							<Link href="/#contact">
+								<MessageCircle className="size-4 mr-2" />
+								{t("cta.button")}
+							</Link>
+						</Button>
+						<Button size="lg" variant="outline" asChild>
+							<a href="#" target="_blank" rel="noopener noreferrer">
+								<LogIn className="size-4 mr-2" />
+								{t("cta.platform")}
+							</a>
+						</Button>
+					</div>
 				</div>
 			</Section>
 		</main>

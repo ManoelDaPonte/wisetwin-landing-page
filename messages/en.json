@@ -21,33 +21,53 @@
 		"wisepaper": "WisePaper",
 		"wisetour": "WiseTour",
 		"wiseatlas": "WiseAtlas",
+		"training": "Training",
+		"communication": "Communication",
+		"security": "Security",
+		"viewAllTraining": "View all Training solutions",
+		"platformLabel": "Platform",
+		"platformWisetrainer": "Access the training platform",
+		"platformWiseatlas": "Access the interactive map",
+		"comingSoon": "Coming soon",
+		"login": "Log in",
 		"pricing": "Pricing",
 		"faq": "FAQ",
 		"contact": "Contact"
 	},
 	"hero": {
-		"titlePrefix": "More",
-		"titleHighlight": "safety",
-		"rotatingPrefix": "More",
+		"titlePrefix": "Immersion for",
+		"titleHighlight": "training",
+		"rotatingPrefix": "",
 		"rotatingWords": [
-			"productivity",
-			"retention",
-			"engagement",
-			"peace of mind"
+			"your territory",
+			"performance",
+			"your teams"
 		],
-		"subtitle": "Digitize your training and immerse your employees in custom immersive situations, exact replicas of your facilities.",
-		"cta": "Free trial",
-		"ctaSecondary": "Request a quote",
+		"subtitle": "Tailor-made immersive solutions to digitize your training, showcase your territory, and upskill your teams.",
+		"cta": "Explore our solutions",
+		"ctaSecondary": "",
 		"badge": "New: WiseTrainer — Learn more",
 		"highlights": {
-			"safety": "Safety onboarding",
-			"training": "Safety training",
-			"communication": "Communicate on your incidents"
+			"safety": "Immersive training",
+			"training": "Territorial communication",
+			"communication": "100% tailor-made"
 		}
 	},
 	"solutions": {
 		"title": "Our solutions",
-		"subtitle": "Realism? Interactivity? Speed? A solution for each of your needs.",
+		"subtitle": "Two complementary universes to digitize your business.",
+		"formation": {
+			"title": "WiseTrainer",
+			"tag": "Training platform",
+			"description": "A complete ecosystem for training: 3D simulations, AI-powered content creation and photo-realistic virtual tours.",
+			"price": "From €50/month"
+		},
+		"communication": {
+			"title": "Territorial communication",
+			"tag": "Independent solution",
+			"description": "A custom interactive map to showcase your territory and communicate about your projects.",
+			"price": "€3,000/year"
+		},
 		"cta": "Learn more",
 		"flagship": "Flagship",
 		"selfService": "Self-service",
@@ -78,7 +98,7 @@
 			"title": "WiseAtlas",
 			"tag": "Strategic vision",
 			"description": "Enhance your region’s attractiveness and accelerate decarbonization with a systemic 4D vision.",
-			"price": "Custom quote"
+			"price": "€3,000/year"
 		},
 		"comparison": {
 			"labels": {
@@ -149,11 +169,16 @@
 		"title": "Management Platform",
 		"subtitle": "Centralize your training management",
 		"description": "A complete platform to manage your training plans, track progress and certify your learners.",
+		"products": {
+			"title": "Three solutions, one platform",
+			"subtitle": "Choose the format that fits your training needs",
+			"from": "From"
+		},
 		"hero": {
-			"title": "Your training hub",
-			"subtitle": "Centralize WiseTrainer, WisePaper and WiseTour. Manage your teams, track results and certify your learners — all from a single interface.",
-			"cta": "Free trial",
-			"badge": "Included in your license"
+			"title": "Immersive training, from A to Z",
+			"subtitle": "Simulate in 3D, create content with AI, train remotely in photo-realism — and manage everything from a single platform.",
+			"cta": "Log in",
+			"badge": "Training platform"
 		},
 		"features": {
 			"title": "Everything you need",
@@ -221,7 +246,7 @@
 		"cta": {
 			"title": "Ready to simplify your training management?",
 			"description": "Discover how our platform can centralize and optimize your learner tracking.",
-			"button": "Free trial"
+			"button": "Log in"
 		}
 	},
 	"wisetrainer": {
@@ -232,7 +257,13 @@
 			"title": "Immersive 3D simulators",
 			"subtitle": "Train your teams on exact replicas of your facilities. Simulate dangerous situations safely.",
 			"cta": "Request a demo",
-			"badge": "Delivery in 1 month"
+			"badge": "Delivery in 1 month",
+			"highlights": [
+				"Real-time 3D simulation of your facilities",
+				"Custom scenarios: lockout/tagout, evacuation, maintenance",
+				"Zero risk, zero production downtime",
+				"100% web accessible, no special equipment"
+			]
 		},
 		"scenarios": {
 			"title": "Scenario examples",
@@ -367,7 +398,13 @@
 			"title": "Digitize your training",
 			"subtitle": "Our AI transforms your documents into interactive training in two clicks. Import, and you're good to go.",
 			"cta": "Get started",
-			"badge": "Included in your license"
+			"badge": "Included in your license",
+			"highlights": [
+				"Import your PDF, Word or PowerPoint files",
+				"AI generates courses and quizzes automatically",
+				"Completion and comprehension tracking",
+				"Ready in under a minute"
+			]
 		},
 		"flow": {
 			"title": "How does it work?",
@@ -419,7 +456,13 @@
 			"title": "Photo-realistic 3D training",
 			"subtitle": "Move through ultra-realistic 3D environments captured directly from your facilities. Accompany the tour with quizzes to validate knowledge.",
 			"cta": "Request a quote",
-			"badge": "Self-service"
+			"badge": "Self-service",
+			"highlights": [
+				"Photo-realistic environments captured on-site",
+				"Self-service editor for quizzes and training paths",
+				"Free navigation through your facilities",
+				"No special equipment required"
+			]
 		},
 		"howItWorks": {
 			"title": "How does it work?",
@@ -470,63 +513,125 @@
 	},
 	"wiseatlas": {
 		"title": "WiseAtlas",
-		"subtitle": "The Digital Twin for Sustainable Industrial Planning",
-		"description": "Enhance your region’s attractiveness and accelerate decarbonization with a systemic 4D vision. Developing an industrial zone can no longer be done in silos. To successfully manage the transition, you must balance economic development, energy networks, and social acceptance. How can you project the impact of a new factory on your district heating networks or on local employment by 2030?",
+		"subtitle": "Showcase your territory with a custom interactive map",
+		"description": "A customizable interactive map to highlight your territory from every angle: economic, environmental, touristic, cultural, or urban. You choose which aspects to showcase.",
 		"hero": {
-			"title": "The Digital Twin for Sustainable Industrial Planning",
-			"subtitle": "Enhance your region’s attractiveness and accelerate decarbonization with a systemic 4D vision",
+			"title": "Showcase your territory with a custom interactive map",
+			"subtitle": "A mapping platform to communicate, engage, and showcase your territory on the axes you choose",
 			"cta": "Request a quote",
+			"ctaPlatform": "Access the platform",
 			"badge": "Independent solution"
 		},
 		"howItWorks": {
-			"title": "A unique platform for a 360° vision",
-			"subtitle": "Our interactive map is not just a geographic representation — it is a decision-support tool that aggregates your critical data",
+			"title": "How it works",
+			"subtitle": "From defining your focus areas to publishing your interactive map",
 			"steps": {
-			"define": {
-				"title": "Interdependency of Flows",
-				"description": "Visualize synergies between industrial sites (waste heat, water networks, electricity) to create true industrial ecology ecosystems.",
-				"duration": "1 meeting"
-			},
-			"data": {
-				"title": "Dynamic Footprint & BIM",
-				"description": "Integrate digital models of your future projects to simulate land use and landscape integration.",
-				"duration": "1–2 weeks"
-			},
-			"design": {
-				"title": "Timeline (4D)",
-				"description": "Anticipate how the territory will evolve. Project yourself into the future to see the evolution of CO2 emissions and the job creation curve.",
-				"duration": "~1 week"
-			},
-			"publish": {
-				"title": "ESG Dashboard:",
-				"description": "Communicate clear and transparent figures on the environmental and social impact of your zone.",
-				"duration": "Immediate"
-			}
+				"define": {
+					"title": "Define your axes",
+					"description": "Choose the themes to highlight: economic attractiveness, heritage, tourism, environment, infrastructure…",
+					"duration": "1 meeting"
+				},
+				"data": {
+					"title": "Import your data",
+					"description": "Import your data, documents, 3D models, and media to enrich your map with concrete content.",
+					"duration": "1–2 weeks"
+				},
+				"design": {
+					"title": "Customize the experience",
+					"description": "Configure the visual style, filters, information layers, and navigation paths for your target audiences.",
+					"duration": "~1 week"
+				},
+				"publish": {
+					"title": "Publish and share",
+					"description": "Put your map online and share it via link. Track interactions and visitor engagement.",
+					"duration": "Immediate"
+				}
 			}
 		},
 		"useCases": {
-			"title": "The challenge for ADE and ZIBAC Territories",
+			"title": "Use cases",
 			"territory": {
-			"title": "Territorial redevelopment",
-			"description": "Communicate your urban planning and redevelopment projects with an interactive map."
+				"title": "Territorial attractiveness",
+				"description": "Showcase your territory to investors, businesses, or new residents with an interactive showcase."
 			},
 			"stakeholders": {
-			"title": "Stakeholder communication",
-			"description": "Keep your partners and the public informed about the progress of your projects."
+				"title": "Public consultation",
+				"description": "Present your development projects to citizens and collect their feedback directly on the map."
 			},
 			"infrastructure": {
-			"title": "Infrastructure projects",
-			"description": "Visualize and communicate large-scale infrastructure projects."
+				"title": "Project tracking",
+				"description": "Communicate the progress of your infrastructure, renovation, or development projects in real time."
 			}
 		},
 		"standalone": {
 			"title": "Independent solution",
 			"description": "WiseAtlas is a standalone solution, separate from the WiseTwin training platform. It is an application made available to your clients for communication purposes."
 		},
+		"pricing": {
+			"title": "Our plans",
+			"subtitle": "Choose the plan that fits your territorial communication project",
+			"tiers": {
+				"static": {
+					"title": "Static map",
+					"description": "A map delivered turnkey — you do what you want with it",
+					"price": "On quote",
+					"features": [
+						"Interactive map delivered as a one-shot",
+						"You own the deliverable",
+						"Embeddable on your website",
+						"No subscription"
+					]
+				},
+				"managed": {
+					"title": "Managed map",
+					"description": "We manage the map, you update the content via a shared Excel file",
+					"price": "On quote",
+					"features": [
+						"Hosting and maintenance included",
+						"Updates via shared Excel file",
+						"Changes handled by our team",
+						"Dedicated support"
+					]
+				},
+				"platform": {
+					"title": "Platform",
+					"description": "Create and manage your maps with full autonomy",
+					"price": "€3,000/year",
+					"features": [
+						"Unlimited map creation",
+						"Full self-service editor",
+						"Unlimited link sharing",
+						"Interaction tracking",
+						"Hosting and updates included"
+					]
+				}
+			},
+			"ctaSection": {
+				"title": "Still have questions?",
+				"subtitle": "Check our FAQ or contact us directly.",
+				"faq": "View FAQ",
+				"contact": "Contact us"
+			},
+			"comparison": {
+				"title": "Plan comparison",
+				"features": "Features",
+				"items": [
+					{ "label": "Interactive map", "static": true, "managed": true, "platform": true },
+					{ "label": "Hosting included", "static": false, "managed": true, "platform": true },
+					{ "label": "Content updates", "static": false, "managed": "Via Excel", "platform": "Self-service" },
+					{ "label": "Create new maps", "static": false, "managed": false, "platform": true },
+					{ "label": "Interaction tracking", "static": false, "managed": true, "platform": true },
+					{ "label": "Link sharing", "static": false, "managed": true, "platform": true },
+					{ "label": "Dedicated support", "static": false, "managed": true, "platform": true },
+					{ "label": "Deliverable ownership", "static": true, "managed": false, "platform": false }
+				]
+			}
+		},
 		"cta": {
 			"title": "A territorial communication project?",
 			"description": "Contact us to discuss your project and receive a personalized quote.",
-			"button": "Request a quote"
+			"button": "Request a quote",
+			"platform": "Access the platform"
 		}
 	},
 	"advantages": {
@@ -675,7 +780,7 @@
 			},
 			"wiseatlas": {
 				"title": "WiseAtlas",
-				"price": "On quote",
+				"price": "€3,000/year",
 				"description": "A Google Maps-style interactive map dedicated to territorial communication and redevelopment projects. Present your projects, gather citizen feedback, and facilitate public consultation.",
 				"specs": [
 					"Shareable by link",
@@ -687,27 +792,28 @@
 				"standalone": "Sold separately from the training platform"
 			}
 		},
+		"free": "Free",
 		"essential": {
-			"title": "Essential",
-			"priceMonthly": "600",
-			"period": "/mo/admin",
-			"description": "To start digitizing your training",
+			"title": "Trial",
+			"priceMonthly": "0",
+			"period": "",
+			"description": "Set up and test before committing",
 			"includes": "Included:",
 			"features": [
-				"Up to 25 users",
-				"Unlimited training",
-				"Email support"
+				"Up to 3 users",
+				"Access to all solutions",
+				"Perfect to prepare your rollout"
 			],
-			"cta": "Contact us"
+			"cta": "Get started"
 		},
 		"pro": {
 			"title": "Pro",
 			"priceMonthly": "2400",
-			"period": "/mo/admin",
+			"period": "/year/admin",
 			"description": "For growing teams",
-			"includes": "Everything in Essential, plus:",
+			"includes": "Everything in Trial, plus:",
 			"features": [
-				"Up to 100 users",
+				"Unlimited users",
 				"Edit training after creation",
 				"MFA (Multi-factor authentication)",
 				"Audit logs",
@@ -722,7 +828,6 @@
 			"description": "For large organizations",
 			"includes": "Everything in Pro, plus:",
 			"features": [
-				"Unlimited users",
 				"SSO (Single Sign-On)",
 				"Cross-company training sharing",
 				"API access",
@@ -766,7 +871,7 @@
 			},
 			"values": {
 				"essential": {
-					"users": "25",
+					"users": "3",
 					"unlimitedTraining": true,
 					"editTraining": false,
 					"mfa": false,
@@ -777,7 +882,7 @@
 					"support": "Email"
 				},
 				"pro": {
-					"users": "100",
+					"users": "Unlimited",
 					"unlimitedTraining": true,
 					"editTraining": true,
 					"mfa": true,
