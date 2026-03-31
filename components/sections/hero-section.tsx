@@ -5,12 +5,10 @@ import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pa
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { WordRotate } from "@/components/magicui/word-rotate";
 import { GraduationCap, Map, Settings, Sparkles, ArrowRight } from "lucide-react";
 
 export function HeroSection() {
 	const t = useTranslations("hero");
-	const rotatingWords = t.raw("rotatingWords") as string[];
 
 	return (
 		<div className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/30">
@@ -30,12 +28,16 @@ export function HeroSection() {
 						<div className="space-y-6">
 							<div className="space-y-3">
 								<h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-									{t("titlePrefix")}{" "}
-									<WordRotate
-										words={[t("titleHighlight"), ...rotatingWords]}
-										duration={2500}
-										className="text-secondary inline"
-									/>
+									{t("titlePrefix").split("\n").map((line, i, arr) => (
+										<span key={i}>
+											{line}
+											{i < arr.length - 1 && <br />}
+										</span>
+									))}
+									<br />
+									<span className="text-secondary">
+										{t("titleHighlight")}
+									</span>
 								</h1>
 							</div>
 

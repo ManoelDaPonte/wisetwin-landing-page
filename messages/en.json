@@ -35,14 +35,10 @@
 		"contact": "Contact"
 	},
 	"hero": {
-		"titlePrefix": "Immersion for",
-		"titleHighlight": "training",
+		"titlePrefix": "Train.\nVisualize.",
+		"titleHighlight": "Transform.",
 		"rotatingPrefix": "",
-		"rotatingWords": [
-			"your territory",
-			"performance",
-			"your teams"
-		],
+		"rotatingWords": [],
 		"subtitle": "Tailor-made immersive solutions to digitize your training, showcase your territory, and upskill your teams.",
 		"cta": "Explore our solutions",
 		"ctaSecondary": "",

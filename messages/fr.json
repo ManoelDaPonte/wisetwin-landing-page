@@ -35,15 +35,11 @@
 		"contact": "Contact"
 	},
 	"hero": {
-		"titlePrefix": "L'immersion au service de",
-		"titleHighlight": "la formation",
+		"titlePrefix": "Formez.\nVisualisez.",
+		"titleHighlight": "Transformez.",
 		"rotatingPrefix": "",
-		"rotatingWords": [
-			"votre territoire",
-			"la performance",
-			"vos équipes"
-		],
-		"subtitle": "Des solutions immersives sur mesure pour digitaliser vos formations, valoriser votre territoire et monter en compétences.",
+		"rotatingWords": [],
+		"subtitle": "Wise Twin digitalise vos environnements industriels en jumeaux numériques immersifs pour former vos équipes et piloter vos infrastructures à grande échelle.",
 		"cta": "Explorer nos solutions",
 		"ctaSecondary": "",
 		"badge": "Nouveauté WiseTrainer — En savoir plus",
@@ -55,17 +51,17 @@
 	},
 	"solutions": {
 		"title": "Nos solutions",
-		"subtitle": "Deux univers complémentaires pour digitaliser vos métiers.",
+		"subtitle": "Deux puissances complémentaires pour digitaliser vos métiers.",
 		"formation": {
 			"title": "WiseTrainer",
-			"tag": "Plateforme de formation",
-			"description": "Un écosystème complet pour la formation : simulations 3D, création de contenus par IA et visites virtuelles photo-réalistes.",
+			"tag": "Simulateurs de formation",
+			"description": "Une plateforme tout-en-un pour la formation industrielle: simulateurs immersifs, acceuils sécurité photo-réalistes, et IA générative.",
 			"price": "À partir de 50€/mois"
 		},
 		"communication": {
-			"title": "Communication territoriale",
-			"tag": "Solution indépendante",
-			"description": "Une carte interactive sur mesure pour valoriser votre territoire et communiquer sur vos projets.",
+			"title": "WiseAtlas",
+			"tag": "Maquette digitale",
+			"description": "Un outil de pilotage et de communication interactif pour valoriser votre territoire, vos infrastructures et vos projets.",
 			"price": "3 000€/an"
 		},
 		"cta": "En savoir plus",
@@ -170,13 +166,13 @@
 		"subtitle": "Centralisez le suivi de vos formations",
 		"description": "Une plateforme complète pour gérer vos plans de formation, suivre les progressions et certifier vos apprenants.",
 		"products": {
-			"title": "Trois solutions, une plateforme",
+			"title": "Formez de la bonne manière",
 			"subtitle": "Choisissez le format adapté à votre besoin de formation",
 			"from": "À partir de"
 		},
 		"hero": {
-			"title": "La formation immersive, de A à Z",
-			"subtitle": "Simulez en 3D, créez vos contenus par IA, formez à distance en photo-réaliste — et pilotez tout depuis une seule plateforme.",
+			"title": "Sécurisez votre usine",
+			"subtitle": "Remplacez les procédures papiers et PDF par des simulateurs virtuels de vos ateliers. Vos équipes s'entraînent en conditions réalistes sur leur environnement de travail, répètent les situations critiques, et gagnent en autonomie.",
 			"cta": "Se connecter",
 			"badge": "Plateforme de formation"
 		},
@@ -251,16 +247,16 @@
 	},
 	"wisetrainer": {
 		"title": "WiseTrainer",
-		"subtitle": "Formation immersive en 3D",
-		"description": "Recréez vos postes de travail en 3D et formez vos équipes dans un environnement virtuel sécurisé et réaliste.",
+		"subtitle": "Formation immersive",
+		"description": "Plongez vos équipes dans leur atelier sans mobiliser vos équipements.",
 		"hero": {
-			"title": "Simulateurs 3D immersifs",
+			"title": "Simulateurs immersifs gamifiés",
 			"subtitle": "Formez vos équipes sur des répliques exactes de vos installations. Simulez des situations dangereuses en toute sécurité.",
 			"cta": "Demander une démo",
 			"badge": "Livraison en 1 mois",
 			"highlights": [
-				"Simulation 3D temps réel de vos installations",
-				"Scénarios sur mesure : consignation, évacuation, maintenance",
+				"Simulation actuelle ou future de vos installations",
+				"Scénarios sur mesure : HSE, maintenance, process",
 				"Zéro risque, zéro arrêt de production",
 				"Accessible 100% web, aucun équipement spécial"
 			]
@@ -392,10 +388,10 @@
 	},
 	"wisepaper": {
 		"title": "WisePaper",
-		"subtitle": "Créez et digitalisez vos formations",
+		"subtitle": "Formations digitalisées",
 		"description": "Créez des cours ou digitalisez vos documents existants, et suivez les résultats de vos apprenants.",
 		"hero": {
-			"title": "Digitalisez vos formations",
+			"title": "Formations en ligne",
 			"subtitle": "Notre IA transforme vos documents en formations interactives en deux clics. Importez, et c'est prêt.",
 			"cta": "Essai gratuit",
 			"badge": "Inclus dans votre licence",
@@ -450,18 +446,18 @@
 	},
 	"wisetour": {
 		"title": "WiseTour",
-		"subtitle": "Formation immersive photo-réaliste",
-		"description": "Plongez vos apprenants dans des environnements 3D ultra-réalistes capturés par photogrammétrie, accompagnés de QCM pour valider les acquis.",
+		"subtitle": "Ultra-réalisme",
+		"description": "Sécurisez, communiquez, et informez sur vos installations de manière ultra-réaliste.",
 		"hero": {
-			"title": "Formations photo-réalistes en 3D",
+			"title": "Acceuil sécurité, formation interne, communication",
 			"subtitle": "Déplacez-vous dans des environnements 3D ultra-réalistes capturés directement depuis vos installations. Accompagnez la visite de QCM pour valider les connaissances.",
 			"cta": "Demander un devis",
 			"badge": "Self-service",
 			"highlights": [
 				"Environnements photo-réalistes capturés sur site",
-				"Éditeur self-service pour ajouter QCM et parcours",
+				"Éditeur inclus pour ajouter QCM et parcours",
 				"Navigation libre dans vos installations",
-				"Aucun équipement spécial requis"
+				"Création de parcours personnalisés"
 			]
 		},
 		"howItWorks": {

@@ -37,8 +37,8 @@ export async function generateMetadata({
 
 const productSolutions = [
 	{ key: "wisetrainer", icon: Cuboid, href: "/solutions/wisetrainer" },
-	{ key: "wisepaper", icon: FileText, href: "/solutions/wisepaper" },
 	{ key: "wisetour", icon: Camera, href: "/solutions/wisetour" },
+	{ key: "wisepaper", icon: FileText, href: "/solutions/wisepaper" },
 ] as const;
 
 const comparisonKeys = [
