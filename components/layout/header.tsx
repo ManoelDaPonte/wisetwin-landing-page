@@ -93,7 +93,7 @@ export function Header() {
 					"w-full transition-all duration-300 border-b border-border/20 py-4",
 					scrolled
 						? "bg-background/90 backdrop-blur-md shadow-sm border-border/50"
-						: "bg-transparent border-border/20"
+						: "bg-background/40 backdrop-blur-sm"
 				)}
 			>
 			<div className="container mx-auto max-w-7xl px-6 sm:px-8 md:px-4">

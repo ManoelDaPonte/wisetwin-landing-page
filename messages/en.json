@@ -17,7 +17,7 @@
 	"nav": {
 		"solutions": "Solutions",
 		"platform": "The Platform",
-		"wisetrainer": "WiseTrainer",
+		"wisetrainer": "WiseTrainer LMS",
 		"wisepaper": "WisePaper",
 		"wisetour": "WiseTour",
 		"wiseatlas": "WiseAtlas",
@@ -35,8 +35,8 @@
 		"contact": "Contact"
 	},
 	"hero": {
-		"titlePrefix": "Train.\nVisualize.",
-		"titleHighlight": "Transform.",
+		"titlePrefix": "Train\nVisualize",
+		"titleHighlight": "Transform",
 		"rotatingPrefix": "",
 		"rotatingWords": [],
 		"subtitle": "Tailor-made immersive solutions to digitize your training, showcase your territory, and upskill your teams.",
@@ -53,7 +53,7 @@
 		"title": "Our solutions",
 		"subtitle": "Two complementary universes to digitize your business.",
 		"formation": {
-			"title": "WiseTrainer",
+			"title": "WiseTrainer LMS",
 			"tag": "Training platform",
 			"description": "A complete ecosystem for training: 3D simulations, AI-powered content creation and photo-realistic virtual tours.",
 			"price": "From €50/month"
@@ -69,7 +69,7 @@
 		"selfService": "Self-service",
 		"standalone": "Standalone",
 		"wisetrainer": {
-			"title": "WiseTrainer",
+			"title": "WiseTrainer LMS",
 			"tag": "Immersive simulation",
 			"description": "Simulate critical interventions in real-time 3D. Lockout/tagout, evacuation, complex maintenance — no risk, no production downtime.",
 			"price": "Custom quote"
@@ -166,14 +166,36 @@
 		"subtitle": "Centralize your training management",
 		"description": "A complete platform to manage your training plans, track progress and certify your learners.",
 		"products": {
-			"title": "Three solutions, one platform",
-			"subtitle": "Choose the format that fits your training needs",
-			"from": "From"
+			"title": "Train the right way",
+			"subtitle": "From photo-realism to document-based formats, we cover the full spectrum of digital training.",
+			"quote": "On request",
+			"items": [
+				{
+					"tag": "Photo-realistic",
+					"title": "Captured from your facilities",
+					"description": "360° tours created from real photos of your sites. The most faithful rendering possible, as if you were there."
+				},
+				{
+					"tag": "High-fidelity 3D",
+					"title": "Custom-built in 3D",
+					"description": "Your workshops modeled in 3D with a high level of detail. Interactive, gamified, with complete training scenarios."
+				},
+				{
+					"tag": "Simplified 3D",
+					"title": "The essentials in 3D",
+					"description": "A streamlined 3D environment focused on key actions. Less visual detail, same training effectiveness, faster delivery."
+				},
+				{
+					"tag": "Document-based",
+					"title": "Your documents turned into training",
+					"description": "Import your PDFs, Word or PowerPoint files. Our AI converts them into interactive courses with quizzes and completion tracking."
+				}
+			]
 		},
 		"hero": {
 			"title": "Immersive training, from A to Z",
 			"subtitle": "Simulate in 3D, create content with AI, train remotely in photo-realism — and manage everything from a single platform.",
-			"cta": "Log in",
+			"cta": "Request a quote",
 			"badge": "Training platform"
 		},
 		"features": {
@@ -242,11 +264,12 @@
 		"cta": {
 			"title": "Ready to simplify your training management?",
 			"description": "Discover how our platform can centralize and optimize your learner tracking.",
-			"button": "Log in"
+			"button": "Request a quote",
+			"faq": "View FAQ"
 		}
 	},
 	"wisetrainer": {
-		"title": "WiseTrainer",
+		"title": "WiseTrainer LMS",
 		"subtitle": "Immersive 3D training",
 		"description": "Recreate your workstations in 3D and train your teams in a safe and realistic virtual environment.",
 		"hero": {
@@ -548,15 +571,18 @@
 			"title": "Use cases",
 			"territory": {
 				"title": "Territorial attractiveness",
-				"description": "Showcase your territory to investors, businesses, or new residents with an interactive showcase."
+				"description": "Showcase your territory to investors, businesses, or new residents with an interactive showcase.",
+				"tags": ["ZIBAC", "ADE", "Local authority", "Intercommunality"]
 			},
 			"stakeholders": {
 				"title": "Public consultation",
-				"description": "Present your development projects to citizens and collect their feedback directly on the map."
+				"description": "Present your development projects to citizens and collect their feedback directly on the map.",
+				"tags": ["Urban plan", "ZAC", "Public inquiry", "Development"]
 			},
 			"infrastructure": {
 				"title": "Project tracking",
-				"description": "Communicate the progress of your infrastructure, renovation, or development projects in real time."
+				"description": "Communicate the progress of your infrastructure, renovation, or development projects in real time.",
+				"tags": ["Construction", "Renovation", "Decarbonization", "Infrastructure"]
 			}
 		},
 		"standalone": {
@@ -565,61 +591,63 @@
 		},
 		"pricing": {
 			"title": "Our plans",
-			"subtitle": "Choose the plan that fits your territorial communication project",
+			"subtitle": "Two ways to create your interactive map, two service levels.",
+			"perYear": "/year",
+			"fromPrice": "From",
 			"tiers": {
-				"static": {
-					"title": "Static map",
-					"description": "A map delivered turnkey — you do what you want with it",
-					"price": "On quote",
+				"selfservice": {
+					"title": "Self-service",
+					"description": "Create and manage your maps independently with our online editor.",
+					"standardPrice": "€1,000",
+					"enterprisePrice": "€3,000",
 					"features": [
-						"Interactive map delivered as a one-shot",
-						"You own the deliverable",
-						"Embeddable on your website",
-						"No subscription"
-					]
-				},
-				"managed": {
-					"title": "Managed map",
-					"description": "We manage the map, you update the content via a shared Excel file",
-					"price": "On quote",
-					"features": [
-						"Hosting and maintenance included",
-						"Updates via shared Excel file",
-						"Changes handled by our team",
-						"Dedicated support"
-					]
-				},
-				"platform": {
-					"title": "Platform",
-					"description": "Create and manage your maps with full autonomy",
-					"price": "€3,000/year",
-					"features": [
+						"Online map editor",
 						"Unlimited map creation",
-						"Full self-service editor",
-						"Unlimited link sharing",
-						"Interaction tracking",
-						"Hosting and updates included"
+						"Link sharing",
+						"Hosting and updates included",
+						"Interaction tracking"
+					]
+				},
+				"prestation": {
+					"title": "Custom project",
+					"description": "Our team creates your custom map from your data and requirements.",
+					"standardPrice": "On request",
+					"standardNote": "€5,000 — €20,000 depending on complexity",
+					"enterprisePrice": "On request",
+					"enterpriseNote": "+€2,000/year for Enterprise option",
+					"features": [
+						"Custom creation by our team",
+						"End-to-end support",
+						"Hosting and maintenance included",
+						"Turnkey delivery",
+						"Updates on request"
 					]
 				}
 			},
-			"ctaSection": {
-				"title": "Still have questions?",
-				"subtitle": "Check our FAQ or contact us directly.",
-				"faq": "View FAQ",
-				"contact": "Contact us"
+			"levels": {
+				"standard": "Standard",
+				"enterprise": "Enterprise"
 			},
+			"enterpriseBadge": "+€2,000/year",
+			"enterpriseFeatures": [
+				"SSO (Single Sign-On)",
+				"Audit logs",
+				"Advanced permissions",
+				"Priority support"
+			],
 			"comparison": {
 				"title": "Plan comparison",
 				"features": "Features",
 				"items": [
-					{ "label": "Interactive map", "static": true, "managed": true, "platform": true },
-					{ "label": "Hosting included", "static": false, "managed": true, "platform": true },
-					{ "label": "Content updates", "static": false, "managed": "Via Excel", "platform": "Self-service" },
-					{ "label": "Create new maps", "static": false, "managed": false, "platform": true },
-					{ "label": "Interaction tracking", "static": false, "managed": true, "platform": true },
-					{ "label": "Link sharing", "static": false, "managed": true, "platform": true },
-					{ "label": "Dedicated support", "static": false, "managed": true, "platform": true },
-					{ "label": "Deliverable ownership", "static": true, "managed": false, "platform": false }
+					{ "label": "Interactive map", "selfservice": true, "prestation": true },
+					{ "label": "Online editor", "selfservice": true, "prestation": false },
+					{ "label": "Custom creation", "selfservice": false, "prestation": true },
+					{ "label": "Hosting included", "selfservice": true, "prestation": true },
+					{ "label": "Interaction tracking", "selfservice": true, "prestation": true },
+					{ "label": "Link sharing", "selfservice": true, "prestation": true },
+					{ "label": "Self-service updates", "selfservice": true, "prestation": false },
+					{ "label": "Dedicated support", "selfservice": false, "prestation": true },
+					{ "label": "SSO & Audit (Enterprise option)", "selfservice": "+€2,000/yr", "prestation": "+€2,000/yr" }
 				]
 			}
 		},
@@ -627,7 +655,7 @@
 			"title": "A territorial communication project?",
 			"description": "Contact us to discuss your project and receive a personalized quote.",
 			"button": "Request a quote",
-			"platform": "Access the platform"
+			"faq": "View FAQ"
 		}
 	},
 	"advantages": {
@@ -739,7 +767,7 @@
 			"subtitle": "Find the solution that best fits your needs",
 			"specsTitle": "Specifications",
 			"wisetrainer": {
-				"title": "WiseTrainer",
+				"title": "WiseTrainer LMS",
 				"price": "Starting from €4,500",
 				"description": "Immerse your teams in hand-crafted 3D simulators, built from photos of your actual facilities. Ideal for HSE training, LOTO lockout/tagout, technical procedures, and safety protocols.",
 				"specs": [
@@ -846,7 +874,7 @@
 				"price": "410"
 			},
 			"wisetrainer": {
-				"title": "WiseTrainer",
+				"title": "WiseTrainer LMS",
 				"description": "Immersive 3D simulators",
 				"price": "1390"
 			}
@@ -1137,7 +1165,7 @@
 			"required": "*"
 		},
 		"subjects": {
-			"wisetrainer": "WiseTrainer",
+			"wisetrainer": "WiseTrainer LMS",
 			"demo": "Demo request",
 			"info": "General information",
 			"other": "Other"

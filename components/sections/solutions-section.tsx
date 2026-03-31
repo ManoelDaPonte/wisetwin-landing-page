@@ -10,13 +10,11 @@ const hubs = [
 		key: "formation",
 		href: "/solutions/wisetrainer",
 		icon: GraduationCap,
-		products: ["WiseTrainer", "WisePaper", "WiseTour"],
 	},
 	{
 		key: "communication",
 		href: "/solutions/wiseatlas",
 		icon: Map,
-		products: ["WiseAtlas"],
 	},
 ] as const;
 
@@ -40,17 +38,14 @@ export function SolutionsSection() {
 						<Link
 							key={hub.key}
 							href={hub.href}
-							className="group relative bg-card border border-border rounded-2xl p-8 transition-all hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/5 flex flex-col"
+							className="group relative bg-card border border-border rounded-2xl p-8 transition-all hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/5 flex flex-col overflow-hidden"
 						>
-							<div className="absolute inset-x-0 top-0 h-1 bg-secondary scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 rounded-t-2xl" />
+							<div className="absolute inset-x-0 top-0 h-1 bg-secondary scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
 
-							<div className="flex items-start justify-between mb-5">
+							<div className="mb-5">
 								<div className="size-14 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center">
 									<Icon className="size-7 text-secondary" />
 								</div>
-								<span className="text-sm font-bold text-secondary">
-									{t(`${hub.key}.price`)}
-								</span>
 							</div>
 
 							<p className="text-xs font-mono uppercase tracking-wider text-secondary mb-2">
@@ -62,19 +57,6 @@ export function SolutionsSection() {
 							<p className="text-muted-foreground leading-relaxed mb-6 flex-1">
 								{t(`${hub.key}.description`)}
 							</p>
-
-							{hub.products.length > 1 && (
-								<div className="flex flex-wrap gap-2 mb-6">
-									{hub.products.map((product) => (
-										<span
-											key={product}
-											className="text-xs font-medium bg-muted px-3 py-1 rounded-full"
-										>
-											{product}
-										</span>
-									))}
-								</div>
-							)}
 
 							<span className="inline-flex items-center gap-2 text-sm font-semibold text-secondary group-hover:underline underline-offset-4 mt-auto">
 								{t("cta")}

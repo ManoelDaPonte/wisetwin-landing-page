@@ -5,7 +5,7 @@ import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pa
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Map, Settings, Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 export function HeroSection() {
 	const t = useTranslations("hero");
@@ -59,10 +59,10 @@ export function HeroSection() {
 						</div>
 					</div>
 
-					<div className="flex flex-col items-center justify-center gap-4">
+					<div className="flex flex-col items-center justify-center gap-4 pointer-events-auto">
 						<Link
 							href="/solutions/wisetrainer"
-							className="pointer-events-auto inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-sm font-medium text-secondary hover:bg-secondary/20 transition-colors"
+							className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-sm font-medium text-secondary hover:bg-secondary/20 transition-colors"
 						>
 							<Sparkles className="size-4" />
 							{t("badge")}
@@ -79,38 +79,6 @@ export function HeroSection() {
 							>
 								<source src="/video/WiseTrainer-SimulateursDeFormation.mp4" type="video/mp4" />
 							</video>
-						</div>
-					</div>
-				</div>
-
-				{/* What we do - 3 key points */}
-				<div className="pb-16 lg:pb-20 pointer-events-auto">
-					<div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16">
-						<div className="flex items-center gap-3 text-center md:text-left">
-							<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-								<GraduationCap className="size-5 text-secondary" />
-							</div>
-							<span className="text-sm md:text-base text-muted-foreground">
-								{t("highlights.safety")}
-							</span>
-						</div>
-						<div className="hidden md:block w-px h-8 bg-border" />
-						<div className="flex items-center gap-3 text-center md:text-left">
-							<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-								<Map className="size-5 text-secondary" />
-							</div>
-							<span className="text-sm md:text-base text-muted-foreground">
-								{t("highlights.training")}
-							</span>
-						</div>
-						<div className="hidden md:block w-px h-8 bg-border" />
-						<div className="flex items-center gap-3 text-center md:text-left">
-							<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-								<Settings className="size-5 text-secondary" />
-							</div>
-							<span className="text-sm md:text-base text-muted-foreground">
-								{t("highlights.communication")}
-							</span>
 						</div>
 					</div>
 				</div>

@@ -4,7 +4,6 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
 import {
-	ArrowLeft,
 	Building2,
 	Users,
 	Construction,
@@ -14,10 +13,12 @@ import {
 	Globe,
 	Check,
 	X,
+	Star,
 	MessageCircle,
-	LogIn,
+	HelpCircle,
 } from "lucide-react";
 import Image from "next/image";
+import { ParallaxImage } from "@/components/ui/parallax-image";
 import { cn } from "@/lib/utils";
 
 export async function generateMetadata({
@@ -35,8 +36,6 @@ export async function generateMetadata({
 
 export default function WiseAtlasPage() {
 	const t = useTranslations("wiseatlas");
-	const tCommon = useTranslations("common");
-
 	const steps = [
 		{ key: "define", icon: FileText, number: 1 },
 		{ key: "data", icon: Database, number: 2 },
@@ -53,64 +52,24 @@ export default function WiseAtlasPage() {
 	return (
 		<main>
 			{/* Hero */}
-			<section className="relative py-20 lg:py-28 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
-				<div className="container mx-auto max-w-7xl px-4">
-					<Link
-						href="/"
-						className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors"
-					>
-						<ArrowLeft className="size-4" />
-						<span>{tCommon("back")}</span>
-					</Link>
+			<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+				<ParallaxImage src="/image/WiseAtlas.png" alt="WiseAtlas" />
+				<div className="absolute inset-0 bg-black/75" />
 
-					<div className="text-center max-w-3xl mx-auto mb-12">
-						<h1 className="text-4xl lg:text-5xl font-bold mb-6">
+				<div className="relative z-10 container mx-auto max-w-7xl px-4">
+					<div className="text-center max-w-3xl mx-auto">
+						<h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-white">
 							{t("hero.title")}
 						</h1>
-						<p className="text-xl text-muted-foreground mb-8">
+						<p className="text-lg lg:text-xl text-white/80 mb-10 leading-relaxed">
 							{t("hero.subtitle")}
 						</p>
-						<div className="flex flex-col sm:flex-row gap-4 justify-center">
-							<Button size="lg" asChild>
-								<Link href="/#contact">
-									<MessageCircle className="size-4 mr-2" />
-									{t("hero.cta")}
-								</Link>
-							</Button>
-							<Button size="lg" variant="outline" asChild>
-								<a href="#" target="_blank" rel="noopener noreferrer">
-									<LogIn className="size-4 mr-2" />
-									{t("hero.ctaPlatform")}
-								</a>
-							</Button>
-						</div>
-					</div>
-
-					{/* Screenshot */}
-					<div className="relative max-w-5xl mx-auto">
-						<div className="absolute -inset-4 bg-gradient-to-r from-secondary/20 via-primary/20 to-secondary/20 rounded-2xl blur-2xl opacity-50" />
-						<div className="relative bg-card border border-border rounded-xl overflow-hidden shadow-2xl">
-							<div className="flex items-center gap-2 px-4 py-3 bg-muted/50 border-b border-border">
-								<div className="flex gap-1.5">
-									<div className="size-3 rounded-full bg-red-500" />
-									<div className="size-3 rounded-full bg-yellow-500" />
-									<div className="size-3 rounded-full bg-green-500" />
-								</div>
-								<div className="flex-1 text-center">
-									<span className="text-xs text-muted-foreground">WiseAtlas - Carte interactive</span>
-								</div>
-							</div>
-							<div className="relative">
-								<Image
-									src="/image/WiseAtlas.png"
-									alt="WiseAtlas - Carte interactive"
-									width={1200}
-									height={750}
-									className="w-full h-auto"
-									priority
-								/>
-							</div>
-						</div>
+						<Button size="lg" asChild>
+							<Link href="/#contact">
+								<MessageCircle className="size-4 mr-2" />
+								{t("hero.cta")}
+							</Link>
+						</Button>
 					</div>
 				</div>
 			</section>
@@ -212,21 +171,28 @@ export default function WiseAtlasPage() {
 					centered: true,
 				}}
 			>
-				<div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-					{(["static", "managed", "platform"] as const).map((tier) => {
-						const isPopular = tier === "platform";
+				<div className="grid md:grid-cols-2 md:grid-rows-[auto_auto_1fr] gap-6 max-w-4xl mx-auto">
+					{(["selfservice", "prestation"] as const).map((tier) => {
+						const isPrestation = tier === "prestation";
 						const features = t.raw(`pricing.tiers.${tier}.features`) as string[];
 						return (
 							<div
 								key={tier}
 								className={cn(
-									"relative rounded-2xl p-6 border flex flex-col",
-									isPopular
+									"relative rounded-2xl p-6 border grid md:grid-rows-subgrid md:row-span-3",
+									isPrestation
 										? "border-secondary bg-secondary/5 shadow-lg shadow-secondary/10"
 										: "border-border bg-card",
 								)}
 							>
-								<div className="text-center mb-4">
+								{isPrestation && (
+									<div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground p-2 rounded-full">
+										<Star className="size-4 fill-current" />
+									</div>
+								)}
+
+								{/* Row 1: Title + description */}
+								<div className="text-center">
 									<h3 className="text-xl font-bold mb-2">
 										{t(`pricing.tiers.${tier}.title`)}
 									</h3>
@@ -235,13 +201,20 @@ export default function WiseAtlasPage() {
 									</p>
 								</div>
 
+								{/* Row 2: Price */}
 								<div className="text-center py-4">
-									<span className="text-3xl font-bold">
-										{t(`pricing.tiers.${tier}.price`)}
-									</span>
+									<div className="flex items-baseline justify-center gap-1">
+										<span className="text-4xl font-bold">
+											{t(`pricing.tiers.${tier}.standardPrice`)}
+										</span>
+										{!isPrestation && (
+											<span className="text-muted-foreground">{t("pricing.perYear")}</span>
+										)}
+									</div>
 								</div>
 
-								<ul className="space-y-3 flex-1">
+								{/* Row 3: Features */}
+								<ul className="space-y-3">
 									{features.map((feature, i) => (
 										<li key={i} className="flex items-start gap-2">
 											<Check className="size-5 text-secondary shrink-0 mt-0.5" />
@@ -253,62 +226,57 @@ export default function WiseAtlasPage() {
 						);
 					})}
 				</div>
-			</Section>
 
-			{/* Comparison Table */}
-			<Section
-				id="comparison"
-				variant="default"
-				header={{
-					title: t("pricing.comparison.title"),
-					centered: true,
-				}}
-			>
-				<div className="max-w-5xl mx-auto overflow-x-auto">
-					<table className="w-full border-collapse">
-						<thead>
-							<tr className="border-b border-border">
-								<th className="text-left py-4 px-4 text-sm font-medium text-muted-foreground">
-									{t("pricing.comparison.features")}
-								</th>
-								{(["static", "managed", "platform"] as const).map((tier) => (
-									<th
-										key={tier}
-										className={cn(
-											"py-4 px-4 text-center text-sm font-bold",
-											tier === "platform" && "text-secondary",
-										)}
-									>
-										{t(`pricing.tiers.${tier}.title`)}
+				{/* Enterprise comparison table */}
+				<div className="mt-12">
+					<div className="text-center mb-8">
+						<h3 className="text-2xl font-bold">
+							{t("pricing.comparison.title")}
+						</h3>
+					</div>
+
+					<div className="max-w-3xl mx-auto overflow-x-auto">
+						<table className="w-full border-collapse">
+							<thead>
+								<tr className="border-b border-border">
+									<th className="text-left py-4 px-4 text-sm font-medium text-muted-foreground">
+										{t("pricing.comparison.features")}
 									</th>
-								))}
-							</tr>
-						</thead>
-						<tbody>
-							{(t.raw("pricing.comparison.items") as Array<{ label: string; static: boolean | string; managed: boolean | string; platform: boolean | string }>).map((item, i) => (
-								<tr
-									key={i}
-									className="border-b border-border/50"
-								>
-									<td className="py-3 px-4 text-sm">{item.label}</td>
-									{(["static", "managed", "platform"] as const).map((tier) => {
-										const value = item[tier];
-										return (
-											<td key={tier} className="py-3 px-4 text-center">
-												{value === true ? (
-													<Check className="size-5 text-secondary mx-auto" />
-												) : value === false ? (
-													<X className="size-5 text-muted-foreground/40 mx-auto" />
-												) : (
-													<span className="text-sm font-medium">{String(value)}</span>
-												)}
-											</td>
-										);
-									})}
+									<th className="py-4 px-4 text-center text-sm font-bold">
+										{t("pricing.tiers.selfservice.title")}
+									</th>
+									<th className="py-4 px-4 text-center text-sm font-bold text-secondary">
+										{t("pricing.tiers.prestation.title")}
+									</th>
 								</tr>
-							))}
-						</tbody>
-					</table>
+							</thead>
+							<tbody>
+								{(t.raw("pricing.comparison.items") as Array<{ label: string; selfservice: boolean | string; prestation: boolean | string }>).map((item, i) => (
+									<tr key={i} className="border-b border-border/50">
+										<td className="py-3 px-4 text-sm">{item.label}</td>
+										<td className="py-3 px-4 text-center">
+											{item.selfservice === true ? (
+												<Check className="size-5 text-secondary mx-auto" />
+											) : item.selfservice === false ? (
+												<X className="size-5 text-muted-foreground/40 mx-auto" />
+											) : (
+												<span className="text-sm font-medium">{String(item.selfservice)}</span>
+											)}
+										</td>
+										<td className="py-3 px-4 text-center">
+											{item.prestation === true ? (
+												<Check className="size-5 text-secondary mx-auto" />
+											) : item.prestation === false ? (
+												<X className="size-5 text-muted-foreground/40 mx-auto" />
+											) : (
+												<span className="text-sm font-medium">{String(item.prestation)}</span>
+											)}
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</Section>
 
@@ -332,9 +300,19 @@ export default function WiseAtlasPage() {
 								<h3 className="text-lg font-bold mb-2">
 									{t(`useCases.${useCase.key}.title`)}
 								</h3>
-								<p className="text-muted-foreground text-sm leading-relaxed">
+								<p className="text-muted-foreground text-sm leading-relaxed mb-4">
 									{t(`useCases.${useCase.key}.description`)}
 								</p>
+								<div className="flex flex-wrap gap-2 justify-center">
+									{(t.raw(`useCases.${useCase.key}.tags`) as string[]).map((tag) => (
+										<span
+											key={tag}
+											className="text-xs font-medium bg-secondary/10 text-secondary px-3 py-1 rounded-full"
+										>
+											{tag}
+										</span>
+									))}
+								</div>
 							</div>
 						);
 					})}
@@ -354,10 +332,10 @@ export default function WiseAtlasPage() {
 							</Link>
 						</Button>
 						<Button size="lg" variant="outline" asChild>
-							<a href="#" target="_blank" rel="noopener noreferrer">
-								<LogIn className="size-4 mr-2" />
-								{t("cta.platform")}
-							</a>
+							<Link href="/faq">
+								<HelpCircle className="size-4 mr-2" />
+								{t("cta.faq")}
+							</Link>
 						</Button>
 					</div>
 				</div>

@@ -17,7 +17,7 @@
 	"nav": {
 		"solutions": "Solutions",
 		"platform": "La Plateforme",
-		"wisetrainer": "WiseTrainer",
+		"wisetrainer": "WiseTrainer LMS",
 		"wisepaper": "WisePaper",
 		"wisetour": "WiseTour",
 		"wiseatlas": "WiseAtlas",
@@ -35,8 +35,8 @@
 		"contact": "Contact"
 	},
 	"hero": {
-		"titlePrefix": "Formez.\nVisualisez.",
-		"titleHighlight": "Transformez.",
+		"titlePrefix": "Formez\nVisualisez",
+		"titleHighlight": "Transformez",
 		"rotatingPrefix": "",
 		"rotatingWords": [],
 		"subtitle": "Wise Twin digitalise vos environnements industriels en jumeaux numériques immersifs pour former vos équipes et piloter vos infrastructures à grande échelle.",
@@ -53,7 +53,7 @@
 		"title": "Nos solutions",
 		"subtitle": "Deux puissances complémentaires pour digitaliser vos métiers.",
 		"formation": {
-			"title": "WiseTrainer",
+			"title": "WiseTrainer LMS",
 			"tag": "Simulateurs de formation",
 			"description": "Une plateforme tout-en-un pour la formation industrielle: simulateurs immersifs, acceuils sécurité photo-réalistes, et IA générative.",
 			"price": "À partir de 50€/mois"
@@ -69,7 +69,7 @@
 		"selfService": "Self-service",
 		"standalone": "Hors plateforme",
 		"wisetrainer": {
-			"title": "WiseTrainer",
+			"title": "WiseTrainer LMS",
 			"tag": "Simulation immersive",
 			"description": "Simulez des interventions critiques en 3D temps réel. Consignation, évacuation, maintenance complexe — sans risque, sans arrêt de production.",
 			"price": "Sur devis"
@@ -167,13 +167,35 @@
 		"description": "Une plateforme complète pour gérer vos plans de formation, suivre les progressions et certifier vos apprenants.",
 		"products": {
 			"title": "Formez de la bonne manière",
-			"subtitle": "Choisissez le format adapté à votre besoin de formation",
-			"from": "À partir de"
+			"subtitle": "Du photo-réalisme au format documentaire, nous couvrons tout le spectre de la formation digitale.",
+			"quote": "Sur devis",
+			"items": [
+				{
+					"tag": "Photo-réaliste",
+					"title": "Capturé depuis vos installations",
+					"description": "Des visites 360° créées à partir de vraies photos de vos sites. Le rendu le plus fidèle possible, comme si vous y étiez."
+				},
+				{
+					"tag": "3D haute fidélité",
+					"title": "Recréé sur mesure en 3D",
+					"description": "Vos ateliers modélisés en 3D avec un haut niveau de détail. Interactif, gamifié, avec scénarios de formation complets."
+				},
+				{
+					"tag": "3D simplifiée",
+					"title": "L'essentiel en 3D",
+					"description": "Un environnement 3D épuré, centré sur les gestes clés. Moins de détails visuels, même efficacité pédagogique, livraison plus rapide."
+				},
+				{
+					"tag": "Format documentaire",
+					"title": "Vos documents transformés en formations",
+					"description": "Importez vos PDF, Word ou PowerPoint. Notre IA les convertit en parcours interactifs avec quiz et suivi de complétion."
+				}
+			]
 		},
 		"hero": {
 			"title": "Sécurisez votre usine",
 			"subtitle": "Remplacez les procédures papiers et PDF par des simulateurs virtuels de vos ateliers. Vos équipes s'entraînent en conditions réalistes sur leur environnement de travail, répètent les situations critiques, et gagnent en autonomie.",
-			"cta": "Se connecter",
+			"cta": "Demander un devis",
 			"badge": "Plateforme de formation"
 		},
 		"features": {
@@ -242,11 +264,12 @@
 		"cta": {
 			"title": "Prêt à simplifier la gestion de vos formations ?",
 			"description": "Découvrez comment notre plateforme peut centraliser et optimiser le suivi de vos apprenants.",
-			"button": "Se connecter"
+			"button": "Demander un devis",
+			"faq": "Consulter la FAQ"
 		}
 	},
 	"wisetrainer": {
-		"title": "WiseTrainer",
+		"title": "WiseTrainer LMS",
 		"subtitle": "Formation immersive",
 		"description": "Plongez vos équipes dans leur atelier sans mobiliser vos équipements.",
 		"hero": {
@@ -548,15 +571,18 @@
 			"title": "Cas d’usage",
 			"territory": {
 				"title": "Attractivité territoriale",
-				"description": "Valorisez votre territoire auprès d’investisseurs, d’entreprises ou de nouveaux habitants avec une vitrine interactive."
+				"description": "Valorisez votre territoire auprès d’investisseurs, d’entreprises ou de nouveaux habitants avec une vitrine interactive.",
+				"tags": ["ZIBAC", "ADE", "Collectivité", "Intercommunalité"]
 			},
 			"stakeholders": {
 				"title": "Concertation publique",
-				"description": "Présentez vos projets d’aménagement aux citoyens et recueillez leurs retours directement sur la carte."
+				"description": "Présentez vos projets d’aménagement aux citoyens et recueillez leurs retours directement sur la carte.",
+				"tags": ["PLU", "ZAC", "Enquête publique", "Aménagement"]
 			},
 			"infrastructure": {
 				"title": "Suivi de projets",
-				"description": "Communiquez l’avancement de vos projets d’infrastructure, de rénovation ou de développement en temps réel."
+				"description": "Communiquez l’avancement de vos projets d’infrastructure, de rénovation ou de développement en temps réel.",
+				"tags": ["BTP", "Rénovation", "Décarbonation", "Infrastructure"]
 			}
 		},
 		"standalone": {
@@ -565,61 +591,63 @@
 		},
 		"pricing": {
 			"title": "Nos offres",
-			"subtitle": "Choisissez la formule adaptée à votre projet de communication territoriale",
+			"subtitle": "Deux façons de créer votre carte interactive, deux niveaux de service.",
+			"perYear": "/an",
+			"fromPrice": "À partir de",
 			"tiers": {
-				"static": {
-					"title": "Carte statique",
-					"description": "Une carte livrée clé en main, vous en faites ce que vous voulez",
-					"price": "Sur devis",
+				"selfservice": {
+					"title": "Self-service",
+					"description": "Créez et gérez vos cartes en toute autonomie grâce à notre éditeur en ligne.",
+					"standardPrice": "1 000€",
+					"enterprisePrice": "3 000€",
 					"features": [
-						"Carte interactive livrée en one-shot",
-						"Vous êtes propriétaire du livrable",
-						"Intégrable sur votre site web",
-						"Aucun abonnement"
-					]
-				},
-				"managed": {
-					"title": "Carte gérée",
-					"description": "Nous gérons la carte, vous mettez à jour le contenu via un fichier Excel",
-					"price": "Sur devis",
-					"features": [
-						"Hébergement et maintenance inclus",
-						"Mise à jour via fichier Excel partagé",
-						"Modifications par notre équipe",
-						"Support dédié"
-					]
-				},
-				"platform": {
-					"title": "Plateforme",
-					"description": "Créez et gérez vos cartes en toute autonomie",
-					"price": "3 000€/an",
-					"features": [
+						"Éditeur de cartes en ligne",
 						"Création illimitée de cartes",
-						"Éditeur self-service complet",
-						"Partage illimité par lien",
-						"Suivi des interactions",
-						"Hébergement et mises à jour inclus"
+						"Partage par lien",
+						"Hébergement et mises à jour inclus",
+						"Suivi des interactions"
+					]
+				},
+				"prestation": {
+					"title": "Prestation",
+					"description": "Notre équipe crée votre carte sur mesure à partir de vos données et de vos besoins.",
+					"standardPrice": "Sur devis",
+					"standardNote": "5 000€ — 20 000€ selon complexité",
+					"enterprisePrice": "Sur devis",
+					"enterpriseNote": "+2 000€/an pour l'option Entreprise",
+					"features": [
+						"Création sur mesure par notre équipe",
+						"Accompagnement de A à Z",
+						"Hébergement et maintenance inclus",
+						"Livraison clé en main",
+						"Mises à jour sur demande"
 					]
 				}
 			},
-			"ctaSection": {
-				"title": "Encore des questions ?",
-				"subtitle": "Consultez notre FAQ ou contactez-nous directement.",
-				"faq": "Consulter la FAQ",
-				"contact": "Nous contacter"
+			"levels": {
+				"standard": "Standard",
+				"enterprise": "Entreprise"
 			},
+			"enterpriseBadge": "+2 000€/an",
+			"enterpriseFeatures": [
+				"SSO (Single Sign-On)",
+				"Journaux d'audit",
+				"Permissions avancées",
+				"Support prioritaire"
+			],
 			"comparison": {
 				"title": "Comparatif des offres",
 				"features": "Fonctionnalités",
 				"items": [
-					{ "label": "Carte interactive", "static": true, "managed": true, "platform": true },
-					{ "label": "Hébergement inclus", "static": false, "managed": true, "platform": true },
-					{ "label": "Mise à jour du contenu", "static": false, "managed": "Via Excel", "platform": "Self-service" },
-					{ "label": "Création de nouvelles cartes", "static": false, "managed": false, "platform": true },
-					{ "label": "Suivi des interactions", "static": false, "managed": true, "platform": true },
-					{ "label": "Partage par lien", "static": false, "managed": true, "platform": true },
-					{ "label": "Support dédié", "static": false, "managed": true, "platform": true },
-					{ "label": "Propriété du livrable", "static": true, "managed": false, "platform": false }
+					{ "label": "Carte interactive", "selfservice": true, "prestation": true },
+					{ "label": "Éditeur en ligne", "selfservice": true, "prestation": false },
+					{ "label": "Création sur mesure", "selfservice": false, "prestation": true },
+					{ "label": "Hébergement inclus", "selfservice": true, "prestation": true },
+					{ "label": "Suivi des interactions", "selfservice": true, "prestation": true },
+					{ "label": "Partage par lien", "selfservice": true, "prestation": true },
+					{ "label": "Mises à jour autonomes", "selfservice": true, "prestation": false },
+					{ "label": "Accompagnement dédié", "selfservice": false, "prestation": true },
+					{ "label": "SSO & Audit (option Entreprise)", "selfservice": "+2 000€/an", "prestation": "+2 000€/an" }
 				]
 			}
 		},
@@ -627,7 +655,7 @@
 			"title": "Un projet de communication territoriale ?",
 			"description": "Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé.",
 			"button": "Demander un devis",
-			"platform": "Accéder à la plateforme"
+			"faq": "Consulter la FAQ"
 		}
 	},
 	"advantages": {
@@ -739,7 +767,7 @@
 			"subtitle": "Trouvez la solution correspondant le plus à vos besoins",
 			"specsTitle": "Caractéristiques",
 			"wisetrainer": {
-				"title": "WiseTrainer",
+				"title": "WiseTrainer LMS",
 				"price": "À partir de 4 500 €",
 				"description": "Plongez vos collaborateurs dans des simulateurs 3D immersifs, reconstruits à la main à partir de photos de vos installations. Idéal pour les formations HSE, consignation LOTO, gestes techniques ou procédures de sécurité.",
 				"specs": [
@@ -846,7 +874,7 @@
 				"price": "410"
 			},
 			"wisetrainer": {
-				"title": "WiseTrainer",
+				"title": "WiseTrainer LMS",
 				"description": "Simulateurs 3D immersifs",
 				"price": "1390"
 			}
@@ -1137,7 +1165,7 @@
 			"required": "*"
 		},
 		"subjects": {
-			"wisetrainer": "WiseTrainer",
+			"wisetrainer": "WiseTrainer LMS",
 			"demo": "Demande de démonstration",
 			"info": "Informations générales",
 			"other": "Autre sujet"
