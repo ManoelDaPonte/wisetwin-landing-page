@@ -47,7 +47,8 @@ export async function POST(req: NextRequest) {
 
     // Contenu du mail pour le destinataire
     const mailOptions = {
-      from: `"WiseTwin Contact" <${process.env.EMAIL_USER}>`,
+      from: `"WiseTwin" <${process.env.EMAIL_FROM}>`,
+      replyTo: process.env.EMAIL_FROM,
       to: process.env.EMAIL_RECEIVER,
       subject: `Nouveau message: ${subject || "Formulaire de contact WiseTwin"}`,
       html: `
@@ -66,7 +67,8 @@ export async function POST(req: NextRequest) {
 
     // Contenu du mail de confirmation pour l'expéditeur
     const confirmationMailOptions = {
-      from: `"WiseTwin" <${process.env.EMAIL_USER}>`,
+      from: `"WiseTwin" <${process.env.EMAIL_FROM}>`,
+      replyTo: process.env.EMAIL_FROM,
       to: email,
       subject: "Confirmation de votre message à WiseTwin",
       html: `
