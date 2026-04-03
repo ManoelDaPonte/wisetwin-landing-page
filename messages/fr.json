@@ -532,128 +532,175 @@
 	},
 	"wiseatlas": {
 		"title": "WiseAtlas",
-		"subtitle": "Valorisez votre territoire avec une carte interactive sur mesure",
-		"description": "Une carte interactive personnalisable pour mettre en valeur votre territoire sous tous ses angles : économique, environnemental, touristique, culturel ou urbanistique. Vous choisissez les axes à valoriser.",
+		"subtitle": "Valorisez votre territoire",
+		"description": "Une plateforme cartographique pour communiquer, fédérer et valoriser votre territoire sous les axes que vous choisissez.",
 		"hero": {
-			"title": "Valorisez votre territoire avec une carte interactive sur mesure",
-			"subtitle": "Une plateforme cartographique pour communiquer, fédérer et valoriser votre territoire sous les axes que vous choisissez",
-			"cta": "Demander un devis",
-			"ctaPlatform": "Accéder à la plateforme",
-			"badge": "Solution indépendante"
+			"badge": "Cartes interactives sur mesure",
+			"title": "Wise Atlas",
+			"subtitle": "Valorisez vos industries, communiquez votre vision, et pilotez votre stratégie de communication territoriale",
+			"cta": "Demander un devis"
+		},
+		"solution": {
+			"title": "Une plateforme complète",
+			"subtitle": "Tout ce dont vous avez besoin pour valoriser votre territoire",
+			"pillars": {
+				"interactive": {
+					"title": "Maquette Interactive",
+					"description": "Maquette territoriale personnalisée avec réseaux, empreintes foncières et points d'intérêt. Éditeur intégré pour vos agents."
+				},
+				"integration3d": {
+					"title": "Intégration 3D",
+					"description": "Bâtiments et usines en 3D directement sur la carte. Idéal pour la communication de projets d'aménagement."
+				},
+				"multiActors": {
+					"title": "Multi-acteurs",
+					"description": "Collectivités, services techniques, entreprises privées : chacun son niveau d'accès et sa couche de données."
+				}
+			}
+		},
+		"showcase": {
+			"title": "Visualisez votre territoire comme jamais",
+			"subtitle": "Une interface intuitive pour une communication impactante",
+			"cta": "Voir une démo"
+		},
+		"collectivites": {
+			"title": "Pour les collectivités",
+			"subtitle": "Un outil de pilotage et de communication au service de votre territoire",
+			"features": [
+				"Carte interactive personnalisée à votre charte graphique",
+				"Éditeur autonome pour vos agents",
+				"Import des réseaux et empreintes foncières",
+				"Hébergement sécurisé et souverain",
+				"Mises à jour des images satellites incluses",
+				"Support technique dédié"
+			],
+			"cta": "Demander un devis collectivité"
+		},
+		"entreprises": {
+			"title": "Pour les entreprises",
+			"subtitle": "Votre vitrine 3D permanente sur la carte officielle du territoire",
+			"features": [
+				"Modèle 3D de votre bâtiment visible sur la carte",
+				"Intégration de vidéos de visite et recrutement",
+				"Vitrine marque employeur permanente",
+				"Communication de vos projets d'extension",
+				"Modélisation à partir de vos plans d'architecte",
+				"Visibilité auprès des partenaires locaux"
+			],
+			"cta": "Demander un devis entreprise"
+		},
+		"consultation": {
+			"title": "Consultation publique",
+			"subtitle": "L'outil de l'acceptabilité sociale pour vos projets d'aménagement",
+			"description": "Montrer une extension en 3D est bien moins anxiogène pour les riverains qu'un plan de masse technique.",
+			"features": [
+				"Modélisation 3D de la zone ou du quartier",
+				"Intégration des réseaux futurs et espaces verts",
+				"Interface simplifiée pour les citoyens",
+				"Clic sur bâtiment → vidéo ou PDF du projet",
+				"Outil d'acceptabilité sociale"
+			],
+			"cta": "En savoir plus"
 		},
 		"howItWorks": {
 			"title": "Comment ça marche",
-			"subtitle": "De la définition de vos axes de valorisation à la publication de votre carte interactive",
+			"subtitle": "De la définition de vos axes à la publication de votre carte",
 			"steps": {
 				"define": {
 					"title": "Définissez vos axes",
-					"description": "Choisissez les thématiques à mettre en avant : attractivité économique, patrimoine, tourisme, environnement, infrastructures…",
+					"description": "Choisissez les thématiques à mettre en avant : attractivité économique, patrimoine, tourisme, environnement…",
 					"duration": "1 réunion"
 				},
 				"data": {
 					"title": "Intégrez vos données",
-					"description": "Importez vos données, documents, maquettes 3D et médias pour enrichir votre carte de contenus concrets.",
-					"duration": "1-2 semaines"
+					"description": "Importez vos données, documents, maquettes 3D et médias pour enrichir votre carte.",
+					"duration": "En continu"
 				},
 				"design": {
-					"title": "Personnalisez l’expérience",
-					"description": "Configurez le rendu visuel, les filtres, les couches d’information et les parcours de navigation pour vos publics cibles.",
-					"duration": "~1 semaine"
+					"title": "Personnalisez l'expérience",
+					"description": "Configurez le rendu visuel, les filtres et les parcours de navigation pour vos publics.",
+					"duration": "En continu"
 				},
 				"publish": {
 					"title": "Publiez et partagez",
-					"description": "Mettez en ligne votre carte et diffusez-la par lien. Suivez les interactions et l’engagement de vos visiteurs.",
+					"description": "Mettez en ligne votre carte et suivez l'engagement de vos visiteurs.",
 					"duration": "Immédiat"
 				}
 			}
 		},
 		"useCases": {
-			"title": "Cas d’usage",
+			"title": "Cas d'usage",
+			"subtitle": "Des solutions adaptées à chaque besoin",
 			"territory": {
 				"title": "Attractivité territoriale",
-				"description": "Valorisez votre territoire auprès d’investisseurs, d’entreprises ou de nouveaux habitants avec une vitrine interactive.",
+				"description": "Valorisez votre territoire auprès d'investisseurs, d'entreprises ou de nouveaux habitants avec une vitrine interactive.",
 				"tags": ["ZIBAC", "ADE", "Collectivité", "Intercommunalité"]
 			},
 			"stakeholders": {
 				"title": "Concertation publique",
-				"description": "Présentez vos projets d’aménagement aux citoyens et recueillez leurs retours directement sur la carte.",
+				"description": "Présentez vos projets d'aménagement aux citoyens et recueillez leurs retours directement sur la carte.",
 				"tags": ["PLU", "ZAC", "Enquête publique", "Aménagement"]
 			},
 			"infrastructure": {
 				"title": "Suivi de projets",
-				"description": "Communiquez l’avancement de vos projets d’infrastructure, de rénovation ou de développement en temps réel.",
+				"description": "Communiquez l'avancement de vos projets d'infrastructure ou de développement en temps réel.",
 				"tags": ["BTP", "Rénovation", "Décarbonation", "Infrastructure"]
 			}
 		},
-		"standalone": {
-			"title": "Solution indépendante",
-			"description": "WiseAtlas est une solution à part, décorrélée de la plateforme de formation WiseTwin. C'est une application mise à disposition de vos clients pour de la communication."
-		},
-		"pricing": {
-			"title": "Nos offres",
-			"subtitle": "Deux façons de créer votre carte interactive, deux niveaux de service.",
-			"perYear": "/an",
-			"fromPrice": "À partir de",
-			"tiers": {
-				"selfservice": {
-					"title": "Self-service",
-					"description": "Créez et gérez vos cartes en toute autonomie grâce à notre éditeur en ligne.",
-					"standardPrice": "1 000€",
-					"enterprisePrice": "3 000€",
-					"features": [
-						"Éditeur de cartes en ligne",
-						"Création illimitée de cartes",
-						"Partage par lien",
-						"Hébergement et mises à jour inclus",
-						"Suivi des interactions"
-					]
+		"features": {
+			"title": "Fonctionnalités clés",
+			"items": {
+				"editor": {
+					"title": "Éditeur intégré",
+					"description": "Créez et modifiez vos cartes en toute autonomie"
 				},
-				"prestation": {
-					"title": "Prestation",
-					"description": "Notre équipe crée votre carte sur mesure à partir de vos données et de vos besoins.",
-					"standardPrice": "Sur devis",
-					"standardNote": "5 000€ — 20 000€ selon complexité",
-					"enterprisePrice": "Sur devis",
-					"enterpriseNote": "+2 000€/an pour l'option Entreprise",
-					"features": [
-						"Création sur mesure par notre équipe",
-						"Accompagnement de A à Z",
-						"Hébergement et maintenance inclus",
-						"Livraison clé en main",
-						"Mises à jour sur demande"
-					]
+				"3d": {
+					"title": "Modèles 3D",
+					"description": "Intégrez des bâtiments et projets en 3D"
+				},
+				"analytics": {
+					"title": "Suivi des interactions",
+					"description": "Mesurez l'engagement de vos visiteurs"
+				},
+				"security": {
+					"title": "Hébergement souverain",
+					"description": "Données sécurisées, RGPD-compliant"
+				},
+				"sharing": {
+					"title": "Partage simplifié",
+					"description": "Diffusez par lien ou intégration"
+				},
+				"support": {
+					"title": "Support dédié",
+					"description": "Accompagnement personnalisé"
+				}
+			}
+		},
+		"action": {
+			"title": "Prêt à valoriser votre territoire ?",
+			"subtitle": "Demandez une démo personnalisée et découvrez comment WiseAtlas peut transformer votre communication territoriale.",
+			"steps": {
+				"demo": {
+					"number": "01",
+					"title": "Démo personnalisée",
+					"description": "30 min sur votre territoire ou à distance"
+				},
+				"needs": {
+					"number": "02",
+					"title": "Analyse de vos besoins",
+					"description": "Nous définissons ensemble votre projet"
+				},
+				"proposal": {
+					"number": "03",
+					"title": "Proposition sur mesure",
+					"description": "Devis personnalisé sous 48h"
 				}
 			},
-			"levels": {
-				"standard": "Standard",
-				"enterprise": "Entreprise"
-			},
-			"enterpriseBadge": "+2 000€/an",
-			"enterpriseFeatures": [
-				"SSO (Single Sign-On)",
-				"Journaux d'audit",
-				"Permissions avancées",
-				"Support prioritaire"
-			],
-			"comparison": {
-				"title": "Comparatif des offres",
-				"features": "Fonctionnalités",
-				"items": [
-					{ "label": "Carte interactive", "selfservice": true, "prestation": true },
-					{ "label": "Éditeur en ligne", "selfservice": true, "prestation": false },
-					{ "label": "Création sur mesure", "selfservice": false, "prestation": true },
-					{ "label": "Hébergement inclus", "selfservice": true, "prestation": true },
-					{ "label": "Suivi des interactions", "selfservice": true, "prestation": true },
-					{ "label": "Partage par lien", "selfservice": true, "prestation": true },
-					{ "label": "Mises à jour autonomes", "selfservice": true, "prestation": false },
-					{ "label": "Accompagnement dédié", "selfservice": false, "prestation": true },
-					{ "label": "SSO & Audit (option Entreprise)", "selfservice": "+2 000€/an", "prestation": "+2 000€/an" }
-				]
-			}
+			"cta": "Demander une démo"
 		},
 		"cta": {
 			"title": "Un projet de communication territoriale ?",
-			"description": "Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé.",
+			"description": "Contactez-nous pour discuter de votre projet et découvrir comment WiseAtlas peut vous aider.",
 			"button": "Demander un devis",
 			"faq": "Consulter la FAQ"
 		}

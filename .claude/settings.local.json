@@ -17,7 +17,12 @@
       "WebFetch(domain:next-intl.dev)",
       "Bash(npx tsc:*)",
       "Bash(node:*)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(powershell -Command \"Expand-Archive -Path ''c:\\\\Users\\\\PcVIP\\\\wisetwin.eu\\\\shared - Documents\\\\02_Commercial\\\\Templates\\\\Presentations\\\\Offres_Commerciales_Cartes_Maps.pptx'' -DestinationPath ''C:\\\\temp\\\\pptx_extract'' -Force\")",
+      "Bash(powershell -Command \"Copy-Item ''c:\\\\Users\\\\PcVIP\\\\wisetwin.eu\\\\shared - Documents\\\\02_Commercial\\\\Templates\\\\Presentations\\\\Offres_Commerciales_Cartes_Maps.pptx'' ''C:\\\\temp\\\\wiseatlas.zip'' -Force; Expand-Archive -Path ''C:\\\\temp\\\\wiseatlas.zip'' -DestinationPath ''C:\\\\temp\\\\pptx_extract'' -Force\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''C:\\\\temp\\\\pptx_extract'' -Recurse | Select-Object FullName\")",
+      "Bash(curl:*)",
+      "Bash(npm run lint)"
     ]
   },
   "enableAllProjectMcpServers": false
