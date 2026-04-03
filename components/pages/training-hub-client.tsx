@@ -1,11 +1,10 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import {
 	Plus,
-	MessageCircle,
-	LogIn,
 	HelpCircle,
 	PenLine,
 	BarChart3,
@@ -14,6 +13,7 @@ import {
 	Users,
 	FileOutput,
 	Check,
+	MessageCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
@@ -38,67 +38,135 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 		description: string;
 	}>;
 
+	const [activeIndex, setActiveIndex] = useState(0);
+	const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+	useEffect(() => {
+		const observers: IntersectionObserver[] = [];
+
+		itemRefs.current.forEach((ref, i) => {
+			if (!ref) return;
+			const observer = new IntersectionObserver(
+				([entry]) => {
+					if (entry.isIntersecting) {
+						setActiveIndex(i);
+					}
+				},
+				{ threshold: 0.5 },
+			);
+			observer.observe(ref);
+			observers.push(observer);
+		});
+
+		return () => observers.forEach((o) => o.disconnect());
+	}, [items.length]);
+
 	return (
-		<Section
-			id="products"
-			variant="default"
-			header={{
-				title: t("products.title"),
-				description: t("products.subtitle"),
-				centered: true,
-			}}
-		>
-			<div className="max-w-5xl mx-auto">
-				{/* Vertical connecting line */}
-				<div className="relative">
-					<div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-secondary/0 via-secondary/30 to-secondary/0 hidden lg:block" />
+		<section id="products" className="relative">
+			{/* Section header */}
+			<div className="text-center py-16 px-4">
+				<h2 className="text-3xl lg:text-4xl font-bold mb-4">
+					{t("products.title")}
+				</h2>
+				<p className="text-muted-foreground max-w-2xl mx-auto">
+					{t("products.subtitle")}
+				</p>
+			</div>
 
-					<div className="flex flex-col gap-20 lg:gap-28">
-						{items.map((item, i) => {
-							const isEven = i % 2 === 0;
-							return (
-								<div key={i} className="relative">
-									{/* Step dot on the line */}
-									<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:flex">
-										<div className="size-4 rounded-full bg-secondary border-4 border-background shadow-sm" />
-									</div>
+			{/* Desktop: sticky scroll layout */}
+			<div className="hidden lg:grid lg:grid-cols-2 min-h-screen">
+				{/* Sticky image side */}
+				<div className="relative h-screen sticky top-0">
+					{productImages.map((src, i) => (
+						<div
+							key={i}
+							className="absolute inset-0 transition-opacity duration-700 ease-in-out"
+							style={{ opacity: activeIndex === i ? 1 : 0 }}
+						>
+							<Image
+								src={src}
+								alt={items[i]?.title ?? ""}
+								fill
+								className="object-cover"
+								priority={i === 0}
+							/>
+							<div className="absolute inset-0 bg-black/40" />
+						</div>
+					))}
 
-									<div className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${isEven ? "" : "direction-rtl"}`}>
-										{/* Image side */}
-										<div className={`${isEven ? "lg:order-1" : "lg:order-2"}`}>
-											<div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-border shadow-lg">
-												<Image
-													src={productImages[i]}
-													alt={item.title}
-													fill
-													className="object-cover"
-												/>
-											</div>
-										</div>
-
-										{/* Text side */}
-										<div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
-											<span className="inline-block text-xs font-mono uppercase tracking-wider text-secondary bg-secondary/10 px-3 py-1 rounded-full mb-4">
-												{item.tag}
-											</span>
-											<h3 className="text-2xl lg:text-3xl font-bold mb-4">{item.title}</h3>
-											<p className="text-muted-foreground leading-relaxed">
-												{item.description}
-											</p>
-											<div className="mt-6">
-												<span className="text-sm font-semibold text-secondary">
-													{t("products.quote")}
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							);
-						})}
+					{/* Progress indicators */}
+					<div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+						{items.map((_, i) => (
+							<div
+								key={i}
+								className={`h-1 rounded-full transition-all duration-500 ${
+									activeIndex === i
+										? "w-8 bg-white"
+										: "w-4 bg-white/30"
+								}`}
+							/>
+						))}
 					</div>
 				</div>
+
+				{/* Scrolling text side */}
+				<div>
+					{items.map((item, i) => (
+						<div
+							key={i}
+							ref={(el) => { itemRefs.current[i] = el; }}
+							className="min-h-screen flex items-center px-12 xl:px-20"
+						>
+							<div className="max-w-lg">
+								<span className="inline-block text-xs font-mono uppercase tracking-wider text-secondary bg-secondary/10 px-3 py-1 rounded-full mb-4">
+									{item.tag}
+								</span>
+								<h3 className="text-3xl xl:text-4xl font-bold mb-6">
+									{item.title}
+								</h3>
+								<p className="text-lg text-muted-foreground leading-relaxed mb-8">
+									{item.description}
+								</p>
+								<span className="text-sm font-semibold text-secondary">
+									{t("products.quote")}
+								</span>
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
-		</Section>
+
+			{/* Mobile: stacked full-width cards */}
+			<div className="lg:hidden flex flex-col">
+				{items.map((item, i) => (
+					<div key={i} className="relative">
+						{/* Full-width image */}
+						<div className="relative aspect-[16/10] overflow-hidden">
+							<Image
+								src={productImages[i]}
+								alt={item.title}
+								fill
+								className="object-cover"
+							/>
+							<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+						</div>
+						{/* Text below */}
+						<div className="px-6 pb-12 -mt-8 relative z-10">
+							<span className="inline-block text-xs font-mono uppercase tracking-wider text-secondary bg-secondary/10 px-3 py-1 rounded-full mb-3">
+								{item.tag}
+							</span>
+							<h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+							<p className="text-muted-foreground leading-relaxed mb-4">
+								{item.description}
+							</p>
+							<span className="text-sm font-semibold text-secondary">
+								{t("products.quote")}
+							</span>
+						</div>
+					</div>
+				))}
+			</div>
+		</section>
 	);
 }
 
@@ -141,7 +209,7 @@ export default function TrainingHubClient() {
 			{/* Advantages */}
 			<AdvantagesSection />
 
-			{/* Products — scrollable showcase */}
+			{/* Products — immersive scroll showcase */}
 			<ProductsShowcase t={t} />
 
 			{/* Plus separator */}
