@@ -235,29 +235,6 @@ export function PricingSection() {
 				</div>
 			</div>
 
-			{/* CTA after comparison table */}
-			<div className="mt-16 text-center">
-				<h3 className="text-2xl font-bold mb-2">
-					{t("ctaSection.title")}
-				</h3>
-				<p className="text-muted-foreground mb-6">
-					{t("ctaSection.subtitle")}
-				</p>
-				<div className="flex flex-wrap items-center justify-center gap-3">
-					<Button size="lg" variant="outline" asChild>
-						<Link href="/faq">
-							<HelpCircle className="size-4 mr-2" />
-							{t("ctaSection.faq")}
-						</Link>
-					</Button>
-					<Button size="lg" asChild>
-						<a href="#contact">
-							<MessageCircle className="size-4 mr-2" />
-							{t("ctaSection.contact")}
-						</a>
-					</Button>
-				</div>
-			</div>
 		</Section>
 	);
 }

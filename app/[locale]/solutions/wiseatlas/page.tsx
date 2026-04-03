@@ -8,6 +8,8 @@ import {
 	Users,
 	Construction,
 	Check,
+	MessageCircle,
+	HelpCircle,
 	Landmark,
 	Factory,
 	Scale,
@@ -90,6 +92,7 @@ export default function WiseAtlasPage() {
 						</p>
 						<Button size="lg" asChild>
 							<Link href="/#contact">
+								<MessageCircle className="size-4 mr-2" />
 								{t("hero.cta")}
 							</Link>
 						</Button>
@@ -352,11 +355,13 @@ export default function WiseAtlasPage() {
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Button size="lg" asChild>
 							<Link href="/#contact">
+								<MessageCircle className="size-4 mr-2" />
 								{t("cta.button")}
 							</Link>
 						</Button>
 						<Button size="lg" variant="outline" asChild>
 							<Link href="/faq">
+								<HelpCircle className="size-4 mr-2" />
 								{t("cta.faq")}
 							</Link>
 						</Button>
