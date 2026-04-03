@@ -35,6 +35,15 @@
 	--color-ring: oklch(0.708 0 0);
 }
 
+/* Hero overlay adaptatif */
+.hero-overlay {
+	background: rgba(255, 255, 255, 0.70);
+}
+
+.dark .hero-overlay {
+	background: rgba(0, 0, 0, 0.75);
+}
+
 /* Thème sombre */
 .dark {
 	--color-background: oklch(0.145 0 0);

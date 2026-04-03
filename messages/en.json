@@ -533,36 +533,78 @@
 	"wiseatlas": {
 		"title": "WiseAtlas",
 		"subtitle": "Showcase your territory with a custom interactive map",
-		"description": "A customizable interactive map to highlight your territory from every angle: economic, environmental, touristic, cultural, or urban. You choose which aspects to showcase.",
+		"description": "A mapping platform to communicate, engage, and showcase your territory on the axes you choose.",
 		"hero": {
-			"title": "Showcase your territory with a custom interactive map",
-			"subtitle": "A mapping platform to communicate, engage, and showcase your territory on the axes you choose",
-			"cta": "Request a quote",
-			"ctaPlatform": "Access the platform",
-			"badge": "Independent solution"
+			"title": "Showcase your industries, communicate your territorial vision",
+			"subtitle": "Drive your territorial communication strategy with a custom interactive map",
+			"cta": "Request a quote"
+		},
+		"pillars": {
+			"title": "Your territory, your map",
+			"subtitle": "Create an interactive map that reflects your identity",
+			"rendering": {
+				"title": "2D or 3D, you choose",
+				"description": "Integrate your 3D assets, images, videos and documents directly on the map. Switch from satellite view to 3D model in one click."
+			},
+			"collaboration": {
+				"title": "Collaborate as a team",
+				"description": "Identity management, access levels and security. Each department or partner accesses their own data layer."
+			},
+			"sharing": {
+				"title": "Share or keep private",
+				"description": "Distribute your map via public link or keep it for your internal presentations and steering committees."
+			}
+		},
+		"audiences": {
+			"title": "Who is WiseAtlas for?",
+			"subtitle": "A solution tailored to both local authorities and businesses",
+			"collectivites": {
+				"title": "For local authorities",
+				"subtitle": "A management and communication tool serving your territory",
+				"features": [
+					"Interactive map customized to your brand identity",
+					"Autonomous editor for your agents",
+					"Import of networks and land footprints",
+					"Secure and sovereign hosting",
+					"Satellite imagery updates included",
+					"Dedicated technical support"
+				]
+			},
+			"entreprises": {
+				"title": "For businesses",
+				"subtitle": "Your permanent 3D showcase on the official territory map",
+				"features": [
+					"3D model of your building visible on the map",
+					"Integration of tour and recruitment videos",
+					"Permanent employer brand showcase",
+					"Communication of your expansion projects",
+					"Modeling from your architect plans",
+					"Visibility to local partners"
+				]
+			}
 		},
 		"howItWorks": {
 			"title": "How it works",
-			"subtitle": "From defining your focus areas to publishing your interactive map",
+			"subtitle": "From defining your focus areas to publishing your map",
 			"steps": {
 				"define": {
 					"title": "Define your axes",
-					"description": "Choose the themes to highlight: economic attractiveness, heritage, tourism, environment, infrastructure…",
+					"description": "Choose the themes to highlight: economic attractiveness, heritage, tourism, environment…",
 					"duration": "1 meeting"
 				},
 				"data": {
 					"title": "Import your data",
-					"description": "Import your data, documents, 3D models, and media to enrich your map with concrete content.",
-					"duration": "1–2 weeks"
+					"description": "Import your data, documents, 3D models and media to enrich your map.",
+					"duration": "Ongoing"
 				},
 				"design": {
 					"title": "Customize the experience",
-					"description": "Configure the visual style, filters, information layers, and navigation paths for your target audiences.",
-					"duration": "~1 week"
+					"description": "Configure the visual style, filters and navigation paths for your audiences.",
+					"duration": "Ongoing"
 				},
 				"publish": {
 					"title": "Publish and share",
-					"description": "Put your map online and share it via link. Track interactions and visitor engagement.",
+					"description": "Put your map online and track visitor engagement.",
 					"duration": "Immediate"
 				}
 			}
@@ -581,80 +623,36 @@
 			},
 			"infrastructure": {
 				"title": "Project tracking",
-				"description": "Communicate the progress of your infrastructure, renovation, or development projects in real time.",
+				"description": "Communicate the progress of your infrastructure or development projects in real time.",
 				"tags": ["Construction", "Renovation", "Decarbonization", "Infrastructure"]
-			}
-		},
-		"standalone": {
-			"title": "Independent solution",
-			"description": "WiseAtlas is a standalone solution, separate from the WiseTwin training platform. It is an application made available to your clients for communication purposes."
-		},
-		"pricing": {
-			"title": "Our plans",
-			"subtitle": "Two ways to create your interactive map, two service levels.",
-			"perYear": "/year",
-			"fromPrice": "From",
-			"tiers": {
-				"selfservice": {
-					"title": "Self-service",
-					"description": "Create and manage your maps independently with our online editor.",
-					"standardPrice": "€1,000",
-					"enterprisePrice": "€3,000",
-					"features": [
-						"Online map editor",
-						"Unlimited map creation",
-						"Link sharing",
-						"Hosting and updates included",
-						"Interaction tracking"
-					]
-				},
-				"prestation": {
-					"title": "Custom project",
-					"description": "Our team creates your custom map from your data and requirements.",
-					"standardPrice": "On request",
-					"standardNote": "€5,000 — €20,000 depending on complexity",
-					"enterprisePrice": "On request",
-					"enterpriseNote": "+€2,000/year for Enterprise option",
-					"features": [
-						"Custom creation by our team",
-						"End-to-end support",
-						"Hosting and maintenance included",
-						"Turnkey delivery",
-						"Updates on request"
-					]
-				}
 			},
-			"levels": {
-				"standard": "Standard",
-				"enterprise": "Enterprise"
-			},
-			"enterpriseBadge": "+€2,000/year",
-			"enterpriseFeatures": [
-				"SSO (Single Sign-On)",
-				"Audit logs",
-				"Advanced permissions",
-				"Priority support"
-			],
-			"comparison": {
-				"title": "Plan comparison",
-				"features": "Features",
-				"items": [
-					{ "label": "Interactive map", "selfservice": true, "prestation": true },
-					{ "label": "Online editor", "selfservice": true, "prestation": false },
-					{ "label": "Custom creation", "selfservice": false, "prestation": true },
-					{ "label": "Hosting included", "selfservice": true, "prestation": true },
-					{ "label": "Interaction tracking", "selfservice": true, "prestation": true },
-					{ "label": "Link sharing", "selfservice": true, "prestation": true },
-					{ "label": "Self-service updates", "selfservice": true, "prestation": false },
-					{ "label": "Dedicated support", "selfservice": false, "prestation": true },
-					{ "label": "SSO & Audit (Enterprise option)", "selfservice": "+€2,000/yr", "prestation": "+€2,000/yr" }
-				]
+			"consultation": {
+				"title": "Public consultation",
+				"description": "Showing an extension in 3D is much less anxiety-inducing for residents than a technical site plan. Simplified interface for citizens.",
+				"tags": ["Social acceptability", "Development", "Citizens", "3D"]
 			}
 		},
 		"cta": {
 			"title": "A territorial communication project?",
-			"description": "Contact us to discuss your project and receive a personalized quote.",
-			"button": "Request a quote",
+			"subtitle": "Contact us and receive our detailed brochure with our offers and client cases.",
+			"steps": {
+				"demo": {
+					"number": "01",
+					"title": "Personalized demo",
+					"description": "30 min on your territory or remotely"
+				},
+				"needs": {
+					"number": "02",
+					"title": "Needs analysis",
+					"description": "We define your project together"
+				},
+				"proposal": {
+					"number": "03",
+					"title": "Custom proposal",
+					"description": "Personalized quote within 48h"
+				}
+			},
+			"button": "Contact us",
 			"faq": "View FAQ"
 		}
 	},
