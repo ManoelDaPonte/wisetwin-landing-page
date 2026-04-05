@@ -181,11 +181,6 @@
 					"description": "Your workshops modeled in 3D with a high level of detail. Interactive, gamified, with complete training scenarios."
 				},
 				{
-					"tag": "Simplified 3D",
-					"title": "The essentials in 3D",
-					"description": "A streamlined 3D environment focused on key actions. Less visual detail, same training effectiveness, faster delivery."
-				},
-				{
 					"tag": "Document-based",
 					"title": "Your documents turned into training",
 					"description": "Import your PDFs, Word or PowerPoint files. Our AI converts them into interactive courses with quizzes and completion tracking."
@@ -535,7 +530,7 @@
 		"subtitle": "Showcase your territory with a custom interactive map",
 		"description": "A mapping platform to communicate, engage, and showcase your territory on the axes you choose.",
 		"hero": {
-			"title": "Showcase your industries, communicate your territorial vision",
+			"title": "Your territory, \nYour vision",
 			"subtitle": "Drive your territorial communication strategy with a custom interactive map",
 			"cta": "Request a quote"
 		},

@@ -181,11 +181,6 @@
 					"description": "Vos ateliers modélisés en 3D avec un haut niveau de détail. Interactif, gamifié, avec scénarios de formation complets."
 				},
 				{
-					"tag": "3D simplifiée",
-					"title": "L'essentiel en 3D",
-					"description": "Un environnement 3D épuré, centré sur les gestes clés. Moins de détails visuels, même efficacité pédagogique, livraison plus rapide."
-				},
-				{
 					"tag": "Format documentaire",
 					"title": "Vos documents transformés en formations",
 					"description": "Importez vos PDF, Word ou PowerPoint. Notre IA les convertit en parcours interactifs avec quiz et suivi de complétion."
@@ -535,7 +530,7 @@
 		"subtitle": "Valorisez votre territoire avec une carte interactive sur mesure",
 		"description": "Une plateforme cartographique pour communiquer, fédérer et valoriser votre territoire sous les axes que vous choisissez.",
 		"hero": {
-			"title": "Valorisez vos industries, communiquez votre vision territoriale",
+			"title": "Votre territoire,\nVotre vision",
 			"subtitle": "Pilotez votre stratégie de communication territoriale avec une carte interactive sur mesure",
 			"cta": "Demander un devis"
 		},

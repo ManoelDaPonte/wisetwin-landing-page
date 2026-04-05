@@ -24,12 +24,11 @@ import {
 	PricingSection,
 } from "@/components/sections";
 
-const productImages = [
-	"/placeholder.png",
-	"/frame/WiseTrainer-wisetwin.png",
-	"/placeholder.png",
-	"/placeholder.png",
-];
+const productMedia = [
+	{ type: "video", src: "/video/capture-3dgs-entrepot.mp4" },
+	{ type: "image", src: "/frame/WiseTrainer-wisetwin.png" },
+	{ type: "image", src: "/image/formation-industrielle-automatisee.svg" },
+] as const;
 
 function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 	const items = t.raw("products.items") as Array<{
@@ -77,19 +76,30 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 			<div className="hidden lg:grid lg:grid-cols-2 min-h-screen">
 				{/* Sticky image side */}
 				<div className="relative h-screen sticky top-0">
-					{productImages.map((src, i) => (
+					{productMedia.map((media, i) => (
 						<div
 							key={i}
 							className="absolute inset-0 transition-opacity duration-700 ease-in-out"
 							style={{ opacity: activeIndex === i ? 1 : 0 }}
 						>
-							<Image
-								src={src}
-								alt={items[i]?.title ?? ""}
-								fill
-								className="object-cover"
-								priority={i === 0}
-							/>
+							{media.type === "video" ? (
+								<video
+									src={media.src}
+									autoPlay
+									loop
+									muted
+									playsInline
+									className="absolute inset-0 w-full h-full object-cover"
+								/>
+							) : (
+								<Image
+									src={media.src}
+									alt={items[i]?.title ?? ""}
+									fill
+									className="object-cover"
+									priority={i === 0}
+								/>
+							)}
 							<div className="absolute inset-0 bg-black/40" />
 						</div>
 					))}
@@ -138,16 +148,29 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 
 			{/* Mobile: stacked full-width cards */}
 			<div className="lg:hidden flex flex-col">
-				{items.map((item, i) => (
+				{items.map((item, i) => {
+					const media = productMedia[i];
+					return (
 					<div key={i} className="relative">
-						{/* Full-width image */}
+						{/* Full-width image/video */}
 						<div className="relative aspect-[16/10] overflow-hidden">
-							<Image
-								src={productImages[i]}
-								alt={item.title}
-								fill
-								className="object-cover"
-							/>
+							{media?.type === "video" ? (
+								<video
+									src={media.src}
+									autoPlay
+									loop
+									muted
+									playsInline
+									className="absolute inset-0 w-full h-full object-cover"
+								/>
+							) : (
+								<Image
+									src={media?.src ?? "/placeholder.png"}
+									alt={item.title}
+									fill
+									className="object-cover"
+								/>
+							)}
 							<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
 						</div>
 						{/* Text below */}
@@ -164,7 +187,8 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 							</span>
 						</div>
 					</div>
-				))}
+				);
+				})}
 			</div>
 		</section>
 	);
