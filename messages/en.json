@@ -45,7 +45,7 @@
 		"badge": "New: WiseTrainer — Learn more",
 		"highlights": {
 			"safety": "Immersive training",
-			"training": "Territorial communication",
+			"training": "WiseAtlas",
 			"communication": "100% tailor-made"
 		}
 	},
@@ -59,7 +59,7 @@
 			"price": "From €50/month"
 		},
 		"communication": {
-			"title": "Territorial communication",
+			"title": "WiseAtlas",
 			"tag": "Independent solution",
 			"description": "A custom interactive map to showcase your territory and communicate about your projects.",
 			"price": "€3,000/year"
