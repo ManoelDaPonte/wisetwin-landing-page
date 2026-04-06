@@ -42,7 +42,7 @@
 		"subtitle": "Wise Twin digitalise vos environnements industriels en jumeaux numériques immersifs pour former vos équipes et piloter vos infrastructures à grande échelle.",
 		"cta": "Explorer nos solutions",
 		"ctaSecondary": "",
-		"badge": "Nouveauté WiseTrainer — En savoir plus",
+		"badge": "Nouveauté WiseTrainer - En savoir plus",
 		"highlights": {
 			"safety": "Formation immersive",
 			"training": "Communication territoriale",
@@ -71,7 +71,7 @@
 		"wisetrainer": {
 			"title": "WiseTrainer LMS",
 			"tag": "Simulation immersive",
-			"description": "Simulez des interventions critiques en 3D temps réel. Consignation, évacuation, maintenance complexe — sans risque, sans arrêt de production.",
+			"description": "Simulez des interventions critiques en 3D temps réel. Consignation, évacuation, maintenance complexe - sans risque, sans arrêt de production.",
 			"price": "Sur devis"
 		},
 		"platform": {
@@ -173,17 +173,29 @@
 				{
 					"tag": "Photo-réaliste",
 					"title": "Capturé depuis vos installations",
-					"description": "Des visites 360° créées à partir de vraies photos de vos sites. Le rendu le plus fidèle possible, comme si vous y étiez."
+					"description": "Des visites 360° créées à partir de vraies photos de vos sites. Le rendu le plus fidèle possible, comme si vous y étiez.",
+					"deployment": "~1 semaine",
+					"process": "Nos techniciens viennent capturer vos installations, ou vous scannez vous-même avec votre smartphone et on s'occupe du reste",
+					"interaction": "Navigation libre et immersive, interaction via points d'intérêt",
+					"useCases": ["Accueil sécurité", "Présentation de site", "Communication institutionnelle"]
 				},
 				{
 					"tag": "3D haute fidélité",
 					"title": "Recréé sur mesure en 3D",
-					"description": "Vos ateliers modélisés en 3D avec un haut niveau de détail. Interactif, gamifié, avec scénarios de formation complets."
+					"description": "Vos ateliers modélisés en 3D avec un haut niveau de détail. Interactif, gamifié, avec scénarios de formation complets.",
+					"deployment": "~1 mois pour l'asset 3D, puis ~1 jour par scénario",
+					"process": "Partagez vos plans et références via notre plateforme sécurisée ou vos propres procédures d'accès. L'asset 3D vous appartient",
+					"interaction": "Interaction complète : manipulation d'objets, scénarios gamifiés, simulation de situations dangereuses",
+					"useCases": ["Procédures critiques", "Prise en main d'équipements", "Simulation de risques"]
 				},
 				{
 					"tag": "Format documentaire",
 					"title": "Vos documents transformés en formations",
-					"description": "Importez vos PDF, Word ou PowerPoint. Notre IA les convertit en parcours interactifs avec quiz et suivi de complétion."
+					"description": "Importez vos PDF, Word ou PowerPoint. Notre IA les convertit en parcours interactifs avec quiz et suivi de complétion.",
+					"deployment": "Quelques minutes",
+					"process": "Contenu généré automatiquement par IA depuis vos fichiers existants. Remplacez le document, la formation se met à jour",
+					"interaction": "Parcours interactifs avec quiz générés par IA",
+					"useCases": ["Conformité réglementaire", "Mise à jour de procédures", "Onboarding administratif"]
 				}
 			]
 		},

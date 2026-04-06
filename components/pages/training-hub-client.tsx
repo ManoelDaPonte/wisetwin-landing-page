@@ -14,20 +14,24 @@ import {
 	FileOutput,
 	Check,
 	MessageCircle,
+	Clock,
+	Workflow,
+	MousePointerClick,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
 import Image from "next/image";
 import { ParallaxImage } from "@/components/ui/parallax-image";
-import {
-	AdvantagesSection,
-	PricingSection,
-} from "@/components/sections";
+import { AdvantagesSection, PricingSection } from "@/components/sections";
 
 const productMedia = [
-	{ type: "video", src: "/video/capture-3dgs-entrepot.mp4" },
-	{ type: "video", src: "/video/3d-reconstruction-training-simulator.mp4" },
-	{ type: "image", src: "/image/formation-industrielle-automatisee.svg" },
+	{ type: "video", src: "/video/capture-3dgs-entrepot.mp4", fit: "cover" },
+	{ type: "video", src: "/video/3d-reconstruction-training-simulator.mp4", fit: "cover" },
+	{
+		type: "image",
+		src: "/image/formation-industrielle-automatisee.svg",
+		fit: "contain",
+	},
 ] as const;
 
 function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
@@ -35,6 +39,10 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 		tag: string;
 		title: string;
 		description: string;
+		deployment: string;
+		process: string;
+		interaction: string;
+		useCases: string[];
 	}>;
 
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -96,7 +104,11 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 									src={media.src}
 									alt={items[i]?.title ?? ""}
 									fill
-									className="object-cover"
+									className={
+										media.fit === "contain"
+											? "object-contain"
+											: "object-cover"
+									}
 									priority={i === 0}
 								/>
 							)}
@@ -124,7 +136,9 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 					{items.map((item, i) => (
 						<div
 							key={i}
-							ref={(el) => { itemRefs.current[i] = el; }}
+							ref={(el) => {
+								itemRefs.current[i] = el;
+							}}
 							className="min-h-screen flex items-center px-12 xl:px-20"
 						>
 							<div className="max-w-lg">
@@ -137,6 +151,33 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 								<p className="text-lg text-muted-foreground leading-relaxed mb-8">
 									{item.description}
 								</p>
+								<div className="space-y-4 mb-8">
+									<div className="flex items-center gap-3">
+										<div className="size-8 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+											<Clock className="size-4 text-secondary" />
+										</div>
+										<p className="text-sm font-semibold">{item.deployment}</p>
+									</div>
+									<div className="flex items-center gap-3">
+										<div className="size-8 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+											<Workflow className="size-4 text-secondary" />
+										</div>
+										<p className="text-sm text-muted-foreground flex-1">{item.process}</p>
+									</div>
+									<div className="flex items-center gap-3">
+										<div className="size-8 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+											<MousePointerClick className="size-4 text-secondary" />
+										</div>
+										<p className="text-sm text-muted-foreground flex-1">{item.interaction}</p>
+									</div>
+								</div>
+								<div className="flex flex-wrap gap-2 mb-8">
+									{item.useCases.map((uc, j) => (
+										<span key={j} className="text-xs font-medium bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1.5 rounded-full">
+											{uc}
+										</span>
+									))}
+								</div>
 								<span className="text-sm font-semibold text-secondary">
 									{t("products.quote")}
 								</span>
@@ -151,43 +192,76 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 				{items.map((item, i) => {
 					const media = productMedia[i];
 					return (
-					<div key={i} className="relative">
-						{/* Full-width image/video */}
-						<div className="relative aspect-[16/10] overflow-hidden">
-							{media?.type === "video" ? (
-								<video
-									src={media.src}
-									autoPlay
-									loop
-									muted
-									playsInline
-									className="absolute inset-0 w-full h-full object-cover"
-								/>
-							) : (
-								<Image
-									src={media?.src ?? "/placeholder.png"}
-									alt={item.title}
-									fill
-									className="object-cover"
-								/>
-							)}
-							<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+						<div key={i} className="relative">
+							{/* Full-width image/video */}
+							<div className="relative aspect-[16/10] overflow-hidden">
+								{media?.type === "video" ? (
+									<video
+										src={media.src}
+										autoPlay
+										loop
+										muted
+										playsInline
+										className="absolute inset-0 w-full h-full object-cover"
+									/>
+								) : (
+									<Image
+										src={media?.src ?? "/placeholder.png"}
+										alt={item.title}
+										fill
+										className={
+											media?.fit === "contain"
+												? "object-contain"
+												: "object-cover"
+										}
+									/>
+								)}
+								<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+							</div>
+							{/* Text below */}
+							<div className="px-6 pb-12 -mt-8 relative z-10">
+								<span className="inline-block text-xs font-mono uppercase tracking-wider text-secondary bg-secondary/10 px-3 py-1 rounded-full mb-3">
+									{item.tag}
+								</span>
+								<h3 className="text-2xl font-bold mb-3">
+									{item.title}
+								</h3>
+								<p className="text-muted-foreground leading-relaxed mb-4">
+									{item.description}
+								</p>
+								<div className="space-y-3 mb-4">
+									<div className="flex items-center gap-2">
+										<div className="size-7 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+											<Clock className="size-3.5 text-secondary" />
+										</div>
+										<p className="text-sm font-semibold">{item.deployment}</p>
+									</div>
+									<div className="flex items-center gap-2">
+										<div className="size-7 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+											<Workflow className="size-3.5 text-secondary" />
+										</div>
+										<p className="text-sm text-muted-foreground flex-1">{item.process}</p>
+									</div>
+									<div className="flex items-center gap-2">
+										<div className="size-7 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+											<MousePointerClick className="size-3.5 text-secondary" />
+										</div>
+										<p className="text-sm text-muted-foreground flex-1">{item.interaction}</p>
+									</div>
+								</div>
+								<div className="flex flex-wrap gap-1.5 mb-4">
+									{item.useCases.map((uc, j) => (
+										<span key={j} className="text-xs font-medium bg-secondary/10 text-secondary border border-secondary/20 px-2.5 py-1 rounded-full">
+											{uc}
+										</span>
+									))}
+								</div>
+								<span className="text-sm font-semibold text-secondary">
+									{t("products.quote")}
+								</span>
+							</div>
 						</div>
-						{/* Text below */}
-						<div className="px-6 pb-12 -mt-8 relative z-10">
-							<span className="inline-block text-xs font-mono uppercase tracking-wider text-secondary bg-secondary/10 px-3 py-1 rounded-full mb-3">
-								{item.tag}
-							</span>
-							<h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-							<p className="text-muted-foreground leading-relaxed mb-4">
-								{item.description}
-							</p>
-							<span className="text-sm font-semibold text-secondary">
-								{t("products.quote")}
-							</span>
-						</div>
-					</div>
-				);
+					);
 				})}
 			</div>
 		</section>
@@ -209,7 +283,10 @@ export default function TrainingHubClient() {
 		<main>
 			{/* Hero */}
 			<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-				<ParallaxImage src="/image/WiseTrainer.png" alt="WiseTrainer LMS" />
+				<ParallaxImage
+					src="/image/WiseTrainer.png"
+					alt="WiseTrainer LMS"
+				/>
 				<div className="absolute inset-0 hero-overlay" />
 
 				<div className="relative z-10 container mx-auto max-w-7xl px-4">
@@ -233,7 +310,7 @@ export default function TrainingHubClient() {
 			{/* Advantages */}
 			<AdvantagesSection />
 
-			{/* Products — immersive scroll showcase */}
+			{/* Products - immersive scroll showcase */}
 			<ProductsShowcase t={t} />
 
 			{/* Plus separator */}
@@ -261,7 +338,9 @@ export default function TrainingHubClient() {
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
 					{featureGroups.map((group) => {
 						const Icon = group.icon;
-						const items = t.raw(`features.${group.key}.items`) as string[];
+						const items = t.raw(
+							`features.${group.key}.items`,
+						) as string[];
 						return (
 							<div
 								key={group.key}
@@ -278,9 +357,14 @@ export default function TrainingHubClient() {
 								</p>
 								<ul className="space-y-2 mt-auto">
 									{items.map((item, i) => (
-										<li key={i} className="flex items-start gap-2">
+										<li
+											key={i}
+											className="flex items-start gap-2"
+										>
 											<Check className="size-4 text-secondary shrink-0 mt-0.5" />
-											<span className="text-sm">{item}</span>
+											<span className="text-sm">
+												{item}
+											</span>
 										</li>
 									))}
 								</ul>
@@ -293,7 +377,9 @@ export default function TrainingHubClient() {
 			{/* CTA */}
 			<Section id="cta" variant="default">
 				<div className="text-center max-w-2xl mx-auto">
-					<h2 className="text-3xl font-bold mb-4">{t("cta.title")}</h2>
+					<h2 className="text-3xl font-bold mb-4">
+						{t("cta.title")}
+					</h2>
 					<p className="text-muted-foreground mb-8">
 						{t("cta.description")}
 					</p>
