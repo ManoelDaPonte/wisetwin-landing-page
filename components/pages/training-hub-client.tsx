@@ -26,7 +26,7 @@ import {
 
 const productMedia = [
 	{ type: "video", src: "/video/capture-3dgs-entrepot.mp4" },
-	{ type: "image", src: "/frame/WiseTrainer-wisetwin.png" },
+	{ type: "video", src: "/video/3d-reconstruction-training-simulator.mp4" },
 	{ type: "image", src: "/image/formation-industrielle-automatisee.svg" },
 ] as const;
 
