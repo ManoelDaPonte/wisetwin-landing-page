@@ -4,8 +4,22 @@ import nodemailer from "nodemailer";
 import { cookies } from "next/headers";
 import { validateCSRFToken } from "@/lib/csrf";
 
+// Rate limiting en mémoire — 1 message par IP par minute
+const rateLimitMap = new Map<string, number>();
+
 export async function POST(req: NextRequest) {
   try {
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    const now = Date.now();
+    const lastSent = rateLimitMap.get(ip);
+
+    if (lastSent && now - lastSent < 60_000) {
+      return NextResponse.json(
+        { error: "Veuillez patienter avant d'envoyer un nouveau message." },
+        { status: 429 }
+      );
+    }
+
     // Récupérer les données du formulaire
     const formData = await req.json();
     const { firstName, lastName, email, subject, company, message, csrfToken } = formData;
@@ -89,6 +103,9 @@ export async function POST(req: NextRequest) {
     // Envoi des deux emails
     await transporter.sendMail(mailOptions);
     await transporter.sendMail(confirmationMailOptions);
+
+    // Enregistrer le rate limit
+    rateLimitMap.set(ip, Date.now());
 
     // Renvoyer une réponse de succès
     return NextResponse.json(

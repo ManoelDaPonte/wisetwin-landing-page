@@ -6,7 +6,6 @@ import { toast } from "sonner";
 import {
 	Send,
 	AlertTriangle,
-	CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -32,7 +31,7 @@ export function ContactSection() {
 		csrfToken: "",
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [submitted, setSubmitted] = useState(false);
+	const [cooldown, setCooldown] = useState(false);
 	const [error, setError] = useState("");
 
 	// Obtenir un token CSRF au chargement du composant
@@ -67,8 +66,9 @@ export function ContactSection() {
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		if (cooldown) return;
 		setIsSubmitting(true);
-		setError(""); // Réinitialiser les erreurs précédentes
+		setError("");
 
 		try {
 			if (!formState.firstName || !formState.lastName || !formState.email || !formState.message) {
@@ -96,7 +96,7 @@ export function ContactSection() {
 			}
 
 			setIsSubmitting(false);
-			setSubmitted(true);
+			setCooldown(true);
 			setFormState({
 				firstName: "",
 				lastName: "",
@@ -107,15 +107,12 @@ export function ContactSection() {
 				csrfToken: formState.csrfToken,
 			});
 
-			toast.success(t("success.title"), {
-				description: `${t("success.emailSent")} ${formState.email}.`,
-				duration: 8000,
-				icon: <CheckCircle className="size-4" />,
-			});
+			toast.success(t("success.title"));
 
+			// Cooldown 60s anti-spam
 			setTimeout(() => {
-				setSubmitted(false);
-			}, 8000);
+				setCooldown(false);
+			}, 60000);
 		} catch (error) {
 			console.error("Error sending message:", error);
 			setIsSubmitting(false);
@@ -151,23 +148,7 @@ export function ContactSection() {
 							</CardDescription>
 						</CardHeader>
 						<CardContent>
-							{submitted ? (
-								<div
-									className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-300 p-6 rounded-lg text-center"
-								>
-									<div className="flex justify-center mb-4">
-										<CheckCircle className="size-12 text-green-500" />
-									</div>
-									<h3 className="text-xl font-semibold mb-2">
-										{t("success.title")}
-									</h3>
-									<p>{t("success.description")}</p>
-									<p className="text-sm mt-4">
-										{t("success.emailSent")} {formState.email}
-									</p>
-								</div>
-							) : (
-								<form onSubmit={handleSubmit}>
+							<form onSubmit={handleSubmit}>
 									{error && (
 										<div className="flex items-start gap-2 mb-6 p-4 bg-destructive/10 border border-destructive text-destructive rounded-md">
 											<AlertTriangle size={20} className="flex-shrink-0 mt-0.5" />
@@ -267,10 +248,10 @@ export function ContactSection() {
 									</div>
 
 									<div className="flex justify-end">
-										<Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto" size="lg">
+										<Button type="submit" disabled={isSubmitting || cooldown} className="w-full sm:w-auto" size="lg">
 											{isSubmitting ? (
 												<>
-													<div className="h-5 w-5 border-t-2 border-r-2 border-white rounded-full animate-spin mr-2"></div>
+													<div className="h-5 w-5 border-t-2 border-r-2 border-current rounded-full animate-spin mr-2"></div>
 													<span>{t("form.sending")}</span>
 												</>
 											) : (
@@ -282,7 +263,6 @@ export function ContactSection() {
 										</Button>
 									</div>
 								</form>
-							)}
 						</CardContent>
 				</Card>
 			</div>
