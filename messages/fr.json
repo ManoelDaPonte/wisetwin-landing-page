@@ -14,8 +14,6 @@
 		"solutions": "Solutions",
 		"platform": "La Plateforme",
 		"wisetrainer": "WiseTrainer LMS",
-		"wisepaper": "WisePaper",
-		"wisetour": "WiseTour",
 		"wiseatlas": "WiseAtlas",
 		"training": "Formation",
 		"communication": "Communication",
@@ -74,18 +72,6 @@
 			"title": "Plateforme de gestion",
 			"description": "Planification, reporting, plans de formation et suivi des apprenants centralisés."
 		},
-		"wisepaper": {
-			"title": "WisePaper",
-			"tag": "IA documentaire",
-			"description": "Automatisez la création de vos supports pédagogiques, QCM et cours à partir de votre documentation. L'ingénierie pédagogique à la vitesse de l'IA.",
-			"price": "Inclus"
-		},
-		"wisetour": {
-			"title": "WiseTour",
-			"tag": "Visite photo-réaliste",
-			"description": "Des visites virtuelles photo-réalistes de vos sites à partir de captures 360°. Formez vos équipes à distance sur l'environnement réel de travail.",
-			"price": "Sur devis"
-		},
 		"wiseatlas": {
 			"title": "WiseAtlas",
 			"tag": "Vision stratégique",
@@ -114,30 +100,6 @@
 					"realism": "3D modélisée",
 					"interactivity": "Élevée",
 					"networkDemand": "Forte",
-					"equipment": "PC",
-					"web": true,
-					"interactionTracking": true
-				},
-				"wisepaper": {
-					"devTime": "Instantané",
-					"activityInterruption": "Aucune",
-					"serviceType": "Self-service",
-					"userTracking": true,
-					"realism": "Documents",
-					"interactivity": "Moyenne",
-					"networkDemand": "Faible",
-					"equipment": "PC / Tablette / Mobile",
-					"web": true,
-					"interactionTracking": true
-				},
-				"wisetour": {
-					"devTime": "Instant à 1 semaine",
-					"activityInterruption": "0 à 1 visite sur site",
-					"serviceType": "Self-service / Prestation",
-					"userTracking": true,
-					"realism": "Photo-réaliste",
-					"interactivity": "Moyenne",
-					"networkDemand": "Moyenne",
 					"equipment": "PC",
 					"web": true,
 					"interactionTracking": true
@@ -173,7 +135,11 @@
 					"deployment": "~1 semaine",
 					"process": "Nos techniciens viennent capturer vos installations, ou vous scannez vous-même avec votre smartphone et on s'occupe du reste",
 					"interaction": "Navigation libre et immersive, interaction via points d'intérêt",
-					"useCases": ["Accueil sécurité", "Présentation de site", "Communication institutionnelle"],
+					"useCases": [
+						"Accueil sécurité",
+						"Présentation de site",
+						"Communication institutionnelle"
+					],
 					"price": "Sur devis"
 				},
 				{
@@ -183,7 +149,11 @@
 					"deployment": "~1 mois pour l'asset 3D, puis ~1 jour par scénario",
 					"process": "Partagez vos plans et références via notre plateforme sécurisée ou vos propres procédures d'accès. L'asset 3D vous appartient",
 					"interaction": "Interaction complète : manipulation d'objets, scénarios gamifiés, simulation de situations dangereuses",
-					"useCases": ["Procédures critiques", "Prise en main d'équipements", "Simulation de risques"],
+					"useCases": [
+						"Procédures critiques",
+						"Prise en main d'équipements",
+						"Simulation de risques"
+					],
 					"price": "Sur devis"
 				},
 				{
@@ -193,7 +163,11 @@
 					"deployment": "Quelques minutes",
 					"process": "Contenu généré automatiquement par IA depuis vos fichiers existants. Remplacez le document, la formation se met à jour",
 					"interaction": "Parcours interactifs avec quiz générés par IA",
-					"useCases": ["Conformité réglementaire", "Mise à jour de procédures", "Onboarding administratif"],
+					"useCases": [
+						"Conformité réglementaire",
+						"Mise à jour de procédures",
+						"Onboarding administratif"
+					],
 					"price": "Inclus dans la plateforme"
 				}
 			]
@@ -415,127 +389,6 @@
 			"button": "Demander un devis"
 		}
 	},
-	"wisepaper": {
-		"title": "WisePaper",
-		"subtitle": "Formations digitalisées",
-		"description": "Créez des cours ou digitalisez vos documents existants, et suivez les résultats de vos apprenants.",
-		"hero": {
-			"title": "Formations en ligne",
-			"subtitle": "Notre IA transforme vos documents en formations interactives en deux clics. Importez, et c'est prêt.",
-			"cta": "Essai gratuit",
-			"badge": "Inclus dans votre licence",
-			"highlights": [
-				"Importez vos PDF, Word ou PowerPoint",
-				"L'IA génère cours et QCM automatiquement",
-				"Suivi de complétion et de compréhension",
-				"Prêt en moins d'une minute"
-			]
-		},
-		"flow": {
-			"title": "Comment ça marche ?",
-			"subtitle": "En 3 étapes, transformez vos documents en formations avec suivi",
-			"steps": {
-				"import": {
-					"title": "Importez",
-					"description": "Uploadez vos PDF, Word ou PowerPoint existants",
-					"duration": "Instantané"
-				},
-				"process": {
-					"title": "IA",
-					"description": "Notre IA analyse, restructure le contenu et génère des quiz",
-					"duration": "< 1 min"
-				},
-				"track": {
-					"title": "Suivez",
-					"description": "Voyez qui a lu et compris vos formations",
-					"duration": "Immédiat"
-				}
-			}
-		},
-		"useCases": {
-			"title": "Cas d'usage",
-			"compliance": {
-				"title": "Conformité réglementaire",
-				"description": "Assurez-vous que tous vos collaborateurs ont lu et compris les procédures obligatoires, avec preuve de complétion."
-			},
-			"onboarding": {
-				"title": "Onboarding",
-				"description": "Créez des parcours d'intégration pour les nouveaux arrivants avec suivi de leur progression."
-			},
-			"procedures": {
-				"title": "Procédures & modes opératoires",
-				"description": "Transformez vos documents internes en formations interactives avec QCM de validation."
-			}
-		},
-		"cta": {
-			"title": "Prêt à digitaliser vos formations ?",
-			"description": "Commencez gratuitement dès maintenant. Aucune carte bancaire requise.",
-			"button": "Essai gratuit"
-		}
-	},
-	"wisetour": {
-		"title": "WiseTour",
-		"subtitle": "Ultra-réalisme",
-		"description": "Sécurisez, communiquez, et informez sur vos installations de manière ultra-réaliste.",
-		"hero": {
-			"title": "Acceuil sécurité, formation interne, communication",
-			"subtitle": "Déplacez-vous dans des environnements 3D ultra-réalistes capturés directement depuis vos installations. Accompagnez la visite de QCM pour valider les connaissances.",
-			"cta": "Demander un devis",
-			"badge": "Self-service",
-			"highlights": [
-				"Environnements photo-réalistes capturés sur site",
-				"Éditeur inclus pour ajouter QCM et parcours",
-				"Navigation libre dans vos installations",
-				"Création de parcours personnalisés"
-			]
-		},
-		"howItWorks": {
-			"title": "Comment ça marche ?",
-			"subtitle": "De la capture à la formation en quelques étapes",
-			"steps": {
-				"capture": {
-					"title": "Capture sur site",
-					"description": "Nous nous déplaçons sur site ou vous utilisez votre propre équipement pour capturer vos installations en photo/vidéo.",
-					"duration": "~1 jour"
-				},
-				"processing": {
-					"title": "Traitement 3D",
-					"description": "Nos algorithmes transforment les captures en environnements 3D photo-réalistes navigables.",
-					"duration": "2-3 jours"
-				},
-				"editor": {
-					"title": "Éditeur de parcours",
-					"description": "Utilisez notre éditeur self-service pour ajouter des points d'intérêt, QCM et parcours de formation.",
-					"duration": "Self-service"
-				},
-				"training": {
-					"title": "Formation",
-					"description": "Vos apprenants se déplacent librement dans l'environnement et répondent aux QCM intégrés.",
-					"duration": "Immédiat"
-				}
-			}
-		},
-		"useCases": {
-			"title": "Cas d'usage",
-			"safety": {
-				"title": "Visite sécurité",
-				"description": "Faites découvrir les consignes de sécurité d'un site avant la première visite terrain."
-			},
-			"onboarding": {
-				"title": "Onboarding",
-				"description": "Accueillez vos nouveaux collaborateurs avec une visite virtuelle de leurs futurs locaux."
-			},
-			"maintenance": {
-				"title": "Repérage maintenance",
-				"description": "Permettez aux techniciens de se familiariser avec un site avant intervention."
-			}
-		},
-		"cta": {
-			"title": "Prêt à capturer vos environnements ?",
-			"description": "Contactez-nous pour planifier une capture ou découvrir comment utiliser votre propre équipement.",
-			"button": "Demander un devis"
-		}
-	},
 	"wiseatlas": {
 		"title": "WiseAtlas",
 		"subtitle": "Valorisez votre territoire avec une carte interactive sur mesure",
@@ -620,22 +473,42 @@
 			"territory": {
 				"title": "Attractivité territoriale",
 				"description": "Valorisez votre territoire auprès d’investisseurs, d’entreprises ou de nouveaux habitants avec une vitrine interactive.",
-				"tags": ["ZIBAC", "ADE", "Collectivité", "Intercommunalité"]
+				"tags": [
+					"ZIBAC",
+					"ADE",
+					"Collectivité",
+					"Intercommunalité"
+				]
 			},
 			"stakeholders": {
 				"title": "Concertation publique",
 				"description": "Présentez vos projets d’aménagement aux citoyens et recueillez leurs retours directement sur la carte.",
-				"tags": ["PLU", "ZAC", "Enquête publique", "Aménagement"]
+				"tags": [
+					"PLU",
+					"ZAC",
+					"Enquête publique",
+					"Aménagement"
+				]
 			},
 			"infrastructure": {
 				"title": "Suivi de projets",
 				"description": "Communiquez l’avancement de vos projets d’infrastructure ou de développement en temps réel.",
-				"tags": ["BTP", "Rénovation", "Décarbonation", "Infrastructure"]
+				"tags": [
+					"BTP",
+					"Rénovation",
+					"Décarbonation",
+					"Infrastructure"
+				]
 			},
 			"consultation": {
 				"title": "Consultation publique",
 				"description": "Montrer une extension en 3D est bien moins anxiogène pour les riverains qu’un plan de masse technique. Interface simplifiée pour les citoyens.",
-				"tags": ["Acceptabilité sociale", "Aménagement", "Citoyens", "3D"]
+				"tags": [
+					"Acceptabilité sociale",
+					"Aménagement",
+					"Citoyens",
+					"3D"
+				]
 			}
 		},
 		"cta": {
@@ -793,30 +666,6 @@
 					"Sessions illimitées"
 				]
 			},
-			"wisepaper": {
-				"title": "WisePaper",
-				"price": "Inclus",
-				"description": "Transformez vos documents de formation existants (PDF, PowerPoint, Word) en parcours digitaux interactifs avec QCM de validation. L'IA analyse vos contenus et génère automatiquement des questions pertinentes.",
-				"specs": [
-					"0 arrêt de production",
-					"Création instantanée en self-service",
-					"100% web",
-					"Aucun équipement requis",
-					"Sessions illimitées"
-				]
-			},
-			"wisetour": {
-				"title": "WiseTour",
-				"price": "À partir de 0 €",
-				"description": "Des visites virtuelles photo-réalistes de vos sites à partir de captures 360°. Intégrez des points d'intérêt interactifs et des QCM pour former vos équipes à distance sur l'environnement réel de travail.",
-				"specs": [
-					"1 visite sur site nécessaire",
-					"Nous venons ou vous scannez vous-même",
-					"Éditeur self-service inclus",
-					"Résultat 100% web",
-					"Sessions illimitées"
-				]
-			},
 			"wiseatlas": {
 				"title": "WiseAtlas",
 				"price": "3 000€/an",
@@ -878,16 +727,6 @@
 			"title": "Outils",
 			"subtitle": "Ajoutez les outils dont vous avez besoin",
 			"included": "Inclus",
-			"wisepaper": {
-				"title": "WisePaper",
-				"description": "Digitalisez vos formations papier",
-				"price": "210"
-			},
-			"wisetour": {
-				"title": "WiseTour",
-				"description": "Visites virtuelles photo-réalistes",
-				"price": "410"
-			},
 			"wisetrainer": {
 				"title": "WiseTrainer LMS",
 				"description": "Simulateurs 3D immersifs",
@@ -997,32 +836,6 @@
 				"tier2": "À partir de 5 WiseTrainer : -15%",
 				"tier3": "À partir de 10 WiseTrainer : -25%"
 			}
-		}
-	},
-	"wisetrainerPricing": {
-		"title": "Tarifs WiseTrainer",
-		"subtitle": "Créez votre environnement 3D sur mesure",
-		"description": "Le développement de votre asset 3D est un investissement initial. Ensuite, chaque scénario coûte 500 euros.",
-		"exclVat": "HT",
-		"gammes": {
-			"safe": {
-				"title": "Simulateur Sécurité",
-				"description": "Simulateur sécurité",
-				"price": "4 500",
-				"oldPrice": "5 625",
-				"unit": "à partir de"
-			},
-			"tech": {
-				"title": "Simulateur Maintenance",
-				"description": "Simulateur maintenance",
-				"price": "11 875",
-				"unit": "à partir de"
-			}
-		},
-		"scenario": {
-			"title": "Scénarios additionnels",
-			"price": "500",
-			"unit": "par scénario"
 		}
 	},
 	"faq": {

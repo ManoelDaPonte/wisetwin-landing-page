@@ -278,7 +278,7 @@ const featureGroups = [
 	{ key: "exports", icon: FileOutput },
 ] as const;
 
-export default function TrainingHubClient() {
+export default function WiseTrainerClient() {
 	const t = useTranslations("platform");
 	return (
 		<main>

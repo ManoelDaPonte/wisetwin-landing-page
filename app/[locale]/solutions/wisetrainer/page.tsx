@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import TrainingHubClient from "@/components/pages/training-hub-client";
+import WiseTrainerClient from "@/components/pages/wisetrainer-client";
 
 export async function generateMetadata({
 	params,
@@ -15,5 +15,5 @@ export async function generateMetadata({
 }
 
 export default function WiseTrainerPage() {
-	return <TrainingHubClient />;
+	return <WiseTrainerClient />;
 }
