@@ -292,10 +292,10 @@ export default function TrainingHubClient() {
 
 				<div className="relative z-10 container mx-auto max-w-7xl px-4">
 					<div className="text-center max-w-3xl mx-auto">
-						<h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-foreground dark:text-white">
+						<h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-foreground">
 							{t("hero.title")}
 						</h1>
-						<p className="text-lg lg:text-xl text-foreground/70 dark:text-white/80 mb-10 leading-relaxed">
+						<p className="text-lg lg:text-xl text-foreground/70 mb-10 leading-relaxed">
 							{t("hero.subtitle")}
 						</p>
 						<Button size="lg" asChild>
