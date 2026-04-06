@@ -177,7 +177,8 @@
 					"deployment": "~1 semaine",
 					"process": "Nos techniciens viennent capturer vos installations, ou vous scannez vous-même avec votre smartphone et on s'occupe du reste",
 					"interaction": "Navigation libre et immersive, interaction via points d'intérêt",
-					"useCases": ["Accueil sécurité", "Présentation de site", "Communication institutionnelle"]
+					"useCases": ["Accueil sécurité", "Présentation de site", "Communication institutionnelle"],
+					"price": "Sur devis"
 				},
 				{
 					"tag": "3D haute fidélité",
@@ -186,7 +187,8 @@
 					"deployment": "~1 mois pour l'asset 3D, puis ~1 jour par scénario",
 					"process": "Partagez vos plans et références via notre plateforme sécurisée ou vos propres procédures d'accès. L'asset 3D vous appartient",
 					"interaction": "Interaction complète : manipulation d'objets, scénarios gamifiés, simulation de situations dangereuses",
-					"useCases": ["Procédures critiques", "Prise en main d'équipements", "Simulation de risques"]
+					"useCases": ["Procédures critiques", "Prise en main d'équipements", "Simulation de risques"],
+					"price": "Sur devis"
 				},
 				{
 					"tag": "Format documentaire",
@@ -195,7 +197,8 @@
 					"deployment": "Quelques minutes",
 					"process": "Contenu généré automatiquement par IA depuis vos fichiers existants. Remplacez le document, la formation se met à jour",
 					"interaction": "Parcours interactifs avec quiz générés par IA",
-					"useCases": ["Conformité réglementaire", "Mise à jour de procédures", "Onboarding administratif"]
+					"useCases": ["Conformité réglementaire", "Mise à jour de procédures", "Onboarding administratif"],
+					"price": "Inclus dans la plateforme"
 				}
 			]
 		},
@@ -747,11 +750,17 @@
 		"isolation": {
 			"title": "Isolation des données",
 			"description": "Architecture multi-tenant avec séparation stricte des données"
+		},
+		"iso": {
+			"title": "Alignés sur les standards ISO 27001",
+			"description": "Nous travaillons avec des industriels soumis à des exigences strictes en matière de sécurité. Nous appliquons les bonnes pratiques de la norme ISO 27001 dans la conception et l'exploitation de notre plateforme."
 		}
 	},
 	"pricing": {
-		"title": "Licences par souscription",
-		"subtitle": "Choisissez la formule adaptée à votre organisation",
+		"title": "Accès plateforme",
+		"subtitle": "Gérez vos formations, suivez vos apprenants et pilotez vos déploiements depuis une seule interface.",
+		"freeYear": "1ère année offerte — jusqu'à 3 admins",
+		"seeFeatures": "Voir les fonctionnalités de la plateforme ↓",
 		"billing": {
 			"monthly": "1 an",
 			"yearly": "3 ans",
@@ -762,7 +771,12 @@
 		"adminCounter": {
 			"title": "Nombre d'administrateurs",
 			"admin": "admin",
-			"admins": "admins"
+			"admins": "admins",
+			"degressiveTooltip": "Tarif dégressif : chaque admin supplémentaire coûte moins que le précédent.",
+			"adminLabel": "Admin",
+			"priceLabel": "Coût additionnel",
+			"included": "Inclus",
+			"multiSiteNote": "Tarif par site. Pour un déploiement multi-sites, contactez-nous pour un devis sur mesure."
 		},
 		"discountBanner": {
 			"firstOrder": "-20% sur la 1ère commande"

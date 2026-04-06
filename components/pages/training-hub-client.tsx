@@ -42,6 +42,7 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 		deployment: string;
 		process: string;
 		interaction: string;
+		price: string;
 		useCases: string[];
 	}>;
 
@@ -179,7 +180,7 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 									))}
 								</div>
 								<span className="text-sm font-semibold text-secondary">
-									{t("products.quote")}
+									{item.price}
 								</span>
 							</div>
 						</div>
@@ -257,7 +258,7 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 									))}
 								</div>
 								<span className="text-sm font-semibold text-secondary">
-									{t("products.quote")}
+									{item.price}
 								</span>
 							</div>
 						</div>
