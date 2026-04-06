@@ -28,7 +28,7 @@ import {
 	CollapsibleContent,
 	CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { DevBanner } from "@/components/layout/dev-banner";
+
 
 export function Header() {
 	const t = useTranslations("nav");
@@ -87,7 +87,6 @@ export function Header() {
 
 	return (
 		<div className="fixed top-0 left-0 right-0 w-full z-50">
-			<DevBanner />
 			<header
 				className={cn(
 					"w-full transition-all duration-300 border-b border-border/20 py-4",
