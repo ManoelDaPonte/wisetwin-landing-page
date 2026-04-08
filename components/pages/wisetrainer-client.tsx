@@ -285,7 +285,7 @@ export default function WiseTrainerClient() {
 			{/* Hero */}
 			<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 				<ParallaxImage
-					src="/image/WiseTrainer.png"
+					src="/image/WiseTrainer.webp"
 					alt="WiseTrainer LMS"
 				/>
 				<div className="absolute inset-0 hero-overlay" />

@@ -2,13 +2,16 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { JsonLd } from "@/components/seo/json-ld";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -20,11 +23,23 @@ const geistMono = Geist_Mono({
 	subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-	title: "WiseTwin - Votre formation industrielle immersive",
-	description:
-		"Nous developpons des formations immersives sur-mesure visant a ameliorer la securite et les competences de vos equipes sur les machines industrielles.",
-};
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "metadata" });
+
+	return {
+		metadataBase: new URL("https://wisetwin.eu"),
+		title: {
+			default: t("layout.title"),
+			template: `%s | WiseTwin`,
+		},
+		description: t("layout.description"),
+	};
+}
 
 type Props = {
 	children: React.ReactNode;
@@ -64,6 +79,29 @@ export default async function LocaleLayout({ children, params }: Props) {
 						<Toaster />
 					</ThemeProvider>
 				</NextIntlClientProvider>
+				<JsonLd
+					data={{
+						"@context": "https://schema.org",
+						"@type": "Organization",
+						name: "WiseTwin",
+						url: "https://wisetwin.eu",
+						logo: "https://wisetwin.eu/logo-wisetwin-light.png",
+						description:
+							"Solutions immersives de jumeaux numériques pour la formation industrielle et la communication territoriale.",
+						address: {
+							"@type": "PostalAddress",
+							streetAddress:
+								"Bâtiment EcosystèmeD, 60 route du Pertuis du Môle 2",
+							addressLocality: "Dunkerque",
+							postalCode: "59140",
+							addressCountry: "FR",
+						},
+						email: "contact@wisetwin.eu",
+						sameAs: [],
+					}}
+				/>
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);

@@ -12,6 +12,18 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale, namespace: "footer" });
 	return {
 		title: `${t("privacy")} - WiseTwin`,
+		description:
+			locale === "fr"
+				? "Politique de confidentialité de WiseTwin. Découvrez comment nous protégeons vos données personnelles conformément au RGPD."
+				: "WiseTwin privacy policy. Learn how we protect your personal data in compliance with GDPR.",
+		robots: { index: false, follow: true },
+		alternates: {
+			canonical: `https://wisetwin.eu/${locale}/privacy`,
+			languages: {
+				fr: "https://wisetwin.eu/fr/privacy",
+				en: "https://wisetwin.eu/en/privacy",
+			},
+		},
 	};
 }
 

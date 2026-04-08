@@ -45,12 +45,12 @@ const audiences = [
 	{
 		key: "collectivites",
 		icon: Landmark,
-		image: "/image/ecosystemed.wisetwin.eu_.png",
+		image: "/image/ecosystemed.wisetwin.eu_.webp",
 	},
 	{
 		key: "entreprises",
 		icon: Factory,
-		image: "/image/WiseAtlas-entreprises.png",
+		image: "/image/WiseAtlas-entreprises.webp",
 	},
 ] as const;
 
@@ -67,7 +67,7 @@ export default function WiseAtlasClient() {
 		<main>
 			{/* Hero */}
 			<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-				<ParallaxImage src="/image/WiseAtlas.png" alt="WiseAtlas" />
+				<ParallaxImage src="/image/WiseAtlas.webp" alt="WiseAtlas" />
 				<div className="absolute inset-0 hero-overlay" />
 
 				<div className="relative z-10 container mx-auto max-w-7xl px-4">
@@ -124,7 +124,7 @@ export default function WiseAtlasClient() {
 					{/* Showcase image */}
 					<div className="relative aspect-[21/9] rounded-2xl overflow-hidden border border-border shadow-xl bg-muted">
 						<Image
-							src="/image/WiseAtlas.png"
+							src="/image/WiseAtlas.webp"
 							alt="WiseAtlas platform"
 							fill
 							className="object-cover"

@@ -12,6 +12,18 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale, namespace: "footer" });
 	return {
 		title: `${t("terms")} - WiseTwin`,
+		description:
+			locale === "fr"
+				? "Conditions générales de vente de WiseTwin. Abonnements, tarification et obligations contractuelles."
+				: "WiseTwin terms and conditions. Subscriptions, pricing and contractual obligations.",
+		robots: { index: false, follow: true },
+		alternates: {
+			canonical: `https://wisetwin.eu/${locale}/terms`,
+			languages: {
+				fr: "https://wisetwin.eu/fr/terms",
+				en: "https://wisetwin.eu/en/terms",
+			},
+		},
 	};
 }
 

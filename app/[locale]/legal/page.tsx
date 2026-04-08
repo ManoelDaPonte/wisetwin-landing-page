@@ -12,6 +12,18 @@ export async function generateMetadata({
 	const t = await getTranslations({ locale, namespace: "footer" });
 	return {
 		title: `${t("legal")} - WiseTwin`,
+		description:
+			locale === "fr"
+				? "Mentions légales de Wise Software Solution SAS, exploitant la marque WiseTwin."
+				: "Legal notice for Wise Software Solution SAS, operating the WiseTwin brand.",
+		robots: { index: false, follow: true },
+		alternates: {
+			canonical: `https://wisetwin.eu/${locale}/legal`,
+			languages: {
+				fr: "https://wisetwin.eu/fr/legal",
+				en: "https://wisetwin.eu/en/legal",
+			},
+		},
 	};
 }
 

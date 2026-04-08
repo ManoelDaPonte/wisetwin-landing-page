@@ -1,4 +1,38 @@
 {
+	"metadata": {
+		"layout": {
+			"title": "WiseTwin - Immersive industrial training with digital twins",
+			"description": "Immersive digital twin solutions to train your industrial teams, digitize your procedures, and manage your infrastructure."
+		},
+		"home": {
+			"title": "WiseTwin - Digital twin & immersive training for Industry 4.0",
+			"description": "Transform your industrial training with immersive digital twin solutions. 3D simulators, procedure digitization, and interactive maps.",
+			"ogTitle": "WiseTwin - Immersive industrial training",
+			"ogDescription": "Immersive digital twins to train your teams and digitize your industrial processes."
+		},
+		"wisetrainer": {
+			"description": "Custom-built immersive 3D simulator for industrial training. Train your teams safely on your own equipment.",
+			"ogTitle": "WiseTrainer - 3D industrial training simulator",
+			"ogDescription": "Train your teams on immersive 3D simulators that faithfully reproduce your industrial equipment."
+		},
+		"wiseatlas": {
+			"description": "Interactive map to showcase your territory, industrial sites and infrastructure with immersive virtual tours.",
+			"ogTitle": "WiseAtlas - Interactive map & virtual tours",
+			"ogDescription": "Showcase your territory with an interactive map enriched with virtual tours and immersive content."
+		},
+		"faq": {
+			"title": "FAQ - Frequently asked questions",
+			"description": "Find answers to your questions about WiseTwin: immersive training, 3D simulators, pricing, deployment and data security.",
+			"ogTitle": "WiseTwin FAQ - All your questions answered",
+			"ogDescription": "Frequently asked questions about our immersive training and digital twin solutions."
+		},
+		"notFound": {
+			"title": "Page not found",
+			"heading": "Page not found",
+			"description": "The page you are looking for does not exist or has been moved.",
+			"backHome": "Back to home"
+		}
+	},
 	"trustedBy": {
 		"title": "Trusted by industry leaders"
 	},
