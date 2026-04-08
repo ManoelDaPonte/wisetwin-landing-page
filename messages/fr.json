@@ -1,4 +1,38 @@
 {
+	"metadata": {
+		"layout": {
+			"title": "WiseTwin - Formation industrielle immersive par jumeau numérique",
+			"description": "Solutions immersives de jumeaux numériques pour former vos équipes industrielles, digitaliser vos procédures et piloter vos infrastructures."
+		},
+		"home": {
+			"title": "WiseTwin - Jumeau numérique & formation immersive industrie 4.0",
+			"description": "Transformez votre formation industrielle avec nos solutions de jumeaux numériques immersifs. Simulateurs 3D, digitalisation de procédures et carte interactive.",
+			"ogTitle": "WiseTwin - Formation industrielle immersive",
+			"ogDescription": "Jumeaux numériques immersifs pour former vos équipes et digitaliser vos processus industriels."
+		},
+		"wisetrainer": {
+			"description": "Simulateur 3D immersif sur mesure pour la formation industrielle. Formez vos équipes en toute sécurité sur vos propres équipements.",
+			"ogTitle": "WiseTrainer - Simulateur de formation industrielle 3D",
+			"ogDescription": "Formez vos équipes sur des simulateurs 3D immersifs reproduisant fidèlement vos équipements industriels."
+		},
+		"wiseatlas": {
+			"description": "Carte interactive pour valoriser votre territoire, vos sites industriels et vos infrastructures avec des visites virtuelles immersives.",
+			"ogTitle": "WiseAtlas - Carte interactive & visites virtuelles",
+			"ogDescription": "Valorisez votre territoire avec une carte interactive enrichie de visites virtuelles et contenus immersifs."
+		},
+		"faq": {
+			"title": "FAQ - Questions fréquentes",
+			"description": "Trouvez les réponses à vos questions sur WiseTwin : formation immersive, simulateurs 3D, tarifs, déploiement et sécurité des données.",
+			"ogTitle": "FAQ WiseTwin - Toutes vos questions",
+			"ogDescription": "Questions fréquentes sur nos solutions de formation immersive et jumeaux numériques."
+		},
+		"notFound": {
+			"title": "Page introuvable",
+			"heading": "Page introuvable",
+			"description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+			"backHome": "Retour à l'accueil"
+		}
+	},
 	"trustedBy": {
 		"title": "Ils nous font confiance"
 	},

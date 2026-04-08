@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import HomeClient from "@/components/pages/home-client";
 
 export async function generateMetadata({
@@ -7,34 +8,46 @@ export async function generateMetadata({
 	params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "metadata.home" });
+
+	const keywords =
+		locale === "fr"
+			? [
+					"jumeau numérique",
+					"formation industrielle",
+					"simulateur 3D",
+					"réalité virtuelle",
+					"industrie 4.0",
+					"formation immersive",
+					"formation sécurité",
+					"digitalisation industrielle",
+				]
+			: [
+					"digital twin",
+					"industrial training",
+					"3D simulator",
+					"virtual reality",
+					"industry 4.0",
+					"immersive training",
+					"safety training",
+					"industrial digitization",
+				];
 
 	return {
-		title: "WiseTwin - Solutions innovantes pour la sécurité",
-		description:
-			"Transformez votre formation industrielle avec nos solutions immersives. Tout un écosystème pour optimiser vos processus et former vos équipes.",
-		keywords: [
-			"réalité virtuelle",
-			"industrie 4.0",
-			"formation industrielle",
-			"VR",
-			"simulation",
-			"maintenance prédictive",
-			"formation sécurité",
-			"jumeau numérique",
-		],
+		title: t("title"),
+		description: t("description"),
+		keywords,
 		openGraph: {
-			title: "WiseTwin - Solutions innovantes pour la sécurité",
-			description:
-				"Transformez votre formation industrielle avec nos solutions VR immersives",
+			title: t("ogTitle"),
+			description: t("ogDescription"),
 			type: "website",
 			locale: locale === "fr" ? "fr_FR" : "en_US",
 			url: `https://wisetwin.eu/${locale}`,
 		},
 		twitter: {
 			card: "summary_large_image",
-			title: "WiseTwin - Solutions innovantes pour la sécurité",
-			description:
-				"Transformez votre formation industrielle avec nos solutions VR immersives",
+			title: t("ogTitle"),
+			description: t("ogDescription"),
 		},
 		alternates: {
 			canonical: `https://wisetwin.eu/${locale}`,
