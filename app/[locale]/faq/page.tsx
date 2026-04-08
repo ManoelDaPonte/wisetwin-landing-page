@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import FaqClient, { allFaqKeys } from "@/components/pages/faq-client";
+import FaqClient from "@/components/pages/faq-client";
+import { allFaqKeys } from "@/data/faq-keys";
 import { JsonLd } from "@/components/seo/json-ld";
 
 export async function generateMetadata({
