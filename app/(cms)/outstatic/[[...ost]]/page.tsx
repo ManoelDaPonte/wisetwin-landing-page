@@ -9,5 +9,5 @@ export default async function OutstaticPage({
 }) {
 	const ostData = await Outstatic();
 	const { ost } = await params;
-	return <OstClient ostData={ostData} params={{ ost }} />;
+	return <OstClient ostData={ostData} params={{ ost: ost ?? [] }} />;
 }

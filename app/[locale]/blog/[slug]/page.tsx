@@ -109,7 +109,6 @@ export default async function BlogPostPage({
 			title={post.title}
 			publishedAt={post.publishedAt}
 			author={post.author}
-			coverImage={coverImage}
 			contentHtml={contentHtml}
 			readingTime={readingTime}
 		/>

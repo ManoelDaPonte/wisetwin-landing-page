@@ -10,7 +10,6 @@ type Props = {
 	title: string;
 	publishedAt: string;
 	author: { name: string; picture?: string } | string;
-	coverImage: string;
 	contentHtml: string;
 	readingTime: number;
 };
@@ -19,7 +18,6 @@ export default function BlogPostClient({
 	title,
 	publishedAt,
 	author,
-	coverImage,
 	contentHtml,
 	readingTime,
 }: Props) {
