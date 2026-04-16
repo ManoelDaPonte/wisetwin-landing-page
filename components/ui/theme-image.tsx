@@ -23,7 +23,7 @@ export function ThemeImage({
   className,
   priority = false,
 }: ThemeImageProps) {
-  const { theme, resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {

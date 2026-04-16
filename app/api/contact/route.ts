@@ -46,8 +46,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const fullName = `${firstName} ${lastName}`;
-
     // Configuration du transporteur SMTP
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,

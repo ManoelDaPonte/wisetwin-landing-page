@@ -6,7 +6,6 @@ import { Section } from "@/components/common/section";
 import {
 	Check,
 	X,
-	Star,
 	Minus,
 	Plus,
 	Gift,
@@ -213,7 +212,6 @@ export function PricingSection() {
 			{/* Tier Cards */}
 			<div className="grid md:grid-cols-3 md:grid-rows-[auto_auto_auto_auto_1fr] gap-6 max-w-5xl mx-auto">
 				{tiers.map((tier) => {
-					const isPopular = tier === "pro";
 					const isFree = tier === "essential";
 					const isEnterprise = tier === "enterprise";
 					const features = t.raw(`${tier}.features`) as string[];
