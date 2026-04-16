@@ -18,7 +18,11 @@
       "Bash(npx tsc:*)",
       "Bash(node:*)",
       "mcp__ide__getDiagnostics",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(npm install *)",
+      "WebFetch(domain:outstatic.com)",
+      "Bash(mkdir -p /Users/mano/Documents/GitHub/wisetwin-landing-apge/app/\\\\\\(cms\\\\\\)/outstatic/\\\\[\\\\[...ost\\\\]\\\\])",
+      "Bash(mkdir -p /Users/mano/Documents/GitHub/wisetwin-landing-apge/app/api/outstatic/\\\\[\\\\[...ost\\\\]\\\\])"
     ]
   },
   "enableAllProjectMcpServers": false
