@@ -56,7 +56,7 @@ export default function FaqClient() {
 			}}
 			className="pt-32"
 		>
-			<div className="max-w-4xl mx-auto">
+			<div className="max-w-5xl mx-auto">
 					{/* Search */}
 					<div className="relative mb-6">
 						<Search className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" />

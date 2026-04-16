@@ -34,13 +34,13 @@ export function FaqSection() {
 				centered: true,
 			}}
 		>
-			<div className="max-w-3xl mx-auto">
+			<div className="max-w-5xl mx-auto">
 				<Accordion type="single" collapsible className="space-y-4 pb-1">
 					{featuredFaqKeys.map((key, index) => (
 						<AccordionItem
 							key={key}
 							value={`item-${index}`}
-							className="border border-border rounded-lg px-6 bg-background/50 backdrop-blur-sm"
+							className="border border-border rounded-lg px-6 bg-card shadow-sm"
 						>
 							<AccordionTrigger className="text-left hover:no-underline">
 								<span className="font-semibold">

@@ -31,7 +31,7 @@ export function SolutionsSection() {
 				centered: true,
 			}}
 		>
-			<div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+			<div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
 				{hubs.map((hub) => {
 					const Icon = hub.icon;
 					return (

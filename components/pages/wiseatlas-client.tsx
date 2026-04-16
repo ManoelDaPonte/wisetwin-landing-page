@@ -98,7 +98,7 @@ export default function WiseAtlasClient() {
 					centered: true,
 				}}
 			>
-				<div className="max-w-6xl mx-auto">
+				<div className="max-w-5xl mx-auto">
 					<div className="grid md:grid-cols-3 gap-8 mb-12">
 						{pillars.map((pillar) => {
 						const Icon = pillar.icon;
@@ -143,7 +143,7 @@ export default function WiseAtlasClient() {
 					centered: true,
 				}}
 			>
-				<div className="max-w-6xl mx-auto flex flex-col gap-16">
+				<div className="max-w-5xl mx-auto flex flex-col gap-16">
 					{audiences.map((audience, index) => {
 						const Icon = audience.icon;
 						const isReversed = index % 2 !== 0;
@@ -290,7 +290,7 @@ export default function WiseAtlasClient() {
 					centered: true,
 				}}
 			>
-				<div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+				<div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 					{useCases.map((useCase) => {
 						const Icon = useCase.icon;
 						return (
@@ -317,7 +317,7 @@ export default function WiseAtlasClient() {
 
 			{/* CTA with action steps */}
 			<Section id="cta" variant="muted">
-				<div className="max-w-4xl mx-auto">
+				<div className="max-w-5xl mx-auto">
 					<div className="text-center mb-12">
 						<h2 className="text-3xl font-bold mb-4">{t("cta.title")}</h2>
 						<p className="text-muted-foreground">{t("cta.subtitle")}</p>

@@ -139,7 +139,7 @@ export function ContactSection() {
 				centered: true,
 			}}
 		>
-			<div className="max-w-3xl mx-auto">
+			<div className="max-w-5xl mx-auto">
 				<Card className="shadow-sm border">
 						<CardHeader>
 							<CardTitle>{t("cardTitle")}</CardTitle>

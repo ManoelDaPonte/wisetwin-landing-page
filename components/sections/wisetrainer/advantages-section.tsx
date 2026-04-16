@@ -119,7 +119,7 @@ export function AdvantagesSection() {
 				centered: true,
 			}}
 		>
-			<div className="grid lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+			<div className="grid lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
 				{/* Cards de selection */}
 				<div className="lg:col-span-2 flex flex-col gap-3">
 					{items.map((item) => {
