@@ -1,6 +1,6 @@
 {
-  "commit": "f7862ecf23bb0c952af019189cca6f6a224b8889",
-  "generated": "2026-04-16T15:55:52.678Z",
+  "commit": "94d59c90d13fc2cea0a53022972b3bffeb228649",
+  "generated": "2026-04-16T16:00:22.766Z",
   "metadata": [
     {
       "__outstatic": {
@@ -21,8 +21,8 @@
     },
     {
       "__outstatic": {
-        "commit": "f7862ecf23bb0c952af019189cca6f6a224b8889",
-        "hash": "1643385818",
+        "commit": "94d59c90d13fc2cea0a53022972b3bffeb228649",
+        "hash": "1376401026",
         "path": "outstatic/content/posts-fr/nouveau-post.mdx"
       },
       "author": {
@@ -30,7 +30,7 @@
         "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
       },
       "collection": "posts-fr",
-      "image": "https://caats.co/wp-content/uploads/2025/09/Langage-corporel-du-chat--1150x628.jpg.webp",
+      "image": "/posts/chat-Q1ND.jpeg",
       "publishedAt": "2026-04-16T16:04:22.895Z",
       "slug": "nouveau-post",
       "status": "published",
