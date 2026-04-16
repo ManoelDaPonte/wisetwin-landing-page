@@ -4,5 +4,11 @@
     "slug": "posts-fr",
     "path": "outstatic/content/posts-fr",
     "children": []
+  },
+  {
+    "title": "posts-en",
+    "slug": "posts-en",
+    "path": "outstatic/content/posts-en",
+    "children": []
   }
 ]
