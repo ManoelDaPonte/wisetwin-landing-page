@@ -60,6 +60,7 @@
 		"login": "Log in",
 		"pricing": "Pricing",
 		"faq": "FAQ",
+		"blog": "Blog",
 		"contact": "Contact"
 	},
 	"hero": {
@@ -1075,5 +1076,21 @@
 		"terms": "Terms of use",
 		"rights": "All rights reserved",
 		"illustrations": "Illustrations by Storyset"
+	},
+	"blog": {
+		"title": "Blog",
+		"subtitle": "News, case studies and best practices",
+		"readMore": "Read article",
+		"backToBlog": "Back to blog",
+		"publishedOn": "Published on",
+		"noPostsYet": "No articles yet.",
+		"notAvailable": "This article is not yet available in English.",
+		"viewInOtherLang": "Read in French",
+		"metadata": {
+			"title": "Blog - WiseTwin",
+			"description": "Discover our articles on immersive training, digital twins and Industry 4.0.",
+			"ogTitle": "WiseTwin Blog",
+			"ogDescription": "News and best practices on immersive training and digital twins."
+		}
 	}
 }

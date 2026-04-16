@@ -39,6 +39,7 @@ export function Header() {
 
 	const menuItems = [
 		{ title: t("security"), href: "/#security" },
+		{ title: t("blog"), href: "/blog" },
 		{ title: t("faq"), href: "/faq" },
 		{ title: t("contact"), href: "/#contact" },
 	];

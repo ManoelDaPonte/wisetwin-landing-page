@@ -60,6 +60,7 @@
 		"login": "Se connecter",
 		"pricing": "Tarifs",
 		"faq": "FAQ",
+		"blog": "Blog",
 		"contact": "Contact"
 	},
 	"hero": {
@@ -1075,5 +1076,21 @@
 		"terms": "CGU",
 		"rights": "Tous droits réservés",
 		"illustrations": "Illustrations par Storyset"
+	},
+	"blog": {
+		"title": "Blog",
+		"subtitle": "Actualités, retours d'expérience et bonnes pratiques",
+		"readMore": "Lire l'article",
+		"backToBlog": "Retour au blog",
+		"publishedOn": "Publié le",
+		"noPostsYet": "Aucun article pour le moment.",
+		"notAvailable": "Cet article n'est pas encore disponible en français.",
+		"viewInOtherLang": "Lire en anglais",
+		"metadata": {
+			"title": "Blog - WiseTwin",
+			"description": "Découvrez nos articles sur la formation immersive, les jumeaux numériques et l'industrie 4.0.",
+			"ogTitle": "Blog WiseTwin",
+			"ogDescription": "Actualités et bonnes pratiques sur la formation immersive et les jumeaux numériques."
+		}
 	}
 }

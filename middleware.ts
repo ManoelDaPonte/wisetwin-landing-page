@@ -6,6 +6,11 @@ import { routing } from "./i18n/routing";
 const intlMiddleware = createMiddleware(routing);
 
 export function middleware(request: NextRequest) {
+	// Skip i18n for Outstatic dashboard
+	if (request.nextUrl.pathname.startsWith("/outstatic")) {
+		return NextResponse.next();
+	}
+
 	// Handle CORS for API routes
 	if (request.nextUrl.pathname.startsWith("/api/")) {
 		const response = NextResponse.next();
@@ -35,7 +40,7 @@ export const config = {
 		// - API routes
 		// - Static files (/_next, /image, /video, etc.)
 		// - Favicon, robots, sitemap
-		"/((?!api|_next|image|video|storyset|ressources|sitemap\\.xml|robots\\.txt|.*\\..*|icon\\.ico|favicon\\.ico).*)",
+		"/((?!api|outstatic|_next|image|video|storyset|ressources|sitemap\\.xml|robots\\.txt|.*\\..*|icon\\.ico|favicon\\.ico).*)",
 		"/(fr|en)/:path*",
 	],
 };
