@@ -1,11 +1,11 @@
 {
-  "commit": "7922a9902f9c25d0855e2c250de848d8633e5a44",
-  "generated": "2026-04-16T14:11:48.173Z",
+  "commit": "ceb9b96e27677d4af3e5e6f4c2a7469cd22b9bb7",
+  "generated": "2026-04-16T14:22:43.819Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "7922a9902f9c25d0855e2c250de848d8633e5a44",
-        "hash": "283001846",
+        "commit": "ceb9b96e27677d4af3e5e6f4c2a7469cd22b9bb7",
+        "hash": "1139110032",
         "path": "outstatic/content/posts-fr/sandale-universe.mdx"
       },
       "author": {
@@ -13,6 +13,7 @@
         "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
       },
       "collection": "posts-fr",
+      "image": "/posts/flower-729510_1280-kxMz.jpg",
       "publishedAt": "2026-04-16T14:20:34.958Z",
       "slug": "sandale-universe",
       "status": "published",
