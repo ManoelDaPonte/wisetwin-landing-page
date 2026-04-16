@@ -109,7 +109,7 @@ export default async function BlogPostPage({
 		<BlogPostClient
 			title={post.title}
 			publishedAt={post.publishedAt}
-			author={post.author}
+			author={post.author ?? "WiseTwin"}
 			contentHtml={contentHtml}
 			readingTime={readingTime}
 		/>

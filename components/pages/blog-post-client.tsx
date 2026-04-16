@@ -9,7 +9,7 @@ import Image from "next/image";
 type Props = {
 	title: string;
 	publishedAt: string;
-	author: { name: string; picture?: string } | string;
+	author: { name?: string; picture?: string } | string;
 	contentHtml: string;
 	readingTime: number;
 };
