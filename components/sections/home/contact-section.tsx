@@ -132,7 +132,7 @@ export function ContactSection() {
 	return (
 		<Section
 			id="contact"
-			variant="muted"
+			variant="default"
 			header={{
 				title: t("title"),
 				description: t("subtitle"),

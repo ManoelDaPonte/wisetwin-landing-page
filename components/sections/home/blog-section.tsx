@@ -24,7 +24,7 @@ export function BlogSection({ posts }: { posts: Post[] }) {
 	return (
 		<Section
 			id="blog"
-			variant="muted"
+			variant="default"
 			header={{
 				title: t("title"),
 				description: t("subtitle"),

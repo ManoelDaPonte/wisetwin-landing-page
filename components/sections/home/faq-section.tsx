@@ -27,7 +27,7 @@ export function FaqSection() {
 	return (
 		<Section
 			id="faq"
-			variant="default"
+			variant="muted"
 			header={{
 				title: t("title"),
 				description: t("subtitle"),
