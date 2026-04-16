@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Section } from "@/components/common/section";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,7 +11,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Search, ArrowLeft } from "lucide-react";
+import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { allFaqKeys } from "@/data/faq-keys";
 
@@ -19,7 +19,6 @@ type Category = "all" | "general" | "features" | "pricing" | "technical";
 
 export default function FaqClient() {
 	const t = useTranslations("faq");
-	const tCommon = useTranslations("common");
 	const [searchQuery, setSearchQuery] = useState("");
 	const [selectedCategory, setSelectedCategory] = useState<Category>("all");
 
@@ -47,25 +46,17 @@ export default function FaqClient() {
 	}, [searchQuery, selectedCategory, t]);
 
 	return (
-		<div className="min-h-screen bg-background pt-24 pb-16">
-			<div className="container mx-auto max-w-7xl px-4">
-				{/* Back button */}
-				<Link
-					href="/"
-					className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors"
-				>
-					<ArrowLeft className="size-4" />
-					<span>{tCommon("back")}</span>
-				</Link>
-
-				{/* Header */}
-				<div className="mb-8 max-w-4xl mx-auto">
-					<h1 className="text-4xl font-bold mb-2">{t("title")}</h1>
-					<p className="text-muted-foreground text-lg">{t("subtitle")}</p>
-				</div>
-
-				{/* Content */}
-				<div className="max-w-4xl mx-auto">
+		<Section
+			id="faq"
+			variant="default"
+			header={{
+				title: t("title"),
+				description: t("subtitle"),
+				centered: true,
+			}}
+			className="pt-32"
+		>
+			<div className="max-w-4xl mx-auto">
 					{/* Search */}
 					<div className="relative mb-6">
 						<Search className="absolute left-3 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" />
@@ -125,8 +116,7 @@ export default function FaqClient() {
 					<div className="mt-6 text-sm text-muted-foreground text-center">
 						{filteredFaqs.length} / {allFaqKeys.length} questions
 					</div>
-				</div>
 			</div>
-		</div>
+		</Section>
 	);
 }

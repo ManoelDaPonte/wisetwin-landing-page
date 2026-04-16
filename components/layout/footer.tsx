@@ -12,6 +12,7 @@ export function Footer() {
 	const navLinks = [
 		{ label: t("nav.solutions"), href: "/#solutions" },
 		{ label: t("nav.security"), href: "/#security" },
+		{ label: t("nav.blog"), href: "/blog" },
 		{ label: t("nav.faq"), href: "/faq" },
 		{ label: t("nav.contact"), href: "/#contact" },
 	];

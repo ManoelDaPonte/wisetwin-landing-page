@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { getDocuments } from "outstatic/server";
+import { load } from "outstatic/server";
 import BlogListClient from "@/components/pages/blog-list-client";
+import { getReadingTime } from "@/lib/reading-time";
 
 export async function generateMetadata({
 	params,
@@ -31,15 +32,6 @@ export async function generateMetadata({
 	};
 }
 
-const postFields = [
-	"title",
-	"publishedAt",
-	"slug",
-	"description",
-	"coverImage",
-	"author",
-] as const;
-
 export default async function BlogPage({
 	params,
 }: {
@@ -47,7 +39,22 @@ export default async function BlogPage({
 }) {
 	const { locale } = await params;
 	const collection = `posts-${locale}`;
-	const posts = getDocuments(collection, [...postFields]);
+	const db = await load();
+	const rawPosts = await db
+		.find({ collection, status: "published" })
+		.project(["title", "publishedAt", "slug", "description", "coverImage", "image", "author", "content"])
+		.sort({ publishedAt: -1 })
+		.toArray();
+
+	const posts = rawPosts.map((post: Record<string, unknown>) => ({
+		title: (post.title as string) || "",
+		publishedAt: (post.publishedAt as string) || "",
+		slug: (post.slug as string) || "",
+		description: (post.description as string) || "",
+		coverImage: (post.coverImage as string) || (post.image as string) || "",
+		author: post.author as { name: string } | string,
+		readingTime: getReadingTime((post.content as string) || ""),
+	}));
 
 	return <BlogListClient posts={posts} />;
 }

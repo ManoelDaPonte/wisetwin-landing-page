@@ -1,8 +1,9 @@
 import { Metadata } from "next";
-import { getDocumentBySlug, getDocuments } from "outstatic/server";
+import { getDocumentBySlug, getDocuments, load } from "outstatic/server";
 import { notFound } from "next/navigation";
 import { remark } from "remark";
 import html from "remark-html";
+import { getReadingTime } from "@/lib/reading-time";
 import BlogPostClient from "@/components/pages/blog-post-client";
 import BlogNotAvailableClient from "@/components/pages/blog-not-available-client";
 
@@ -66,15 +67,11 @@ export default async function BlogPostPage({
 	const collection = `posts-${locale}`;
 	const otherLocale = locale === "fr" ? "en" : "fr";
 
-	const post = getDocumentBySlug(collection, slug, [
-		"title",
-		"publishedAt",
-		"slug",
-		"author",
-		"content",
-		"coverImage",
-		"description",
-	]);
+	const db = await load();
+	const post = await db
+		.find({ collection, slug, status: "published" })
+		.project(["title", "publishedAt", "slug", "author", "content", "coverImage", "image", "description"])
+		.first();
 
 	// Article not available in this language — check if it exists in the other
 	if (!post) {
@@ -95,15 +92,26 @@ export default async function BlogPostPage({
 		);
 	}
 
-	const contentHtml = await markdownToHtml(post.content || "");
+	const coverImage = (post.coverImage as string) || (post.image as string) || "";
+
+	// Strip cover image from content to avoid duplicate
+	let content = (post.content as string) || "";
+	if (coverImage) {
+		const escapedSrc = coverImage.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+		content = content.replace(new RegExp(`!\\[([^\\]]*)\\]\\(${escapedSrc}\\)\\n?`, "g"), "");
+	}
+
+	const contentHtml = await markdownToHtml(content);
+	const readingTime = getReadingTime(content);
 
 	return (
 		<BlogPostClient
 			title={post.title}
 			publishedAt={post.publishedAt}
 			author={post.author}
-			coverImage={post.coverImage}
+			coverImage={coverImage}
 			contentHtml={contentHtml}
+			readingTime={readingTime}
 		/>
 	);
 }
