@@ -1,23 +1,6 @@
 {
-  "commit": "9bcb389b1a4e6d91ca2a68942a9855a23a65884e",
-  "generated": "2026-04-16T16:03:38.860Z",
+  "commit": "162437a4484da2dc738f72428dc5854564974db9",
+  "generated": "2026-04-16T16:03:45.865Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "ceb9b96e27677d4af3e5e6f4c2a7469cd22b9bb7",
-        "hash": "1139110032",
-        "path": "outstatic/content/posts-fr/sandale-universe.mdx"
-      },
-      "author": {
-        "name": "Manoel Da Ponte",
-        "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
-      },
-      "collection": "posts-fr",
-      "image": "/posts/flower-729510_1280-kxMz.jpg",
-      "publishedAt": "2026-04-16T14:20:34.958Z",
-      "slug": "sandale-universe",
-      "status": "published",
-      "title": "L'univers des sandales"
-    }
   ]
 }
