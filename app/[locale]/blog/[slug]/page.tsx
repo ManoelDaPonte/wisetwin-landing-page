@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { getDocumentBySlug, getDocuments, load } from "outstatic/server";
+
+export const dynamic = "force-dynamic";
 import { notFound } from "next/navigation";
 import { remark } from "remark";
 import html from "remark-html";

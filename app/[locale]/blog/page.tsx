@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { load } from "outstatic/server";
+
+export const dynamic = "force-dynamic";
 import BlogListClient from "@/components/pages/blog-list-client";
 import { getReadingTime } from "@/lib/reading-time";
 
