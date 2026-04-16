@@ -92,7 +92,8 @@ export default async function BlogPostPage({
 		);
 	}
 
-	const coverImage = (post.coverImage as string) || (post.image as string) || "";
+	const postData = post as Record<string, unknown>;
+	const coverImage = (postData.coverImage as string) || (postData.image as string) || "";
 
 	// Strip cover image from content to avoid duplicate
 	let content = (post.content as string) || "";
