@@ -1,6 +1,13 @@
 {
   "title": "posts-fr",
-  "slug": "posts-fr",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "image": {
+      "title": "image",
+      "description": "",
+      "required": true,
+      "fieldType": "Image",
+      "dataType": "image"
+    }
+  }
 }
