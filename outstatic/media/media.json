@@ -1,7 +1,18 @@
 {
-  "commit": "5afad241b3efccdf5fa029ba5c5533169e5de4d1",
-  "generated": "2026-04-17T10:22:36.582Z",
+  "commit": "ac1cbeeab1c06f44f93105f971a626fabd8a0a78",
+  "generated": "2026-04-17T14:34:19.422Z",
   "media": [
+    {
+      "__outstatic": {
+        "commit": "ac1cbeeab1c06f44f93105f971a626fabd8a0a78",
+        "hash": "2612037088",
+        "path": "public/posts/cover_article_accidents_travail_2024_v2-Q5MD.svg"
+      },
+      "alt": "",
+      "filename": "cover_article_accidents_travail_2024_v2-Q5MD.svg",
+      "publishedAt": "2026-04-17T14:34:19.422Z",
+      "type": "image"
+    },
     {
       "__outstatic": {
         "commit": "5afad241b3efccdf5fa029ba5c5533169e5de4d1",
