@@ -1,6 +1,6 @@
 {
-  "commit": "0d5317db6e55cdaf3b90a676943a87598110e198",
-  "generated": "2026-04-17T14:35:09.466Z",
+  "commit": "c4f2775a6ab9ea442afd249b4131d4df7d47a4d8",
+  "generated": "2026-04-17T14:36:00.338Z",
   "metadata": [
     {
       "__outstatic": {
@@ -18,24 +18,6 @@
       "slug": "la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite",
       "status": "draft",
       "title": "La Sécurité Industrielle ne doit plus être un Arbitrage entre Risque et Rentabilité"
-    },
-    {
-      "__outstatic": {
-        "commit": "baefd1d1f9a9ac47207230045be4fb7ad213c2db",
-        "hash": "3073857330",
-        "path": "outstatic/content/posts-fr/accidents-du-travail-en-france-ce-que-revelent-les-chiffres-2024.mdx"
-      },
-      "author": {
-        "name": "Manoel Da Ponte",
-        "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
-      },
-      "collection": "posts-fr",
-      "description": "Meta description (155 car.) : 549 614 accidents, 764 décès, un coût record de 4,9 Md€ : le bilan 2024 de l'Assurance Maladie appelle à repenser la prévention en entreprise.",
-      "image": "/posts/cover_article_accidents_travail_2024_v2-Q5MD.svg",
-      "publishedAt": "2026-04-17T14:20:15.697Z",
-      "slug": "accidents-du-travail-en-france-ce-que-revelent-les-chiffres-2024",
-      "status": "published",
-      "title": "Accidents du travail en France : ce que révèlent les chiffres 2024"
     },
     {
       "__outstatic": {
@@ -72,6 +54,24 @@
       "slug": "pourquoi-wisetwin",
       "status": "published",
       "title": "Pourquoi on a fondé WiseTwin"
+    },
+    {
+      "__outstatic": {
+        "commit": "c4f2775a6ab9ea442afd249b4131d4df7d47a4d8",
+        "hash": "380291794",
+        "path": "outstatic/content/posts-fr/accidents-du-travail-en-france-ce-que-revelent-les-chiffres-2024.mdx"
+      },
+      "author": {
+        "name": "Manoel Da Ponte",
+        "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "549 614 accidents, 764 décès, un coût record de 4,9 Md€ : le bilan 2024 de l'Assurance Maladie appelle à repenser la prévention en entreprise.",
+      "image": "/posts/cover_article_accidents_travail_2024_v2-Q5MD.svg",
+      "publishedAt": "2026-04-17T14:20:15.697Z",
+      "slug": "accidents-du-travail-en-france-ce-que-revelent-les-chiffres-2024",
+      "status": "published",
+      "title": "Accidents du travail en France : ce que révèlent les chiffres 2024"
     }
   ]
 }
