@@ -1,17 +1,6 @@
 {
-  "commit": "8138ba6890079504bda293a1f6b779753b308d2a",
-  "generated": "2026-04-17T09:35:36.651Z",
+  "commit": "066cd08551b44654662519773ec36fde29383e62",
+  "generated": "2026-04-17T09:35:41.764Z",
   "media": [
-    {
-      "__outstatic": {
-        "commit": "",
-        "hash": "640072152",
-        "path": "public/posts/flower-729510_1280-kxMz.jpg"
-      },
-      "alt": "",
-      "filename": "flower-729510_1280-kxMz.jpg",
-      "publishedAt": "2026-04-16T14:21:53.749Z",
-      "type": "image"
-    }
   ]
 }
