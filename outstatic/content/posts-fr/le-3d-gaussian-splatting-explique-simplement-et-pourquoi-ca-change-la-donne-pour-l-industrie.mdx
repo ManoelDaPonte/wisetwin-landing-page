@@ -1,0 +1,72 @@
+---
+title: "Le 3D Gaussian Splatting, expliqué simplement (et pourquoi ça change la donne pour l'industrie)"
+publishedAt: "2026-04-17T14:39:47.409Z"
+status: "published"
+author:
+  name: "Manoel Da Ponte"
+  picture: "https://avatars.githubusercontent.com/u/131278442?v=4"
+slug: "le-3d-gaussian-splatting-explique-simplement-et-pourquoi-ca-change-la-donne-pour-l-industrie"
+image: "/posts/je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png"
+description: "Inventé par l'Inria en 2023, le 3D Gaussian Splatting permet de reconstituer un site industriel en 3D photoréaliste à partir de simples photos. Explications."
+---
+
+Depuis deux ans, un mot revient dans les conversations de ceux qui travaillent sur la 3D temps réel : **Gaussian Splatting**. Chez WiseTwin, c'est la technologie qui fait tourner **SafetyTour**, notre produit de visites virtuelles photoréalistes de sites industriels. Mais que se cache-t-il derrière ce nom un peu abstrait ? Et surtout, pourquoi est-ce qu'on pense que ça va transformer la façon dont les industriels documentent et exploitent leurs sites ?
+
+### Le problème qu'on cherchait à résoudre
+
+Pendant très longtemps, pour représenter une scène en 3D, on avait deux grandes familles de méthodes :
+
+- **La photogrammétrie classique**, qui reconstruit un maillage (mesh) de triangles à partir de centaines de photos. Elle est robuste, mais elle galère avec les surfaces brillantes, les métaux, le verre, les câbles fins — bref, tout ce qui compose un site industriel.
+- **Les Neural Radiance Fields (NeRF)**, publiés en 2020, qui utilisent un réseau de neurones pour reconstruire une scène à partir d'images. Visuellement superbe, mais lent à entraîner et surtout **beaucoup trop lent à afficher en temps réel**.
+
+Pour la formation immersive ou la visite virtuelle d'un site industriel, ni l'un ni l'autre ne suffit. On veut à la fois le photoréalisme des NeRF et la fluidité de la photogrammétrie.
+
+### L'invention de l'Inria
+
+En août 2023, quatre chercheurs — Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler et George Drettakis, de l'équipe GraphDeco (Inria) et du Max Planck Institute — publient à SIGGRAPH un papier qui fait l'effet d'une bombe dans la communauté : *3D Gaussian Splatting for Real-Time Radiance Field Rendering*. Le papier remporte le Best Paper Award de la conférence ([Inria, 2023](https://www.inria.fr/en/creating-stunning-real-time-3d-scenes-breakthrough-3d-gaussian-splatting)).
+
+Leur idée est astucieusement simple à formuler (beaucoup moins à implémenter) : **au lieu de représenter la scène par un maillage ou un réseau de neurones, on la représente par des millions de petites "taches" 3D floues** — des gaussiennes anisotropes. Chaque tache a une position, une forme, une couleur, et une transparence. Pour afficher une image depuis un point de vue, on projette toutes les taches sur l'écran et on les additionne.
+
+Le résultat : une scène photoréaliste qui s'affiche à plus de 30 images par seconde en 1080p, là où les NeRF mettaient plusieurs secondes par image ([arXiv, 2023](https://arxiv.org/abs/2308.04079)).
+
+### Pourquoi c'est important concrètement
+
+Trois conséquences pratiques changent tout pour un industriel :
+
+**1. Les matériaux complexes sont (enfin) bien rendus.** Métal brossé, verre, câbles, tuyauteries peintes, éclairages LED : autant d'éléments qui cassent la photogrammétrie classique et que le Gaussian Splatting capture naturellement. Parce qu'il ne cherche pas à reconstruire une surface, il capture de la lumière.
+
+**2. La capture est rapide et ne demande pas d'équipement exotique.** Là où un scan LiDAR industriel demande une logistique lourde, une capture Gaussian Splatting peut se faire avec une caméra grand public bien utilisée, voire un simple smartphone selon la précision visée. Des travaux récents sur les mines à ciel ouvert combinent drone et LiDAR pour obtenir une reconstruction à l'échelle du kilomètre carré ([MDPI Engineering, 2026](https://www.mdpi.com/2673-4117/7/3/136)).
+
+**3. Le rendu est temps réel.** On peut donc *se balader* dans la capture, l'intégrer dans une formation, y poser de l'information (hotspots, procédures, capteurs IoT), et la faire tourner dans un navigateur sans GPU de datacenter.
+
+### Ce que ça permet pour l'industrie
+
+Les cas d'usage qu'on voit émerger — et sur lesquels on travaille — couvrent tout le cycle de vie d'un site :
+
+- **Visiter à distance un site dangereux ou inaccessible** (offshore, zone ATEX, site classé Seveso) sans l'exposition physique que ça demanderait
+- **Documenter l'état exact d'une installation** à un instant T, de façon beaucoup plus riche qu'un plan 2D ou qu'une série de photos
+- **Former les opérateurs sur un environnement photoréaliste** qui reflète leur site réel, pas un site générique
+- **Enrichir le jumeau numérique** avec une couche visuelle fidèle, sur laquelle on peut superposer des données capteurs, des procédures, des annotations
+
+Des équipes de recherche travaillent déjà sur des pipelines qui fusionnent Gaussian Splatting et IoT pour obtenir un jumeau numérique "vivant", mis à jour en temps réel ([Centosoftware, 2025](https://centosoftware.com/2025/11/28/digital-twin-architecture-for-manufacturing/)). C'est exactement la direction dans laquelle on pousse.
+
+### Les limites, honnêtement
+
+Le Gaussian Splatting n'est pas magique :
+
+- **La taille des fichiers** reste un sujet (plusieurs centaines de Mo à Go pour une scène complète), même si la recherche progresse vite sur la compression
+- **Les objets en mouvement** sont un cas difficile : le 3DGS original suppose une scène statique. Des extensions 4D existent mais restent immatures pour la production
+- **La standardisation** est encore en chantier. Les groupes Khronos et glTF travaillent sur des formats interopérables, ce qui conditionnera l'adoption à grande échelle
+
+Mais la trajectoire est claire. En moins de trois ans, le 3DGS est passé d'un papier de recherche à une brique intégrée par Nuke, Bentley, NVIDIA et une flopée de startups. Pour des acteurs industriels qui cherchent à digitaliser leurs sites sans se lancer dans des chantiers de modélisation à six chiffres, c'est probablement **la technologie à regarder de près en 2026**.
+
+Chez WiseTwin, c'est ce qu'on fait depuis deux ans. Et on vient juste de commencer.
+
+---
+
+**Sources**
+
+1. [Inria — Creating stunning real-time 3D scenes](https://www.inria.fr/en/creating-stunning-real-time-3d-scenes-breakthrough-3d-gaussian-splatting)
+2. [Kerbl et al. — 3D Gaussian Splatting for Real-Time Radiance Field Rendering (arXiv)](https://arxiv.org/abs/2308.04079)
+3. [MDPI — 3DGS pour la reconstruction de mines à ciel ouvert](https://www.mdpi.com/2673-4117/7/3/136)
+4. [Centosoftware — Digital twin architecture for manufacturing, 2025](https://centosoftware.com/2025/11/28/digital-twin-architecture-for-manufacturing/)

@@ -1,6 +1,6 @@
 {
-  "commit": "a05b59fc52e41d272b1fb92931bdcd3b280dd588",
-  "generated": "2026-04-17T14:27:13.163Z",
+  "commit": "520281fa95ef78a0376d8727f59842740cd28703",
+  "generated": "2026-04-17T14:29:08.653Z",
   "metadata": [
     {
       "__outstatic": {
@@ -36,6 +36,24 @@
       "slug": "accidents-du-travail-en-france-ce-que-revelent-les-chiffres-2024",
       "status": "published",
       "title": "Accidents du travail en France : ce que révèlent les chiffres 2024"
+    },
+    {
+      "__outstatic": {
+        "commit": "520281fa95ef78a0376d8727f59842740cd28703",
+        "hash": "1713433027",
+        "path": "outstatic/content/posts-fr/le-3d-gaussian-splatting-explique-simplement-et-pourquoi-ca-change-la-donne-pour-l-industrie.mdx"
+      },
+      "author": {
+        "name": "Manoel Da Ponte",
+        "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "Inventé par l'Inria en 2023, le 3D Gaussian Splatting permet de reconstituer un site industriel en 3D photoréaliste à partir de simples photos. Explications.",
+      "image": "/posts/je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png",
+      "publishedAt": "2026-04-17T14:39:47.409Z",
+      "slug": "le-3d-gaussian-splatting-explique-simplement-et-pourquoi-ca-change-la-donne-pour-l-industrie",
+      "status": "published",
+      "title": "Le 3D Gaussian Splatting, expliqué simplement (et pourquoi ça change la donne pour l'industrie)"
     }
   ]
 }
