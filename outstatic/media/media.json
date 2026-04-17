@@ -1,18 +1,7 @@
 {
-  "commit": "26739a15fbc5a3506539af5f7daba9999ce2b276",
-  "generated": "2026-04-16T16:00:10.107Z",
+  "commit": "8138ba6890079504bda293a1f6b779753b308d2a",
+  "generated": "2026-04-17T09:35:36.651Z",
   "media": [
-    {
-      "__outstatic": {
-        "commit": "26739a15fbc5a3506539af5f7daba9999ce2b276",
-        "hash": "2108995224",
-        "path": "public/posts/chat-Q1ND.jpeg"
-      },
-      "alt": "",
-      "filename": "chat-Q1ND.jpeg",
-      "publishedAt": "2026-04-16T16:00:10.107Z",
-      "type": "image"
-    },
     {
       "__outstatic": {
         "commit": "",
