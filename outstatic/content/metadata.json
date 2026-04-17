@@ -1,6 +1,6 @@
 {
-  "commit": "520281fa95ef78a0376d8727f59842740cd28703",
-  "generated": "2026-04-17T14:29:08.653Z",
+  "commit": "de5026f9f7f6693d23010802ca6fad8754fa9f78",
+  "generated": "2026-04-17T14:31:37.501Z",
   "metadata": [
     {
       "__outstatic": {
@@ -54,6 +54,24 @@
       "slug": "le-3d-gaussian-splatting-explique-simplement-et-pourquoi-ca-change-la-donne-pour-l-industrie",
       "status": "published",
       "title": "Le 3D Gaussian Splatting, expliqué simplement (et pourquoi ça change la donne pour l'industrie)"
+    },
+    {
+      "__outstatic": {
+        "commit": "de5026f9f7f6693d23010802ca6fad8754fa9f78",
+        "hash": "2852583307",
+        "path": "outstatic/content/posts-fr/pourquoi-wisetwin.mdx"
+      },
+      "author": {
+        "name": "Manoel Da Ponte",
+        "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "Rendre la simulation 3D accessible aux industriels qui en ont le plus besoin, sans budget Airbus ni équipe R&D dédiée. C'est notre raison d'être.",
+      "image": "/posts/je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png",
+      "publishedAt": "2026-04-17T14:41:31.764Z",
+      "slug": "pourquoi-wisetwin",
+      "status": "published",
+      "title": "Pourquoi on a fondé WiseTwin"
     }
   ]
 }
