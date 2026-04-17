@@ -1,6 +1,6 @@
 {
-  "commit": "ac1cbeeab1c06f44f93105f971a626fabd8a0a78",
-  "generated": "2026-04-17T14:34:19.422Z",
+  "commit": "85f6a1a23de8ef25b461494a6cf5df9ab726968d",
+  "generated": "2026-04-17T14:34:24.378Z",
   "media": [
     {
       "__outstatic": {
@@ -11,6 +11,17 @@
       "alt": "",
       "filename": "cover_article_accidents_travail_2024_v2-Q5MD.svg",
       "publishedAt": "2026-04-17T14:34:19.422Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "85f6a1a23de8ef25b461494a6cf5df9ab726968d",
+        "hash": "3021382577",
+        "path": "public/posts/cover_article_gaussian_splatting-UwNz.svg"
+      },
+      "alt": "",
+      "filename": "cover_article_gaussian_splatting-UwNz.svg",
+      "publishedAt": "2026-04-17T14:34:24.377Z",
       "type": "image"
     },
     {
