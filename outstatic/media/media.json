@@ -1,6 +1,6 @@
 {
-  "commit": "dceee4ab1c29321407688dd0c86fbbb3aba333cc",
-  "generated": "2026-04-17T15:17:34.269Z",
+  "commit": "583784741d3d55781f68dc500f8d65e6eb3f65ca",
+  "generated": "2026-04-17T15:17:39.234Z",
   "media": [
     {
       "__outstatic": {
@@ -44,17 +44,6 @@
       "alt": "",
       "filename": "cover_page_ils_parlent_de_nous-A1Nj.svg",
       "publishedAt": "2026-04-17T15:17:34.269Z",
-      "type": "image"
-    },
-    {
-      "__outstatic": {
-        "commit": "f8926fe4cbdb2725753e2dd66c00c4066693cf57",
-        "hash": "1578623387",
-        "path": "public/posts/cover_page_ils_parlent_de_nous-M1Nj.svg"
-      },
-      "alt": "",
-      "filename": "cover_page_ils_parlent_de_nous-M1Nj.svg",
-      "publishedAt": "2026-04-17T15:17:12.750Z",
       "type": "image"
     },
     {
