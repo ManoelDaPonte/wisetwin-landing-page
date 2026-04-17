@@ -1,11 +1,11 @@
 {
-  "commit": "dc0d61a48b51ae95bd07de4e108b26855ba2e357",
-  "generated": "2026-04-17T11:03:09.444Z",
+  "commit": "6271a763489ac0fb480e2d1f1bd0ef89146bef36",
+  "generated": "2026-04-17T11:03:47.232Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "dc0d61a48b51ae95bd07de4e108b26855ba2e357",
-        "hash": "252738781",
+        "commit": "6271a763489ac0fb480e2d1f1bd0ef89146bef36",
+        "hash": "2386234921",
         "path": "outstatic/content/posts-fr/la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite.mdx"
       },
       "author": {
