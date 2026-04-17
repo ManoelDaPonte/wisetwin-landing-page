@@ -1,6 +1,6 @@
 {
-  "commit": "b1b74577bb31087733c210e458624bc362b95e70",
-  "generated": "2026-04-17T11:09:47.285Z",
+  "commit": "a05b59fc52e41d272b1fb92931bdcd3b280dd588",
+  "generated": "2026-04-17T14:27:13.163Z",
   "metadata": [
     {
       "__outstatic": {
@@ -18,6 +18,24 @@
       "slug": "la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite",
       "status": "draft",
       "title": "La Sécurité Industrielle ne doit plus être un Arbitrage entre Risque et Rentabilité"
+    },
+    {
+      "__outstatic": {
+        "commit": "a05b59fc52e41d272b1fb92931bdcd3b280dd588",
+        "hash": "2310678394",
+        "path": "outstatic/content/posts-fr/accidents-du-travail-en-france-ce-que-revelent-les-chiffres-2024.mdx"
+      },
+      "author": {
+        "name": "Manoel Da Ponte",
+        "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "Meta description (155 car.) : 549 614 accidents, 764 décès, un coût record de 4,9 Md€ : le bilan 2024 de l'Assurance Maladie appelle à repenser la prévention en entreprise.",
+      "image": "/posts/je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png",
+      "publishedAt": "2026-04-17T14:20:15.697Z",
+      "slug": "accidents-du-travail-en-france-ce-que-revelent-les-chiffres-2024",
+      "status": "published",
+      "title": "Accidents du travail en France : ce que révèlent les chiffres 2024"
     }
   ]
 }
