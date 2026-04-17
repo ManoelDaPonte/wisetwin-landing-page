@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { getDocuments } from "outstatic/server";
 
+export const dynamic = "force-dynamic";
+
 export default function sitemap(): MetadataRoute.Sitemap {
 	const baseUrl = "https://wisetwin.eu";
 
