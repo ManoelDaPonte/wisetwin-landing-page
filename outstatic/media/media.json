@@ -1,6 +1,17 @@
 {
-  "commit": "066cd08551b44654662519773ec36fde29383e62",
-  "generated": "2026-04-17T09:35:41.764Z",
+  "commit": "5afad241b3efccdf5fa029ba5c5533169e5de4d1",
+  "generated": "2026-04-17T10:22:36.582Z",
   "media": [
+    {
+      "__outstatic": {
+        "commit": "5afad241b3efccdf5fa029ba5c5533169e5de4d1",
+        "hash": "3093552259",
+        "path": "public/posts/je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png"
+      },
+      "alt": "",
+      "filename": "je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png",
+      "publishedAt": "2026-04-17T10:22:36.582Z",
+      "type": "image"
+    }
   ]
 }
