@@ -1,6 +1,6 @@
 {
-  "commit": "85f6a1a23de8ef25b461494a6cf5df9ab726968d",
-  "generated": "2026-04-17T14:34:24.378Z",
+  "commit": "778f01e7e4b2cdaac4fef1ff870f780d4e127921",
+  "generated": "2026-04-17T14:34:29.384Z",
   "media": [
     {
       "__outstatic": {
@@ -22,6 +22,17 @@
       "alt": "",
       "filename": "cover_article_gaussian_splatting-UwNz.svg",
       "publishedAt": "2026-04-17T14:34:24.377Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "778f01e7e4b2cdaac4fef1ff870f780d4e127921",
+        "hash": "2110076868",
+        "path": "public/posts/cover_article_pourquoi_wisetwin-U0Mj.svg"
+      },
+      "alt": "",
+      "filename": "cover_article_pourquoi_wisetwin-U0Mj.svg",
+      "publishedAt": "2026-04-17T14:34:29.384Z",
       "type": "image"
     },
     {
