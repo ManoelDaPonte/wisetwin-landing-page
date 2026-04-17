@@ -54,9 +54,8 @@ export function Header() {
 		{
 			title: "WiseAtlas",
 			description: t("platformWiseatlas"),
-			href: "#",
+			href: "https://wiseatlas.wisetwin.eu",
 			icon: Map,
-			disabled: true,
 		},
 	];
 
@@ -180,15 +179,10 @@ export function Header() {
 													return (
 														<a
 															key={item.title}
-															href={item.disabled ? undefined : item.href}
-															target={item.disabled ? undefined : "_blank"}
+															href={item.href}
+															target="_blank"
 															rel="noopener noreferrer"
-															className={cn(
-																"flex items-center gap-3 rounded-lg p-3 transition-all",
-																item.disabled
-																	? "opacity-50 cursor-not-allowed"
-																	: "hover:bg-secondary/5",
-															)}
+															className="flex items-center gap-3 rounded-lg p-3 transition-all hover:bg-secondary/5"
 														>
 															<div className="size-9 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
 																<PIcon className="size-4 text-secondary" />
@@ -196,8 +190,7 @@ export function Header() {
 															<div className="flex-1">
 																<div className="flex items-center gap-2">
 																	<span className="font-semibold text-sm">{item.title}</span>
-																	{!item.disabled && <ExternalLink className="size-3 text-muted-foreground" />}
-																	{item.disabled && <span className="text-xs text-muted-foreground italic">{t("comingSoon")}</span>}
+																	<ExternalLink className="size-3 text-muted-foreground" />
 																</div>
 																<p className="text-xs text-muted-foreground">{item.description}</p>
 															</div>
@@ -297,23 +290,17 @@ export function Header() {
 											return (
 												<a
 													key={item.title}
-													href={item.disabled ? undefined : item.href}
-													target={item.disabled ? undefined : "_blank"}
+													href={item.href}
+													target="_blank"
 													rel="noopener noreferrer"
-													className={cn(
-														"flex items-center gap-3 p-3 rounded-lg",
-														item.disabled
-															? "opacity-50 cursor-not-allowed"
-															: "hover:bg-accent transition-colors",
-													)}
+													className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors"
 												>
 													<div className="size-8 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
 														<PIcon className="size-4 text-secondary" />
 													</div>
 													<div className="flex items-center gap-2">
 														<span className="font-medium text-sm">{item.title}</span>
-														{!item.disabled && <ExternalLink className="size-3 text-muted-foreground" />}
-														{item.disabled && <span className="text-xs text-muted-foreground italic">{t("comingSoon")}</span>}
+														<ExternalLink className="size-3 text-muted-foreground" />
 													</div>
 												</a>
 											);
