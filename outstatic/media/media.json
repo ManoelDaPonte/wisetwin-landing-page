@@ -1,6 +1,6 @@
 {
-  "commit": "f8926fe4cbdb2725753e2dd66c00c4066693cf57",
-  "generated": "2026-04-17T15:17:12.751Z",
+  "commit": "dceee4ab1c29321407688dd0c86fbbb3aba333cc",
+  "generated": "2026-04-17T15:17:34.269Z",
   "media": [
     {
       "__outstatic": {
@@ -33,6 +33,17 @@
       "alt": "",
       "filename": "cover_article_pourquoi_wisetwin-U0Mj.svg",
       "publishedAt": "2026-04-17T14:34:29.384Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "dceee4ab1c29321407688dd0c86fbbb3aba333cc",
+        "hash": "1578623387",
+        "path": "public/posts/cover_page_ils_parlent_de_nous-A1Nj.svg"
+      },
+      "alt": "",
+      "filename": "cover_page_ils_parlent_de_nous-A1Nj.svg",
+      "publishedAt": "2026-04-17T15:17:34.269Z",
       "type": "image"
     },
     {
