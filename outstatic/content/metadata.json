@@ -1,6 +1,23 @@
 {
-  "commit": "162437a4484da2dc738f72428dc5854564974db9",
-  "generated": "2026-04-16T16:03:45.865Z",
+  "commit": "1532103d15512fe92d26c9186135e77608b13bf7",
+  "generated": "2026-04-17T10:23:54.521Z",
   "metadata": [
+    {
+      "__outstatic": {
+        "commit": "1532103d15512fe92d26c9186135e77608b13bf7",
+        "hash": "3239263581",
+        "path": "outstatic/content/posts-fr/la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite.mdx"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/170344958?v=4"
+      },
+      "collection": "posts-fr",
+      "image": "/posts/je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png",
+      "publishedAt": "2026-04-17T09:47:51.476Z",
+      "slug": "la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite",
+      "status": "draft",
+      "title": "La Sécurité Industrielle ne doit plus être un Arbitrage entre Risque et Rentabilité"
+    }
   ]
 }
