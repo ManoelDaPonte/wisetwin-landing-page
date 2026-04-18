@@ -1,24 +1,7 @@
 {
-  "commit": "04b8dadc41780d6623a13c853bf4db97464d112f",
-  "generated": "2026-04-17T14:43:42.957Z",
+  "commit": "eb3efefe51c4c977049eb3387168185a64b95389",
+  "generated": "2026-04-18T15:05:42.336Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "b1b74577bb31087733c210e458624bc362b95e70",
-        "hash": "3816891173",
-        "path": "outstatic/content/posts-fr/la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite.mdx"
-      },
-      "author": {
-        "name": "Mickaël",
-        "picture": "https://avatars.githubusercontent.com/u/170344958?v=4"
-      },
-      "collection": "posts-fr",
-      "image": "/posts/je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png",
-      "publishedAt": "2026-04-17T09:47:51.476Z",
-      "slug": "la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite",
-      "status": "draft",
-      "title": "La Sécurité Industrielle ne doit plus être un Arbitrage entre Risque et Rentabilité"
-    },
     {
       "__outstatic": {
         "commit": "6cce9bf258fa817835655cfd3b831f0d9fbe2167",
@@ -54,6 +37,24 @@
       "slug": "accidents-du-travail-en-france-ce-que-revelent-les-chiffres-2024",
       "status": "published",
       "title": "Accidents du travail en France : ce que révèlent les chiffres 2024"
+    },
+    {
+      "__outstatic": {
+        "commit": "eb3efefe51c4c977049eb3387168185a64b95389",
+        "hash": "1449249866",
+        "path": "outstatic/content/posts-fr/la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite.mdx"
+      },
+      "author": {
+        "name": "Mickaël",
+        "picture": "https://avatars.githubusercontent.com/u/170344958?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "Simulateur de formation industrielle immersive utilisant le 3D Gaussian Splatting pour recréer des environnements d'usine réalistes sans arrêt de production",
+      "image": "/posts/je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png",
+      "publishedAt": "2026-04-17T22:00:00.000Z",
+      "slug": "la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite",
+      "status": "draft",
+      "title": "La Sécurité Industrielle ne doit plus être un Arbitrage entre Risque et Rentabilité"
     }
   ]
 }
