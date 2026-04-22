@@ -1,25 +1,7 @@
 {
-  "commit": "6e1f9e4e1e06e04338121af75ae2358639dd4626",
-  "generated": "2026-04-18T15:05:50.350Z",
+  "commit": "0a8c7dbd5cf6c9b225337f55a9ec314e984babc7",
+  "generated": "2026-04-22T14:14:27.352Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "6cce9bf258fa817835655cfd3b831f0d9fbe2167",
-        "hash": "2405482988",
-        "path": "outstatic/content/posts-fr/le-3d-gaussian-splatting-explique-simplement-et-pourquoi-ca-change-la-donne-pour-l-industrie.mdx"
-      },
-      "author": {
-        "name": "Manoel Da Ponte",
-        "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
-      },
-      "collection": "posts-fr",
-      "description": "Inventé par l'Inria en 2023, le 3D Gaussian Splatting permet de reconstituer un site industriel en 3D photoréaliste à partir de simples photos. Explications.",
-      "image": "/posts/cover_article_gaussian_splatting-UwNz.svg",
-      "publishedAt": "2026-04-17T14:39:47.409Z",
-      "slug": "le-3d-gaussian-splatting-explique-simplement-et-pourquoi-ca-change-la-donne-pour-l-industrie",
-      "status": "published",
-      "title": "Le 3D Gaussian Splatting, expliqué simplement (et pourquoi ça change la donne pour l'industrie)"
-    },
     {
       "__outstatic": {
         "commit": "c4f2775a6ab9ea442afd249b4131d4df7d47a4d8",
@@ -55,6 +37,24 @@
       "slug": "la-securite-industrielle-ne-doit-plus-etre-un-arbitrage-entre-risque-et-rentabilite",
       "status": "published",
       "title": "La Sécurité Industrielle ne doit plus être un Arbitrage entre Risque et Rentabilité"
+    },
+    {
+      "__outstatic": {
+        "commit": "0a8c7dbd5cf6c9b225337f55a9ec314e984babc7",
+        "hash": "781717456",
+        "path": "outstatic/content/posts-fr/le-3d-gaussian-splatting-explique-simplement-et-pourquoi-ca-change-la-donne-pour-l-industrie.mdx"
+      },
+      "author": {
+        "name": "Manoel Da Ponte",
+        "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "Inventé par l'Inria en 2023, le 3D Gaussian Splatting permet de reconstituer un site industriel en 3D photoréaliste à partir de simples photos. Explications.",
+      "image": "/posts/cover_article_gaussian_splatting-UwNz.svg",
+      "publishedAt": "2026-04-17T14:39:47.409Z",
+      "slug": "le-3d-gaussian-splatting-explique-simplement-et-pourquoi-ca-change-la-donne-pour-l-industrie",
+      "status": "published",
+      "title": "Le 3D Gaussian Splatting, expliqué simplement (et pourquoi ça change la donne pour l'industrie)"
     }
   ]
 }
