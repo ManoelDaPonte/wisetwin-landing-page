@@ -1,6 +1,6 @@
 {
-  "commit": "6040095288b2180a1336192fc9992e51fe978eb7",
-  "generated": "2026-05-15T12:04:36.027Z",
+  "commit": "7e5445554fc7a73fa4b244a51a0cf0e2d4516ae3",
+  "generated": "2026-05-15T12:05:10.722Z",
   "media": [
     {
       "__outstatic": {
@@ -48,6 +48,17 @@
     },
     {
       "__outstatic": {
+        "commit": "7e5445554fc7a73fa4b244a51a0cf0e2d4516ae3",
+        "hash": "1958404108",
+        "path": "public/posts/formation-bras-robotise-IwMz.png"
+      },
+      "alt": "",
+      "filename": "formation-bras-robotise-IwMz.png",
+      "publishedAt": "2026-05-15T12:05:10.648Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
         "commit": "6040095288b2180a1336192fc9992e51fe978eb7",
         "hash": "1958404108",
         "path": "public/posts/formation-bras-robotise-g4OT.png"
@@ -66,6 +77,39 @@
       "alt": "",
       "filename": "je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png",
       "publishedAt": "2026-04-17T10:22:36.582Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "7e5445554fc7a73fa4b244a51a0cf0e2d4516ae3",
+        "hash": "2817079889",
+        "path": "public/posts/wisetour360-gyNT.png"
+      },
+      "alt": "",
+      "filename": "wisetour360-gyNT.png",
+      "publishedAt": "2026-05-15T12:05:10.684Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "7e5445554fc7a73fa4b244a51a0cf0e2d4516ae3",
+        "hash": "2817079889",
+        "path": "public/posts/wisetour360-kyNT.png"
+      },
+      "alt": "",
+      "filename": "wisetour360-kyNT.png",
+      "publishedAt": "2026-05-15T12:05:10.720Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "7e5445554fc7a73fa4b244a51a0cf0e2d4516ae3",
+        "hash": "2422114515",
+        "path": "public/posts/wisetrainer_360-k4Mz.jpg"
+      },
+      "alt": "",
+      "filename": "wisetrainer_360-k4Mz.jpg",
+      "publishedAt": "2026-05-15T12:05:10.637Z",
       "type": "image"
     }
   ]

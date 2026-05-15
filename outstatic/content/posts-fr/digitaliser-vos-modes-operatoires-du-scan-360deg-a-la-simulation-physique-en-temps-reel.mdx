@@ -1,0 +1,95 @@
+---
+title: "Digitaliser vos modes opératoires : du scan 360° à la simulation physique en temps réel"
+publishedAt: "2026-05-15T11:36:56.484Z"
+status: "draft"
+author:
+  name: "Équipe Wise Twin"
+  picture: "https://avatars.githubusercontent.com/u/170344958?v=4"
+slug: "digitaliser-vos-modes-operatoires-du-scan-360deg-a-la-simulation-physique-en-temps-reel"
+image: "/posts/formation-bras-robotise-g4OT.png"
+description: "Toutes les procédures industrielles ne se digitalisent pas de la même façon. Derrière le mot « formation immersive » se cachent des technologies radicalement différentes — avec des compromis précis sur le réalisme, le temps de production et le budget. Voici comment nous les choisissons pour vous."
+---
+
+> Toutes les procédures industrielles ne se digitalisent pas de la même façon. Derrière le mot « formation immersive » se cachent des technologies radicalement différentes — avec des compromis précis sur le réalisme, le temps de production et le budget. Voici comment nous les choisissons pour vous.
+
+### **Architecture technique**
+
+> Chez Wise Twin, nous structurons notre offre autour de trois niveaux technologiques, chacun répondant à une logique d'ingénierie différente. Le choix du niveau ne dépend pas uniquement du budget : il dépend de la nature de l'interaction pédagogique requise, du cycle de mise à jour du contenu, et de la tolérance à l'écart entre la représentation virtuelle et l'objet physique réel.
+
+## **Niveau 01**
+
+> ## Visite immersive 360° enrichie
+>
+> ↳ Cas d'usage : HSE, onboarding, découverte de poste, visites clients
+>
+> La captation par caméras omnidirectionnelles (typiquement équipées de capteurs CMOS f/2.0 avec HDR et fusion d'images) produit des panoramas équirectangulaires en projection sphérique. Ces panoramas sont ensuite intégrés dans un moteur de visite web basé sur WebGL et enrichis de *hotspots* interactifs liés à votre système documentaire.
+>
+> | **Captation** | **Rendu** | **Déploiement** | **Lead time** |
+> | --- | --- | --- | --- |
+> | Caméra 360° · 6K–8K · HDR | WebGL · Projection sphérique | Web / LMS / SCORM 1.2 | 1–3 jours de captation |
+>
+> Le principal avantage opérationnel de cette approche réside dans sa **fidélité photorealiste immédiate** : l'opérateur navigue dans son environnement exact, sans abstraction. Les hotspots peuvent embarquer des check-lists de sécurité, des fiches de consignes PDF, des vidéos procédurales ou des quiz avec scoring renvoyé au LMS via xAPI.
+>
+> ![](/posts/wisetrainer_360-k4Mz.jpg)
+>
+> > **Limite technique à connaître :** la représentation est statique par construction. Les machines ne bougent pas, les vannes ne s'actionnent pas. Le 360° est un medium de contextualisation et de repérage, pas de simulation d'interaction. Si votre procédure implique une manipulation séquentielle de composants, il faut passer au niveau 2.
+
+## **Niveau 02**
+
+> ## Jumeau numérique par scan photogrammétrique & 3DGS
+>
+> ↳ Cas d'usage : maintenance préventive, repérage de pièces, formation sur machine
+>
+> Ce niveau combine deux pipelines de reconstruction 3D complémentaires selon la géométrie de l'objet à capturer :
+>
+> La **photogrammétrie** (Structure-from-Motion + MVS) reconstruit une mesh polygonale texturée à partir de centaines à plusieurs milliers de photographies convergentes. Le pipeline produit un maillage dense avec cartes de normales, d'occlusion ambiante et d'albedo utilisables directement dans un moteur temps réel.
+>
+> Le **3D Gaussian Splatting** (3DGS, Kerbl et al., 2023) est une approche radicalement différente : au lieu d'une mesh, la scène est représentée par des millions de gaussiennes 3D colorées, optimisées par descente de gradient pour minimiser l'erreur de reconstruction depuis les poses de caméra connues. Le rendu est effectué par rasterisation différentiable — ce qui lui confère une capacité à restituer les matériaux complexes (réflexions, transparences, fourrures) que la photogrammétrie classique peine à capturer.
+>
+> | **Photogrammétrie** | **3DGS** | **Output** | **Lead time** |
+> | --- | --- | --- | --- |
+> | SfM + MVS · mesh + PBR maps | Gaussian Splatting · NeRF-like rendering | WebXR / Three.js / Unity WebGL | 3–10 jours selon volume |
+
+![](/posts/wisetour360-kyNT.png)\
+*Reconstruction 3DGS provenant des données :* [*EyefulTower/*](https://github.com/facebookresearch/EyefulTower/blob/main/README.md)[*README.md*](http://README.md)[ *at main · facebookresearch/EyefulTower*](https://github.com/facebookresearch/EyefulTower/blob/main/README.md)
+
+> > **Quel pipeline choisir ?** Pour les pièces mécaniques avec surfaces mats et géométrie définie (culasses, pompes, vannes) → photogrammétrie. Pour les environnements complexes avec matériaux variés, transparences ou réflexions (salles de contrôle, équipements vitrés, zones humides) → 3DGS. En pratique, nous combinons souvent les deux sur un même projet.
+>
+> Le jumeau obtenu est intégré dans une interface de navigation 3D temps réel permettant à l'opérateur d'isoler des sous-ensembles, d'afficher des callouts de pièces référencées (liens vers la GMAO, nomenclature ERP), et de suivre un parcours pédagogique séquentiel sans quitter l'environnement visuel de la machine réelle.
+
+## **Niveau 03**
+
+> ## Simulation physique interactive sur moteur temps réel
+>
+> ↳ Cas d'usage : montage/démontage, scénarios de panne, formation immersive, gestes d'urgence
+>
+> Ici, nous ne capturons plus la réalité — nous la modélisons. L'environnement et les équipements sont reconstruits intégralement en 3D puis intégrés dans un moteur physique actif.
+>
+> Ce qui différencie fondamentalement ce niveau des précédents : les objets ont une **masse, une inertie, des contraintes articulaires**. Un bouton cliquable renvoie un événement qui modifie l'état de la machine dans le graphe de simulation. Une vanne qu'on tourne modifie le débit dans le circuit fluidique modélisé. Un composant démonté dans le mauvais ordre déclenche une alerte de procédure.
+>
+> | **Modélisation** | **Texturage** | **Moteur** | **XR** |
+> | --- | --- | --- | --- |
+> | Blender · CAO import (STEP/FBX) | Substance Painter · PBR metalness | Unity ou Unreal Engine | OpenXR · Quest / PCVR / AR passthrough |
+>
+> L'architecture logicielle repose sur un **graphe d'états procéduraux** : chaque étape de la procédure est un nœud avec des conditions d'entrée/sortie vérifiées en temps réel. Le scoring est calculé sur la précision des gestes, le respect de l'ordre des opérations, et les temps d'exécution — exportés en xAPI vers votre LMS.
+>
+> ![](/posts/formation-bras-robotise-IwMz.png)![](/posts/wisetour360-gyNT.png)
+>
+> > **Point de vigilance projet :** ce niveau nécessite que vous puissiez fournir soit les fichiers CAO des équipements (formats STEP, IGES, Parasolid acceptés), soit un accès terrain suffisant pour que nos équipes réalisent le relevé géométrique. Le temps de production est significativement plus long (4–12 semaines selon la complexité), mais le contenu produit est **réutilisable, versionnable et indépendant de la machine physique**.
+> ****Métriques terrain**
+>
+> ### Ce que nos clients observent après déploiement
+>
+> 1. \-40% de Temps de montée en compétence sur procédures complexes
+> 2. x3 de Taux de rétention vs formation papier à J+30
+> 3. 0 Indisponibilité machine pendant la formation opérateur
+
+### **Critères de choix**
+
+> ### Comment choisir le bon niveau pour votre projet ?
+>
+> La question n'est pas « quel budget avez-vous ? » mais « quelle est la nature de l'interaction pédagogique critique ? ». Si l'enjeu est de **repérer et contextualiser** → niveau 1. Si l'enjeu est de **reconnaître et localiser** sur la machine réelle → niveau 2. Si l'enjeu est de **reproduire un geste ou une séquence** avec vérification → niveau 3.
+>
+> En pratique, la majorité de nos projets industriels combinent deux niveaux : un environnement 360° pour l'intégration et la sécurité générale (niveau 1), et un ou plusieurs modules de simulation sur les procédures à risque ou à forte valeur pédagogique (niveau 3).
+>
+> ### Chaque projet démarre par un audit de vos modes opératoires existants et une cartographie des risques pédagogiques. Nous dimensionnons ensuite le niveau technologique au plus juste — ni trop, ni sous-équipé. C'est cette rigueur d'ingénierie qui fait la différence entre un outil de formation qui reste dans un tiroir et un qui transforme réellement vos pratiques terrain.

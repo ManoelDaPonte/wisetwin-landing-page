@@ -1,6 +1,6 @@
 {
-  "commit": "0a8c7dbd5cf6c9b225337f55a9ec314e984babc7",
-  "generated": "2026-04-22T14:14:27.352Z",
+  "commit": "7e5445554fc7a73fa4b244a51a0cf0e2d4516ae3",
+  "generated": "2026-05-15T12:05:10.722Z",
   "metadata": [
     {
       "__outstatic": {
@@ -55,6 +55,24 @@
       "slug": "le-3d-gaussian-splatting-explique-simplement-et-pourquoi-ca-change-la-donne-pour-l-industrie",
       "status": "published",
       "title": "Le 3D Gaussian Splatting, expliqué simplement (et pourquoi ça change la donne pour l'industrie)"
+    },
+    {
+      "__outstatic": {
+        "commit": "7e5445554fc7a73fa4b244a51a0cf0e2d4516ae3",
+        "hash": "1601521222",
+        "path": "outstatic/content/posts-fr/digitaliser-vos-modes-operatoires-du-scan-360deg-a-la-simulation-physique-en-temps-reel.mdx"
+      },
+      "author": {
+        "name": "Équipe Wise Twin",
+        "picture": "https://avatars.githubusercontent.com/u/170344958?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "Toutes les procédures industrielles ne se digitalisent pas de la même façon. Derrière le mot « formation immersive » se cachent des technologies radicalement différentes — avec des compromis précis sur le réalisme, le temps de production et le budget. Voici comment nous les choisissons pour vous.",
+      "image": "/posts/formation-bras-robotise-g4OT.png",
+      "publishedAt": "2026-05-15T11:36:56.484Z",
+      "slug": "digitaliser-vos-modes-operatoires-du-scan-360deg-a-la-simulation-physique-en-temps-reel",
+      "status": "draft",
+      "title": "Digitaliser vos modes opératoires : du scan 360° à la simulation physique en temps réel"
     }
   ]
 }
