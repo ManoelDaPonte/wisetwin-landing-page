@@ -1,6 +1,6 @@
 {
-  "commit": "7e5445554fc7a73fa4b244a51a0cf0e2d4516ae3",
-  "generated": "2026-05-15T12:05:10.722Z",
+  "commit": "4b4547a84a58e88901f18f27557435c2c313a4d3",
+  "generated": "2026-05-15T14:01:56.457Z",
   "media": [
     {
       "__outstatic": {
@@ -44,6 +44,17 @@
       "alt": "",
       "filename": "cover_page_ils_parlent_de_nous-A1Nj.svg",
       "publishedAt": "2026-04-17T15:17:34.269Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "4b4547a84a58e88901f18f27557435c2c313a4d3",
+        "hash": "1487376456",
+        "path": "public/posts/formation-bras-robotise-AxMT.png"
+      },
+      "alt": "",
+      "filename": "formation-bras-robotise-AxMT.png",
+      "publishedAt": "2026-05-15T14:01:56.453Z",
       "type": "image"
     },
     {
