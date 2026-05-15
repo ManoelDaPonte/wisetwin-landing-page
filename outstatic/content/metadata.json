@@ -1,6 +1,6 @@
 {
-  "commit": "b2b31e8009791522fa36b70ef2ce20f8dc01e75a",
-  "generated": "2026-05-15T13:59:49.054Z",
+  "commit": "d6590bfa44905a1594f3e619f136548d6f1280fe",
+  "generated": "2026-05-15T14:00:16.456Z",
   "metadata": [
     {
       "__outstatic": {
@@ -58,8 +58,8 @@
     },
     {
       "__outstatic": {
-        "commit": "b2b31e8009791522fa36b70ef2ce20f8dc01e75a",
-        "hash": "2423881910",
+        "commit": "d6590bfa44905a1594f3e619f136548d6f1280fe",
+        "hash": "2281463515",
         "path": "outstatic/content/posts-fr/digitaliser-vos-modes-operatoires-du-scan-360deg-a-la-simulation-physique-en-temps-reel.mdx"
       },
       "author": {
@@ -71,7 +71,7 @@
       "image": "/posts/formation-bras-robotise-g4OT.png",
       "publishedAt": "2026-05-15T11:36:56.484Z",
       "slug": "digitaliser-vos-modes-operatoires-du-scan-360deg-a-la-simulation-physique-en-temps-reel",
-      "status": "draft",
+      "status": "published",
       "title": "Digitaliser vos modes opératoires : du scan 360° à la simulation physique en temps réel"
     }
   ]
