@@ -1,6 +1,6 @@
 {
-  "commit": "4b4547a84a58e88901f18f27557435c2c313a4d3",
-  "generated": "2026-05-15T14:01:56.457Z",
+  "commit": "a884aafb30340f0e5f5c73c7338946b87d5b0d34",
+  "generated": "2026-05-15T14:18:30.820Z",
   "media": [
     {
       "__outstatic": {
@@ -55,6 +55,17 @@
       "alt": "",
       "filename": "formation-bras-robotise-AxMT.png",
       "publishedAt": "2026-05-15T14:01:56.453Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "a884aafb30340f0e5f5c73c7338946b87d5b0d34",
+        "hash": "1487376456",
+        "path": "public/posts/formation-bras-robotise-E1Nz.png"
+      },
+      "alt": "",
+      "filename": "formation-bras-robotise-E1Nz.png",
+      "publishedAt": "2026-05-15T14:18:30.819Z",
       "type": "image"
     },
     {

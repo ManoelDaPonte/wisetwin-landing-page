@@ -30,7 +30,7 @@ La captation par caméras omnidirectionnelles (typiquement équipées de capteur
 
 Le principal avantage opérationnel de cette approche réside dans sa **fidélité photorealiste immédiate** : l'opérateur navigue dans son environnement exact, sans abstraction. Les hotspots peuvent embarquer des check-lists de sécurité, des fiches de consignes PDF, des vidéos procédurales ou des quiz avec scoring renvoyé au LMS via xAPI.
 
-> ![](/posts/wisetrainer_360-k4Mz.jpg)
+![](/posts/wisetrainer_360-k4Mz.jpg)
 
 **Limite technique à connaître :** la représentation est statique par construction. Les machines ne bougent pas, les vannes ne s'actionnent pas. Le 360° est un medium de contextualisation et de repérage, pas de simulation d'interaction. Si votre procédure implique une manipulation séquentielle de composants, il faut passer au niveau 2.
 
@@ -53,7 +53,7 @@ Le **3D Gaussian Splatting** (3DGS, Kerbl et al., 2023) est une approche radical
 ![](/posts/wisetour360-kyNT.png)\
 *Reconstruction 3DGS provenant des données :* [*EyefulTower/*](https://github.com/facebookresearch/EyefulTower/blob/main/README.md)[*README.md*](http://README.md)[ *at main · facebookresearch/EyefulTower*](https://github.com/facebookresearch/EyefulTower/blob/main/README.md)
 
-> > **Quel pipeline choisir ?** Pour les pièces mécaniques avec surfaces mats et géométrie définie (culasses, pompes, vannes) → photogrammétrie. Pour les environnements complexes avec matériaux variés, transparences ou réflexions (salles de contrôle, équipements vitrés, zones humides) → 3DGS. En pratique, nous combinons souvent les deux sur un même projet.
+> **Quel pipeline choisir ?** Pour les pièces mécaniques avec surfaces mats et géométrie définie (culasses, pompes, vannes) → photogrammétrie. Pour les environnements complexes avec matériaux variés, transparences ou réflexions (salles de contrôle, équipements vitrés, zones humides) → 3DGS. En pratique, nous combinons souvent les deux sur un même projet.
 
 Le jumeau obtenu est intégré dans une interface de navigation 3D temps réel permettant à l'opérateur d'isoler des sous-ensembles, d'afficher des callouts de pièces référencées (liens vers la GMAO, nomenclature ERP), et de suivre un parcours pédagogique séquentiel sans quitter l'environnement visuel de la machine réelle.
 
@@ -69,11 +69,11 @@ Ce qui différencie fondamentalement ce niveau des précédents : les objets ont
 
 | **Modélisation** | **Texturage** | **Moteur** | **XR** |
 | --- | --- | --- | --- |
-| Blender · CAO import (STEP/FBX) | Substance Painter · PBR metalness | Unity ou Unreal Engine | OpenXR · Quest / PCVR / AR passthrough |
+| Blender · CAO import (STEP/FBX) | Outils de texturisation, Blender, GenAI | Unity ou Unreal Engine | OpenXR · Quest / PCVR / AR passthrough |
 
 L'architecture logicielle repose sur un **graphe d'états procéduraux** : chaque étape de la procédure est un nœud avec des conditions d'entrée/sortie vérifiées en temps réel. Le scoring est calculé sur la précision des gestes, le respect de l'ordre des opérations, et les temps d'exécution — exportés en xAPI vers votre LMS.
 
-> ![](/posts/formation-bras-robotise-AxMT.png)
+> ![](/posts/formation-bras-robotise-E1Nz.png)
 
 **Point de vigilance projet :** ce niveau nécessite que vous puissiez fournir soit les fichiers CAO des équipements (formats STEP, IGES, Parasolid acceptés), soit un accès terrain suffisant pour que nos équipes réalisent le relevé géométrique. Le temps de production est significativement plus long (4–12 semaines selon la complexité), mais le contenu produit est **réutilisable, versionnable et indépendant de la machine physique**. 
 

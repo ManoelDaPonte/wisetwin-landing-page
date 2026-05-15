@@ -1,6 +1,6 @@
 {
-  "commit": "4b4547a84a58e88901f18f27557435c2c313a4d3",
-  "generated": "2026-05-15T14:01:56.457Z",
+  "commit": "a884aafb30340f0e5f5c73c7338946b87d5b0d34",
+  "generated": "2026-05-15T14:18:30.820Z",
   "metadata": [
     {
       "__outstatic": {
@@ -58,8 +58,8 @@
     },
     {
       "__outstatic": {
-        "commit": "4b4547a84a58e88901f18f27557435c2c313a4d3",
-        "hash": "3947296847",
+        "commit": "a884aafb30340f0e5f5c73c7338946b87d5b0d34",
+        "hash": "3056871315",
         "path": "outstatic/content/posts-fr/digitaliser-vos-modes-operatoires-du-scan-360deg-a-la-simulation-physique-en-temps-reel.mdx"
       },
       "author": {
