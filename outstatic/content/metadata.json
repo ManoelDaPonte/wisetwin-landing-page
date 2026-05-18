@@ -1,6 +1,6 @@
 {
-  "commit": "df043095558fb381156ed5f104a4df6be0271634",
-  "generated": "2026-05-15T14:19:02.219Z",
+  "commit": "70a3dbb39560a3486eb9521d6725d7e7ed66906b",
+  "generated": "2026-05-18T08:03:53.795Z",
   "metadata": [
     {
       "__outstatic": {
@@ -73,6 +73,24 @@
       "slug": "digitaliser-vos-modes-operatoires-du-scan-360deg-a-la-simulation-physique-en-temps-reel",
       "status": "published",
       "title": "Digitaliser vos modes opératoires : du scan 360° à la simulation physique en temps réel"
+    },
+    {
+      "__outstatic": {
+        "commit": "70a3dbb39560a3486eb9521d6725d7e7ed66906b",
+        "hash": "1272944141",
+        "path": "outstatic/content/posts-fr/powerpoint-3d-gamifiee-jumeau-photorealiste-il-n-y-a-pas-de-bon-format-il-y-en-a-trois.mdx"
+      },
+      "author": {
+        "name": "Manoel Da Ponte",
+        "picture": "https://avatars.githubusercontent.com/u/131278442?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "Quel format choisir pour former à la sécurité industrielle ? Slides, 3D interactive et 3DGS comparés : coûts, rétention, cas d'usage. Sources PwC, Maryland.",
+      "image": "/posts/wisetwin-generic-cover-AxNT.png",
+      "publishedAt": "2026-05-18T08:10:20.537Z",
+      "slug": "powerpoint-3d-gamifiee-jumeau-photorealiste-il-n-y-a-pas-de-bon-format-il-y-en-a-trois",
+      "status": "published",
+      "title": "PowerPoint, 3D gamifiée, jumeau photoréaliste : il n'y a pas de bon format, il y en a trois"
     }
   ]
 }
