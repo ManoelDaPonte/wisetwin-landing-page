@@ -165,14 +165,14 @@ export function Header() {
 
 						{/* Login dropdown — desktop */}
 						<div className="hidden sm:block">
-							<NavigationMenu>
+							<NavigationMenu viewport={false}>
 								<NavigationMenuList>
 									<NavigationMenuItem>
 										<NavigationMenuTrigger className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-lg px-4">
 											<LogIn className="size-4 mr-2" />
 											{t("login")}
 										</NavigationMenuTrigger>
-										<NavigationMenuContent>
+										<NavigationMenuContent className="left-auto right-0">
 											<div className="p-3 w-[280px] space-y-1">
 												{platformItems.map((item) => {
 													const PIcon = item.icon;
