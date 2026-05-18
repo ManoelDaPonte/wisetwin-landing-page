@@ -1,6 +1,6 @@
 {
-  "commit": "df043095558fb381156ed5f104a4df6be0271634",
-  "generated": "2026-05-15T14:19:02.219Z",
+  "commit": "b9bbf84599b6c80900ae1103acf8ce030f09e0f9",
+  "generated": "2026-05-18T08:03:40.182Z",
   "media": [
     {
       "__outstatic": {
@@ -143,6 +143,17 @@
       "alt": "",
       "filename": "wisetrainer_360-k4Mz.jpg",
       "publishedAt": "2026-05-15T12:05:10.637Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "b9bbf84599b6c80900ae1103acf8ce030f09e0f9",
+        "hash": "3868328112",
+        "path": "public/posts/wisetwin-generic-cover-AxNT.png"
+      },
+      "alt": "",
+      "filename": "wisetwin-generic-cover-AxNT.png",
+      "publishedAt": "2026-05-18T08:03:40.182Z",
       "type": "image"
     }
   ]
