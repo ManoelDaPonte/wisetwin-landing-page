@@ -1,6 +1,6 @@
 {
-  "commit": "b9bbf84599b6c80900ae1103acf8ce030f09e0f9",
-  "generated": "2026-05-18T08:03:40.182Z",
+  "commit": "6ae07843a758ee88ad09f309494be578ef64ba4c",
+  "generated": "2026-05-28T11:50:17.293Z",
   "media": [
     {
       "__outstatic": {
@@ -110,6 +110,17 @@
       "alt": "",
       "filename": "je-ne-savais-pas-qu-il-fallait-toucher-a-ca-kyMj.png",
       "publishedAt": "2026-04-17T10:22:36.582Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "6ae07843a758ee88ad09f309494be578ef64ba4c",
+        "hash": "3173842563",
+        "path": "public/posts/lms-dashboard-analytics-k5Nj.png"
+      },
+      "alt": "",
+      "filename": "lms-dashboard-analytics-k5Nj.png",
+      "publishedAt": "2026-05-28T11:50:17.293Z",
       "type": "image"
     },
     {
