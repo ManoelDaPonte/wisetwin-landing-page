@@ -1,6 +1,6 @@
 {
-  "commit": "70a3dbb39560a3486eb9521d6725d7e7ed66906b",
-  "generated": "2026-05-18T08:03:53.795Z",
+  "commit": "7ad21dfda5f0cbcd38f54b48cf007186b46d376c",
+  "generated": "2026-05-28T11:50:52.248Z",
   "metadata": [
     {
       "__outstatic": {
@@ -91,6 +91,24 @@
       "slug": "powerpoint-3d-gamifiee-jumeau-photorealiste-il-n-y-a-pas-de-bon-format-il-y-en-a-trois",
       "status": "published",
       "title": "PowerPoint, 3D gamifiée, jumeau photoréaliste : il n'y a pas de bon format, il y en a trois"
+    },
+    {
+      "__outstatic": {
+        "commit": "7ad21dfda5f0cbcd38f54b48cf007186b46d376c",
+        "hash": "564073388",
+        "path": "outstatic/content/posts-fr/formation-industrielle-pourquoi-vos-operateurs-oublient-tout-et-comment-l-eviter.mdx"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/170344958?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "95% de rétention en sortie de simulateur, 67% à J+60 sans intervention. La courbe de l'oubli est documentée depuis 1885, voici comment Wise Twin la contrecarre avec une architecture LMS pensée pour l'industrie.",
+      "image": "/posts/lms-dashboard-analytics-k5Nj.png",
+      "publishedAt": "2026-05-28T11:52:54.127Z",
+      "slug": "formation-industrielle-pourquoi-vos-operateurs-oublient-tout-et-comment-l-eviter",
+      "status": "published",
+      "title": "Formation industrielle : pourquoi vos opérateurs oublient tout, et comment l'éviter"
     }
   ]
 }

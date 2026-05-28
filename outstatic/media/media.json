@@ -1,6 +1,6 @@
 {
-  "commit": "6ae07843a758ee88ad09f309494be578ef64ba4c",
-  "generated": "2026-05-28T11:50:17.293Z",
+  "commit": "7ad21dfda5f0cbcd38f54b48cf007186b46d376c",
+  "generated": "2026-05-28T11:50:52.248Z",
   "media": [
     {
       "__outstatic": {
@@ -44,6 +44,17 @@
       "alt": "",
       "filename": "cover_page_ils_parlent_de_nous-A1Nj.svg",
       "publishedAt": "2026-04-17T15:17:34.269Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "7ad21dfda5f0cbcd38f54b48cf007186b46d376c",
+        "hash": "2669105195",
+        "path": "public/posts/ebbinghaus-wisetrainer-UyNT.png"
+      },
+      "alt": "",
+      "filename": "ebbinghaus-wisetrainer-UyNT.png",
+      "publishedAt": "2026-05-28T11:50:52.244Z",
       "type": "image"
     },
     {
@@ -114,6 +125,17 @@
     },
     {
       "__outstatic": {
+        "commit": "7ad21dfda5f0cbcd38f54b48cf007186b46d376c",
+        "hash": "3173842563",
+        "path": "public/posts/lms-dashboard-analytics-c3ND.png"
+      },
+      "alt": "",
+      "filename": "lms-dashboard-analytics-c3ND.png",
+      "publishedAt": "2026-05-28T11:50:52.247Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
         "commit": "6ae07843a758ee88ad09f309494be578ef64ba4c",
         "hash": "3173842563",
         "path": "public/posts/lms-dashboard-analytics-k5Nj.png"
@@ -143,6 +165,17 @@
       "alt": "",
       "filename": "wisetour360-kyNT.png",
       "publishedAt": "2026-05-15T12:05:10.720Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "7ad21dfda5f0cbcd38f54b48cf007186b46d376c",
+        "hash": "961762319",
+        "path": "public/posts/wisetrainer-lms-cyMT.png"
+      },
+      "alt": "",
+      "filename": "wisetrainer-lms-cyMT.png",
+      "publishedAt": "2026-05-28T11:50:52.246Z",
       "type": "image"
     },
     {
