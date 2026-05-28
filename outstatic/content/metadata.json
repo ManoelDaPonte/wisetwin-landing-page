@@ -1,6 +1,6 @@
 {
-  "commit": "7ad21dfda5f0cbcd38f54b48cf007186b46d376c",
-  "generated": "2026-05-28T11:50:52.248Z",
+  "commit": "f136bccf8698398415210937f8fb958711122339",
+  "generated": "2026-05-28T11:53:39.790Z",
   "metadata": [
     {
       "__outstatic": {
@@ -94,8 +94,8 @@
     },
     {
       "__outstatic": {
-        "commit": "7ad21dfda5f0cbcd38f54b48cf007186b46d376c",
-        "hash": "564073388",
+        "commit": "f136bccf8698398415210937f8fb958711122339",
+        "hash": "2515996191",
         "path": "outstatic/content/posts-fr/formation-industrielle-pourquoi-vos-operateurs-oublient-tout-et-comment-l-eviter.mdx"
       },
       "author": {
