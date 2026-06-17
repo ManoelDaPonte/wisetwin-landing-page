@@ -1,7 +1,18 @@
 {
-  "commit": "8bc5350e5e504fbfdbc52bdbe713096d9b35983e",
-  "generated": "2026-06-17T14:05:40.306Z",
+  "commit": "56b60a2a2d7ba3ea2ecd821ac27c33f7c9f09600",
+  "generated": "2026-06-17T14:07:51.042Z",
   "media": [
+    {
+      "__outstatic": {
+        "commit": "56b60a2a2d7ba3ea2ecd821ac27c33f7c9f09600",
+        "hash": "3173842563",
+        "path": "public/posts/captura-de-pantalla-2026-05-28-134714-k1Nj.png"
+      },
+      "alt": "",
+      "filename": "captura-de-pantalla-2026-05-28-134714-k1Nj.png",
+      "publishedAt": "2026-06-17T14:07:51.041Z",
+      "type": "image"
+    },
     {
       "__outstatic": {
         "commit": "ac1cbeeab1c06f44f93105f971a626fabd8a0a78",
@@ -154,6 +165,17 @@
       "alt": "",
       "filename": "lms-dashboard-analytics-k5Nj.png",
       "publishedAt": "2026-05-28T11:50:17.293Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "56b60a2a2d7ba3ea2ecd821ac27c33f7c9f09600",
+        "hash": "3022296188",
+        "path": "public/posts/scanneur-de-risques-industriels-wise-twin-ia-gyMj.jpg"
+      },
+      "alt": "",
+      "filename": "scanneur-de-risques-industriels-wise-twin-ia-gyMj.jpg",
+      "publishedAt": "2026-06-17T14:07:51.040Z",
       "type": "image"
     },
     {

@@ -1,6 +1,6 @@
 {
-  "commit": "2f3657f9725a01c93e7870f9075421e0d8f3f033",
-  "generated": "2026-05-28T12:03:01.460Z",
+  "commit": "56b60a2a2d7ba3ea2ecd821ac27c33f7c9f09600",
+  "generated": "2026-06-17T14:07:51.042Z",
   "metadata": [
     {
       "__outstatic": {
@@ -109,6 +109,24 @@
       "slug": "formation-industrielle-pourquoi-vos-operateurs-oublient-tout-et-comment-l-eviter",
       "status": "published",
       "title": "Formation industrielle : pourquoi vos opérateurs oublient tout, et comment l'éviter"
+    },
+    {
+      "__outstatic": {
+        "commit": "56b60a2a2d7ba3ea2ecd821ac27c33f7c9f09600",
+        "hash": "833700010",
+        "path": "outstatic/content/posts-fr/votre-duerp-est-redige-et-si-la-vraie-prevention-commencait-maintenant.mdx"
+      },
+      "author": {
+        "name": "Mickaël",
+        "picture": "https://avatars.githubusercontent.com/u/170344958?v=4"
+      },
+      "collection": "posts-fr",
+      "description": "Wise Twin est une plateforme HSE tout-en-un qui prolonge le DUERP au-delà de sa simple rédaction. Elle centralise trois fonctions : la détection des risques professionnels par analyse IA de photos d'atelier, la montée en compétence des équipes via un LMS intégré, et une assistance quotidienne par IA qui propose des plans de prévention à partir de l'accidentologie interne et externe. Objectif : faire du document unique un véritable outil de management de la prévention, traçable et réévalué en continu.",
+      "image": "/posts/duerp-alimente-quotidiennement-U1ND.png",
+      "publishedAt": "2026-06-17T13:49:39.291Z",
+      "slug": "votre-duerp-est-redige-et-si-la-vraie-prevention-commencait-maintenant",
+      "status": "published",
+      "title": "Votre DUERP est rédigé. Et si la vraie prévention commençait maintenant ?"
     }
   ]
 }
