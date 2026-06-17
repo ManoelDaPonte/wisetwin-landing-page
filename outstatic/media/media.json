@@ -1,6 +1,6 @@
 {
-  "commit": "7ad21dfda5f0cbcd38f54b48cf007186b46d376c",
-  "generated": "2026-05-28T11:50:52.248Z",
+  "commit": "8bc5350e5e504fbfdbc52bdbe713096d9b35983e",
+  "generated": "2026-06-17T14:05:40.306Z",
   "media": [
     {
       "__outstatic": {
@@ -44,6 +44,17 @@
       "alt": "",
       "filename": "cover_page_ils_parlent_de_nous-A1Nj.svg",
       "publishedAt": "2026-04-17T15:17:34.269Z",
+      "type": "image"
+    },
+    {
+      "__outstatic": {
+        "commit": "8bc5350e5e504fbfdbc52bdbe713096d9b35983e",
+        "hash": "653919474",
+        "path": "public/posts/duerp-alimente-quotidiennement-U1ND.png"
+      },
+      "alt": "",
+      "filename": "duerp-alimente-quotidiennement-U1ND.png",
+      "publishedAt": "2026-06-17T14:05:40.306Z",
       "type": "image"
     },
     {
