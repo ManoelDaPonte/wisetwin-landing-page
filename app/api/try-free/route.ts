@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { transporter } from "@/lib/mailer";
 
 export async function POST(req: NextRequest) {
 	try {
@@ -19,15 +19,7 @@ export async function POST(req: NextRequest) {
 			);
 		}
 
-		const transporter = nodemailer.createTransport({
-			host: process.env.EMAIL_HOST,
-			port: Number(process.env.EMAIL_PORT),
-			secure: false,
-			auth: {
-				user: process.env.EMAIL_USER,
-				pass: process.env.EMAIL_PASS,
-			},
-		});
+		// Envoi via Microsoft Graph API (voir lib/mailer.ts)
 
 		// Email to the user with the app link
 		await transporter.sendMail({
@@ -52,7 +44,7 @@ export async function POST(req: NextRequest) {
 		// Notification email to the team
 		await transporter.sendMail({
 			from: `"WiseTwin Platform" <${process.env.EMAIL_USER}>`,
-			to: process.env.EMAIL_RECEIVER,
+			to: process.env.EMAIL_RECEIVER!,
 			subject: `Nouveau lead - Essai gratuit: ${firstName} ${lastName} (${company})`,
 			html: `
 				<h2>Nouveau lead - Essai gratuit</h2>

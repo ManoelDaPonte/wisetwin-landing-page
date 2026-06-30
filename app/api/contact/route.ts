@@ -1,6 +1,6 @@
 // app/api/contact/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { transporter } from "@/lib/mailer";
 import { cookies } from "next/headers";
 import { validateCSRFToken } from "@/lib/csrf";
 
@@ -46,22 +46,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Configuration du transporteur SMTP
-    const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: Number(process.env.EMAIL_PORT),
-      secure: false, // true pour le port 465, false pour les autres ports
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    // Envoi via Microsoft Graph API (voir lib/mailer.ts)
 
     // Contenu du mail pour le destinataire
     const mailOptions = {
       from: `"WiseTwin" <${process.env.EMAIL_FROM}>`,
       replyTo: process.env.EMAIL_FROM,
-      to: process.env.EMAIL_RECEIVER,
+      to: process.env.EMAIL_RECEIVER!,
       subject: `Nouveau message: ${subject || "Formulaire de contact WiseTwin"}`,
       html: `
         <h2>Nouveau message du site WiseTwin</h2>
