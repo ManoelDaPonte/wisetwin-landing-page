@@ -2,6 +2,13 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Le thème est piloté par next-themes via la classe `.dark` sur <html>
+   (attribute="class"). En Tailwind v4, la variante `dark:` cible par défaut
+   `prefers-color-scheme` — il FAUT donc redéfinir `dark` sur la classe, sinon
+   les utilitaires `dark:` (ex. `dark:prose-invert` des pages légales) ne
+   s'activent pas et le texte reste sombre sur fond sombre. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
 	/* Couleurs de WiseTwin */
 	--color-wisetwin-blue: hsl(199 100% 50%); /* Bleu clair du logo (#00C7FF) */
