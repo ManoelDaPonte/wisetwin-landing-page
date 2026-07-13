@@ -1,0 +1,47 @@
+# WiseTwin
+
+> WiseTwin is an industrial training platform (SaaS) built for the AI era. It brings HR,
+> HSE managers, training managers and learners together on one connected platform, and
+> covers the full spectrum of digital training — from photorealistic 3D digital-twin
+> simulators to interactive micro-learning — as a strong, modern alternative to legacy
+> LMS and static e-learning.
+
+WiseTwin digitalizes industrial environments into immersive digital twins so teams can
+train on exact replicas of their own equipment and sites — safely, without stopping
+production. The platform centralizes training plans, learner tracking, certification
+and analytics, and uses generative AI to keep content connected and up to date:
+importing existing documents into interactive trainings, AI safety assistance, risk
+hunting on workplace photos and prevention reporting.
+
+Primary language: French (site available at /fr and /en). Website: https://wisetwin.eu
+
+## Who it serves
+
+- HR teams: onboarding, compliance, training records and certifications in one place
+- HSE managers: safety inductions, incident-driven prevention, risk awareness
+- Training managers: authoring, planning, tracking and reporting across all formats
+- Learners: immersive, engaging trainings accessible from a browser — no installation
+
+## Training formats
+
+- WiseTrainer — immersive real-time 3D simulators of your own facilities: lockout/tagout,
+  evacuation, fire safety, chemical leaks, complex maintenance — no risk, no downtime
+- SafetyTour — photorealistic virtual site visits for safety inductions
+- WisePaper — interactive document-based micro-learning with quizzes, generated from
+  your existing PowerPoint, Word or PDF materials with AI assistance
+
+## Key pages
+
+- [Home (FR)](https://wisetwin.eu/fr): platform overview and solutions
+- [WiseTrainer (FR)](https://wisetwin.eu/fr/solutions/wisetrainer): 3D training simulators
+- [WiseAtlas (FR)](https://wisetwin.eu/fr/solutions/wiseatlas): interactive 4D map for
+  territories and industrial infrastructure
+- [FAQ (FR)](https://wisetwin.eu/fr/faq): pricing, deployment, data security
+- [Blog (FR)](https://wisetwin.eu/fr/blog): industrial training and digital twin insights
+- [Home (EN)](https://wisetwin.eu/en): English version of the site
+
+## Company
+
+- WiseTwin is a French company serving industrial companies and territories
+- Positioning: a connected, always-up-to-date vision of industrial training in the AI
+  era — replacing paper procedures, PDFs and static e-learning with living digital twins
