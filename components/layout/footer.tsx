@@ -18,11 +18,12 @@ export function Footer() {
 	];
 
 	const toolLinks = [
-		{ label: t("tools.platform.title"), href: "/solutions/wisetrainer" },
 		{ label: t("tools.bricks.wisetrainer.title"), href: "/solutions/wisetrainer" },
-		{ label: t("tools.bricks.wisepaper.title"), href: "/solutions/wisetrainer" },
-		{ label: t("tools.bricks.wisetour.title"), href: "/solutions/wisetrainer" },
+		{ label: t("tools.bricks.wisepaper.title"), href: "/solutions/wisepaper" },
+		{ label: t("tools.bricks.wisetour.title"), href: "/solutions/wisetour" },
+		{ label: t("tools.bricks.askai.title"), href: "/solutions/askai" },
 		{ label: t("tools.wiseatlas.title"), href: "/solutions/wiseatlas" },
+		{ label: t("tools.platform.title"), href: "/solutions/plateforme" },
 	];
 
 	const legalLinks = [

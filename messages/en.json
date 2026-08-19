@@ -10,9 +10,10 @@
 			"ogTitle": "WiseTwin - Tailor-made digital solutions for industry",
 			"ogDescription": "Consulting and development of digital tools for industry: training, HSE, 3D, data & AI. Short projects, controlled budgets."
 		},
-		"wisetrainer": {
+		"platform": {
+			"title": "The LMS platform",
 			"description": "WiseTrainer, WisePaper, WiseTour: industrial training bricks à la carte, or the complete LMS platform with Ask AI and incident database for €3,500/year.",
-			"ogTitle": "WiseTrainer LMS - Industrial training in bricks",
+			"ogTitle": "The WiseTwin LMS platform - Industrial training in bricks",
 			"ogDescription": "Buy each brick separately or take the complete platform. 3D simulators, immersive safety induction, AI document-based training. 100% web."
 		},
 		"wiseatlas": {
@@ -46,15 +47,12 @@
 		"blog": "Blog",
 		"faq": "FAQ",
 		"contact": "Contact",
-		"login": "Log in",
 		"quote": "Free quote",
 		"training": "Training",
 		"communication": "Communication",
 		"platformShort": "Training bricks, safety AI and management",
 		"wiseatlasShort": "The interactive map of your territory",
-		"allTools": "All our bricks",
-		"platformWisetrainer": "Access the training platform",
-		"platformWiseatlas": "Access the interactive map"
+		"allTools": "All our bricks"
 	},
 	"hero": {
 		"badge": "Consulting & digital solutions development for industry",
@@ -147,6 +145,7 @@
 		"title": "Your project, laid on the calendar",
 		"subtitle": "Short projects. Fast deliverables. Trust above all.",
 		"calendarTitle": "typical week of a WiseTwin project",
+		"signature": "Quote signed",
 		"steps": {
 			"listen": {
 				"when": "Day 1",
@@ -159,9 +158,9 @@
 				"description": "Clear scope, firm price. Free quote, no commitment."
 			},
 			"build": {
-				"when": "Weeks 1 to 4",
+				"when": "Iterations",
 				"title": "We build",
-				"description": "A fast first deliverable, your feedback all along."
+				"description": "Short iterations, punctuated by regular 15 to 30 minute meetings to keep the project aligned."
 			},
 			"deploy": {
 				"when": "Then",
@@ -177,13 +176,7 @@
 		"platform": {
 			"tag": "The platform",
 			"title": "The LMS platform",
-			"description": "All of WiseTwin in one place: your trainings, the safety AI and your team management.",
-			"features": [
-				"WiseTrainer, WisePaper and WiseTour included",
-				"Ask AI and incident database, exclusive",
-				"Training plans, analytics and certifications",
-				"Unlimited learners"
-			],
+			"description": "The three bricks together, plus Ask AI, the incident database, training plans, analytics and certifications.",
 			"price": "€3,500/yr",
 			"priceNote": "instead of €4,000 in separate bricks",
 			"cta": "Discover the platform"
@@ -266,13 +259,24 @@
 				"quote": "The 3D simulator of our line changed our trainings: operators practice in real conditions, without stopping production.",
 				"author": "Training Manager",
 				"context": "Production site, France"
+			},
+			{
+				"quote": "A business application delivered in a few weeks, that finally fits our process. You can tell the team knows industry.",
+				"author": "Methods Manager",
+				"context": "Industrial site, Hauts-de-France"
+			},
+			{
+				"quote": "The interactive map changed our steering committees: everyone sees the same territory, up to date, in one link.",
+				"author": "Project Officer",
+				"context": "Territorial actor, Dunkirk coast"
 			}
 		]
 	},
 	"team": {
 		"eyebrow": "Who we are",
 		"title": "Our team",
-		"subtitle": "The people you meet are the people who deliver.",
+		"subtitle": "Three partners from the industrial world. The people you meet are the people who deliver.",
+		"memberLabel": "Partner",
 		"note": "No rigid org chart:",
 		"noteHighlight": "the team assembles on the fly, around your need.",
 		"members": {
@@ -569,8 +573,112 @@
 			}
 		}
 	},
-	"wisetrainer": {
-		"title": "WiseTrainer LMS"
+	"brickPages": {
+		"common": {
+			"eyebrow": "Brick",
+			"perYear": "€/yr",
+			"ctaQuote": "Request a free quote",
+			"ctaPlatform": "See the LMS platform",
+			"included": {
+				"eyebrow": "The LMS platform",
+				"title": "Even stronger in the platform",
+				"titleExclusive": "Only available in the platform",
+				"description": "The LMS platform brings WiseTrainer, WisePaper and WiseTour together for €3,500/year per site, and unlocks Ask AI, the incident database, training plans, analytics and certifications.",
+				"cta": "Discover the platform"
+			}
+		},
+		"wisetrainer": {
+			"metaTitle": "WiseTrainer - 3D industrial training simulators",
+			"metaDescription": "Your facilities recreated as immersive 3D simulators. Custom-built, unlimited delivery at €1,500/year per site. The 3D asset belongs to you.",
+			"tag": "3D training",
+			"title": "WiseTrainer",
+			"subtitle": "Your facilities recreated as immersive 3D simulators. Your teams train in real conditions, without stopping production.",
+			"price": "1,500",
+			"priceNote": "Per site, unlimited delivery. Simulator creation is a custom project: the 3D asset belongs to you.",
+			"features": [
+				{
+					"title": "Your factory, not a generic one",
+					"description": "We model your workshops in high-fidelity 3D from your plans and references. Your operators recognize their workstation."
+				},
+				{
+					"title": "Gamified scenarios",
+					"description": "Equipment handling, critical procedures, hazardous situation simulation: every action is scored and tracked."
+				},
+				{
+					"title": "100% browser-based",
+					"description": "No installation: your learners train from a PC or tablet. VR headsets remain possible when they bring real value."
+				}
+			]
+		},
+		"wisepaper": {
+			"metaTitle": "WisePaper - Your documents turned into trainings by AI",
+			"metaDescription": "Import your PDF, Word or PowerPoint files: AI turns them into interactive trainings with quizzes and completion tracking. €1,200/year per site.",
+			"tag": "Document training",
+			"title": "WisePaper",
+			"subtitle": "Import your PDF, Word or PowerPoint files: AI turns them into interactive, chaptered trainings with quizzes and tracking.",
+			"price": "1,200",
+			"priceNote": "Per site, unlimited learners, unlimited trainings.",
+			"features": [
+				{
+					"title": "The AI does the work",
+					"description": "Drop a document, validate the proposed outline: the training writes itself, chapters and MCQs included. A few minutes is all it takes."
+				},
+				{
+					"title": "Always up to date",
+					"description": "Replace the document, the training updates. No more materials living their own life on the shop floor."
+				},
+				{
+					"title": "Every answer tracked",
+					"description": "Scores, attempts and completion are recorded: enough to prove the compliance of your regulatory trainings."
+				}
+			]
+		},
+		"wisetour": {
+			"metaTitle": "WiseTour - Immersive safety induction of your site",
+			"metaDescription": "The immersive safety tour of your site, created from a 3D capture. Temp workers and subcontractors operational from day one. €1,300/year per site.",
+			"tag": "Safety induction",
+			"title": "WiseTour",
+			"subtitle": "The immersive safety tour of your site, created from a simple 3D capture. Your temp workers are operational from day one.",
+			"price": "1,300",
+			"priceNote": "Per site. The 3D capture of your facilities is priced on quote.",
+			"features": [
+				{
+					"title": "Your site, as if you were there",
+					"description": "A 3D capture of your facilities becomes an immersive path: zones, instructions, points of interest, visit order."
+				},
+				{
+					"title": "Quizzes at key points",
+					"description": "Each step can validate a skill: mandatory PPE, instructions, risk zones. Nothing slips through."
+				},
+				{
+					"title": "Traceable and defensible",
+					"description": "Completion and certificates recorded for every visitor, temp worker or subcontractor, with no email account required."
+				}
+			]
+		},
+		"askai": {
+			"metaTitle": "Ask AI - The safety copilot of your industrial site",
+			"metaDescription": "Photo-based risk hunts, prevention reports, incident database searchable in natural language. Reserved for the WiseTwin LMS platform.",
+			"tag": "AI & data",
+			"title": "Ask AI",
+			"subtitle": "The safety copilot of your site: it cross-references your internal accident history, public accidentology and your trainings.",
+			"price": "Platform only",
+			"priceNote": "Ask AI and the incident database are not sold separately: they are included in the LMS platform.",
+			"features": [
+				{
+					"title": "Photo-based risk hunts",
+					"description": "Send a photo of a workstation: the AI detects visible risks, ranks them by severity and recommends the right trainings."
+				},
+				{
+					"title": "Your accident history, searchable",
+					"description": "Import your incident reports: anonymized, summarized and searchable in natural language, alongside public industrial accident databases."
+				},
+				{
+					"title": "Prevention reports in one click",
+					"description": "A dated PDF synthesis: key messages, internal history, comparable accidents and recommended trainings."
+				}
+			]
+		}
 	},
 	"wiseatlas": {
 		"title": "WiseAtlas",

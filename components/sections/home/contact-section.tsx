@@ -261,7 +261,7 @@ export function ContactSection() {
 					))}
 				</div>
 
-				<div className="grid lg:grid-cols-5 gap-6 lg:gap-8 items-start">
+				<div className="grid lg:grid-cols-5 gap-6 lg:gap-8 items-stretch">
 					{/* Colonne gauche : interlocuteur + créneau */}
 					<div className="lg:col-span-2 space-y-6">
 						{/* Étape 1 : l'interlocuteur */}
@@ -410,9 +410,9 @@ export function ContactSection() {
 						</Reveal>
 					</div>
 
-					{/* Colonne droite : le formulaire */}
-					<Reveal delay={0.15} className="lg:col-span-3">
-						<Card className="shadow-sm border">
+					{/* Colonne droite : le formulaire, à la même hauteur que les deux cartes de gauche */}
+					<Reveal delay={0.15} className="lg:col-span-3 h-full">
+						<Card className="shadow-sm border h-full flex flex-col">
 							<CardHeader>
 								<p className="text-xs font-mono uppercase tracking-[0.15em] text-secondary">
 									{t("formStep")}
@@ -422,8 +422,8 @@ export function ContactSection() {
 									{t("cardDescription")}
 								</CardDescription>
 							</CardHeader>
-							<CardContent>
-								<form onSubmit={handleSubmit}>
+							<CardContent className="flex-1 flex flex-col">
+								<form onSubmit={handleSubmit} className="flex flex-col flex-1">
 										{error && (
 											<div className="flex items-start gap-2 mb-6 p-4 bg-destructive/10 border border-destructive text-destructive rounded-md">
 												<AlertTriangle size={20} className="flex-shrink-0 mt-0.5" />
@@ -507,7 +507,7 @@ export function ContactSection() {
 											/>
 										</div>
 
-										<div className="mb-6 space-y-2">
+										<div className="mb-6 flex-1 flex flex-col gap-2">
 											<label htmlFor="message" className="block text-sm font-medium">
 												{t("form.message")} <span className="text-secondary">{t("form.required")}</span>
 											</label>
@@ -519,10 +519,11 @@ export function ContactSection() {
 												required
 												rows={6}
 												placeholder={t("form.messagePlaceholder")}
+												className="flex-1 min-h-32 resize-none"
 											/>
 										</div>
 
-										<div className="flex justify-end">
+										<div className="flex justify-end mt-auto">
 											<Button type="submit" disabled={isSubmitting || cooldown} className="w-full sm:w-auto" size="lg">
 												{isSubmitting ? (
 													<>

@@ -51,9 +51,10 @@ export function ModularPricingSection() {
 							{bricks.map((brick) => {
 								const Icon = brick.icon;
 								return (
-									<div
+									<Link
 										key={brick.key}
-										className="bg-card border border-border rounded-xl p-5 hover:border-secondary/30 transition-colors flex-1"
+										href={`/solutions/${brick.key}`}
+										className="block bg-card border border-border rounded-xl p-5 hover:border-secondary/40 hover:-translate-y-0.5 transition-all flex-1"
 									>
 										<div className="flex items-center justify-between gap-3 mb-2">
 											<div className="flex items-center gap-3">
@@ -75,7 +76,7 @@ export function ModularPricingSection() {
 										<p className="text-xs text-muted-foreground leading-relaxed">
 											{t(`bricks.items.${brick.key}.description`)}
 										</p>
-									</div>
+									</Link>
 								);
 							})}
 						</div>

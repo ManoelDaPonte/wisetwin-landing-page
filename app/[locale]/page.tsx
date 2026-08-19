@@ -1,10 +1,27 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { load } from "outstatic/server";
+import fs from "fs/promises";
+import path from "path";
 
 export const dynamic = "force-dynamic";
 import HomeClient from "@/components/pages/home-client";
 import { getReadingTime } from "@/lib/reading-time";
+
+// Pool de témoignages vidéo : déposer les fichiers dans public/videos/temoignages/
+const TESTIMONIAL_VIDEOS_DIR = "videos/temoignages";
+
+async function getTestimonialVideos(): Promise<string[]> {
+	try {
+		const dir = path.join(process.cwd(), "public", TESTIMONIAL_VIDEOS_DIR);
+		const files = await fs.readdir(dir);
+		return files
+			.filter((f) => /\.(mp4|webm|mov|m4v)$/i.test(f))
+			.map((f) => `/${TESTIMONIAL_VIDEOS_DIR}/${f}`);
+	} catch {
+		return [];
+	}
+}
 
 export async function generateMetadata({
 	params,
@@ -91,5 +108,12 @@ export default async function Home({
 		readingTime: getReadingTime((post.content as string) || ""),
 	}));
 
-	return <HomeClient latestPosts={latestPosts} />;
+	const testimonialVideos = await getTestimonialVideos();
+
+	return (
+		<HomeClient
+			latestPosts={latestPosts}
+			testimonialVideos={testimonialVideos}
+		/>
+	);
 }

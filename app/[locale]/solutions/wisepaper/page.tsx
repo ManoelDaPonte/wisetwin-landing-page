@@ -4,7 +4,7 @@ import BrickClient from "@/components/pages/brick-client";
 import { JsonLd } from "@/components/seo/json-ld";
 import { brickPageMetadata, brickBreadcrumbJsonLd } from "@/lib/brick-seo";
 
-const BRICK = "wisetrainer" as const;
+const BRICK = "wisepaper" as const;
 
 export async function generateMetadata({
 	params,
@@ -14,7 +14,7 @@ export async function generateMetadata({
 	return brickPageMetadata(BRICK, params);
 }
 
-export default async function WiseTrainerBrickPage({
+export default async function BrickPage({
 	params,
 }: {
 	params: Promise<{ locale: string }>;

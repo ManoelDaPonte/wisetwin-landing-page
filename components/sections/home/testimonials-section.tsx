@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/common/section";
 import { Reveal } from "@/components/ui/reveal";
@@ -12,24 +12,47 @@ import {
 import { cn } from "@/lib/utils";
 import { Play, Quote } from "lucide-react";
 
-// Vidéos placeholders en attendant les vrais témoignages clients filmés
-const VIDEO_IDS = ["dQw4w9WgXcQ", "dQw4w9WgXcQ", "dQw4w9WgXcQ"] as const;
+// Fallback tant que le pool public/videos/temoignages/ est vide
+const FALLBACK_YOUTUBE_ID = "dQw4w9WgXcQ";
 
 // Désorganisation contrôlée : rotations et décalages propres à chaque carte
 const scatter = [
-	"rotate-[-1.5deg] lg:rotate-[-4deg] lg:translate-y-8",
-	"rotate-[1deg] lg:rotate-[2.5deg] lg:-translate-y-2 lg:scale-[1.06] z-10",
-	"rotate-[-1deg] lg:rotate-[4deg] lg:translate-y-10",
+	"rotate-[-1.5deg] lg:rotate-[-4deg] lg:translate-y-6",
+	"rotate-[1deg] lg:rotate-[2deg] lg:-translate-y-2 lg:scale-[1.05] z-10",
+	"rotate-[-1deg] lg:rotate-[3.5deg] lg:translate-y-8",
+	"rotate-[1.5deg] lg:rotate-[-2.5deg] lg:translate-y-2 lg:-translate-x-6",
+	"rotate-[-0.5deg] lg:rotate-[2.5deg] lg:-translate-y-3 lg:translate-x-6",
 ] as const;
 
-export function TestimonialsSection() {
+function shuffle<T>(arr: T[]): T[] {
+	const a = [...arr];
+	for (let i = a.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[a[i], a[j]] = [a[j], a[i]];
+	}
+	return a;
+}
+
+export function TestimonialsSection({ videoPool }: { videoPool: string[] }) {
 	const t = useTranslations("testimonials");
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
+	// Tirage aléatoire côté client uniquement (pas de Math.random au SSR)
+	const [assigned, setAssigned] = useState<(string | null)[]>([]);
 	const items = t.raw("items") as Array<{
 		quote: string;
 		author: string;
 		context: string;
 	}>;
+
+	useEffect(() => {
+		if (videoPool.length === 0) {
+			setAssigned(items.map(() => null));
+			return;
+		}
+		const shuffled = shuffle(videoPool);
+		setAssigned(items.map((_, i) => shuffled[i % shuffled.length]));
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [videoPool.length]);
 
 	return (
 		<Section
@@ -42,9 +65,13 @@ export function TestimonialsSection() {
 				centered: true,
 			}}
 		>
-			<div className="grid md:grid-cols-3 gap-8 lg:gap-6 max-w-5xl mx-auto lg:py-10">
+			<div className="flex flex-wrap justify-center gap-8 lg:gap-6 max-w-6xl mx-auto lg:py-8">
 				{items.map((item, i) => (
-					<Reveal key={i} delay={i * 0.12}>
+					<Reveal
+						key={i}
+						delay={i * 0.09}
+						className="w-full sm:w-[300px] shrink-0"
+					>
 						<button
 							type="button"
 							onClick={() => setOpenIndex(i)}
@@ -67,9 +94,9 @@ export function TestimonialsSection() {
 								{/* Bouton play */}
 								<span className="absolute inset-0 flex items-center justify-center">
 									<span className="relative flex items-center justify-center">
-										<span className="absolute size-16 rounded-full bg-secondary/30 animate-ping [animation-duration:2.5s]" />
-										<span className="relative size-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-											<Play className="size-6 text-[#0f0b40] fill-[#0f0b40] translate-x-0.5" />
+										<span className="absolute size-14 rounded-full bg-secondary/30 animate-ping [animation-duration:2.5s]" />
+										<span className="relative size-12 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+											<Play className="size-5 text-[#0f0b40] fill-[#0f0b40] translate-x-0.5" />
 										</span>
 									</span>
 								</span>
@@ -101,13 +128,23 @@ export function TestimonialsSection() {
 					</DialogTitle>
 					{openIndex !== null && (
 						<div className="aspect-video w-full">
-							<iframe
-								src={`https://www.youtube-nocookie.com/embed/${VIDEO_IDS[openIndex % VIDEO_IDS.length]}?autoplay=1&rel=0`}
-								title={items[openIndex]?.author}
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-								allowFullScreen
-								className="w-full h-full border-0"
-							/>
+							{assigned[openIndex] ? (
+								<video
+									src={assigned[openIndex] as string}
+									controls
+									autoPlay
+									playsInline
+									className="w-full h-full object-contain bg-black"
+								/>
+							) : (
+								<iframe
+									src={`https://www.youtube-nocookie.com/embed/${FALLBACK_YOUTUBE_ID}?autoplay=1&rel=0`}
+									title={items[openIndex]?.author}
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowFullScreen
+									className="w-full h-full border-0"
+								/>
+							)}
 						</div>
 					)}
 				</DialogContent>

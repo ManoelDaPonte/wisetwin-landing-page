@@ -23,14 +23,20 @@ type Post = {
 	readingTime: number;
 };
 
-export default function HomeClient({ latestPosts }: { latestPosts: Post[] }) {
+export default function HomeClient({
+	latestPosts,
+	testimonialVideos,
+}: {
+	latestPosts: Post[];
+	testimonialVideos: string[];
+}) {
 	return (
 		<>
 			<HeroSection />
 			<TrustedBySection />
 			<ConvictionsSection />
 			<TeamSection />
-			<TestimonialsSection />
+			<TestimonialsSection videoPool={testimonialVideos} />
 			<ExpertisesSection />
 			<MethodSection />
 			<ToolsSection />

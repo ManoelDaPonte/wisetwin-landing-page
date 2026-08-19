@@ -53,30 +53,34 @@ Key files:
 Pages are composed via client orchestrators in `components/pages/`:
 - `home-client.tsx` composes sections for the homepage
 
-Homepage sections in order (the header nav order mirrors this):
+Homepage sections in order (the header nav order mirrors this; the login button was removed from the header). Every major section carries an industrial design signature: mono uppercase codes (DOM-01, ASSOCIÉ 01/03), blueprint grid backgrounds (`color-mix(in oklab, var(--color-border) …)`), technical corner marks.
 1. HeroSection - XXL headline with staggered entrance animation, CTA → #contact, 3 chips (devis gratuit sans engagement / +40 solutions en 1 an / 48h cahier des charges), WiseTrainer video in a browser frame (poster: `/image/wisetrainer-hero-poster.jpg`)
 2. TrustedBySection - Logo marquee; dark mode forces white silhouettes (`dark:brightness-0 dark:invert`) so dark logos stay visible
-3. ConvictionsSection (muted, `lg:min-h-screen`) - full-page manifesto: sticky XXL title left, 3 widely-spaced numbered convictions right (interoperable conviction was removed) — `convictions` namespace
-4. TeamSection (`#equipe`) - 3 dirigeants profiles with pôle chip over portrait photo (aspect 4/5, `/placeholder.png` to swap) + "équipe à la volée" note — `team` namespace
-5. TestimonialsSection (`#temoignages`, muted) - 3 scattered/rotated clickable video cards (tape decoration, play button) opening a Dialog with a YouTube embed; PLACEHOLDER: all 3 play the Rick Roll (`dQw4w9WgXcQ` in `VIDEO_IDS`) until real client videos exist; quotes/roles are anonymized placeholders too — `testimonials` namespace
-6. ExpertisesSection (`#expertises`) - sober editorial rows: 4 domains, huge title left, hook + inline `·`-separated capability list right ("UI/UX" replaced "Sites internet") — `expertises` namespace
-7. MethodSection (`#methode`, muted) - calendar/agenda UI (title bar, hour-line background, 4 "event" cards under day labels Jour 1 / Jour 2 / Semaines 1 à 4 / Ensuite); no "start small" banner anymore — `method` namespace
-8. ToolsSection (`#outils`) - bento grid: featured platform card (3 500€/an) + WiseAtlas card (3 000€/an) + 4 brick cards (WiseTrainer/WisePaper/WiseTour with prices, Ask AI locked "Réservé à la plateforme") — `tools` namespace (`tools.platform`, `tools.bricks.*`, `tools.wiseatlas`)
-9. TerritorySection (`#territoire`) - full-bleed dark section over the WiseAtlas aerial view of the Dunkerque basin: "Ancrés à Dunkerque.", 3 facts, ambition statement — `territory` namespace (fixed white text, works in both themes)
+3. ConvictionsSection (muted) - manifesto: sticky XXL title left, 3 numbered convictions right with HUGE gaps (`py-20 md:py-28`, first/last handled by index because each card is the sole child of its Reveal — `first:`/`last:` classes silently zeroed all paddings once, don't reintroduce them)
+4. TeamSection (`#equipe`) - industrial "equipment nameplate" cards: mono top strip (ASSOCIÉ 01/03 · PÔLE X), portrait photo aspect 4/5 with technical corner marks (`/placeholder.png` to swap), mono skill chips + "équipe à la volée" note — `team` namespace (`memberLabel`, `members.*.pole`)
+5. TestimonialsSection (`#temoignages`, muted) - 5 scattered/rotated clickable video cards (tape decoration, play button). Videos are drawn RANDOMLY (client-side shuffle in useEffect) from the pool `public/videos/temoignages/` (listed server-side via fs in `app/[locale]/page.tsx`, passed down as `videoPool`); while the pool is empty every card falls back to the Rick Roll YouTube embed. Quotes/roles are anonymized placeholders — `testimonials` namespace
+6. ExpertisesSection (`#expertises`) - interactive expanding panels ("travées d'atelier"): 4 tall flex panels (h-[600px]), hover/click grows one (flexGrow transition); collapsed = vertical title + icon, active = hook + numbered capability list; DOM-0X mono codes, blueprint grid, giant ghost numbers; mobile = accordion — `expertises` namespace ("UI/UX" replaced "Sites internet")
+7. MethodSection (`#methode`, muted) - calendar/agenda UI with a Google-Calendar-style RED line + "Signature du devis" badge between Jour 2 and the Itérations column; columns Jour 1 / Jour 2 / Itérations / Ensuite (NO duration on build — copy says short iterations with regular 15-30 min meetings) — `method` namespace (`signature` key)
+8. ToolsSection (`#outils`) - 6 UNIFORM cards (same size, "tout au même niveau"), platform LAST with subtle highlight: WiseTrainer 1 500€/an, WisePaper 1 200€/an, WiseTour 1 300€/an, Ask AI (locked), WiseAtlas 3 000€/an, La plateforme 3 500€/an. Each links to its own page — `tools` namespace
+9. TerritorySection (`#territoire`) - full-bleed dark section over the WiseAtlas aerial view of the Dunkerque basin ("Ancrés à Dunkerque.") — validated by Manoel, don't touch
 10. BlogSection - Latest 3 posts (returns null if none)
-11. ContactSection (`#contact`, muted) - 3-step layout: Étape 01 interlocutor picker (3 pôles), Étape 02 hand-made "Calendly" (2 days × 2 slots between 10h-12h, rotating deterministically per ISO week via `DAY_PAIRS`/`TIME_PAIRS`, computed client-side in useEffect to avoid hydration mismatch), Étape 03 form (CSRF). Chosen pôle + slot are prepended to the email message body; no API change.
+11. ContactSection (`#contact`, muted) - 3-step layout: Étape 01 interlocutor picker (3 pôles), Étape 02 hand-made "Calendly" (2 days × 2 slots between 10h-12h, rotating deterministically per ISO week via `DAY_PAIRS`/`TIME_PAIRS`, computed client-side in useEffect to avoid hydration mismatch), Étape 03 form (CSRF) stretched to the SAME HEIGHT as the two left cards (items-stretch + flex chain + textarea flex-1). Chosen pôle + slot are prepended to the email message body; no API change.
 
 Notes:
 - The homepage FAQ section and the animated stats band were REMOVED (stats were redundant with client logos). The /faq page still exists and is linked from header/footer.
-- SecuritySection (SSO/MFA/audit/ISO) is platform-specific and lives on the WiseTrainer page, NOT on the homepage.
+- SecuritySection (SSO/MFA/audit/ISO) is platform-specific and lives on the plateforme page, NOT on the homepage.
 - Motion primitives: `components/ui/reveal.tsx` (scroll-reveal wrapper, honors prefers-reduced-motion; Section headers auto-reveal) and `components/ui/count-up.tsx` (currently unused). Marquee keyframes in globals.css (`animate-marquee`, `animate-marquee-slow`).
 - Section component: `py-20 md:py-28`, headers support `eyebrow` (small uppercase mono label), accepts `className`.
+- Theme CSS variables are `lab()`/oklch: `hsl(var(--color-border)/x)` is INVALID and silently dropped — use `color-mix(in oklab, var(--color-border) 45%, transparent)`.
+- next-themes 0.4.6 is patched via patch-package (`patches/next-themes+0.4.6.patch`, `postinstall` script): ThemeScript returns null on the client to silence the React 19.2 "script tag while rendering" dev warning (upstream PR #386 not yet released).
 
 ### Product Pages
 
-2 product pages under `app/[locale]/solutions/`:
-- `/solutions/wisetrainer` - Modular training platform (uses `platform` namespace for most content + `pricing` namespace for the modular pricing). Structure: Hero → Advantages → Products showcase (sticky scroll) → ModularPricingSection → Platform features → SecuritySection → CTA
+Under `app/[locale]/solutions/`:
+- `/solutions/plateforme` - The full LMS platform page (renders `wisetrainer-client.tsx`; uses `platform` namespace + `pricing` namespace + `metadata.platform`). Structure: Hero → Advantages → Products showcase (sticky scroll) → ModularPricingSection (brick cards link to brick pages) → Platform features → SecuritySection → CTA
+- `/solutions/wisetrainer`, `/solutions/wisepaper`, `/solutions/wisetour`, `/solutions/askai` - SMALL brick pages ("petites pages", deliberately light): shared template `components/pages/brick-client.tsx` (hero with tag/price/CTAs on a blueprint grid → 3 numbered feature cards → platform banner), SEO via `lib/brick-seo.ts`, copy in the `brickPages` namespace (`common` + per-brick with metaTitle/metaDescription)
 - `/solutions/wiseatlas` - Interactive map (uses `wiseatlas` namespace). Standalone product
+All 6 routes are in `app/sitemap.ts`.
 
 **Pricing model (bricks / platform)**: each brick sells alone per site per year: WisePaper 1 200€, WiseTour 1 300€, WiseTrainer 1 500€ (= 4 000€ combined); **la plateforme LMS** bundles them at 3 500€/an and adds the exclusives Ask AI (safety copilot, photo risk hunts, prevention reports) + incident database, training plans, analytics, certifications, unlimited learners. Ask AI + incident DB are NEVER sold alone. 3D simulator creation stays a one-shot custom project (client owns the 3D asset); the brick/platform covers delivery. Rendered by `components/sections/wisetrainer/modular-pricing-section.tsx` (bricks column + featured platform card). Prices are placeholders validated by Manoel on 2026-08-19. Naming: the SaaS product still says "SafetyTour" internally; the landing site markets it as **WiseTour**. SCORM is NOT implemented in the SaaS: always say "exports xAPI/cmi5", never "SCORM". The SaaS feature source of truth lives in `~/Documents/GitHub/wisetwin-saas-refacto/`.
 

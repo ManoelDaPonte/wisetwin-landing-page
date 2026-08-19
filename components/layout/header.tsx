@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { Logo } from "@/components/ui/logo";
-import { Cuboid, Map, Menu, ChevronDown, ExternalLink, LogIn } from "lucide-react";
+import { Cuboid, Map, Menu, ChevronDown } from "lucide-react";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -48,26 +48,11 @@ export function Header() {
 		{ title: t("faq"), href: "/faq" },
 	];
 
-	const platformItems = [
-		{
-			title: "WiseTrainer",
-			description: t("platformWisetrainer"),
-			href: "https://app.wisetwin.eu",
-			icon: Cuboid,
-		},
-		{
-			title: "WiseAtlas",
-			description: t("platformWiseatlas"),
-			href: "https://wiseatlas.wisetwin.eu",
-			icon: Map,
-		},
-	];
-
 	const toolItems = [
 		{
 			title: tGlobal("tools.platform.title"),
 			description: t("platformShort"),
-			href: "/solutions/wisetrainer",
+			href: "/solutions/plateforme",
 			icon: Cuboid,
 			tag: t("training"),
 		},
@@ -189,47 +174,6 @@ export function Header() {
 						<LanguageSwitcher />
 						<ThemeToggle />
 
-						{/* Login dropdown — desktop */}
-						<div className="hidden sm:block">
-							<NavigationMenu viewport={false}>
-								<NavigationMenuList>
-									<NavigationMenuItem>
-										<NavigationMenuTrigger className="bg-transparent hover:bg-accent/50 rounded-lg px-3">
-											<LogIn className="size-4 mr-2" />
-											{t("login")}
-										</NavigationMenuTrigger>
-										<NavigationMenuContent className="left-auto right-0">
-											<div className="p-3 w-[280px] space-y-1">
-												{platformItems.map((item) => {
-													const PIcon = item.icon;
-													return (
-														<a
-															key={item.title}
-															href={item.href}
-															target="_blank"
-															rel="noopener noreferrer"
-															className="flex items-center gap-3 rounded-lg p-3 transition-all hover:bg-secondary/5"
-														>
-															<div className="size-9 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-																<PIcon className="size-4 text-secondary" />
-															</div>
-															<div className="flex-1">
-																<div className="flex items-center gap-2">
-																	<span className="font-semibold text-sm">{item.title}</span>
-																	<ExternalLink className="size-3 text-muted-foreground" />
-																</div>
-																<p className="text-xs text-muted-foreground">{item.description}</p>
-															</div>
-														</a>
-													);
-												})}
-											</div>
-										</NavigationMenuContent>
-									</NavigationMenuItem>
-								</NavigationMenuList>
-							</NavigationMenu>
-						</div>
-
 						{/* Primary CTA — desktop */}
 						<Button className="hidden sm:inline-flex" asChild>
 							<Link href="/#contact">{t("quote")}</Link>
@@ -336,31 +280,6 @@ export function Header() {
 											</Button>
 										</SheetClose>
 									</nav>
-
-									{/* Mobile Footer — Login */}
-									<div className="p-4 border-t border-border space-y-2">
-										<p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider px-1 mb-2">{t("login")}</p>
-										{platformItems.map((item) => {
-											const PIcon = item.icon;
-											return (
-												<a
-													key={item.title}
-													href={item.href}
-													target="_blank"
-													rel="noopener noreferrer"
-													className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent transition-colors"
-												>
-													<div className="size-8 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
-														<PIcon className="size-4 text-secondary" />
-													</div>
-													<div className="flex items-center gap-2">
-														<span className="font-medium text-sm">{item.title}</span>
-														<ExternalLink className="size-3 text-muted-foreground" />
-													</div>
-												</a>
-											);
-										})}
-									</div>
 								</div>
 							</SheetContent>
 						</Sheet>

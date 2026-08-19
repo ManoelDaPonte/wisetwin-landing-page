@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/common/section";
 import { Reveal } from "@/components/ui/reveal";
+import { cn } from "@/lib/utils";
 
 const items = ["tailored", "accessible", "local"] as const;
 
@@ -10,7 +11,7 @@ export function ConvictionsSection() {
 	const t = useTranslations("convictions");
 
 	return (
-		<Section id="convictions" variant="muted" className="lg:min-h-screen lg:flex lg:items-center">
+		<Section id="convictions" variant="muted">
 			<div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-24 w-full">
 				{/* Manifesto statement */}
 				<div className="lg:col-span-5">
@@ -31,7 +32,15 @@ export function ConvictionsSection() {
 				<div className="lg:col-span-7 flex flex-col divide-y divide-border">
 					{items.map((item, index) => (
 						<Reveal key={item} delay={index * 0.1}>
-							<div className="group flex gap-8 py-12 md:py-16 first:pt-0 last:pb-0">
+							{/* Le padding est géré par index : le div est seul enfant du Reveal,
+							    donc first:/last: s'appliqueraient à toutes les cartes */}
+							<div
+								className={cn(
+									"group flex gap-8 py-20 md:py-28",
+									index === 0 && "pt-0 md:pt-0",
+									index === items.length - 1 && "pb-0 md:pb-0"
+								)}
+							>
 								<span className="shrink-0 font-mono text-4xl md:text-5xl font-bold text-secondary/20 group-hover:text-secondary/50 transition-colors tabular-nums leading-none pt-1">
 									{String(index + 1).padStart(2, "0")}
 								</span>
