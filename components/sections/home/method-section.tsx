@@ -19,6 +19,7 @@ export function MethodSection() {
 			id="methode"
 			variant="default"
 			header={{
+				eyebrow: t("eyebrow"),
 				title: t("title"),
 				description: t("subtitle"),
 				centered: true,

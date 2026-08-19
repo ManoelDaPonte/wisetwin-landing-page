@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 type SectionVariant = "default" | "muted" | "gradient" | "dark" | "accent";
 type SectionHeader = {
+	eyebrow?: string;
 	title: string;
 	description?: string;
 	highlight?: boolean;
@@ -101,6 +102,11 @@ export function Section({
 							header.centered ? "text-center" : ""
 						)}
 					>
+						{header.eyebrow && (
+							<p className="text-xs font-mono uppercase tracking-[0.2em] text-secondary mb-3">
+								{header.eyebrow}
+							</p>
+						)}
 						<h2
 							className={cn(
 								"text-3xl font-bold mb-4",

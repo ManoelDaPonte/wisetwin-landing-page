@@ -5,6 +5,7 @@ export { ConvictionsSection } from "./home/convictions-section";
 export { ExpertisesSection } from "./home/expertises-section";
 export { MethodSection } from "./home/method-section";
 export { ToolsSection } from "./home/tools-section";
+export { TestimonialsSection } from "./home/testimonials-section";
 export { TeamSection } from "./home/team-section";
 export { SecuritySection } from "./home/security-section";
 export { FaqSection } from "./home/faq-section";

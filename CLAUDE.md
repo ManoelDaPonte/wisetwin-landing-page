@@ -53,23 +53,25 @@ Key files:
 Pages are composed via client orchestrators in `components/pages/`:
 - `home-client.tsx` composes sections for the homepage
 
-Homepage sections in order (agency-first narrative):
-1. HeroSection - Agency positioning ("Nous accélérons la transformation digitale de votre industrie"), CTA → #contact, trust chips, WiseTrainer video as proof
+Homepage sections in order (agency-first narrative, strict `default`/`muted` alternation):
+1. HeroSection - Agency positioning ("Nous accélérons la transformation digitale de votre industrie"), CTA → #contact, trust chips, WiseTrainer video in a browser frame (poster: `/image/wisetrainer-hero-poster.jpg`)
 2. TrustedBySection - Logo carousel of trusted clients
-3. ConvictionsSection - Manifesto (4 convictions: sur-mesure, accessible, interopérable, budgets site) — `convictions` namespace
-4. ExpertisesSection (`#expertises`) - 4 expertise domains with capability lists + "doesn't fit a box" CTA — `expertises` namespace
+3. ConvictionsSection - Editorial manifesto layout (sticky title left, 4 numbered convictions right) — `convictions` namespace
+4. ExpertisesSection (`#expertises`, muted) - 4 expertise domains with capability lists + "doesn't fit a box" CTA — `expertises` namespace
 5. MethodSection (`#methode`) - 4-step timeline (échange gratuit → devis 48h → dev itératif → déploiement) + "start small" banner — `method` namespace
-6. ToolsSection (`#outils`) - WiseTrainer LMS & WiseAtlas cards, framed as products born from recurring needs — `tools` namespace
-7. TeamSection (`#equipe`) - 3 partners (Manoel data/IA/logiciel, Mickaël 3D/simulation, Gauthier conseil) — `team` namespace; photos are `/placeholder.png`, swap for real ones
-8. SecuritySection - SSO, MFA, Audit, ISO 27001
+6. ToolsSection (`#outils`, muted) - WiseTrainer LMS & WiseAtlas cards with product screenshots, framed as products born from recurring needs — `tools` namespace
+7. TestimonialsSection (`#temoignages`) - 3 client quotes (PLACEHOLDER quotes, anonymized roles — replace with real ones) + "Ancrés à Dunkerque" banner — `testimonials` namespace
+8. TeamSection (`#equipe`, muted) - 3 partners (Manoel data/IA/logiciel, Mickaël 3D/simulation, Gauthier conseil) — `team` namespace; photos are `/placeholder.png`, swap for real ones
 9. BlogSection - Latest 3 posts (returns null if none)
-10. FaqSection - 5 featured questions + link to /faq
+10. FaqSection (muted) - 5 featured questions (prestation/conseil-oriented) + link to /faq
 11. ContactSection (`#contact`) - "Décrivez-nous votre projet" form with CSRF + trust chips (devis gratuit, 48h, sans engagement)
+
+Note: SecuritySection (SSO/MFA/audit/ISO) is platform-specific and lives on the WiseTrainer page, NOT on the homepage. Section headers support an `eyebrow` (small uppercase mono label) via the Section component.
 
 ### Product Pages
 
 2 product pages under `app/[locale]/solutions/`:
-- `/solutions/wisetrainer` - Modular training platform (uses `platform` namespace for most content + `pricing` namespace for the modular pricing). Structure: Hero → Advantages → Products showcase (sticky scroll) → ModularPricingSection → Platform features → CTA
+- `/solutions/wisetrainer` - Modular training platform (uses `platform` namespace for most content + `pricing` namespace for the modular pricing). Structure: Hero → Advantages → Products showcase (sticky scroll) → ModularPricingSection → Platform features → SecuritySection → CTA
 - `/solutions/wiseatlas` - Interactive map (uses `wiseatlas` namespace). Standalone product
 
 **WiseTrainer pricing model (modular / minimum viable)**: a low-cost base plan ("socle", from 50€/month per site) including hosting + WisePaper + Safety Tour + completion tracking + unlimited learners; à la carte modules (analytics, planning, SSO/MFA/audit, SCORM/API, guest mode, sharing) activated on demand, "sur devis"; 3D simulators are one-shot custom projects (client owns the 3D asset). Rendered by `components/sections/wisetrainer/modular-pricing-section.tsx`.
@@ -109,7 +111,7 @@ app/[locale]/                    # Localized routes (fr, en)
 │   └── wiseatlas/page.tsx       # WiseAtlas product page
 messages/                        # Translation files (fr.json, en.json)
 i18n/                            # i18n configuration
-data/faq-keys.ts                 # FAQ keys + categories (general, services, pricing, technical)
+data/faq-keys.ts                 # FAQ keys + categories, services (Prestations & conseil) listed first
 components/
 ├── pages/                       # Page orchestrators (home-client, wisetrainer-client, wiseatlas-client, faq-client, blog-*)
 ├── sections/home/               # Homepage sections
@@ -125,7 +127,7 @@ components/
 Top-level namespaces in `messages/*.json`:
 - `metadata` - Per-page SEO metadata
 - `common`, `nav`, `hero` - Shared UI strings
-- `convictions`, `expertises`, `method`, `tools`, `team` - Agency homepage sections
+- `convictions`, `expertises`, `method`, `tools`, `testimonials`, `team` - Agency homepage sections
 - `security`, `faq`, `contact`, `footer`, `blog` - Other sections
 - `platform` - WiseTrainer page content (hero, products showcase, features, cta)
 - `pricing` - WiseTrainer modular pricing (core plan, modules, simulators)

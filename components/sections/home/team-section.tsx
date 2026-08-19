@@ -17,8 +17,9 @@ export function TeamSection() {
 	return (
 		<Section
 			id="equipe"
-			variant="default"
+			variant="muted"
 			header={{
+				eyebrow: t("eyebrow"),
 				title: t("title"),
 				description: t("subtitle"),
 				centered: true,
@@ -32,7 +33,7 @@ export function TeamSection() {
 							key={member.key}
 							className="bg-card border border-border rounded-2xl overflow-hidden flex flex-col hover:border-secondary/30 transition-colors"
 						>
-							<div className="relative aspect-square bg-muted">
+							<div className="relative aspect-[4/3] bg-muted">
 								<Image
 									src={member.photo}
 									alt={t(`members.${member.key}.name`)}

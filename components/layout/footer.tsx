@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, MapPin } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 
 export function Footer() {
@@ -101,6 +101,16 @@ export function Footer() {
 								>
 									contact@wisetwin.eu
 								</a>
+							</li>
+							<li className="flex items-start gap-2 text-sm text-muted-foreground">
+								<MapPin className="size-4 shrink-0 mt-0.5" />
+								<span>
+									Bâtiment EcosystèmeD
+									<br />
+									60 route du Pertuis du Môle
+									<br />
+									59140 Dunkerque
+								</span>
 							</li>
 							<li>
 								<Link

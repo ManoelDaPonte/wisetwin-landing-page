@@ -27,6 +27,7 @@ export function ExpertisesSection() {
 			id="expertises"
 			variant="muted"
 			header={{
+				eyebrow: t("eyebrow"),
 				title: t("title"),
 				description: t("subtitle"),
 				centered: true,

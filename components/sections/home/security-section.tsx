@@ -23,13 +23,17 @@ const securityFeatures = [
 	},
 ];
 
-export function SecuritySection() {
+export function SecuritySection({
+	variant = "muted",
+}: {
+	variant?: "default" | "muted";
+}) {
 	const t = useTranslations("security");
 
 	return (
 		<Section
 			id="security"
-			variant="muted"
+			variant={variant}
 			header={{
 				title: t("title"),
 				description: t("subtitle"),

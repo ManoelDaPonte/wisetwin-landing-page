@@ -9,7 +9,6 @@ import {
 	PenLine,
 	BarChart3,
 	Route,
-	ShieldCheck,
 	Users,
 	FileOutput,
 	Check,
@@ -22,7 +21,11 @@ import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
 import Image from "next/image";
 import { ParallaxImage } from "@/components/ui/parallax-image";
-import { AdvantagesSection, ModularPricingSection } from "@/components/sections";
+import {
+	AdvantagesSection,
+	ModularPricingSection,
+	SecuritySection,
+} from "@/components/sections";
 
 const productMedia = [
 	{ type: "video", src: "/video/capture-3dgs-entrepot.mp4", fit: "cover" },
@@ -269,11 +272,11 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 	);
 }
 
+// La sécurité a sa propre section (SecuritySection) juste en dessous — pas de doublon ici
 const featureGroups = [
 	{ key: "contentManagement", icon: PenLine },
 	{ key: "tracking", icon: BarChart3 },
 	{ key: "planning", icon: Route },
-	{ key: "security", icon: ShieldCheck },
 	{ key: "collaboration", icon: Users },
 	{ key: "exports", icon: FileOutput },
 ] as const;
@@ -375,8 +378,11 @@ export default function WiseTrainerClient() {
 				</div>
 			</Section>
 
+			{/* Security & compliance — platform-specific, lives here rather than on the homepage */}
+			<SecuritySection variant="default" />
+
 			{/* CTA */}
-			<Section id="cta" variant="default">
+			<Section id="cta" variant="muted">
 				<div className="text-center max-w-2xl mx-auto">
 					<h2 className="text-3xl font-bold mb-4">
 						{t("cta.title")}

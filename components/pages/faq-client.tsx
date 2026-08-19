@@ -24,9 +24,9 @@ export default function FaqClient() {
 
 	const categories: Category[] = [
 		"all",
-		"general",
 		"services",
 		"pricing",
+		"general",
 		"technical",
 	];
 

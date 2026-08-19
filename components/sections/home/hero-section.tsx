@@ -86,15 +86,31 @@ export function HeroSection() {
 					<div className="flex flex-col items-center justify-center gap-4 pointer-events-auto">
 						<div className="relative w-full max-w-2xl">
 							<div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110" />
-							<video
-								autoPlay
-								loop
-								muted
-								playsInline
-								className="relative rounded-2xl shadow-2xl w-full"
-							>
-								<source src="/video/WiseTrainer-SimulateursDeFormation.mp4" type="video/mp4" />
-							</video>
+							{/* Browser frame */}
+							<div className="relative bg-card border border-border rounded-xl overflow-hidden shadow-2xl">
+								<div className="flex items-center gap-2 px-4 py-2.5 bg-muted/50 border-b border-border">
+									<div className="flex gap-1.5">
+										<div className="size-2.5 rounded-full bg-red-500/80" />
+										<div className="size-2.5 rounded-full bg-yellow-500/80" />
+										<div className="size-2.5 rounded-full bg-green-500/80" />
+									</div>
+									<div className="flex-1 text-center">
+										<span className="text-xs text-muted-foreground font-mono">
+											app.wisetwin.eu
+										</span>
+									</div>
+								</div>
+								<video
+									autoPlay
+									loop
+									muted
+									playsInline
+									poster="/image/wisetrainer-hero-poster.jpg"
+									className="w-full aspect-video object-cover"
+								>
+									<source src="/video/WiseTrainer-SimulateursDeFormation.mp4" type="video/mp4" />
+								</video>
+							</div>
 						</div>
 						<p className="text-sm text-muted-foreground text-center max-w-md">
 							{t("videoCaption")}{" "}

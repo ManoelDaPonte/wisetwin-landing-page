@@ -7,8 +7,8 @@ import {
 	ExpertisesSection,
 	MethodSection,
 	ToolsSection,
+	TestimonialsSection,
 	TeamSection,
-	SecuritySection,
 	BlogSection,
 	FaqSection,
 	ContactSection,
@@ -32,8 +32,8 @@ export default function HomeClient({ latestPosts }: { latestPosts: Post[] }) {
 			<ExpertisesSection />
 			<MethodSection />
 			<ToolsSection />
+			<TestimonialsSection />
 			<TeamSection />
-			<SecuritySection />
 			<BlogSection posts={latestPosts} />
 			<FaqSection />
 			<ContactSection />

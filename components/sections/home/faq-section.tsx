@@ -12,10 +12,10 @@ import {
 } from "@/components/ui/accordion";
 import { ArrowRight } from "lucide-react";
 
-// Les 5 questions principales pour la homepage
+// Les 5 questions principales pour la homepage — orientées prestation & conseil
 const featuredFaqKeys = [
-	"whoIsWisetwin",
 	"whatDoYouDo",
+	"projectTypes",
 	"smallProjects",
 	"quote",
 	"pricingModel",

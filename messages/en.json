@@ -69,6 +69,7 @@
 		"videoLink": "Discover the tool"
 	},
 	"convictions": {
+		"eyebrow": "Manifesto",
 		"title": "What we believe",
 		"subtitle": "Operational excellence and industrial performance come from tools designed for your teams.",
 		"items": {
@@ -91,6 +92,7 @@
 		}
 	},
 	"expertises": {
+		"eyebrow": "What we do",
 		"title": "Our expertise",
 		"subtitle": "Everything we develop and support for industry — from diagnosis to delivered tool.",
 		"domains": {
@@ -145,6 +147,7 @@
 		"cta": "Tell us about your project"
 	},
 	"method": {
+		"eyebrow": "How we work",
 		"title": "Our method",
 		"subtitle": "Short projects, fast deliverables, and trust that builds before going bigger.",
 		"steps": {
@@ -175,6 +178,7 @@
 		}
 	},
 	"tools": {
+		"eyebrow": "Our products",
 		"title": "Our tools, born in the field",
 		"subtitle": "After meeting the same needs again and again with our clients, we turned them into products. Proven in real conditions — and far more affordable than on-demand development.",
 		"wisetrainer": {
@@ -191,7 +195,34 @@
 		},
 		"cta": "Discover"
 	},
+	"testimonials": {
+		"eyebrow": "They trust us",
+		"title": "What they say about us",
+		"subtitle": "Concrete projects, delivered alongside industrial companies from the Dunkerque basin and beyond.",
+		"items": [
+			{
+				"quote": "Our safety induction was digitized in a few weeks. Temporary workers are operational from day one, and tracking is finally traceable.",
+				"author": "HSE Manager",
+				"context": "Industrial site, Dunkerque basin"
+			},
+			{
+				"quote": "They understood our need in the field, proposed something simple and delivered fast. We started small — we still work together today.",
+				"author": "Site Director",
+				"context": "Manufacturing, Hauts-de-France"
+			},
+			{
+				"quote": "The 3D simulator of our line changed our training: operators practice in real conditions, without stopping production.",
+				"author": "Training Manager",
+				"context": "Production site, France"
+			}
+		],
+		"local": {
+			"title": "Rooted in Dunkerque, at the heart of industry",
+			"description": "We are based at EcosystèmeD, in one of France's largest industrial basins. We work daily alongside the territory's industrial companies — and we travel to your sites across France and Europe."
+		}
+	},
 	"team": {
+		"eyebrow": "Who we are",
 		"title": "The team",
 		"subtitle": "Three complementary partners. The people you meet at the first meeting are the ones who deliver your project.",
 		"members": {
@@ -343,16 +374,6 @@
 					"Path progress tracking"
 				]
 			},
-			"security": {
-				"title": "Security & Compliance",
-				"description": "Protect your data and maintain control over access and actions.",
-				"items": [
-					"Multi-factor authentication (MFA)",
-					"Single Sign-On (SSO)",
-					"Detailed audit logs",
-					"Full traceability: who did what, when"
-				]
-			},
 			"collaboration": {
 				"title": "Collaboration",
 				"description": "Invite your teams and partners to train on the platform.",
@@ -381,6 +402,7 @@
 		}
 	},
 	"pricing": {
+		"eyebrow": "Pricing",
 		"title": "A minimum viable LMS that grows with you",
 		"subtitle": "Start with the essentials at a low price, add modules as you go. Your budget goes into your training content, not the subscription.",
 		"core": {
@@ -661,7 +683,7 @@
 		"categories": {
 			"all": "All",
 			"general": "General",
-			"services": "Services",
+			"services": "Services & consulting",
 			"pricing": "Pricing",
 			"technical": "Technical"
 		},
@@ -693,6 +715,18 @@
 			"smallProjects": {
 				"question": "Do you take on small projects?",
 				"answer": "Yes — it's actually our philosophy. We prefer to start with a first focused project, on a controlled budget, that delivers a concrete result quickly. Trust builds, then we scale up as we go. Never the other way around."
+			},
+			"consultingOnly": {
+				"question": "Can we engage you for consulting only, without development?",
+				"answer": "Of course. Digital transformation diagnosis, industrial performance audit, operational excellence roadmap, change management: Gauthier works with industrial leadership teams with or without development behind it. If a tool turns out to be useful, we know how to build it — but it's never a prerequisite."
+			},
+			"onsite": {
+				"question": "Do you work on-site?",
+				"answer": "Yes, and we recommend it: the best diagnoses happen in the field, alongside your teams. We are based in Dunkerque and travel to your sites across France and Europe. The first discussion can also happen remotely if that's easier for you."
+			},
+			"confidentiality": {
+				"question": "How do you guarantee the confidentiality of our industrial data?",
+				"answer": "We sign a non-disclosure agreement (NDA) from the very first discussion if you wish. Your plans, photos and data are transferred through secure channels — yours if you prefer —, hosted in Europe with restricted access, and we apply ISO 27001 best practices. We work daily with industrial clients subject to strict requirements."
 			},
 			"process": {
 				"question": "How does a project unfold?",
@@ -761,6 +795,7 @@
 		}
 	},
 	"contact": {
+		"eyebrow": "Let's talk",
 		"title": "Tell us about your project",
 		"subtitle": "A need, an idea, a doubt? Talk to us: we get back to you within 48h with a first assessment and a free quote.",
 		"trust": {

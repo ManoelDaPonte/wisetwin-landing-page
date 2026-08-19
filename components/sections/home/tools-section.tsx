@@ -1,20 +1,21 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/common/section";
-import { ArrowRight, GraduationCap, Map } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const tools = [
 	{
 		key: "wisetrainer",
 		href: "/solutions/wisetrainer",
-		icon: GraduationCap,
+		image: "/image/WiseTrainer.webp",
 	},
 	{
 		key: "wiseatlas",
 		href: "/solutions/wiseatlas",
-		icon: Map,
+		image: "/image/WiseAtlas.webp",
 	},
 ] as const;
 
@@ -26,31 +27,36 @@ export function ToolsSection() {
 			id="outils"
 			variant="muted"
 			header={{
+				eyebrow: t("eyebrow"),
 				title: t("title"),
 				description: t("subtitle"),
 				centered: true,
 			}}
 		>
-			<div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
-				{tools.map((tool) => {
-					const Icon = tool.icon;
-					return (
-						<Link
-							key={tool.key}
-							href={tool.href}
-							className="group relative bg-card border border-border rounded-2xl p-8 transition-all hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/5 flex flex-col overflow-hidden"
-						>
-							<div className="absolute inset-x-0 top-0 h-1 bg-secondary scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
+			<div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+				{tools.map((tool) => (
+					<Link
+						key={tool.key}
+						href={tool.href}
+						className="group relative bg-card border border-border rounded-2xl transition-all hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/5 flex flex-col overflow-hidden"
+					>
+						<div className="absolute inset-x-0 top-0 h-1 bg-secondary scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 z-10" />
 
-							<div className="mb-5">
-								<div className="size-14 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center">
-									<Icon className="size-7 text-secondary" />
-								</div>
-							</div>
-
-							<p className="text-xs font-mono uppercase tracking-wider text-secondary mb-2">
+						{/* Product screenshot */}
+						<div className="relative aspect-[16/9] overflow-hidden border-b border-border bg-muted">
+							<Image
+								src={tool.image}
+								alt={t(`${tool.key}.title`)}
+								fill
+								className="object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+								sizes="(max-width: 768px) 100vw, 50vw"
+							/>
+							<span className="absolute top-4 left-4 text-xs font-mono uppercase tracking-wider text-secondary bg-background/85 backdrop-blur-sm border border-secondary/30 px-3 py-1 rounded-full">
 								{t(`${tool.key}.tag`)}
-							</p>
+							</span>
+						</div>
+
+						<div className="p-7 flex flex-col flex-1">
 							<h3 className="font-bold text-2xl mb-3">
 								{t(`${tool.key}.title`)}
 							</h3>
@@ -67,9 +73,9 @@ export function ToolsSection() {
 									{t(`${tool.key}.price`)}
 								</span>
 							</div>
-						</Link>
-					);
-				})}
+						</div>
+					</Link>
+				))}
 			</div>
 		</Section>
 	);
