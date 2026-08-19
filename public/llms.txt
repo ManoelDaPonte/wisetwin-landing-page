@@ -2,63 +2,75 @@
 
 > WiseTwin is a French consulting and services firm that develops digital solutions for
 > industry. Founded by three partners with industrial backgrounds, it accelerates the
-> digital transformation of industrial companies with tailor-made tools — training, HSE,
-> 3D, data & AI — that are fast to deploy, affordable, interoperable, and sized for a
-> single site's budget. It also publishes two standardized products born from recurring
-> client needs: WiseTrainer LMS (training) and WiseAtlas (communication).
+> digital transformation of industrial companies with tailor-made tools (training, HSE,
+> 3D, data & AI) that are fast to deploy, affordable, and sized for a single site's
+> budget. It also publishes standardized tools born from recurring client needs: the
+> training bricks WiseTrainer, WisePaper and WiseTour, the LMS platform that bundles
+> them with the Ask AI safety copilot, and WiseAtlas (territorial communication).
 
 WiseTwin's philosophy: operational excellence and industrial performance come from tools
 designed for the teams who use them, without disrupting their daily work. Digital must be
 accessible in price and in design time; answers should be fast, tailor-made, and sized on
-real identified needs. All solutions are interoperable and multi-platform (browser,
-mobile, tablet, VR — no lock-in). Projects start small: a first focused deliverable
-builds trust, then the tool grows over time.
+real identified needs. Projects start small: a first focused deliverable builds trust,
+then the tool grows over time. There is no rigid org chart: the team assembles on the fly
+around each client's need, across three units (Consulting / Data & AI / 3D & immersive).
+Over 40 solutions delivered in one year; a specification defined within 48 hours.
 
 Primary language: French (site available at /fr and /en). Website: https://wisetwin.eu
 
 ## Services (custom development & consulting)
 
-- Training & HSE: training digitization, virtual & VR training, safety inductions, risk
-  hunts, serious games, HSE prevention plans, self-paced training, training planning and
-  traceability
-- 3D, immersive & video: virtual tours, layout and flow simulation, digital twins of
-  facilities, 3D explainers, video and course production
-- Data, AI & software: custom business applications, websites, artificial intelligence,
-  cloud engineering, document management, production monitoring, performance tracking,
-  communication tools
-- Consulting & organization: transformation diagnosis, industrial performance,
-  operational excellence, change management
+- Training & HSE: training digitization, safety inductions, risk hunts, VR training,
+  HSE prevention plans
+- 3D, immersive & video: virtual tours, 3D simulators, digital twins, layout and flow
+  simulation, video and 3D production
+- Data, AI & software: custom business applications, artificial intelligence, UI/UX,
+  cloud engineering, production monitoring
+- Consulting & organization: transformation diagnosis, operational excellence,
+  industrial performance, change management
 
-How it works: free discussion and diagnosis → proposal and free quote within 48h →
-iterative development in weeks → deployment and ongoing support. Deliverables belong to
-the client.
+How it works: day 1, a free discussion (on site if possible); day 2, a specification
+with clear scope and firm price (free quote, no commitment); the following weeks,
+iterative development with a fast first deliverable; then deployment and ongoing
+support. Deliverables belong to the client.
 
-## Products (standardized tools born in the field)
+## Tools (standardized bricks born in the field)
 
-- WiseTrainer LMS — the modular industrial training platform, from €50/month per site.
-  Base plan: hosting and delivery of training, WisePaper (documents turned into
-  interactive training with AI quizzes), Safety Tour (photo-realistic safety induction),
-  completion tracking, unlimited learners. À la carte modules: advanced analytics,
-  training plans and reminders, SSO/MFA/audit, SCORM/API integrations, guest mode,
-  cross-organization sharing. 3D simulators of the client's own facilities are custom
-  projects billed once — the 3D asset belongs to the client.
-- WiseAtlas — interactive 4D map for territories and industrial infrastructure, from
-  €3,000/year. 3D models, virtual tours, up-to-date data, shareable in one link.
+Each brick can be bought alone (annual price per site); the LMS platform bundles them:
+
+- WiseTrainer (€1,500/year) — delivery of immersive 3D simulators of the client's own
+  facilities. Simulator creation is a custom project billed once; the 3D asset belongs
+  to the client.
+- WisePaper (€1,200/year) — PDF, Word and PowerPoint documents turned into interactive
+  trainings with AI-generated quizzes and completion tracking.
+- WiseTour (€1,300/year) — immersive safety induction of the client's site, created
+  from a simple 3D capture.
+- The LMS platform (€3,500/year, instead of €4,000 in separate bricks) — the three
+  bricks plus platform exclusives: Ask AI (safety copilot, photo-based risk hunts,
+  prevention reports), the incident database (anonymized accident history searchable in
+  natural language), training plans, automatic reminders, analytics, verifiable
+  certifications, unlimited learners. Ask AI and the incident database are not sold
+  separately.
+- WiseAtlas (from €3,000/year) — interactive map for territories and industrial
+  infrastructure. 3D models, virtual tours, up-to-date data, shareable in one link.
 
 ## The team
 
-- Manoel — data, AI & software: business applications, data pipelines, AI components,
-  cloud infrastructure
-- Mickaël — 3D, visualization & simulation: simulators, virtual tours, digital twins in
-  real-time 3D
-- Gauthier — consulting & operational excellence: transformation diagnosis, industrial
-  performance, change management
+Three units; the team assembles on the fly around each project:
+
+- Gauthier — Consulting unit: transformation diagnosis, industrial performance, change
+  management
+- Manoel — Data & AI unit: business applications, data pipelines, AI components, cloud
+  infrastructure
+- Mickaël — 3D & immersive unit: simulators, virtual tours, digital twins in real-time
+  3D
 
 ## Key pages
 
-- [Home (FR)](https://wisetwin.eu/fr): positioning, expertise, method, team, contact
-- [WiseTrainer LMS (FR)](https://wisetwin.eu/fr/solutions/wisetrainer): modular training
-  platform and 3D simulators
+- [Home (FR)](https://wisetwin.eu/fr): positioning, team, expertise, method, tools,
+  contact
+- [WiseTrainer LMS (FR)](https://wisetwin.eu/fr/solutions/wisetrainer): training bricks
+  and the complete LMS platform
 - [WiseAtlas (FR)](https://wisetwin.eu/fr/solutions/wiseatlas): interactive map for
   territories and industrial infrastructure
 - [FAQ (FR)](https://wisetwin.eu/fr/faq): services, method, pricing, data security
@@ -67,8 +79,11 @@ the client.
 
 ## Company
 
-- WiseTwin is a French company based in Dunkerque, serving industrial sites of all sizes
-  (SMEs to large groups), local authorities and territorial players
-- Contact: contact@wisetwin.eu — free quote within 48h, no commitment
+- WiseTwin is a French company based in Dunkerque (EcosystèmeD, 60 route du Pertuis du
+  Môle, 59140 Dunkerque), at the heart of one of France's leading industrial basins,
+  serving industrial sites of all sizes (SMEs to large groups), local authorities and
+  territorial players in France and Europe
+- Contact: contact@wisetwin.eu, free quote, no commitment; a discussion slot can be
+  booked directly on the site
 - Security: MFA, enterprise SSO, audit logs, GDPR-compliant, data hosted in Europe,
-  ISO 27001 best practices
+  ISO 27001 best practices, xAPI/cmi5 exports to existing LMS

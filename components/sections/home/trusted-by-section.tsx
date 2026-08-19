@@ -30,7 +30,10 @@ function LogoItem({ logo }: { logo: { name: string; src: string; className?: str
 				width={160}
 				height={48}
 				className={cn(
-					"h-8 md:h-10 w-auto object-contain grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300",
+					"h-8 md:h-10 w-auto object-contain grayscale opacity-60 transition-all duration-300",
+					"hover:grayscale-0 hover:opacity-100",
+					// Dark mode : silhouettes blanches, sinon les logos sombres disparaissent
+					"dark:brightness-0 dark:invert dark:opacity-75 dark:hover:opacity-100",
 					logo.className
 				)}
 			/>

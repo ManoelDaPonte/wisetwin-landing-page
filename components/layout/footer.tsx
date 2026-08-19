@@ -18,7 +18,10 @@ export function Footer() {
 	];
 
 	const toolLinks = [
-		{ label: t("tools.wisetrainer.title"), href: "/solutions/wisetrainer" },
+		{ label: t("tools.platform.title"), href: "/solutions/wisetrainer" },
+		{ label: t("tools.bricks.wisetrainer.title"), href: "/solutions/wisetrainer" },
+		{ label: t("tools.bricks.wisepaper.title"), href: "/solutions/wisetrainer" },
+		{ label: t("tools.bricks.wisetour.title"), href: "/solutions/wisetrainer" },
 		{ label: t("tools.wiseatlas.title"), href: "/solutions/wiseatlas" },
 	];
 

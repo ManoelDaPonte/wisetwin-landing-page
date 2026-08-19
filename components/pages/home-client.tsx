@@ -3,16 +3,14 @@
 import {
 	HeroSection,
 	TrustedBySection,
-	StatsSection,
 	ConvictionsSection,
+	TeamSection,
+	TestimonialsSection,
 	ExpertisesSection,
 	MethodSection,
 	ToolsSection,
 	TerritorySection,
-	TestimonialsSection,
-	TeamSection,
 	BlogSection,
-	FaqSection,
 	ContactSection,
 } from "@/components/sections";
 
@@ -30,16 +28,14 @@ export default function HomeClient({ latestPosts }: { latestPosts: Post[] }) {
 		<>
 			<HeroSection />
 			<TrustedBySection />
-			<StatsSection />
 			<ConvictionsSection />
+			<TeamSection />
+			<TestimonialsSection />
 			<ExpertisesSection />
 			<MethodSection />
 			<ToolsSection />
 			<TerritorySection />
-			<TestimonialsSection />
-			<TeamSection />
 			<BlogSection posts={latestPosts} />
-			<FaqSection />
 			<ContactSection />
 		</>
 	);

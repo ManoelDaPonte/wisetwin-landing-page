@@ -37,9 +37,13 @@ export function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [toolsOpen, setToolsOpen] = useState(false);
 
-	const menuItems = [
+	// L'ordre suit celui des sections de la page d'accueil
+	const menuItemsBefore = [
+		{ title: t("team"), href: "/#equipe" },
 		{ title: t("expertise"), href: "/#expertises" },
 		{ title: t("method"), href: "/#methode" },
+	];
+	const menuItemsAfter = [
 		{ title: t("blog"), href: "/blog" },
 		{ title: t("faq"), href: "/faq" },
 	];
@@ -61,15 +65,15 @@ export function Header() {
 
 	const toolItems = [
 		{
-			title: tGlobal("tools.wisetrainer.title"),
-			description: tGlobal("tools.wisetrainer.description"),
+			title: tGlobal("tools.platform.title"),
+			description: t("platformShort"),
 			href: "/solutions/wisetrainer",
 			icon: Cuboid,
 			tag: t("training"),
 		},
 		{
 			title: tGlobal("tools.wiseatlas.title"),
-			description: tGlobal("tools.wiseatlas.description"),
+			description: t("wiseatlasShort"),
 			href: "/solutions/wiseatlas",
 			icon: Map,
 			tag: t("communication"),
@@ -108,6 +112,20 @@ export function Header() {
 					<div className="hidden lg:block">
 						<NavigationMenu>
 							<NavigationMenuList>
+								{menuItemsBefore.map((item) => (
+									<NavigationMenuItem key={item.title}>
+										<Link
+											href={item.href}
+											className={cn(
+												navigationMenuTriggerStyle(),
+												"bg-transparent hover:bg-accent/50"
+											)}
+										>
+											{item.title}
+										</Link>
+									</NavigationMenuItem>
+								))}
+
 								{/* Tools Dropdown */}
 								<NavigationMenuItem>
 									<NavigationMenuTrigger className="bg-transparent hover:bg-accent/50">
@@ -136,12 +154,20 @@ export function Header() {
 													</Link>
 												);
 											})}
+											<Link
+												href="/#outils"
+												className="flex items-center justify-between rounded-xl px-4 py-3 border border-transparent hover:border-secondary/30 hover:bg-secondary/5 transition-all"
+											>
+												<span className="text-sm font-medium">{t("allTools")}</span>
+												<span className="text-xs text-muted-foreground font-mono">
+													WiseTrainer · WisePaper · WiseTour · Ask AI
+												</span>
+											</Link>
 										</div>
 									</NavigationMenuContent>
 								</NavigationMenuItem>
 
-								{/* Other menu items */}
-								{menuItems.map((item) => (
+								{menuItemsAfter.map((item) => (
 									<NavigationMenuItem key={item.title}>
 										<Link
 											href={item.href}
@@ -230,6 +256,18 @@ export function Header() {
 
 									{/* Mobile Navigation */}
 									<nav className="flex-1 overflow-y-auto p-4">
+										{menuItemsBefore.map((item) => (
+											<SheetClose asChild key={item.title}>
+												<Link
+													href={item.href}
+													className="flex items-center p-3 rounded-lg hover:bg-accent transition-colors font-medium"
+													onClick={() => setMobileMenuOpen(false)}
+												>
+													{item.title}
+												</Link>
+											</SheetClose>
+										))}
+
 										{/* Tools Collapsible */}
 										<Collapsible
 											open={toolsOpen}
@@ -274,7 +312,7 @@ export function Header() {
 										</Collapsible>
 
 										{/* Other Menu Items */}
-										{menuItems.map((item) => (
+										{menuItemsAfter.map((item) => (
 											<SheetClose asChild key={item.title}>
 												<Link
 													href={item.href}

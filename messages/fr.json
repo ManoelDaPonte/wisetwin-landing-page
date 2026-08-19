@@ -6,14 +6,14 @@
 		},
 		"home": {
 			"title": "WiseTwin - Conseil & développement de solutions digitales pour l'industrie",
-			"description": "Trois industriels au service de votre transformation digitale : formation immersive, HSE, simulation 3D, data & IA, applications sur mesure. Devis gratuit sous 48h.",
+			"description": "Conseil et développement de solutions digitales pour l'industrie : formation immersive, HSE, simulation 3D, data & IA, applications sur mesure. Plus de 40 solutions livrées en un an. Devis gratuit, sans engagement.",
 			"ogTitle": "WiseTwin - Solutions digitales sur mesure pour l'industrie",
 			"ogDescription": "Conseil et développement d'outils digitaux pour l'industrie : formation, HSE, 3D, data & IA. Des projets courts, des budgets maîtrisés."
 		},
 		"wisetrainer": {
-			"description": "WiseTrainer LMS : la plateforme de formation industrielle modulaire. Simulateurs 3D immersifs, accueil sécurité photo-réaliste, formations documentaires avec quiz IA. À partir de 50€/mois.",
-			"ogTitle": "WiseTrainer LMS - Plateforme de formation industrielle modulaire",
-			"ogDescription": "Démarrez avec l'essentiel, ajoutez des modules au fil de l'eau. Simulateurs 3D, accueil sécurité et formations documentaires, 100% web."
+			"description": "WiseTrainer, WisePaper, WiseTour : des briques de formation industrielle à la carte, ou la plateforme LMS complète avec Ask AI et base d'incidents pour 3 500€/an.",
+			"ogTitle": "WiseTrainer LMS - La formation industrielle en briques",
+			"ogDescription": "Achetez chaque brique séparément ou prenez la plateforme complète. Simulateurs 3D, accueil sécurité immersif, formations documentaires IA. 100% web."
 		},
 		"wiseatlas": {
 			"description": "Carte interactive pour valoriser votre territoire, vos sites industriels et vos infrastructures avec des visites virtuelles immersives.",
@@ -22,7 +22,7 @@
 		},
 		"faq": {
 			"title": "FAQ - Questions fréquentes",
-			"description": "Trouvez les réponses à vos questions sur WiseTwin : projets sur mesure, méthode, délais, tarifs, plateforme de formation et sécurité des données.",
+			"description": "Trouvez les réponses à vos questions sur WiseTwin : projets sur mesure, méthode, délais, tarifs, briques de formation et sécurité des données.",
 			"ogTitle": "FAQ WiseTwin - Toutes vos questions",
 			"ogDescription": "Questions fréquentes sur nos prestations de conseil, nos développements sur mesure et nos outils."
 		},
@@ -50,6 +50,9 @@
 		"quote": "Devis gratuit",
 		"training": "Formation",
 		"communication": "Communication",
+		"platformShort": "Briques de formation, IA de sécurité et pilotage",
+		"wiseatlasShort": "La carte interactive de votre territoire",
+		"allTools": "Toutes nos briques",
 		"platformWisetrainer": "Accéder à la plateforme de formation",
 		"platformWiseatlas": "Accéder à la carte interactive"
 	},
@@ -57,56 +60,29 @@
 		"badge": "Conseil & développement de solutions digitales pour l'industrie",
 		"titlePrefix": "Nous accélérons la\ntransformation digitale",
 		"titleHighlight": "de votre industrie",
-		"subtitle": "Trois industriels, des outils sur mesure — formation, HSE, 3D, data & IA — conçus pour vos équipes, vos sites et vos budgets.",
+		"subtitle": "Des outils sur mesure pour la formation, le HSE, la 3D, la data et l'IA. Pensés pour vos équipes, vos sites et vos budgets.",
 		"cta": "Décrivez-nous votre projet",
 		"ctaSecondary": "Nos savoir-faire",
 		"chips": [
-			"Devis gratuit sous 48h",
-			"Interopérable & multiplateforme",
-			"Budgets adaptés aux sites"
+			"Devis gratuit, sans engagement",
+			"+40 solutions livrées en 1 an",
+			"48h pour définir un cahier des charges"
 		],
-		"videoCaption": "WiseTrainer, notre simulateur de formation — conçu et développé par nos soins",
+		"videoCaption": "WiseTrainer, notre simulateur de formation, conçu et développé par nos soins.",
 		"videoLink": "Découvrir l'outil"
-	},
-	"stats": {
-		"items": [
-			{
-				"value": "3",
-				"label": "associés industriels, un seul interlocuteur"
-			},
-			{
-				"value": "48",
-				"suffix": "h",
-				"label": "pour recevoir votre devis gratuit"
-			},
-			{
-				"value": "25",
-				"suffix": "+",
-				"label": "savoir-faire, du diagnostic à l'outil livré"
-			},
-			{
-				"value": "100",
-				"suffix": "%",
-				"label": "web, interopérable, sans enfermement"
-			}
-		]
 	},
 	"convictions": {
 		"eyebrow": "Manifeste",
 		"title": "Nous sommes convaincus",
-		"subtitle": "L'excellence opérationnelle et la performance industrielle passent par des outils pensés pour vos équipes.",
+		"subtitle": "L'excellence opérationnelle passe par des outils pensés pour les équipes qui les utilisent.",
 		"items": {
 			"tailored": {
 				"title": "Le sur-mesure, sans bouleverser le quotidien",
-				"description": "Les bons outils épousent vos process et vos équipes — pas l'inverse. Ils s'insèrent dans le travail réel, sans imposer une nouvelle façon de travailler."
+				"description": "Les bons outils épousent vos process et vos équipes, pas l'inverse. Ils s'insèrent dans le travail réel, sans imposer une nouvelle façon de travailler."
 			},
 			"accessible": {
 				"title": "Le digital doit être accessible",
 				"description": "Accessible en prix comme en délais. Des réponses rapides, dimensionnées sur les besoins réellement identifiés sur le terrain."
-			},
-			"interoperable": {
-				"title": "Interopérable et multiplateforme",
-				"description": "Nos solutions se connectent à votre existant — LMS, SI, outils métier — et fonctionnent partout. Aucun enfermement."
 			},
 			"local": {
 				"title": "Des budgets adaptés aux sites",
@@ -117,31 +93,28 @@
 	"expertises": {
 		"eyebrow": "Ce que nous faisons",
 		"title": "Nos savoir-faire",
-		"subtitle": "Du diagnostic à l'outil livré — explorez nos quatre terrains de jeu.",
+		"subtitle": "Quatre domaines, un objectif : des outils utiles, livrés vite.",
 		"domains": {
 			"training": {
 				"title": "Formation & HSE",
 				"hook": "Former sans arrêter la production, tracer sans paperasse.",
 				"items": [
 					"Digitalisation de formations",
-					"Formation virtuelle & VR",
 					"Accueils sécurité",
 					"Chasses aux risques",
-					"Serious games",
-					"Plans de prévention HSE",
-					"Auto-formations",
-					"Planification & traçabilité des formations"
+					"Formation VR",
+					"Plans de prévention HSE"
 				]
 			},
 			"immersive": {
 				"title": "3D, immersif & vidéo",
-				"hook": "Montrer vos installations mieux que le réel — même celles qui n'existent pas encore.",
+				"hook": "Montrer vos installations mieux que le réel.",
 				"items": [
 					"Visites virtuelles",
-					"Simulation d'implantations & de flux",
-					"Jumeaux numériques de vos installations",
-					"Vulgarisation 3D",
-					"Production vidéo & supports de cours"
+					"Simulateurs 3D",
+					"Jumeaux numériques",
+					"Simulation d'implantation & de flux",
+					"Production vidéo & 3D"
 				]
 			},
 			"software": {
@@ -149,70 +122,97 @@
 				"hook": "Vos données et vos process, transformés en outils du quotidien.",
 				"items": [
 					"Applications sur mesure",
-					"Sites internet",
 					"Intelligence artificielle",
+					"UI/UX",
 					"Cloud engineering",
-					"Gestion documentaire",
-					"Monitoring de production",
-					"Suivi de performances",
-					"Outils de communication"
+					"Monitoring de production"
 				]
 			},
 			"consulting": {
 				"title": "Conseil & organisation",
-				"hook": "Un diagnostic clair, une feuille de route actionnable — et on reste pour la mettre en œuvre.",
+				"hook": "Un diagnostic clair, une feuille de route actionnable.",
 				"items": [
 					"Diagnostic de transformation",
-					"Performance industrielle",
 					"Excellence opérationnelle",
-					"Accompagnement au changement"
+					"Performance industrielle",
+					"Conduite du changement"
 				]
 			}
 		},
-		"note": "Votre besoin ne rentre dans aucune de ces cases ?",
-		"noteDescription": "C'est justement notre métier : partir de votre problème réel, pas d'un catalogue.",
-		"cta": "Décrivez-nous votre projet"
+		"note": "Votre besoin ne rentre dans aucune de ces cases ? C'est justement notre métier.",
+		"cta": "Décrivez-le-nous"
 	},
 	"method": {
 		"eyebrow": "Comment nous travaillons",
-		"title": "Notre méthode",
+		"title": "Votre projet, posé sur le calendrier",
 		"subtitle": "Des projets courts. Des livrables rapides. La confiance avant tout.",
+		"calendarTitle": "semaine type d'un projet WiseTwin",
 		"steps": {
 			"listen": {
-				"title": "Échange & diagnostic",
-				"description": "Nous écoutons votre besoin, sur le terrain si possible, et identifions la réponse la plus simple.",
-				"duration": "Gratuit"
+				"when": "Jour 1",
+				"title": "On se rencontre",
+				"description": "Votre besoin, sur le terrain si possible. Gratuit."
 			},
 			"proposal": {
-				"title": "Proposition & devis",
-				"description": "Un périmètre clair, un prix ferme, un délai réaliste. Sans engagement.",
-				"duration": "Sous 48h"
+				"when": "Jour 2",
+				"title": "Cahier des charges",
+				"description": "Périmètre clair, prix ferme. Devis gratuit, sans engagement."
 			},
 			"build": {
-				"title": "Développement itératif",
-				"description": "Un premier livrable rapidement, vos retours en continu, des ajustements au fil de l'eau.",
-				"duration": "En semaines"
+				"when": "Semaines 1 à 4",
+				"title": "On construit",
+				"description": "Un premier livrable rapide, vos retours en continu."
 			},
 			"deploy": {
-				"title": "Déploiement & accompagnement",
-				"description": "Mise en service, formation de vos équipes et évolutions à la demande.",
-				"duration": "En continu"
+				"when": "Ensuite",
+				"title": "On déploie, on reste",
+				"description": "Mise en service, formation de vos équipes, évolutions à la demande."
 			}
-		},
-		"startSmall": {
-			"title": "Commencer petit, c'est notre philosophie",
-			"description": "Un premier projet ciblé, un budget maîtrisé, un résultat concret. La confiance s'installe — et on étend ensuite, jamais l'inverse."
 		}
 	},
 	"tools": {
 		"eyebrow": "Nos produits",
 		"title": "Nos outils, nés du terrain",
-		"subtitle": "Les mêmes besoins revenaient chez nos clients : nous en avons fait des produits, éprouvés en conditions réelles.",
-		"wisetrainer": {
-			"tag": "Formation",
-			"title": "WiseTrainer LMS",
-			"description": "La plateforme de formation industrielle : simulateurs 3D immersifs, accueils sécurité photo-réalistes et formations documentaires avec quiz IA. Modulaire — démarrez avec l'essentiel.",
-			"price": "À partir de 50€/mois"
+		"subtitle": "Les mêmes besoins revenaient chez nos clients : nous en avons fait des briques. Chacune s'achète seule, la plateforme les réunit.",
+		"platform": {
+			"tag": "La plateforme",
+			"title": "La plateforme LMS",
+			"description": "Tout WiseTwin dans un seul espace : vos formations, l'IA de sécurité et le pilotage de vos équipes.",
+			"features": [
+				"WiseTrainer, WisePaper et WiseTour inclus",
+				"Ask AI et base d'incidents, en exclusivité",
+				"Plans de formation, analytiques et certifications",
+				"Apprenants illimités"
+			],
+			"price": "3 500€/an",
+			"priceNote": "au lieu de 4 000€ en briques séparées",
+			"cta": "Découvrir la plateforme"
+		},
+		"bricks": {
+			"wisetrainer": {
+				"tag": "Formation 3D",
+				"title": "WiseTrainer",
+				"description": "Vos installations recréées en simulateurs 3D immersifs. Création sur mesure, diffusion illimitée.",
+				"price": "1 500€/an"
+			},
+			"wisepaper": {
+				"tag": "Formation documentaire",
+				"title": "WisePaper",
+				"description": "Vos PDF, Word et PowerPoint transformés en formations interactives avec quiz par l'IA.",
+				"price": "1 200€/an"
+			},
+			"wisetour": {
+				"tag": "Accueil sécurité",
+				"title": "WiseTour",
+				"description": "La visite sécurité immersive de votre site, créée à partir d'une simple capture 3D.",
+				"price": "1 300€/an"
+			},
+			"askai": {
+				"tag": "IA & données",
+				"title": "Ask AI",
+				"description": "Le copilote sécurité : chasse aux risques par photo, rapports de prévention, base d'incidents interrogeable.",
+				"price": "Réservé à la plateforme"
+			}
 		},
 		"wiseatlas": {
 			"tag": "Communication",
@@ -220,12 +220,14 @@
 			"description": "La carte interactive pour piloter et valoriser votre territoire, vos sites et vos projets : maquettes 3D, visites virtuelles et données à jour, partageables en un lien.",
 			"price": "3 000€/an"
 		},
-		"cta": "Découvrir"
+		"platformOnly": "Plateforme",
+		"cta": "Découvrir",
+		"pricesNote": "Tarifs annuels par site, sans engagement. La création des contenus (simulateurs, captures 3D) est chiffrée sur devis gratuit."
 	},
 	"territory": {
 		"eyebrow": "Notre territoire",
 		"title": "Ancrés à Dunkerque.",
-		"description": "Nous sommes nés au cœur d'un des premiers bassins industriels de France — là où l'industrie se décarbone, recrute et se transforme. C'est notre terrain de jeu, et notre école.",
+		"description": "Nous sommes nés au cœur d'un des premiers bassins industriels de France, là où l'industrie se décarbone, recrute et se transforme. C'est notre terrain de jeu, et notre école.",
 		"facts": [
 			{
 				"value": "Dunkerque",
@@ -241,12 +243,14 @@
 			}
 		],
 		"ambitionLabel": "Notre ambition :",
-		"ambition": "faire du digital un réflexe du quotidien industriel — accessible à chaque site, chaque équipe, chaque budget."
+		"ambition": "faire du digital un réflexe du quotidien industriel, accessible à chaque site, chaque équipe, chaque budget."
 	},
 	"testimonials": {
 		"eyebrow": "Ils nous font confiance",
 		"title": "Ce qu'ils disent de nous",
 		"subtitle": "Des projets concrets, du bassin dunkerquois et d'ailleurs.",
+		"videoBadge": "Témoignage",
+		"watchCta": "Lancer la vidéo",
 		"items": [
 			{
 				"quote": "Notre accueil sécurité a été digitalisé en quelques semaines. Les intérimaires sont opérationnels dès le premier jour, et le suivi est enfin traçable.",
@@ -254,7 +258,7 @@
 				"context": "Site industriel, bassin dunkerquois"
 			},
 			{
-				"quote": "Ils ont compris notre besoin sur le terrain, proposé simple et livré vite. On a commencé petit — on travaille toujours ensemble aujourd'hui.",
+				"quote": "Ils ont compris notre besoin sur le terrain, proposé simple et livré vite. On a commencé petit, on travaille toujours ensemble aujourd'hui.",
 				"author": "Directeur de site",
 				"context": "Industrie manufacturière, Hauts-de-France"
 			},
@@ -267,11 +271,25 @@
 	},
 	"team": {
 		"eyebrow": "Qui nous sommes",
-		"title": "L'équipe",
-		"subtitle": "Ceux que vous rencontrez au premier rendez-vous sont ceux qui réalisent.",
+		"title": "Notre équipe",
+		"subtitle": "Ceux que vous rencontrez sont ceux qui réalisent.",
+		"note": "Pas d'organigramme figé :",
+		"noteHighlight": "l'équipe s'assemble à la volée, autour de votre besoin.",
 		"members": {
+			"gauthier": {
+				"name": "Gauthier",
+				"pole": "Pôle Conseil",
+				"role": "Conseil & excellence opérationnelle",
+				"bio": "Accompagne les directions industrielles : diagnostic de transformation, performance industrielle et conduite du changement.",
+				"skills": [
+					"Diagnostic de transformation",
+					"Performance industrielle",
+					"Conduite du changement"
+				]
+			},
 			"manoel": {
 				"name": "Manoel",
+				"pole": "Pôle Data & IA",
 				"role": "Data, IA & logiciel",
 				"bio": "Conçoit les applications métier, les pipelines de données, les briques d'intelligence artificielle et l'infrastructure cloud de nos solutions.",
 				"skills": [
@@ -282,22 +300,13 @@
 			},
 			"mickael": {
 				"name": "Mickaël",
+				"pole": "Pôle 3D & immersif",
 				"role": "3D, visualisation & simulation",
 				"bio": "Modélise vos installations et développe simulateurs, visites virtuelles et jumeaux numériques en 3D temps réel.",
 				"skills": [
 					"Simulateurs 3D",
 					"Visites virtuelles",
 					"Jumeaux numériques"
-				]
-			},
-			"gauthier": {
-				"name": "Gauthier",
-				"role": "Conseil & excellence opérationnelle",
-				"bio": "Accompagne les directions industrielles : diagnostic de transformation, performance industrielle et conduite du changement.",
-				"skills": [
-					"Diagnostic de transformation",
-					"Performance industrielle",
-					"Conduite du changement"
 				]
 			}
 		}
@@ -337,7 +346,7 @@
 			"items": [
 				{
 					"tag": "Photo-réaliste",
-					"title": "Capturé depuis vos installations",
+					"title": "WiseTour, capturé depuis vos installations",
 					"description": "Des visites 360° créées à partir de vraies photos de vos sites. Le rendu le plus fidèle possible, comme si vous y étiez.",
 					"deployment": "~1 semaine",
 					"process": "Nos techniciens viennent capturer vos installations, ou vous scannez vous-même avec votre smartphone et on s'occupe du reste",
@@ -347,11 +356,11 @@
 						"Présentation de site",
 						"Communication institutionnelle"
 					],
-					"price": "Diffusion incluse dans le socle — capture sur devis"
+					"price": "Brique WiseTour à 1 300€/an, capture sur devis"
 				},
 				{
 					"tag": "3D haute fidélité",
-					"title": "Recréé sur mesure en 3D",
+					"title": "WiseTrainer, recréé sur mesure en 3D",
 					"description": "Vos ateliers modélisés en 3D avec un haut niveau de détail. Interactif, gamifié, avec scénarios de formation complets.",
 					"deployment": "~1 mois pour l'asset 3D, puis ~1 jour par scénario",
 					"process": "Partagez vos plans et références via notre plateforme sécurisée ou vos propres procédures d'accès. L'asset 3D vous appartient",
@@ -361,11 +370,11 @@
 						"Prise en main d'équipements",
 						"Simulation de risques"
 					],
-					"price": "Projet sur mesure — l'asset 3D vous appartient"
+					"price": "Création sur mesure, diffusion via la brique à 1 500€/an"
 				},
 				{
 					"tag": "Format documentaire",
-					"title": "Vos documents transformés en formations",
+					"title": "WisePaper, vos documents transformés en formations",
 					"description": "Importez vos PDF, Word ou PowerPoint. Notre IA les convertit en parcours interactifs avec quiz et suivi de complétion.",
 					"deployment": "Quelques minutes",
 					"process": "Contenu généré automatiquement par IA depuis vos fichiers existants. Remplacez le document, la formation se met à jour",
@@ -375,7 +384,7 @@
 						"Mise à jour de procédures",
 						"Onboarding administratif"
 					],
-					"price": "Inclus dans le socle"
+					"price": "Brique WisePaper à 1 200€/an"
 				}
 			]
 		},
@@ -412,7 +421,7 @@
 				"title": "Parcours & Planification",
 				"description": "Organisez des parcours de formation complets à travers tous les formats WiseTwin.",
 				"items": [
-					"Parcours multi-formats (simulateurs, Safety Tour, WisePaper)",
+					"Parcours multi-formats (WiseTrainer, WiseTour, WisePaper)",
 					"Planification des sessions de formation",
 					"Rappels automatiques par email",
 					"Suivi d'avancement des parcours"
@@ -434,72 +443,63 @@
 					"Intégration des données dans votre LMS",
 					"Certifications PDF avec QR code",
 					"Catalogue complet de vos formations",
-					"Compatible SCORM"
+					"Exports xAPI / cmi5"
 				]
 			}
 		},
 		"cta": {
 			"title": "Prêt à simplifier la gestion de vos formations ?",
-			"description": "Décrivez-nous votre besoin et recevez un devis gratuit sous 48h.",
+			"description": "Décrivez-nous votre besoin et recevez un devis gratuit, sans engagement.",
 			"button": "Demander un devis",
 			"faq": "Consulter la FAQ"
 		}
 	},
 	"pricing": {
 		"eyebrow": "Tarification",
-		"title": "Un LMS minimum viable, qui grandit avec vous",
-		"subtitle": "Démarrez avec l'essentiel à petit prix, ajoutez des modules au fil de l'eau. Votre budget va dans vos formations, pas dans l'abonnement.",
-		"core": {
-			"badge": "Le socle",
-			"priceFrom": "à partir de",
-			"price": "50",
-			"priceUnit": "€/mois",
-			"description": "Tout ce qu'il faut pour diffuser vos formations et suivre vos équipes. Rien de superflu.",
-			"includesLabel": "Inclus dans le socle :",
-			"features": [
-				"Hébergement et diffusion de vos formations (simulateurs 3D, visites, cours)",
-				"WisePaper — vos documents transformés en formations interactives avec quiz IA",
-				"Safety Tour — accueil sécurité photo-réaliste de votre site",
-				"Suivi de complétion et certificats",
-				"Apprenants illimités"
-			],
-			"note": "Tarif par site, sans engagement.",
-			"cta": "Demander un devis gratuit"
-		},
-		"modules": {
-			"title": "Des modules à la carte",
-			"subtitle": "Activez-les le jour où le besoin apparaît — jamais avant.",
-			"priceLabel": "Sur devis",
+		"title": "À la carte ou tout compris",
+		"subtitle": "Chaque brique s'active seule. La plateforme les réunit et débloque l'IA.",
+		"perYear": "€/an",
+		"bricks": {
+			"title": "Les briques à la carte",
+			"subtitle": "Activez uniquement ce dont vous avez besoin.",
+			"note": "Tarifs par site. La création des contenus (simulateur, capture 3D) est un projet sur mesure chiffré à part.",
 			"items": {
-				"analytics": {
-					"title": "Analytics avancés",
-					"description": "Tableaux de bord détaillés, historique des réponses, exports de données."
+				"wisetrainer": {
+					"title": "WiseTrainer",
+					"price": "1 500",
+					"description": "Diffusion de vos simulateurs 3D immersifs à tous vos apprenants."
 				},
-				"planning": {
-					"title": "Plans de formation & rappels",
-					"description": "Parcours multi-formations, planification des sessions, relances automatiques par email."
+				"wisepaper": {
+					"title": "WisePaper",
+					"price": "1 200",
+					"description": "Vos documents transformés en formations interactives avec quiz par l'IA."
 				},
-				"security": {
-					"title": "Sécurité renforcée",
-					"description": "SSO, MFA et journaux d'audit pour répondre à vos exigences IT."
-				},
-				"integrations": {
-					"title": "Intégrations",
-					"description": "Export SCORM vers votre LMS, accès API, certifications avec QR code."
-				},
-				"guests": {
-					"title": "Mode invité",
-					"description": "Formez intérimaires et sous-traitants sans adresse email professionnelle."
-				},
-				"sharing": {
-					"title": "Mutualisation",
-					"description": "Partagez vos formations avec d'autres sites ou des organisations partenaires."
+				"wisetour": {
+					"title": "WiseTour",
+					"price": "1 300",
+					"description": "L'accueil sécurité immersif créé depuis une capture 3D de votre site."
 				}
 			}
 		},
+		"platform": {
+			"badge": "La plateforme complète",
+			"price": "3 500",
+			"compare": "4 000€",
+			"note": "Tarif par site, sans engagement.",
+			"description": "Les trois briques réunies, plus tout ce qui n'existe nulle part ailleurs :",
+			"features": [
+				"WiseTrainer, WisePaper et WiseTour inclus",
+				"Ask AI : copilote sécurité, chasse aux risques par photo, rapports de prévention",
+				"Base d'incidents : votre accidentologie anonymisée, interrogeable en langage naturel",
+				"Plans de formation, relances automatiques et analytiques",
+				"Certifications vérifiables et apprenants illimités"
+			],
+			"exclusiveNote": "Ask AI et la base d'incidents sont réservés à la plateforme complète.",
+			"cta": "Demander un devis gratuit"
+		},
 		"simulators": {
-			"title": "Et les simulateurs 3D ?",
-			"description": "Le développement d'un simulateur WiseTrainer est un projet sur mesure facturé une seule fois — l'asset 3D vous appartient. Le socle suffit ensuite à le diffuser à tous vos apprenants, sans surcoût par session.",
+			"title": "Et la création des simulateurs 3D ?",
+			"description": "Un simulateur WiseTrainer est un projet sur mesure facturé une seule fois : l'asset 3D vous appartient. Votre brique ou votre plateforme le diffuse ensuite à tous vos apprenants, sans surcoût par session.",
 			"cta": "Décrivez-nous votre projet"
 		}
 	},
@@ -545,12 +545,12 @@
 			},
 			"easyIntegration": {
 				"label": "Intégrable",
-				"shortDesc": "SCORM, export LMS",
+				"shortDesc": "xAPI/cmi5, export LMS",
 				"title": "S'intègre à vos outils existants",
-				"description": "Exportez vos formations au format SCORM et intégrez-les directement dans votre LMS (Moodle, 360Learning, Talentsoft). Pas de rupture dans votre écosystème de formation.",
+				"description": "Exportez vos données de formation aux formats xAPI et cmi5 et intégrez-les directement dans votre LMS (Moodle, 360Learning, Talentsoft). Pas de rupture dans votre écosystème de formation.",
 				"stats": {
 					"value1": "100%",
-					"label1": "compatible SCORM",
+					"label1": "compatible xAPI",
 					"value2": "∞",
 					"label2": "LMS supportés"
 				}
@@ -711,7 +711,7 @@
 				"proposal": {
 					"number": "03",
 					"title": "Proposition sur mesure",
-					"description": "Devis personnalisé sous 48h"
+					"description": "Devis personnalisé, gratuit et sans engagement"
 				}
 			},
 			"button": "Nous contacter",
@@ -721,7 +721,6 @@
 	"faq": {
 		"title": "Questions fréquentes",
 		"subtitle": "Les réponses à vos questions",
-		"seeAll": "Voir toutes les questions",
 		"searchPlaceholder": "Rechercher une question...",
 		"noResults": "Aucune question ne correspond à votre recherche",
 		"categories": {
@@ -734,7 +733,7 @@
 		"items": {
 			"whoIsWisetwin": {
 				"question": "Qui est WiseTwin ?",
-				"answer": "WiseTwin est une société de conseil et de services en développement de solutions digitales pour l'industrie, fondée par trois associés issus du monde industriel. Nous concevons des outils sur mesure — formation, HSE, 3D, data & IA — et éditons deux produits nés de besoins récurrents chez nos clients : WiseTrainer LMS (formation) et WiseAtlas (communication)."
+				"answer": "WiseTwin est une société de conseil et de services en développement de solutions digitales pour l'industrie, fondée par trois associés issus du monde industriel. Nous concevons des outils sur mesure (formation, HSE, 3D, data & IA) et éditons des briques nées de besoins récurrents chez nos clients : WiseTrainer, WisePaper et WiseTour pour la formation, la plateforme LMS qui les réunit, et WiseAtlas pour la communication."
 			},
 			"whatDoYouDo": {
 				"question": "Que faites-vous concrètement ?",
@@ -742,27 +741,27 @@
 			},
 			"productsVsCustom": {
 				"question": "Quelle différence entre vos prestations sur mesure et vos produits ?",
-				"answer": "Nos produits (WiseTrainer LMS et WiseAtlas) sont des besoins récurrents que nous avons standardisés : ils sont immédiatement disponibles et bien moins chers que du développement à la demande. Le sur-mesure couvre tout le reste : nous partons de votre problème réel et développons la réponse la plus simple. Les deux se combinent souvent — un projet sur mesure peut s'appuyer sur nos produits, et inversement."
+				"answer": "Nos produits (les briques WiseTrainer, WisePaper et WiseTour, la plateforme LMS et WiseAtlas) sont des besoins récurrents que nous avons standardisés : ils sont immédiatement disponibles et bien moins chers que du développement à la demande. Le sur-mesure couvre tout le reste : nous partons de votre problème réel et développons la réponse la plus simple. Les deux se combinent souvent."
 			},
 			"whoWorks": {
 				"question": "Qui travaille sur mon projet ?",
-				"answer": "Les trois associés, directement. Manoel sur la data, l'IA et le logiciel ; Mickaël sur la 3D, la visualisation et la simulation ; Gauthier sur le conseil et l'excellence opérationnelle. Pas d'intermédiaire commercial, pas de sous-traitance cachée : ceux que vous rencontrez sont ceux qui réalisent."
+				"answer": "Une équipe assemblée à la volée en fonction de votre besoin, autour de trois pôles : Gauthier (conseil & excellence opérationnelle), Manoel (data, IA & logiciel) et Mickaël (3D, visualisation & simulation). Pas d'intermédiaire commercial, pas de sous-traitance cachée : ceux que vous rencontrez sont ceux qui réalisent."
 			},
 			"clients": {
 				"question": "Avec qui travaillez-vous ?",
-				"answer": "Avec des sites industriels de toutes tailles — de la PME au grand groupe — ainsi que des collectivités et des acteurs territoriaux pour WiseAtlas. Nos offres sont dimensionnées pour être accessibles au budget d'un site, sans nécessiter de décision centrale."
+				"answer": "Avec des sites industriels de toutes tailles, de la PME au grand groupe, ainsi que des collectivités et des acteurs territoriaux pour WiseAtlas. Nos offres sont dimensionnées pour être accessibles au budget d'un site, sans nécessiter de décision centrale."
 			},
 			"projectTypes": {
 				"question": "Quels types de projets peut-on vous confier ?",
-				"answer": "Quelques exemples réels : digitaliser un accueil sécurité, créer une chasse aux risques virtuelle, simuler une implantation ou des flux avant travaux, produire un plan de prévention HSE, développer une application métier ou un site internet, mettre en place un monitoring de production, vulgariser un process en 3D ou en vidéo, construire un serious game, ou mener un diagnostic de transformation digitale. Et tout ce qui y ressemble."
+				"answer": "Quelques exemples réels : digitaliser un accueil sécurité, créer une chasse aux risques virtuelle, simuler une implantation ou des flux avant travaux, produire un plan de prévention HSE, développer une application métier, mettre en place un monitoring de production, vulgariser un process en 3D ou en vidéo, construire un serious game, ou mener un diagnostic de transformation digitale. Et tout ce qui y ressemble."
 			},
 			"smallProjects": {
 				"question": "Acceptez-vous les petits projets ?",
-				"answer": "Oui — c'est même notre philosophie. Nous préférons commencer par un premier projet ciblé, à budget maîtrisé, qui livre un résultat concret rapidement. La confiance s'installe, puis on étend au fil de l'eau. Jamais l'inverse."
+				"answer": "Oui, c'est même notre philosophie. Nous préférons commencer par un premier projet ciblé, à budget maîtrisé, qui livre un résultat concret rapidement. La confiance s'installe, puis on étend au fil de l'eau. Jamais l'inverse."
 			},
 			"consultingOnly": {
 				"question": "Peut-on vous solliciter uniquement pour du conseil, sans développement ?",
-				"answer": "Bien sûr. Diagnostic de transformation digitale, audit de performance industrielle, feuille de route d'excellence opérationnelle, accompagnement au changement : Gauthier intervient auprès des directions industrielles avec ou sans développement derrière. Si un outil s'avère utile, nous savons le construire — mais ce n'est jamais un prérequis."
+				"answer": "Bien sûr. Diagnostic de transformation digitale, audit de performance industrielle, feuille de route d'excellence opérationnelle, accompagnement au changement : Gauthier intervient auprès des directions industrielles avec ou sans développement derrière. Si un outil s'avère utile, nous savons le construire, mais ce n'est jamais un prérequis."
 			},
 			"onsite": {
 				"question": "Intervenez-vous sur site ?",
@@ -770,15 +769,15 @@
 			},
 			"confidentiality": {
 				"question": "Comment garantissez-vous la confidentialité de nos données industrielles ?",
-				"answer": "Nous signons un accord de confidentialité (NDA) dès le premier échange si vous le souhaitez. Vos plans, photos et données sont transmis via des canaux sécurisés — les vôtres si vous préférez —, hébergés en Europe avec des accès restreints, et nous appliquons les bonnes pratiques ISO 27001. Nous travaillons au quotidien avec des industriels soumis à des exigences strictes."
+				"answer": "Nous signons un accord de confidentialité (NDA) dès le premier échange si vous le souhaitez. Vos plans, photos et données sont transmis via des canaux sécurisés (les vôtres si vous préférez), hébergés en Europe avec des accès restreints, et nous appliquons les bonnes pratiques ISO 27001. Nous travaillons au quotidien avec des industriels soumis à des exigences strictes."
 			},
 			"process": {
 				"question": "Comment se déroule un projet ?",
-				"answer": "En quatre temps : 1) un échange gratuit pour comprendre votre besoin, sur le terrain si possible ; 2) une proposition avec périmètre clair, prix ferme et délai réaliste, sous 48h ; 3) un développement itératif avec un premier livrable rapide et vos retours en continu ; 4) le déploiement, la formation de vos équipes et les évolutions à la demande."
+				"answer": "En quatre temps : 1) un échange gratuit pour comprendre votre besoin, sur le terrain si possible ; 2) un cahier des charges défini en 48 heures, avec périmètre clair et prix ferme, gratuit et sans engagement ; 3) un développement itératif avec un premier livrable rapide et vos retours en continu ; 4) le déploiement, la formation de vos équipes et les évolutions à la demande."
 			},
 			"delays": {
 				"question": "Quels sont vos délais ?",
-				"answer": "Nous travaillons en semaines, pas en mois. Une formation documentaire se digitalise en quelques jours, un accueil sécurité photo-réaliste en environ une semaine, un simulateur 3D complet en environ un mois. Pour les projets sur mesure, le délai est fixé dans le devis — et tenu."
+				"answer": "Nous travaillons en semaines, pas en mois. Une formation documentaire se digitalise en quelques jours, un accueil sécurité photo-réaliste en environ une semaine, un simulateur 3D complet en environ un mois. Pour les projets sur mesure, le délai est fixé dans le devis, et tenu."
 			},
 			"assetOwnership": {
 				"question": "À qui appartiennent les livrables ?",
@@ -786,27 +785,27 @@
 			},
 			"interoperability": {
 				"question": "Vos solutions s'intègrent-elles à nos outils existants ?",
-				"answer": "Oui, c'est une de nos convictions : aucun enfermement. Export SCORM vers votre LMS (Moodle, 360Learning, Talentsoft…), SSO avec votre fournisseur d'identité, accès API, et des développements sur mesure qui se connectent à votre SI plutôt que de le remplacer."
+				"answer": "Oui. Exports xAPI/cmi5 vers votre LMS (Moodle, 360Learning, Talentsoft…), SSO avec votre fournisseur d'identité, et des développements sur mesure qui se connectent à votre SI plutôt que de le remplacer. Aucun enfermement."
 			},
 			"aftercare": {
 				"question": "Que se passe-t-il après la livraison ?",
-				"answer": "Nous restons disponibles : maintenance, support, et évolutions à la demande. Beaucoup de nos clients font grandir leur outil au fil de l'eau — une fonctionnalité à la fois, quand le besoin apparaît. C'est exactement comme cela que nous aimons travailler."
+				"answer": "Nous restons disponibles : maintenance, support, et évolutions à la demande. Beaucoup de nos clients font grandir leur outil au fil de l'eau, une fonctionnalité à la fois, quand le besoin apparaît. C'est exactement comme cela que nous aimons travailler."
 			},
 			"quote": {
 				"question": "Comment obtenir un devis ?",
-				"answer": "Décrivez-nous votre projet via le formulaire de contact — quelques lignes suffisent : contexte, objectif, contraintes. Nous revenons vers vous sous 48h avec un premier retour et un devis gratuit, sans engagement."
+				"answer": "Décrivez-nous votre projet via le formulaire de contact, quelques lignes suffisent : contexte, objectif, contraintes. Vous pouvez aussi réserver directement un créneau d'échange sur le site. Le devis est gratuit et sans engagement."
 			},
 			"pricingModel": {
 				"question": "Comment fonctionne votre tarification ?",
-				"answer": "Les prestations sur mesure sont au forfait, sur devis : périmètre clair, prix ferme, pas de surprise. Nos produits ont des tarifs publics : la plateforme WiseTrainer LMS démarre à 50€/mois et WiseAtlas à 3 000€/an. Tous les devis sont gratuits et sans engagement."
+				"answer": "Les prestations sur mesure sont au forfait, sur devis : périmètre clair, prix ferme, pas de surprise. Nos outils ont des tarifs publics annuels : chaque brique de formation s'achète seule (WisePaper 1 200€/an, WiseTour 1 300€/an, WiseTrainer 1 500€/an), la plateforme LMS complète les réunit pour 3 500€/an, et WiseAtlas démarre à 3 000€/an. Tous les devis sont gratuits et sans engagement."
 			},
 			"wisetrainerPricing": {
-				"question": "Combien coûte la plateforme WiseTrainer LMS ?",
-				"answer": "Le socle démarre à 50€/mois par site : hébergement de vos formations, WisePaper (formations documentaires avec quiz IA), Safety Tour (accueil sécurité photo-réaliste), suivi de complétion et apprenants illimités. Vous ajoutez ensuite des modules à la carte (analytics avancés, plans de formation, SSO/MFA, SCORM/API…) uniquement quand le besoin apparaît. Votre budget va dans vos contenus de formation, pas dans l'abonnement."
+				"question": "Combien coûte la plateforme LMS ?",
+				"answer": "3 500€/an par site, tout compris : les trois briques de formation (WiseTrainer, WisePaper, WiseTour), Ask AI (copilote sécurité, chasse aux risques, rapports de prévention), la base d'incidents, les plans de formation, les analytiques, les certifications et des apprenants illimités. Chaque brique reste achetable séparément, mais Ask AI et la base d'incidents sont réservés à la plateforme complète."
 			},
 			"simulatorPricing": {
 				"question": "Combien coûte un simulateur 3D ?",
-				"answer": "Un simulateur WiseTrainer est un projet sur mesure facturé une seule fois, sur devis — le prix dépend de la complexité de votre installation et des scénarios. L'asset 3D vous appartient, et le socle de la plateforme suffit ensuite à le diffuser à tous vos apprenants, sans surcoût par session."
+				"answer": "La création d'un simulateur WiseTrainer est un projet sur mesure facturé une seule fois, sur devis : le prix dépend de la complexité de votre installation et des scénarios. L'asset 3D vous appartient, et la brique WiseTrainer ou la plateforme le diffuse ensuite à tous vos apprenants, sans surcoût par session."
 			},
 			"siteBudgets": {
 				"question": "Nos budgets sont décidés au niveau du site, pas du groupe. Est-ce un problème ?",
@@ -822,7 +821,7 @@
 			},
 			"noVrHeadset": {
 				"question": "Faut-il un casque VR pour utiliser vos solutions ?",
-				"answer": "Non. Nos solutions sont 100% accessibles depuis un navigateur web standard, sur PC, tablette ou mobile — 0€ d'investissement matériel. La VR reste possible quand elle apporte une vraie valeur : nous développons aussi des expériences pour casques si votre besoin le justifie."
+				"answer": "Non. Nos solutions sont 100% accessibles depuis un navigateur web standard, sur PC, tablette ou mobile : 0€ d'investissement matériel. La VR reste possible quand elle apporte une vraie valeur : nous développons aussi des expériences pour casques si votre besoin le justifie."
 			},
 			"installation": {
 				"question": "Vos solutions nécessitent-elles une installation ?",
@@ -841,14 +840,47 @@
 	"contact": {
 		"eyebrow": "Parlons-en",
 		"title": "Décrivez-nous votre projet",
-		"subtitle": "Un besoin, une idée, un doute ? Parlez-nous-en : nous revenons vers vous sous 48h avec un premier retour et un devis gratuit.",
+		"subtitle": "Choisissez votre interlocuteur, réservez un créneau si vous le souhaitez, et parlez-nous de votre besoin. Devis gratuit, sans engagement.",
 		"trust": {
 			"quote": "Devis gratuit",
-			"response": "Réponse sous 48h",
-			"commitment": "Sans engagement"
+			"commitment": "Sans engagement",
+			"dedicated": "Un interlocuteur dédié"
 		},
+		"interlocutor": {
+			"step": "Étape 01",
+			"title": "Choisissez votre interlocuteur",
+			"anyHint": "Vous hésitez ? Laissez vide : nous vous orientons vers le bon pôle.",
+			"poles": {
+				"gauthier": {
+					"name": "Gauthier",
+					"pole": "Pôle Conseil",
+					"domains": "Conseil, organisation & excellence opérationnelle"
+				},
+				"manoel": {
+					"name": "Manoel",
+					"pole": "Pôle Data & IA",
+					"domains": "Applications, data, IA & cloud"
+				},
+				"mickael": {
+					"name": "Mickaël",
+					"pole": "Pôle 3D & immersif",
+					"domains": "3D, formation immersive & HSE"
+				}
+			}
+		},
+		"slots": {
+			"step": "Étape 02",
+			"title": "Réservez un créneau d'échange",
+			"hint": "30 minutes en visio. Optionnel : le formulaire suffit aussi.",
+			"confirmNote": "confirmé par email"
+		},
+		"formStep": "Étape 03",
 		"cardTitle": "Parlez-nous de votre besoin",
-		"cardDescription": "Quelques lignes suffisent — contexte, objectif, contraintes. Nous nous chargeons du reste.",
+		"cardDescription": "Quelques lignes suffisent : contexte, objectif, contraintes. Nous nous chargeons du reste.",
+		"email": {
+			"poleLine": "Interlocuteur souhaité",
+			"slotLine": "Créneau souhaité"
+		},
 		"form": {
 			"firstName": "Prénom",
 			"firstNamePlaceholder": "Votre prénom",
@@ -868,7 +900,7 @@
 		},
 		"success": {
 			"title": "Message envoyé avec succès !",
-			"description": "Merci pour votre message. Nous revenons vers vous sous 48h.",
+			"description": "Merci pour votre message. Nous revenons vers vous au plus vite.",
 			"emailSent": "Un email de confirmation a été envoyé à l'adresse"
 		},
 		"errors": {
@@ -879,7 +911,7 @@
 		}
 	},
 	"footer": {
-		"description": "Société de conseil et de services en développement de solutions digitales pour l'industrie. Formation, HSE, 3D, data & IA — des outils sur mesure, conçus pour le terrain.",
+		"description": "Société de conseil et de services en développement de solutions digitales pour l'industrie. Formation, HSE, 3D, data & IA : des outils sur mesure, conçus pour le terrain.",
 		"navigation": "Navigation",
 		"tools": "Nos outils",
 		"contact": "Contact",
