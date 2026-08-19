@@ -38,7 +38,7 @@ export function TeamSection() {
 				centered: true,
 			}}
 		>
-			<div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+			<div className="grid md:grid-cols-3 gap-6 lg:gap-8">
 				{members.map((member, i) => {
 					const skills = t.raw(`members.${member.key}.skills`) as string[];
 					return (

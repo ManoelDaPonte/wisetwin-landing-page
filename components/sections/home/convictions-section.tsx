@@ -12,7 +12,7 @@ export function ConvictionsSection() {
 
 	return (
 		<Section id="convictions" variant="muted">
-			<div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-24 w-full">
+			<div className="grid lg:grid-cols-12 gap-12 lg:gap-24 w-full">
 				{/* Manifesto statement */}
 				<div className="lg:col-span-5">
 					<Reveal className="lg:sticky lg:top-32">
@@ -36,7 +36,7 @@ export function ConvictionsSection() {
 							    donc first:/last: s'appliqueraient à toutes les cartes */}
 							<div
 								className={cn(
-									"group flex gap-8 py-20 md:py-28",
+									"group flex gap-8 py-10 md:py-14",
 									index === 0 && "pt-0 md:pt-0",
 									index === items.length - 1 && "pb-0 md:pb-0"
 								)}

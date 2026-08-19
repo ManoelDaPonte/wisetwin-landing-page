@@ -127,7 +127,7 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 
 			{/* Ce que ça fait, en 3 points */}
 			<Section variant="muted">
-				<div className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto">
+				<div className="grid md:grid-cols-3 gap-5">
 					{([0, 1, 2] as const).map((i) => (
 						<Reveal key={i} delay={i * 0.1} className="h-full">
 							<div className="relative h-full bg-card border border-border rounded-2xl p-7 hover:border-secondary/40 transition-colors overflow-hidden">
@@ -155,7 +155,7 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 			{/* Bandeau plateforme + CTA final */}
 			<Section variant="default">
 				<Reveal>
-					<div className="max-w-5xl mx-auto rounded-3xl border-2 border-secondary/40 bg-card p-8 md:p-12 relative overflow-hidden">
+					<div className="rounded-3xl border-2 border-secondary/40 bg-card p-8 md:p-12 relative overflow-hidden">
 						<div aria-hidden className="absolute inset-0" style={blueprintGrid} />
 						<div className="relative flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
 							<div className="max-w-xl">

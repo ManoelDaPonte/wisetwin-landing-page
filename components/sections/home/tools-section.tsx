@@ -40,7 +40,7 @@ export function ToolsSection() {
 				centered: true,
 			}}
 		>
-			<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+			<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 				{tools.map((tool, i) => {
 					const Icon = tool.icon;
 					const locked = "locked" in tool && tool.locked;

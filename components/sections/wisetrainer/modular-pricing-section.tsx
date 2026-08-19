@@ -36,7 +36,7 @@ export function ModularPricingSection() {
 				centered: true,
 			}}
 		>
-			<div className="max-w-5xl mx-auto">
+			<div>
 				<div className="grid lg:grid-cols-5 gap-6 items-stretch">
 					{/* Les briques à la carte */}
 					<div className="lg:col-span-2 flex flex-col">

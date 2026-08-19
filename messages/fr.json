@@ -48,10 +48,6 @@
 		"faq": "FAQ",
 		"contact": "Contact",
 		"quote": "Devis gratuit",
-		"training": "Formation",
-		"communication": "Communication",
-		"platformShort": "Briques de formation, IA de sécurité et pilotage",
-		"wiseatlasShort": "La carte interactive de votre territoire",
 		"allTools": "Toutes nos briques"
 	},
 	"hero": {
@@ -141,10 +137,10 @@
 		"cta": "Décrivez-le-nous"
 	},
 	"method": {
-		"eyebrow": "Comment nous travaillons",
+		"eyebrow": "Notre méthode",
 		"title": "Votre projet, posé sur le calendrier",
 		"subtitle": "Des projets courts. Des livrables rapides. La confiance avant tout.",
-		"calendarTitle": "semaine type d'un projet WiseTwin",
+		"calendarTitle": "déroulé type d'un projet WiseTwin",
 		"signature": "Signature du devis",
 		"steps": {
 			"listen": {

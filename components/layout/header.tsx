@@ -8,7 +8,16 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { Logo } from "@/components/ui/logo";
-import { Cuboid, Map, Menu, ChevronDown } from "lucide-react";
+import {
+	Cuboid,
+	FileText,
+	Footprints,
+	Sparkles,
+	Map,
+	LayoutGrid,
+	Menu,
+	ChevronDown,
+} from "lucide-react";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -45,23 +54,46 @@ export function Header() {
 	];
 	const menuItemsAfter = [
 		{ title: t("blog"), href: "/blog" },
-		{ title: t("faq"), href: "/faq" },
 	];
 
+	// Toutes les briques, dans le même ordre que la section Outils (plateforme en dernier)
 	const toolItems = [
 		{
-			title: tGlobal("tools.platform.title"),
-			description: t("platformShort"),
-			href: "/solutions/plateforme",
+			title: tGlobal("tools.bricks.wisetrainer.title"),
+			tag: tGlobal("tools.bricks.wisetrainer.tag"),
+			href: "/solutions/wisetrainer",
 			icon: Cuboid,
-			tag: t("training"),
+		},
+		{
+			title: tGlobal("tools.bricks.wisepaper.title"),
+			tag: tGlobal("tools.bricks.wisepaper.tag"),
+			href: "/solutions/wisepaper",
+			icon: FileText,
+		},
+		{
+			title: tGlobal("tools.bricks.wisetour.title"),
+			tag: tGlobal("tools.bricks.wisetour.tag"),
+			href: "/solutions/wisetour",
+			icon: Footprints,
+		},
+		{
+			title: tGlobal("tools.bricks.askai.title"),
+			tag: tGlobal("tools.bricks.askai.tag"),
+			href: "/solutions/askai",
+			icon: Sparkles,
 		},
 		{
 			title: tGlobal("tools.wiseatlas.title"),
-			description: t("wiseatlasShort"),
+			tag: tGlobal("tools.wiseatlas.tag"),
 			href: "/solutions/wiseatlas",
 			icon: Map,
-			tag: t("communication"),
+		},
+		{
+			title: tGlobal("tools.platform.title"),
+			tag: tGlobal("tools.platform.tag"),
+			href: "/solutions/plateforme",
+			icon: LayoutGrid,
+			highlight: true,
 		},
 	];
 
@@ -117,36 +149,39 @@ export function Header() {
 										{t("tools")}
 									</NavigationMenuTrigger>
 									<NavigationMenuContent>
-										<div className="p-4 w-[460px] space-y-2">
-											{toolItems.map((item) => {
-												const Icon = item.icon;
-												return (
-													<Link
-														key={item.href}
-														href={item.href}
-														className="flex items-center gap-4 rounded-xl p-4 transition-all border border-transparent hover:border-secondary/30 hover:bg-secondary/5"
-													>
-														<div className="size-12 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0">
-															<Icon className="size-6 text-secondary" />
-														</div>
-														<div className="flex-1">
-															<div className="flex items-center gap-2 mb-0.5">
-																<span className="font-semibold">{item.title}</span>
-																<span className="text-xs font-medium text-secondary bg-secondary/10 px-2 py-0.5 rounded-full">{item.tag}</span>
+										<div className="p-4 w-[560px]">
+											<div className="grid grid-cols-2 gap-1.5">
+												{toolItems.map((item) => {
+													const Icon = item.icon;
+													return (
+														<Link
+															key={item.href}
+															href={item.href}
+															className={cn(
+																"flex items-center gap-3 rounded-xl p-3 transition-all border hover:bg-secondary/5",
+																"highlight" in item && item.highlight
+																	? "border-secondary/40 hover:border-secondary"
+																	: "border-transparent hover:border-secondary/30"
+															)}
+														>
+															<div className="size-10 bg-secondary/10 rounded-lg flex items-center justify-center shrink-0">
+																<Icon className="size-5 text-secondary" />
 															</div>
-															<p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
-														</div>
-													</Link>
-												);
-											})}
+															<div className="flex-1 min-w-0">
+																<p className="font-semibold text-sm">{item.title}</p>
+																<p className="text-[11px] font-mono uppercase tracking-wide text-muted-foreground truncate">
+																	{item.tag}
+																</p>
+															</div>
+														</Link>
+													);
+												})}
+											</div>
 											<Link
 												href="/#outils"
-												className="flex items-center justify-between rounded-xl px-4 py-3 border border-transparent hover:border-secondary/30 hover:bg-secondary/5 transition-all"
+												className="mt-1.5 flex items-center justify-center rounded-xl px-4 py-2.5 border border-transparent hover:border-secondary/30 hover:bg-secondary/5 transition-all text-sm font-medium text-secondary"
 											>
-												<span className="text-sm font-medium">{t("allTools")}</span>
-												<span className="text-xs text-muted-foreground font-mono">
-													WiseTrainer · WisePaper · WiseTour · Ask AI
-												</span>
+												{t("allTools")}
 											</Link>
 										</div>
 									</NavigationMenuContent>
@@ -244,8 +279,8 @@ export function Header() {
 																	<div className="font-medium text-sm">
 																		{item.title}
 																	</div>
-																	<p className="text-xs text-muted-foreground line-clamp-2">
-																		{item.description}
+																	<p className="text-[11px] font-mono uppercase tracking-wide text-muted-foreground">
+																		{item.tag}
 																	</p>
 																</div>
 															</Link>

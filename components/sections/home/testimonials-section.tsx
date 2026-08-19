@@ -65,7 +65,7 @@ export function TestimonialsSection({ videoPool }: { videoPool: string[] }) {
 				centered: true,
 			}}
 		>
-			<div className="flex flex-wrap justify-center gap-8 lg:gap-6 max-w-6xl mx-auto lg:py-8">
+			<div className="flex flex-wrap justify-center gap-8 lg:gap-10 lg:py-8">
 				{items.map((item, i) => (
 					<Reveal
 						key={i}

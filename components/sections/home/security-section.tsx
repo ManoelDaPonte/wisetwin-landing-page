@@ -41,7 +41,7 @@ export function SecuritySection({
 			}}
 		>
 			{/* 2×2 grid on desktop with ISO as 5th card spanning full width */}
-			<div className="max-w-5xl mx-auto">
+			<div>
 				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 					{securityFeatures.map((feature) => {
 						const Icon = feature.icon;

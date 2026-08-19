@@ -243,7 +243,7 @@ export function ContactSection() {
 				centered: true,
 			}}
 		>
-			<div className="max-w-6xl mx-auto">
+			<div>
 				<div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-12">
 					{(
 						[

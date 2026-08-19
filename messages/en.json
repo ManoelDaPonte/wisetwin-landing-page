@@ -48,10 +48,6 @@
 		"faq": "FAQ",
 		"contact": "Contact",
 		"quote": "Free quote",
-		"training": "Training",
-		"communication": "Communication",
-		"platformShort": "Training bricks, safety AI and management",
-		"wiseatlasShort": "The interactive map of your territory",
 		"allTools": "All our bricks"
 	},
 	"hero": {
@@ -141,10 +137,10 @@
 		"cta": "Tell us about it"
 	},
 	"method": {
-		"eyebrow": "How we work",
+		"eyebrow": "Our method",
 		"title": "Your project, laid on the calendar",
 		"subtitle": "Short projects. Fast deliverables. Trust above all.",
-		"calendarTitle": "typical week of a WiseTwin project",
+		"calendarTitle": "typical course of a WiseTwin project",
 		"signature": "Quote signed",
 		"steps": {
 			"listen": {

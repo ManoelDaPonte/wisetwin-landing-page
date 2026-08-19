@@ -38,7 +38,7 @@ export function MethodSection() {
 			}}
 		>
 			<Reveal>
-				<div className="max-w-6xl mx-auto rounded-3xl border border-border bg-card overflow-hidden">
+				<div className="rounded-3xl border border-border bg-card overflow-hidden">
 					{/* Barre de titre façon agenda */}
 					<div className="flex items-center gap-2 px-6 py-3.5 border-b border-border bg-muted/50">
 						<div className="flex gap-1.5">
@@ -68,10 +68,7 @@ export function MethodSection() {
 											aria-hidden
 											className="hidden lg:block absolute -left-px top-0 bottom-0 w-0.5 bg-red-500 z-10"
 										>
-											<span className="absolute -top-0 -left-[5px] size-3 rounded-full bg-red-500" />
-										</div>
-										<div className="hidden lg:block absolute top-4 left-3 z-20">
-											<SignatureLabel label={t("signature")} />
+											<span className="absolute -bottom-1.5 -left-[5px] size-3 rounded-full bg-red-500" />
 										</div>
 										{/* Version mobile : séparateur horizontal rouge */}
 										<div className="lg:hidden relative flex items-center gap-3 px-5 pt-5 z-10">
@@ -82,7 +79,7 @@ export function MethodSection() {
 									</>
 								)}
 
-								<div className={cn("p-5 lg:p-6 lg:pb-16", i === SIGNATURE_BEFORE && "lg:pt-14")}>
+								<div className="p-5 lg:p-6 lg:pb-16">
 									{/* En-tête de colonne : le "jour" */}
 									<p className="text-xs font-mono uppercase tracking-[0.15em] text-muted-foreground pb-3 mb-4 border-b border-border/60">
 										{t(`steps.${step}.when`)}
@@ -108,6 +105,13 @@ export function MethodSection() {
 								</div>
 							</div>
 						))}
+					</div>
+
+					{/* Étiquette de signature, sous le tableau, alignée sur la ligne rouge */}
+					<div className="hidden lg:block relative border-t border-border bg-muted/40 py-3">
+						<div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+							<SignatureLabel label={t("signature")} />
+						</div>
 					</div>
 				</div>
 			</Reveal>
