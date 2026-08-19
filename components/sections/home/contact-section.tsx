@@ -6,6 +6,9 @@ import { toast } from "sonner";
 import {
 	Send,
 	AlertTriangle,
+	BadgeEuro,
+	Clock,
+	Handshake,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -140,6 +143,22 @@ export function ContactSection() {
 			}}
 		>
 			<div className="max-w-5xl mx-auto">
+				<div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10">
+					{(
+						[
+							{ key: "quote", icon: BadgeEuro },
+							{ key: "response", icon: Clock },
+							{ key: "commitment", icon: Handshake },
+						] as const
+					).map(({ key, icon: Icon }) => (
+						<div key={key} className="flex items-center gap-2">
+							<div className="size-8 bg-secondary/10 rounded-lg flex items-center justify-center">
+								<Icon className="size-4 text-secondary" />
+							</div>
+							<span className="text-sm font-medium">{t(`trust.${key}`)}</span>
+						</div>
+					))}
+				</div>
 				<Card className="shadow-sm border">
 						<CardHeader>
 							<CardTitle>{t("cardTitle")}</CardTitle>

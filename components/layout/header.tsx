@@ -32,16 +32,16 @@ import {
 
 export function Header() {
 	const t = useTranslations("nav");
-	const tSolutions = useTranslations();
+	const tGlobal = useTranslations();
 	const [scrolled, setScrolled] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const [solutionsOpen, setSolutionsOpen] = useState(false);
+	const [toolsOpen, setToolsOpen] = useState(false);
 
 	const menuItems = [
-		{ title: t("security"), href: "/#security" },
+		{ title: t("expertise"), href: "/#expertises" },
+		{ title: t("method"), href: "/#methode" },
 		{ title: t("blog"), href: "/blog" },
 		{ title: t("faq"), href: "/faq" },
-		{ title: t("contact"), href: "/#contact" },
 	];
 
 	const platformItems = [
@@ -59,17 +59,17 @@ export function Header() {
 		},
 	];
 
-	const solutionItems = [
+	const toolItems = [
 		{
-			title: tSolutions("wisetrainer.title"),
-			description: tSolutions("solutions.formation.description"),
+			title: tGlobal("tools.wisetrainer.title"),
+			description: tGlobal("tools.wisetrainer.description"),
 			href: "/solutions/wisetrainer",
 			icon: Cuboid,
 			tag: t("training"),
 		},
 		{
-			title: tSolutions("wiseatlas.title"),
-			description: tSolutions("wiseatlas.subtitle"),
+			title: tGlobal("tools.wiseatlas.title"),
+			description: tGlobal("tools.wiseatlas.description"),
 			href: "/solutions/wiseatlas",
 			icon: Map,
 			tag: t("communication"),
@@ -108,14 +108,14 @@ export function Header() {
 					<div className="hidden lg:block">
 						<NavigationMenu>
 							<NavigationMenuList>
-								{/* Solutions Dropdown */}
+								{/* Tools Dropdown */}
 								<NavigationMenuItem>
 									<NavigationMenuTrigger className="bg-transparent hover:bg-accent/50">
-										{t("solutions")}
+										{t("tools")}
 									</NavigationMenuTrigger>
 									<NavigationMenuContent>
 										<div className="p-4 w-[460px] space-y-2">
-											{solutionItems.map((item) => {
+											{toolItems.map((item) => {
 												const Icon = item.icon;
 												return (
 													<Link
@@ -168,7 +168,7 @@ export function Header() {
 							<NavigationMenu viewport={false}>
 								<NavigationMenuList>
 									<NavigationMenuItem>
-										<NavigationMenuTrigger className="bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-lg px-4">
+										<NavigationMenuTrigger className="bg-transparent hover:bg-accent/50 rounded-lg px-3">
 											<LogIn className="size-4 mr-2" />
 											{t("login")}
 										</NavigationMenuTrigger>
@@ -204,6 +204,11 @@ export function Header() {
 							</NavigationMenu>
 						</div>
 
+						{/* Primary CTA — desktop */}
+						<Button className="hidden sm:inline-flex" asChild>
+							<Link href="/#contact">{t("quote")}</Link>
+						</Button>
+
 						{/* Mobile Menu */}
 						<Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
 							<SheetTrigger asChild>
@@ -225,23 +230,23 @@ export function Header() {
 
 									{/* Mobile Navigation */}
 									<nav className="flex-1 overflow-y-auto p-4">
-										{/* Solutions Collapsible */}
+										{/* Tools Collapsible */}
 										<Collapsible
-											open={solutionsOpen}
-											onOpenChange={setSolutionsOpen}
+											open={toolsOpen}
+											onOpenChange={setToolsOpen}
 											className="mb-2"
 										>
 											<CollapsibleTrigger className="flex items-center justify-between w-full p-3 rounded-lg hover:bg-accent transition-colors">
-												<span className="font-medium">{t("solutions")}</span>
+												<span className="font-medium">{t("tools")}</span>
 												<ChevronDown
 													className={cn(
 														"size-4 transition-transform",
-														solutionsOpen && "rotate-180"
+														toolsOpen && "rotate-180"
 													)}
 												/>
 											</CollapsibleTrigger>
 											<CollapsibleContent className="pl-4 mt-1 space-y-1">
-												{solutionItems.map((item) => {
+												{toolItems.map((item) => {
 													const Icon = item.icon;
 													return (
 														<SheetClose asChild key={item.title}>
@@ -257,7 +262,7 @@ export function Header() {
 																	<div className="font-medium text-sm">
 																		{item.title}
 																	</div>
-																	<p className="text-xs text-muted-foreground">
+																	<p className="text-xs text-muted-foreground line-clamp-2">
 																		{item.description}
 																	</p>
 																</div>
@@ -280,6 +285,18 @@ export function Header() {
 												</Link>
 											</SheetClose>
 										))}
+
+										{/* Primary CTA */}
+										<SheetClose asChild>
+											<Button className="w-full mt-4" size="lg" asChild>
+												<Link
+													href="/#contact"
+													onClick={() => setMobileMenuOpen(false)}
+												>
+													{t("quote")}
+												</Link>
+											</Button>
+										</SheetClose>
 									</nav>
 
 									{/* Mobile Footer — Login */}

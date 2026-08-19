@@ -1,47 +1,74 @@
 # WiseTwin
 
-> WiseTwin is an industrial training platform (SaaS) built for the AI era. It brings HR,
-> HSE managers, training managers and learners together on one connected platform, and
-> covers the full spectrum of digital training — from photorealistic 3D digital-twin
-> simulators to interactive micro-learning — as a strong, modern alternative to legacy
-> LMS and static e-learning.
+> WiseTwin is a French consulting and services firm that develops digital solutions for
+> industry. Founded by three partners with industrial backgrounds, it accelerates the
+> digital transformation of industrial companies with tailor-made tools — training, HSE,
+> 3D, data & AI — that are fast to deploy, affordable, interoperable, and sized for a
+> single site's budget. It also publishes two standardized products born from recurring
+> client needs: WiseTrainer LMS (training) and WiseAtlas (communication).
 
-WiseTwin digitalizes industrial environments into immersive digital twins so teams can
-train on exact replicas of their own equipment and sites — safely, without stopping
-production. The platform centralizes training plans, learner tracking, certification
-and analytics, and uses generative AI to keep content connected and up to date:
-importing existing documents into interactive trainings, AI safety assistance, risk
-hunting on workplace photos and prevention reporting.
+WiseTwin's philosophy: operational excellence and industrial performance come from tools
+designed for the teams who use them, without disrupting their daily work. Digital must be
+accessible in price and in design time; answers should be fast, tailor-made, and sized on
+real identified needs. All solutions are interoperable and multi-platform (browser,
+mobile, tablet, VR — no lock-in). Projects start small: a first focused deliverable
+builds trust, then the tool grows over time.
 
 Primary language: French (site available at /fr and /en). Website: https://wisetwin.eu
 
-## Who it serves
+## Services (custom development & consulting)
 
-- HR teams: onboarding, compliance, training records and certifications in one place
-- HSE managers: safety inductions, incident-driven prevention, risk awareness
-- Training managers: authoring, planning, tracking and reporting across all formats
-- Learners: immersive, engaging trainings accessible from a browser — no installation
+- Training & HSE: training digitization, virtual & VR training, safety inductions, risk
+  hunts, serious games, HSE prevention plans, self-paced training, training planning and
+  traceability
+- 3D, immersive & video: virtual tours, layout and flow simulation, digital twins of
+  facilities, 3D explainers, video and course production
+- Data, AI & software: custom business applications, websites, artificial intelligence,
+  cloud engineering, document management, production monitoring, performance tracking,
+  communication tools
+- Consulting & organization: transformation diagnosis, industrial performance,
+  operational excellence, change management
 
-## Training formats
+How it works: free discussion and diagnosis → proposal and free quote within 48h →
+iterative development in weeks → deployment and ongoing support. Deliverables belong to
+the client.
 
-- WiseTrainer — immersive real-time 3D simulators of your own facilities: lockout/tagout,
-  evacuation, fire safety, chemical leaks, complex maintenance — no risk, no downtime
-- SafetyTour — photorealistic virtual site visits for safety inductions
-- WisePaper — interactive document-based micro-learning with quizzes, generated from
-  your existing PowerPoint, Word or PDF materials with AI assistance
+## Products (standardized tools born in the field)
+
+- WiseTrainer LMS — the modular industrial training platform, from €50/month per site.
+  Base plan: hosting and delivery of training, WisePaper (documents turned into
+  interactive training with AI quizzes), Safety Tour (photo-realistic safety induction),
+  completion tracking, unlimited learners. À la carte modules: advanced analytics,
+  training plans and reminders, SSO/MFA/audit, SCORM/API integrations, guest mode,
+  cross-organization sharing. 3D simulators of the client's own facilities are custom
+  projects billed once — the 3D asset belongs to the client.
+- WiseAtlas — interactive 4D map for territories and industrial infrastructure, from
+  €3,000/year. 3D models, virtual tours, up-to-date data, shareable in one link.
+
+## The team
+
+- Manoel — data, AI & software: business applications, data pipelines, AI components,
+  cloud infrastructure
+- Mickaël — 3D, visualization & simulation: simulators, virtual tours, digital twins in
+  real-time 3D
+- Gauthier — consulting & operational excellence: transformation diagnosis, industrial
+  performance, change management
 
 ## Key pages
 
-- [Home (FR)](https://wisetwin.eu/fr): platform overview and solutions
-- [WiseTrainer (FR)](https://wisetwin.eu/fr/solutions/wisetrainer): 3D training simulators
-- [WiseAtlas (FR)](https://wisetwin.eu/fr/solutions/wiseatlas): interactive 4D map for
+- [Home (FR)](https://wisetwin.eu/fr): positioning, expertise, method, team, contact
+- [WiseTrainer LMS (FR)](https://wisetwin.eu/fr/solutions/wisetrainer): modular training
+  platform and 3D simulators
+- [WiseAtlas (FR)](https://wisetwin.eu/fr/solutions/wiseatlas): interactive map for
   territories and industrial infrastructure
-- [FAQ (FR)](https://wisetwin.eu/fr/faq): pricing, deployment, data security
+- [FAQ (FR)](https://wisetwin.eu/fr/faq): services, method, pricing, data security
 - [Blog (FR)](https://wisetwin.eu/fr/blog): industrial training and digital twin insights
 - [Home (EN)](https://wisetwin.eu/en): English version of the site
 
 ## Company
 
-- WiseTwin is a French company serving industrial companies and territories
-- Positioning: a connected, always-up-to-date vision of industrial training in the AI
-  era — replacing paper procedures, PDFs and static e-learning with living digital twins
+- WiseTwin is a French company based in Dunkerque, serving industrial sites of all sizes
+  (SMEs to large groups), local authorities and territorial players
+- Contact: contact@wisetwin.eu — free quote within 48h, no commitment
+- Security: MFA, enterprise SSO, audit logs, GDPR-compliant, data hosted in Europe,
+  ISO 27001 best practices

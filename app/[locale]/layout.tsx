@@ -82,12 +82,22 @@ export default async function LocaleLayout({ children, params }: Props) {
 				<JsonLd
 					data={{
 						"@context": "https://schema.org",
-						"@type": "Organization",
+						"@type": ["Organization", "ProfessionalService"],
 						name: "WiseTwin",
 						url: "https://wisetwin.eu",
 						logo: "https://wisetwin.eu/logo-wisetwin-light.png",
 						description:
-							"Solutions immersives de jumeaux numériques pour la formation industrielle et la communication territoriale.",
+							"Société de conseil et de services en développement de solutions digitales pour l'industrie : formation immersive, HSE, 3D, data & IA.",
+						slogan: "Nous accélérons la transformation digitale de votre industrie",
+						knowsAbout: [
+							"Transformation digitale industrielle",
+							"Formation immersive et VR",
+							"Simulation 3D et jumeaux numériques",
+							"Prévention HSE",
+							"Intelligence artificielle",
+							"Cloud engineering",
+							"Excellence opérationnelle",
+						],
 						address: {
 							"@type": "PostalAddress",
 							streetAddress:

@@ -18,24 +18,26 @@ export async function generateMetadata({
 	const keywords =
 		locale === "fr"
 			? [
+					"LMS industriel",
+					"LMS modulaire",
 					"simulateur formation industrielle",
 					"formation 3D immersive",
+					"accueil sécurité digital",
+					"digitalisation formation",
 					"jumeau numérique formation",
-					"simulateur sécurité industrielle",
-					"LMS industriel",
-					"formation VR entreprise",
 				]
 			: [
+					"industrial LMS",
+					"modular LMS",
 					"industrial training simulator",
 					"immersive 3D training",
+					"digital safety induction",
+					"training digitization",
 					"digital twin training",
-					"industrial safety simulator",
-					"industrial LMS",
-					"enterprise VR training",
 				];
 
 	return {
-		title: `${t("title")} - WiseTwin`,
+		title: t("title"),
 		description: tMeta("description"),
 		keywords,
 		openGraph: {
@@ -78,15 +80,17 @@ export default async function WiseTrainerPage({
 					operatingSystem: "Web",
 					description:
 						locale === "fr"
-							? "Simulateur 3D immersif sur mesure pour la formation industrielle"
-							: "Custom immersive 3D simulator for industrial training",
+							? "Plateforme de formation industrielle modulaire : simulateurs 3D immersifs, accueil sécurité photo-réaliste et formations documentaires"
+							: "Modular industrial training platform: immersive 3D simulators, photo-realistic safety inductions and document-based training",
 					url: `https://wisetwin.eu/${locale}/solutions/wisetrainer`,
 					offers: {
 						"@type": "Offer",
-						price: "0",
+						price: "50",
 						priceCurrency: "EUR",
 						description:
-							locale === "fr" ? "Sur devis" : "Custom quote",
+							locale === "fr"
+								? "Socle à partir de 50€/mois — modules et simulateurs sur devis"
+								: "Base plan from €50/month — modules and simulators on quote",
 					},
 					provider: {
 						"@type": "Organization",

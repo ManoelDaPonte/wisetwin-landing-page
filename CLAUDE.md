@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-WiseTwin landing page - a Next.js 15 site for a digital twin and immersive VR training solution for Industry 4.0. The site presents 4 products (WiseTrainer, WisePaper, WiseTour, WiseAtlas) with individual solution pages, a comparison table, subscription pricing, and a contact form.
+WiseTwin landing page - a Next.js site for a **consulting & services firm developing digital solutions for industry** ("société de conseil / service en développement de solutions digitales pour l'industrie"). The site leads with the agency positioning (custom development & consulting: training, HSE, 3D, data & AI), presents the method ("start small"), the 3-partner team, and two standardized products born from recurring client needs as proof: **WiseTrainer LMS** (training) and **WiseAtlas** (communication). The main CTA is "Décrivez-nous votre projet / Devis gratuit" (contact form), not product signup.
 
 ## Commands
 
@@ -17,12 +17,13 @@ npm run lint   # ESLint check
 
 ## Tech Stack
 
-- **Next.js 15.3** with App Router
+- **Next.js 16** with App Router
 - **React 19** + TypeScript 5
 - **TailwindCSS 4** (new v4 architecture with `@theme` directive)
 - **Framer Motion** (imported as `motion`)
 - **Radix UI** + shadcn/ui components
 - **next-intl** for internationalization (FR/EN)
+- **Outstatic** CMS for the blog (`outstatic/` content, `app/(cms)/`)
 
 ## Architecture
 
@@ -35,8 +36,8 @@ Routes are localized under `app/[locale]/`. Translations in `messages/fr.json` a
 import { useTranslations } from "next-intl";
 const t = useTranslations("nav");
 
-// For boolean/raw values in translations (e.g. comparison table), use t.raw()
-const value = t.raw("solutions.comparison.values.wisetrainer.web"); // returns true/false
+// For arrays/raw values in translations, use t.raw()
+const chips = t.raw("hero.chips") as string[];
 
 // For navigation, use Link from i18n/navigation
 import { Link } from "@/i18n/navigation";
@@ -52,105 +53,85 @@ Key files:
 Pages are composed via client orchestrators in `components/pages/`:
 - `home-client.tsx` composes sections for the homepage
 
-Homepage sections in order:
-1. HeroSection - Main hero with rotating words CTA
+Homepage sections in order (agency-first narrative):
+1. HeroSection - Agency positioning ("Nous accélérons la transformation digitale de votre industrie"), CTA → #contact, trust chips, WiseTrainer video as proof
 2. TrustedBySection - Logo carousel of trusted clients
-3. AdvantagesSection - "Why choose us?" (reactive, traceability, cost-effective, integrable, lightweight)
-4. PricingSection - Product comparison table + Subscription licenses (Essential, Pro, Business)
-5. SecuritySection - SSO, MFA, Audit features
-6. FaqSection - 5 featured questions + link to /faq
-7. ContactSection - Contact form with CSRF
-
-Note: PricingCalculatorSection exists but is currently commented out in home-client.tsx.
+3. ConvictionsSection - Manifesto (4 convictions: sur-mesure, accessible, interopérable, budgets site) — `convictions` namespace
+4. ExpertisesSection (`#expertises`) - 4 expertise domains with capability lists + "doesn't fit a box" CTA — `expertises` namespace
+5. MethodSection (`#methode`) - 4-step timeline (échange gratuit → devis 48h → dev itératif → déploiement) + "start small" banner — `method` namespace
+6. ToolsSection (`#outils`) - WiseTrainer LMS & WiseAtlas cards, framed as products born from recurring needs — `tools` namespace
+7. TeamSection (`#equipe`) - 3 partners (Manoel data/IA/logiciel, Mickaël 3D/simulation, Gauthier conseil) — `team` namespace; photos are `/placeholder.png`, swap for real ones
+8. SecuritySection - SSO, MFA, Audit, ISO 27001
+9. BlogSection - Latest 3 posts (returns null if none)
+10. FaqSection - 5 featured questions + link to /faq
+11. ContactSection (`#contact`) - "Décrivez-nous votre projet" form with CSRF + trust chips (devis gratuit, 48h, sans engagement)
 
 ### Product Pages
 
-4 solution pages under `app/[locale]/solutions/`:
-- `/solutions/wisetrainer` - Flagship 3D simulator (extra sections: Ownership, Sources, Scenarios)
-- `/solutions/wisepaper` - Document digitization (links to app.wisetwin.eu)
-- `/solutions/wisetour` - Photo-realistic 360 tours
-- `/solutions/wiseatlas` - Interactive map (standalone, not part of training platform)
+2 product pages under `app/[locale]/solutions/`:
+- `/solutions/wisetrainer` - Modular training platform (uses `platform` namespace for most content + `pricing` namespace for the modular pricing). Structure: Hero → Advantages → Products showcase (sticky scroll) → ModularPricingSection → Platform features → CTA
+- `/solutions/wiseatlas` - Interactive map (uses `wiseatlas` namespace). Standalone product
 
-All product pages follow a uniform structure:
-1. **Hero** - Badge + title + subtitle + CTA + screenshot in browser frame
-2. **Timeline** ("How it works") - Steps with connecting line + duration badges (desktop: horizontal, mobile: vertical with left line)
-3. **Comparison table** - All 4 products side-by-side, current product highlighted (`bg-secondary/5`), uses `solutions.comparison` translation data
-4. **Use Cases** - Centered icon blocks
-5. **CTA** - Final call to action
-
-WiseTrainer has additional sections: Ownership (after Hero), Sources (after Timeline, before comparison).
-
-There is also a platform page at `/solutions/platform` but it is currently an orphan (not linked from header, footer, or sitemap).
+**WiseTrainer pricing model (modular / minimum viable)**: a low-cost base plan ("socle", from 50€/month per site) including hosting + WisePaper + Safety Tour + completion tracking + unlimited learners; à la carte modules (analytics, planning, SSO/MFA/audit, SCORM/API, guest mode, sharing) activated on demand, "sur devis"; 3D simulators are one-shot custom projects (client owns the 3D asset). Rendered by `components/sections/wisetrainer/modular-pricing-section.tsx`.
 
 ### Section Component
 
-The `Section` component (`components/common/section.tsx`) is the primary layout wrapper. Preferred variants for product pages:
-- `default` - Standard background
-- `muted` - Gray background
-
-Note: `dark` and `gradient` variants exist but are NOT used on product pages (design decision: keep product pages sober). Alternate `default`/`muted` between sections.
-
-### Pricing Logic
-
-- Toggle between "1 an" (1 year) and "3 ans" (3 years) commitment
-- Always display monthly prices with `/mois/admin` suffix
-- 3-year commitment: `Math.round(priceMonthly * 0.8)` for real -20% discount
-- Secondary line shows annual total: `monthlyRate * 12 * adminCount`
-- Product comparison table uses `t.raw()` to get boolean values for checkmark/cross rendering
+The `Section` component (`components/common/section.tsx`) is the primary layout wrapper. Alternate `default`/`muted` variants between sections (design is sober; `dark`/`gradient` variants exist but are not used).
 
 ### Theming System
 
 Theme colors defined in `app/globals.css` using TailwindCSS v4 `@theme` directive:
 - Brand colors: `--color-wisetwin-blue` (#00C7FF), `--color-wisetwin-darkblue` (#0F0B66)
 - Dark mode via `.dark` class (managed by `next-themes` with `defaultTheme="dark"`)
-- Primary maps to brand dark blue (light) / white (dark)
-- Secondary maps to brand dark blue (light) / brand blue cyan (dark)
+- Secondary maps to brand blue cyan and is the accent color used everywhere
 
 ### API Routes
 
-- `POST /api/contact` - Contact form submission (Nodemailer)
+- `POST /api/contact` - Contact form submission (Microsoft Graph API via `lib/mailer.ts`)
 - `GET /api/csrf` - CSRF token generation
+- `app/api/outstatic/` - Outstatic CMS
 
-Contact form in `contact-section.tsx` fetches CSRF token before POST.
+### SEO
+
+- `app/sitemap.ts` + `app/robots.ts` (AI crawlers explicitly allowed) + `public/llms.txt` (llmstxt.org convention — keep in sync with positioning)
+- JSON-LD: Organization/ProfessionalService in `app/[locale]/layout.tsx`, SoftwareApplication + Breadcrumb on product pages, FAQPage on /faq
+- Per-page `generateMetadata` with localized keywords
 
 ## Project Structure
 
 ```
 app/[locale]/                    # Localized routes (fr, en)
 ├── page.tsx                     # Homepage
-├── faq/page.tsx                 # Full FAQ with search
+├── faq/page.tsx                 # Full FAQ with search (keys in data/faq-keys.ts)
+├── blog/                        # Blog (Outstatic)
 ├── solutions/
-│   ├── wisetrainer/page.tsx     # WiseTrainer product page
-│   ├── wisepaper/page.tsx       # WisePaper product page
-│   ├── wisetour/page.tsx        # WiseTour product page
-│   ├── wiseatlas/page.tsx       # WiseAtlas product page
-│   └── platform/page.tsx        # Platform page (orphan, not linked)
-messages/                        # Translation files
-├── fr.json
-└── en.json
+│   ├── wisetrainer/page.tsx     # WiseTrainer LMS product page
+│   └── wiseatlas/page.tsx       # WiseAtlas product page
+messages/                        # Translation files (fr.json, en.json)
 i18n/                            # i18n configuration
-data/                            # Static data (faq.ts)
+data/faq-keys.ts                 # FAQ keys + categories (general, services, pricing, technical)
 components/
-├── pages/                       # Page orchestrators (home-client.tsx)
-├── sections/                    # Homepage sections (8 active + 1 commented)
+├── pages/                       # Page orchestrators (home-client, wisetrainer-client, wiseatlas-client, faq-client, blog-*)
+├── sections/home/               # Homepage sections
+├── sections/wisetrainer/        # advantages-section, modular-pricing-section
 ├── common/                      # Reusable wrappers (Section)
-├── layout/                      # Header, Footer, DevBanner
+├── layout/                      # Header (nav: Nos outils dropdown, Savoir-faire, Méthode, Blog, FAQ + login + Devis gratuit CTA), Footer
 ├── ui/                          # shadcn/ui + custom (language-switcher, theme-image, logo)
-└── providers/                   # Theme provider
+└── seo/json-ld.tsx              # JSON-LD helper
 ```
 
 ### Translation Structure
 
 Top-level namespaces in `messages/*.json`:
+- `metadata` - Per-page SEO metadata
 - `common`, `nav`, `hero` - Shared UI strings
-- `trustedBy` - Client logos section
-- `advantages` - Why choose us section (5 items)
-- `solutions` - Product titles, descriptions, and **comparison table data** (`comparison.labels`, `comparison.values`)
-- `pricing` - Subscription tiers (Essential/Pro/Business), product cards, calculator
-- `wisetrainerPricing` - WiseTrainer development pricing (used in FAQ)
-- `security`, `faq`, `contact`, `footer` - Other sections
-- `wisetrainer`, `wisepaper`, `wisetour`, `wiseatlas` - Product page content (hero, timeline steps with durations, use cases, CTA)
-- `platform` - Platform page content (features, wisepaper features, hub, security)
+- `convictions`, `expertises`, `method`, `tools`, `team` - Agency homepage sections
+- `security`, `faq`, `contact`, `footer`, `blog` - Other sections
+- `platform` - WiseTrainer page content (hero, products showcase, features, cta)
+- `pricing` - WiseTrainer modular pricing (core plan, modules, simulators)
+- `advantages` - WiseTrainer advantages section
+- `wisetrainer` - Slim (title only, used in page metadata)
+- `wiseatlas` - WiseAtlas page content
 
 ## Conventions
 
@@ -158,7 +139,7 @@ Top-level namespaces in `messages/*.json`:
 - Mark components `"use client"` only when interactivity is needed
 - Use Next.js `Image` component for all images
 - Use `cn()` from `lib/utils` for className merging
-- Keep product pages sober: no colored icons, no `dark` variant, alternate `default`/`muted`
-- Vary presentation between sections (timeline, icon+text rows, centered blocks, comparison table)
+- Keep the design sober: no colored icons beyond the secondary accent, alternate `default`/`muted` sections
 - **Do NOT run `npm run build` after completing tasks** - the user will handle builds manually
 - **Always keep fr.json and en.json in sync** - same keys, same structure
+- JSON files use **tabs** for indentation

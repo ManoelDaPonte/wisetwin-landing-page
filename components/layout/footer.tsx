@@ -10,16 +10,16 @@ export function Footer() {
 	const currentYear = new Date().getFullYear();
 
 	const navLinks = [
-		{ label: t("nav.solutions"), href: "/#solutions" },
-		{ label: t("nav.security"), href: "/#security" },
+		{ label: t("nav.expertise"), href: "/#expertises" },
+		{ label: t("nav.method"), href: "/#methode" },
+		{ label: t("nav.team"), href: "/#equipe" },
 		{ label: t("nav.blog"), href: "/blog" },
 		{ label: t("nav.faq"), href: "/faq" },
-		{ label: t("nav.contact"), href: "/#contact" },
 	];
 
-	const solutionLinks = [
-		{ label: t("solutions.formation.title"), href: "/solutions/wisetrainer" },
-		{ label: t("wiseatlas.title"), href: "/solutions/wiseatlas" },
+	const toolLinks = [
+		{ label: t("tools.wisetrainer.title"), href: "/solutions/wisetrainer" },
+		{ label: t("tools.wiseatlas.title"), href: "/solutions/wiseatlas" },
 	];
 
 	const legalLinks = [
@@ -76,9 +76,9 @@ export function Footer() {
 					</div>
 
 					<div>
-						<h4 className="font-medium text-sm mb-4">{t("footer.solutions")}</h4>
+						<h4 className="font-medium text-sm mb-4">{t("footer.tools")}</h4>
 						<ul className="space-y-3">
-							{solutionLinks.map((link, idx) => (
+							{toolLinks.map((link, idx) => (
 								<li key={idx}>
 									<Link
 										href={link.href}
@@ -101,6 +101,14 @@ export function Footer() {
 								>
 									contact@wisetwin.eu
 								</a>
+							</li>
+							<li>
+								<Link
+									href="/#contact"
+									className="text-sm font-medium text-secondary hover:underline underline-offset-4"
+								>
+									{t("footer.quote")}
+								</Link>
 							</li>
 						</ul>
 					</div>

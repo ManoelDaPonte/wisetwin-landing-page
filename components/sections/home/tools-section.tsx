@@ -5,26 +5,26 @@ import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/common/section";
 import { ArrowRight, GraduationCap, Map } from "lucide-react";
 
-const hubs = [
+const tools = [
 	{
-		key: "formation",
+		key: "wisetrainer",
 		href: "/solutions/wisetrainer",
 		icon: GraduationCap,
 	},
 	{
-		key: "communication",
+		key: "wiseatlas",
 		href: "/solutions/wiseatlas",
 		icon: Map,
 	},
 ] as const;
 
-export function SolutionsSection() {
-	const t = useTranslations("solutions");
+export function ToolsSection() {
+	const t = useTranslations("tools");
 
 	return (
 		<Section
-			id="solutions"
-			variant="default"
+			id="outils"
+			variant="muted"
 			header={{
 				title: t("title"),
 				description: t("subtitle"),
@@ -32,12 +32,12 @@ export function SolutionsSection() {
 			}}
 		>
 			<div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
-				{hubs.map((hub) => {
-					const Icon = hub.icon;
+				{tools.map((tool) => {
+					const Icon = tool.icon;
 					return (
 						<Link
-							key={hub.key}
-							href={hub.href}
+							key={tool.key}
+							href={tool.href}
 							className="group relative bg-card border border-border rounded-2xl p-8 transition-all hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/5 flex flex-col overflow-hidden"
 						>
 							<div className="absolute inset-x-0 top-0 h-1 bg-secondary scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
@@ -49,19 +49,24 @@ export function SolutionsSection() {
 							</div>
 
 							<p className="text-xs font-mono uppercase tracking-wider text-secondary mb-2">
-								{t(`${hub.key}.tag`)}
+								{t(`${tool.key}.tag`)}
 							</p>
 							<h3 className="font-bold text-2xl mb-3">
-								{t(`${hub.key}.title`)}
+								{t(`${tool.key}.title`)}
 							</h3>
 							<p className="text-muted-foreground leading-relaxed mb-6 flex-1">
-								{t(`${hub.key}.description`)}
+								{t(`${tool.key}.description`)}
 							</p>
 
-							<span className="inline-flex items-center gap-2 text-sm font-semibold text-secondary group-hover:underline underline-offset-4 mt-auto">
-								{t("cta")}
-								<ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
-							</span>
+							<div className="flex items-center justify-between mt-auto">
+								<span className="inline-flex items-center gap-2 text-sm font-semibold text-secondary group-hover:underline underline-offset-4">
+									{t("cta")}
+									<ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
+								</span>
+								<span className="text-sm font-medium text-muted-foreground">
+									{t(`${tool.key}.price`)}
+								</span>
+							</div>
 						</Link>
 					);
 				})}

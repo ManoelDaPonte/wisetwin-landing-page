@@ -35,7 +35,7 @@ export async function generateMetadata({
 				];
 
 	return {
-		title: `${t("title")} - WiseTwin`,
+		title: t("title"),
 		description: tMeta("description"),
 		keywords,
 		openGraph: {

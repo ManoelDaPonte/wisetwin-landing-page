@@ -15,7 +15,7 @@ import { Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { allFaqKeys } from "@/data/faq-keys";
 
-type Category = "all" | "general" | "features" | "pricing" | "technical";
+type Category = "all" | "general" | "services" | "pricing" | "technical";
 
 export default function FaqClient() {
 	const t = useTranslations("faq");
@@ -25,7 +25,7 @@ export default function FaqClient() {
 	const categories: Category[] = [
 		"all",
 		"general",
-		"features",
+		"services",
 		"pricing",
 		"technical",
 	];

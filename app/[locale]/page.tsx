@@ -17,24 +17,28 @@ export async function generateMetadata({
 	const keywords =
 		locale === "fr"
 			? [
-					"jumeau numérique",
-					"formation industrielle",
-					"simulateur 3D",
-					"réalité virtuelle",
-					"industrie 4.0",
+					"conseil transformation digitale industrie",
+					"développement logiciel industriel sur mesure",
+					"digitalisation formation industrielle",
 					"formation immersive",
-					"formation sécurité",
-					"digitalisation industrielle",
+					"simulateur 3D",
+					"jumeau numérique",
+					"prévention HSE",
+					"excellence opérationnelle",
+					"application métier sur mesure",
+					"intelligence artificielle industrie",
 				]
 			: [
-					"digital twin",
-					"industrial training",
-					"3D simulator",
-					"virtual reality",
-					"industry 4.0",
+					"industrial digital transformation consulting",
+					"custom industrial software development",
+					"industrial training digitization",
 					"immersive training",
-					"safety training",
-					"industrial digitization",
+					"3D simulator",
+					"digital twin",
+					"HSE prevention",
+					"operational excellence",
+					"custom business applications",
+					"AI for industry",
 				];
 
 	return {

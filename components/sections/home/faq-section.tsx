@@ -14,11 +14,11 @@ import { ArrowRight } from "lucide-react";
 
 // Les 5 questions principales pour la homepage
 const featuredFaqKeys = [
-	"whatIsWisetwin",
-	"howHelps",
-	"deploymentTime",
+	"whoIsWisetwin",
+	"whatDoYouDo",
+	"smallProjects",
+	"quote",
 	"pricingModel",
-	"security",
 ];
 
 export function FaqSection() {

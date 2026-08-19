@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
 import Image from "next/image";
 import { ParallaxImage } from "@/components/ui/parallax-image";
-import { AdvantagesSection, PricingSection } from "@/components/sections";
+import { AdvantagesSection, ModularPricingSection } from "@/components/sections";
 
 const productMedia = [
 	{ type: "video", src: "/video/capture-3dgs-entrepot.mp4", fit: "cover" },
@@ -324,7 +324,7 @@ export default function WiseTrainerClient() {
 			</div>
 
 			{/* Pricing */}
-			<PricingSection />
+			<ModularPricingSection />
 
 			{/* Platform Features */}
 			<Section
