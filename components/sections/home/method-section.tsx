@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/common/section";
+import { Reveal } from "@/components/ui/reveal";
 import { Sprout } from "lucide-react";
 
 const steps = [
@@ -17,7 +18,7 @@ export function MethodSection() {
 	return (
 		<Section
 			id="methode"
-			variant="default"
+			variant="muted"
 			header={{
 				eyebrow: t("eyebrow"),
 				title: t("title"),
@@ -33,9 +34,10 @@ export function MethodSection() {
 						<div className="absolute top-[22px] left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-secondary/60 via-secondary to-secondary/60 rounded-full" />
 
 						<div className="grid grid-cols-4 gap-8">
-							{steps.map((step) => (
-								<div
+							{steps.map((step, i) => (
+								<Reveal
 									key={step.key}
+									delay={i * 0.12}
 									className="relative flex flex-col items-center text-center"
 								>
 									<div className="relative z-10 size-12 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center font-bold text-lg shadow-md shadow-secondary/20">
@@ -52,7 +54,7 @@ export function MethodSection() {
 									<p className="text-sm text-muted-foreground leading-relaxed">
 										{t(`steps.${step.key}.description`)}
 									</p>
-								</div>
+								</Reveal>
 							))}
 						</div>
 					</div>
@@ -89,6 +91,7 @@ export function MethodSection() {
 				</div>
 
 				{/* Start small banner */}
+				<Reveal delay={0.2}>
 				<div className="mt-12 rounded-2xl border border-secondary/20 bg-gradient-to-r from-secondary/5 via-secondary/10 to-secondary/5 p-6 md:p-8">
 					<div className="flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
 						<div className="size-14 bg-secondary/15 rounded-xl flex items-center justify-center shrink-0">
@@ -104,6 +107,7 @@ export function MethodSection() {
 						</div>
 					</div>
 				</div>
+				</Reveal>
 			</div>
 		</Section>
 	);

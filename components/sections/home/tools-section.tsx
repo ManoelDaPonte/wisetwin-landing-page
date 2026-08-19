@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Section } from "@/components/common/section";
+import { Reveal } from "@/components/ui/reveal";
 import { ArrowRight } from "lucide-react";
 
 const tools = [
@@ -25,7 +26,7 @@ export function ToolsSection() {
 	return (
 		<Section
 			id="outils"
-			variant="muted"
+			variant="default"
 			header={{
 				eyebrow: t("eyebrow"),
 				title: t("title"),
@@ -34,11 +35,11 @@ export function ToolsSection() {
 			}}
 		>
 			<div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-				{tools.map((tool) => (
+				{tools.map((tool, i) => (
+					<Reveal key={tool.key} delay={i * 0.12} className="h-full">
 					<Link
-						key={tool.key}
 						href={tool.href}
-						className="group relative bg-card border border-border rounded-2xl transition-all hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/5 flex flex-col overflow-hidden"
+						className="group relative h-full bg-card border border-border rounded-2xl transition-all duration-300 hover:border-secondary/50 hover:shadow-xl hover:shadow-secondary/10 hover:-translate-y-1.5 flex flex-col overflow-hidden"
 					>
 						<div className="absolute inset-x-0 top-0 h-1 bg-secondary scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 z-10" />
 
@@ -75,6 +76,7 @@ export function ToolsSection() {
 							</div>
 						</div>
 					</Link>
+					</Reveal>
 				))}
 			</div>
 		</Section>

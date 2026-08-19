@@ -2,7 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/common/section";
-import { Quote, MapPin } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
+import { Quote } from "lucide-react";
 
 export function TestimonialsSection() {
 	const t = useTranslations("testimonials");
@@ -24,13 +25,10 @@ export function TestimonialsSection() {
 				centered: true,
 			}}
 		>
-			<div className="max-w-5xl mx-auto">
-				<div className="grid md:grid-cols-3 gap-6">
-					{items.map((item, i) => (
-						<figure
-							key={i}
-							className="bg-card border border-border rounded-2xl p-7 flex flex-col hover:border-secondary/30 transition-colors"
-						>
+			<div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+				{items.map((item, i) => (
+					<Reveal key={i} delay={i * 0.1} className="h-full">
+						<figure className="h-full bg-card border border-border rounded-2xl p-7 flex flex-col hover:border-secondary/30 hover:-translate-y-1 transition-all duration-300">
 							<Quote className="size-7 text-secondary/40 mb-4" aria-hidden />
 							<blockquote className="text-[15px] leading-relaxed flex-1">
 								{item.quote}
@@ -42,25 +40,8 @@ export function TestimonialsSection() {
 								</p>
 							</figcaption>
 						</figure>
-					))}
-				</div>
-
-				{/* Ancrage Dunkerque */}
-				<div className="mt-8 rounded-2xl border border-secondary/20 bg-gradient-to-r from-secondary/5 via-secondary/10 to-secondary/5 p-6 md:p-8">
-					<div className="flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
-						<div className="size-14 bg-secondary/15 rounded-xl flex items-center justify-center shrink-0">
-							<MapPin className="size-7 text-secondary" />
-						</div>
-						<div>
-							<h3 className="font-semibold text-lg mb-1">
-								{t("local.title")}
-							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed">
-								{t("local.description")}
-							</p>
-						</div>
-					</div>
-				</div>
+					</Reveal>
+				))}
 			</div>
 		</Section>
 	);

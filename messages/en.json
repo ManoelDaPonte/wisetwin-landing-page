@@ -57,7 +57,7 @@
 		"badge": "Consulting & development of digital solutions for industry",
 		"titlePrefix": "We accelerate the\ndigital transformation",
 		"titleHighlight": "of your industry",
-		"subtitle": "WiseTwin is three industry insiders designing tailor-made digital tools — training, HSE, 3D, data & AI — fast to deploy, built for your teams and your budget.",
+		"subtitle": "Three industry insiders, tailor-made tools — training, HSE, 3D, data & AI — built for your teams, your sites and your budgets.",
 		"cta": "Tell us about your project",
 		"ctaSecondary": "Our expertise",
 		"chips": [
@@ -68,6 +68,29 @@
 		"videoCaption": "WiseTrainer, our training simulator — designed and built in-house",
 		"videoLink": "Discover the tool"
 	},
+	"stats": {
+		"items": [
+			{
+				"value": "3",
+				"label": "industrial partners, one single point of contact"
+			},
+			{
+				"value": "48",
+				"suffix": "h",
+				"label": "to receive your free quote"
+			},
+			{
+				"value": "25",
+				"suffix": "+",
+				"label": "areas of expertise, from diagnosis to delivered tool"
+			},
+			{
+				"value": "100",
+				"suffix": "%",
+				"label": "web-based, interoperable, no lock-in"
+			}
+		]
+	},
 	"convictions": {
 		"eyebrow": "Manifesto",
 		"title": "What we believe",
@@ -75,29 +98,30 @@
 		"items": {
 			"tailored": {
 				"title": "Tailor-made, without disrupting daily work",
-				"description": "Good tools fit your processes and your teams — not the other way around. We design solutions that slot into real work instead of imposing a new way of working."
+				"description": "Good tools fit your processes and your teams — not the other way around. They slot into real work, without imposing a new way of working."
 			},
 			"accessible": {
 				"title": "Digital must be accessible",
-				"description": "Accessible in price and in design time alike. Fast, tailor-made answers sized on the needs actually identified — not on an inflated specification."
+				"description": "Accessible in price and in lead time alike. Fast answers, sized on the needs actually identified in the field."
 			},
 			"interoperable": {
 				"title": "Interoperable and multi-platform",
-				"description": "Our solutions connect to what you already have — LMS, IT systems, business tools — and run everywhere: browser, mobile, tablet, VR. No lock-in."
+				"description": "Our solutions connect to what you already have — LMS, IT systems, business tools — and run everywhere. No lock-in."
 			},
 			"local": {
 				"title": "Budgets sized for single sites",
-				"description": "The best ideas often come from the shop floor. Our offers are sized for a single site's budget, without waiting for a central decision."
+				"description": "The best ideas come from the shop floor. Our offers fit a single site's budget, without waiting for a central decision."
 			}
 		}
 	},
 	"expertises": {
 		"eyebrow": "What we do",
 		"title": "Our expertise",
-		"subtitle": "Everything we develop and support for industry — from diagnosis to delivered tool.",
+		"subtitle": "From diagnosis to delivered tool — explore our four playing fields.",
 		"domains": {
 			"training": {
 				"title": "Training & HSE",
+				"hook": "Train without stopping production, track without paperwork.",
 				"items": [
 					"Training digitization",
 					"Virtual & VR training",
@@ -111,6 +135,7 @@
 			},
 			"immersive": {
 				"title": "3D, immersive & video",
+				"hook": "Show your facilities better than reality — even the ones that don't exist yet.",
 				"items": [
 					"Virtual tours",
 					"Layout & flow simulation",
@@ -121,6 +146,7 @@
 			},
 			"software": {
 				"title": "Data, AI & software",
+				"hook": "Your data and your processes, turned into everyday tools.",
 				"items": [
 					"Custom applications",
 					"Websites",
@@ -134,6 +160,7 @@
 			},
 			"consulting": {
 				"title": "Consulting & organization",
+				"hook": "A clear diagnosis, an actionable roadmap — and we stay to implement it.",
 				"items": [
 					"Transformation diagnosis",
 					"Industrial performance",
@@ -149,7 +176,7 @@
 	"method": {
 		"eyebrow": "How we work",
 		"title": "Our method",
-		"subtitle": "Short projects, fast deliverables, and trust that builds before going bigger.",
+		"subtitle": "Short projects. Fast deliverables. Trust above all.",
 		"steps": {
 			"listen": {
 				"title": "Discussion & diagnosis",
@@ -180,7 +207,7 @@
 	"tools": {
 		"eyebrow": "Our products",
 		"title": "Our tools, born in the field",
-		"subtitle": "After meeting the same needs again and again with our clients, we turned them into products. Proven in real conditions — and far more affordable than on-demand development.",
+		"subtitle": "The same needs kept coming back with our clients: we turned them into products, proven in real conditions.",
 		"wisetrainer": {
 			"tag": "Training",
 			"title": "WiseTrainer LMS",
@@ -195,10 +222,31 @@
 		},
 		"cta": "Discover"
 	},
+	"territory": {
+		"eyebrow": "Our territory",
+		"title": "Rooted in Dunkerque.",
+		"description": "We were born at the heart of one of France's largest industrial basins — where industry is decarbonizing, hiring and transforming. It's our playing field, and our school.",
+		"facts": [
+			{
+				"value": "Dunkerque",
+				"label": "At the heart of one of France's largest industrial basins"
+			},
+			{
+				"value": "EcosystèmeD",
+				"label": "Our base camp, alongside the players of industrial transformation"
+			},
+			{
+				"value": "France & Europe",
+				"label": "We work on your sites, wherever they are"
+			}
+		],
+		"ambitionLabel": "Our ambition:",
+		"ambition": "to make digital a reflex of everyday industrial life — accessible to every site, every team, every budget."
+	},
 	"testimonials": {
 		"eyebrow": "They trust us",
 		"title": "What they say about us",
-		"subtitle": "Concrete projects, delivered alongside industrial companies from the Dunkerque basin and beyond.",
+		"subtitle": "Concrete projects, from the Dunkerque basin and beyond.",
 		"items": [
 			{
 				"quote": "Our safety induction was digitized in a few weeks. Temporary workers are operational from day one, and tracking is finally traceable.",
@@ -215,16 +263,12 @@
 				"author": "Training Manager",
 				"context": "Production site, France"
 			}
-		],
-		"local": {
-			"title": "Rooted in Dunkerque, at the heart of industry",
-			"description": "We are based at EcosystèmeD, in one of France's largest industrial basins. We work daily alongside the territory's industrial companies — and we travel to your sites across France and Europe."
-		}
+		]
 	},
 	"team": {
 		"eyebrow": "Who we are",
 		"title": "The team",
-		"subtitle": "Three complementary partners. The people you meet at the first meeting are the ones who deliver your project.",
+		"subtitle": "The people you meet at the first meeting are the ones who deliver.",
 		"members": {
 			"manoel": {
 				"name": "Manoel",

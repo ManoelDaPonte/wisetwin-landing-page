@@ -53,20 +53,25 @@ Key files:
 Pages are composed via client orchestrators in `components/pages/`:
 - `home-client.tsx` composes sections for the homepage
 
-Homepage sections in order (agency-first narrative, strict `default`/`muted` alternation):
-1. HeroSection - Agency positioning ("Nous accélérons la transformation digitale de votre industrie"), CTA → #contact, trust chips, WiseTrainer video in a browser frame (poster: `/image/wisetrainer-hero-poster.jpg`)
+Homepage sections in order (agency-first narrative):
+1. HeroSection - XXL headline with staggered entrance animation, CTA → #contact, trust chips, WiseTrainer video in a browser frame (poster: `/image/wisetrainer-hero-poster.jpg`)
 2. TrustedBySection - Logo carousel of trusted clients
-3. ConvictionsSection - Editorial manifesto layout (sticky title left, 4 numbered convictions right) — `convictions` namespace
-4. ExpertisesSection (`#expertises`, muted) - 4 expertise domains with capability lists + "doesn't fit a box" CTA — `expertises` namespace
-5. MethodSection (`#methode`) - 4-step timeline (échange gratuit → devis 48h → dev itératif → déploiement) + "start small" banner — `method` namespace
-6. ToolsSection (`#outils`, muted) - WiseTrainer LMS & WiseAtlas cards with product screenshots, framed as products born from recurring needs — `tools` namespace
-7. TestimonialsSection (`#temoignages`) - 3 client quotes (PLACEHOLDER quotes, anonymized roles — replace with real ones) + "Ancrés à Dunkerque" banner — `testimonials` namespace
-8. TeamSection (`#equipe`, muted) - 3 partners (Manoel data/IA/logiciel, Mickaël 3D/simulation, Gauthier conseil) — `team` namespace; photos are `/placeholder.png`, swap for real ones
-9. BlogSection - Latest 3 posts (returns null if none)
-10. FaqSection (muted) - 5 featured questions (prestation/conseil-oriented) + link to /faq
-11. ContactSection (`#contact`) - "Décrivez-nous votre projet" form with CSRF + trust chips (devis gratuit, 48h, sans engagement)
+3. StatsSection - 4 animated counters (3 associés / 48h / 25+ savoir-faire / 100% web) — `stats` namespace, CountUp component
+4. ConvictionsSection (muted) - Editorial manifesto layout (sticky title left, 4 numbered convictions right) — `convictions` namespace
+5. ExpertisesSection (`#expertises`) - capability marquee (2 opposite-direction rows) + interactive domain explorer (hover/click a domain → animated panel with hook + capability pills; static stacked blocks on mobile) — `expertises` namespace
+6. MethodSection (`#methode`, muted) - 4-step timeline + "start small" banner — `method` namespace
+7. ToolsSection (`#outils`) - WiseTrainer LMS & WiseAtlas cards with product screenshots — `tools` namespace
+8. TerritorySection (`#territoire`) - full-bleed dark section over the WiseAtlas aerial view of the Dunkerque basin: "Ancrés à Dunkerque.", 3 facts, ambition statement — `territory` namespace (fixed white text, works in both themes)
+9. TestimonialsSection (`#temoignages`) - 3 client quotes (PLACEHOLDER quotes, anonymized roles — replace with real ones) — `testimonials` namespace
+10. TeamSection (`#equipe`, muted) - 3 partners; photos are `/placeholder.png`, swap for real ones — `team` namespace
+11. BlogSection - Latest 3 posts (returns null if none)
+12. FaqSection (muted) - 5 featured questions (prestation/conseil-oriented) + link to /faq
+13. ContactSection (`#contact`) - "Décrivez-nous votre projet" form with CSRF + trust chips
 
-Note: SecuritySection (SSO/MFA/audit/ISO) is platform-specific and lives on the WiseTrainer page, NOT on the homepage. Section headers support an `eyebrow` (small uppercase mono label) via the Section component.
+Notes:
+- SecuritySection (SSO/MFA/audit/ISO) is platform-specific and lives on the WiseTrainer page, NOT on the homepage.
+- Motion primitives: `components/ui/reveal.tsx` (scroll-reveal wrapper, honors prefers-reduced-motion; Section headers auto-reveal) and `components/ui/count-up.tsx`. Marquee keyframes in globals.css (`animate-marquee`, `animate-marquee-slow`, reverse via `[animation-direction:reverse]`).
+- Section component: `py-20 md:py-28`, headers support `eyebrow` (small uppercase mono label).
 
 ### Product Pages
 
@@ -127,7 +132,7 @@ components/
 Top-level namespaces in `messages/*.json`:
 - `metadata` - Per-page SEO metadata
 - `common`, `nav`, `hero` - Shared UI strings
-- `convictions`, `expertises`, `method`, `tools`, `testimonials`, `team` - Agency homepage sections
+- `stats`, `convictions`, `expertises`, `method`, `tools`, `territory`, `testimonials`, `team` - Agency homepage sections
 - `security`, `faq`, `contact`, `footer`, `blog` - Other sections
 - `platform` - WiseTrainer page content (hero, products showcase, features, cta)
 - `pricing` - WiseTrainer modular pricing (core plan, modules, simulators)

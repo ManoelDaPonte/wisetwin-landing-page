@@ -3,10 +3,12 @@
 import {
 	HeroSection,
 	TrustedBySection,
+	StatsSection,
 	ConvictionsSection,
 	ExpertisesSection,
 	MethodSection,
 	ToolsSection,
+	TerritorySection,
 	TestimonialsSection,
 	TeamSection,
 	BlogSection,
@@ -28,10 +30,12 @@ export default function HomeClient({ latestPosts }: { latestPosts: Post[] }) {
 		<>
 			<HeroSection />
 			<TrustedBySection />
+			<StatsSection />
 			<ConvictionsSection />
 			<ExpertisesSection />
 			<MethodSection />
 			<ToolsSection />
+			<TerritorySection />
 			<TestimonialsSection />
 			<TeamSection />
 			<BlogSection posts={latestPosts} />

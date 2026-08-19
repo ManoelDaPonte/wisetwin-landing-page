@@ -2,6 +2,7 @@
 "use client";
 import React from "react";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/ui/reveal";
 
 type SectionVariant = "default" | "muted" | "gradient" | "dark" | "accent";
 type SectionHeader = {
@@ -48,7 +49,7 @@ export function Section({
 			id={id}
 			className={cn(
 				variantStyles[variant],
-				"py-16 md:py-20",
+				"py-20 md:py-28",
 				"relative",
 				className
 			)}
@@ -96,9 +97,9 @@ export function Section({
 				)}
 			>
 				{header && (
-					<div
+					<Reveal
 						className={cn(
-							"mb-12",
+							"mb-12 md:mb-16",
 							header.centered ? "text-center" : ""
 						)}
 					>
@@ -109,7 +110,7 @@ export function Section({
 						)}
 						<h2
 							className={cn(
-								"text-3xl font-bold mb-4",
+								"text-3xl md:text-4xl font-bold tracking-tight mb-4",
 								header.highlight
 									? "text-secondary"
 									: "",
@@ -133,7 +134,7 @@ export function Section({
 								{header.description}
 							</p>
 						)}
-					</div>
+					</Reveal>
 				)}
 				<div className="relative">{children}</div>
 			</div>

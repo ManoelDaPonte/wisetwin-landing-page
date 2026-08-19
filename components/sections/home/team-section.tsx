@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Section } from "@/components/common/section";
+import { Reveal } from "@/components/ui/reveal";
 
 // Remplacer /placeholder.png par les vraies photos (ex. /image/team/manoel.jpg)
 const members = [
@@ -26,19 +27,17 @@ export function TeamSection() {
 			}}
 		>
 			<div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-				{members.map((member) => {
+				{members.map((member, i) => {
 					const skills = t.raw(`members.${member.key}.skills`) as string[];
 					return (
-						<div
-							key={member.key}
-							className="bg-card border border-border rounded-2xl overflow-hidden flex flex-col hover:border-secondary/30 transition-colors"
-						>
-							<div className="relative aspect-[4/3] bg-muted">
+						<Reveal key={member.key} delay={i * 0.1} className="h-full">
+						<div className="group h-full bg-card border border-border rounded-2xl overflow-hidden flex flex-col hover:border-secondary/30 hover:-translate-y-1 transition-all duration-300">
+							<div className="relative aspect-[4/3] bg-muted overflow-hidden">
 								<Image
 									src={member.photo}
 									alt={t(`members.${member.key}.name`)}
 									fill
-									className="object-cover"
+									className="object-cover group-hover:scale-105 transition-transform duration-500"
 									sizes="(max-width: 768px) 100vw, 33vw"
 								/>
 							</div>
@@ -53,9 +52,9 @@ export function TeamSection() {
 									{t(`members.${member.key}.bio`)}
 								</p>
 								<div className="flex flex-wrap gap-1.5">
-									{skills.map((skill, i) => (
+									{skills.map((skill, j) => (
 										<span
-											key={i}
+											key={j}
 											className="text-xs font-medium bg-secondary/10 text-secondary border border-secondary/20 px-2.5 py-1 rounded-full"
 										>
 											{skill}
@@ -64,6 +63,7 @@ export function TeamSection() {
 								</div>
 							</div>
 						</div>
+						</Reveal>
 					);
 				})}
 			</div>

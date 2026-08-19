@@ -1,15 +1,34 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { motion, useReducedMotion } from "framer-motion";
 import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pattern";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 
+const EASE = [0.21, 0.47, 0.32, 0.98] as const;
+
 export function HeroSection() {
 	const t = useTranslations("hero");
+	const reduceMotion = useReducedMotion();
 	const chips = t.raw("chips") as string[];
+
+	const container = {
+		hidden: {},
+		show: { transition: { staggerChildren: 0.1 } },
+	};
+	const item = reduceMotion
+		? { hidden: { opacity: 1, y: 0 }, show: { opacity: 1, y: 0 } }
+		: {
+				hidden: { opacity: 0, y: 28 },
+				show: {
+					opacity: 1,
+					y: 0,
+					transition: { duration: 0.8, ease: EASE },
+				},
+			};
 
 	return (
 		<div className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/30">
@@ -24,35 +43,50 @@ export function HeroSection() {
 			/>
 
 			<div className="container mx-auto px-6 sm:px-8 md:px-4 max-w-7xl relative z-10 pointer-events-none">
-				<div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[calc(100vh-120px)] py-12 sm:py-16 lg:py-20">
-					<div className="flex flex-col justify-center space-y-6 lg:space-y-8">
-						<div className="space-y-6">
-							<span className="inline-flex w-fit items-center px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/30 text-xs sm:text-sm font-medium text-secondary">
-								{t("badge")}
-							</span>
+				<div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-[calc(100vh-120px)] py-12 sm:py-16 lg:py-20">
+					<motion.div
+						variants={container}
+						initial="hidden"
+						animate="show"
+						className="flex flex-col justify-center space-y-7 lg:space-y-8"
+					>
+						<motion.span
+							variants={item}
+							className="inline-flex w-fit items-center px-4 py-1.5 rounded-full bg-secondary/10 border border-secondary/30 text-xs sm:text-sm font-medium text-secondary"
+						>
+							{t("badge")}
+						</motion.span>
 
-							<h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-								{t("titlePrefix").split("\n").map((line, i, arr) => (
-									<span key={i}>
-										{line}
-										{i < arr.length - 1 && <br />}
-									</span>
-								))}
-								<br />
-								<span className="text-secondary">
-									{t("titleHighlight")}
+						<motion.h1
+							variants={item}
+							className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.05]"
+						>
+							{t("titlePrefix").split("\n").map((line, i, arr) => (
+								<span key={i}>
+									{line}
+									{i < arr.length - 1 && <br />}
 								</span>
-							</h1>
+							))}
+							<br />
+							<span className="text-secondary">
+								{t("titleHighlight")}
+							</span>
+						</motion.h1>
 
-							<p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-								{t("subtitle")}
-							</p>
-						</div>
+						<motion.p
+							variants={item}
+							className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg"
+						>
+							{t("subtitle")}
+						</motion.p>
 
-						<div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
+						<motion.div
+							variants={item}
+							className="flex flex-col sm:flex-row gap-4 pointer-events-auto"
+						>
 							<Button
 								size="lg"
-								className="px-8 py-4 text-base font-medium"
+								className="h-13 px-8 text-base font-medium"
 								asChild
 							>
 								<a href="#contact">
@@ -63,14 +97,14 @@ export function HeroSection() {
 							<Button
 								size="lg"
 								variant="outline"
-								className="px-8 py-4 text-base font-medium"
+								className="h-13 px-8 text-base font-medium"
 								asChild
 							>
 								<a href="#expertises">{t("ctaSecondary")}</a>
 							</Button>
-						</div>
+						</motion.div>
 
-						<ul className="flex flex-wrap gap-x-6 gap-y-2">
+						<motion.ul variants={item} className="flex flex-wrap gap-x-6 gap-y-2">
 							{chips.map((chip, i) => (
 								<li
 									key={i}
@@ -80,10 +114,15 @@ export function HeroSection() {
 									{chip}
 								</li>
 							))}
-						</ul>
-					</div>
+						</motion.ul>
+					</motion.div>
 
-					<div className="flex flex-col items-center justify-center gap-4 pointer-events-auto">
+					<motion.div
+						initial={reduceMotion ? false : { opacity: 0, scale: 0.96, y: 24 }}
+						animate={{ opacity: 1, scale: 1, y: 0 }}
+						transition={{ duration: 0.9, delay: 0.35, ease: EASE }}
+						className="flex flex-col items-center justify-center gap-4 pointer-events-auto"
+					>
 						<div className="relative w-full max-w-2xl">
 							<div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl transform scale-110" />
 							{/* Browser frame */}
@@ -122,7 +161,7 @@ export function HeroSection() {
 								<ArrowRight className="size-3.5" />
 							</Link>
 						</p>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>

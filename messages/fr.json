@@ -57,7 +57,7 @@
 		"badge": "Conseil & développement de solutions digitales pour l'industrie",
 		"titlePrefix": "Nous accélérons la\ntransformation digitale",
 		"titleHighlight": "de votre industrie",
-		"subtitle": "WiseTwin, ce sont trois industriels qui conçoivent des outils digitaux sur mesure — formation, HSE, 3D, data & IA — rapides à déployer, adaptés à vos équipes et à votre budget.",
+		"subtitle": "Trois industriels, des outils sur mesure — formation, HSE, 3D, data & IA — conçus pour vos équipes, vos sites et vos budgets.",
 		"cta": "Décrivez-nous votre projet",
 		"ctaSecondary": "Nos savoir-faire",
 		"chips": [
@@ -68,6 +68,29 @@
 		"videoCaption": "WiseTrainer, notre simulateur de formation — conçu et développé par nos soins",
 		"videoLink": "Découvrir l'outil"
 	},
+	"stats": {
+		"items": [
+			{
+				"value": "3",
+				"label": "associés industriels, un seul interlocuteur"
+			},
+			{
+				"value": "48",
+				"suffix": "h",
+				"label": "pour recevoir votre devis gratuit"
+			},
+			{
+				"value": "25",
+				"suffix": "+",
+				"label": "savoir-faire, du diagnostic à l'outil livré"
+			},
+			{
+				"value": "100",
+				"suffix": "%",
+				"label": "web, interopérable, sans enfermement"
+			}
+		]
+	},
 	"convictions": {
 		"eyebrow": "Manifeste",
 		"title": "Nous sommes convaincus",
@@ -75,29 +98,30 @@
 		"items": {
 			"tailored": {
 				"title": "Le sur-mesure, sans bouleverser le quotidien",
-				"description": "Les bons outils épousent vos process et vos équipes — pas l'inverse. Nous concevons des solutions qui s'insèrent dans le travail réel, au lieu d'imposer une nouvelle façon de travailler."
+				"description": "Les bons outils épousent vos process et vos équipes — pas l'inverse. Ils s'insèrent dans le travail réel, sans imposer une nouvelle façon de travailler."
 			},
 			"accessible": {
 				"title": "Le digital doit être accessible",
-				"description": "Accessible en prix comme en délais de conception. Des réponses rapides et sur mesure, dimensionnées sur les besoins réellement identifiés — pas sur un cahier des charges gonflé."
+				"description": "Accessible en prix comme en délais. Des réponses rapides, dimensionnées sur les besoins réellement identifiés sur le terrain."
 			},
 			"interoperable": {
 				"title": "Interopérable et multiplateforme",
-				"description": "Nos solutions se connectent à votre existant — LMS, SI, outils métier — et fonctionnent partout : navigateur, mobile, tablette, VR. Aucun enfermement."
+				"description": "Nos solutions se connectent à votre existant — LMS, SI, outils métier — et fonctionnent partout. Aucun enfermement."
 			},
 			"local": {
 				"title": "Des budgets adaptés aux sites",
-				"description": "Les meilleures idées naissent souvent sur le terrain. Nos offres sont dimensionnées pour le budget d'un site, sans attendre une décision centrale."
+				"description": "Les meilleures idées naissent sur le terrain. Nos offres tiennent dans le budget d'un site, sans attendre une décision centrale."
 			}
 		}
 	},
 	"expertises": {
 		"eyebrow": "Ce que nous faisons",
 		"title": "Nos savoir-faire",
-		"subtitle": "Tout ce que nous développons et accompagnons pour l'industrie — du diagnostic à l'outil livré.",
+		"subtitle": "Du diagnostic à l'outil livré — explorez nos quatre terrains de jeu.",
 		"domains": {
 			"training": {
 				"title": "Formation & HSE",
+				"hook": "Former sans arrêter la production, tracer sans paperasse.",
 				"items": [
 					"Digitalisation de formations",
 					"Formation virtuelle & VR",
@@ -111,6 +135,7 @@
 			},
 			"immersive": {
 				"title": "3D, immersif & vidéo",
+				"hook": "Montrer vos installations mieux que le réel — même celles qui n'existent pas encore.",
 				"items": [
 					"Visites virtuelles",
 					"Simulation d'implantations & de flux",
@@ -121,6 +146,7 @@
 			},
 			"software": {
 				"title": "Data, IA & logiciel",
+				"hook": "Vos données et vos process, transformés en outils du quotidien.",
 				"items": [
 					"Applications sur mesure",
 					"Sites internet",
@@ -134,6 +160,7 @@
 			},
 			"consulting": {
 				"title": "Conseil & organisation",
+				"hook": "Un diagnostic clair, une feuille de route actionnable — et on reste pour la mettre en œuvre.",
 				"items": [
 					"Diagnostic de transformation",
 					"Performance industrielle",
@@ -149,7 +176,7 @@
 	"method": {
 		"eyebrow": "Comment nous travaillons",
 		"title": "Notre méthode",
-		"subtitle": "Des projets courts, des livrables rapides, et la confiance qui s'installe avant de voir plus grand.",
+		"subtitle": "Des projets courts. Des livrables rapides. La confiance avant tout.",
 		"steps": {
 			"listen": {
 				"title": "Échange & diagnostic",
@@ -180,7 +207,7 @@
 	"tools": {
 		"eyebrow": "Nos produits",
 		"title": "Nos outils, nés du terrain",
-		"subtitle": "À force de retrouver les mêmes besoins chez nos clients, nous en avons fait des produits. Éprouvés en conditions réelles — et bien plus accessibles que du développement à la demande.",
+		"subtitle": "Les mêmes besoins revenaient chez nos clients : nous en avons fait des produits, éprouvés en conditions réelles.",
 		"wisetrainer": {
 			"tag": "Formation",
 			"title": "WiseTrainer LMS",
@@ -195,10 +222,31 @@
 		},
 		"cta": "Découvrir"
 	},
+	"territory": {
+		"eyebrow": "Notre territoire",
+		"title": "Ancrés à Dunkerque.",
+		"description": "Nous sommes nés au cœur d'un des premiers bassins industriels de France — là où l'industrie se décarbone, recrute et se transforme. C'est notre terrain de jeu, et notre école.",
+		"facts": [
+			{
+				"value": "Dunkerque",
+				"label": "Au cœur d'un des premiers bassins industriels de France"
+			},
+			{
+				"value": "EcosystèmeD",
+				"label": "Notre camp de base, aux côtés des acteurs de la transformation industrielle"
+			},
+			{
+				"value": "France & Europe",
+				"label": "Nous intervenons sur vos sites, où qu'ils soient"
+			}
+		],
+		"ambitionLabel": "Notre ambition :",
+		"ambition": "faire du digital un réflexe du quotidien industriel — accessible à chaque site, chaque équipe, chaque budget."
+	},
 	"testimonials": {
 		"eyebrow": "Ils nous font confiance",
 		"title": "Ce qu'ils disent de nous",
-		"subtitle": "Des projets concrets, menés aux côtés d'industriels du bassin dunkerquois et d'ailleurs.",
+		"subtitle": "Des projets concrets, du bassin dunkerquois et d'ailleurs.",
 		"items": [
 			{
 				"quote": "Notre accueil sécurité a été digitalisé en quelques semaines. Les intérimaires sont opérationnels dès le premier jour, et le suivi est enfin traçable.",
@@ -215,16 +263,12 @@
 				"author": "Responsable formation",
 				"context": "Site de production, France"
 			}
-		],
-		"local": {
-			"title": "Ancrés à Dunkerque, au cœur de l'industrie",
-			"description": "Nous sommes basés au sein d'EcosystèmeD, dans l'un des premiers bassins industriels de France. Nous travaillons au quotidien aux côtés des industriels du territoire — et nous nous déplaçons sur vos sites partout en France et en Europe."
-		}
+		]
 	},
 	"team": {
 		"eyebrow": "Qui nous sommes",
 		"title": "L'équipe",
-		"subtitle": "Trois associés complémentaires. Ceux que vous rencontrez au premier rendez-vous sont ceux qui réalisent votre projet.",
+		"subtitle": "Ceux que vous rencontrez au premier rendez-vous sont ceux qui réalisent.",
 		"members": {
 			"manoel": {
 				"name": "Manoel",
