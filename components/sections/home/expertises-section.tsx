@@ -121,9 +121,11 @@ export function ExpertisesSection() {
 											animate={{ opacity: 1, x: 0 }}
 											exit={{ opacity: 0, x: 12 }}
 											transition={{ duration: 0.35, delay: 0.15 }}
-											className="absolute inset-0 flex flex-col justify-end p-8 xl:p-10"
+											className="absolute inset-y-0 left-0 w-[26rem] xl:w-[30rem] flex flex-col justify-end p-8 xl:p-10"
 										>
-											<div className="w-[26rem] max-w-full">
+											{/* Largeur fixe : le panneau masque/révèle le texte sans le faire
+											    re-wrapper pendant la transition de largeur */}
+											<div>
 												<div className="size-12 rounded-xl bg-secondary text-secondary-foreground flex items-center justify-center mb-5">
 													<Icon className="size-6" />
 												</div>
