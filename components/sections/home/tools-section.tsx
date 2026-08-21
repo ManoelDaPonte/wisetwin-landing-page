@@ -10,18 +10,17 @@ import {
 	Cuboid,
 	FileText,
 	Footprints,
-	Sparkles,
 	Map,
 	LayoutGrid,
 	Lock,
 } from "lucide-react";
 
-// Tous les outils au même niveau, la plateforme en dernier
+// Formations facturées au projet, plateformes à l'année ; la plateforme LMS en dernier.
+// WisePaper est un éditeur inclus dans le LMS (pas de tarif propre).
 const tools = [
 	{ key: "bricks.wisetrainer", icon: Cuboid, href: "/solutions/wisetrainer" },
-	{ key: "bricks.wisepaper", icon: FileText, href: "/solutions/wisepaper" },
 	{ key: "bricks.wisetour", icon: Footprints, href: "/solutions/wisetour" },
-	{ key: "bricks.askai", icon: Sparkles, href: "/solutions/askai", locked: true },
+	{ key: "bricks.wisepaper", icon: FileText, href: "/solutions/wisepaper", locked: true },
 	{ key: "wiseatlas", icon: Map, href: "/solutions/wiseatlas" },
 	{ key: "platform", icon: LayoutGrid, href: "/solutions/plateforme", highlight: true },
 ] as const;
@@ -82,7 +81,7 @@ export function ToolsSection() {
 								<p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
 									{t(`${tool.key}.description`)}
 								</p>
-								<div className="flex items-end justify-between mt-auto">
+								<div className="flex items-end justify-between gap-4 mt-auto">
 									<span className="inline-flex items-center gap-1.5 text-sm font-semibold text-secondary group-hover:underline underline-offset-4">
 										{t("cta")}
 										<ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
@@ -96,11 +95,9 @@ export function ToolsSection() {
 										>
 											{t(`${tool.key}.price`)}
 										</p>
-										{highlight && (
-											<p className="text-xs text-muted-foreground">
-												{t("platform.priceNote")}
-											</p>
-										)}
+										<p className="text-xs text-muted-foreground">
+											{t(`${tool.key}.priceNote`)}
+										</p>
 									</div>
 								</div>
 							</Link>

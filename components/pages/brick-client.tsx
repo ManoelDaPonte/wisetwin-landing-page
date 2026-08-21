@@ -12,18 +12,16 @@ import {
 	Cuboid,
 	FileText,
 	Footprints,
-	Sparkles,
 	LayoutGrid,
 	Lock,
 } from "lucide-react";
 
-export type BrickKey = "wisetrainer" | "wisepaper" | "wisetour" | "askai";
+export type BrickKey = "wisetrainer" | "wisepaper" | "wisetour";
 
 const icons = {
 	wisetrainer: Cuboid,
 	wisepaper: FileText,
 	wisetour: Footprints,
-	askai: Sparkles,
 } as const;
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
@@ -39,7 +37,8 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 	const t = useTranslations("brickPages");
 	const reduceMotion = useReducedMotion();
 	const Icon = icons[brick];
-	const platformOnly = brick === "askai";
+	// WisePaper est un éditeur inclus dans la plateforme LMS ; les autres sont des projets one-shot
+	const platformOnly = brick === "wisepaper";
 
 	const container = {
 		hidden: {},
@@ -93,12 +92,12 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 									{t(`${brick}.price`)}
 								</span>
 							) : (
-								<span className="flex items-baseline gap-1.5">
+								<span className="flex items-baseline gap-2.5 flex-wrap">
 									<span className="text-4xl font-bold tabular-nums">
 										{t(`${brick}.price`)}
 									</span>
 									<span className="text-lg text-muted-foreground">
-										{t("common.perYear")}
+										{t(`${brick}.priceSuffix`)}
 									</span>
 								</span>
 							)}

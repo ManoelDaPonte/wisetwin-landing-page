@@ -51,6 +51,9 @@ export default function TermsPage() {
 					<p>
 						L&apos;acceptation des présentes CGV est un préalable indispensable à la souscription de tout abonnement ou service WiseTwin.
 					</p>
+					<p>
+						Elles s&apos;appliquent aux services par abonnement de WiseTwin : la <strong>plateforme LMS</strong> et la plateforme <strong>WiseAtlas</strong>. Les prestations réalisées sur mesure et facturées au projet (création de formations WiseTrainer ou WiseTour, développements spécifiques, conseil) ne sont pas couvertes par les présentes CGV : elles font l&apos;objet d&apos;un devis et de conditions contractuelles propres à chaque projet.
+					</p>
 
 					<h2>2. Identification du prestataire</h2>
 					<table className="not-prose w-full border-collapse my-6">

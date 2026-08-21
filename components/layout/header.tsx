@@ -12,7 +12,6 @@ import {
 	Cuboid,
 	FileText,
 	Footprints,
-	Sparkles,
 	Map,
 	LayoutGrid,
 	Menu,
@@ -75,12 +74,6 @@ export function Header() {
 			tag: tGlobal("tools.bricks.wisetour.tag"),
 			href: "/solutions/wisetour",
 			icon: Footprints,
-		},
-		{
-			title: tGlobal("tools.bricks.askai.title"),
-			tag: tGlobal("tools.bricks.askai.tag"),
-			href: "/solutions/askai",
-			icon: Sparkles,
 		},
 		{
 			title: tGlobal("tools.wiseatlas.title"),

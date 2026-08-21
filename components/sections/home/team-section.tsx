@@ -5,11 +5,10 @@ import Image from "next/image";
 import { Section } from "@/components/common/section";
 import { Reveal } from "@/components/ui/reveal";
 
-// Remplacer /placeholder.png par les vraies photos (ex. /image/team/manoel.jpg)
 const members = [
-	{ key: "gauthier", photo: "/placeholder.png" },
-	{ key: "manoel", photo: "/placeholder.png" },
-	{ key: "mickael", photo: "/placeholder.png" },
+	{ key: "gauthier", photo: "/image/team/gauthier.jpg" },
+	{ key: "manoel", photo: "/image/team/manoel.jpg" },
+	{ key: "mickael", photo: "/image/team/mickael.jpg" },
 ] as const;
 
 // Repères de plan technique aux coins de la photo

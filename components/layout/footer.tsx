@@ -10,18 +10,16 @@ export function Footer() {
 	const currentYear = new Date().getFullYear();
 
 	const navLinks = [
+		{ label: t("nav.team"), href: "/#equipe" },
 		{ label: t("nav.expertise"), href: "/#expertises" },
 		{ label: t("nav.method"), href: "/#methode" },
-		{ label: t("nav.team"), href: "/#equipe" },
 		{ label: t("nav.blog"), href: "/blog" },
-		{ label: t("nav.faq"), href: "/faq" },
 	];
 
 	const toolLinks = [
 		{ label: t("tools.bricks.wisetrainer.title"), href: "/solutions/wisetrainer" },
-		{ label: t("tools.bricks.wisepaper.title"), href: "/solutions/wisepaper" },
 		{ label: t("tools.bricks.wisetour.title"), href: "/solutions/wisetour" },
-		{ label: t("tools.bricks.askai.title"), href: "/solutions/askai" },
+		{ label: t("tools.bricks.wisepaper.title"), href: "/solutions/wisepaper" },
 		{ label: t("tools.wiseatlas.title"), href: "/solutions/wiseatlas" },
 		{ label: t("tools.platform.title"), href: "/solutions/plateforme" },
 	];

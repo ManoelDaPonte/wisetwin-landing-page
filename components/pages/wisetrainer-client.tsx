@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import {
 	Plus,
-	HelpCircle,
 	PenLine,
 	BarChart3,
 	Route,
@@ -16,6 +15,7 @@ import {
 	Clock,
 	Workflow,
 	MousePointerClick,
+	Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
@@ -275,6 +275,7 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 // La sécurité a sa propre section (SecuritySection) juste en dessous — pas de doublon ici
 const featureGroups = [
 	{ key: "contentManagement", icon: PenLine },
+	{ key: "askai", icon: Sparkles },
 	{ key: "tracking", icon: BarChart3 },
 	{ key: "planning", icon: Route },
 	{ key: "collaboration", icon: Users },
@@ -311,11 +312,11 @@ export default function WiseTrainerClient() {
 				</div>
 			</section>
 
+			{/* Products - immersive scroll showcase, juste après le hero */}
+			<ProductsShowcase t={t} />
+
 			{/* Advantages */}
 			<AdvantagesSection />
-
-			{/* Products - immersive scroll showcase */}
-			<ProductsShowcase t={t} />
 
 			{/* Plus separator */}
 			<div className="flex items-center justify-center py-6 max-w-5xl mx-auto px-6">
@@ -339,7 +340,7 @@ export default function WiseTrainerClient() {
 					centered: true,
 				}}
 			>
-				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{featureGroups.map((group) => {
 						const Icon = group.icon;
 						const items = t.raw(
@@ -390,17 +391,11 @@ export default function WiseTrainerClient() {
 					<p className="text-muted-foreground mb-8">
 						{t("cta.description")}
 					</p>
-					<div className="flex flex-col sm:flex-row gap-4 justify-center">
+					<div className="flex justify-center">
 						<Button size="lg" asChild>
 							<Link href="/#contact">
 								<MessageCircle className="size-4 mr-2" />
 								{t("cta.button")}
-							</Link>
-						</Button>
-						<Button size="lg" variant="outline" asChild>
-							<Link href="/faq">
-								<HelpCircle className="size-4 mr-2" />
-								{t("cta.faq")}
 							</Link>
 						</Button>
 					</div>

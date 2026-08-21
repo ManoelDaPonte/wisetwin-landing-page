@@ -51,6 +51,9 @@ export default function PrivacyPage() {
 					<p>
 						Cette politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.
 					</p>
+					<p>
+						Elle s&apos;applique aux plateformes SaaS éditées par WiseTwin : la <strong>plateforme LMS</strong> et <strong>WiseAtlas</strong>. Les prestations sur mesure facturées au projet (création de formations WiseTrainer ou WiseTour, développements spécifiques, conseil) sont encadrées par les contrats propres à chaque mission.
+					</p>
 
 					<h2>2. Responsable du traitement</h2>
 					<table className="not-prose w-full border-collapse my-6">

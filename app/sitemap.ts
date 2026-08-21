@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		{ path: "/solutions/wisetrainer", priority: 0.8 },
 		{ path: "/solutions/wisepaper", priority: 0.8 },
 		{ path: "/solutions/wisetour", priority: 0.8 },
-		{ path: "/solutions/askai", priority: 0.7 },
 		{ path: "/solutions/wiseatlas", priority: 0.8 },
 		{ path: "/legal", priority: 0.3 },
 		{ path: "/privacy", priority: 0.3 },
@@ -48,24 +47,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		},
 	]);
 
-	// Blog posts
+	// Blog posts — uniquement en français
 	const postsFr = getDocuments("posts-fr", ["slug", "publishedAt"]);
-	const postsEn = getDocuments("posts-en", ["slug", "publishedAt"]);
 
-	const blogEntries = [
-		...postsFr.map((post) => ({
-			url: `${baseUrl}/fr/blog/${post.slug}`,
-			lastModified: new Date(post.publishedAt),
-			changeFrequency: "weekly" as const,
-			priority: 0.7,
-		})),
-		...postsEn.map((post) => ({
-			url: `${baseUrl}/en/blog/${post.slug}`,
-			lastModified: new Date(post.publishedAt),
-			changeFrequency: "weekly" as const,
-			priority: 0.7,
-		})),
-	];
+	const blogEntries = postsFr.map((post) => ({
+		url: `${baseUrl}/fr/blog/${post.slug}`,
+		lastModified: new Date(post.publishedAt),
+		changeFrequency: "weekly" as const,
+		priority: 0.7,
+	}));
 
 	return [...staticEntries, ...blogEntries];
 }

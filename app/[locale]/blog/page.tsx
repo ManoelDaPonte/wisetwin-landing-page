@@ -39,8 +39,9 @@ export default async function BlogPage({
 }: {
 	params: Promise<{ locale: string }>;
 }) {
-	const { locale } = await params;
-	const collection = `posts-${locale}`;
+	await params;
+	// Le blog est uniquement en français : la collection posts-fr sert les deux locales
+	const collection = "posts-fr";
 	const db = await load();
 	const rawPosts = await db
 		.find({ collection, status: "published" })

@@ -81,17 +81,17 @@ export default async function PlatformPage({
 					operatingSystem: "Web",
 					description:
 						locale === "fr"
-							? "Formation industrielle en briques : WiseTrainer (simulateurs 3D), WisePaper (formations documentaires IA), WiseTour (accueil sécurité immersif), ou la plateforme LMS complète avec Ask AI et base d'incidents"
-							: "Industrial training in bricks: WiseTrainer (3D simulators), WisePaper (AI document-based training), WiseTour (immersive safety induction), or the complete LMS platform with Ask AI and incident database",
+							? "Le LMS modulable pour l'industrie : diffusion de vos formations (créées par WiseTwin ou importées), éditeur WisePaper, IA Ask AI avec base d'incidents, plans de formation et analytiques"
+							: "The modular LMS for industry: delivery of your trainings (built by WiseTwin or imported), WisePaper editor, Ask AI with incident database, training plans and analytics",
 					url: `https://wisetwin.eu/${locale}/solutions/plateforme`,
 					offers: {
 						"@type": "Offer",
-						price: "3500",
+						price: "3600",
 						priceCurrency: "EUR",
 						description:
 							locale === "fr"
-								? "Plateforme LMS complète à 3 500€/an par site. Briques à la carte : WisePaper 1 200€/an, WiseTour 1 300€/an, WiseTrainer 1 500€/an. Création des simulateurs sur devis"
-								: "Complete LMS platform at €3,500/year per site. Bricks à la carte: WisePaper €1,200/yr, WiseTour €1,300/yr, WiseTrainer €1,500/yr. Simulator creation on quote",
+								? "Plateforme LMS à 3 600€/an par site tout compris, moins si vous retirez des briques. Socle seul à partir de 1 800€/an. Formations sur mesure facturées au projet : WiseTrainer 5 000 à 15 000€, WiseTour 10 000 à 20 000€"
+								: "LMS platform at €3,600/year per site all included, less if you remove bricks. Core alone from €1,800/year. Custom trainings billed per project: WiseTrainer €5,000 to €15,000, WiseTour €10,000 to €20,000",
 					},
 					provider: {
 						"@type": "Organization",

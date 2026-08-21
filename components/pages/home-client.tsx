@@ -5,7 +5,7 @@ import {
 	TrustedBySection,
 	ConvictionsSection,
 	TeamSection,
-	TestimonialsSection,
+	// TestimonialsSection, — désactivé en attendant les vraies vidéos clients
 	ExpertisesSection,
 	MethodSection,
 	ToolsSection,
@@ -25,9 +25,9 @@ type Post = {
 
 export default function HomeClient({
 	latestPosts,
-	testimonialVideos,
 }: {
 	latestPosts: Post[];
+	// Conservé pour la réactivation des témoignages (pool public/videos/temoignages/)
 	testimonialVideos: string[];
 }) {
 	return (
@@ -36,7 +36,8 @@ export default function HomeClient({
 			<TrustedBySection />
 			<ConvictionsSection />
 			<TeamSection />
-			<TestimonialsSection videoPool={testimonialVideos} />
+			{/* Témoignages clients : réactiver quand on aura de vraies vidéos
+			<TestimonialsSection videoPool={testimonialVideos} /> */}
 			<ExpertisesSection />
 			<MethodSection />
 			<ToolsSection />

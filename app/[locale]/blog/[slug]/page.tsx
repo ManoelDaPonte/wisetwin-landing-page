@@ -8,18 +8,13 @@ import gfm from "remark-gfm";
 import html from "remark-html";
 import { getReadingTime } from "@/lib/reading-time";
 import BlogPostClient from "@/components/pages/blog-post-client";
-import BlogNotAvailableClient from "@/components/pages/blog-not-available-client";
+
+// Le blog est uniquement en français : la collection posts-fr sert les deux locales
+const COLLECTION = "posts-fr";
 
 export async function generateStaticParams() {
-	const postsFr = getDocuments("posts-fr", ["slug"]);
-	const postsEn = getDocuments("posts-en", ["slug"]);
-
-	const slugs = new Set([
-		...postsFr.map((p) => p.slug),
-		...postsEn.map((p) => p.slug),
-	]);
-
-	return Array.from(slugs).map((slug) => ({ slug }));
+	const posts = getDocuments(COLLECTION, ["slug"]);
+	return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -28,8 +23,7 @@ export async function generateMetadata({
 	params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
 	const { locale, slug } = await params;
-	const collection = `posts-${locale}`;
-	const post = getDocumentBySlug(collection, slug, [
+	const post = getDocumentBySlug(COLLECTION, slug, [
 		"title",
 		"description",
 		"coverImage",
@@ -66,33 +60,16 @@ export default async function BlogPostPage({
 }: {
 	params: Promise<{ locale: string; slug: string }>;
 }) {
-	const { locale, slug } = await params;
-	const collection = `posts-${locale}`;
-	const otherLocale = locale === "fr" ? "en" : "fr";
+	const { slug } = await params;
 
 	const db = await load();
 	const post = await db
-		.find({ collection, slug, status: "published" })
+		.find({ collection: COLLECTION, slug, status: "published" })
 		.project(["title", "publishedAt", "slug", "author", "content", "coverImage", "image", "description"])
 		.first();
 
-	// Article not available in this language — check if it exists in the other
 	if (!post) {
-		const otherPost = getDocumentBySlug(`posts-${otherLocale}`, slug, [
-			"title",
-			"slug",
-		]);
-
-		if (!otherPost) {
-			notFound();
-		}
-
-		return (
-			<BlogNotAvailableClient
-				slug={slug}
-				otherLocale={otherLocale}
-			/>
-		);
+		notFound();
 	}
 
 	const postData = post as Record<string, unknown>;

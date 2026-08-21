@@ -12,9 +12,9 @@
 		},
 		"platform": {
 			"title": "La plateforme LMS",
-			"description": "WiseTrainer, WisePaper, WiseTour : des briques de formation industrielle à la carte, ou la plateforme LMS complète avec Ask AI et base d'incidents pour 3 500€/an.",
-			"ogTitle": "La plateforme LMS WiseTwin - La formation industrielle en briques",
-			"ogDescription": "Achetez chaque brique séparément ou prenez la plateforme complète. Simulateurs 3D, accueil sécurité immersif, formations documentaires IA. 100% web."
+			"description": "Le LMS modulable pour l'industrie : diffusez vos formations, les nôtres ou les vôtres, avec l'éditeur WisePaper et l'IA Ask AI. 3 600€/an tout compris, moins si vous retirez des briques.",
+			"ogTitle": "La plateforme LMS WiseTwin - Le LMS modulable pour l'industrie",
+			"ogDescription": "Prenez le LMS seul et importez vos formations, ou ajoutez les briques WisePaper, Ask AI et plans de formation. 3 600€/an tout compris. 100% web."
 		},
 		"wiseatlas": {
 			"description": "Carte interactive pour valoriser votre territoire, vos sites industriels et vos infrastructures avec des visites virtuelles immersives.",
@@ -168,50 +168,48 @@
 	"tools": {
 		"eyebrow": "Nos produits",
 		"title": "Nos outils, nés du terrain",
-		"subtitle": "Les mêmes besoins revenaient chez nos clients : nous en avons fait des briques. Chacune s'achète seule, la plateforme les réunit.",
+		"subtitle": "Des formations sur mesure facturées au projet. Des plateformes à l'année, que vous pilotez en autonomie.",
 		"platform": {
 			"tag": "La plateforme",
 			"title": "La plateforme LMS",
-			"description": "Les trois briques réunies, plus Ask AI, la base d'incidents, les plans de formation, les analytiques et les certifications.",
-			"price": "3 500€/an",
-			"priceNote": "au lieu de 4 000€ en briques séparées",
+			"description": "Diffusez vos formations, les nôtres ou les vôtres. Modulable par briques : éditeur WisePaper, IA Ask AI, plans de formation.",
+			"price": "3 600€/an",
+			"priceNote": "tout compris, moins si vous retirez des briques",
 			"cta": "Découvrir la plateforme"
 		},
 		"bricks": {
 			"wisetrainer": {
 				"tag": "Formation 3D",
 				"title": "WiseTrainer",
-				"description": "Vos installations recréées en simulateurs 3D immersifs. Création sur mesure, diffusion illimitée.",
-				"price": "1 500€/an"
-			},
-			"wisepaper": {
-				"tag": "Formation documentaire",
-				"title": "WisePaper",
-				"description": "Vos PDF, Word et PowerPoint transformés en formations interactives avec quiz par l'IA.",
-				"price": "1 200€/an"
+				"description": "Vos installations recréées en simulateurs 3D immersifs. Un projet sur mesure, diffusé ensuite sans limite via le LMS.",
+				"price": "5 000 à 15 000€",
+				"priceNote": "par projet, selon le chantier"
 			},
 			"wisetour": {
 				"tag": "Accueil sécurité",
 				"title": "WiseTour",
-				"description": "La visite sécurité immersive de votre site, créée à partir d'une simple capture 3D.",
-				"price": "1 300€/an"
+				"description": "La visite sécurité immersive de votre site, créée à partir d'une capture 3D. Un projet sur mesure, diffusé via le LMS.",
+				"price": "10 000 à 20 000€",
+				"priceNote": "par projet, selon le site"
 			},
-			"askai": {
-				"tag": "IA & données",
-				"title": "Ask AI",
-				"description": "Le copilote sécurité : chasse aux risques par photo, rapports de prévention, base d'incidents interrogeable.",
-				"price": "Réservé à la plateforme"
+			"wisepaper": {
+				"tag": "Éditeur de formations",
+				"title": "WisePaper",
+				"description": "L'éditeur qui transforme vos PDF, Word et PowerPoint en formations interactives avec quiz par l'IA.",
+				"price": "Inclus dans la plateforme",
+				"priceNote": "formations illimitées"
 			}
 		},
 		"wiseatlas": {
 			"tag": "Communication",
 			"title": "WiseAtlas",
 			"description": "La carte interactive pour piloter et valoriser votre territoire, vos sites et vos projets : maquettes 3D, visites virtuelles et données à jour, partageables en un lien.",
-			"price": "3 000€/an"
+			"price": "3 000€/an",
+			"priceNote": "en autonomie · projet clé en main sur devis"
 		},
 		"platformOnly": "Plateforme",
 		"cta": "Découvrir",
-		"pricesNote": "Tarifs annuels par site, sans engagement. La création des contenus (simulateurs, captures 3D) est chiffrée sur devis gratuit."
+		"pricesNote": "Formations facturées une seule fois, au projet. Plateformes par site et par an, sans engagement. Tous les devis sont gratuits."
 	},
 	"territory": {
 		"eyebrow": "Notre territoire",
@@ -356,7 +354,7 @@
 						"Présentation de site",
 						"Communication institutionnelle"
 					],
-					"price": "Brique WiseTour à 1 300€/an, capture sur devis"
+					"price": "Projet sur mesure : 10 000 à 20 000€ selon le site"
 				},
 				{
 					"tag": "3D haute fidélité",
@@ -370,7 +368,7 @@
 						"Prise en main d'équipements",
 						"Simulation de risques"
 					],
-					"price": "Création sur mesure, diffusion via la brique à 1 500€/an"
+					"price": "Projet sur mesure : 5 000 à 15 000€ selon le chantier"
 				},
 				{
 					"tag": "Format documentaire",
@@ -384,7 +382,7 @@
 						"Mise à jour de procédures",
 						"Onboarding administratif"
 					],
-					"price": "Brique WisePaper à 1 200€/an"
+					"price": "Éditeur inclus dans la plateforme LMS, formations illimitées"
 				}
 			]
 		},
@@ -405,6 +403,16 @@
 					"Mettre à jour les procédures",
 					"Remplacer images et ressources",
 					"Éditer les parcours en temps réel"
+				]
+			},
+			"askai": {
+				"title": "Ask AI, le copilote sécurité",
+				"description": "L'IA de la plateforme croise votre accidentologie interne, les bases publiques d'accidents et vos formations.",
+				"items": [
+					"Chasse aux risques par photo",
+					"Base d'incidents interrogeable en langage naturel",
+					"Rapports de prévention PDF",
+					"Recommandations de formations ciblées"
 				]
 			},
 			"tracking": {
@@ -450,56 +458,56 @@
 		"cta": {
 			"title": "Prêt à simplifier la gestion de vos formations ?",
 			"description": "Décrivez-nous votre besoin et recevez un devis gratuit, sans engagement.",
-			"button": "Demander un devis",
-			"faq": "Consulter la FAQ"
+			"button": "Demander un devis"
 		}
 	},
 	"pricing": {
 		"eyebrow": "Tarification",
-		"title": "À la carte ou tout compris",
-		"subtitle": "Chaque brique s'active seule. La plateforme les réunit et débloque l'IA.",
+		"title": "Le LMS seul, ou avec ses briques",
+		"subtitle": "Prenez le socle et importez vos formations, ou ajoutez des briques : le prix suit, dans les deux sens.",
 		"perYear": "€/an",
-		"bricks": {
-			"title": "Les briques à la carte",
-			"subtitle": "Activez uniquement ce dont vous avez besoin.",
-			"note": "Tarifs par site. La création des contenus (simulateur, capture 3D) est un projet sur mesure chiffré à part.",
+		"core": {
+			"badge": "Le socle LMS",
+			"price": "1 800",
+			"note": "Par site, sans engagement.",
+			"description": "Tout pour diffuser et suivre vos formations, y compris celles que vous possédez déjà.",
+			"features": [
+				"Hébergement et diffusion de vos formations, créées par nous ou importées",
+				"Suivi de complétion et historique des réponses",
+				"Certifications vérifiables",
+				"Apprenants illimités"
+			],
+			"cta": "Demander un devis gratuit"
+		},
+		"modules": {
+			"title": "Les briques en option",
+			"subtitle": "Activez-les quand le besoin apparaît.",
+			"note": "Retirez une brique : le prix descend.",
 			"items": {
-				"wisetrainer": {
-					"title": "WiseTrainer",
-					"price": "1 500",
-					"description": "Diffusion de vos simulateurs 3D immersifs à tous vos apprenants."
-				},
 				"wisepaper": {
 					"title": "WisePaper",
-					"price": "1 200",
-					"description": "Vos documents transformés en formations interactives avec quiz par l'IA."
+					"price": "600",
+					"description": "L'éditeur IA qui transforme vos PDF, Word et PowerPoint en formations interactives avec quiz."
 				},
-				"wisetour": {
-					"title": "WiseTour",
-					"price": "1 300",
-					"description": "L'accueil sécurité immersif créé depuis une capture 3D de votre site."
+				"askai": {
+					"title": "Ask AI & base d'incidents",
+					"price": "800",
+					"description": "Le copilote sécurité : chasse aux risques par photo, rapports de prévention, accidentologie interrogeable en langage naturel."
+				},
+				"management": {
+					"title": "Plans de formation & analytiques",
+					"price": "400",
+					"description": "Parcours multi-formations, relances automatiques, tableaux de bord détaillés et exports."
 				}
 			}
 		},
-		"platform": {
-			"badge": "La plateforme complète",
-			"price": "3 500",
-			"compare": "4 000€",
-			"note": "Tarif par site, sans engagement.",
-			"description": "Les trois briques réunies, plus tout ce qui n'existe nulle part ailleurs :",
-			"features": [
-				"WiseTrainer, WisePaper et WiseTour inclus",
-				"Ask AI : copilote sécurité, chasse aux risques par photo, rapports de prévention",
-				"Base d'incidents : votre accidentologie anonymisée, interrogeable en langage naturel",
-				"Plans de formation, relances automatiques et analytiques",
-				"Certifications vérifiables et apprenants illimités"
-			],
-			"exclusiveNote": "Ask AI et la base d'incidents sont réservés à la plateforme complète.",
-			"cta": "Demander un devis gratuit"
+		"total": {
+			"label": "La totale :",
+			"price": "3 600"
 		},
-		"simulators": {
-			"title": "Et la création des simulateurs 3D ?",
-			"description": "Un simulateur WiseTrainer est un projet sur mesure facturé une seule fois : l'asset 3D vous appartient. Votre brique ou votre plateforme le diffuse ensuite à tous vos apprenants, sans surcoût par session.",
+		"formations": {
+			"title": "Et les formations sur mesure ?",
+			"description": "La création est un projet facturé une seule fois : un simulateur WiseTrainer entre 5 000 et 15 000€, un accueil sécurité WiseTour entre 10 000 et 20 000€, selon le chantier. L'asset vous appartient, le LMS le diffuse ensuite sans surcoût.",
 			"cta": "Décrivez-nous votre projet"
 		}
 	},
@@ -572,25 +580,25 @@
 	"brickPages": {
 		"common": {
 			"eyebrow": "Brique",
-			"perYear": "€/an",
 			"ctaQuote": "Demander un devis gratuit",
 			"ctaPlatform": "Voir la plateforme LMS",
 			"included": {
 				"eyebrow": "La plateforme LMS",
-				"title": "Encore plus fort dans la plateforme",
-				"titleExclusive": "Disponible uniquement dans la plateforme",
-				"description": "La plateforme LMS réunit WiseTrainer, WisePaper et WiseTour pour 3 500€/an par site, et débloque Ask AI, la base d'incidents, les plans de formation, les analytiques et les certifications.",
+				"title": "Diffusé par la plateforme LMS",
+				"titleExclusive": "Disponible dans la plateforme LMS",
+				"description": "La plateforme LMS diffuse et trace vos formations, et se module par briques : l'éditeur WisePaper, Ask AI et la base d'incidents, les plans de formation et analytiques. 3 600€/an tout compris, moins si vous retirez des briques.",
 				"cta": "Découvrir la plateforme"
 			}
 		},
 		"wisetrainer": {
 			"metaTitle": "WiseTrainer - Simulateurs 3D de formation industrielle",
-			"metaDescription": "Vos installations recréées en simulateurs 3D immersifs. Création sur mesure, diffusion illimitée à 1 500€/an par site. L'asset 3D vous appartient.",
+			"metaDescription": "Vos installations recréées en simulateurs 3D immersifs. Un projet sur mesure entre 5 000 et 15 000€ selon le chantier. L'asset 3D vous appartient, diffusion illimitée via le LMS.",
 			"tag": "Formation 3D",
 			"title": "WiseTrainer",
 			"subtitle": "Vos installations recréées en simulateurs 3D immersifs. Vos équipes s'entraînent en conditions réelles, sans arrêter la production.",
-			"price": "1 500",
-			"priceNote": "Par site, diffusion illimitée. La création du simulateur est un projet sur mesure : l'asset 3D vous appartient.",
+			"price": "5 000 à 15 000€",
+			"priceSuffix": "par projet",
+			"priceNote": "Facturé une seule fois, selon le chantier. L'asset 3D vous appartient, la diffusion via le LMS est ensuite illimitée.",
 			"features": [
 				{
 					"title": "Votre usine, pas une usine générique",
@@ -607,13 +615,13 @@
 			]
 		},
 		"wisepaper": {
-			"metaTitle": "WisePaper - Vos documents transformés en formations par l'IA",
-			"metaDescription": "Importez vos PDF, Word ou PowerPoint : l'IA les transforme en formations interactives avec quiz et suivi de complétion. 1 200€/an par site.",
-			"tag": "Formation documentaire",
+			"metaTitle": "WisePaper - L'éditeur qui transforme vos documents en formations",
+			"metaDescription": "Importez vos PDF, Word ou PowerPoint : l'IA les transforme en formations interactives avec quiz et suivi de complétion. Éditeur inclus dans la plateforme LMS.",
+			"tag": "Éditeur de formations",
 			"title": "WisePaper",
 			"subtitle": "Importez vos PDF, Word ou PowerPoint : l'IA les transforme en formations interactives, chapitrées, avec quiz et suivi.",
-			"price": "1 200",
-			"priceNote": "Par site, apprenants illimités, formations illimitées.",
+			"price": "Inclus dans la plateforme LMS",
+			"priceNote": "L'éditeur WisePaper est une brique du LMS (600€/an dans la plateforme) : créez des formations illimitées depuis vos documents existants.",
 			"features": [
 				{
 					"title": "L'IA fait le travail",
@@ -631,12 +639,13 @@
 		},
 		"wisetour": {
 			"metaTitle": "WiseTour - Accueil sécurité immersif de votre site",
-			"metaDescription": "La visite sécurité immersive de votre site, créée à partir d'une capture 3D. Intérimaires et sous-traitants opérationnels dès le premier jour. 1 300€/an par site.",
+			"metaDescription": "La visite sécurité immersive de votre site, créée à partir d'une capture 3D. Un projet sur mesure entre 10 000 et 20 000€ selon le site, diffusé via le LMS.",
 			"tag": "Accueil sécurité",
 			"title": "WiseTour",
 			"subtitle": "La visite sécurité immersive de votre site, créée à partir d'une simple capture 3D. Vos intérimaires sont opérationnels dès le premier jour.",
-			"price": "1 300",
-			"priceNote": "Par site. La capture 3D de vos installations est chiffrée sur devis.",
+			"price": "10 000 à 20 000€",
+			"priceSuffix": "par projet",
+			"priceNote": "Facturé une seule fois, selon le site : capture 3D, composition du parcours et quiz inclus. Diffusion illimitée via le LMS.",
 			"features": [
 				{
 					"title": "Votre site, comme si on y était",
@@ -649,29 +658,6 @@
 				{
 					"title": "Traçable et opposable",
 					"description": "Complétion et certificats enregistrés pour chaque visiteur, intérimaire ou sous-traitant, sans compte email obligatoire."
-				}
-			]
-		},
-		"askai": {
-			"metaTitle": "Ask AI - Le copilote sécurité de votre site industriel",
-			"metaDescription": "Chasse aux risques par photo, rapports de prévention, base d'incidents interrogeable en langage naturel. Réservé à la plateforme LMS WiseTwin.",
-			"tag": "IA & données",
-			"title": "Ask AI",
-			"subtitle": "Le copilote sécurité de votre site : il croise votre accidentologie interne, l'accidentologie publique et vos formations.",
-			"price": "Réservé à la plateforme",
-			"priceNote": "Ask AI et la base d'incidents ne sont pas vendus séparément : ils sont inclus dans la plateforme LMS.",
-			"features": [
-				{
-					"title": "Chasse aux risques par photo",
-					"description": "Envoyez une photo d'un poste de travail : l'IA détecte les risques visibles, les classe par gravité et recommande les formations adaptées."
-				},
-				{
-					"title": "Votre accidentologie, interrogeable",
-					"description": "Importez vos rapports d'incidents : anonymisés, résumés et interrogeables en langage naturel, aux côtés des bases publiques d'accidents industriels."
-				},
-				{
-					"title": "Rapports de prévention en un clic",
-					"description": "Une synthèse PDF datée : messages clés, historique interne, accidents comparables et formations recommandées."
 				}
 			]
 		}
@@ -818,8 +804,7 @@
 					"description": "Devis personnalisé, gratuit et sans engagement"
 				}
 			},
-			"button": "Nous contacter",
-			"faq": "Consulter la FAQ"
+			"button": "Nous contacter"
 		}
 	},
 	"faq": {
@@ -837,15 +822,15 @@
 		"items": {
 			"whoIsWisetwin": {
 				"question": "Qui est WiseTwin ?",
-				"answer": "WiseTwin est une société de conseil et de services en développement de solutions digitales pour l'industrie, fondée par trois associés issus du monde industriel. Nous concevons des outils sur mesure (formation, HSE, 3D, data & IA) et éditons des briques nées de besoins récurrents chez nos clients : WiseTrainer, WisePaper et WiseTour pour la formation, la plateforme LMS qui les réunit, et WiseAtlas pour la communication."
+				"answer": "WiseTwin est une société de conseil et de services en développement de solutions digitales pour l'industrie, fondée par trois associés issus du monde industriel. Nous concevons des outils sur mesure (formation, HSE, 3D, data & IA) et éditons nos propres produits : les formations sur mesure WiseTrainer et WiseTour, la plateforme LMS avec son éditeur WisePaper et son IA Ask AI, et WiseAtlas pour la communication territoriale."
 			},
 			"whatDoYouDo": {
 				"question": "Que faites-vous concrètement ?",
 				"answer": "Du conseil (diagnostic de transformation, performance industrielle, excellence opérationnelle) et du développement sur mesure : digitalisation de formations, accueils sécurité, visites virtuelles, simulateurs 3D, plans de prévention HSE, applications métier, monitoring de production, intelligence artificielle, cloud engineering… Si votre besoin est digital et industriel, il y a de fortes chances que nous sachions y répondre."
 			},
 			"productsVsCustom": {
-				"question": "Quelle différence entre vos prestations sur mesure et vos produits ?",
-				"answer": "Nos produits (les briques WiseTrainer, WisePaper et WiseTour, la plateforme LMS et WiseAtlas) sont des besoins récurrents que nous avons standardisés : ils sont immédiatement disponibles et bien moins chers que du développement à la demande. Le sur-mesure couvre tout le reste : nous partons de votre problème réel et développons la réponse la plus simple. Les deux se combinent souvent."
+				"question": "Quelle différence entre vos formations et vos plateformes ?",
+				"answer": "Les formations (simulateurs WiseTrainer, accueils sécurité WiseTour) sont des projets sur mesure facturés une seule fois : un investissement, pas un abonnement. Les plateformes (le LMS et WiseAtlas) sont des abonnements annuels que vous pilotez en autonomie. Les deux se combinent : le LMS diffuse les formations que nous créons pour vous, comme celles que vous possédez déjà."
 			},
 			"whoWorks": {
 				"question": "Qui travaille sur mon projet ?",
@@ -901,15 +886,15 @@
 			},
 			"pricingModel": {
 				"question": "Comment fonctionne votre tarification ?",
-				"answer": "Les prestations sur mesure sont au forfait, sur devis : périmètre clair, prix ferme, pas de surprise. Nos outils ont des tarifs publics annuels : chaque brique de formation s'achète seule (WisePaper 1 200€/an, WiseTour 1 300€/an, WiseTrainer 1 500€/an), la plateforme LMS complète les réunit pour 3 500€/an, et WiseAtlas démarre à 3 000€/an. Tous les devis sont gratuits et sans engagement."
+				"answer": "Deux logiques. Les formations sont des projets facturés une seule fois : un simulateur WiseTrainer entre 5 000 et 15 000€, un accueil sécurité WiseTour entre 10 000 et 20 000€, selon le chantier. Les plateformes sont des abonnements annuels par site : le LMS à 3 600€/an tout compris (moins si vous retirez des briques), WiseAtlas à partir de 3 000€/an en autonomie. Tous les devis sont gratuits et sans engagement."
 			},
 			"wisetrainerPricing": {
 				"question": "Combien coûte la plateforme LMS ?",
-				"answer": "3 500€/an par site, tout compris : les trois briques de formation (WiseTrainer, WisePaper, WiseTour), Ask AI (copilote sécurité, chasse aux risques, rapports de prévention), la base d'incidents, les plans de formation, les analytiques, les certifications et des apprenants illimités. Chaque brique reste achetable séparément, mais Ask AI et la base d'incidents sont réservés à la plateforme complète."
+				"answer": "3 600€/an par site tout compris : le socle (diffusion de vos formations, créées par nous ou importées, suivi, certifications, apprenants illimités) plus les briques WisePaper (éditeur IA), Ask AI avec la base d'incidents, et les plans de formation avec analytiques. Vous pouvez retirer les briques dont vous n'avez pas besoin : le prix descend. Le socle seul démarre à 1 800€/an."
 			},
 			"simulatorPricing": {
-				"question": "Combien coûte un simulateur 3D ?",
-				"answer": "La création d'un simulateur WiseTrainer est un projet sur mesure facturé une seule fois, sur devis : le prix dépend de la complexité de votre installation et des scénarios. L'asset 3D vous appartient, et la brique WiseTrainer ou la plateforme le diffuse ensuite à tous vos apprenants, sans surcoût par session."
+				"question": "Combien coûte une formation sur mesure ?",
+				"answer": "C'est un projet facturé une seule fois, selon le chantier : un simulateur 3D WiseTrainer se situe entre 5 000 et 15 000€, un accueil sécurité immersif WiseTour entre 10 000 et 20 000€. L'asset 3D vous appartient, et le LMS le diffuse ensuite à tous vos apprenants, sans surcoût par session."
 			},
 			"siteBudgets": {
 				"question": "Nos budgets sont décidés au niveau du site, pas du groupe. Est-ce un problème ?",
@@ -1032,8 +1017,6 @@
 		"backToBlog": "Retour au blog",
 		"publishedOn": "Publié le",
 		"noPostsYet": "Aucun article pour le moment.",
-		"notAvailable": "Cet article n'est pas encore disponible en français.",
-		"viewInOtherLang": "Lire en anglais",
 		"metadata": {
 			"title": "Blog - WiseTwin",
 			"description": "Découvrez nos articles sur la formation immersive, les jumeaux numériques et l'industrie 4.0.",
