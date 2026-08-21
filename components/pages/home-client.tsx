@@ -36,7 +36,9 @@ export default function HomeClient({
 			<TrustedBySection />
 			<ConvictionsSection />
 			<TeamSection />
-			{/* Témoignages clients : réactiver quand on aura de vraies vidéos
+			{/* Témoignages clients : réactiver quand on aura de vraies vidéos.
+			    ⚠️ En le réactivant (variant muted), rebasculer l'alternance des fonds :
+			    expertises → default, method → muted, tools → default
 			<TestimonialsSection videoPool={testimonialVideos} /> */}
 			<ExpertisesSection />
 			<MethodSection />

@@ -31,7 +31,7 @@ export function ToolsSection() {
 	return (
 		<Section
 			id="outils"
-			variant="default"
+			variant="muted"
 			header={{
 				eyebrow: t("eyebrow"),
 				title: t("title"),

@@ -29,7 +29,7 @@ export function MethodSection() {
 	return (
 		<Section
 			id="methode"
-			variant="muted"
+			variant="default"
 			header={{
 				eyebrow: t("eyebrow"),
 				title: t("title"),

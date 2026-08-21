@@ -39,7 +39,7 @@ export function ExpertisesSection() {
 	return (
 		<Section
 			id="expertises"
-			variant="default"
+			variant="muted"
 			header={{
 				eyebrow: t("eyebrow"),
 				title: t("title"),
