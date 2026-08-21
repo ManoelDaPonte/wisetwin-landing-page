@@ -159,13 +159,13 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 						<div className="relative flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
 							<div className="max-w-xl">
 								<p className="text-xs font-mono uppercase tracking-[0.2em] text-secondary mb-3">
-									{t("common.included.eyebrow")}
+									{t(platformOnly ? "common.included.eyebrow" : "common.included.eyebrowStandalone")}
 								</p>
 								<h2 className={cn("text-2xl md:text-3xl font-bold tracking-tight mb-3")}>
 									{t(platformOnly ? "common.included.titleExclusive" : "common.included.title")}
 								</h2>
 								<p className="text-muted-foreground leading-relaxed">
-									{t("common.included.description")}
+									{t(platformOnly ? "common.included.descriptionPlatform" : "common.included.description")}
 								</p>
 							</div>
 							<div className="flex flex-col gap-3 shrink-0">

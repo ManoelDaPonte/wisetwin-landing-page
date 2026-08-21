@@ -42,10 +42,12 @@ cost); platforms are yearly subscriptions per site that clients run autonomously
 
 - WiseTrainer (€5,000 to €15,000 per project, depending on scope) — the client's own
   facilities recreated as immersive 3D training simulators. Billed once; the 3D asset
-  belongs to the client; unlimited delivery afterwards via the LMS.
+  belongs to the client. Standalone deliverable: Windows/Mac executable or web build
+  for the client's intranet or own LMS; hosting on the WiseTwin LMS is optional, never
+  required.
 - WiseTour (€10,000 to €20,000 per project, depending on the site) — immersive safety
-  induction created from a 3D capture of the client's site. Billed once; delivered via
-  the LMS.
+  induction created from a 3D capture of the client's site. Billed once; standalone
+  like WiseTrainer, with optional delivery via the WiseTwin LMS.
 - The LMS platform (€3,600/year all included, less if bricks are removed; core alone
   from €1,800/year) — the modular LMS: hosting and delivery of trainings (built by
   WiseTwin or imported by the client), completion tracking, verifiable certifications,
@@ -77,7 +79,6 @@ Three units; the team assembles on the fly around each project:
   and the complete LMS platform
 - [WiseAtlas (FR)](https://wisetwin.eu/fr/solutions/wiseatlas): interactive map for
   territories and industrial infrastructure
-- [FAQ (FR)](https://wisetwin.eu/fr/faq): services, method, pricing, data security
 - [Blog (FR)](https://wisetwin.eu/fr/blog): industrial training and digital twin insights
 - [Home (EN)](https://wisetwin.eu/en): English version of the site
 

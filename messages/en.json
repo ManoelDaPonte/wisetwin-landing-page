@@ -21,12 +21,6 @@
 			"ogTitle": "WiseAtlas - Interactive map & virtual tours",
 			"ogDescription": "Showcase your territory with an interactive map enriched with virtual tours and immersive content."
 		},
-		"faq": {
-			"title": "FAQ - Frequently asked questions",
-			"description": "Find answers to your questions about WiseTwin: custom projects, method, timelines, pricing, training bricks and data security.",
-			"ogTitle": "WiseTwin FAQ - All your questions",
-			"ogDescription": "Frequently asked questions about our consulting services, custom development and tools."
-		},
 		"notFound": {
 			"title": "Page not found",
 			"heading": "Page not found",
@@ -45,7 +39,6 @@
 		"method": "Method",
 		"team": "Team",
 		"blog": "Blog",
-		"faq": "FAQ",
 		"contact": "Contact",
 		"quote": "Free quote",
 		"allTools": "All our bricks"
@@ -181,7 +174,7 @@
 			"wisetrainer": {
 				"tag": "3D training",
 				"title": "WiseTrainer",
-				"description": "Your facilities recreated as immersive 3D simulators. A custom project, then delivered without limit via the LMS.",
+				"description": "Your facilities recreated as immersive 3D simulators. A custom project, standalone: at your place or on our LMS.",
 				"price": "€5,000 to €15,000",
 				"priceNote": "per project, depending on the scope"
 			},
@@ -195,7 +188,7 @@
 			"wisetour": {
 				"tag": "Safety induction",
 				"title": "WiseTour",
-				"description": "The immersive safety tour of your site, created from a 3D capture. A custom project, delivered via the LMS.",
+				"description": "The immersive safety tour of your site, created from a 3D capture. Standalone: at your place or on our LMS.",
 				"price": "€10,000 to €20,000",
 				"priceNote": "per project, depending on the site"
 			}
@@ -507,7 +500,7 @@
 		},
 		"formations": {
 			"title": "What about custom trainings?",
-			"description": "Creation is a project billed once: a WiseTrainer simulator between €5,000 and €15,000, a WiseTour safety induction between €10,000 and €20,000, depending on the scope. The asset belongs to you, the LMS then delivers it at no extra cost.",
+			"description": "Creation is a project billed once: a WiseTrainer simulator between €5,000 and €15,000, a WiseTour safety induction between €10,000 and €20,000, depending on the scope. The asset belongs to you: executable, web build, or delivery via our LMS, your choice.",
 			"cta": "Tell us about your project"
 		}
 	},
@@ -584,10 +577,12 @@
 			"ctaPlatform": "See the LMS platform",
 			"included": {
 				"eyebrow": "The LMS platform",
-				"title": "Delivered by the LMS platform",
+				"title": "Your place, or ours: you choose",
 				"titleExclusive": "Available in the LMS platform",
-				"description": "The LMS platform delivers and tracks your trainings, and is modular by bricks: the WisePaper editor, Ask AI and the incident database, training plans and analytics. €3,600/year all included, less if you remove bricks.",
-				"cta": "Discover the platform"
+				"description": "Your training is standalone: delivered as a Windows or Mac executable, or as a web build to host on your intranet or link from your own LMS. And if you would rather have us handle everything, our platform delivers it, with tracking and certificates. Never imposed.",
+				"cta": "Discover the platform",
+				"eyebrowStandalone": "Delivery",
+				"descriptionPlatform": "The LMS platform delivers and tracks your trainings, and is modular by bricks: the WisePaper editor, Ask AI and the incident database, training plans and analytics. €3,600/year all included, less if you remove bricks."
 			}
 		},
 		"wisetrainer": {
@@ -597,7 +592,7 @@
 			"title": "WiseTrainer",
 			"subtitle": "Your facilities recreated as immersive 3D simulators. Your teams train in real conditions, without stopping production.",
 			"price": "€5,000 to €15,000",
-			"priceNote": "Billed once, depending on the scope. The 3D asset belongs to you, delivery via the LMS is then unlimited.",
+			"priceNote": "Billed once, depending on the scope. The asset belongs to you: executable, web build, or delivery via our LMS, your choice.",
 			"features": [
 				{
 					"title": "Your factory, not a generic one",
@@ -608,8 +603,8 @@
 					"description": "Equipment handling, critical procedures, hazardous situation simulation: every action is scored and tracked."
 				},
 				{
-					"title": "100% browser-based",
-					"description": "No installation: your learners train from a PC or tablet. VR headsets remain possible when they bring real value."
+					"title": "Standalone and portable",
+					"description": "Windows or Mac executable, web build for your intranet or your LMS, or hosting on our platform: the training runs wherever you want."
 				}
 			],
 			"priceSuffix": "per project"
@@ -644,7 +639,7 @@
 			"title": "WiseTour",
 			"subtitle": "The immersive safety tour of your site, created from a simple 3D capture. Your temp workers are operational from day one.",
 			"price": "€10,000 to €20,000",
-			"priceNote": "Billed once, depending on the site: 3D capture, path composition and quizzes included. Unlimited delivery via the LMS.",
+			"priceNote": "Billed once, depending on the site: 3D capture, path composition and quizzes included. Standalone: at your place or via our LMS.",
 			"features": [
 				{
 					"title": "Your site, as if you were there",
@@ -805,125 +800,6 @@
 				}
 			},
 			"button": "Contact us"
-		}
-	},
-	"faq": {
-		"title": "Frequently asked questions",
-		"subtitle": "The answers to your questions",
-		"searchPlaceholder": "Search for a question...",
-		"noResults": "No question matches your search",
-		"categories": {
-			"all": "All",
-			"general": "General",
-			"services": "Services & consulting",
-			"pricing": "Pricing",
-			"technical": "Technical"
-		},
-		"items": {
-			"whoIsWisetwin": {
-				"question": "Who is WiseTwin?",
-				"answer": "WiseTwin is a consulting and services firm developing digital solutions for industry, founded by three partners from the industrial world. We design tailor-made tools (training, HSE, 3D, data & AI) and publish our own products: the custom WiseTrainer and WiseTour trainings, the LMS platform with its WisePaper editor and Ask AI, and WiseAtlas for territorial communication."
-			},
-			"whatDoYouDo": {
-				"question": "What do you actually do?",
-				"answer": "Consulting (transformation diagnosis, industrial performance, operational excellence) and custom development: training digitization, safety inductions, virtual tours, 3D simulators, HSE prevention plans, business applications, production monitoring, artificial intelligence, cloud engineering… If your need is digital and industrial, chances are we know how to answer it."
-			},
-			"productsVsCustom": {
-				"question": "What is the difference between your trainings and your platforms?",
-				"answer": "Trainings (WiseTrainer simulators, WiseTour safety inductions) are custom projects billed once: an investment, not a subscription. Platforms (the LMS and WiseAtlas) are yearly subscriptions you run autonomously. The two combine: the LMS delivers the trainings we build for you, as well as the ones you already own."
-			},
-			"whoWorks": {
-				"question": "Who works on my project?",
-				"answer": "A team assembled on the fly based on your need, around three units: Gauthier (consulting & operational excellence), Manoel (data, AI & software) and Mickaël (3D, visualization & simulation). No sales intermediary, no hidden subcontracting: the people you meet are the people who deliver."
-			},
-			"clients": {
-				"question": "Who do you work with?",
-				"answer": "With industrial sites of all sizes, from SMEs to large groups, as well as local authorities and territorial actors for WiseAtlas. Our offers are sized to be accessible to a single site's budget, without requiring a central decision."
-			},
-			"projectTypes": {
-				"question": "What types of projects can you take on?",
-				"answer": "Some real examples: digitizing a safety induction, creating a virtual risk hunt, simulating a layout or flows before works, producing an HSE prevention plan, developing a business application, setting up production monitoring, explaining a process in 3D or video, building a serious game, or leading a digital transformation diagnosis. And anything that looks like it."
-			},
-			"smallProjects": {
-				"question": "Do you accept small projects?",
-				"answer": "Yes, it's even our philosophy. We prefer to start with a first focused project, on a controlled budget, that delivers a concrete result quickly. Trust settles in, then we extend over time. Never the other way around."
-			},
-			"consultingOnly": {
-				"question": "Can we engage you for consulting only, without development?",
-				"answer": "Of course. Digital transformation diagnosis, industrial performance audit, operational excellence roadmap, change management: Gauthier works with industrial leadership teams with or without development behind it. If a tool proves useful, we know how to build it, but it is never a prerequisite."
-			},
-			"onsite": {
-				"question": "Do you work on site?",
-				"answer": "Yes, and we recommend it: the best diagnoses are made in the field, in contact with your teams. We are based in Dunkirk and travel to your sites in France and Europe. The first discussion can also happen remotely if that's easier for you."
-			},
-			"confidentiality": {
-				"question": "How do you guarantee the confidentiality of our industrial data?",
-				"answer": "We sign a non-disclosure agreement (NDA) from the first discussion if you wish. Your plans, photos and data are transmitted via secure channels (yours if you prefer), hosted in Europe with restricted access, and we apply ISO 27001 best practices. We work daily with industrial companies subject to strict requirements."
-			},
-			"process": {
-				"question": "How does a project unfold?",
-				"answer": "In four steps: 1) a free discussion to understand your need, in the field if possible; 2) a specification defined within 48 hours, with clear scope and firm price, free and with no commitment; 3) iterative development with a fast first deliverable and your continuous feedback; 4) deployment, training of your teams and evolutions on demand."
-			},
-			"delays": {
-				"question": "What are your timelines?",
-				"answer": "We work in weeks, not months. A document-based training is digitized in a few days, a photo-realistic safety induction in about a week, a complete 3D simulator in about a month. For custom projects, the timeline is set in the quote, and kept."
-			},
-			"assetOwnership": {
-				"question": "Who owns the deliverables?",
-				"answer": "You do. The 3D environments, content and custom developments made for your company belong to you 100%. It's your investment, your intellectual property."
-			},
-			"interoperability": {
-				"question": "Do your solutions integrate with our existing tools?",
-				"answer": "Yes. xAPI/cmi5 exports to your LMS (Moodle, 360Learning, Talentsoft…), SSO with your identity provider, and custom developments that connect to your IT systems rather than replacing them. No lock-in."
-			},
-			"aftercare": {
-				"question": "What happens after delivery?",
-				"answer": "We stay available: maintenance, support, and evolutions on demand. Many of our clients grow their tool over time, one feature at a time, when the need appears. That's exactly how we like to work."
-			},
-			"quote": {
-				"question": "How do I get a quote?",
-				"answer": "Tell us about your project via the contact form, a few lines are enough: context, goal, constraints. You can also book a discussion slot directly on the site. The quote is free and comes with no commitment."
-			},
-			"pricingModel": {
-				"question": "How does your pricing work?",
-				"answer": "Two logics. Trainings are projects billed once: a WiseTrainer simulator between €5,000 and €15,000, a WiseTour safety induction between €10,000 and €20,000, depending on the scope. Platforms are yearly subscriptions per site: the LMS at €3,600/year all included (less if you remove bricks), WiseAtlas from €3,000/year self-service. All quotes are free and come with no commitment."
-			},
-			"wisetrainerPricing": {
-				"question": "How much does the LMS platform cost?",
-				"answer": "€3,600/year per site all included: the core (delivery of your trainings, built by us or imported, tracking, certifications, unlimited learners) plus the WisePaper brick (AI editor), Ask AI with the incident database, and training plans with analytics. Remove the bricks you don't need: the price goes down. The core alone starts at €1,800/year."
-			},
-			"simulatorPricing": {
-				"question": "How much does a custom training cost?",
-				"answer": "It is a project billed once, depending on the scope: a WiseTrainer 3D simulator sits between €5,000 and €15,000, a WiseTour immersive safety induction between €10,000 and €20,000. The 3D asset belongs to you, and the LMS then delivers it to all your learners, with no per-session cost."
-			},
-			"siteBudgets": {
-				"question": "Our budgets are decided at site level, not group level. Is that a problem?",
-				"answer": "On the contrary, it's our favorite playground. Our offers are sized for a single site's budget: short projects, controlled prices, a fast concrete return. No need to wait for a group program to move forward."
-			},
-			"security": {
-				"question": "How do you handle data security?",
-				"answer": "Our platforms offer multi-factor authentication (MFA), enterprise SSO (SAML/OAuth), complete audit logs and strict data isolation per organization. We work with demanding industrial companies and apply ISO 27001 best practices."
-			},
-			"gdprCompliance": {
-				"question": "How is my learners' data protected?",
-				"answer": "Our solutions are GDPR compliant. All data is hosted on European servers: it never leaves Europe."
-			},
-			"noVrHeadset": {
-				"question": "Do I need a VR headset to use your solutions?",
-				"answer": "No. Our solutions are 100% accessible from a standard web browser, on PC, tablet or mobile: €0 hardware investment. VR remains possible when it brings real value: we also develop headset experiences if your need justifies it."
-			},
-			"installation": {
-				"question": "Do your solutions require installation?",
-				"answer": "No. Everything is 100% online and accessible from any modern web browser, without installation. Your teams train and work from anywhere."
-			},
-			"multiSite": {
-				"question": "Do you handle multi-site organizations?",
-				"answer": "Yes. Our platforms support multi-organization management with granular permissions per site, and a sharing module allows trainings to be shared between sites or with partners. Each site can also start independently, at its own pace and on its own budget."
-			},
-			"technicalRequirements": {
-				"question": "What are the technical requirements?",
-				"answer": "A modern browser (Chrome, Firefox, Safari, Edge) with WebGL support for 3D environments, and a good internet connection to load the simulators quickly. That's all."
-			}
 		}
 	},
 	"contact": {

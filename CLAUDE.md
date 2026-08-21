@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-WiseTwin landing page - a Next.js site for a **consulting & services firm developing digital solutions for industry** ("société de conseil / service en développement de solutions digitales pour l'industrie"). The site leads with the agency positioning (custom development & consulting: training, HSE, 3D, data & AI), the team ("équipe assemblée à la volée" around 3 pôles: Conseil / Data & IA / 3D & immersif), client video testimonials, and the standardized tools born from recurring client needs, sold as **separate bricks**: WiseTrainer (3D simulators, 1 500€/an), WisePaper (AI doc-to-training, 1 200€/an), WiseTour (immersive safety induction, ex-"SafetyTour", 1 300€/an), bundled in **la plateforme LMS** (3 500€/an, with Ask AI + incident database as platform exclusives), plus **WiseAtlas** (communication, 3 000€/an). The main CTA is "Décrivez-nous votre projet / Devis gratuit" (contact form with interlocutor picker + hand-made slot booking), not product signup. Copy rules: never promise a quote response time ("devis gratuit sans engagement", no "sous 48h"), no em dashes (—) anywhere in user-facing copy, "48h" is only used for "définir un cahier des charges" and "+40 solutions livrées en 1 an" as stats.
+WiseTwin landing page - a Next.js site for a **consulting & services firm developing digital solutions for industry** ("société de conseil / service en développement de solutions digitales pour l'industrie"). The site leads with the agency positioning (custom development & consulting: training, HSE, 3D, data & AI), the team ("équipe assemblée à la volée" around 3 pôles: Conseil / Data & IA / 3D & immersif), and the tools born in the field, split in TWO LOGICS: **custom trainings billed once per project** (WiseTrainer 3D simulators 5 000 à 15 000€, WiseTour immersive safety inductions 10 000 à 20 000€ — standalone deliverables, never locked to the platform) and **yearly self-service platforms** (la plateforme LMS 3 600€/an modulable with its WisePaper editor and Ask AI; WiseAtlas 3 000€/an). The main CTA is "Décrivez-nous votre projet / Devis gratuit" (contact form with interlocutor picker + hand-made slot booking), not product signup. Copy rules: never promise a quote response time ("devis gratuit sans engagement", no "sous 48h"), no em dashes (—) anywhere in user-facing copy, "48h" is only used for "définir un cahier des charges" and "+40 solutions livrées en 1 an" as stats.
 
 ## Commands
 
@@ -67,7 +67,7 @@ Homepage sections in order (the header nav order mirrors this; the login button 
 11. ContactSection (`#contact`, muted) - 3-step layout: Étape 01 interlocutor picker (3 pôles), Étape 02 hand-made "Calendly" (2 days × 2 slots between 10h-12h, rotating deterministically per ISO week via `DAY_PAIRS`/`TIME_PAIRS`, computed client-side in useEffect to avoid hydration mismatch), Étape 03 form (CSRF) stretched to the SAME HEIGHT as the two left cards (items-stretch + flex chain + textarea flex-1). Chosen pôle + slot are prepended to the email message body; no API change.
 
 Notes:
-- The homepage FAQ section and the animated stats band were REMOVED (stats were redundant with client logos). The /faq page still exists and is linked from header/footer.
+- The homepage FAQ section and the animated stats band were REMOVED (stats were redundant with client logos).
 - SecuritySection (SSO/MFA/audit/ISO) is platform-specific and lives on the plateforme page, NOT on the homepage.
 - Motion primitives: `components/ui/reveal.tsx` (scroll-reveal wrapper, honors prefers-reduced-motion; Section headers auto-reveal) and `components/ui/count-up.tsx` (currently unused). Marquee keyframes in globals.css (`animate-marquee`, `animate-marquee-slow`).
 - Section component: `py-20 md:py-28`, headers support `eyebrow` (small uppercase mono label), accepts `className`.
@@ -82,7 +82,9 @@ Under `app/[locale]/solutions/`:
 - `/solutions/wiseatlas` - Interactive map (uses `wiseatlas` namespace). Self-service editor; turnkey projects on quote.
 All 5 routes are in `app/sitemap.ts`.
 
-Other rules (2026-08-21): the /faq page still exists (SEO) but is REFERENCED NOWHERE in the UI (no header, footer, or CTA links — keep it that way). The blog is FRENCH-ONLY: every page loads the `posts-fr` collection regardless of locale (no EN fallback logic, sitemap lists /fr posts only). CGV (/terms) and privacy (/privacy) explicitly scope themselves to the SaaS platforms (LMS + WiseAtlas); one-shot prestations are governed by per-project contracts.
+Other rules (2026-08-21): the FAQ is DELETED ENTIRELY (route `app/[locale]/faq/`, `faq-client.tsx`, `data/faq-keys.ts`, `faq` + `metadata.faq` + `nav.faq` namespaces — do not bring it back). The blog is FRENCH-ONLY: every page loads the `posts-fr` collection regardless of locale (no EN fallback logic, sitemap lists /fr posts only). CGV (/terms) and privacy (/privacy) explicitly scope themselves to the SaaS platforms (LMS + WiseAtlas); one-shot prestations are governed by per-project contracts.
+
+**Standalone doctrine (2026-08-21)**: WiseTrainer/WiseTour formations are NEVER locked to the platform. Copy everywhere must say: the deliverable is standalone (Windows/Mac executable, or web build for the client's intranet / linkable from their own LMS), with hosting on the WiseTwin LMS as an OPTION ("jamais imposée"). The brick pages' bottom banner has two variants in `brickPages.common.included`: standalone (eyebrowStandalone/title/description) for project bricks, platform (eyebrow/titleExclusive/descriptionPlatform) for WisePaper. Don't promise SCORM packaging into client LMSes (not implemented) — "à lier depuis votre LMS" only.
 
 **Pricing model (2026-08-21, "capex vs opex")**: two logics, strictly separated. **Formations = one-shot custom projects** (an investment, no recurring cost): WiseTrainer 5 000 à 15 000€ / projet selon le chantier, WiseTour 10 000 à 20 000€ / projet selon le site; the client owns the asset, the LMS then delivers it at no extra cost. **Platforms = yearly subscriptions per site, run autonomously**: the LMS at 3 600€/an all included, decomposed as socle 1 800€ (hosting/delivery of trainings incl. CLIENT-IMPORTED ones, tracking, certifications, unlimited learners) + briques WisePaper 600€ (AI editor, part of the platform, no standalone price) + Ask AI & base d'incidents 800€ + plans de formation & analytiques 400€ — remove a brick, the price drops; WiseAtlas from 3 000€/an self-service (editor), turnkey map projects on quote. **Ask AI has NO dedicated page** (merged into the platform: a `platform.features.askai` card + a pricing module). Prices are rough placeholders to iterate on (Manoel). Naming: the SaaS still says "SafetyTour" internally; the landing markets **WiseTour**. SCORM is NOT implemented: say "exports xAPI/cmi5". SaaS source of truth: `~/Documents/GitHub/wisetwin-saas-refacto/`.
 
@@ -106,7 +108,7 @@ Theme colors defined in `app/globals.css` using TailwindCSS v4 `@theme` directiv
 ### SEO
 
 - `app/sitemap.ts` + `app/robots.ts` (AI crawlers explicitly allowed) + `public/llms.txt` (llmstxt.org convention — keep in sync with positioning)
-- JSON-LD: Organization/ProfessionalService in `app/[locale]/layout.tsx`, SoftwareApplication + Breadcrumb on product pages, FAQPage on /faq
+- JSON-LD: Organization/ProfessionalService in `app/[locale]/layout.tsx`, SoftwareApplication + Breadcrumb on product pages
 - Per-page `generateMetadata` with localized keywords
 
 ## Project Structure
@@ -114,16 +116,14 @@ Theme colors defined in `app/globals.css` using TailwindCSS v4 `@theme` directiv
 ```
 app/[locale]/                    # Localized routes (fr, en)
 ├── page.tsx                     # Homepage
-├── faq/page.tsx                 # Full FAQ with search (keys in data/faq-keys.ts)
 ├── blog/                        # Blog (Outstatic)
 ├── solutions/
 │   ├── wisetrainer/page.tsx     # WiseTrainer LMS product page
 │   └── wiseatlas/page.tsx       # WiseAtlas product page
 messages/                        # Translation files (fr.json, en.json)
 i18n/                            # i18n configuration
-data/faq-keys.ts                 # FAQ keys + categories, services (Prestations & conseil) listed first
 components/
-├── pages/                       # Page orchestrators (home-client, wisetrainer-client, wiseatlas-client, faq-client, blog-*)
+├── pages/                       # Page orchestrators (home-client, wisetrainer-client, wiseatlas-client, brick-client, blog-*)
 ├── sections/home/               # Homepage sections
 ├── sections/wisetrainer/        # advantages-section, modular-pricing-section
 ├── common/                      # Reusable wrappers (Section)
@@ -138,7 +138,7 @@ Top-level namespaces in `messages/*.json`:
 - `metadata` - Per-page SEO metadata
 - `common`, `nav`, `hero` - Shared UI strings (`nav.platformShort`/`wiseatlasShort`/`allTools` feed the header tools dropdown)
 - `convictions`, `expertises`, `method`, `tools`, `territory`, `testimonials`, `team` - Agency homepage sections (no more `stats` namespace)
-- `security`, `faq`, `contact`, `footer`, `blog` - Other sections (`contact.interlocutor`, `contact.slots`, `contact.email` power the contact picker)
+- `security`, `contact`, `footer`, `blog` - Other sections (`contact.interlocutor`, `contact.slots`, `contact.email` power the contact picker)
 - `platform` - WiseTrainer page content (hero, products showcase named after the bricks, features, cta)
 - `pricing` - Bricks + platform pricing (`pricing.bricks.items.*`, `pricing.platform`, `pricing.simulators`)
 - `advantages` - WiseTrainer advantages section

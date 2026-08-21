@@ -21,12 +21,6 @@
 			"ogTitle": "WiseAtlas - Carte interactive & visites virtuelles",
 			"ogDescription": "Valorisez votre territoire avec une carte interactive enrichie de visites virtuelles et contenus immersifs."
 		},
-		"faq": {
-			"title": "FAQ - Questions fréquentes",
-			"description": "Trouvez les réponses à vos questions sur WiseTwin : projets sur mesure, méthode, délais, tarifs, briques de formation et sécurité des données.",
-			"ogTitle": "FAQ WiseTwin - Toutes vos questions",
-			"ogDescription": "Questions fréquentes sur nos prestations de conseil, nos développements sur mesure et nos outils."
-		},
 		"notFound": {
 			"title": "Page introuvable",
 			"heading": "Page introuvable",
@@ -45,7 +39,6 @@
 		"method": "Méthode",
 		"team": "Équipe",
 		"blog": "Blog",
-		"faq": "FAQ",
 		"contact": "Contact",
 		"quote": "Devis gratuit",
 		"allTools": "Toutes nos briques"
@@ -181,14 +174,14 @@
 			"wisetrainer": {
 				"tag": "Formation 3D",
 				"title": "WiseTrainer",
-				"description": "Vos installations recréées en simulateurs 3D immersifs. Un projet sur mesure, diffusé ensuite sans limite via le LMS.",
+				"description": "Vos installations recréées en simulateurs 3D immersifs. Un projet sur mesure, autonome : chez vous ou sur notre LMS.",
 				"price": "5 000 à 15 000€",
 				"priceNote": "par projet, selon le chantier"
 			},
 			"wisetour": {
 				"tag": "Accueil sécurité",
 				"title": "WiseTour",
-				"description": "La visite sécurité immersive de votre site, créée à partir d'une capture 3D. Un projet sur mesure, diffusé via le LMS.",
+				"description": "La visite sécurité immersive de votre site, créée à partir d'une capture 3D. Autonome : chez vous ou sur notre LMS.",
 				"price": "10 000 à 20 000€",
 				"priceNote": "par projet, selon le site"
 			},
@@ -507,7 +500,7 @@
 		},
 		"formations": {
 			"title": "Et les formations sur mesure ?",
-			"description": "La création est un projet facturé une seule fois : un simulateur WiseTrainer entre 5 000 et 15 000€, un accueil sécurité WiseTour entre 10 000 et 20 000€, selon le chantier. L'asset vous appartient, le LMS le diffuse ensuite sans surcoût.",
+			"description": "La création est un projet facturé une seule fois : un simulateur WiseTrainer entre 5 000 et 15 000€, un accueil sécurité WiseTour entre 10 000 et 20 000€, selon le chantier. L'asset vous appartient : exécutable, build web ou diffusion via notre LMS, au choix.",
 			"cta": "Décrivez-nous votre projet"
 		}
 	},
@@ -584,10 +577,12 @@
 			"ctaPlatform": "Voir la plateforme LMS",
 			"included": {
 				"eyebrow": "La plateforme LMS",
-				"title": "Diffusé par la plateforme LMS",
+				"title": "Chez vous, ou chez nous : vous choisissez",
 				"titleExclusive": "Disponible dans la plateforme LMS",
-				"description": "La plateforme LMS diffuse et trace vos formations, et se module par briques : l'éditeur WisePaper, Ask AI et la base d'incidents, les plans de formation et analytiques. 3 600€/an tout compris, moins si vous retirez des briques.",
-				"cta": "Découvrir la plateforme"
+				"description": "Votre formation est autonome : livrée en exécutable Windows ou Mac, ou en build web à héberger sur votre intranet ou à lier depuis votre propre LMS. Et si vous préférez qu'on s'occupe de tout, notre plateforme la diffuse, avec suivi et certificats. Jamais imposée.",
+				"cta": "Découvrir la plateforme",
+				"eyebrowStandalone": "La diffusion",
+				"descriptionPlatform": "La plateforme LMS diffuse et trace vos formations, et se module par briques : l'éditeur WisePaper, Ask AI et la base d'incidents, les plans de formation et analytiques. 3 600€/an tout compris, moins si vous retirez des briques."
 			}
 		},
 		"wisetrainer": {
@@ -598,7 +593,7 @@
 			"subtitle": "Vos installations recréées en simulateurs 3D immersifs. Vos équipes s'entraînent en conditions réelles, sans arrêter la production.",
 			"price": "5 000 à 15 000€",
 			"priceSuffix": "par projet",
-			"priceNote": "Facturé une seule fois, selon le chantier. L'asset 3D vous appartient, la diffusion via le LMS est ensuite illimitée.",
+			"priceNote": "Facturé une seule fois, selon le chantier. L'asset vous appartient : exécutable, build web ou diffusion via notre LMS, au choix.",
 			"features": [
 				{
 					"title": "Votre usine, pas une usine générique",
@@ -609,8 +604,8 @@
 					"description": "Manipulation d'équipements, procédures critiques, simulation de situations dangereuses : chaque action est scorée et tracée."
 				},
 				{
-					"title": "100% navigateur",
-					"description": "Aucune installation : vos apprenants se forment depuis un PC ou une tablette. Le casque VR reste possible quand il apporte une vraie valeur."
+					"title": "Autonome et portable",
+					"description": "Exécutable Windows ou Mac, build web pour votre intranet ou votre LMS, ou hébergement sur notre plateforme : la formation tourne où vous voulez."
 				}
 			]
 		},
@@ -645,7 +640,7 @@
 			"subtitle": "La visite sécurité immersive de votre site, créée à partir d'une simple capture 3D. Vos intérimaires sont opérationnels dès le premier jour.",
 			"price": "10 000 à 20 000€",
 			"priceSuffix": "par projet",
-			"priceNote": "Facturé une seule fois, selon le site : capture 3D, composition du parcours et quiz inclus. Diffusion illimitée via le LMS.",
+			"priceNote": "Facturé une seule fois, selon le site : capture 3D, parcours et quiz inclus. Autonome : chez vous ou via notre LMS.",
 			"features": [
 				{
 					"title": "Votre site, comme si on y était",
@@ -805,125 +800,6 @@
 				}
 			},
 			"button": "Nous contacter"
-		}
-	},
-	"faq": {
-		"title": "Questions fréquentes",
-		"subtitle": "Les réponses à vos questions",
-		"searchPlaceholder": "Rechercher une question...",
-		"noResults": "Aucune question ne correspond à votre recherche",
-		"categories": {
-			"all": "Toutes",
-			"general": "Général",
-			"services": "Prestations & conseil",
-			"pricing": "Tarifs",
-			"technical": "Technique"
-		},
-		"items": {
-			"whoIsWisetwin": {
-				"question": "Qui est WiseTwin ?",
-				"answer": "WiseTwin est une société de conseil et de services en développement de solutions digitales pour l'industrie, fondée par trois associés issus du monde industriel. Nous concevons des outils sur mesure (formation, HSE, 3D, data & IA) et éditons nos propres produits : les formations sur mesure WiseTrainer et WiseTour, la plateforme LMS avec son éditeur WisePaper et son IA Ask AI, et WiseAtlas pour la communication territoriale."
-			},
-			"whatDoYouDo": {
-				"question": "Que faites-vous concrètement ?",
-				"answer": "Du conseil (diagnostic de transformation, performance industrielle, excellence opérationnelle) et du développement sur mesure : digitalisation de formations, accueils sécurité, visites virtuelles, simulateurs 3D, plans de prévention HSE, applications métier, monitoring de production, intelligence artificielle, cloud engineering… Si votre besoin est digital et industriel, il y a de fortes chances que nous sachions y répondre."
-			},
-			"productsVsCustom": {
-				"question": "Quelle différence entre vos formations et vos plateformes ?",
-				"answer": "Les formations (simulateurs WiseTrainer, accueils sécurité WiseTour) sont des projets sur mesure facturés une seule fois : un investissement, pas un abonnement. Les plateformes (le LMS et WiseAtlas) sont des abonnements annuels que vous pilotez en autonomie. Les deux se combinent : le LMS diffuse les formations que nous créons pour vous, comme celles que vous possédez déjà."
-			},
-			"whoWorks": {
-				"question": "Qui travaille sur mon projet ?",
-				"answer": "Une équipe assemblée à la volée en fonction de votre besoin, autour de trois pôles : Gauthier (conseil & excellence opérationnelle), Manoel (data, IA & logiciel) et Mickaël (3D, visualisation & simulation). Pas d'intermédiaire commercial, pas de sous-traitance cachée : ceux que vous rencontrez sont ceux qui réalisent."
-			},
-			"clients": {
-				"question": "Avec qui travaillez-vous ?",
-				"answer": "Avec des sites industriels de toutes tailles, de la PME au grand groupe, ainsi que des collectivités et des acteurs territoriaux pour WiseAtlas. Nos offres sont dimensionnées pour être accessibles au budget d'un site, sans nécessiter de décision centrale."
-			},
-			"projectTypes": {
-				"question": "Quels types de projets peut-on vous confier ?",
-				"answer": "Quelques exemples réels : digitaliser un accueil sécurité, créer une chasse aux risques virtuelle, simuler une implantation ou des flux avant travaux, produire un plan de prévention HSE, développer une application métier, mettre en place un monitoring de production, vulgariser un process en 3D ou en vidéo, construire un serious game, ou mener un diagnostic de transformation digitale. Et tout ce qui y ressemble."
-			},
-			"smallProjects": {
-				"question": "Acceptez-vous les petits projets ?",
-				"answer": "Oui, c'est même notre philosophie. Nous préférons commencer par un premier projet ciblé, à budget maîtrisé, qui livre un résultat concret rapidement. La confiance s'installe, puis on étend au fil de l'eau. Jamais l'inverse."
-			},
-			"consultingOnly": {
-				"question": "Peut-on vous solliciter uniquement pour du conseil, sans développement ?",
-				"answer": "Bien sûr. Diagnostic de transformation digitale, audit de performance industrielle, feuille de route d'excellence opérationnelle, accompagnement au changement : Gauthier intervient auprès des directions industrielles avec ou sans développement derrière. Si un outil s'avère utile, nous savons le construire, mais ce n'est jamais un prérequis."
-			},
-			"onsite": {
-				"question": "Intervenez-vous sur site ?",
-				"answer": "Oui, et nous le recommandons : les meilleurs diagnostics se font sur le terrain, au contact de vos équipes. Nous sommes basés à Dunkerque et nous déplaçons sur vos sites en France et en Europe. Le premier échange peut aussi se faire à distance si c'est plus simple pour vous."
-			},
-			"confidentiality": {
-				"question": "Comment garantissez-vous la confidentialité de nos données industrielles ?",
-				"answer": "Nous signons un accord de confidentialité (NDA) dès le premier échange si vous le souhaitez. Vos plans, photos et données sont transmis via des canaux sécurisés (les vôtres si vous préférez), hébergés en Europe avec des accès restreints, et nous appliquons les bonnes pratiques ISO 27001. Nous travaillons au quotidien avec des industriels soumis à des exigences strictes."
-			},
-			"process": {
-				"question": "Comment se déroule un projet ?",
-				"answer": "En quatre temps : 1) un échange gratuit pour comprendre votre besoin, sur le terrain si possible ; 2) un cahier des charges défini en 48 heures, avec périmètre clair et prix ferme, gratuit et sans engagement ; 3) un développement itératif avec un premier livrable rapide et vos retours en continu ; 4) le déploiement, la formation de vos équipes et les évolutions à la demande."
-			},
-			"delays": {
-				"question": "Quels sont vos délais ?",
-				"answer": "Nous travaillons en semaines, pas en mois. Une formation documentaire se digitalise en quelques jours, un accueil sécurité photo-réaliste en environ une semaine, un simulateur 3D complet en environ un mois. Pour les projets sur mesure, le délai est fixé dans le devis, et tenu."
-			},
-			"assetOwnership": {
-				"question": "À qui appartiennent les livrables ?",
-				"answer": "À vous. Les environnements 3D, contenus et développements réalisés sur mesure pour votre entreprise vous appartiennent à 100%. C'est votre investissement, votre propriété intellectuelle."
-			},
-			"interoperability": {
-				"question": "Vos solutions s'intègrent-elles à nos outils existants ?",
-				"answer": "Oui. Exports xAPI/cmi5 vers votre LMS (Moodle, 360Learning, Talentsoft…), SSO avec votre fournisseur d'identité, et des développements sur mesure qui se connectent à votre SI plutôt que de le remplacer. Aucun enfermement."
-			},
-			"aftercare": {
-				"question": "Que se passe-t-il après la livraison ?",
-				"answer": "Nous restons disponibles : maintenance, support, et évolutions à la demande. Beaucoup de nos clients font grandir leur outil au fil de l'eau, une fonctionnalité à la fois, quand le besoin apparaît. C'est exactement comme cela que nous aimons travailler."
-			},
-			"quote": {
-				"question": "Comment obtenir un devis ?",
-				"answer": "Décrivez-nous votre projet via le formulaire de contact, quelques lignes suffisent : contexte, objectif, contraintes. Vous pouvez aussi réserver directement un créneau d'échange sur le site. Le devis est gratuit et sans engagement."
-			},
-			"pricingModel": {
-				"question": "Comment fonctionne votre tarification ?",
-				"answer": "Deux logiques. Les formations sont des projets facturés une seule fois : un simulateur WiseTrainer entre 5 000 et 15 000€, un accueil sécurité WiseTour entre 10 000 et 20 000€, selon le chantier. Les plateformes sont des abonnements annuels par site : le LMS à 3 600€/an tout compris (moins si vous retirez des briques), WiseAtlas à partir de 3 000€/an en autonomie. Tous les devis sont gratuits et sans engagement."
-			},
-			"wisetrainerPricing": {
-				"question": "Combien coûte la plateforme LMS ?",
-				"answer": "3 600€/an par site tout compris : le socle (diffusion de vos formations, créées par nous ou importées, suivi, certifications, apprenants illimités) plus les briques WisePaper (éditeur IA), Ask AI avec la base d'incidents, et les plans de formation avec analytiques. Vous pouvez retirer les briques dont vous n'avez pas besoin : le prix descend. Le socle seul démarre à 1 800€/an."
-			},
-			"simulatorPricing": {
-				"question": "Combien coûte une formation sur mesure ?",
-				"answer": "C'est un projet facturé une seule fois, selon le chantier : un simulateur 3D WiseTrainer se situe entre 5 000 et 15 000€, un accueil sécurité immersif WiseTour entre 10 000 et 20 000€. L'asset 3D vous appartient, et le LMS le diffuse ensuite à tous vos apprenants, sans surcoût par session."
-			},
-			"siteBudgets": {
-				"question": "Nos budgets sont décidés au niveau du site, pas du groupe. Est-ce un problème ?",
-				"answer": "Au contraire, c'est notre terrain de jeu préféré. Nos offres sont dimensionnées pour le budget d'un site : des projets courts, des prix maîtrisés, un retour concret rapide. Pas besoin d'attendre un programme groupe pour avancer."
-			},
-			"security": {
-				"question": "Comment gérez-vous la sécurité des données ?",
-				"answer": "Nos plateformes proposent l'authentification multi-facteurs (MFA), le SSO entreprise (SAML/OAuth), des journaux d'audit complets et une isolation stricte des données par organisation. Nous travaillons avec des industriels exigeants et appliquons les bonnes pratiques ISO 27001."
-			},
-			"gdprCompliance": {
-				"question": "Comment sont protégées les données de mes apprenants ?",
-				"answer": "Nos solutions sont conformes au RGPD. Toutes les données sont hébergées sur des serveurs européens : elles ne quittent jamais l'Europe."
-			},
-			"noVrHeadset": {
-				"question": "Faut-il un casque VR pour utiliser vos solutions ?",
-				"answer": "Non. Nos solutions sont 100% accessibles depuis un navigateur web standard, sur PC, tablette ou mobile : 0€ d'investissement matériel. La VR reste possible quand elle apporte une vraie valeur : nous développons aussi des expériences pour casques si votre besoin le justifie."
-			},
-			"installation": {
-				"question": "Vos solutions nécessitent-elles une installation ?",
-				"answer": "Non. Tout est 100% en ligne et accessible depuis n'importe quel navigateur web moderne, sans installation. Vos équipes se forment et travaillent depuis n'importe où."
-			},
-			"multiSite": {
-				"question": "Gérez-vous les organisations multi-sites ?",
-				"answer": "Oui. Nos plateformes supportent la gestion multi-organisation avec des permissions granulaires par site, et un module de mutualisation permet de partager des formations entre sites ou avec des partenaires. Chaque site peut aussi démarrer indépendamment, à son rythme et sur son budget."
-			},
-			"technicalRequirements": {
-				"question": "Quels sont les prérequis techniques ?",
-				"answer": "Un navigateur moderne (Chrome, Firefox, Safari, Edge) avec support WebGL pour les environnements 3D, et une bonne connexion internet pour charger rapidement les simulateurs. C'est tout."
-			}
 		}
 	},
 	"contact": {
