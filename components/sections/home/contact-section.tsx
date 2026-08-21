@@ -262,8 +262,10 @@ export function ContactSection() {
 				</div>
 
 				<div className="grid lg:grid-cols-5 gap-6 lg:gap-8 items-stretch">
-					{/* Colonne gauche : interlocuteur + créneau */}
-					<div className="lg:col-span-2 space-y-6">
+					{/* Colonne gauche : interlocuteur + créneau.
+					    min-w-0 obligatoire : sans lui, le texte en truncate (nowrap) des pôles
+					    impose son min-content à la colonne de grille et fait déborder sur mobile */}
+					<div className="lg:col-span-2 min-w-0 space-y-6">
 						{/* Étape 1 : l'interlocuteur */}
 						<Reveal>
 							<div className="bg-card border border-border rounded-2xl p-6">
@@ -411,7 +413,7 @@ export function ContactSection() {
 					</div>
 
 					{/* Colonne droite : le formulaire, à la même hauteur que les deux cartes de gauche */}
-					<Reveal delay={0.15} className="lg:col-span-3 h-full">
+					<Reveal delay={0.15} className="lg:col-span-3 min-w-0 h-full">
 						<Card className="shadow-sm border h-full flex flex-col">
 							<CardHeader>
 								<p className="text-xs font-mono uppercase tracking-[0.15em] text-secondary">
