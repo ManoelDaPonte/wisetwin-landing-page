@@ -52,6 +52,7 @@ export function Header() {
 		{ title: t("method"), href: "/#methode" },
 	];
 	const menuItemsAfter = [
+		{ title: t("territory"), href: "/#territoire" },
 		{ title: t("blog"), href: "/blog" },
 	];
 
