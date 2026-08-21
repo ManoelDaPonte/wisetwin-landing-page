@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import {
-	Plus,
 	PenLine,
 	BarChart3,
 	Route,
@@ -317,15 +316,6 @@ export default function WiseTrainerClient() {
 
 			{/* Advantages */}
 			<AdvantagesSection />
-
-			{/* Plus separator */}
-			<div className="flex items-center justify-center py-6 max-w-5xl mx-auto px-6">
-				<div className="flex-1 h-px bg-border" />
-				<div className="mx-6 size-12 bg-secondary/10 rounded-full flex items-center justify-center">
-					<Plus className="size-6 text-secondary" />
-				</div>
-				<div className="flex-1 h-px bg-border" />
-			</div>
 
 			{/* Pricing */}
 			<ModularPricingSection />
