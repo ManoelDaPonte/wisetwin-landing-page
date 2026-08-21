@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/reveal";
 
 const members = [
 	{ key: "gauthier", photo: "/image/team/gauthier.jpg" },
-	{ key: "manoel", photo: "/image/team/manoel.jpg" },
+	{ key: "manoel", photo: "/image/team/manoel-2.jpg" },
 	{ key: "mickael", photo: "/image/team/mickael.jpg" },
 ] as const;
 
