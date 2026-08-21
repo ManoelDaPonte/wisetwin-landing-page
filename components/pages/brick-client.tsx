@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { motion, useReducedMotion } from "framer-motion";
 import { Section } from "@/components/common/section";
@@ -23,6 +24,25 @@ const icons = {
 	wisepaper: FileText,
 	wisetour: Footprints,
 } as const;
+
+// Mêmes médias que le showcase "Formez de la bonne manière" de la page plateforme.
+// Les posters sont indispensables : le chargement vidéo peut rester bloqué (readyState 0).
+const media: Record<
+	BrickKey,
+	{ type: "video" | "image"; src: string; poster?: string }
+> = {
+	wisetour: {
+		type: "video",
+		src: "/video/capture-3dgs-entrepot.mp4",
+		poster: "/image/wisetour-poster.jpg",
+	},
+	wisetrainer: {
+		type: "video",
+		src: "/video/3d-reconstruction-training-simulator.mp4",
+		poster: "/image/wisetrainer-brick-poster.jpg",
+	},
+	wisepaper: { type: "image", src: "/image/formation-industrielle-automatisee.svg" },
+};
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
 
@@ -58,11 +78,11 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 				<div aria-hidden className="absolute inset-0" style={blueprintGrid} />
 				<div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
 				<div className="container mx-auto max-w-7xl px-4 relative pt-36 pb-20 md:pt-44 md:pb-24">
+					<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					<motion.div
 						variants={container}
 						initial="hidden"
 						animate="show"
-						className="max-w-3xl"
 					>
 						<motion.p
 							variants={item}
@@ -121,6 +141,41 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 							</Button>
 						</motion.div>
 					</motion.div>
+
+					{/* Illustration : même média que le showcase de la page plateforme */}
+					<motion.div
+						initial={reduceMotion ? false : { opacity: 0, scale: 0.96, x: 24 }}
+						animate={{ opacity: 1, scale: 1, x: 0 }}
+						transition={{ duration: 0.9, delay: 0.3, ease: EASE }}
+					>
+						<div className="relative rounded-2xl border border-border overflow-hidden shadow-2xl bg-card">
+							{media[brick].type === "video" ? (
+								<video
+									src={media[brick].src}
+									poster={media[brick].poster}
+									autoPlay
+									loop
+									muted
+									playsInline
+									className="w-full aspect-video object-cover"
+								/>
+							) : (
+								<div className="relative w-full aspect-video bg-gradient-to-br from-[#0f0b40] via-[#0a1a2a] to-[#04060f]">
+									<Image
+										src={media[brick].src}
+										alt={t(`${brick}.title`)}
+										fill
+										className="object-contain p-6"
+										sizes="(max-width: 1024px) 100vw, 50vw"
+									/>
+								</div>
+							)}
+							<span className="absolute top-4 left-4 text-xs font-mono uppercase tracking-wider text-white bg-black/50 backdrop-blur-sm border border-white/20 px-3 py-1 rounded-full">
+								{t(`${brick}.tag`)}
+							</span>
+						</div>
+					</motion.div>
+					</div>
 				</div>
 			</div>
 

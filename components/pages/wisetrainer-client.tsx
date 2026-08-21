@@ -26,9 +26,20 @@ import {
 	SecuritySection,
 } from "@/components/sections";
 
+// Posters indispensables : le chargement vidéo peut rester bloqué (readyState 0)
 const productMedia = [
-	{ type: "video", src: "/video/capture-3dgs-entrepot.mp4", fit: "cover" },
-	{ type: "video", src: "/video/3d-reconstruction-training-simulator.mp4", fit: "cover" },
+	{
+		type: "video",
+		src: "/video/capture-3dgs-entrepot.mp4",
+		poster: "/image/wisetour-poster.jpg",
+		fit: "cover",
+	},
+	{
+		type: "video",
+		src: "/video/3d-reconstruction-training-simulator.mp4",
+		poster: "/image/wisetrainer-brick-poster.jpg",
+		fit: "cover",
+	},
 	{
 		type: "image",
 		src: "/image/formation-industrielle-automatisee.svg",
@@ -96,6 +107,7 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 							{media.type === "video" ? (
 								<video
 									src={media.src}
+									poster={"poster" in media ? media.poster : undefined}
 									autoPlay
 									loop
 									muted
@@ -201,6 +213,7 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 								{media?.type === "video" ? (
 									<video
 										src={media.src}
+										poster={"poster" in media ? media.poster : undefined}
 										autoPlay
 										loop
 										muted
