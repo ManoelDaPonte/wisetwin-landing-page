@@ -43,7 +43,9 @@ export function HeroSection() {
 			/>
 
 			<div className="container mx-auto px-6 sm:px-8 md:px-4 max-w-7xl relative z-10 pointer-events-none">
-				<div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-[calc(100vh-120px)] py-12 sm:py-16 lg:py-20">
+				{/* pt élevé sur mobile : le contenu empilé dépasse l'écran, il ne se centre
+				    plus, et sans cette marge le badge passe sous le header fixe */}
+				<div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center min-h-[calc(100vh-120px)] pt-28 pb-12 sm:pt-32 sm:pb-16 lg:py-20">
 					<motion.div
 						variants={container}
 						initial="hidden"
