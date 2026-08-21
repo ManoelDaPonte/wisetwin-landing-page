@@ -14,8 +14,8 @@ export async function generateMetadata({
 		title: `${t("terms")} - WiseTwin`,
 		description:
 			locale === "fr"
-				? "Conditions générales de vente de WiseTwin. Abonnements, tarification et obligations contractuelles."
-				: "WiseTwin terms and conditions. Subscriptions, pricing and contractual obligations.",
+				? "Conditions générales de vente de Wise Software Solution, exploitant la marque WiseTwin. Abonnements, tarification et obligations contractuelles."
+				: "Wise Software Solution terms and conditions (WiseTwin brand). Subscriptions, pricing and contractual obligations.",
 		robots: { index: false, follow: true },
 		alternates: {
 			canonical: `https://wisetwin.eu/${locale}/terms`,
@@ -49,10 +49,10 @@ export default function TermsPage() {
 						Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre <strong>Wise Software Solution SAS</strong>, exploitant la marque commerciale WiseTwin, et tout client professionnel souhaitant souscrire aux services proposés.
 					</p>
 					<p>
-						L&apos;acceptation des présentes CGV est un préalable indispensable à la souscription de tout abonnement ou service WiseTwin.
+						L&apos;acceptation des présentes CGV est un préalable indispensable à la souscription de tout abonnement ou service de Wise Software Solution.
 					</p>
 					<p>
-						Elles s&apos;appliquent aux services par abonnement de WiseTwin : la <strong>plateforme LMS</strong> et la plateforme <strong>WiseAtlas</strong>. Les prestations réalisées sur mesure et facturées au projet (création de formations WiseTrainer ou WiseTour, développements spécifiques, conseil) ne sont pas couvertes par les présentes CGV : elles font l&apos;objet d&apos;un devis et de conditions contractuelles propres à chaque projet.
+						Elles s&apos;appliquent aux services par abonnement de Wise Software Solution : la <strong>plateforme LMS</strong> et la plateforme <strong>WiseAtlas</strong>. Les prestations réalisées sur mesure et facturées au projet (création de formations WiseTrainer ou WiseTour, développements spécifiques, conseil) ne sont pas couvertes par les présentes CGV : elles font l&apos;objet d&apos;un devis et de conditions contractuelles propres à chaque projet.
 					</p>
 
 					<h2>2. Identification du prestataire</h2>
@@ -90,7 +90,7 @@ export default function TermsPage() {
 					</table>
 
 					<h2>3. Description des services</h2>
-					<p>WiseTwin propose les services suivants :</p>
+					<p>Wise Software Solution propose les services suivants :</p>
 					<h3>3.1 WiseTrainer</h3>
 					<p>
 						Simulateurs 3D immersifs personnalisés pour la formation industrielle. Les simulateurs sont développés sur mesure à partir des équipements et processus spécifiques du client.
@@ -143,21 +143,21 @@ export default function TermsPage() {
 					</p>
 
 					<h2>6. Propriété intellectuelle</h2>
-					<h3>6.1 Propriété de WiseTwin</h3>
+					<h3>6.1 Propriété de Wise Software Solution</h3>
 					<p>
 						La plateforme WiseTwin, son interface, son code source, ainsi que tous les éléments qui la composent (marques, logos, logiciels, bases de données) sont la propriété exclusive de Wise Software Solution SAS.
 					</p>
-					<h3>6.2 Simulateurs 3D (WiseTrainer)</h3>
+					<h3>6.2 Formations développées sur mesure (WiseTrainer, WiseTour)</h3>
 					<p>
-						Les simulateurs 3D développés par WiseTwin restent la propriété de Wise Software Solution SAS. Le client bénéficie d&apos;une licence d&apos;utilisation non exclusive, non transférable, pour la durée de son abonnement.
+						Les formations développées sur mesure pour le client (simulateurs WiseTrainer, visites immersives WiseTour) sont la propriété exclusive du client dès le paiement intégral du projet. Cette propriété porte sur l&apos;asset 3D et les contenus livrés : le client peut les exploiter sans limite de durée, sur le support de son choix, avec ou sans la plateforme WiseTwin. Les briques logicielles génériques, moteurs et outils utilisés pour leur production restent la propriété de Wise Software Solution SAS.
 					</p>
 					<h3>6.3 Contenus du client</h3>
 					<p>
-						Les contenus créés par le client via WisePaper, ainsi que les données importées, restent la propriété exclusive du client. WiseTwin ne revendique aucun droit sur ces contenus.
+						Les contenus créés par le client via WisePaper, ainsi que les données importées, restent la propriété exclusive du client. Wise Software Solution ne revendique aucun droit sur ces contenus.
 					</p>
 
 					<h2>7. Obligations des parties</h2>
-					<h3>7.1 Obligations de WiseTwin</h3>
+					<h3>7.1 Obligations de Wise Software Solution</h3>
 					<ul>
 						<li>Fournir un accès continu à la plateforme (objectif de disponibilité de 99,5%)</li>
 						<li>Assurer la sécurité et la confidentialité des données</li>
@@ -176,25 +176,25 @@ export default function TermsPage() {
 					<h2>8. Responsabilités et garanties</h2>
 					<h3>8.1 Limitation de responsabilité</h3>
 					<p>
-						La responsabilité de WiseTwin est limitée aux dommages directs et prévisibles. En aucun cas, WiseTwin ne pourra être tenue responsable des dommages indirects tels que perte de données, perte d&apos;exploitation, perte de chiffre d&apos;affaires, ou préjudice d&apos;image.
+						La responsabilité de Wise Software Solution est limitée aux dommages directs et prévisibles. En aucun cas, Wise Software Solution ne pourra être tenue responsable des dommages indirects tels que perte de données, perte d&apos;exploitation, perte de chiffre d&apos;affaires, ou préjudice d&apos;image.
 					</p>
 					<h3>8.2 Plafonnement</h3>
 					<p>
-						La responsabilité de WiseTwin est plafonnée au montant des sommes versées par le client au cours des 12 derniers mois précédant le dommage.
+						La responsabilité de Wise Software Solution est plafonnée au montant des sommes versées par le client au cours des 12 derniers mois précédant le dommage.
 					</p>
 					<h3>8.3 Force majeure</h3>
 					<p>
-						WiseTwin ne pourra être tenue responsable en cas de force majeure, incluant notamment : catastrophes naturelles, pannes de réseau, cyberattaques, décisions gouvernementales.
+						Wise Software Solution ne pourra être tenue responsable en cas de force majeure, incluant notamment : catastrophes naturelles, pannes de réseau, cyberattaques, décisions gouvernementales.
 					</p>
 
 					<h2>9. Protection des données personnelles</h2>
 					<p>
-						WiseTwin traite les données personnelles conformément au RGPD et à la loi Informatique et Libertés. Pour plus de détails, consultez notre <Link href="/privacy" className="text-secondary hover:underline">Politique de Confidentialité</Link>.
+						Wise Software Solution traite les données personnelles conformément au RGPD et à la loi Informatique et Libertés. Pour plus de détails, consultez notre <Link href="/privacy" className="text-secondary hover:underline">Politique de Confidentialité</Link>.
 					</p>
 
 					<h2>10. Modification des conditions</h2>
 					<p>
-						WiseTwin se réserve le droit de modifier les présentes CGV à tout moment. Les clients existants seront informés par email au moins 30 jours avant l&apos;entrée en vigueur des nouvelles conditions. L&apos;utilisation continue du service après cette date vaut acceptation des nouvelles conditions.
+						Wise Software Solution se réserve le droit de modifier les présentes CGV à tout moment. Les clients existants seront informés par email au moins 30 jours avant l&apos;entrée en vigueur des nouvelles conditions. L&apos;utilisation continue du service après cette date vaut acceptation des nouvelles conditions.
 					</p>
 
 					<h2>11. Droit applicable et juridiction</h2>

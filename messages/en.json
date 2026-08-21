@@ -12,9 +12,9 @@
 		},
 		"platform": {
 			"title": "The LMS platform",
-			"description": "The modular LMS for industry: deliver your trainings, ours or your own, with the WisePaper editor and the Ask AI copilot. €3,600/year all included, less if you remove bricks.",
+			"description": "The modular LMS for industry: deliver your trainings, ours or your own, with the WisePaper editor and the Ask AI copilot. From €1,800/year, €3,600/year all included.",
 			"ogTitle": "The WiseTwin LMS platform - The modular LMS for industry",
-			"ogDescription": "Take the LMS alone and import your trainings, or add the WisePaper, Ask AI and training plan bricks. €3,600/year all included. 100% web."
+			"ogDescription": "Take the LMS alone and import your trainings, or add the WisePaper, Ask AI and training plan bricks. From €1,800/year. 100% web."
 		},
 		"wiseatlas": {
 			"description": "Interactive map to showcase your territory, industrial sites and infrastructure with immersive virtual tours.",
@@ -47,7 +47,7 @@
 	"hero": {
 		"badge": "Consulting & digital solutions development for industry",
 		"titlePrefix": "We accelerate the\ndigital transformation",
-		"titleHighlight": "of your industry",
+		"titleHighlight": "of your plant",
 		"subtitle": "Tailor-made tools for training, HSE, 3D, data and AI. Designed for your teams, your sites and your budgets.",
 		"cta": "Tell us about your project",
 		"ctaSecondary": "Our expertise",
@@ -62,7 +62,7 @@
 	"convictions": {
 		"eyebrow": "Manifesto",
 		"title": "We believe",
-		"subtitle": "Operational excellence comes from tools designed for the teams who use them.",
+		"subtitle": "Operational excellence comes from tools designed by and for the teams who use them.",
 		"items": {
 			"tailored": {
 				"title": "Tailor-made, without disrupting daily work",
@@ -145,7 +145,7 @@
 			"proposal": {
 				"when": "Day 2",
 				"title": "Specification",
-				"description": "Clear scope, firm price. Free quote, no commitment."
+				"description": "Clear scope, controlled costs. Free quote, no commitment."
 			},
 			"build": {
 				"when": "Iterations",
@@ -167,8 +167,8 @@
 			"tag": "The platform",
 			"title": "The LMS platform",
 			"description": "Deliver your trainings, ours or your own. Modular by bricks: WisePaper editor, Ask AI, training plans.",
-			"price": "€3,600/yr",
-			"priceNote": "all included, less if you remove bricks",
+			"price": "from €1,800/yr",
+			"priceNote": "€3,600/yr all included, removable bricks",
 			"cta": "Discover the platform"
 		},
 		"bricks": {
@@ -198,12 +198,12 @@
 			"tag": "Communication",
 			"title": "WiseAtlas",
 			"description": "The interactive map to manage and showcase your territory, sites and projects: 3D models, virtual tours and up-to-date data, shareable in one link.",
-			"price": "€3,000/yr",
-			"priceNote": "self-service · turnkey project on quote"
+			"price": "On quote",
+			"priceNote": "self-service or turnkey"
 		},
 		"platformOnly": "Platform",
 		"cta": "Discover",
-		"pricesNote": "Trainings billed once, per project. Platforms per site per year, no commitment. All quotes are free."
+		"pricesNote": "Trainings billed once, per project. LMS per site per year, no commitment. All quotes are free."
 	},
 	"territory": {
 		"eyebrow": "Our territory",
@@ -377,14 +377,31 @@
 						"Administrative onboarding"
 					],
 					"price": "Editor included in the LMS platform, unlimited trainings"
+				},
+				{
+					"tag": "AI & data",
+					"title": "Ask AI, your safety copilot",
+					"description": "Photo-based risk hunts, an incident database searchable in natural language and prevention reports: the platform's AI works on your field reality.",
+					"deployment": "Included in the platform",
+					"process": "The AI cross-references your internal accident history, public accident databases and your training catalog",
+					"interaction": "Chat, workstation photo analysis, dated PDF reports",
+					"useCases": [
+						"Risk hunts",
+						"Prevention reports",
+						"Accident history analysis"
+					],
+					"price": "Ask AI brick: +€800/yr within the platform"
 				}
 			]
 		},
 		"hero": {
-			"title": "Secure your factory",
-			"subtitle": "Replace paper and PDF procedures with virtual simulators of your workshops. Your teams train in realistic conditions on their work environment, rehearse critical situations, and gain autonomy.",
-			"cta": "Request a quote",
-			"badge": "Training platform"
+			"eyebrow": "The platform",
+			"title": "The LMS built for industry",
+			"subtitle": "Deliver your trainings, ours as well as your own. Track every completion, certify your learners, and adjust by bricks: WisePaper editor, Ask AI, training plans.",
+			"price": "from €1,800/yr",
+			"priceNote": "€3,600/yr all included with every brick",
+			"cta": "Request a free quote",
+			"ctaSecondary": "See pricing"
 		},
 		"features": {
 			"title": "Everything you need",
@@ -507,7 +524,7 @@
 	},
 	"advantages": {
 		"title": "Let's build your digital asset together",
-		"subtitle": "What makes the Wise Twin difference",
+		"subtitle": "What makes the WiseTwin difference",
 		"items": {
 			"reactivity": {
 				"label": "Reactive",
@@ -580,10 +597,10 @@
 				"eyebrow": "The LMS platform",
 				"title": "Your place, or ours: you choose",
 				"titleExclusive": "Available in the LMS platform",
-				"description": "Your training is standalone: delivered as a Windows or Mac executable, or as a web build to host on your intranet or link from your own LMS. And if you would rather have us handle everything, our platform delivers it, with tracking and certificates. Never imposed.",
+				"description": "The LMS platform delivers and tracks your trainings, and is modular by bricks: the WisePaper editor, Ask AI and the incident database, training plans and analytics. From €1,800/year, €3,600/year all included.",
 				"cta": "Discover the platform",
 				"eyebrowStandalone": "Delivery",
-				"descriptionPlatform": "The LMS platform delivers and tracks your trainings, and is modular by bricks: the WisePaper editor, Ask AI and the incident database, training plans and analytics. €3,600/year all included, less if you remove bricks."
+				"descriptionPlatform": "The LMS platform delivers and tracks your trainings, and is modular by bricks: the WisePaper editor, Ask AI and the incident database, training plans and analytics. From €1,800/year, €3,600/year all included."
 			}
 		},
 		"wisetrainer": {
@@ -651,7 +668,7 @@
 					"description": "Each step can validate a skill: mandatory PPE, instructions, risk zones. Nothing slips through."
 				},
 				{
-					"title": "Traceable and defensible",
+					"title": "Traceable and justifiable",
 					"description": "Completion and certificates recorded for every visitor, temp worker or subcontractor, with no email account required."
 				}
 			],
@@ -665,7 +682,11 @@
 		"hero": {
 			"title": "Your territory,\nYour vision",
 			"subtitle": "Manage your territorial communication strategy with a tailor-made interactive map",
-			"cta": "Request a quote"
+			"cta": "Request a quote",
+			"eyebrow": "Platform · Communication",
+			"tag": "Communication",
+			"price": "On quote",
+			"priceNote": "Self-service editor or turnkey project: every territory is unique."
 		},
 		"pillars": {
 			"title": "Your territory, your map",
@@ -709,7 +730,8 @@
 					"Modeling from your architect plans",
 					"Visibility with local partners"
 				]
-			}
+			},
+			"label": "Audience"
 		},
 		"howItWorks": {
 			"title": "How it works",
@@ -735,7 +757,8 @@
 					"description": "Put your map online and track your visitors' engagement.",
 					"duration": "Immediate"
 				}
-			}
+			},
+			"calendarTitle": "typical course of a WiseAtlas project"
 		},
 		"useCases": {
 			"title": "Use cases",

@@ -6,11 +6,11 @@
 > 3D, data & AI) that are fast to deploy, affordable, and sized for a single site's
 > budget. It also publishes its own products: the custom trainings WiseTrainer (3D
 > simulators) and WiseTour (immersive safety inductions), billed once per project; the
-> modular LMS platform with its WisePaper editor and Ask AI safety copilot; and
-> WiseAtlas (territorial communication), both yearly subscriptions.
+> modular LMS platform with its WisePaper editor and Ask AI safety copilot (yearly
+> subscription); and WiseAtlas (territorial communication, on quote).
 
 WiseTwin's philosophy: operational excellence and industrial performance come from tools
-designed for the teams who use them, without disrupting their daily work. Digital must be
+designed by and for the teams who use them, without disrupting their daily work. Digital must be
 accessible in price and in design time; answers should be fast, tailor-made, and sized on
 real identified needs. Projects start small: a first focused deliverable builds trust,
 then the tool grows over time. There is no rigid org chart: the team assembles on the fly
@@ -31,7 +31,7 @@ Primary language: French (site available at /fr and /en). Website: https://wiset
   industrial performance, change management
 
 How it works: day 1, a free discussion (on site if possible); day 2, a specification
-with clear scope and firm price (free quote, no commitment); the following weeks,
+with clear scope and controlled costs (free quote, no commitment); the following weeks,
 iterative development with a fast first deliverable; then deployment and ongoing
 support. Deliverables belong to the client.
 
@@ -48,17 +48,17 @@ cost); platforms are yearly subscriptions per site that clients run autonomously
 - WiseTour (€10,000 to €20,000 per project, depending on the site) — immersive safety
   induction created from a 3D capture of the client's site. Billed once; standalone
   like WiseTrainer, with optional delivery via the WiseTwin LMS.
-- The LMS platform (€3,600/year all included, less if bricks are removed; core alone
-  from €1,800/year) — the modular LMS: hosting and delivery of trainings (built by
+- The LMS platform (from €1,800/year for the core alone; €3,600/year all included
+  with every brick) — the modular LMS: hosting and delivery of trainings (built by
   WiseTwin or imported by the client), completion tracking, verifiable certifications,
   unlimited learners. Optional bricks: WisePaper (€600/yr, AI editor turning PDF, Word
   and PowerPoint documents into interactive trainings with quizzes), Ask AI with the
   incident database (€800/yr, safety copilot: photo-based risk hunts, prevention
   reports, accident history searchable in natural language), training plans and
   analytics (€400/yr). Clients can take the LMS alone and import their own trainings.
-- WiseAtlas (from €3,000/year self-service) — interactive map editor for territories
-  and industrial infrastructure. 3D models, virtual tours, up-to-date data, shareable
-  in one link. Turnkey map projects are available on quote.
+- WiseAtlas (on quote) — interactive map editor for territories and industrial
+  infrastructure, used self-service or delivered as a turnkey project. 3D models,
+  virtual tours, up-to-date data, shareable in one link.
 
 ## The team
 

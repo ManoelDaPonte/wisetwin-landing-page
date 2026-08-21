@@ -12,9 +12,9 @@
 		},
 		"platform": {
 			"title": "La plateforme LMS",
-			"description": "Le LMS modulable pour l'industrie : diffusez vos formations, les nôtres ou les vôtres, avec l'éditeur WisePaper et l'IA Ask AI. 3 600€/an tout compris, moins si vous retirez des briques.",
+			"description": "Le LMS modulable pour l'industrie : diffusez vos formations, les nôtres ou les vôtres, avec l'éditeur WisePaper et l'IA Ask AI. À partir de 1 800€/an, 3 600€/an tout compris.",
 			"ogTitle": "La plateforme LMS WiseTwin - Le LMS modulable pour l'industrie",
-			"ogDescription": "Prenez le LMS seul et importez vos formations, ou ajoutez les briques WisePaper, Ask AI et plans de formation. 3 600€/an tout compris. 100% web."
+			"ogDescription": "Prenez le LMS seul et importez vos formations, ou ajoutez les briques WisePaper, Ask AI et plans de formation. À partir de 1 800€/an. 100% web."
 		},
 		"wiseatlas": {
 			"description": "Carte interactive pour valoriser votre territoire, vos sites industriels et vos infrastructures avec des visites virtuelles immersives.",
@@ -47,7 +47,7 @@
 	"hero": {
 		"badge": "Conseil & développement de solutions digitales pour l'industrie",
 		"titlePrefix": "Nous accélérons la\ntransformation digitale",
-		"titleHighlight": "de votre industrie",
+		"titleHighlight": "de votre usine",
 		"subtitle": "Des outils sur mesure pour la formation, le HSE, la 3D, la data et l'IA. Pensés pour vos équipes, vos sites et vos budgets.",
 		"cta": "Décrivez-nous votre projet",
 		"ctaSecondary": "Nos savoir-faire",
@@ -62,7 +62,7 @@
 	"convictions": {
 		"eyebrow": "Manifeste",
 		"title": "Nous sommes convaincus",
-		"subtitle": "L'excellence opérationnelle passe par des outils pensés pour les équipes qui les utilisent.",
+		"subtitle": "L'excellence opérationnelle passe par des outils pensés par et pour les équipes qui les utilisent.",
 		"items": {
 			"tailored": {
 				"title": "Le sur-mesure, sans bouleverser le quotidien",
@@ -145,7 +145,7 @@
 			"proposal": {
 				"when": "Jour 2",
 				"title": "Cahier des charges",
-				"description": "Périmètre clair, prix ferme. Devis gratuit, sans engagement."
+				"description": "Périmètre clair, coûts maîtrisés. Devis gratuit, sans engagement."
 			},
 			"build": {
 				"when": "Itérations",
@@ -167,8 +167,8 @@
 			"tag": "La plateforme",
 			"title": "La plateforme LMS",
 			"description": "Diffusez vos formations, les nôtres ou les vôtres. Modulable par briques : éditeur WisePaper, IA Ask AI, plans de formation.",
-			"price": "3 600€/an",
-			"priceNote": "tout compris, moins si vous retirez des briques",
+			"price": "à partir de 1 800€/an",
+			"priceNote": "3 600€/an tout compris, briques désactivables",
 			"cta": "Découvrir la plateforme"
 		},
 		"bricks": {
@@ -198,12 +198,12 @@
 			"tag": "Communication",
 			"title": "WiseAtlas",
 			"description": "La carte interactive pour piloter et valoriser votre territoire, vos sites et vos projets : maquettes 3D, visites virtuelles et données à jour, partageables en un lien.",
-			"price": "3 000€/an",
-			"priceNote": "en autonomie · projet clé en main sur devis"
+			"price": "Sur devis",
+			"priceNote": "en autonomie ou clé en main"
 		},
 		"platformOnly": "Plateforme",
 		"cta": "Découvrir",
-		"pricesNote": "Formations facturées une seule fois, au projet. Plateformes par site et par an, sans engagement. Tous les devis sont gratuits."
+		"pricesNote": "Formations facturées une seule fois, au projet. LMS par site et par an, sans engagement. Tous les devis sont gratuits."
 	},
 	"territory": {
 		"eyebrow": "Notre territoire",
@@ -377,14 +377,31 @@
 						"Onboarding administratif"
 					],
 					"price": "Éditeur inclus dans la plateforme LMS, formations illimitées"
+				},
+				{
+					"tag": "IA & données",
+					"title": "Ask AI, votre copilote sécurité",
+					"description": "Chasse aux risques par photo, base d'incidents interrogeable en langage naturel et rapports de prévention : l'IA de la plateforme travaille sur votre réalité terrain.",
+					"deployment": "Inclus dans la plateforme",
+					"process": "L'IA croise votre accidentologie interne, les bases publiques d'accidents et votre catalogue de formations",
+					"interaction": "Chat, analyse de photos de postes, rapports PDF datés",
+					"useCases": [
+						"Chasse aux risques",
+						"Rapports de prévention",
+						"Analyse d'accidentologie"
+					],
+					"price": "Brique Ask AI : +800€/an dans la plateforme"
 				}
 			]
 		},
 		"hero": {
-			"title": "Sécurisez votre usine",
-			"subtitle": "Remplacez les procédures papiers et PDF par des simulateurs virtuels de vos ateliers. Vos équipes s'entraînent en conditions réalistes sur leur environnement de travail, répètent les situations critiques, et gagnent en autonomie.",
-			"cta": "Demander un devis",
-			"badge": "Plateforme de formation"
+			"eyebrow": "La plateforme",
+			"title": "Le LMS taillé pour l'industrie",
+			"subtitle": "Diffusez vos formations, les nôtres comme les vôtres. Suivez chaque complétion, certifiez vos apprenants, et modulez par briques : éditeur WisePaper, IA Ask AI, plans de formation.",
+			"price": "à partir de 1 800€/an",
+			"priceNote": "3 600€/an tout compris avec toutes les briques",
+			"cta": "Demander un devis gratuit",
+			"ctaSecondary": "Voir les tarifs"
 		},
 		"features": {
 			"title": "Tout ce dont vous avez besoin",
@@ -507,7 +524,7 @@
 	},
 	"advantages": {
 		"title": "Construisons ensemble votre actif numérique",
-		"subtitle": "Ce qui fait la différence Wise Twin",
+		"subtitle": "Ce qui fait la différence WiseTwin",
 		"items": {
 			"reactivity": {
 				"label": "Réactif",
@@ -580,10 +597,10 @@
 				"eyebrow": "La plateforme LMS",
 				"title": "Chez vous, ou chez nous : vous choisissez",
 				"titleExclusive": "Disponible dans la plateforme LMS",
-				"description": "Votre formation est autonome : livrée en exécutable Windows ou Mac, ou en build web à héberger sur votre intranet ou à lier depuis votre propre LMS. Et si vous préférez qu'on s'occupe de tout, notre plateforme la diffuse, avec suivi et certificats. Jamais imposée.",
+				"description": "La plateforme LMS diffuse et trace vos formations, et se module par briques : l'éditeur WisePaper, Ask AI et la base d'incidents, les plans de formation et analytiques. À partir de 1 800€/an, 3 600€/an tout compris.",
 				"cta": "Découvrir la plateforme",
 				"eyebrowStandalone": "La diffusion",
-				"descriptionPlatform": "La plateforme LMS diffuse et trace vos formations, et se module par briques : l'éditeur WisePaper, Ask AI et la base d'incidents, les plans de formation et analytiques. 3 600€/an tout compris, moins si vous retirez des briques."
+				"descriptionPlatform": "La plateforme LMS diffuse et trace vos formations, et se module par briques : l'éditeur WisePaper, Ask AI et la base d'incidents, les plans de formation et analytiques. À partir de 1 800€/an, 3 600€/an tout compris."
 			}
 		},
 		"wisetrainer": {
@@ -652,7 +669,7 @@
 					"description": "Chaque étape peut valider un acquis : EPI obligatoires, consignes, zones à risque. Rien ne passe à la trappe."
 				},
 				{
-					"title": "Traçable et opposable",
+					"title": "Traçable et justifiable",
 					"description": "Complétion et certificats enregistrés pour chaque visiteur, intérimaire ou sous-traitant, sans compte email obligatoire."
 				}
 			]
@@ -665,7 +682,11 @@
 		"hero": {
 			"title": "Votre territoire,\nVotre vision",
 			"subtitle": "Pilotez votre stratégie de communication territoriale avec une carte interactive sur mesure",
-			"cta": "Demander un devis"
+			"cta": "Demander un devis",
+			"eyebrow": "Plateforme · Communication",
+			"tag": "Communication",
+			"price": "Sur devis",
+			"priceNote": "Éditeur en autonomie ou projet clé en main : chaque territoire est unique."
 		},
 		"pillars": {
 			"title": "Votre territoire, votre carte",
@@ -709,7 +730,8 @@
 					"Modélisation à partir de vos plans d'architecte",
 					"Visibilité auprès des partenaires locaux"
 				]
-			}
+			},
+			"label": "Public"
 		},
 		"howItWorks": {
 			"title": "Comment ça marche",
@@ -735,7 +757,8 @@
 					"description": "Mettez en ligne votre carte et suivez l'engagement de vos visiteurs.",
 					"duration": "Immédiat"
 				}
-			}
+			},
+			"calendarTitle": "déroulé type d'un projet WiseAtlas"
 		},
 		"useCases": {
 			"title": "Cas d'usage",

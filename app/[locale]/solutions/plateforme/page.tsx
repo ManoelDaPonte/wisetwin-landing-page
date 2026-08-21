@@ -86,12 +86,12 @@ export default async function PlatformPage({
 					url: `https://wisetwin.eu/${locale}/solutions/plateforme`,
 					offers: {
 						"@type": "Offer",
-						price: "3600",
+						price: "1800",
 						priceCurrency: "EUR",
 						description:
 							locale === "fr"
-								? "Plateforme LMS à 3 600€/an par site tout compris, moins si vous retirez des briques. Socle seul à partir de 1 800€/an. Formations sur mesure facturées au projet : WiseTrainer 5 000 à 15 000€, WiseTour 10 000 à 20 000€"
-								: "LMS platform at €3,600/year per site all included, less if you remove bricks. Core alone from €1,800/year. Custom trainings billed per project: WiseTrainer €5,000 to €15,000, WiseTour €10,000 to €20,000",
+								? "Plateforme LMS à partir de 1 800€/an par site (socle seul), 3 600€/an tout compris avec toutes les briques. Formations sur mesure facturées au projet : WiseTrainer 5 000 à 15 000€, WiseTour 10 000 à 20 000€"
+								: "LMS platform from €1,800/year per site (core alone), €3,600/year all included with every brick. Custom trainings billed per project: WiseTrainer €5,000 to €15,000, WiseTour €10,000 to €20,000",
 					},
 					provider: {
 						"@type": "Organization",

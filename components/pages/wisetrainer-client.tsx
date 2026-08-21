@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@/i18n/navigation";
+import { motion, useReducedMotion } from "framer-motion";
 import {
 	PenLine,
 	BarChart3,
@@ -15,23 +16,33 @@ import {
 	Workflow,
 	MousePointerClick,
 	Sparkles,
+	ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
+import { Reveal } from "@/components/ui/reveal";
 import Image from "next/image";
-import { ParallaxImage } from "@/components/ui/parallax-image";
 import {
-	AdvantagesSection,
 	ModularPricingSection,
 	SecuritySection,
 } from "@/components/sections";
 
-// Posters indispensables : le chargement vidéo peut rester bloqué (readyState 0)
+const EASE = [0.21, 0.47, 0.32, 0.98] as const;
+
+// Grille de plan technique, signature industrielle commune aux pages produit
+const blueprintGrid = {
+	backgroundImage:
+		"linear-gradient(color-mix(in oklab, var(--color-border) 45%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in oklab, var(--color-border) 45%, transparent) 1px, transparent 1px)",
+	backgroundSize: "44px 44px",
+};
+
+// Posters indispensables : le chargement vidéo peut rester bloqué (readyState 0).
+// Le 4e panneau (Ask AI) est un visuel généré en CSS, pas un média.
 const productMedia = [
 	{
 		type: "video",
-		src: "/video/capture-3dgs-entrepot.mp4",
-		poster: "/image/wisetour-poster.jpg",
+		src: "/video/wisetour-capture.mp4",
+		poster: "/image/wisetour-capture-poster.jpg",
 		fit: "cover",
 	},
 	{
@@ -45,7 +56,38 @@ const productMedia = [
 		src: "/image/formation-industrielle-automatisee.svg",
 		fit: "contain",
 	},
+	{
+		type: "askai",
+		src: "",
+		fit: "cover",
+	},
 ] as const;
+
+// Panneau visuel du volet Ask AI (pas de média : généré en CSS)
+function AskAiPanel() {
+	return (
+		<div className="absolute inset-0 bg-gradient-to-br from-[#0f0b40] via-[#0a1a2a] to-[#04060f] flex items-center justify-center">
+			<div
+				aria-hidden
+				className="absolute inset-0 opacity-20"
+				style={{
+					backgroundImage:
+						"linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px)",
+					backgroundSize: "44px 44px",
+				}}
+			/>
+			<div className="relative text-center">
+				<div className="mx-auto size-20 rounded-2xl bg-secondary/15 border border-secondary/30 flex items-center justify-center mb-6">
+					<Sparkles className="size-10 text-secondary" />
+				</div>
+				<p className="font-mono text-xs uppercase tracking-[0.3em] text-white/60 mb-2">
+					WiseTwin AI
+				</p>
+				<p className="text-3xl font-bold text-white">Ask AI</p>
+			</div>
+		</div>
+	);
+}
 
 function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 	const items = t.raw("products.items") as Array<{
@@ -97,7 +139,7 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 			{/* Desktop: sticky scroll layout */}
 			<div className="hidden lg:grid lg:grid-cols-2 min-h-screen">
 				{/* Sticky image side */}
-				<div className="relative h-screen sticky top-0">
+				<div className="h-screen sticky top-0">
 					{productMedia.map((media, i) => (
 						<div
 							key={i}
@@ -114,7 +156,7 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 									playsInline
 									className="absolute inset-0 w-full h-full object-cover"
 								/>
-							) : (
+							) : media.type === "image" ? (
 								<Image
 									src={media.src}
 									alt={items[i]?.title ?? ""}
@@ -126,8 +168,11 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 									}
 									priority={i === 0}
 								/>
+							) : (
+								<AskAiPanel />
 							)}
-							<div className="absolute inset-0 bg-black/40" />
+							{/* Voile très léger, juste pour la lisibilité des indicateurs */}
+							<div className="absolute inset-0 bg-black/10" />
 						</div>
 					))}
 
@@ -220,6 +265,8 @@ function ProductsShowcase({ t }: { t: ReturnType<typeof useTranslations> }) {
 										playsInline
 										className="absolute inset-0 w-full h-full object-cover"
 									/>
+								) : media?.type === "askai" ? (
+									<AskAiPanel />
 								) : (
 									<Image
 										src={media?.src ?? "/placeholder.png"}
@@ -296,39 +343,109 @@ const featureGroups = [
 
 export default function WiseTrainerClient() {
 	const t = useTranslations("platform");
+	const reduceMotion = useReducedMotion();
+
+	const container = {
+		hidden: {},
+		show: { transition: { staggerChildren: 0.08 } },
+	};
+	const item = reduceMotion
+		? { hidden: { opacity: 1, y: 0 }, show: { opacity: 1, y: 0 } }
+		: {
+				hidden: { opacity: 0, y: 24 },
+				show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+			};
+
 	return (
 		<main>
-			{/* Hero */}
-			<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-				<ParallaxImage
-					src="/image/WiseTrainer.webp"
-					alt="WiseTrainer LMS"
-				/>
-				<div className="absolute inset-0 hero-overlay" />
+			{/* Hero : positionnement LMS, sur grille de plan */}
+			<div className="relative overflow-hidden border-b border-border bg-background">
+				<div aria-hidden className="absolute inset-0" style={blueprintGrid} />
+				<div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+				<div className="container mx-auto max-w-7xl px-4 relative pt-36 pb-20 md:pt-44 md:pb-24">
+					<div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+						<motion.div variants={container} initial="hidden" animate="show">
+							<motion.p
+								variants={item}
+								className="text-xs font-mono uppercase tracking-[0.2em] text-secondary mb-4"
+							>
+								{t("hero.eyebrow")}
+							</motion.p>
+							<motion.h1
+								variants={item}
+								className="text-4xl md:text-6xl font-bold tracking-tight mb-5"
+							>
+								{t("hero.title")}
+							</motion.h1>
+							<motion.p
+								variants={item}
+								className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8"
+							>
+								{t("hero.subtitle")}
+							</motion.p>
 
-				<div className="relative z-10 container mx-auto max-w-7xl px-4">
-					<div className="text-center max-w-3xl mx-auto">
-						<h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-foreground">
-							{t("hero.title")}
-						</h1>
-						<p className="text-lg lg:text-xl text-foreground/70 mb-10 leading-relaxed">
-							{t("hero.subtitle")}
-						</p>
-						<Button size="lg" asChild>
-							<Link href="/#contact">
-								<MessageCircle className="size-4 mr-2" />
-								{t("hero.cta")}
-							</Link>
-						</Button>
+							<motion.div
+								variants={item}
+								className="flex flex-wrap items-center gap-x-8 gap-y-4 mb-9"
+							>
+								<span className="text-4xl font-bold tabular-nums">
+									{t("hero.price")}
+								</span>
+								<span className="text-sm text-muted-foreground max-w-sm">
+									{t("hero.priceNote")}
+								</span>
+							</motion.div>
+
+							<motion.div variants={item} className="flex flex-col sm:flex-row gap-4">
+								<Button size="lg" className="h-12 px-7" asChild>
+									<Link href="/#contact">
+										<MessageCircle className="size-4 mr-2" />
+										{t("hero.cta")}
+									</Link>
+								</Button>
+								<Button size="lg" variant="outline" className="h-12 px-7" asChild>
+									<a href="#pricing">{t("hero.ctaSecondary")}</a>
+								</Button>
+							</motion.div>
+						</motion.div>
+
+						{/* La plateforme, dans un cadre navigateur */}
+						<motion.div
+							initial={reduceMotion ? false : { opacity: 0, scale: 0.96, x: 24 }}
+							animate={{ opacity: 1, scale: 1, x: 0 }}
+							transition={{ duration: 0.9, delay: 0.3, ease: EASE }}
+						>
+							<div className="relative bg-card border border-border rounded-xl overflow-hidden shadow-2xl">
+								<div className="flex items-center gap-2 px-4 py-2.5 bg-muted/50 border-b border-border">
+									<div className="flex gap-1.5">
+										<div className="size-2.5 rounded-full bg-red-500/80" />
+										<div className="size-2.5 rounded-full bg-yellow-500/80" />
+										<div className="size-2.5 rounded-full bg-green-500/80" />
+									</div>
+									<div className="flex-1 text-center">
+										<span className="text-xs text-muted-foreground font-mono">
+											app.wisetwin.eu
+										</span>
+									</div>
+								</div>
+								<div className="relative w-full aspect-video">
+									<Image
+										src="/image/WiseTrainer.webp"
+										alt={t("hero.title")}
+										fill
+										className="object-cover object-top"
+										sizes="(max-width: 1024px) 100vw, 50vw"
+										priority
+									/>
+								</div>
+							</div>
+						</motion.div>
 					</div>
 				</div>
-			</section>
+			</div>
 
 			{/* Products - immersive scroll showcase, juste après le hero */}
 			<ProductsShowcase t={t} />
-
-			{/* Advantages */}
-			<AdvantagesSection />
 
 			{/* Pricing */}
 			<ModularPricingSection />
@@ -344,39 +461,49 @@ export default function WiseTrainerClient() {
 				}}
 			>
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-					{featureGroups.map((group) => {
+					{featureGroups.map((group, index) => {
 						const Icon = group.icon;
 						const items = t.raw(
 							`features.${group.key}.items`,
 						) as string[];
 						return (
-							<div
-								key={group.key}
-								className="bg-card border border-border rounded-xl p-6 flex flex-col"
-							>
-								<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-									<Icon className="size-6 text-secondary" />
+							<Reveal key={group.key} delay={index * 0.06} className="h-full">
+								<div className="relative h-full bg-card border border-border rounded-2xl p-6 flex flex-col hover:border-secondary/40 transition-colors overflow-hidden">
+									<span
+										aria-hidden
+										className="absolute -top-6 -right-2 font-mono font-bold text-[110px] leading-none text-secondary/[0.06] select-none"
+									>
+										{index + 1}
+									</span>
+									<div className="flex items-center justify-between mb-4">
+										<div className="size-12 bg-secondary/10 rounded-lg flex items-center justify-center">
+											<Icon className="size-6 text-secondary" />
+										</div>
+										<span className="text-xs font-mono uppercase tracking-[0.2em] text-secondary">
+											MOD-{String(index + 1).padStart(2, "0")}
+										</span>
+									</div>
+									<h3 className="text-lg font-semibold mb-2">
+										{t(`features.${group.key}.title`)}
+									</h3>
+									<p className="text-sm text-muted-foreground mb-4">
+										{t(`features.${group.key}.description`)}
+									</p>
+									<ul className="space-y-2 mt-auto">
+										{items.map((item, i) => (
+											<li
+												key={i}
+												className="flex items-start gap-2"
+											>
+												<Check className="size-4 text-secondary shrink-0 mt-0.5" />
+												<span className="text-sm">
+													{item}
+												</span>
+											</li>
+										))}
+									</ul>
 								</div>
-								<h3 className="text-lg font-semibold mb-2">
-									{t(`features.${group.key}.title`)}
-								</h3>
-								<p className="text-sm text-muted-foreground mb-4">
-									{t(`features.${group.key}.description`)}
-								</p>
-								<ul className="space-y-2 mt-auto">
-									{items.map((item, i) => (
-										<li
-											key={i}
-											className="flex items-start gap-2"
-										>
-											<Check className="size-4 text-secondary shrink-0 mt-0.5" />
-											<span className="text-sm">
-												{item}
-											</span>
-										</li>
-									))}
-								</ul>
-							</div>
+							</Reveal>
 						);
 					})}
 				</div>
@@ -385,24 +512,29 @@ export default function WiseTrainerClient() {
 			{/* Security & compliance — platform-specific, lives here rather than on the homepage */}
 			<SecuritySection variant="default" />
 
-			{/* CTA */}
+			{/* CTA final, façon pages briques */}
 			<Section id="cta" variant="muted">
-				<div className="text-center max-w-2xl mx-auto">
-					<h2 className="text-3xl font-bold mb-4">
-						{t("cta.title")}
-					</h2>
-					<p className="text-muted-foreground mb-8">
-						{t("cta.description")}
-					</p>
-					<div className="flex justify-center">
-						<Button size="lg" asChild>
-							<Link href="/#contact">
-								<MessageCircle className="size-4 mr-2" />
-								{t("cta.button")}
-							</Link>
-						</Button>
+				<Reveal>
+					<div className="rounded-3xl border-2 border-secondary/40 bg-card p-8 md:p-12 relative overflow-hidden">
+						<div aria-hidden className="absolute inset-0" style={blueprintGrid} />
+						<div className="relative text-center max-w-2xl mx-auto">
+							<h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3">
+								{t("cta.title")}
+							</h2>
+							<p className="text-muted-foreground mb-8">
+								{t("cta.description")}
+							</p>
+							<div className="flex justify-center">
+								<Button size="lg" className="h-12 px-7" asChild>
+									<Link href="/#contact">
+										{t("cta.button")}
+										<ArrowRight className="size-4 ml-2" />
+									</Link>
+								</Button>
+							</div>
+						</div>
 					</div>
-				</div>
+				</Reveal>
 			</Section>
 		</main>
 	);

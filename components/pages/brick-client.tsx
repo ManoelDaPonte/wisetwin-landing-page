@@ -33,8 +33,8 @@ const media: Record<
 > = {
 	wisetour: {
 		type: "video",
-		src: "/video/capture-3dgs-entrepot.mp4",
-		poster: "/image/wisetour-poster.jpg",
+		src: "/video/wisetour-capture.mp4",
+		poster: "/image/wisetour-capture-poster.jpg",
 	},
 	wisetrainer: {
 		type: "video",
