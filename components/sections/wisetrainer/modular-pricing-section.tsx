@@ -8,8 +8,9 @@ import {
 	Check,
 	Cuboid,
 	FileText,
+	Footprints,
 	Sparkles,
-	Route,
+	Plug,
 	ArrowRight,
 	MessageCircle,
 	MinusCircle,
@@ -18,8 +19,9 @@ import {
 // Les briques du LMS : activables/désactivables, le prix suit
 const modules = [
 	{ key: "wisepaper", icon: FileText },
+	{ key: "wisetour", icon: Footprints },
 	{ key: "askai", icon: Sparkles },
-	{ key: "management", icon: Route },
+	{ key: "integrations", icon: Plug },
 ] as const;
 
 export function ModularPricingSection() {

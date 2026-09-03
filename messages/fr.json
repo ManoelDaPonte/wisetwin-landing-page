@@ -12,9 +12,9 @@
 		},
 		"platform": {
 			"title": "La plateforme LMS",
-			"description": "Le LMS modulable pour l'industrie : diffusez vos formations, les nôtres ou les vôtres, avec l'éditeur WisePaper et l'IA Ask AI. À partir de 1 800€/an, 3 600€/an tout compris.",
+			"description": "Le LMS modulable pour l'industrie : diffusez vos formations, les nôtres ou les vôtres, avec les éditeurs WisePaper et WiseTour et l'IA Ask AI. À partir de 600€/an, 3 600€/an tout compris.",
 			"ogTitle": "La plateforme LMS WiseTwin - Le LMS modulable pour l'industrie",
-			"ogDescription": "Prenez le LMS seul et importez vos formations, ou ajoutez les briques WisePaper, Ask AI et plans de formation. À partir de 1 800€/an. 100% web."
+			"ogDescription": "Prenez le LMS seul et importez vos formations, ou ajoutez les briques WisePaper, éditeur WiseTour, Ask AI et intégrations SSO, webhooks, API. À partir de 600€/an. 100% web."
 		},
 		"wiseatlas": {
 			"description": "Carte interactive pour valoriser votre territoire, vos sites industriels et vos infrastructures avec des visites virtuelles immersives.",
@@ -166,8 +166,8 @@
 		"platform": {
 			"tag": "La plateforme",
 			"title": "La plateforme LMS",
-			"description": "Diffusez vos formations, les nôtres ou les vôtres. Modulable par briques : éditeur WisePaper, IA Ask AI, plans de formation.",
-			"price": "à partir de 1 800€/an",
+			"description": "Diffusez vos formations, les nôtres ou les vôtres. Modulable par briques : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations SSO et API.",
+			"price": "à partir de 600€/an",
 			"priceNote": "3 600€/an tout compris, briques désactivables",
 			"cta": "Découvrir la plateforme"
 		},
@@ -397,8 +397,8 @@
 		"hero": {
 			"eyebrow": "La plateforme",
 			"title": "Le LMS taillé pour l'industrie",
-			"subtitle": "Diffusez vos formations, les nôtres comme les vôtres. Suivez chaque complétion, certifiez vos apprenants, et modulez par briques : éditeur WisePaper, IA Ask AI, plans de formation.",
-			"price": "à partir de 1 800€/an",
+			"subtitle": "Diffusez vos formations, les nôtres comme les vôtres. Suivez chaque complétion, certifiez vos apprenants, et modulez par briques : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations SSO et API.",
+			"price": "à partir de 600€/an",
 			"priceNote": "3 600€/an tout compris avec toutes les briques",
 			"cta": "Demander un devis gratuit",
 			"ctaSecondary": "Voir les tarifs"
@@ -479,14 +479,16 @@
 		"perYear": "€/an",
 		"core": {
 			"badge": "Le socle LMS",
-			"price": "1 800",
+			"price": "600",
 			"note": "Par site, sans engagement.",
-			"description": "Tout pour diffuser et suivre vos formations, y compris celles que vous possédez déjà.",
+			"description": "Tout pour diffuser, suivre et piloter vos formations, y compris celles que vous possédez déjà.",
 			"features": [
 				"Hébergement et diffusion de vos formations, créées par nous ou importées",
 				"Suivi de complétion et historique des réponses",
 				"Certifications vérifiables",
-				"Apprenants illimités"
+				"Apprenants illimités",
+				"Plans de formation multi-parcours et relances automatiques",
+				"Tableaux de bord, analytiques et exports"
 			],
 			"cta": "Demander un devis gratuit"
 		},
@@ -496,19 +498,24 @@
 			"note": "Retirez une brique : le prix descend.",
 			"items": {
 				"wisepaper": {
-					"title": "WisePaper",
+					"title": "Éditeur WisePaper",
 					"price": "600",
 					"description": "L'éditeur IA qui transforme vos PDF, Word et PowerPoint en formations interactives avec quiz."
+				},
+				"wisetour": {
+					"title": "Éditeur WiseTour",
+					"price": "400",
+					"description": "Créez vous-même vos visites immersives à partir d'une capture 3D de vos sites : points d'intérêt, quiz, diffusion dans le LMS."
 				},
 				"askai": {
 					"title": "Ask AI & base d'incidents",
 					"price": "800",
 					"description": "Le copilote sécurité : chasse aux risques par photo, rapports de prévention, accidentologie interrogeable en langage naturel."
 				},
-				"management": {
-					"title": "Plans de formation & analytiques",
-					"price": "400",
-					"description": "Parcours multi-formations, relances automatiques, tableaux de bord détaillés et exports."
+				"integrations": {
+					"title": "SSO, webhooks & API",
+					"price": "1 200",
+					"description": "Connexion via votre fournisseur d'identité (SAML, OAuth), webhooks vers vos outils et API pour brancher la plateforme sur votre SI."
 				}
 			}
 		},
@@ -597,10 +604,10 @@
 				"eyebrow": "La plateforme LMS",
 				"title": "Chez vous, ou chez nous : vous choisissez",
 				"titleExclusive": "Disponible dans la plateforme LMS",
-				"description": "La plateforme LMS diffuse et trace vos formations, et se module par briques : l'éditeur WisePaper, Ask AI et la base d'incidents, les plans de formation et analytiques. À partir de 1 800€/an, 3 600€/an tout compris.",
+				"description": "La plateforme LMS diffuse, trace et pilote vos formations, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la base d'incidents, les intégrations SSO, webhooks et API. À partir de 600€/an, 3 600€/an tout compris.",
 				"cta": "Découvrir la plateforme",
 				"eyebrowStandalone": "La diffusion",
-				"descriptionPlatform": "La plateforme LMS diffuse et trace vos formations, et se module par briques : l'éditeur WisePaper, Ask AI et la base d'incidents, les plans de formation et analytiques. À partir de 1 800€/an, 3 600€/an tout compris."
+				"descriptionPlatform": "La plateforme LMS diffuse, trace et pilote vos formations, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la base d'incidents, les intégrations SSO, webhooks et API. À partir de 600€/an, 3 600€/an tout compris."
 			}
 		},
 		"wisetrainer": {

@@ -12,9 +12,9 @@
 		},
 		"platform": {
 			"title": "The LMS platform",
-			"description": "The modular LMS for industry: deliver your trainings, ours or your own, with the WisePaper editor and the Ask AI copilot. From €1,800/year, €3,600/year all included.",
+			"description": "The modular LMS for industry: deliver your trainings, ours or your own, with the WisePaper and WiseTour editors and the Ask AI copilot. From €600/year, €3,600/year all included.",
 			"ogTitle": "The WiseTwin LMS platform - The modular LMS for industry",
-			"ogDescription": "Take the LMS alone and import your trainings, or add the WisePaper, Ask AI and training plan bricks. From €1,800/year. 100% web."
+			"ogDescription": "Take the LMS alone and import your trainings, or add the WisePaper, WiseTour editor, Ask AI and SSO, webhooks, API integration bricks. From €600/year. 100% web."
 		},
 		"wiseatlas": {
 			"description": "Interactive map to showcase your territory, industrial sites and infrastructure with immersive virtual tours.",
@@ -166,8 +166,8 @@
 		"platform": {
 			"tag": "The platform",
 			"title": "The LMS platform",
-			"description": "Deliver your trainings, ours or your own. Modular by bricks: WisePaper editor, Ask AI, training plans.",
-			"price": "from €1,800/yr",
+			"description": "Deliver your trainings, ours or your own. Modular by bricks: WisePaper and WiseTour editors, Ask AI, SSO and API integrations.",
+			"price": "from €600/yr",
 			"priceNote": "€3,600/yr all included, removable bricks",
 			"cta": "Discover the platform"
 		},
@@ -397,8 +397,8 @@
 		"hero": {
 			"eyebrow": "The platform",
 			"title": "The LMS built for industry",
-			"subtitle": "Deliver your trainings, ours as well as your own. Track every completion, certify your learners, and adjust by bricks: WisePaper editor, Ask AI, training plans.",
-			"price": "from €1,800/yr",
+			"subtitle": "Deliver your trainings, ours as well as your own. Track every completion, certify your learners, and adjust by bricks: WisePaper and WiseTour editors, Ask AI, SSO and API integrations.",
+			"price": "from €600/yr",
 			"priceNote": "€3,600/yr all included with every brick",
 			"cta": "Request a free quote",
 			"ctaSecondary": "See pricing"
@@ -479,14 +479,16 @@
 		"perYear": "€/yr",
 		"core": {
 			"badge": "The LMS core",
-			"price": "1,800",
+			"price": "600",
 			"note": "Per site, no commitment.",
-			"description": "Everything to deliver and track your trainings, including the ones you already own.",
+			"description": "Everything to deliver, track and steer your trainings, including the ones you already own.",
 			"features": [
 				"Hosting and delivery of your trainings, built by us or imported",
 				"Completion tracking and answer history",
 				"Verifiable certifications",
-				"Unlimited learners"
+				"Unlimited learners",
+				"Multi-path training plans and automatic reminders",
+				"Dashboards, analytics and exports"
 			],
 			"cta": "Request a free quote"
 		},
@@ -496,19 +498,24 @@
 			"note": "Remove a brick: the price goes down.",
 			"items": {
 				"wisepaper": {
-					"title": "WisePaper",
+					"title": "WisePaper editor",
 					"price": "600",
 					"description": "The AI editor that turns your PDF, Word and PowerPoint files into interactive trainings with quizzes."
+				},
+				"wisetour": {
+					"title": "WiseTour editor",
+					"price": "400",
+					"description": "Build your own immersive tours from a 3D capture of your sites: points of interest, quizzes, delivery in the LMS."
 				},
 				"askai": {
 					"title": "Ask AI & incident database",
 					"price": "800",
 					"description": "The safety copilot: photo-based risk hunts, prevention reports, accident history searchable in natural language."
 				},
-				"management": {
-					"title": "Training plans & analytics",
-					"price": "400",
-					"description": "Multi-training paths, automatic reminders, detailed dashboards and exports."
+				"integrations": {
+					"title": "SSO, webhooks & API",
+					"price": "1,200",
+					"description": "Sign-in through your identity provider (SAML, OAuth), webhooks to your tools and an API to plug the platform into your IT system."
 				}
 			}
 		},
@@ -597,10 +604,10 @@
 				"eyebrow": "The LMS platform",
 				"title": "Your place, or ours: you choose",
 				"titleExclusive": "Available in the LMS platform",
-				"description": "The LMS platform delivers and tracks your trainings, and is modular by bricks: the WisePaper editor, Ask AI and the incident database, training plans and analytics. From €1,800/year, €3,600/year all included.",
+				"description": "The LMS platform delivers, tracks and steers your trainings, and is modular by bricks: the WisePaper and WiseTour editors, Ask AI and the incident database, SSO, webhooks and API integrations. From €600/year, €3,600/year all included.",
 				"cta": "Discover the platform",
 				"eyebrowStandalone": "Delivery",
-				"descriptionPlatform": "The LMS platform delivers and tracks your trainings, and is modular by bricks: the WisePaper editor, Ask AI and the incident database, training plans and analytics. From €1,800/year, €3,600/year all included."
+				"descriptionPlatform": "The LMS platform delivers, tracks and steers your trainings, and is modular by bricks: the WisePaper and WiseTour editors, Ask AI and the incident database, SSO, webhooks and API integrations. From €600/year, €3,600/year all included."
 			}
 		},
 		"wisetrainer": {

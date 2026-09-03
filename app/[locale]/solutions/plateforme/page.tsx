@@ -81,17 +81,17 @@ export default async function PlatformPage({
 					operatingSystem: "Web",
 					description:
 						locale === "fr"
-							? "Le LMS modulable pour l'industrie : diffusion de vos formations (créées par WiseTwin ou importées), éditeur WisePaper, IA Ask AI avec base d'incidents, plans de formation et analytiques"
-							: "The modular LMS for industry: delivery of your trainings (built by WiseTwin or imported), WisePaper editor, Ask AI with incident database, training plans and analytics",
+							? "Le LMS modulable pour l'industrie : diffusion de vos formations (créées par WiseTwin ou importées), plans de formation et analytiques, éditeurs WisePaper et WiseTour, IA Ask AI avec base d'incidents, intégrations SSO, webhooks et API"
+							: "The modular LMS for industry: delivery of your trainings (built by WiseTwin or imported), training plans and analytics, WisePaper and WiseTour editors, Ask AI with incident database, SSO, webhooks and API integrations",
 					url: `https://wisetwin.eu/${locale}/solutions/plateforme`,
 					offers: {
 						"@type": "Offer",
-						price: "1800",
+						price: "600",
 						priceCurrency: "EUR",
 						description:
 							locale === "fr"
-								? "Plateforme LMS à partir de 1 800€/an par site (socle seul), 3 600€/an tout compris avec toutes les briques. Formations sur mesure facturées au projet : WiseTrainer 5 000 à 15 000€, WiseTour 10 000 à 20 000€"
-								: "LMS platform from €1,800/year per site (core alone), €3,600/year all included with every brick. Custom trainings billed per project: WiseTrainer €5,000 to €15,000, WiseTour €10,000 to €20,000",
+								? "Plateforme LMS à partir de 600€/an par site (socle seul), 3 600€/an tout compris avec toutes les briques. Formations sur mesure facturées au projet : WiseTrainer 5 000 à 15 000€, WiseTour 10 000 à 20 000€"
+								: "LMS platform from €600/year per site (core alone), €3,600/year all included with every brick. Custom trainings billed per project: WiseTrainer €5,000 to €15,000, WiseTour €10,000 to €20,000",
 					},
 					provider: {
 						"@type": "Organization",
