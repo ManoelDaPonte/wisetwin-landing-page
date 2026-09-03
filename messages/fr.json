@@ -182,9 +182,9 @@
 			"wisetour": {
 				"tag": "Accueil sécurité",
 				"title": "WiseTour",
-				"description": "La visite sécurité immersive de votre site, créée à partir d'une capture 3D. Autonome : chez vous ou sur notre LMS.",
-				"price": "10 000 à 20 000€",
-				"priceNote": "par projet, selon le site"
+				"description": "La visite sécurité immersive de votre site, construite sur un scan 3D. Chargez le vôtre dans l'éditeur, ou nous scannons votre site : 10 000 à 20 000€ par projet.",
+				"price": "+400€/an",
+				"priceNote": "avec votre propre scan 3D"
 			},
 			"wisepaper": {
 				"tag": "Éditeur de formations",
@@ -341,14 +341,14 @@
 					"title": "WiseTour, capturé depuis vos installations",
 					"description": "Des visites 360° créées à partir de vraies photos de vos sites. Le rendu le plus fidèle possible, comme si vous y étiez.",
 					"deployment": "~1 semaine",
-					"process": "Nos techniciens viennent capturer vos installations, ou vous scannez vous-même avec votre smartphone et on s'occupe du reste",
+					"process": "Vous avez déjà un scan (.ply, .sog, .splat) ? Chargez-le dans l'éditeur. Sinon nos techniciens capturent vos installations, ou vous filmez au smartphone et on s'occupe du reste",
 					"interaction": "Navigation libre et immersive, interaction via points d'intérêt",
 					"useCases": [
 						"Accueil sécurité",
 						"Présentation de site",
 						"Communication institutionnelle"
 					],
-					"price": "Projet sur mesure : 10 000 à 20 000€ selon le site"
+					"price": "Éditeur : +400€/an avec votre scan. Scan par nos équipes : 10 000 à 20 000€ selon le site"
 				},
 				{
 					"tag": "3D haute fidélité",
@@ -505,7 +505,7 @@
 				"wisetour": {
 					"title": "Éditeur WiseTour",
 					"price": "400",
-					"description": "Créez vous-même vos visites immersives à partir d'une capture 3D de vos sites : points d'intérêt, quiz, diffusion dans le LMS."
+					"description": "Chargez vos propres scans 3D (.ply, .sog, .splat) et composez vos visites vous-même : zones, points d'intérêt, quiz, diffusion dans le LMS."
 				},
 				"askai": {
 					"title": "Ask AI & base d'incidents",
@@ -659,12 +659,12 @@
 		},
 		"wisetour": {
 			"metaTitle": "WiseTour - Accueil sécurité immersif de votre site",
-			"metaDescription": "La visite sécurité immersive de votre site, créée à partir d'une capture 3D. Éditeur inclus dans la plateforme LMS (400€/an), ou projet sur mesure entre 10 000 et 20 000€ selon le site.",
+			"metaDescription": "La visite sécurité immersive de votre site, construite sur un scan 3D. Chargez vos propres fichiers (.ply, .sog, .splat) dans l'éditeur, brique du LMS à 400€/an, ou faites scanner votre site par nos équipes : 10 000 à 20 000€ selon le site.",
 			"tag": "Accueil sécurité",
 			"title": "WiseTour",
-			"subtitle": "La visite sécurité immersive de votre site, créée à partir d'une simple capture 3D. Vos intérimaires sont opérationnels dès le premier jour.",
-			"price": "Inclus dans la plateforme LMS",
-			"priceNote": "L'éditeur WiseTour est une brique du LMS (400€/an dans la plateforme) : créez vos visites vous-même depuis une capture 3D de vos sites. Vous préférez déléguer ? Projet sur mesure entre 10 000 et 20 000€ selon le site.",
+			"subtitle": "La visite sécurité immersive de votre site, construite sur un scan 3D de vos installations. Vos intérimaires sont opérationnels dès le premier jour.",
+			"price": "Éditeur inclus dans la plateforme LMS",
+			"priceNote": "Vous avez déjà un scan 3D ? Chargez-le dans l'éditeur WiseTour, brique du LMS à +400€/an. Sinon, nous scannons votre site : 10 000 à 20 000€ selon le site, facturé une seule fois.",
 			"features": [
 				{
 					"title": "Votre site, comme si on y était",
@@ -678,7 +678,41 @@
 					"title": "Traçable et justifiable",
 					"description": "Complétion et certificats enregistrés pour chaque visiteur, intérimaire ou sous-traitant, sans compte email obligatoire."
 				}
-			]
+			],
+			"paths": {
+				"eyebrow": "Votre scan 3D",
+				"title": "Deux façons de démarrer",
+				"subtitle": "Tout part d'un scan 3D de vos installations. Vous l'avez déjà, ou nous le réalisons.",
+				"items": [
+					{
+						"code": "Voie 01",
+						"tag": "Vous avez déjà un scan",
+						"title": "Chargez vos fichiers, composez la visite",
+						"description": "Importez votre scan dans l'éditeur WiseTour et ajoutez vous-même zones, consignes, points d'intérêt et quiz. Tout simplement, sans nous attendre.",
+						"formats": [
+							".ply",
+							".splat",
+							".ksplat",
+							".spz",
+							".sog",
+							".glb"
+						],
+						"price": "+400€/an",
+						"priceNote": "brique de la plateforme LMS",
+						"cta": "Découvrir la plateforme"
+					},
+					{
+						"code": "Voie 02",
+						"tag": "On scanne votre site",
+						"title": "Nous capturons vos installations",
+						"description": "Nos techniciens viennent scanner votre site, ou vous filmez au smartphone et nous faisons le reste. Vous recevez une visite clé en main, et le scan vous appartient : enrichissez-le ensuite dans l'éditeur.",
+						"formats": [],
+						"price": "10 000 à 20 000€",
+						"priceNote": "par projet, selon le site, facturé une seule fois",
+						"cta": "Décrivez-nous votre projet"
+					}
+				]
+			}
 		}
 	},
 	"wiseatlas": {

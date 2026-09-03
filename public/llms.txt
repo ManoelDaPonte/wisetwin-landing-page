@@ -45,17 +45,21 @@ cost); platforms are yearly subscriptions per site that clients run autonomously
   belongs to the client. Standalone deliverable: Windows/Mac executable or web build
   for the client's intranet or own LMS; hosting on the WiseTwin LMS is optional, never
   required.
-- WiseTour (€10,000 to €20,000 per project, depending on the site) — immersive safety
-  induction created from a 3D capture of the client's site. Billed once; standalone
-  like WiseTrainer, with optional delivery via the WiseTwin LMS.
+- WiseTour — immersive safety induction of the client's site, built on a 3D scan
+  (Gaussian splatting). Two ways in: a client who already has a scan (.ply, .splat,
+  .ksplat, .spz, .sog or .glb files) uploads it into the WiseTour editor, an LMS brick
+  at €400/yr, and adds zones, instructions, points of interest and quizzes alone;
+  otherwise WiseTwin scans the site (technicians on site, or smartphone footage
+  processed by WiseTwin) and delivers the tour turnkey for €10,000 to €20,000 per
+  project depending on the site, billed once, the scan belonging to the client.
 - The LMS platform (from €600/year for the core alone; €3,600/year all included
   with every brick) — the modular LMS: hosting and delivery of trainings (built by
   WiseTwin or imported by the client), completion tracking, verifiable certifications,
   unlimited learners, training plans, automatic reminders, dashboards and analytics.
   Optional bricks: WisePaper (€600/yr, AI editor turning PDF, Word and PowerPoint
   documents into interactive trainings with quizzes), WiseTour editor (€400/yr,
-  self-service creation of immersive tours from a 3D capture of the client's sites,
-  with points of interest and quizzes), Ask AI with the incident
+  upload your own 3D scan as .ply, .splat, .ksplat, .spz, .sog or .glb, then add zones,
+  points of interest and quizzes yourself), Ask AI with the incident
   database (€800/yr, safety copilot: photo-based risk hunts, prevention reports,
   accident history searchable in natural language), integrations: SSO, webhooks and
   API (€1,200/yr). Clients can take the LMS alone and import their own trainings.

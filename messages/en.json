@@ -189,9 +189,9 @@
 			"wisetour": {
 				"tag": "Safety induction",
 				"title": "WiseTour",
-				"description": "The immersive safety tour of your site, created from a 3D capture. Standalone: at your place or on our LMS.",
-				"price": "€10,000 to €20,000",
-				"priceNote": "per project, depending on the site"
+				"description": "The immersive safety tour of your site, built on a 3D scan. Upload your own into the editor, or we scan your site: €10,000 to €20,000 per project.",
+				"price": "+€400/yr",
+				"priceNote": "with your own 3D scan"
 			}
 		},
 		"wiseatlas": {
@@ -341,14 +341,14 @@
 					"title": "WiseTour, captured from your facilities",
 					"description": "360° tours created from real photos of your sites. The most faithful rendering possible, as if you were there.",
 					"deployment": "~1 week",
-					"process": "Our technicians come to capture your facilities, or you scan them yourself with your smartphone and we take care of the rest",
+					"process": "Already have a scan (.ply, .sog, .splat)? Upload it into the editor. Otherwise our technicians capture your facilities, or you film with your smartphone and we take care of the rest",
 					"interaction": "Free and immersive navigation, interaction via points of interest",
 					"useCases": [
 						"Safety induction",
 						"Site presentation",
 						"Corporate communication"
 					],
-					"price": "Custom project: €10,000 to €20,000 depending on the site"
+					"price": "Editor: +€400/yr with your own scan. Scan by our team: €10,000 to €20,000 depending on the site"
 				},
 				{
 					"tag": "High-fidelity 3D",
@@ -505,7 +505,7 @@
 				"wisetour": {
 					"title": "WiseTour editor",
 					"price": "400",
-					"description": "Build your own immersive tours from a 3D capture of your sites: points of interest, quizzes, delivery in the LMS."
+					"description": "Upload your own 3D scans (.ply, .sog, .splat) and compose your tours yourself: zones, points of interest, quizzes, delivery in the LMS."
 				},
 				"askai": {
 					"title": "Ask AI & incident database",
@@ -659,12 +659,12 @@
 		},
 		"wisetour": {
 			"metaTitle": "WiseTour - Immersive safety induction of your site",
-			"metaDescription": "The immersive safety tour of your site, created from a 3D capture. Editor included in the LMS platform (€400/yr), or a custom project between €10,000 and €20,000 depending on the site.",
+			"metaDescription": "The immersive safety tour of your site, built on a 3D scan. Upload your own files (.ply, .sog, .splat) into the editor, an LMS brick at €400/yr, or have our team scan your site: €10,000 to €20,000 depending on the site.",
 			"tag": "Safety induction",
 			"title": "WiseTour",
-			"subtitle": "The immersive safety tour of your site, created from a simple 3D capture. Your temp workers are operational from day one.",
-			"price": "Included in the LMS platform",
-			"priceNote": "The WiseTour editor is an LMS brick (€400/yr within the platform): build your own tours from a 3D capture of your sites. Rather delegate? Custom project between €10,000 and €20,000 depending on the site.",
+			"subtitle": "The immersive safety tour of your site, built on a 3D scan of your facilities. Your temp workers are operational from day one.",
+			"price": "Editor included in the LMS platform",
+			"priceNote": "Already have a 3D scan? Upload it into the WiseTour editor, an LMS brick at +€400/yr. Otherwise we scan your site: €10,000 to €20,000 depending on the site, billed once.",
 			"features": [
 				{
 					"title": "Your site, as if you were there",
@@ -678,7 +678,41 @@
 					"title": "Traceable and justifiable",
 					"description": "Completion and certificates recorded for every visitor, temp worker or subcontractor, with no email account required."
 				}
-			]
+			],
+			"paths": {
+				"eyebrow": "Your 3D scan",
+				"title": "Two ways to start",
+				"subtitle": "Everything starts with a 3D scan of your facilities. You already have one, or we make it.",
+				"items": [
+					{
+						"code": "Path 01",
+						"tag": "You already have a scan",
+						"title": "Upload your files, compose the tour",
+						"description": "Import your scan into the WiseTour editor and add zones, instructions, points of interest and quizzes yourself. Simple as that, no need to wait for us.",
+						"formats": [
+							".ply",
+							".splat",
+							".ksplat",
+							".spz",
+							".sog",
+							".glb"
+						],
+						"price": "+€400/yr",
+						"priceNote": "LMS platform brick",
+						"cta": "Discover the platform"
+					},
+					{
+						"code": "Path 02",
+						"tag": "We scan your site",
+						"title": "We capture your facilities",
+						"description": "Our technicians come to scan your site, or you film with your smartphone and we do the rest. You get a turnkey tour, and the scan belongs to you: enrich it later in the editor.",
+						"formats": [],
+						"price": "€10,000 to €20,000",
+						"priceNote": "per project, depending on the site, billed once",
+						"cta": "Tell us about your project"
+					}
+				]
+			}
 		}
 	},
 	"wiseatlas": {

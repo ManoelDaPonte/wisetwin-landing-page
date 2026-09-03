@@ -15,6 +15,8 @@ import {
 	Footprints,
 	LayoutGrid,
 	Lock,
+	ScanLine,
+	Upload,
 } from "lucide-react";
 
 export type BrickKey = "wisetrainer" | "wisepaper" | "wisetour";
@@ -46,6 +48,20 @@ const media: Record<
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
 
+// Section "Deux façons de démarrer" (WiseTour) : chaque voie a son icône et sa destination
+type BrickPath = {
+	code: string;
+	tag: string;
+	title: string;
+	description: string;
+	formats: string[];
+	price: string;
+	priceNote: string;
+	cta: string;
+};
+const pathIcons = [Upload, ScanLine] as const;
+const pathHrefs = ["/solutions/plateforme", "/#contact"] as const;
+
 // Grille de plan technique, signature industrielle des pages briques
 const blueprintGrid = {
 	backgroundImage:
@@ -59,6 +75,9 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 	const Icon = icons[brick];
 	// WisePaper et WiseTour sont des éditeurs inclus dans la plateforme LMS ; WiseTrainer reste un projet one-shot
 	const platformOnly = brick === "wisepaper" || brick === "wisetour";
+	// WiseTour : un scan existant à charger, ou un scan réalisé par nos équipes
+	const hasPaths = brick === "wisetour";
+	const paths = hasPaths ? (t.raw(`${brick}.paths.items`) as BrickPath[]) : [];
 
 	const container = {
 		hidden: {},
@@ -179,8 +198,76 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 				</div>
 			</div>
 
+			{/* WiseTour : deux voies d'entrée, avec un scan existant ou un scan réalisé par nos équipes */}
+			{hasPaths && (
+				<Section
+					variant="muted"
+					header={{
+						eyebrow: t(`${brick}.paths.eyebrow`),
+						title: t(`${brick}.paths.title`),
+						description: t(`${brick}.paths.subtitle`),
+					}}
+				>
+					<div className="grid md:grid-cols-2 gap-5">
+						{paths.map((path, i) => {
+							const PathIcon = pathIcons[i] ?? Upload;
+							return (
+								<Reveal key={path.code} delay={i * 0.1} className="h-full">
+									<div className="relative h-full bg-card border border-border rounded-2xl p-7 md:p-8 hover:border-secondary/40 transition-colors overflow-hidden flex flex-col">
+										{/* Repères de plan */}
+										<span aria-hidden className="absolute top-3 left-3 size-3 border-t border-l border-secondary/60" />
+										<span aria-hidden className="absolute bottom-3 right-3 size-3 border-b border-r border-secondary/60" />
+										<div className="flex items-center justify-between gap-3 mb-5">
+											<p className="text-xs font-mono uppercase tracking-[0.2em] text-secondary">
+												{path.code}
+											</p>
+											<span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground bg-muted border border-border px-2 py-0.5 rounded-full">
+												{path.tag}
+											</span>
+										</div>
+										<div className="flex items-center gap-4 mb-4">
+											<div className="size-11 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0">
+												<PathIcon className="size-5 text-secondary" />
+											</div>
+											<h3 className="text-xl font-bold">{path.title}</h3>
+										</div>
+										<p className="text-sm text-muted-foreground leading-relaxed mb-5">
+											{path.description}
+										</p>
+										{path.formats.length > 0 && (
+											<ul className="flex flex-wrap gap-2 mb-6">
+												{path.formats.map((format) => (
+													<li
+														key={format}
+														className="text-xs font-mono text-foreground/80 bg-muted border border-border px-2.5 py-1 rounded-md"
+													>
+														{format}
+													</li>
+												))}
+											</ul>
+										)}
+										<div className="mt-auto pt-5 border-t border-border flex items-end justify-between gap-4 flex-wrap">
+											<div>
+												<p className="text-2xl font-bold tabular-nums">{path.price}</p>
+												<p className="text-xs text-muted-foreground">{path.priceNote}</p>
+											</div>
+											<Button variant={i === 0 ? "default" : "outline"} asChild>
+												<Link href={pathHrefs[i] ?? "/#contact"}>
+													{path.cta}
+													<ArrowRight className="size-4 ml-2" />
+												</Link>
+											</Button>
+										</div>
+									</div>
+								</Reveal>
+							);
+						})}
+					</div>
+				</Section>
+			)}
+
 			{/* Ce que ça fait, en 3 points */}
-			<Section variant="muted">
+			<Section variant={hasPaths ? "default" : "muted"}>
 				<div className="grid md:grid-cols-3 gap-5">
 					{([0, 1, 2] as const).map((i) => (
 						<Reveal key={i} delay={i * 0.1} className="h-full">
@@ -207,7 +294,7 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 			</Section>
 
 			{/* Bandeau plateforme + CTA final */}
-			<Section variant="default">
+			<Section variant={hasPaths ? "muted" : "default"}>
 				<Reveal>
 					<div className="rounded-3xl border-2 border-secondary/40 bg-card p-8 md:p-12 relative overflow-hidden">
 						<div aria-hidden className="absolute inset-0" style={blueprintGrid} />
