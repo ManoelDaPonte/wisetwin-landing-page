@@ -659,13 +659,12 @@
 		},
 		"wisetour": {
 			"metaTitle": "WiseTour - Accueil sécurité immersif de votre site",
-			"metaDescription": "La visite sécurité immersive de votre site, créée à partir d'une capture 3D. Un projet sur mesure entre 10 000 et 20 000€ selon le site, diffusé via le LMS.",
+			"metaDescription": "La visite sécurité immersive de votre site, créée à partir d'une capture 3D. Éditeur inclus dans la plateforme LMS (400€/an), ou projet sur mesure entre 10 000 et 20 000€ selon le site.",
 			"tag": "Accueil sécurité",
 			"title": "WiseTour",
 			"subtitle": "La visite sécurité immersive de votre site, créée à partir d'une simple capture 3D. Vos intérimaires sont opérationnels dès le premier jour.",
-			"price": "10 000 à 20 000€",
-			"priceSuffix": "par projet",
-			"priceNote": "Facturé une seule fois, selon le site : capture 3D, parcours et quiz inclus. Autonome : chez vous ou via notre LMS.",
+			"price": "Inclus dans la plateforme LMS",
+			"priceNote": "L'éditeur WiseTour est une brique du LMS (400€/an dans la plateforme) : créez vos visites vous-même depuis une capture 3D de vos sites. Vous préférez déléguer ? Projet sur mesure entre 10 000 et 20 000€ selon le site.",
 			"features": [
 				{
 					"title": "Votre site, comme si on y était",

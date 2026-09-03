@@ -57,8 +57,8 @@ export default function BrickClient({ brick }: { brick: BrickKey }) {
 	const t = useTranslations("brickPages");
 	const reduceMotion = useReducedMotion();
 	const Icon = icons[brick];
-	// WisePaper est un éditeur inclus dans la plateforme LMS ; les autres sont des projets one-shot
-	const platformOnly = brick === "wisepaper";
+	// WisePaper et WiseTour sont des éditeurs inclus dans la plateforme LMS ; WiseTrainer reste un projet one-shot
+	const platformOnly = brick === "wisepaper" || brick === "wisetour";
 
 	const container = {
 		hidden: {},
