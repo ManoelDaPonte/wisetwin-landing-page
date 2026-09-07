@@ -81,16 +81,6 @@ export default async function WiseAtlasPage({
 							? "Carte interactive pour valoriser votre territoire avec des visites virtuelles immersives"
 							: "Interactive map to showcase your territory with immersive virtual tours",
 					url: `https://wisetwin.eu/${locale}/solutions/wiseatlas`,
-					offers: {
-						"@type": "Offer",
-						price: "3000",
-						priceCurrency: "EUR",
-						priceValidUntil: "2026-12-31",
-						description:
-							locale === "fr"
-								? "À partir de 3 000 €/an"
-								: "Starting from €3,000/year",
-					},
 					provider: {
 						"@type": "Organization",
 						name: "WiseTwin",

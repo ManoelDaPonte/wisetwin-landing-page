@@ -12,9 +12,9 @@
 		},
 		"platform": {
 			"title": "La plateforme LMS",
-			"description": "Le LMS modulable pour l'industrie : diffusez vos formations, les nôtres ou les vôtres, SCORM compris, avec dix briques en option : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations, marque blanche. À partir de 600€/an, 4 800€/an tout compris hors SSO.",
+			"description": "Le LMS modulable pour l'industrie : diffusez vos formations, les nôtres ou les vôtres, SCORM compris, avec dix briques en option : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations, marque blanche. À partir de 1 200€/an, 4 800€/an tout compris hors SSO.",
 			"ogTitle": "La plateforme LMS WiseTwin - Le LMS modulable pour l'industrie",
-			"ogDescription": "Prenez le LMS seul et importez vos formations SCORM, ou activez les briques WisePaper, éditeur WiseTour, Ask AI, chasse aux risques, SSO, API et marque blanche. À partir de 600€/an. 100% web."
+			"ogDescription": "Prenez le LMS seul et importez vos formations SCORM, ou activez les briques WisePaper, éditeur WiseTour, Ask AI, chasse aux risques, SSO, API et marque blanche. À partir de 1 200€/an. 100% web."
 		},
 		"wiseatlas": {
 			"description": "Carte interactive pour valoriser votre territoire, vos sites industriels et vos infrastructures avec des visites virtuelles immersives.",
@@ -167,7 +167,7 @@
 			"tag": "La plateforme",
 			"title": "La plateforme LMS",
 			"description": "Diffusez vos formations, les nôtres ou les vôtres, SCORM compris. Modulable par briques : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations SSO et API, marque blanche.",
-			"price": "à partir de 600€/an",
+			"price": "à partir de 1 200€/an",
 			"priceNote": "4 800€/an tout compris hors SSO, briques désactivables",
 			"cta": "Découvrir la plateforme"
 		},
@@ -398,7 +398,7 @@
 			"eyebrow": "La plateforme",
 			"title": "Le LMS taillé pour l'industrie",
 			"subtitle": "Diffusez vos formations, les nôtres comme les vôtres, SCORM compris. Suivez chaque complétion, certifiez vos apprenants, et modulez par briques : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations SSO et API, marque blanche.",
-			"price": "à partir de 600€/an",
+			"price": "à partir de 1 200€/an",
 			"priceNote": "4 800€/an tout compris, hors SSO",
 			"cta": "Demander un devis gratuit",
 			"ctaSecondary": "Voir les tarifs"
@@ -475,11 +475,11 @@
 	"pricing": {
 		"eyebrow": "Tarification",
 		"title": "Le LMS seul, ou avec ses briques",
-		"subtitle": "Prenez le socle et importez vos formations, ou activez des briques par famille : le prix suit, dans les deux sens.",
+		"subtitle": "Prenez le socle et importez vos formations, ou activez des briques : le total suit, dans les deux sens.",
 		"perYear": "€/an",
 		"core": {
 			"badge": "Le socle LMS",
-			"price": "600",
+			"always": "Toujours inclus",
 			"note": "Par site, apprenants illimités, sans engagement.",
 			"trial": "Essai gratuit : 3 utilisateurs, toutes les briques activées.",
 			"description": "Tout pour diffuser, suivre et piloter vos formations, y compris celles que vous possédez déjà.",
@@ -497,10 +497,13 @@
 		},
 		"modules": {
 			"title": "Les briques en option",
-			"subtitle": "Quatre familles, dix briques. Activez-les quand le besoin apparaît.",
-			"note": "Retirez une brique : le prix descend.",
-			"includedLabel": "Inclus",
-			"separateTag": "Toujours en supplément",
+			"subtitle": "Activez ce dont vous avez besoin, le total suit.",
+			"presetAll": "Activer la totale",
+			"presetNone": "Socle seul",
+			"familyCount": "{active} sur {total}",
+			"separateTag": "En plus de la totale",
+			"switchOn": "Activée",
+			"switchOff": "Désactivée",
 			"items": {
 				"content": {
 					"title": "Contenus WiseTwin",
@@ -508,17 +511,16 @@
 					"bricks": {
 						"wisetrainer": {
 							"title": "WiseTrainer 3D",
-							"price": "Inclus avec un projet",
-							"description": "Vos simulateurs 3D sur mesure diffusés sans surcoût, sans limite de durée."
+							"description": "Vos simulateurs 3D sur mesure diffusés sans surcoût, sans limite de durée.",
+							"included": "Inclus avec un projet"
 						},
 						"wisepaper": {
 							"title": "Éditeur WisePaper",
-							"price": "Inclus dans le socle",
-							"description": "L'éditeur de formations chapitrées avec quiz, auteurs illimités, sans supplément."
+							"description": "L'éditeur de formations chapitrées avec quiz, auteurs illimités, sans supplément.",
+							"included": "Inclus dans le socle"
 						},
 						"wisetour": {
 							"title": "Éditeur WiseTour",
-							"price": "900",
 							"description": "Chargez vos propres scans 3D (.ply, .sog, .splat) et composez vos visites : zones, points d'intérêt, quiz. Le scan par nos équipes reste un projet facturé une seule fois."
 						}
 					}
@@ -529,17 +531,14 @@
 					"bricks": {
 						"askai": {
 							"title": "Ask AI",
-							"price": "900",
 							"description": "L'assistant sécurité qui croise vos incidents internes, la base ARIA et votre catalogue, en langage naturel."
 						},
 						"riskhunt": {
 							"title": "Chasse aux risques",
-							"price": "600",
 							"description": "Photographiez un poste de travail : l'IA relève les risques et propose un rapport de prévention."
 						},
 						"wisepaperImport": {
 							"title": "Import IA WisePaper",
-							"price": "600",
 							"description": "Vos PDF, Word et PowerPoint transformés en formations avec quiz. 50 imports inclus."
 						}
 					}
@@ -550,12 +549,10 @@
 					"bricks": {
 						"sso": {
 							"title": "SSO",
-							"price": "1 800",
 							"description": "Connexion via votre fournisseur d'identité (SAML, OAuth). Facturé au coût de la connexion, en plus de la totale."
 						},
 						"api": {
 							"title": "API, webhooks et LRS",
-							"price": "600",
 							"description": "API v1, webhooks signés vers vos outils et envoi xAPI vers le LRS de votre choix."
 						}
 					}
@@ -566,23 +563,23 @@
 					"bricks": {
 						"audit": {
 							"title": "Journal d'audit",
-							"price": "300",
 							"description": "Traçabilité de chaque action d'administration, exportable pour vos audits."
 						},
 						"whitelabel": {
 							"title": "Marque blanche",
-							"price": "900",
 							"description": "Vos couleurs, votre nom, votre logo et votre signataire sur les certificats."
 						}
 					}
 				}
 			}
 		},
-		"total": {
-			"label": "La totale :",
-			"price": "4 800",
-			"suffix": "hors SSO",
-			"detail": "Le socle et toutes les briques, sauf le SSO qui se facture toujours en plus. À la carte, le même panier coûte 5 400€/an."
+		"config": {
+			"title": "Votre configuration",
+			"summary": "{count, plural, =0 {Le socle seul} one {Le socle et # brique} other {Le socle et # briques}}",
+			"total": "Total par an",
+			"bundle": "C'est la totale : {saving} d'économie par rapport à la carte.",
+			"bundleHint": "Activez toutes les briques hors SSO pour passer à la totale, {price}/an.",
+			"ssoOnTop": "Le SSO s'ajoute à la totale, au coût de la connexion."
 		},
 		"formations": {
 			"title": "Et les formations sur mesure ?",
@@ -665,10 +662,10 @@
 				"eyebrow": "La plateforme LMS",
 				"title": "Chez vous, ou chez nous : vous choisissez",
 				"titleExclusive": "Disponible dans la plateforme LMS",
-				"description": "La plateforme LMS diffuse, trace et pilote vos formations, SCORM compris, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la chasse aux risques, les intégrations SSO et API, la marque blanche. À partir de 600€/an, 4 800€/an tout compris hors SSO.",
+				"description": "La plateforme LMS diffuse, trace et pilote vos formations, SCORM compris, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la chasse aux risques, les intégrations SSO et API, la marque blanche. À partir de 1 200€/an, 4 800€/an tout compris hors SSO.",
 				"cta": "Découvrir la plateforme",
 				"eyebrowStandalone": "La diffusion",
-				"descriptionPlatform": "La plateforme LMS diffuse, trace et pilote vos formations, SCORM compris, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la chasse aux risques, les intégrations SSO et API, la marque blanche. À partir de 600€/an, 4 800€/an tout compris hors SSO."
+				"descriptionPlatform": "La plateforme LMS diffuse, trace et pilote vos formations, SCORM compris, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la chasse aux risques, les intégrations SSO et API, la marque blanche. À partir de 1 200€/an, 4 800€/an tout compris hors SSO."
 			}
 		},
 		"wisetrainer": {
@@ -702,7 +699,7 @@
 			"title": "WisePaper",
 			"subtitle": "Importez vos PDF, Word ou PowerPoint : l'IA les transforme en formations interactives, chapitrées, avec quiz et suivi.",
 			"price": "Inclus dans la plateforme LMS",
-			"priceNote": "L'éditeur WisePaper est inclus dans le socle du LMS (600€/an, auteurs illimités) : créez des formations illimitées, chapitrées, avec quiz. L'import IA de vos documents existants est une brique à part (+600€/an, 50 imports inclus).",
+			"priceNote": "L'éditeur WisePaper est inclus dans le socle du LMS (1 200€/an, auteurs illimités) : créez des formations illimitées, chapitrées, avec quiz. L'import IA de vos documents existants est une brique à part (+1 200€/an, 50 imports inclus).",
 			"features": [
 				{
 					"title": "L'IA fait le travail",

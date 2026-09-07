@@ -52,8 +52,8 @@ cost); platforms are yearly subscriptions per site that clients run autonomously
   otherwise WiseTwin scans the site (technicians on site, or smartphone footage
   processed by WiseTwin) and delivers the tour turnkey for €10,000 to €20,000 per
   project depending on the site, billed once, the scan belonging to the client.
-- The LMS platform (from €600/year for the core alone; €4,800/year all included
-  excluding SSO) — the standalone, content-agnostic LMS. The core (€600/yr per site,
+- The LMS platform (from €1,200/year for the core alone; €4,800/year all included
+  excluding SSO) — the standalone, content-agnostic LMS. The core (€1,200/yr per site,
   unlimited learners, no commitment, free trial with 3 users and every brick) includes:
   import of SCORM 1.2 and 2004 trainings, videos, PDFs and links; catalog; training
   plans and groups; paths; automatic reminders and recertification; certificates and
@@ -74,7 +74,7 @@ cost); platforms are yearly subscriptions per site that clients run autonomously
     signed webhooks, xAPI statements sent to the client's LRS).
   - Governance and branding: audit log (€300/yr), white label (€900/yr: colors, name,
     logo, certificate signatory).
-  Full bundle: €4,800/yr for the core and every brick except SSO (€5,400/yr à la
+  Full bundle: €4,800/yr for the core and every brick except SSO (€6,000/yr à la
   carte). Clients can take the LMS alone and import their own trainings.
 - WiseAtlas (on quote) — interactive map editor for territories and industrial
   infrastructure, used self-service or delivered as a turnkey project. 3D models,
