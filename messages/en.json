@@ -376,7 +376,7 @@
 						"Procedure updates",
 						"Administrative onboarding"
 					],
-					"price": "Editor included in the LMS platform (+€600/yr), unlimited trainings. AI import of your documents: +€600/yr"
+					"price": "Editor included in the LMS core, unlimited trainings and authors. AI import of your documents: +€600/yr"
 				},
 				{
 					"tag": "AI & data",
@@ -485,6 +485,7 @@
 			"description": "Everything to deliver, track and steer your trainings, including the ones you already own.",
 			"features": [
 				"Import of SCORM 1.2 and 2004 trainings, videos, PDFs and links",
+				"WisePaper editor, unlimited authors",
 				"Catalog, training plans, groups and paths",
 				"Automatic reminders and recertification",
 				"Verifiable certificates and attestations, notifications",
@@ -512,8 +513,8 @@
 						},
 						"wisepaper": {
 							"title": "WisePaper editor",
-							"price": "600",
-							"description": "Build your chaptered trainings with quizzes, unlimited authors."
+							"price": "Included in the core",
+							"description": "The editor for chaptered trainings with quizzes, unlimited authors, at no extra cost."
 						},
 						"wisetour": {
 							"title": "WiseTour editor",
@@ -581,7 +582,7 @@
 			"label": "All included:",
 			"price": "4,800",
 			"suffix": "excluding SSO",
-			"detail": "The core and every brick, except SSO which is always billed on top. À la carte, the same basket costs €6,000/yr."
+			"detail": "The core and every brick, except SSO which is always billed on top. À la carte, the same basket costs €5,400/yr."
 		},
 		"formations": {
 			"title": "What about custom trainings?",
@@ -696,12 +697,12 @@
 		},
 		"wisepaper": {
 			"metaTitle": "WisePaper - The editor that turns your documents into trainings",
-			"metaDescription": "Import your PDF, Word or PowerPoint files: AI turns them into interactive trainings with quizzes and completion tracking. Editor included in the LMS platform.",
+			"metaDescription": "Import your PDF, Word or PowerPoint files: AI turns them into interactive trainings with quizzes and completion tracking. Editor included in the LMS platform core.",
 			"tag": "Training editor",
 			"title": "WisePaper",
 			"subtitle": "Import your PDF, Word or PowerPoint files: AI turns them into interactive, chaptered trainings with quizzes and tracking.",
 			"price": "Included in the LMS platform",
-			"priceNote": "The WisePaper editor is an LMS brick (€600/yr, unlimited authors): create unlimited chaptered trainings with quizzes. The AI import of your existing documents is a separate brick (+€600/yr, 50 imports included).",
+			"priceNote": "The WisePaper editor is included in the LMS core (€600/yr, unlimited authors): create unlimited chaptered trainings with quizzes. The AI import of your existing documents is a separate brick (+€600/yr, 50 imports included).",
 			"features": [
 				{
 					"title": "The AI does the work",

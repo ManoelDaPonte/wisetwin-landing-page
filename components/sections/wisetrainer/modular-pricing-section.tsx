@@ -27,7 +27,7 @@ import {
 type Brick = {
 	key: string;
 	icon: LucideIcon;
-	/** Diffusé sans surcoût : pas de prix annuel (WiseTrainer, CGV 6.2) */
+	/** Sans prix annuel : WiseTrainer diffusé sans surcoût (CGV 6.2), éditeur WisePaper dans le socle */
 	included?: boolean;
 	/** Facturé en plus de la totale (SSO, au coût de la connexion) */
 	separate?: boolean;
@@ -45,7 +45,7 @@ const families: readonly Family[] = [
 		key: "content",
 		bricks: [
 			{ key: "wisetrainer", icon: Cuboid, included: true },
-			{ key: "wisepaper", icon: FileText },
+			{ key: "wisepaper", icon: FileText, included: true },
 			{ key: "wisetour", icon: Footprints },
 		],
 	},

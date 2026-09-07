@@ -376,7 +376,7 @@
 						"Mise à jour de procédures",
 						"Onboarding administratif"
 					],
-					"price": "Éditeur inclus dans la plateforme LMS (+600€/an), formations illimitées. Import IA de vos documents : +600€/an"
+					"price": "Éditeur inclus dans le socle du LMS, formations et auteurs illimités. Import IA de vos documents : +600€/an"
 				},
 				{
 					"tag": "IA & données",
@@ -485,6 +485,7 @@
 			"description": "Tout pour diffuser, suivre et piloter vos formations, y compris celles que vous possédez déjà.",
 			"features": [
 				"Import de formations SCORM 1.2 et 2004, vidéos, PDF et liens",
+				"Éditeur WisePaper, auteurs illimités",
 				"Catalogue, plans de formation, groupes et parcours",
 				"Rappels automatiques et recertification",
 				"Certificats et attestations vérifiables, notifications",
@@ -512,8 +513,8 @@
 						},
 						"wisepaper": {
 							"title": "Éditeur WisePaper",
-							"price": "600",
-							"description": "Créez vos formations chapitrées avec quiz, auteurs illimités."
+							"price": "Inclus dans le socle",
+							"description": "L'éditeur de formations chapitrées avec quiz, auteurs illimités, sans supplément."
 						},
 						"wisetour": {
 							"title": "Éditeur WiseTour",
@@ -581,7 +582,7 @@
 			"label": "La totale :",
 			"price": "4 800",
 			"suffix": "hors SSO",
-			"detail": "Le socle et toutes les briques, sauf le SSO qui se facture toujours en plus. À la carte, le même panier coûte 6 000€/an."
+			"detail": "Le socle et toutes les briques, sauf le SSO qui se facture toujours en plus. À la carte, le même panier coûte 5 400€/an."
 		},
 		"formations": {
 			"title": "Et les formations sur mesure ?",
@@ -696,12 +697,12 @@
 		},
 		"wisepaper": {
 			"metaTitle": "WisePaper - L'éditeur qui transforme vos documents en formations",
-			"metaDescription": "Importez vos PDF, Word ou PowerPoint : l'IA les transforme en formations interactives avec quiz et suivi de complétion. Éditeur inclus dans la plateforme LMS.",
+			"metaDescription": "Importez vos PDF, Word ou PowerPoint : l'IA les transforme en formations interactives avec quiz et suivi de complétion. Éditeur inclus dans le socle de la plateforme LMS.",
 			"tag": "Éditeur de formations",
 			"title": "WisePaper",
 			"subtitle": "Importez vos PDF, Word ou PowerPoint : l'IA les transforme en formations interactives, chapitrées, avec quiz et suivi.",
 			"price": "Inclus dans la plateforme LMS",
-			"priceNote": "L'éditeur WisePaper est une brique du LMS (600€/an, auteurs illimités) : créez des formations illimitées, chapitrées, avec quiz. L'import IA de vos documents existants est une brique à part (+600€/an, 50 imports inclus).",
+			"priceNote": "L'éditeur WisePaper est inclus dans le socle du LMS (600€/an, auteurs illimités) : créez des formations illimitées, chapitrées, avec quiz. L'import IA de vos documents existants est une brique à part (+600€/an, 50 imports inclus).",
 			"features": [
 				{
 					"title": "L'IA fait le travail",

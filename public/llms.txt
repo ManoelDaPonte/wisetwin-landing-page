@@ -58,11 +58,12 @@ cost); platforms are yearly subscriptions per site that clients run autonomously
   import of SCORM 1.2 and 2004 trainings, videos, PDFs and links; catalog; training
   plans and groups; paths; automatic reminders and recertification; certificates and
   attestations; notifications; Qualiopi compliance (evidence register, exports,
-  follow-up evaluation); badges; dashboards and analytics.
+  follow-up evaluation); badges; dashboards and analytics; the WisePaper editor
+  (unlimited authors).
   Ten optional bricks in four families, activated per client (remove one, the price
   drops):
   - WiseTwin content: WiseTrainer 3D (included with a project, delivery at no extra
-    cost), WisePaper editor (€600/yr, unlimited authors), WiseTour editor (€900/yr,
+    cost), WisePaper editor (included in the core, unlimited authors), WiseTour editor (€900/yr,
     upload your own 3D scan and compose your tours yourself).
   - Artificial intelligence: Ask AI (€900/yr, safety assistant cross-referencing
     internal incidents, the ARIA database and the catalog), risk hunt (€600/yr,
@@ -73,7 +74,7 @@ cost); platforms are yearly subscriptions per site that clients run autonomously
     signed webhooks, xAPI statements sent to the client's LRS).
   - Governance and branding: audit log (€300/yr), white label (€900/yr: colors, name,
     logo, certificate signatory).
-  Full bundle: €4,800/yr for the core and every brick except SSO (€6,000/yr à la
+  Full bundle: €4,800/yr for the core and every brick except SSO (€5,400/yr à la
   carte). Clients can take the LMS alone and import their own trainings.
 - WiseAtlas (on quote) — interactive map editor for territories and industrial
   infrastructure, used self-service or delivered as a turnkey project. 3D models,
