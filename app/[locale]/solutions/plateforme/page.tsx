@@ -81,8 +81,8 @@ export default async function PlatformPage({
 					operatingSystem: "Web",
 					description:
 						locale === "fr"
-							? "Le LMS modulable pour l'industrie : diffusion de vos formations (créées par WiseTwin ou importées), plans de formation et analytiques, éditeurs WisePaper et WiseTour, IA Ask AI avec base d'incidents, intégrations SSO, webhooks et API"
-							: "The modular LMS for industry: delivery of your trainings (built by WiseTwin or imported), training plans and analytics, WisePaper and WiseTour editors, Ask AI with incident database, SSO, webhooks and API integrations",
+							? "Le LMS modulable pour l'industrie : diffusion de vos formations (créées par WiseTwin ou importées, SCORM compris), plans de formation, conformité Qualiopi et analytiques, dix briques en option : éditeurs WisePaper et WiseTour, IA Ask AI, chasse aux risques, import IA, SSO, API et webhooks, journal d'audit, marque blanche"
+							: "The modular LMS for industry: delivery of your trainings (built by WiseTwin or imported, SCORM included), training plans, Qualiopi compliance and analytics, ten optional bricks: WisePaper and WiseTour editors, Ask AI, risk hunt, AI import, SSO, API and webhooks, audit log, white label",
 					url: `https://wisetwin.eu/${locale}/solutions/plateforme`,
 					offers: {
 						"@type": "Offer",
@@ -90,8 +90,8 @@ export default async function PlatformPage({
 						priceCurrency: "EUR",
 						description:
 							locale === "fr"
-								? "Plateforme LMS à partir de 600€/an par site (socle seul), 3 600€/an tout compris avec toutes les briques. Formations sur mesure facturées au projet : WiseTrainer 5 000 à 15 000€, WiseTour 10 000 à 20 000€"
-								: "LMS platform from €600/year per site (core alone), €3,600/year all included with every brick. Custom trainings billed per project: WiseTrainer €5,000 to €15,000, WiseTour €10,000 to €20,000",
+								? "Plateforme LMS à partir de 600€/an par site (socle seul), 4 800€/an tout compris hors SSO. Formations sur mesure facturées au projet : WiseTrainer 5 000 à 15 000€, WiseTour 10 000 à 20 000€"
+								: "LMS platform from €600/year per site (core alone), €4,800/year all included excluding SSO. Custom trainings billed per project: WiseTrainer €5,000 to €15,000, WiseTour €10,000 to €20,000",
 					},
 					provider: {
 						"@type": "Organization",

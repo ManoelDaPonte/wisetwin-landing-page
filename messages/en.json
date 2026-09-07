@@ -12,9 +12,9 @@
 		},
 		"platform": {
 			"title": "The LMS platform",
-			"description": "The modular LMS for industry: deliver your trainings, ours or your own, with the WisePaper and WiseTour editors and the Ask AI copilot. From €600/year, €3,600/year all included.",
+			"description": "The modular LMS for industry: deliver your trainings, ours or your own, SCORM included, with ten optional bricks: WisePaper and WiseTour editors, Ask AI, integrations, white label. From €600/year, €4,800/year all included excluding SSO.",
 			"ogTitle": "The WiseTwin LMS platform - The modular LMS for industry",
-			"ogDescription": "Take the LMS alone and import your trainings, or add the WisePaper, WiseTour editor, Ask AI and SSO, webhooks, API integration bricks. From €600/year. 100% web."
+			"ogDescription": "Take the LMS alone and import your SCORM trainings, or activate the WisePaper, WiseTour editor, Ask AI, risk hunt, SSO, API and white label bricks. From €600/year. 100% web."
 		},
 		"wiseatlas": {
 			"description": "Interactive map to showcase your territory, industrial sites and infrastructure with immersive virtual tours.",
@@ -166,9 +166,9 @@
 		"platform": {
 			"tag": "The platform",
 			"title": "The LMS platform",
-			"description": "Deliver your trainings, ours or your own. Modular by bricks: WisePaper and WiseTour editors, Ask AI, SSO and API integrations.",
+			"description": "Deliver your trainings, ours or your own, SCORM included. Modular by bricks: WisePaper and WiseTour editors, Ask AI, SSO and API integrations, white label.",
 			"price": "from €600/yr",
-			"priceNote": "€3,600/yr all included, removable bricks",
+			"priceNote": "€4,800/yr all included excluding SSO, removable bricks",
 			"cta": "Discover the platform"
 		},
 		"bricks": {
@@ -190,7 +190,7 @@
 				"tag": "Safety induction",
 				"title": "WiseTour",
 				"description": "The immersive safety tour of your site, built on a 3D scan. Upload your own into the editor, or we scan your site: €10,000 to €20,000 per project.",
-				"price": "+€400/yr",
+				"price": "+€900/yr",
 				"priceNote": "with your own 3D scan"
 			}
 		},
@@ -348,7 +348,7 @@
 						"Site presentation",
 						"Corporate communication"
 					],
-					"price": "Editor: +€400/yr with your own scan. Scan by our team: €10,000 to €20,000 depending on the site"
+					"price": "Editor: +€900/yr with your scan. Scan by our team: €10,000 to €20,000 depending on the site"
 				},
 				{
 					"tag": "High-fidelity 3D",
@@ -376,7 +376,7 @@
 						"Procedure updates",
 						"Administrative onboarding"
 					],
-					"price": "Editor included in the LMS platform, unlimited trainings"
+					"price": "Editor included in the LMS platform (+€600/yr), unlimited trainings. AI import of your documents: +€600/yr"
 				},
 				{
 					"tag": "AI & data",
@@ -390,16 +390,16 @@
 						"Prevention reports",
 						"Accident history analysis"
 					],
-					"price": "Ask AI brick: +€800/yr within the platform"
+					"price": "Ask AI brick: +€900/yr within the platform. Photo-based risk hunt: +€600/yr"
 				}
 			]
 		},
 		"hero": {
 			"eyebrow": "The platform",
 			"title": "The LMS built for industry",
-			"subtitle": "Deliver your trainings, ours as well as your own. Track every completion, certify your learners, and adjust by bricks: WisePaper and WiseTour editors, Ask AI, SSO and API integrations.",
+			"subtitle": "Deliver your trainings, ours as well as your own, SCORM included. Track every completion, certify your learners, and adjust by bricks: WisePaper and WiseTour editors, Ask AI, SSO and API integrations, white label.",
 			"price": "from €600/yr",
-			"priceNote": "€3,600/yr all included with every brick",
+			"priceNote": "€4,800/yr all included, excluding SSO",
 			"cta": "Request a free quote",
 			"ctaSecondary": "See pricing"
 		},
@@ -449,10 +449,10 @@
 				"title": "Export & Integration",
 				"description": "Connect WiseTwin to your existing training ecosystem.",
 				"items": [
-					"Data integration into your LMS",
+					"SCORM 1.2 and 2004, video, PDF and link import",
+					"xAPI statements sent to the LRS of your choice",
 					"PDF certifications with QR code",
-					"Complete catalog of your trainings",
-					"xAPI / cmi5 exports"
+					"API v1 and signed webhooks"
 				]
 			},
 			"askai": {
@@ -475,53 +475,113 @@
 	"pricing": {
 		"eyebrow": "Pricing",
 		"title": "The LMS alone, or with its bricks",
-		"subtitle": "Take the core and import your trainings, or add bricks: the price follows, both ways.",
+		"subtitle": "Take the core and import your trainings, or activate bricks by family: the price follows, both ways.",
 		"perYear": "€/yr",
 		"core": {
 			"badge": "The LMS core",
 			"price": "600",
-			"note": "Per site, no commitment.",
+			"note": "Per site, unlimited learners, no commitment.",
+			"trial": "Free trial: 3 users, every brick activated.",
 			"description": "Everything to deliver, track and steer your trainings, including the ones you already own.",
 			"features": [
-				"Hosting and delivery of your trainings, built by us or imported",
-				"Completion tracking and answer history",
-				"Verifiable certifications",
-				"Unlimited learners",
-				"Multi-path training plans and automatic reminders",
-				"Dashboards, analytics and exports"
+				"Import of SCORM 1.2 and 2004 trainings, videos, PDFs and links",
+				"Catalog, training plans, groups and paths",
+				"Automatic reminders and recertification",
+				"Verifiable certificates and attestations, notifications",
+				"Qualiopi compliance: evidence register, exports, follow-up evaluation",
+				"Badges, dashboards and analytics",
+				"Unlimited learners"
 			],
 			"cta": "Request a free quote"
 		},
 		"modules": {
 			"title": "Optional bricks",
-			"subtitle": "Activate them when the need appears.",
+			"subtitle": "Four families, ten bricks. Activate them when the need appears.",
 			"note": "Remove a brick: the price goes down.",
+			"includedLabel": "Included",
+			"separateTag": "Always billed on top",
 			"items": {
-				"wisepaper": {
-					"title": "WisePaper editor",
-					"price": "600",
-					"description": "The AI editor that turns your PDF, Word and PowerPoint files into interactive trainings with quizzes."
+				"content": {
+					"title": "WiseTwin content",
+					"subtitle": "Authoring tools and 3D trainings",
+					"bricks": {
+						"wisetrainer": {
+							"title": "WiseTrainer 3D",
+							"price": "Included with a project",
+							"description": "Your custom 3D simulators delivered at no extra cost, with no time limit."
+						},
+						"wisepaper": {
+							"title": "WisePaper editor",
+							"price": "600",
+							"description": "Build your chaptered trainings with quizzes, unlimited authors."
+						},
+						"wisetour": {
+							"title": "WiseTour editor",
+							"price": "900",
+							"description": "Upload your own 3D scans (.ply, .sog, .splat) and compose your tours: zones, points of interest, quizzes. A scan by our team remains a project billed once."
+						}
+					}
 				},
-				"wisetour": {
-					"title": "WiseTour editor",
-					"price": "400",
-					"description": "Upload your own 3D scans (.ply, .sog, .splat) and compose your tours yourself: zones, points of interest, quizzes, delivery in the LMS."
-				},
-				"askai": {
-					"title": "Ask AI & incident database",
-					"price": "800",
-					"description": "The safety copilot: photo-based risk hunts, prevention reports, accident history searchable in natural language."
+				"ai": {
+					"title": "Artificial intelligence",
+					"subtitle": "AI on your field reality",
+					"bricks": {
+						"askai": {
+							"title": "Ask AI",
+							"price": "900",
+							"description": "The safety assistant that cross-references your internal incidents, the ARIA database and your catalog, in natural language."
+						},
+						"riskhunt": {
+							"title": "Risk hunt",
+							"price": "600",
+							"description": "Photograph a workstation: the AI spots the risks and drafts a prevention report."
+						},
+						"wisepaperImport": {
+							"title": "WisePaper AI import",
+							"price": "600",
+							"description": "Your PDF, Word and PowerPoint files turned into trainings with quizzes. 50 imports included."
+						}
+					}
 				},
 				"integrations": {
-					"title": "SSO, webhooks & API",
-					"price": "1,200",
-					"description": "Sign-in through your identity provider (SAML, OAuth), webhooks to your tools and an API to plug the platform into your IT system."
+					"title": "Integrations",
+					"subtitle": "For your IT department",
+					"bricks": {
+						"sso": {
+							"title": "SSO",
+							"price": "1,800",
+							"description": "Sign-in through your identity provider (SAML, OAuth). Billed at the cost of the connection, on top of the full bundle."
+						},
+						"api": {
+							"title": "API, webhooks and LRS",
+							"price": "600",
+							"description": "API v1, signed webhooks to your tools and xAPI statements sent to the LRS of your choice."
+						}
+					}
+				},
+				"governance": {
+					"title": "Governance and branding",
+					"subtitle": "Compliance and brand",
+					"bricks": {
+						"audit": {
+							"title": "Audit log",
+							"price": "300",
+							"description": "Traceability of every admin action, exportable for your audits."
+						},
+						"whitelabel": {
+							"title": "White label",
+							"price": "900",
+							"description": "Your colors, your name, your logo and your signatory on the certificates."
+						}
+					}
 				}
 			}
 		},
 		"total": {
 			"label": "All included:",
-			"price": "3,600"
+			"price": "4,800",
+			"suffix": "excluding SSO",
+			"detail": "The core and every brick, except SSO which is always billed on top. À la carte, the same basket costs €6,000/yr."
 		},
 		"formations": {
 			"title": "What about custom trainings?",
@@ -571,9 +631,9 @@
 			},
 			"easyIntegration": {
 				"label": "Integrable",
-				"shortDesc": "xAPI/cmi5, LMS export",
+				"shortDesc": "SCORM, xAPI, LRS",
 				"title": "Integrates with your existing tools",
-				"description": "Export your training data in xAPI and cmi5 formats and integrate it directly into your LMS (Moodle, 360Learning, Talentsoft). No break in your training ecosystem.",
+				"description": "Import your SCORM 1.2 and 2004 trainings and send your training data as xAPI statements to the LRS of your choice (Moodle, 360Learning, Talentsoft). No break in your training ecosystem.",
 				"stats": {
 					"value1": "100%",
 					"label1": "xAPI compatible",
@@ -604,10 +664,10 @@
 				"eyebrow": "The LMS platform",
 				"title": "Your place, or ours: you choose",
 				"titleExclusive": "Available in the LMS platform",
-				"description": "The LMS platform delivers, tracks and steers your trainings, and is modular by bricks: the WisePaper and WiseTour editors, Ask AI and the incident database, SSO, webhooks and API integrations. From €600/year, €3,600/year all included.",
+				"description": "The LMS platform delivers, tracks and steers your trainings, SCORM included, and is modular by bricks: the WisePaper and WiseTour editors, Ask AI and the risk hunt, SSO and API integrations, white label. From €600/year, €4,800/year all included excluding SSO.",
 				"cta": "Discover the platform",
 				"eyebrowStandalone": "Delivery",
-				"descriptionPlatform": "The LMS platform delivers, tracks and steers your trainings, and is modular by bricks: the WisePaper and WiseTour editors, Ask AI and the incident database, SSO, webhooks and API integrations. From €600/year, €3,600/year all included."
+				"descriptionPlatform": "The LMS platform delivers, tracks and steers your trainings, SCORM included, and is modular by bricks: the WisePaper and WiseTour editors, Ask AI and the risk hunt, SSO and API integrations, white label. From €600/year, €4,800/year all included excluding SSO."
 			}
 		},
 		"wisetrainer": {
@@ -641,7 +701,7 @@
 			"title": "WisePaper",
 			"subtitle": "Import your PDF, Word or PowerPoint files: AI turns them into interactive, chaptered trainings with quizzes and tracking.",
 			"price": "Included in the LMS platform",
-			"priceNote": "The WisePaper editor is an LMS brick (€600/yr within the platform): create unlimited trainings from your existing documents.",
+			"priceNote": "The WisePaper editor is an LMS brick (€600/yr, unlimited authors): create unlimited chaptered trainings with quizzes. The AI import of your existing documents is a separate brick (+€600/yr, 50 imports included).",
 			"features": [
 				{
 					"title": "The AI does the work",
@@ -659,12 +719,12 @@
 		},
 		"wisetour": {
 			"metaTitle": "WiseTour - Immersive safety induction of your site",
-			"metaDescription": "The immersive safety tour of your site, built on a 3D scan. Upload your own files (.ply, .sog, .splat) into the editor, an LMS brick at €400/yr, or have our team scan your site: €10,000 to €20,000 depending on the site.",
+			"metaDescription": "The immersive safety tour of your site, built on a 3D scan. Upload your own files (.ply, .sog, .splat) into the editor, an LMS brick at €900/yr, or have our team scan your site: €10,000 to €20,000 depending on the site.",
 			"tag": "Safety induction",
 			"title": "WiseTour",
 			"subtitle": "The immersive safety tour of your site, built on a 3D scan of your facilities. Your temp workers are operational from day one.",
 			"price": "Editor included in the LMS platform",
-			"priceNote": "Already have a 3D scan? Upload it into the WiseTour editor, an LMS brick at +€400/yr. Otherwise we scan your site: €10,000 to €20,000 depending on the site, billed once.",
+			"priceNote": "Already have a 3D scan? Upload it into the WiseTour editor, an LMS brick at +€900/yr. Otherwise we scan your site: €10,000 to €20,000 depending on the site, billed once.",
 			"features": [
 				{
 					"title": "Your site, as if you were there",
@@ -697,7 +757,7 @@
 							".sog",
 							".glb"
 						],
-						"price": "+€400/yr",
+						"price": "+€900/yr",
 						"priceNote": "LMS platform brick",
 						"cta": "Discover the platform"
 					},

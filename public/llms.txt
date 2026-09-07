@@ -6,8 +6,8 @@
 > 3D, data & AI) that are fast to deploy, affordable, and sized for a single site's
 > budget. It also publishes its own products: the custom trainings WiseTrainer (3D
 > simulators) and WiseTour (immersive safety inductions), billed once per project; the
-> modular LMS platform with its WisePaper editor and Ask AI safety copilot (yearly
-> subscription); and WiseAtlas (territorial communication, on quote).
+> modular LMS platform, content-agnostic, with its WisePaper and WiseTour editors, Ask AI
+> safety copilot and integration bricks (yearly subscription); and WiseAtlas (territorial communication, on quote).
 
 WiseTwin's philosophy: operational excellence and industrial performance come from tools
 designed by and for the teams who use them, without disrupting their daily work. Digital must be
@@ -48,21 +48,33 @@ cost); platforms are yearly subscriptions per site that clients run autonomously
 - WiseTour — immersive safety induction of the client's site, built on a 3D scan
   (Gaussian splatting). Two ways in: a client who already has a scan (.ply, .splat,
   .ksplat, .spz, .sog or .glb files) uploads it into the WiseTour editor, an LMS brick
-  at €400/yr, and adds zones, instructions, points of interest and quizzes alone;
+  at €900/yr, and adds zones, instructions, points of interest and quizzes alone;
   otherwise WiseTwin scans the site (technicians on site, or smartphone footage
   processed by WiseTwin) and delivers the tour turnkey for €10,000 to €20,000 per
   project depending on the site, billed once, the scan belonging to the client.
-- The LMS platform (from €600/year for the core alone; €3,600/year all included
-  with every brick) — the modular LMS: hosting and delivery of trainings (built by
-  WiseTwin or imported by the client), completion tracking, verifiable certifications,
-  unlimited learners, training plans, automatic reminders, dashboards and analytics.
-  Optional bricks: WisePaper (€600/yr, AI editor turning PDF, Word and PowerPoint
-  documents into interactive trainings with quizzes), WiseTour editor (€400/yr,
-  upload your own 3D scan as .ply, .splat, .ksplat, .spz, .sog or .glb, then add zones,
-  points of interest and quizzes yourself), Ask AI with the incident
-  database (€800/yr, safety copilot: photo-based risk hunts, prevention reports,
-  accident history searchable in natural language), integrations: SSO, webhooks and
-  API (€1,200/yr). Clients can take the LMS alone and import their own trainings.
+- The LMS platform (from €600/year for the core alone; €4,800/year all included
+  excluding SSO) — the standalone, content-agnostic LMS. The core (€600/yr per site,
+  unlimited learners, no commitment, free trial with 3 users and every brick) includes:
+  import of SCORM 1.2 and 2004 trainings, videos, PDFs and links; catalog; training
+  plans and groups; paths; automatic reminders and recertification; certificates and
+  attestations; notifications; Qualiopi compliance (evidence register, exports,
+  follow-up evaluation); badges; dashboards and analytics.
+  Ten optional bricks in four families, activated per client (remove one, the price
+  drops):
+  - WiseTwin content: WiseTrainer 3D (included with a project, delivery at no extra
+    cost), WisePaper editor (€600/yr, unlimited authors), WiseTour editor (€900/yr,
+    upload your own 3D scan and compose your tours yourself).
+  - Artificial intelligence: Ask AI (€900/yr, safety assistant cross-referencing
+    internal incidents, the ARIA database and the catalog), risk hunt (€600/yr,
+    workstation photo analysis), WisePaper AI import (€600/yr, PDF, Word and
+    PowerPoint to training, 50 imports included).
+  - Integrations: SSO (€1,800/yr, SAML / OAuth via the client's identity provider,
+    always billed on top of the full bundle), API, webhooks and LRS (€600/yr, API v1,
+    signed webhooks, xAPI statements sent to the client's LRS).
+  - Governance and branding: audit log (€300/yr), white label (€900/yr: colors, name,
+    logo, certificate signatory).
+  Full bundle: €4,800/yr for the core and every brick except SSO (€6,000/yr à la
+  carte). Clients can take the LMS alone and import their own trainings.
 - WiseAtlas (on quote) — interactive map editor for territories and industrial
   infrastructure, used self-service or delivered as a turnkey project. 3D models,
   virtual tours, up-to-date data, shareable in one link.
@@ -98,4 +110,4 @@ Three units; the team assembles on the fly around each project:
 - Contact: contact@wisetwin.eu, free quote, no commitment; a discussion slot can be
   booked directly on the site
 - Security: MFA, enterprise SSO, audit logs, GDPR-compliant, data hosted in Europe,
-  ISO 27001 best practices, xAPI/cmi5 exports to existing LMS
+  ISO 27001 best practices, SCORM 1.2 and 2004 import, xAPI statements to the client's LRS

@@ -12,9 +12,9 @@
 		},
 		"platform": {
 			"title": "La plateforme LMS",
-			"description": "Le LMS modulable pour l'industrie : diffusez vos formations, les nôtres ou les vôtres, avec les éditeurs WisePaper et WiseTour et l'IA Ask AI. À partir de 600€/an, 3 600€/an tout compris.",
+			"description": "Le LMS modulable pour l'industrie : diffusez vos formations, les nôtres ou les vôtres, SCORM compris, avec dix briques en option : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations, marque blanche. À partir de 600€/an, 4 800€/an tout compris hors SSO.",
 			"ogTitle": "La plateforme LMS WiseTwin - Le LMS modulable pour l'industrie",
-			"ogDescription": "Prenez le LMS seul et importez vos formations, ou ajoutez les briques WisePaper, éditeur WiseTour, Ask AI et intégrations SSO, webhooks, API. À partir de 600€/an. 100% web."
+			"ogDescription": "Prenez le LMS seul et importez vos formations SCORM, ou activez les briques WisePaper, éditeur WiseTour, Ask AI, chasse aux risques, SSO, API et marque blanche. À partir de 600€/an. 100% web."
 		},
 		"wiseatlas": {
 			"description": "Carte interactive pour valoriser votre territoire, vos sites industriels et vos infrastructures avec des visites virtuelles immersives.",
@@ -166,9 +166,9 @@
 		"platform": {
 			"tag": "La plateforme",
 			"title": "La plateforme LMS",
-			"description": "Diffusez vos formations, les nôtres ou les vôtres. Modulable par briques : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations SSO et API.",
+			"description": "Diffusez vos formations, les nôtres ou les vôtres, SCORM compris. Modulable par briques : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations SSO et API, marque blanche.",
 			"price": "à partir de 600€/an",
-			"priceNote": "3 600€/an tout compris, briques désactivables",
+			"priceNote": "4 800€/an tout compris hors SSO, briques désactivables",
 			"cta": "Découvrir la plateforme"
 		},
 		"bricks": {
@@ -183,7 +183,7 @@
 				"tag": "Accueil sécurité",
 				"title": "WiseTour",
 				"description": "La visite sécurité immersive de votre site, construite sur un scan 3D. Chargez le vôtre dans l'éditeur, ou nous scannons votre site : 10 000 à 20 000€ par projet.",
-				"price": "+400€/an",
+				"price": "+900€/an",
 				"priceNote": "avec votre propre scan 3D"
 			},
 			"wisepaper": {
@@ -348,7 +348,7 @@
 						"Présentation de site",
 						"Communication institutionnelle"
 					],
-					"price": "Éditeur : +400€/an avec votre scan. Scan par nos équipes : 10 000 à 20 000€ selon le site"
+					"price": "Éditeur : +900€/an avec votre scan. Scan par nos équipes : 10 000 à 20 000€ selon le site"
 				},
 				{
 					"tag": "3D haute fidélité",
@@ -376,7 +376,7 @@
 						"Mise à jour de procédures",
 						"Onboarding administratif"
 					],
-					"price": "Éditeur inclus dans la plateforme LMS, formations illimitées"
+					"price": "Éditeur inclus dans la plateforme LMS (+600€/an), formations illimitées. Import IA de vos documents : +600€/an"
 				},
 				{
 					"tag": "IA & données",
@@ -390,16 +390,16 @@
 						"Rapports de prévention",
 						"Analyse d'accidentologie"
 					],
-					"price": "Brique Ask AI : +800€/an dans la plateforme"
+					"price": "Brique Ask AI : +900€/an dans la plateforme. Chasse aux risques par photo : +600€/an"
 				}
 			]
 		},
 		"hero": {
 			"eyebrow": "La plateforme",
 			"title": "Le LMS taillé pour l'industrie",
-			"subtitle": "Diffusez vos formations, les nôtres comme les vôtres. Suivez chaque complétion, certifiez vos apprenants, et modulez par briques : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations SSO et API.",
+			"subtitle": "Diffusez vos formations, les nôtres comme les vôtres, SCORM compris. Suivez chaque complétion, certifiez vos apprenants, et modulez par briques : éditeurs WisePaper et WiseTour, IA Ask AI, intégrations SSO et API, marque blanche.",
 			"price": "à partir de 600€/an",
-			"priceNote": "3 600€/an tout compris avec toutes les briques",
+			"priceNote": "4 800€/an tout compris, hors SSO",
 			"cta": "Demander un devis gratuit",
 			"ctaSecondary": "Voir les tarifs"
 		},
@@ -459,10 +459,10 @@
 				"title": "Export & Intégration",
 				"description": "Connectez WiseTwin à votre écosystème de formation existant.",
 				"items": [
-					"Intégration des données dans votre LMS",
+					"Import SCORM 1.2 et 2004, vidéos, PDF et liens",
+					"Envoi xAPI vers le LRS de votre choix",
 					"Certifications PDF avec QR code",
-					"Catalogue complet de vos formations",
-					"Exports xAPI / cmi5"
+					"API v1 et webhooks signés"
 				]
 			}
 		},
@@ -475,53 +475,113 @@
 	"pricing": {
 		"eyebrow": "Tarification",
 		"title": "Le LMS seul, ou avec ses briques",
-		"subtitle": "Prenez le socle et importez vos formations, ou ajoutez des briques : le prix suit, dans les deux sens.",
+		"subtitle": "Prenez le socle et importez vos formations, ou activez des briques par famille : le prix suit, dans les deux sens.",
 		"perYear": "€/an",
 		"core": {
 			"badge": "Le socle LMS",
 			"price": "600",
-			"note": "Par site, sans engagement.",
+			"note": "Par site, apprenants illimités, sans engagement.",
+			"trial": "Essai gratuit : 3 utilisateurs, toutes les briques activées.",
 			"description": "Tout pour diffuser, suivre et piloter vos formations, y compris celles que vous possédez déjà.",
 			"features": [
-				"Hébergement et diffusion de vos formations, créées par nous ou importées",
-				"Suivi de complétion et historique des réponses",
-				"Certifications vérifiables",
-				"Apprenants illimités",
-				"Plans de formation multi-parcours et relances automatiques",
-				"Tableaux de bord, analytiques et exports"
+				"Import de formations SCORM 1.2 et 2004, vidéos, PDF et liens",
+				"Catalogue, plans de formation, groupes et parcours",
+				"Rappels automatiques et recertification",
+				"Certificats et attestations vérifiables, notifications",
+				"Conformité Qualiopi : registre de preuves, exports, évaluation à froid",
+				"Badges, tableaux de bord et analytiques",
+				"Apprenants illimités"
 			],
 			"cta": "Demander un devis gratuit"
 		},
 		"modules": {
 			"title": "Les briques en option",
-			"subtitle": "Activez-les quand le besoin apparaît.",
+			"subtitle": "Quatre familles, dix briques. Activez-les quand le besoin apparaît.",
 			"note": "Retirez une brique : le prix descend.",
+			"includedLabel": "Inclus",
+			"separateTag": "Toujours en supplément",
 			"items": {
-				"wisepaper": {
-					"title": "Éditeur WisePaper",
-					"price": "600",
-					"description": "L'éditeur IA qui transforme vos PDF, Word et PowerPoint en formations interactives avec quiz."
+				"content": {
+					"title": "Contenus WiseTwin",
+					"subtitle": "Outils auteur et formations 3D",
+					"bricks": {
+						"wisetrainer": {
+							"title": "WiseTrainer 3D",
+							"price": "Inclus avec un projet",
+							"description": "Vos simulateurs 3D sur mesure diffusés sans surcoût, sans limite de durée."
+						},
+						"wisepaper": {
+							"title": "Éditeur WisePaper",
+							"price": "600",
+							"description": "Créez vos formations chapitrées avec quiz, auteurs illimités."
+						},
+						"wisetour": {
+							"title": "Éditeur WiseTour",
+							"price": "900",
+							"description": "Chargez vos propres scans 3D (.ply, .sog, .splat) et composez vos visites : zones, points d'intérêt, quiz. Le scan par nos équipes reste un projet facturé une seule fois."
+						}
+					}
 				},
-				"wisetour": {
-					"title": "Éditeur WiseTour",
-					"price": "400",
-					"description": "Chargez vos propres scans 3D (.ply, .sog, .splat) et composez vos visites vous-même : zones, points d'intérêt, quiz, diffusion dans le LMS."
-				},
-				"askai": {
-					"title": "Ask AI & base d'incidents",
-					"price": "800",
-					"description": "Le copilote sécurité : chasse aux risques par photo, rapports de prévention, accidentologie interrogeable en langage naturel."
+				"ai": {
+					"title": "Intelligence artificielle",
+					"subtitle": "L'IA sur votre réalité terrain",
+					"bricks": {
+						"askai": {
+							"title": "Ask AI",
+							"price": "900",
+							"description": "L'assistant sécurité qui croise vos incidents internes, la base ARIA et votre catalogue, en langage naturel."
+						},
+						"riskhunt": {
+							"title": "Chasse aux risques",
+							"price": "600",
+							"description": "Photographiez un poste de travail : l'IA relève les risques et propose un rapport de prévention."
+						},
+						"wisepaperImport": {
+							"title": "Import IA WisePaper",
+							"price": "600",
+							"description": "Vos PDF, Word et PowerPoint transformés en formations avec quiz. 50 imports inclus."
+						}
+					}
 				},
 				"integrations": {
-					"title": "SSO, webhooks & API",
-					"price": "1 200",
-					"description": "Connexion via votre fournisseur d'identité (SAML, OAuth), webhooks vers vos outils et API pour brancher la plateforme sur votre SI."
+					"title": "Intégrations",
+					"subtitle": "Pour votre DSI",
+					"bricks": {
+						"sso": {
+							"title": "SSO",
+							"price": "1 800",
+							"description": "Connexion via votre fournisseur d'identité (SAML, OAuth). Facturé au coût de la connexion, en plus de la totale."
+						},
+						"api": {
+							"title": "API, webhooks et LRS",
+							"price": "600",
+							"description": "API v1, webhooks signés vers vos outils et envoi xAPI vers le LRS de votre choix."
+						}
+					}
+				},
+				"governance": {
+					"title": "Gouvernance et image",
+					"subtitle": "Conformité et marque",
+					"bricks": {
+						"audit": {
+							"title": "Journal d'audit",
+							"price": "300",
+							"description": "Traçabilité de chaque action d'administration, exportable pour vos audits."
+						},
+						"whitelabel": {
+							"title": "Marque blanche",
+							"price": "900",
+							"description": "Vos couleurs, votre nom, votre logo et votre signataire sur les certificats."
+						}
+					}
 				}
 			}
 		},
 		"total": {
 			"label": "La totale :",
-			"price": "3 600"
+			"price": "4 800",
+			"suffix": "hors SSO",
+			"detail": "Le socle et toutes les briques, sauf le SSO qui se facture toujours en plus. À la carte, le même panier coûte 6 000€/an."
 		},
 		"formations": {
 			"title": "Et les formations sur mesure ?",
@@ -571,9 +631,9 @@
 			},
 			"easyIntegration": {
 				"label": "Intégrable",
-				"shortDesc": "xAPI/cmi5, export LMS",
+				"shortDesc": "SCORM, xAPI, LRS",
 				"title": "S'intègre à vos outils existants",
-				"description": "Exportez vos données de formation aux formats xAPI et cmi5 et intégrez-les directement dans votre LMS (Moodle, 360Learning, Talentsoft). Pas de rupture dans votre écosystème de formation.",
+				"description": "Importez vos formations SCORM 1.2 et 2004 et envoyez vos données de formation en xAPI vers le LRS de votre choix (Moodle, 360Learning, Talentsoft). Pas de rupture dans votre écosystème de formation.",
 				"stats": {
 					"value1": "100%",
 					"label1": "compatible xAPI",
@@ -604,10 +664,10 @@
 				"eyebrow": "La plateforme LMS",
 				"title": "Chez vous, ou chez nous : vous choisissez",
 				"titleExclusive": "Disponible dans la plateforme LMS",
-				"description": "La plateforme LMS diffuse, trace et pilote vos formations, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la base d'incidents, les intégrations SSO, webhooks et API. À partir de 600€/an, 3 600€/an tout compris.",
+				"description": "La plateforme LMS diffuse, trace et pilote vos formations, SCORM compris, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la chasse aux risques, les intégrations SSO et API, la marque blanche. À partir de 600€/an, 4 800€/an tout compris hors SSO.",
 				"cta": "Découvrir la plateforme",
 				"eyebrowStandalone": "La diffusion",
-				"descriptionPlatform": "La plateforme LMS diffuse, trace et pilote vos formations, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la base d'incidents, les intégrations SSO, webhooks et API. À partir de 600€/an, 3 600€/an tout compris."
+				"descriptionPlatform": "La plateforme LMS diffuse, trace et pilote vos formations, SCORM compris, et se module par briques : les éditeurs WisePaper et WiseTour, Ask AI et la chasse aux risques, les intégrations SSO et API, la marque blanche. À partir de 600€/an, 4 800€/an tout compris hors SSO."
 			}
 		},
 		"wisetrainer": {
@@ -641,7 +701,7 @@
 			"title": "WisePaper",
 			"subtitle": "Importez vos PDF, Word ou PowerPoint : l'IA les transforme en formations interactives, chapitrées, avec quiz et suivi.",
 			"price": "Inclus dans la plateforme LMS",
-			"priceNote": "L'éditeur WisePaper est une brique du LMS (600€/an dans la plateforme) : créez des formations illimitées depuis vos documents existants.",
+			"priceNote": "L'éditeur WisePaper est une brique du LMS (600€/an, auteurs illimités) : créez des formations illimitées, chapitrées, avec quiz. L'import IA de vos documents existants est une brique à part (+600€/an, 50 imports inclus).",
 			"features": [
 				{
 					"title": "L'IA fait le travail",
@@ -659,12 +719,12 @@
 		},
 		"wisetour": {
 			"metaTitle": "WiseTour - Accueil sécurité immersif de votre site",
-			"metaDescription": "La visite sécurité immersive de votre site, construite sur un scan 3D. Chargez vos propres fichiers (.ply, .sog, .splat) dans l'éditeur, brique du LMS à 400€/an, ou faites scanner votre site par nos équipes : 10 000 à 20 000€ selon le site.",
+			"metaDescription": "La visite sécurité immersive de votre site, construite sur un scan 3D. Chargez vos propres fichiers (.ply, .sog, .splat) dans l'éditeur, brique du LMS à 900€/an, ou faites scanner votre site par nos équipes : 10 000 à 20 000€ selon le site.",
 			"tag": "Accueil sécurité",
 			"title": "WiseTour",
 			"subtitle": "La visite sécurité immersive de votre site, construite sur un scan 3D de vos installations. Vos intérimaires sont opérationnels dès le premier jour.",
 			"price": "Éditeur inclus dans la plateforme LMS",
-			"priceNote": "Vous avez déjà un scan 3D ? Chargez-le dans l'éditeur WiseTour, brique du LMS à +400€/an. Sinon, nous scannons votre site : 10 000 à 20 000€ selon le site, facturé une seule fois.",
+			"priceNote": "Vous avez déjà un scan 3D ? Chargez-le dans l'éditeur WiseTour, brique du LMS à +900€/an. Sinon, nous scannons votre site : 10 000 à 20 000€ selon le site, facturé une seule fois.",
 			"features": [
 				{
 					"title": "Votre site, comme si on y était",
@@ -697,7 +757,7 @@
 							".sog",
 							".glb"
 						],
-						"price": "+400€/an",
+						"price": "+900€/an",
 						"priceNote": "brique de la plateforme LMS",
 						"cta": "Découvrir la plateforme"
 					},
