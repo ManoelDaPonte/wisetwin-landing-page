@@ -11,17 +11,26 @@ const logos = [
 		name: "Institut Mines-Télécom",
 		src: "/logos/Logo_Institut_Mines-Télécom.svg",
 	},
-	{ name: "Ecosystème D", src: "/logos/Logo-Ecosysteme-D_CMJN.png", className: "!h-18 md:!h-22" },
-	{ name: "AD", src: "/logos/logo-ad.png", className: "!h-8 md:!h-10" },
+	{
+		name: "Ecosystème D",
+		src: "/logos/ecosysteme-d.png",
+		className: "!h-9 md:!h-11",
+		wrapperClassName: "w-40 md:w-48",
+	},
+	{ name: "Aluminium Dunkerque", src: "/logos/aluminium-dunkerque.png", className: "!h-11 md:!h-14" },
+	{ name: "Exotec", src: "/logos/exotec-logo.svg", className: "!h-6 md:!h-7" },
 ];
 
-function LogoItem({ logo }: { logo: { name: string; src: string; className?: string } }) {
+type Logo = { name: string; src: string; className?: string; wrapperClassName?: string };
+
+function LogoItem({ logo }: { logo: Logo }) {
 	return (
 		<div
 			className={cn(
 				"flex-shrink-0 mx-8 md:mx-12",
 				"flex items-center justify-center",
-				"h-12 w-32 md:w-40"
+				"h-14 md:h-16 w-32 md:w-40",
+				logo.wrapperClassName
 			)}
 		>
 			<Image
