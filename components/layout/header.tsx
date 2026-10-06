@@ -115,7 +115,7 @@ export function Header() {
 					{/* Logo */}
 					<Link href="/">
 						<div className="flex items-center gap-2 cursor-pointer">
-							<Logo variant="wisetwin" width={120} height={32} />
+							<Logo variant="wisetwin" width={120} height={32} className="h-8 w-auto" />
 						</div>
 					</Link>
 
@@ -224,7 +224,7 @@ export function Header() {
 								<div className="flex flex-col h-full">
 									{/* Mobile Header */}
 									<div className="p-6 border-b border-border">
-										<Logo variant="wisetwin" width={120} height={32} />
+										<Logo variant="wisetwin" width={120} height={32} className="h-8 w-auto" />
 									</div>
 
 									{/* Mobile Navigation */}

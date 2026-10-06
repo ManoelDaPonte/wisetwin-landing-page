@@ -5,7 +5,7 @@ import { routing } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
 	// Skip i18n for Outstatic dashboard
 	if (request.nextUrl.pathname.startsWith("/outstatic")) {
 		return NextResponse.next();

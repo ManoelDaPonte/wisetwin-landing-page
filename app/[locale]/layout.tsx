@@ -60,7 +60,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 	return (
 		<html
 			lang={locale}
-			className="scroll-smooth"
+			className="relative scroll-smooth"
 			suppressHydrationWarning
 		>
 			<body
