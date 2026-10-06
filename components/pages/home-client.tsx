@@ -1,16 +1,13 @@
 "use client";
 
 import {
-	HeroSection,
+	HeroSequence,
 	TrustedBySection,
-	ConvictionsSection,
 	TeamSection,
 	// TestimonialsSection, — désactivé en attendant les vraies vidéos clients
-	ExpertisesSection,
 	MethodSection,
 	ToolsSection,
 	TerritorySection,
-	BlogSection,
 	ContactSection,
 } from "@/components/sections";
 
@@ -23,28 +20,21 @@ type Post = {
 	readingTime: number;
 };
 
-export default function HomeClient({
-	latestPosts,
-}: {
+// Home allégée (branche feat/home-premium) : la séquence du cube remplace le hero,
+// les convictions et les savoir-faire ; le blog n'est plus sur la home (menu + footer).
+export default function HomeClient(_props: {
 	latestPosts: Post[];
 	// Conservé pour la réactivation des témoignages (pool public/videos/temoignages/)
 	testimonialVideos: string[];
 }) {
 	return (
 		<>
-			<HeroSection />
+			<HeroSequence />
 			<TrustedBySection />
-			<ConvictionsSection />
-			<TeamSection />
-			{/* Témoignages clients : réactiver quand on aura de vraies vidéos.
-			    ⚠️ En le réactivant (variant muted), rebasculer l'alternance des fonds :
-			    expertises → default, method → muted, tools → default
-			<TestimonialsSection videoPool={testimonialVideos} /> */}
-			<ExpertisesSection />
-			<MethodSection />
 			<ToolsSection />
+			<MethodSection />
+			<TeamSection />
 			<TerritorySection />
-			<BlogSection posts={latestPosts} />
 			<ContactSection />
 		</>
 	);

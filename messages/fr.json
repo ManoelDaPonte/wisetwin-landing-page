@@ -57,7 +57,28 @@
 			"48h pour définir un cahier des charges"
 		],
 		"videoCaption": "WiseTrainer, notre simulateur de formation, conçu et développé par nos soins.",
-		"videoLink": "Découvrir l'outil"
+		"videoLink": "Découvrir l'outil",
+		"sceneCaption": "Cette cellule robotisée est rendue en 3D temps réel, directement dans votre navigateur. Nos simulateurs WiseTrainer vont bien plus loin.",
+		"scene": {
+			"hint": "Temps réel · glissez pour explorer",
+			"loading": "Chargement de la scène 3D",
+			"poi": {
+				"danger": "Zone de danger robot",
+				"emergency": "Arrêt d'urgence",
+				"quality": "Contrôle qualité"
+			}
+		},
+		"proof": "Devis gratuit, sans engagement · +40 solutions livrées en 1 an",
+		"scroll": "Faites défiler",
+		"reveal": {
+			"title": "Derrière chaque projet, votre terrain.",
+			"subtitle": "Vos installations réelles, recréées en 3D, deviennent l'outil qui forme, sécurise et pilote."
+		},
+		"domains": {
+			"title": "Quatre savoir-faire, une seule équipe.",
+			"note": "Votre besoin ne rentre dans aucune case ?",
+			"cta": "Décrivez-le-nous"
+		}
 	},
 	"convictions": {
 		"eyebrow": "Manifeste",

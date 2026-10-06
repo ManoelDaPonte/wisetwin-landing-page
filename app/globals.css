@@ -130,3 +130,13 @@
 .animate-marquee-slow {
 	animation: marquee 50s linear infinite;
 }
+
+/* Indicateur de scroll du hero */
+@keyframes scroll-hint {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(200%);
+	}
+}

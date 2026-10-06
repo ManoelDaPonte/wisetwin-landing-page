@@ -57,7 +57,28 @@
 			"48h to define a specification"
 		],
 		"videoCaption": "WiseTrainer, our training simulator, designed and developed in-house.",
-		"videoLink": "Discover the tool"
+		"videoLink": "Discover the tool",
+		"sceneCaption": "This robotic cell is rendered in real-time 3D, right in your browser. Our WiseTrainer simulators go much further.",
+		"scene": {
+			"hint": "Real time · drag to explore",
+			"loading": "Loading the 3D scene",
+			"poi": {
+				"danger": "Robot danger zone",
+				"emergency": "Emergency stop",
+				"quality": "Quality check"
+			}
+		},
+		"proof": "Free quote, no commitment · 40+ solutions delivered in 1 year",
+		"scroll": "Scroll",
+		"reveal": {
+			"title": "Behind every project, your site.",
+			"subtitle": "Your real facilities, recreated in 3D, become the tool that trains, protects and steers."
+		},
+		"domains": {
+			"title": "Four areas of expertise, one team.",
+			"note": "Your need doesn't fit any box?",
+			"cta": "Tell us about it"
+		}
 	},
 	"convictions": {
 		"eyebrow": "Manifesto",

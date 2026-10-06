@@ -1,5 +1,6 @@
 // Home
 export { HeroSection } from "./home/hero-section";
+export { HeroSequence } from "./home/hero-sequence";
 export { TrustedBySection } from "./home/trusted-by-section";
 export { ConvictionsSection } from "./home/convictions-section";
 export { ExpertisesSection } from "./home/expertises-section";

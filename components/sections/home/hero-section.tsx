@@ -1,19 +1,54 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
-import { motion, useReducedMotion } from "framer-motion";
+import { useTheme } from "next-themes";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pattern";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Rotate3d } from "lucide-react";
 
 const EASE = [0.21, 0.47, 0.32, 0.98] as const;
+
+function ScenePlaceholder({ label }: { label: string }) {
+	return (
+		<div
+			className="absolute inset-0 flex items-center justify-center"
+			style={{
+				backgroundImage:
+					"linear-gradient(color-mix(in oklab, var(--color-border) 45%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in oklab, var(--color-border) 45%, transparent) 1px, transparent 1px)",
+				backgroundSize: "28px 28px",
+			}}
+		>
+			<span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground animate-pulse">
+				{label}
+			</span>
+		</div>
+	);
+}
+
+// three.js ne tourne que côté client, et seulement une fois le hero affiché
+const HeroScene = dynamic(() => import("./hero-scene"), { ssr: false });
+
+// Scène 3D sur desktop (pointeur précis) ; la vidéo reste sur mobile, tablette et
+// quand l'utilisateur réduit les animations
+const SCENE_QUERY = "(min-width: 768px) and (pointer: fine)";
 
 export function HeroSection() {
 	const t = useTranslations("hero");
 	const reduceMotion = useReducedMotion();
 	const chips = t.raw("chips") as string[];
+	const { resolvedTheme } = useTheme();
+	const [visual, setVisual] = useState<"scene" | "video" | null>(null);
+	const sceneRef = useRef<HTMLDivElement>(null);
+	const sceneInView = useInView(sceneRef, { amount: 0.1 });
+
+	useEffect(() => {
+		setVisual(!reduceMotion && window.matchMedia(SCENE_QUERY).matches ? "scene" : "video");
+	}, [reduceMotion]);
 
 	const container = {
 		hidden: {},
@@ -141,20 +176,44 @@ export function HeroSection() {
 										</span>
 									</div>
 								</div>
-								<video
-									autoPlay
-									loop
-									muted
-									playsInline
-									poster="/image/wisetrainer-hero-poster.jpg"
-									className="w-full aspect-video object-cover"
-								>
-									<source src="/video/WiseTrainer-SimulateursDeFormation.mp4" type="video/mp4" />
-								</video>
+								{visual === "video" ? (
+									<video
+										autoPlay
+										loop
+										muted
+										playsInline
+										poster="/image/wisetrainer-hero-poster.jpg"
+										className="w-full aspect-video object-cover"
+									>
+										<source src="/video/WiseTrainer-SimulateursDeFormation.mp4" type="video/mp4" />
+									</video>
+								) : (
+									<div ref={sceneRef} className="relative w-full aspect-video">
+										{visual === "scene" ? (
+											<>
+												<HeroScene
+													theme={resolvedTheme === "light" ? "light" : "dark"}
+													active={sceneInView}
+													labels={{
+														danger: t("scene.poi.danger"),
+														emergency: t("scene.poi.emergency"),
+														quality: t("scene.poi.quality"),
+													}}
+												/>
+												<div className="pointer-events-none absolute left-3 bottom-3 flex items-center gap-2 rounded border border-border bg-background/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground backdrop-blur-sm">
+													<Rotate3d className="size-3.5 text-secondary" />
+													{t("scene.hint")}
+												</div>
+											</>
+										) : (
+											<ScenePlaceholder label={t("scene.loading")} />
+										)}
+									</div>
+								)}
 							</div>
 						</div>
 						<p className="text-sm text-muted-foreground text-center max-w-md">
-							{t("videoCaption")}{" "}
+							{visual === "video" ? t("videoCaption") : t("sceneCaption")}{" "}
 							<Link
 								href="/solutions/wisetrainer"
 								className="inline-flex items-center gap-1 font-medium text-secondary hover:underline underline-offset-4"
